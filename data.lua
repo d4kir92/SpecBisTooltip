@@ -5,9 +5,50 @@ local AddOnName, SpecBisTooltip = ...
 local BIS = {}
 BIS["RETAIL"] = {}
 BIS["RETAIL"]["DEATHKNIGHT"] = {}
+BIS["RETAIL"]["DEMONHUNTER"] = {}
+BIS["RETAIL"]["DEMONHUNTER"][1] = { -- DD -- 24.01.2023
+	[200345] = "BIS", --Himmelsgebundenes Visier des Rächers
+
+	[195496] = "BIS,R", --Auge des rachsüchtigen Hurrikans	Dathea, die Aufgestiegene
+	[133767] = "BIS,M+", --Anhänger des Sturmschmieds	Die Hallen der Tapferkeit
+
+	[200347] = "BIS", -- Himmelsgebundene Querruder des Rächers
+
+	[195511] = "BIS,R", -- 195511/säurebeständiges-gespinst
+	[81129] = "BIS,M+", -- 81129/umhang-der-versagenden-willenskraft
+
+	[200342] = "BIS,R", -- 200342/himmelsgebundener-harnisch-des-rächers
+	[143959] = "BIS,M+", -- 143959/brustschutz-der-verzweiflung
+
+	[195525] = "BIS,R", -- 195525/armschienen-der-treuen-flammenschürerin
+	[134192] = "BIS,M+", -- 134192/bjornpelzarmschienen
+
+	[200344] = "BIS", -- 200344/himmelsgebundener-handschutz-des-rächers
+
+	[195501] = "BIS,R", -- 195501/verschmolzener-schiefergürtelbund
+	[136776] = "BIS,M+", -- 136776/bjorns-jagdgurt
+
+	[200346] = "BIS", -- 200346/himmelsgebundene-beinschützer-des-rächers
+
+	[195509] = "BIS,R", -- 195509/stachelschuhe-des-eiskletterers
+	[137497] = "BIS,M+", -- 137497/fußpolster-der-flinken-balestra
+
+	[195480] = "BIS,R", -- 195480/siegel-der-auserwählten-von-diurna
+	[195526] = "BIS,R", -- 195526/siegel-der-brutpflicht
+	[193708] = "BIS,M+", -- 193708/platinsternenband
+	[134542] = "BIS,M+", -- 134542/juwelensignet-von-melandrus
+
+	[194308] = "BIS,R", -- 194308/manische-trauerfackel
+	[194301] = "BIS,R", -- 194301/flüsterndes-symbol-der-inkarnation
+	[193701] = "BIS,M+", -- 193701/rätselbox-von-algethar
+	[136975] = "BIS,M+", -- 136975/hunger-des-rudels
+
+	[195491] = "BIS,R", -- 195491/erfüllte-sturmgleven
+	[195512] = "BIS,R", -- 195512/faust-des-großen-beschwörers
+
+	[193717] = "BIS,M+", -- 193717/mystakrias-ernter
+} 
 BIS["RETAIL"]["DRUID"] = {}
-BIS["RETAIL"]["DRUID"][1] = {} --
-BIS["RETAIL"]["DRUID"][2] = {} --
 BIS["RETAIL"]["DRUID"][3] = { -- TANK -- 25.01.2023
 	[193494] = "BIS", -- Lodergugel
 	[193001] = "BIS", -- Elementarschleife

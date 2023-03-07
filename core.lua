@@ -126,4 +126,8 @@ local function OnTooltipSetItem( tooltip, data )
 	end
 end
 
-TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
+if TooltipDataProcessor then
+	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
+else
+	print("[SpecBisTooltip] IN WORK for this WoW Version")
+end

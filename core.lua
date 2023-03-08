@@ -57,33 +57,32 @@ local once = true
 function SpecBisTooltip:GetItemTyp( class, specId, itemId )
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent = GetItemInfo( itemId ) 
 
-	if SpecBisTooltip:GetBisTable()["RETAIL"][class] == nil then
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
-			print( "Missing Class: ", class )
+			SpecBisTooltip:MSG( "Missing Class: " .. class )
 		end
 		return
 	end
-	if SpecBisTooltip:GetBisTable()["RETAIL"][class][specId] == nil then
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
 		if once then
 			once = false
-			print( "Missing Spec for Class: ", class )
+			SpecBisTooltip:MSG( "Missing Spec for Class: " .. class )
 		end
 		return
 	end
 
 	if itemEquipLoc ~= nil and tContains( validEquipSlots, itemEquipLoc ) then
-		if SpecBisTooltip:GetBisTable()["RETAIL"][class][specId] then
-			return SpecBisTooltip:GetBisTable()["RETAIL"][class][specId][itemId] or "NOTBIS"
+		if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] then
+			return SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId] or "NOTBIS"
 		end
 	end
 	return nil
 end
 
-function SpecBisTooltip:GetSpecItemTyp( itemId )
+function SpecBisTooltip:GetSpecItemTyp( itemId, specId )
 	local class, engClass = UnitClass( "PLAYER" )
 	if engClass then
-		local specId = GetSpecialization()
 		if specId then
 			return SpecBisTooltip:GetItemTyp( engClass, specId, itemId )
 		end
@@ -91,19 +90,51 @@ function SpecBisTooltip:GetSpecItemTyp( itemId )
 	return nil
 end
 
-local function OnTooltipSetItem( tooltip, data )
-	if data == nil then
-		return
-	end
-	if data.id == nil then
-		return
-	end
-	local id = data.id
+local function GetTalentInfo()
+	local specid, icon
+	if GetSpecialization then
+		specid = GetSpecialization()
+		if GetSpecializationInfo then
+			local _, _, _, icon, _, _ = GetSpecializationInfo( specid )
+		end
+		return specid, icon
+	else
+		local ps = 0
+		for i = 1, 4 do
+			local name, iconTexture, pointsSpent = GetTalentTabInfo( i )
+			if pointsSpent ~= nil and pointsSpent > ps then
+				ps = pointsSpent
 
-	local typ = SpecBisTooltip:GetSpecItemTyp( id )
+				specid = i
+				icon = iconTexture
 
-	local _, _, _, icon, background, role = GetSpecializationInfo( GetSpecialization() )
-	local iconText = "|T" .. icon .. ":16:16:0:0|t"
+				local classLstr, class = UnitClass( "PLAYER" )
+				if GetActiveTalentGroup and class == "DRUID" then
+					local group = GetActiveTalentGroup()
+					local role = GetTalentGroupRole(group)
+
+					if role == "DAMAGER" then
+						specid = 2
+						icon = 132115 -- cat icon
+					elseif role == "TANK" then
+						specid = 3
+						-- feral is bear icon
+					end
+				end
+			end
+		end
+		return specid, icon
+	end
+	return nil, nil
+end
+
+local function AddToTooltip( tooltip, id, specId, icon )
+	local typ = SpecBisTooltip:GetSpecItemTyp( id, specId )
+
+	local iconText = ""
+	if icon then
+		iconText = "|T" .. icon .. ":16:16:0:0|t"
+	end
 
 	if typ == "NOTBIS" then
 		tooltip:AddDoubleLine( "|cffff4b47" .. iconText .. " NOT BIS" )
@@ -114,13 +145,8 @@ local function OnTooltipSetItem( tooltip, data )
 		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In Raid" )
 	elseif typ == "BIS" then
 		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In M+/Raid" )
-
-	elseif typ == "UPGRADE,M+" then
-		tooltip:AddDoubleLine( "|cff3FC7EB" .. iconText .. " Upgrade In M+" )
-	elseif typ == "UPGRADE,R" then
-		tooltip:AddDoubleLine( "|cff3FC7EB" .. iconText .. " Upgrade In Raid" )
-	elseif typ == "UPGRADE" then
-		tooltip:AddDoubleLine( "|cff3FC7EB" .. iconText .. " Upgrade In M+/Raid" )
+	elseif typ == "BIS,PVE,P2" then
+		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In PVE/Phase 2" )
 
 	elseif typ == nil then
 		local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent = GetItemInfo( id ) 
@@ -129,13 +155,39 @@ local function OnTooltipSetItem( tooltip, data )
 			itemEquipLoc ~= "" and 
 			not tContains( validEquipSlots, itemEquipLoc ) and
 			not tContains( invalidEquipSlots, itemEquipLoc ) then
-			tooltip:AddDoubleLine( "BIS: ERROR? " .. GetSpecialization() .. " " .. tostring( itemEquipLoc ) )
+			tooltip:AddDoubleLine( "BIS: ERROR? " .. specId .. " " .. tostring( itemEquipLoc ) )
 		end
+	end
+end
+
+local function OnTooltipSetItem( tooltip, data )
+	local id = nil
+	if data and data.id then
+		id = data.id
+	elseif tooltip.GetItem then
+		name, link = tooltip:GetItem()
+		if link then
+			id = tonumber(strmatch(link, "item:(%d+):"))
+		end
+	end
+
+	if id == nil then
+		return
+	end
+
+	local specId, icon = GetTalentInfo()
+	if specId then
+		AddToTooltip( tooltip, id, specId, icon )
 	end
 end
 
 if TooltipDataProcessor then
 	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 else
-	print("[SpecBisTooltip] IN WORK for this WoW Version")
+	ItemRefTooltip:HookScript( "OnTooltipSetItem", function( tooltip, ... )
+		OnTooltipSetItem( tooltip, ... )
+	end )
+	GameTooltip:HookScript( "OnTooltipSetItem", function( tooltip, ... )
+		OnTooltipSetItem( tooltip, ... )
+	end )
 end

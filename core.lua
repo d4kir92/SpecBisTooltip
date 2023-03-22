@@ -122,6 +122,36 @@ local function GetTalentInfo()
 					end
 				end
 			end
+
+			if icon == nil then
+				local classLstr, class = UnitClass( "PLAYER" )
+				if class == "DRUID" then
+					icon = 625999
+				elseif class == "HUNTER" then
+					icon = 626000
+				elseif class == "MAGE" then
+					icon = 626001
+				elseif class == "PALADIN" then
+					--icon = 626003
+					if specid == 1 then
+						icon = 135920
+					elseif specid == 2 then
+						icon = 135893
+					elseif specid == 3 then
+						icon = 135873
+					end
+				elseif class == "PRIEST" then
+					icon = 626004
+				elseif class == "ROGUE" then
+					icon = 626005
+				elseif class == "SHAMAN" then
+					icon = 626006
+				elseif class == "WARLOCK" then
+					icon = 626007
+				elseif class == "WARRIOR" then
+					icon = 626008
+				end
+			end
 		end
 		return specid, icon
 	end
@@ -164,6 +194,7 @@ local function AddToTooltip( tooltip, id, specId, icon )
 	end
 end
 
+local specNotFoundOnce = true
 local function OnTooltipSetItem( tooltip, data )
 	local id = nil
 	if data and data.id then
@@ -174,7 +205,6 @@ local function OnTooltipSetItem( tooltip, data )
 			id = tonumber(strmatch(link, "item:(%d+):"))
 		end
 	end
-
 	if id == nil then
 		return
 	end
@@ -182,6 +212,23 @@ local function OnTooltipSetItem( tooltip, data )
 	local specId, icon = GetTalentInfo()
 	if specId then
 		AddToTooltip( tooltip, id, specId, icon )
+	else
+		local lvl = UnitLevel("PLAYER")
+		if lvl and lvl < 10 and specNotFoundOnce then
+			specNotFoundOnce = false
+			--SpecBisTooltip:MSG( "Character under level 10" )
+
+			C_Timer.After( 10, function()
+				specNotFoundOnce = true
+			end )
+		elseif specNotFoundOnce then
+			specNotFoundOnce = false
+			SpecBisTooltip:MSG( "Spec not found" )
+
+			C_Timer.After( 10, function()
+				specNotFoundOnce = true
+			end )
+		end
 	end
 end
 

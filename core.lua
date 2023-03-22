@@ -147,6 +147,10 @@ local function AddToTooltip( tooltip, id, specId, icon )
 		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In M+/Raid" )
 	elseif typ == "BIS,PVE,P2" then
 		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In PVE/Phase 2" )
+	elseif typ == "BIS,PVE" then
+		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In PVE" )
+	elseif typ == "BIS,PVP" then
+		tooltip:AddDoubleLine( "|cff90ee90" .. iconText .. " BIS In PVP" )
 
 	elseif typ == nil then
 		local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent = GetItemInfo( id ) 

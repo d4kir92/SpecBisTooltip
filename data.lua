@@ -1032,7 +1032,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[193637] = "BIS,M+",
 		[133765] = "BIS,M+",
 		[137498] = "BIS,M+",
-		[134209] = "BIS,M+",
+		[133626] = "BIS,M+",
 		[134385] = "BIS,M+",
 		[144083] = "BIS,M+",
 		[134212] = "BIS,M+",

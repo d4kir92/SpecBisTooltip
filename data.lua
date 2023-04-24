@@ -1,9 +1,8 @@
 -- By D4KiR
-
-local AddOnName, SpecBisTooltip = ...
-
-local BuildNr = select( 4, GetBuildInfo() )
+local _, SpecBisTooltip = ...
+local BuildNr = select(4, GetBuildInfo())
 local Build = "CLASSIC"
+
 if BuildNr >= 100000 then
 	Build = "RETAIL"
 elseif BuildNr > 29999 then
@@ -21,9 +20,11 @@ function SpecBisTooltip:GetWoWBuild()
 end
 
 local BIS = {}
+
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
+
 	BIS["RETAIL"]["DEATHKNIGHT"][1] = {
 		[134513] = "BIS,M+",
 		[193676] = "BIS,M+",
@@ -56,6 +57,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194306] = "BIS,R",
 		[195528] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DEATHKNIGHT"][2] = {
 		[200408] = "BIS,M+",
 		[193001] = "BIS,M+",
@@ -88,6 +90,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[193700] = "BIS,R",
 		[195528] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DEATHKNIGHT"][3] = {
 		[134513] = "BIS,M+",
 		[134529] = "BIS,M+",
@@ -116,7 +119,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194308] = "BIS,R",
 		[195528] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DEMONHUNTER"] = {}
+
 	BIS["RETAIL"]["DEMONHUNTER"][1] = {
 		[200345] = "BIS",
 		[133767] = "BIS,M+",
@@ -146,6 +151,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195491] = "BIS,R",
 		[195512] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DEMONHUNTER"][2] = {
 		[193751] = "BIS,M+",
 		[134529] = "BIS,M+",
@@ -179,7 +185,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194302] = "BIS,R",
 		[195491] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DRUID"] = {}
+
 	BIS["RETAIL"]["DRUID"][1] = {
 		[200354] = "BIS",
 		[193001] = "BIS",
@@ -207,6 +215,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195484] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DRUID"][2] = {
 		[193751] = "BIS,M+",
 		[137487] = "BIS,M+",
@@ -235,6 +244,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194301] = "BIS,R",
 		[195483] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DRUID"][3] = {
 		[193494] = "BIS",
 		[193001] = "BIS",
@@ -262,6 +272,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194305] = "BIS,R",
 		[195483] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["DRUID"][4] = {
 		[200354] = "BIS",
 		[134529] = "BIS,M+",
@@ -294,7 +305,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["EVOKER"] = {}
+
 	BIS["RETAIL"]["EVOKER"][1] = {
 		[200381] = "BIS",
 		[133633] = "BIS,M+",
@@ -327,6 +340,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195484] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["EVOKER"][2] = {
 		[144017] = "BIS,M+",
 		[133633] = "BIS,M+",
@@ -356,7 +370,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194301] = "BIS,R",
 		[195519] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["HUNTER"] = {}
+
 	BIS["RETAIL"]["HUNTER"][1] = {
 		[200390] = "BIS",
 		[133633] = "BIS,M+",
@@ -385,6 +401,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194301] = "BIS,R",
 		[195527] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["HUNTER"][2] = {
 		[81075] = "BIS,M+",
 		[193676] = "BIS,M+",
@@ -417,6 +434,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194301] = "BIS,R",
 		[195527] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["HUNTER"][3] = {
 		[136777] = "BIS,M+",
 		[133767] = "BIS,M+",
@@ -449,7 +467,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194301] = "BIS,R",
 		[195483] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["MAGE"] = {}
+
 	BIS["RETAIL"]["MAGE"][1] = {
 		[200318] = "BIS",
 		[144117] = "BIS,M+",
@@ -482,6 +502,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["MAGE"][2] = {
 		[200318] = "BIS",
 		[134529] = "BIS,M+",
@@ -514,6 +535,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["MAGE"][3] = {
 		[200318] = "BIS",
 		[193676] = "BIS,M+",
@@ -545,7 +567,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["MONK"] = {}
+
 	BIS["RETAIL"]["MONK"][1] = {
 		[200363] = "BIS",
 		[193647] = "BIS,M+",
@@ -577,6 +601,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195512] = "BIS,R",
 		[195510] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["MONK"][2] = {
 		[200363] = "BIS",
 		[134529] = "BIS,M+",
@@ -608,6 +633,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195481] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["MONK"][3] = {
 		[193751] = "BIS,M+",
 		[193647] = "BIS,M+",
@@ -641,7 +667,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195483] = "BIS,R",
 		[195512] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["PALADIN"] = {}
+
 	BIS["RETAIL"]["PALADIN"][1] = {
 		[200417] = "BIS",
 		[144117] = "BIS,M+",
@@ -671,6 +699,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195481] = "BIS,R",
 		[195520] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["PALADIN"][2] = {
 		[134513] = "BIS,M+",
 		[193676] = "BIS,M+",
@@ -701,6 +730,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195489] = "BIS,R",
 		[195520] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["PALADIN"][3] = {
 		[109987] = "BIS,M+",
 		[134529] = "BIS,M+",
@@ -726,7 +756,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195526] = "BIS,R",
 		[195528] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["PRIEST"] = {}
+
 	BIS["RETAIL"]["PRIEST"][1] = {
 		[200327] = "BIS",
 		[134529] = "BIS,M+",
@@ -758,6 +790,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["PRIEST"][2] = {
 		[200327] = "BIS",
 		[193647] = "BIS,M+",
@@ -789,6 +822,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["PRIEST"][3] = {
 		[200327] = "BIS",
 		[193676] = "BIS,M+",
@@ -821,7 +855,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["ROGUE"] = {}
+
 	BIS["RETAIL"]["ROGUE"][1] = {
 		[193494] = "BIS",
 		[193001] = "BIS",
@@ -848,6 +884,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194305] = "BIS,R",
 		[195521] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["ROGUE"][2] = {
 		[193751] = "BIS,M+",
 		[193647] = "BIS,M+",
@@ -882,6 +919,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195512] = "BIS,R",
 		[195521] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["ROGUE"][3] = {
 		[134196] = "BIS,M+",
 		[137487] = "BIS,M+",
@@ -915,7 +953,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195521] = "BIS,R",
 		[195503] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["SHAMAN"] = {}
+
 	BIS["RETAIL"]["SHAMAN"][1] = {
 		[134473] = "BIS,M+",
 		[133767] = "BIS,M+",
@@ -950,6 +990,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195520] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["SHAMAN"][2] = {
 		[136777] = "BIS,M+",
 		[133633] = "BIS,M+",
@@ -984,6 +1025,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195512] = "BIS,R",
 		[195510] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["SHAMAN"][3] = {
 		[144017] = "BIS,M+",
 		[193647] = "BIS,M+",
@@ -1017,7 +1059,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195481] = "BIS,R",
 		[195520] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["WARLOCK"] = {}
+
 	BIS["RETAIL"]["WARLOCK"][1] = {
 		[109970] = "BIS,M+",
 		[133633] = "BIS,M+",
@@ -1054,6 +1098,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["WARLOCK"][2] = {
 		[109970] = "BIS,M+",
 		[133633] = "BIS,M+",
@@ -1090,6 +1135,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["WARLOCK"][3] = {
 		[109970] = "BIS,M+",
 		[133633] = "BIS,M+",
@@ -1126,7 +1172,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[195529] = "BIS,R",
 		[195513] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["WARRIOR"] = {}
+
 	BIS["RETAIL"]["WARRIOR"][1] = {
 		[134182] = "BIS,M+",
 		[193001] = "BIS",
@@ -1157,6 +1205,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194308] = "BIS,R",
 		[195528] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["WARRIOR"][2] = {
 		[134182] = "BIS,M+",
 		[193001] = "BIS",
@@ -1188,6 +1237,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[194308] = "BIS,R",
 		[195528] = "BIS,R",
 	}
+
 	BIS["RETAIL"]["WARRIOR"][3] = {
 		[200426] = "BIS",
 		[134529] = "BIS,M+",
@@ -1223,6 +1273,7 @@ end
 if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
+
 	BIS["WRATH"]["DEATHKNIGHT"][1] = {
 		[43550] = "BIS,PVE,P2",
 		[43554] = "BIS,PVE,P2",
@@ -1317,6 +1368,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45282] = "BIS,PVE,P2",
 		[45458] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["DEATHKNIGHT"][2] = {
 		[43547] = "BIS,PVE,P2",
 		[43543] = "BIS,PVE,P2",
@@ -1406,6 +1458,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45298] = "BIS,PVE,P2",
 		[45588] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["DEATHKNIGHT"][3] = {
 		[43542] = "BIS,PVE,P2",
 		[43546] = "BIS,PVE,P2",
@@ -1500,7 +1553,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45966] = "BIS,PVE,P2",
 		[42621] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["DRUID"] = {}
+
 	BIS["WRATH"]["DRUID"][1] = {
 		[40921] = "BIS,PVE,P2",
 		[40919] = "BIS,PVE,P2",
@@ -1615,6 +1670,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40712] = "BIS,PVE,P2",
 		[45270] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["DRUID"][2] = {
 		[46032] = "BIS,PVE,P2",
 		[45461] = "BIS,PVE,P2",
@@ -1729,6 +1785,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45509] = "BIS,PVE,P2",
 		[39757] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["DRUID"][3] = {
 		[40897] = "BIS,PVE,P2",
 		[40896] = "BIS,PVE,P2",
@@ -1853,6 +1910,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[38365] = "BIS,PVE,P2",
 		[33509] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["DRUID"][4] = {
 		[45602] = "BIS,PVE,P2",
 		[40906] = "BIS,PVE,P2",
@@ -1979,7 +2037,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[25643] = "BIS,PVE,P2",
 		[46138] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["HUNTER"] = {}
+
 	BIS["WRATH"]["HUNTER"][1] = {
 		[42902] = "BIS,PVE,P2",
 		[42912] = "BIS,PVE,P2",
@@ -2103,6 +2163,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45261] = "BIS,PVE,P2",
 		[40385] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["HUNTER"][2] = {
 		[42914] = "BIS,PVE,P2",
 		[42912] = "BIS,PVE,P2",
@@ -2226,6 +2287,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45261] = "BIS,PVE,P2",
 		[40385] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["HUNTER"][3] = {
 		[45731] = "BIS,PVE,P2",
 		[45733] = "BIS,PVE,P2",
@@ -2349,7 +2411,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40385] = "BIS,PVE,P2",
 		[46033] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["MAGE"] = {}
+
 	BIS["WRATH"]["MAGE"][1] = {
 		[42735] = "BIS,PVE,P2",
 		[44955] = "BIS,PVE,P2",
@@ -2460,6 +2524,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45713] = "BIS,PVE,P2",
 		[39426] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["MAGE"][2] = {
 		[42751] = "BIS,PVE,P2",
 		[42739] = "BIS,PVE,P2",
@@ -2552,6 +2617,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[39712] = "BIS,PVE,P2",
 		[45170] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["MAGE"][3] = {
 		[50045] = "BIS,PVE,P2",
 		[42742] = "BIS,PVE,P2",
@@ -2646,7 +2712,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45511] = "BIS,PVE,P2",
 		[39426] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["PALADIN"] = {}
+
 	BIS["WRATH"]["PALADIN"][1] = {
 		[45741] = "BIS,PVE,P2",
 		[41109] = "BIS,PVE,P2",
@@ -2735,6 +2803,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45490] = "BIS,PVE,P2",
 		[45703] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["PALADIN"][2] = {
 		[45947] = "BIS,PVE,P2",
 		[43869] = "BIS,PVE,P2",
@@ -2853,6 +2922,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40707] = "BIS,PVE,P2",
 		[40752] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["PALADIN"][3] = {
 		[45993] = "BIS,PVE,P2",
 		[41398] = "BIS,PVE,P2",
@@ -3014,7 +3084,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[33503] = "BIS,PVE,P2",
 		[45165] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["PRIEST"] = {}
+
 	BIS["WRATH"]["PRIEST"][1] = {
 		[45756] = "BIS,PVE,P2",
 		[42408] = "BIS,PVE,P2",
@@ -3114,6 +3186,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45713] = "BIS,PVE,P2",
 		[45308] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["PRIEST"][2] = {
 		[42396] = "BIS,PVE,P2",
 		[42409] = "BIS,PVE,P2",
@@ -3226,6 +3299,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45713] = "BIS,PVE,P2",
 		[45822] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["PRIEST"][3] = {
 		[46017] = "BIS,PVE,P2",
 		[45620] = "BIS,PVE,P2",
@@ -3393,7 +3467,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45257] = "BIS,PVE,P2",
 		[45332] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["ROGUE"] = {}
+
 	BIS["WRATH"]["ROGUE"][1] = {
 		[45768] = "BIS,PVE,P2",
 		[45767] = "BIS,PVE,P2",
@@ -3525,6 +3601,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45872] = "BIS,PVE,P2",
 		[45688] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["ROGUE"][2] = {
 		[45993] = "BIS,PVE,P2",
 		[41398] = "BIS,PVE,P2",
@@ -3657,6 +3734,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[46342] = "BIS,PVE,P2",
 		[40385] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["ROGUE"][3] = {
 		[42956] = "BIS,PVE,P2",
 		[45767] = "BIS,PVE,P2",
@@ -3790,7 +3868,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40385] = "BIS,PVE,P2",
 		[46342] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["SHAMAN"] = {}
+
 	BIS["WRATH"]["SHAMAN"][1] = {
 		[41536] = "BIS,PVE,P2",
 		[45776] = "BIS,PVE,P2",
@@ -3884,6 +3964,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45401] = "BIS,PVE,P2",
 		[45255] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["SHAMAN"][2] = {
 		[45620] = "BIS,PVE,P2",
 		[45612] = "BIS,PVE,P2",
@@ -3973,6 +4054,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40322] = "BIS,PVE,P2",
 		[40708] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["SHAMAN"][3] = {
 		[40017] = "BIS,PVE,P2",
 		[39998] = "BIS,PVE,P2",
@@ -4067,7 +4149,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[38368] = "BIS,PVE,P2",
 		[45259] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["WARLOCK"] = {}
+
 	BIS["WRATH"]["WARLOCK"][1] = {
 		[41285] = "BIS,PVE,P2",
 		[39998] = "BIS,PVE,P2",
@@ -4217,6 +4301,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[39712] = "BIS,PVE,P2",
 		[40284] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["WARLOCK"][2] = {
 		[41285] = "BIS,PVE,P2",
 		[39998] = "BIS,PVE,P2",
@@ -4370,6 +4455,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[39712] = "BIS,PVE,P2",
 		[40284] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["WARLOCK"][3] = {
 		[41285] = "BIS,PVE,P2",
 		[39998] = "BIS,PVE,P2",
@@ -4526,7 +4612,9 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40284] = "BIS,PVE,P2",
 		[39712] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["WARRIOR"] = {}
+
 	BIS["WRATH"]["WARRIOR"][1] = {
 		[45533] = "BIS,PVE,P2",
 		[43418] = "BIS,PVE,P2",
@@ -4614,6 +4702,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45870] = "BIS,PVE,P2",
 		[40385] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["WARRIOR"][2] = {
 		[43418] = "BIS,PVE,P2",
 		[43432] = "BIS,PVE,P2",
@@ -4700,6 +4789,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40385] = "BIS,PVE,P2",
 		[45161] = "BIS,PVE,P2",
 	}
+
 	BIS["WRATH"]["WARRIOR"][3] = {
 		[46167] = "BIS,PVE,P2",
 		[46162] = "BIS,PVE,P2",
@@ -4819,6 +4909,7 @@ end
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
+
 	BIS["CLASSIC"]["DRUID"][1] = {
 		[19375] = "BIS,PVE",
 		[18814] = "BIS,PVE",
@@ -4957,6 +5048,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19142] = "BIS,PVE",
 		[7685] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["DRUID"][2] = {
 		[19587] = "BIS,PVE",
 		[21602] = "BIS,PVE",
@@ -5053,6 +5145,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18689] = "BIS,PVE",
 		[19149] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["DRUID"][3] = {
 		[20059] = "BIS,PVE",
 		[20194] = "BIS,PVE",
@@ -5175,6 +5268,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[21356] = "BIS,PVE",
 		[17909] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["DRUID"][4] = {
 		[19132] = "BIS,PVE",
 		[16900] = "BIS,PVE",
@@ -5282,7 +5376,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19315] = "BIS,PVE",
 		[19366] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["HUNTER"] = {}
+
 	BIS["CLASSIC"]["HUNTER"][1] = {
 		[16465] = "BIS,PVE",
 		[19377] = "BIS,PVE",
@@ -5393,6 +5489,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18836] = "BIS,PVE",
 		[19107] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["HUNTER"][2] = {
 		[16465] = "BIS,PVE",
 		[19377] = "BIS,PVE",
@@ -5503,6 +5600,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18836] = "BIS,PVE",
 		[19107] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["HUNTER"][3] = {
 		[16465] = "BIS,PVE",
 		[19377] = "BIS,PVE",
@@ -5613,7 +5711,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18836] = "BIS,PVE",
 		[19107] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["MAGE"] = {}
+
 	BIS["CLASSIC"]["MAGE"][1] = {
 		[19375] = "BIS,PVE",
 		[18814] = "BIS,PVE",
@@ -5655,6 +5755,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[11904] = "BIS,PVE",
 		[19134] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["MAGE"][2] = {
 		[19375] = "BIS,PVE",
 		[18814] = "BIS,PVE",
@@ -5696,6 +5797,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[11904] = "BIS,PVE",
 		[19134] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["MAGE"][3] = {
 		[19375] = "BIS,PVE",
 		[18814] = "BIS,PVE",
@@ -5737,7 +5839,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[11904] = "BIS,PVE",
 		[19134] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["PALADIN"] = {}
+
 	BIS["CLASSIC"]["PALADIN"][1] = {
 		[19437] = "BIS,PVE",
 		[19395] = "BIS,PVE",
@@ -5816,9 +5920,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[22319] = "BIS,PVE",
 		[11928] = "BIS,PVE",
 	}
-	BIS["CLASSIC"]["PALADIN"][2] = {
-		-- NO GUIDE
-	}
+
+	BIS["CLASSIC"]["PALADIN"][2] = {} -- NO GUIDE
+
 	BIS["CLASSIC"]["PALADIN"][3] = {
 		[12640] = "BIS,PVE",
 		[18404] = "BIS,PVE",
@@ -5868,7 +5972,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19364] = "BIS,PVE",
 		[19334] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["PRIEST"] = {}
+
 	BIS["CLASSIC"]["PRIEST"][1] = {
 		[19958] = "BIS,PVE",
 		[16921] = "BIS,PVE",
@@ -6001,6 +6107,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18483] = "BIS,PVE",
 		[13938] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["PRIEST"][2] = {
 		[19958] = "BIS,PVE",
 		[16921] = "BIS,PVE",
@@ -6133,6 +6240,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18483] = "BIS,PVE",
 		[13938] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["PRIEST"][3] = {
 		[19309] = "BIS,PVE",
 		[22267] = "BIS,PVE",
@@ -6212,7 +6320,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[22079] = "BIS,PVE",
 		[22335] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["ROGUE"] = {}
+
 	BIS["CLASSIC"]["ROGUE"][1] = {
 		[22005] = "BIS,PVE",
 		[19377] = "BIS,PVE",
@@ -6313,6 +6423,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18323] = "BIS,PVE",
 		[17072] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["ROGUE"][2] = {
 		[22005] = "BIS,PVE",
 		[19377] = "BIS,PVE",
@@ -6413,6 +6524,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18323] = "BIS,PVE",
 		[17072] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["ROGUE"][3] = {
 		[22005] = "BIS,PVE",
 		[19377] = "BIS,PVE",
@@ -6513,7 +6625,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18323] = "BIS,PVE",
 		[17072] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["SHAMAN"] = {}
+
 	BIS["CLASSIC"]["SHAMAN"][1] = {
 		[19375] = "BIS,PVE",
 		[18814] = "BIS,PVE",
@@ -6617,6 +6731,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[22253] = "BIS,PVE",
 		[22345] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["SHAMAN"][2] = {
 		[19169] = "BIS,PVE",
 		[18817] = "BIS,PVE",
@@ -6698,6 +6813,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[17718] = "BIS,PVE",
 		[22345] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["SHAMAN"][3] = {
 		[16947] = "BIS,PVE",
 		[19885] = "BIS,PVE",
@@ -6783,7 +6899,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18536] = "BIS,PVE",
 		[22345] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["WARLOCK"] = {}
+
 	BIS["CLASSIC"]["WARLOCK"][1] = {
 		[19133] = "BIS,PVE",
 		[19375] = "BIS,PVE",
@@ -6933,6 +7051,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19367] = "BIS,PVE",
 		[22408] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["WARLOCK"][2] = {
 		[19133] = "BIS,PVE",
 		[19375] = "BIS,PVE",
@@ -7082,6 +7201,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19367] = "BIS,PVE",
 		[22408] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["WARLOCK"][3] = {
 		[19133] = "BIS,PVE",
 		[19375] = "BIS,PVE",
@@ -7231,7 +7351,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19367] = "BIS,PVE",
 		[22408] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["WARRIOR"] = {}
+
 	BIS["CLASSIC"]["WARRIOR"][1] = {
 		[16478] = "BIS,PVE",
 		[18404] = "BIS,PVE",
@@ -7360,6 +7482,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18541] = "BIS,PVE",
 		[17112] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["WARRIOR"][2] = {
 		[16478] = "BIS,PVE",
 		[18404] = "BIS,PVE",
@@ -7488,6 +7611,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[18541] = "BIS,PVE",
 		[17112] = "BIS,PVE",
 	}
+
 	BIS["CLASSIC"]["WARRIOR"][3] = {
 		[14551] = "BIS,PVE",
 		[18823] = "BIS,PVE",
@@ -7598,8 +7722,6 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[12651] = "BIS,PVE",
 	}
 end
-
-
 
 function SpecBisTooltip:GetBisTable()
 	return BIS

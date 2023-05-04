@@ -1374,7 +1374,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[204390] = "BIS,R",
 		[202444] = "BIS,R",
 		[204400] = "BIS,R",
-		[202505] = "BIS,R",
+		[202442] = "BIS,R",
 		[204396] = "BIS,R",
 		[204398] = "BIS,R",
 		[204466] = "BIS,R",

@@ -279,7 +279,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[193731] = "BIS,M+",
 		[133248] = "BIS,M+",
 		[193652] = "BIS,M+",
-		[155881] = "BIS,M+",
+		[137357] = "BIS,M+",
 		[193675] = "BIS,M+",
 		[202515] = "BIS,R",
 		[204397] = "BIS,R",
@@ -294,7 +294,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[204466] = "BIS,R",
 		[204398] = "BIS,R",
 		[203963] = "BIS,R",
-		[204211] = "BIS,R",
+		[202610] = "BIS,R",
 		[202569] = "BIS,R",
 	}
 
@@ -340,12 +340,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 
 	BIS["RETAIL"]["EVOKER"][1] = {
 		[193726] = "BIS,M+",
-		[133361] = "BIS,M+",
+		[206180] = "BIS,M+",
 		[133235] = "BIS,M+",
 		[193787] = "BIS,M+",
 		[193782] = "BIS,M+",
 		[193812] = "BIS,M+",
-		[137348] = "BIS,M+",
+		[193740] = "BIS,M+",
 		[133239] = "BIS,M+",
 		[134474] = "BIS,M+",
 		[158356] = "BIS,M+",
@@ -781,7 +781,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	}
 
 	BIS["RETAIL"]["PALADIN"][2] = {
-		[134511] = "BIS,M+",
+		[193663] = "BIS,M+",
 		[193809] = "BIS,M+",
 		[193802] = "BIS,M+",
 		[55850] = "BIS,M+",

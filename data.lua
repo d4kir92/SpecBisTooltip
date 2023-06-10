@@ -266,7 +266,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 
 	BIS["RETAIL"]["DRUID"][3] = {
 		[134152] = "BIS,M+",
-		[193809] = "BIS,M+",
+		[133369] = "BIS,M+",
 		[55838] = "BIS,M+",
 		[159292] = "BIS,M+",
 		[193776] = "BIS,M+",

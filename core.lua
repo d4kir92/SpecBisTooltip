@@ -148,8 +148,16 @@ local function AddToTooltip(tooltip, id, specId, icon)
 		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In Raid")
 	elseif typ == "BIS" then
 		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In M+/Raid")
+	elseif typ == "BIS,PVE,P1" then
+		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 1")
 	elseif typ == "BIS,PVE,P2" then
 		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 2")
+	elseif typ == "BIS,PVE,P3" then
+		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 3")
+	elseif typ == "BIS,PVE,P4" then
+		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 4")
+	elseif typ == "BIS,PVE,P5" then
+		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 5")
 	elseif typ == "BIS,PVE" then
 		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE")
 	elseif typ == "BIS,PVP" then

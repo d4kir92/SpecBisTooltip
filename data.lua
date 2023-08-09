@@ -1287,7 +1287,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	}
 end
 
--- DATA FROM: 02.08.2023
+-- DATA FROM: 09.08.2023
 if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}

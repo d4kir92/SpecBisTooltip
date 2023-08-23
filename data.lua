@@ -21,7 +21,7 @@ end
 
 local BIS = {}
 
--- DATA FROM: 02.08.2023
+-- DATA FROM: 23.08.2023
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -1287,7 +1287,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	}
 end
 
--- DATA FROM: 09.08.2023
+-- DATA FROM: 23.08.2023
 if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
@@ -5237,6 +5237,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[40708] = "BIS,PVE,P3",
 		[47585] = "BIS,PVE,P3",
 		[49307] = "BIS,PVE,P3",
+		[47489] = "BIS,PVE,P3",
 	}
 
 	BIS["WRATH"]["SHAMAN"][2] = {
@@ -5492,6 +5493,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[41611] = "BIS,PVE,P3",
 		[45554] = "BIS,PVE,P3",
 		[47190] = "BIS,PVE,P3",
+		[47087] = "BIS,PVE,P3",
 		[46202] = "BIS,PVE,P3",
 		[45403] = "BIS,PVE,P3",
 		[41604] = "BIS,PVE,P3",
@@ -5533,8 +5535,8 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45470] = "BIS,PVE,P3",
 		[45887] = "BIS,PVE,P3",
 		[40401] = "BIS,PVE,P3",
-		[45114] = "BIS,PVE,P3",
 		[40709] = "BIS,PVE,P3",
+		[45114] = "BIS,PVE,P3",
 		[40752] = "BIS,PVE,P3",
 		[38368] = "BIS,PVE,P3",
 	}
@@ -6386,11 +6388,10 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"]["WARRIOR"][1] = {
 		[45931] = "BIS,PVE,P3",
 		[43423] = "BIS,PVE,P3",
-		[43418] = "BIS,PVE,P3",
+		[43421] = "BIS,PVE,P3",
 		[43416] = "BIS,PVE,P3",
 		[43399] = "BIS,PVE,P3",
 		[49084] = "BIS,PVE,P3",
-		[43397] = "BIS,PVE,P3",
 		[49478] = "BIS,PVE,P3",
 		[41398] = "BIS,PVE,P3",
 		[40117] = "BIS,PVE,P3",
@@ -6400,28 +6401,38 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[47545] = "BIS,PVE,P3",
 		[48385] = "BIS,PVE,P3",
 		[47074] = "BIS,PVE,P3",
-		[40142] = "BIS,PVE,P3",
+		[40143] = "BIS,PVE,P3",
 		[47240] = "BIS,PVE,P3",
 		[49110] = "BIS,PVE,P3",
 		[47153] = "BIS,PVE,P3",
-		[40143] = "BIS,PVE,P3",
 		[47191] = "BIS,PVE,P3",
 		[47077] = "BIS,PVE,P3",
 		[47934] = "BIS,PVE,P3",
+		[40142] = "BIS,PVE,P3",
 		[45608] = "BIS,PVE,P3",
-		[46038] = "BIS,PVE,P3",
 		[47131] = "BIS,PVE,P3",
+		[46038] = "BIS,PVE,P3",
 		[47078] = "BIS,PVE,P3",
 		[45296] = "BIS,PVE,P3",
-		[48398] = "BIS,PVE,P3",
+		[40111] = "BIS,PVE,P3",
+		[45459] = "BIS,PVE,P3",
 		[48400] = "BIS,PVE,P3",
 		[42153] = "BIS,PVE,P3",
 		[47546] = "BIS,PVE,P3",
 		[48396] = "BIS,PVE,P3",
-		[48399] = "BIS,PVE,P3",
+		[47442] = "BIS,PVE,P3",
+		[47492] = "BIS,PVE,P3",
+		[47472] = "BIS,PVE,P3",
+		[47480] = "BIS,PVE,P3",
+		[47445] = "BIS,PVE,P3",
+		[48007] = "BIS,PVE,P3",
 		[47464] = "BIS,PVE,P3",
 		[47446] = "BIS,PVE,P3",
 		[47428] = "BIS,PVE,P3",
+		[43418] = "BIS,PVE,P3",
+		[43397] = "BIS,PVE,P3",
+		[48398] = "BIS,PVE,P3",
+		[48399] = "BIS,PVE,P3",
 		[47242] = "BIS,PVE,P3",
 		[48391] = "BIS,PVE,P3",
 		[48394] = "BIS,PVE,P3",
@@ -6457,22 +6468,18 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[46146] = "BIS,PVE,P3",
 		[42702] = "BIS,PVE,P3",
 		[45473] = "BIS,PVE,P3",
-		[47442] = "BIS,PVE,P3",
 		[48008] = "BIS,PVE,P3",
 		[47935] = "BIS,PVE,P3",
 		[47474] = "BIS,PVE,P3",
 		[47155] = "BIS,PVE,P3",
 		[45611] = "BIS,PVE,P3",
 		[45663] = "BIS,PVE,P3",
-		[47492] = "BIS,PVE,P3",
 		[48017] = "BIS,PVE,P3",
 		[47945] = "BIS,PVE,P3",
 		[47990] = "BIS,PVE,P3",
 		[47917] = "BIS,PVE,P3",
 		[46148] = "BIS,PVE,P3",
-		[46905] = "BIS,PVE,P3",
 		[41611] = "BIS,PVE,P3",
-		[47472] = "BIS,PVE,P3",
 		[47460] = "BIS,PVE,P3",
 		[47112] = "BIS,PVE,P3",
 		[47429] = "BIS,PVE,P3",
@@ -6483,9 +6490,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[38374] = "BIS,PVE,P3",
 		[38372] = "BIS,PVE,P3",
 		[48382] = "BIS,PVE,P3",
-		[47480] = "BIS,PVE,P3",
 		[48379] = "BIS,PVE,P3",
-		[47445] = "BIS,PVE,P3",
 		[47457] = "BIS,PVE,P3",
 		[47109] = "BIS,PVE,P3",
 		[47473] = "BIS,PVE,P3",
@@ -6493,13 +6498,11 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45599] = "BIS,PVE,P3",
 		[40591] = "BIS,PVE,P3",
 		[45517] = "BIS,PVE,P3",
-		[45459] = "BIS,PVE,P3",
 		[47988] = "BIS,PVE,P3",
 		[47433] = "BIS,PVE,P3",
 		[47060] = "BIS,PVE,P3",
 		[47458] = "BIS,PVE,P3",
 		[47110] = "BIS,PVE,P3",
-		[48007] = "BIS,PVE,P3",
 		[47443] = "BIS,PVE,P3",
 		[47075] = "BIS,PVE,P3",
 		[46322] = "BIS,PVE,P3",

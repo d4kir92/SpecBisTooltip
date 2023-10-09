@@ -1,6 +1,5 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
-
 function SpecBisTooltip:MSG(msg)
 	print("|cff3FC7EB" .. "[SpecBisTooltip] " .. msg)
 end
@@ -10,23 +9,21 @@ function SpecBisTooltip:Info(msg)
 end
 
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
-
 local invalidEquipSlots = {"INVTYPE_TABARD", "INVTYPE_BODY",}
-
 local SBTSetup = CreateFrame("FRAME", "SBTSetup")
 SBTSetup:RegisterEvent("PLAYER_LOGIN")
-
-SBTSetup:SetScript("OnEvent", function(self, event, ...)
-	if event == "PLAYER_LOGIN" then
-		SBTTAB = SBTTAB or {}
+SBTSetup:SetScript(
+	"OnEvent",
+	function(self, event, ...)
+		if event == "PLAYER_LOGIN" then
+			SBTTAB = SBTTAB or {}
+		end
 	end
-end)
+)
 
 local once = true
-
 function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
-
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
@@ -59,10 +56,8 @@ end
 
 local function GetTalentInfo()
 	local specid, icon
-
 	if GetSpecialization then
 		specid = GetSpecialization()
-
 		if GetSpecializationInfo then
 			_, _, _, icon, _, _ = GetSpecializationInfo(specid)
 		end
@@ -70,20 +65,16 @@ local function GetTalentInfo()
 		return specid, icon
 	else
 		local ps = 0
-
 		for i = 1, 4 do
 			local _, iconTexture, pointsSpent = GetTalentTabInfo(i)
-
 			if pointsSpent ~= nil and pointsSpent > ps then
 				ps = pointsSpent
 				specid = i
 				icon = iconTexture
 				local _, class = UnitClass("PLAYER")
-
 				if GetActiveTalentGroup and class == "DRUID" then
 					local group = GetActiveTalentGroup()
 					local role = GetTalentGroupRole(group)
-
 					if role == "DAMAGER" then
 						specid = 2
 						icon = 132115 -- cat icon
@@ -96,7 +87,6 @@ local function GetTalentInfo()
 
 			if icon == nil then
 				local _, class = UnitClass("PLAYER")
-
 				if class == "DRUID" then
 					icon = 625999
 				elseif class == "HUNTER" then
@@ -135,7 +125,6 @@ end
 local function AddToTooltip(tooltip, id, specId, icon)
 	local typ = SpecBisTooltip:GetSpecItemTyp(id, specId)
 	local iconText = ""
-
 	if icon then
 		iconText = "|T" .. icon .. ":16:16:0:0|t"
 	end
@@ -164,7 +153,6 @@ local function AddToTooltip(tooltip, id, specId, icon)
 		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVP")
 	elseif typ == nil then
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
-
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and not tContains(invalidEquipSlots, itemEquipLoc) then
 			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc))
 		end
@@ -172,15 +160,12 @@ local function AddToTooltip(tooltip, id, specId, icon)
 end
 
 local specNotFoundOnce = true
-
 local function OnTooltipSetItem(tooltip, data)
 	local id = nil
-
 	if data and data.id then
 		id = data.id
 	elseif tooltip.GetItem then
 		name, link = tooltip:GetItem()
-
 		if link then
 			id = tonumber(strmatch(link, "item:(%d+):"))
 		end
@@ -188,26 +173,28 @@ local function OnTooltipSetItem(tooltip, data)
 
 	if id == nil then return end
 	local specId, icon = GetTalentInfo()
-
 	if specId then
 		AddToTooltip(tooltip, id, specId, icon)
 	else
 		local lvl = UnitLevel("PLAYER")
-
 		if lvl and lvl < 10 and specNotFoundOnce then
 			specNotFoundOnce = false
-
 			--SpecBisTooltip:MSG( "Character under level 10" )
-			C_Timer.After(10, function()
-				specNotFoundOnce = true
-			end)
+			C_Timer.After(
+				10,
+				function()
+					specNotFoundOnce = true
+				end
+			)
 		elseif specNotFoundOnce then
 			specNotFoundOnce = false
 			SpecBisTooltip:MSG("Spec not found")
-
-			C_Timer.After(10, function()
-				specNotFoundOnce = true
-			end)
+			C_Timer.After(
+				10,
+				function()
+					specNotFoundOnce = true
+				end
+			)
 		end
 	end
 end
@@ -215,11 +202,17 @@ end
 if TooltipDataProcessor then
 	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 else
-	ItemRefTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
-		OnTooltipSetItem(tooltip, ...)
-	end)
+	ItemRefTooltip:HookScript(
+		"OnTooltipSetItem",
+		function(tooltip, ...)
+			OnTooltipSetItem(tooltip, ...)
+		end
+	)
 
-	GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
-		OnTooltipSetItem(tooltip, ...)
-	end)
+	GameTooltip:HookScript(
+		"OnTooltipSetItem",
+		function(tooltip, ...)
+			OnTooltipSetItem(tooltip, ...)
+		end
+	)
 end

@@ -122,41 +122,63 @@ local function GetTalentInfo()
 	return nil, nil
 end
 
+local function GetBISText(typ)
+	if typ == "NOTBIS" then
+		return "|cffff4b47NOT BIS"
+	elseif typ == "BIS,M+" then
+		return "|cff90ee90BIS In M+"
+	elseif typ == "BIS,R" then
+		return "|cff90ee90BIS In Raid"
+	elseif typ == "BIS" then
+		return "|cff90ee90BIS In M+/Raid"
+	elseif typ == "BIS,PVE,P1" then
+		return "|cff90ee90BIS In PVE/Phase 1"
+	elseif typ == "BIS,PVE,P2" then
+		return "|cff90ee90BIS In PVE/Phase 2"
+	elseif typ == "BIS,PVE,P3" then
+		return "|cff90ee90BIS In PVE/Phase 3"
+	elseif typ == "BIS,PVE,P4" then
+		return "|cff90ee90BIS In PVE/Phase 4"
+	elseif typ == "BIS,PVE,P5" then
+		return "|cff90ee90BIS In PVE/Phase 5"
+	elseif typ == "BIS,PVE,P6" then
+		return "|cff90ee90BIS In PVE/Phase 6"
+	elseif typ == "BIS,PVE" then
+		return "|cff90ee90BIS In PVE"
+	elseif typ == "BIS,PVP" then
+		return "|cff90ee90BIS In PVP"
+	end
+
+	return ""
+end
+
 local function AddToTooltip(tooltip, id, specId, icon)
 	local typ = SpecBisTooltip:GetSpecItemTyp(id, specId)
 	local iconText = ""
 	if icon then
-		iconText = "|T" .. icon .. ":16:16:0:0|t"
+		iconText = "|T" .. icon .. ":20:20:0:0|t"
 	end
 
-	if typ == "NOTBIS" then
-		tooltip:AddDoubleLine("|cffff4b47" .. iconText .. " NOT BIS")
-	elseif typ == "BIS,M+" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In M+")
-	elseif typ == "BIS,R" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In Raid")
-	elseif typ == "BIS" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In M+/Raid")
-	elseif typ == "BIS,PVE,P1" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 1")
-	elseif typ == "BIS,PVE,P2" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 2")
-	elseif typ == "BIS,PVE,P3" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 3")
-	elseif typ == "BIS,PVE,P4" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 4")
-	elseif typ == "BIS,PVE,P5" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 5")
-	elseif typ == "BIS,PVE,P6" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE/Phase 6")
-	elseif typ == "BIS,PVE" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVE")
-	elseif typ == "BIS,PVP" then
-		tooltip:AddDoubleLine("|cff90ee90" .. iconText .. " BIS In PVP")
-	elseif typ == nil then
+	if GetBISText(typ) ~= "" then
+		tooltip:AddDoubleLine(iconText .. " " .. GetBISText(typ))
+	else
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and not tContains(invalidEquipSlots, itemEquipLoc) then
 			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc))
+		end
+	end
+end
+
+local function AddBisForSpec(tooltip, itemId)
+	local bfs = SpecBisTooltip:GetBFS(itemId)
+	if bfs then
+		for i, text in pairs(bfs) do
+			local className = text[1]
+			local specId = text[2]
+			local classIcon = SpecBisTooltip:GetClassIcon(className)
+			local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
+			local bisText = GetBISText(text[3])
+			tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText))
 		end
 	end
 end
@@ -177,6 +199,7 @@ local function OnTooltipSetItem(tooltip, data)
 	local specId, icon = GetTalentInfo()
 	if specId then
 		AddToTooltip(tooltip, id, specId, icon)
+		AddBisForSpec(tooltip, id)
 	else
 		local lvl = UnitLevel("PLAYER")
 		if lvl and lvl < 10 and specNotFoundOnce then

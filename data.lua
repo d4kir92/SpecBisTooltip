@@ -939,12 +939,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207162] = "BIS,M+",
 		[207159] = "BIS,M+",
 		[207166] = "BIS",
-		[207175] = "BIS,M+",
+		[207168] = "BIS",
 		[207800] = "BIS",
 		[211403] = "BIS,R",
 		[134490] = "BIS,R",
 		[134487] = "BIS,R",
-		[207168] = "BIS,R",
 	}
 
 	BIS["RETAIL"]["WARRIOR"][2] = {
@@ -8983,6 +8982,117 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	}
 end
 
+local classIcons = {
+	["DEATHKNIGHT"] = 135771,
+	["DEMONHUNTER"] = 1260827,
+	["DRUID"] = 625999,
+	["EVOKER"] = 4574311,
+	["HUNTER"] = 626000,
+	["MAGE"] = 626001,
+	["MONK"] = 626002,
+	["PALADIN"] = 626003,
+	["PRIEST"] = 626004,
+	["ROGUE"] = 626005,
+	["SHAMAN"] = 626006,
+	["WARLOCK"] = 626007,
+	["WARRIOR"] = 626008,
+}
+
+function SpecBisTooltip:GetClassIcon(className)
+	return classIcons[className]
+end
+
+local specIcons = {
+	["DEATHKNIGHT"] = {
+		[1] = 135770,
+		[2] = 135773,
+		[3] = 135775,
+	},
+	["DEMONHUNTER"] = {
+		[1] = 1247264,
+		[2] = 1247265,
+	},
+	["DRUID"] = {
+		[1] = 136096,
+		[2] = 132115,
+		[3] = 132276,
+		[4] = 136041,
+	},
+	["EVOKER"] = {
+		[1] = 4511811,
+		[2] = 4511812,
+		[3] = 5198700,
+	},
+	["HUNTER"] = {
+		[1] = 132164,
+		[2] = 132222,
+		[3] = 132215,
+	},
+	["MAGE"] = {
+		[1] = 135932,
+		[2] = 135812,
+		[3] = 135846,
+	},
+	["MONK"] = {
+		[1] = 608951,
+		[2] = 608952,
+		[3] = 608953,
+	},
+	["PALADIN"] = {
+		[1] = 135920,
+		[2] = 135893,
+		[3] = 135873,
+	},
+	["PRIEST"] = {
+		[1] = 135940,
+		[2] = 135920,
+		[3] = 136207,
+	},
+	["ROGUE"] = {
+		[1] = 136189,
+		[2] = 132282,
+		[3] = 132320,
+	},
+	["SHAMAN"] = {
+		[1] = 136048,
+		[2] = 132314,
+		[3] = 136043,
+	},
+	["WARLOCK"] = {
+		[1] = 136145,
+		[2] = 136172,
+		[3] = 136186,
+	},
+	["WARRIOR"] = {
+		[1] = 132292,
+		[2] = 132347,
+		[3] = 134952,
+	},
+}
+
+function SpecBisTooltip:GetSpecIcon(className, specId)
+	return specIcons[className][specId]
+end
+
 function SpecBisTooltip:GetBisTable()
 	return BIS
+end
+
+local bfs = {}
+function SpecBisTooltip:InitBFS()
+	for i, pool in pairs(BIS) do
+		for className, classTab in pairs(pool) do
+			for specId, specTab in pairs(classTab) do
+				for itemId, itemTyp in pairs(specTab) do
+					bfs[itemId] = bfs[itemId] or {}
+					table.insert(bfs[itemId], {className, specId, itemTyp})
+				end
+			end
+		end
+	end
+end
+
+SpecBisTooltip:InitBFS()
+function SpecBisTooltip:GetBFS(itemId)
+	return bfs[itemId]
 end

@@ -19,7 +19,7 @@ function SpecBisTooltip:GetWoWBuild()
 end
 
 local BIS = {}
--- DATA FROM: 08.11.2023
+-- DATA FROM: 09.11.2023
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -128,7 +128,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207159] = "BIS,M+",
 		[207162] = "BIS,M+",
 		[207166] = "BIS",
-		[208614] = "BIS",
+		[208614] = "BIS,M+",
 		[207784] = "BIS",
 		[207791] = "BIS,M+",
 		[193001] = "BIS,R",
@@ -138,6 +138,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[134528] = "BIS,R",
 		[192999] = "BIS,R",
 		[207174] = "BIS,R",
+		[207173] = "BIS,R",
 		[207528] = "BIS,R",
 		[207991] = "BIS,R",
 	}

@@ -8977,6 +8977,18 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	}
 end
 
+function SpecBisTooltip:CheckIfTrinketData(invtype)
+	local _, class = UnitClass("player")
+	local specId = SpecBisTooltip:GetTalentInfo()
+	local tab = BIS[Build][class][specId]
+	for i, v in pairs(tab) do
+		local itemType = select(9, GetItemInfo(i))
+		if itemType == invtype then return true end
+	end
+
+	return false
+end
+
 local classIcons = {
 	["DEATHKNIGHT"] = 135771,
 	["DEMONHUNTER"] = 1260827,

@@ -54,7 +54,7 @@ function SpecBisTooltip:GetSpecItemTyp(itemId, specId)
 	return nil
 end
 
-local function GetTalentInfo()
+function SpecBisTooltip:GetTalentInfo()
 	local specid, icon
 	if GetSpecialization then
 		specid = GetSpecialization()
@@ -150,11 +150,15 @@ local function GetBISText(typ)
 	return ""
 end
 
-local function AddToTooltip(tooltip, id, specId, icon)
+local function AddToTooltip(tooltip, id, specId, icon, trinket)
 	local typ = SpecBisTooltip:GetSpecItemTyp(id, specId)
 	local iconText = ""
 	if icon then
 		iconText = "|T" .. icon .. ":20:20:0:0|t"
+	end
+
+	if trinket and typ == "NOTBIS" and not SpecBisTooltip:CheckIfTrinketData("INVTYPE_TRINKET") then
+		tooltip:AddDoubleLine("NO BIS DATA FOR YOUR TRINKETS IN THIS SPEC")
 	end
 
 	if GetBISText(typ) ~= "" then
@@ -194,16 +198,10 @@ local function OnTooltipSetItem(tooltip, data)
 	end
 
 	local itemType = select(9, GetItemInfo(id))
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" and itemType == "INVTYPE_TRINKET" then
-		tooltip:AddDoubleLine(format("NO DATA FOR RETAIL (TRINKETS)"))
-
-		return
-	end
-
 	if id == nil then return end
-	local specId, icon = GetTalentInfo()
+	local specId, icon = SpecBisTooltip:GetTalentInfo()
 	if specId then
-		AddToTooltip(tooltip, id, specId, icon)
+		AddToTooltip(tooltip, id, specId, icon, itemType == "INVTYPE_TRINKET")
 		AddBisForSpec(tooltip, id)
 	else
 		local lvl = UnitLevel("PLAYER")

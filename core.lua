@@ -77,11 +77,10 @@ local function GetTalentInfo()
 					local role = GetTalentGroupRole(group)
 					if role == "DAMAGER" then
 						specid = 2
-						icon = 132115 -- cat icon
+						icon = 132115
 					elseif role == "TANK" then
 						specid = 3
 					end
-					-- feral is bear icon
 				end
 			end
 
@@ -94,7 +93,6 @@ local function GetTalentInfo()
 				elseif class == "MAGE" then
 					icon = 626001
 				elseif class == "PALADIN" then
-					--icon = 626003
 					if specid == 1 then
 						icon = 135920
 					elseif specid == 2 then
@@ -193,6 +191,13 @@ local function OnTooltipSetItem(tooltip, data)
 		if link then
 			id = tonumber(strmatch(link, "item:(%d+):"))
 		end
+	end
+
+	local itemType = select(9, GetItemInfo(id))
+	if SpecBisTooltip:GetWoWBuild() == "RETAIL" and itemType == "INVTYPE_TRINKET" then
+		tooltip:AddDoubleLine(format("NO DATA FOR RETAIL (TRINKETS)"))
+
+		return
 	end
 
 	if id == nil then return end

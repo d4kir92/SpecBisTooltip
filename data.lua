@@ -19,7 +19,7 @@ function SpecBisTooltip:GetWoWBuild()
 end
 
 local BIS = {}
--- DATA FROM: 13.11.2023
+-- DATA FROM: 24.11.2023
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -167,7 +167,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207903] = "BIS,R",
 		[134531] = "BIS,R",
 		[134487] = "BIS,R",
-		[159630] = "BIS,R",
+		[207581] = "BIS,R",
 	}
 
 	BIS["RETAIL"]["DRUID"][2] = {
@@ -193,7 +193,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 
 	BIS["RETAIL"]["DRUID"][3] = {
 		[207254] = "BIS",
-		[208445] = "BIS",
+		[210214] = "BIS",
 		[207252] = "BIS",
 		[207160] = "BIS",
 		[207257] = "BIS",
@@ -292,17 +292,16 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207159] = "BIS,M+",
 		[207162] = "BIS,M+",
 		[207172] = "BIS",
-		[208615] = "BIS,M+",
+		[208615] = "BIS",
 		[208616] = "BIS",
 		[207788] = "BIS",
 		[207796] = "BIS",
 		[198332] = "BIS,R",
-		[136724] = "BIS,R",
+		[207224] = "BIS,R",
 		[193464] = "BIS,R",
 		[134464] = "BIS,R",
 		[134487] = "BIS,R",
 		[192999] = "BIS,R",
-		[159630] = "BIS,R",
 	}
 
 	BIS["RETAIL"]["HUNTER"] = {}
@@ -370,12 +369,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207162] = "BIS",
 		[207159] = "BIS,M+",
 		[207166] = "BIS",
-		[207175] = "BIS,M+",
+		[207165] = "BIS,M+",
 		[207793] = "BIS",
 		[204704] = "BIS,R",
 		[193421] = "BIS,R",
 		[162548] = "BIS,R",
-		[207581] = "BIS,R",
+		[158319] = "BIS,R",
 	}
 
 	BIS["RETAIL"]["MAGE"] = {}
@@ -385,7 +384,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207288] = "BIS",
 		[207161] = "BIS,M+",
 		[207293] = "BIS",
-		[207287] = "BIS",
+		[207120] = "BIS,M+",
 		[207291] = "BIS",
 		[207119] = "BIS,M+",
 		[207118] = "BIS,M+",
@@ -398,9 +397,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[193511] = "BIS,R",
 		[204710] = "BIS,R",
 		[193510] = "BIS,R",
+		[207287] = "BIS,R",
 		[207289] = "BIS,R",
 		[207292] = "BIS,R",
-		[134537] = "BIS,R",
+		[56276] = "BIS,R",
 		[158362] = "BIS,R",
 		[159630] = "BIS,R",
 	}
@@ -449,7 +449,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207159] = "BIS,M+",
 		[207162] = "BIS",
 		[207172] = "BIS",
-		[207168] = "BIS,M+",
+		[208614] = "BIS,M+",
 		[208616] = "BIS",
 		[207790] = "BIS",
 		[207796] = "BIS",
@@ -458,7 +458,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[159285] = "BIS,R",
 		[158303] = "BIS,R",
 		[134487] = "BIS,R",
-		[207581] = "BIS,R",
+		[159630] = "BIS,R",
 	}
 
 	BIS["RETAIL"]["MONK"] = {}
@@ -512,7 +512,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207159] = "BIS",
 		[208442] = "BIS,M+",
 		[207168] = "BIS,M+",
-		[207170] = "BIS,M+",
+		[207171] = "BIS,M+",
 		[208616] = "BIS,M+",
 		[207245] = "BIS,R",
 		[193001] = "BIS,R",
@@ -624,7 +624,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207122] = "BIS,M+",
 		[207159] = "BIS",
 		[207162] = "BIS,M+",
-		[207168] = "BIS",
+		[207168] = "BIS,M+",
 		[207795] = "BIS",
 		[207788] = "BIS",
 		[207796] = "BIS,M+",
@@ -632,7 +632,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[158348] = "BIS,R",
 		[207817] = "BIS,R",
 		[134528] = "BIS,R",
-		[207552] = "BIS,R",
+		[159630] = "BIS,R",
+		[207171] = "BIS,R",
 		[133200] = "BIS,R",
 	}
 
@@ -749,7 +750,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207134] = "BIS,M+",
 		[207162] = "BIS",
 		[207159] = "BIS,M+",
-		[203729] = "BIS,M+",
+		[207168] = "BIS",
 		[207166] = "BIS,M+",
 		[207783] = "BIS,M+",
 		[207781] = "BIS,M+",
@@ -761,7 +762,6 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207126] = "BIS,R",
 		[193000] = "BIS,R",
 		[109999] = "BIS,R",
-		[207168] = "BIS,R",
 		[207996] = "BIS,R",
 	}
 
@@ -775,7 +775,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207143] = "BIS,M+",
 		[207210] = "BIS",
 		[207146] = "BIS",
-		[207208] = "BIS",
+		[207208] = "BIS,M+",
 		[207145] = "BIS",
 		[207159] = "BIS",
 		[207162] = "BIS,M+",
@@ -783,9 +783,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207168] = "BIS,M+",
 		[207788] = "BIS",
 		[207798] = "BIS",
-		[109984] = "BIS,R",
-		[205025] = "BIS,R",
+		[207209] = "BIS,R",
+		[136977] = "BIS,R",
 		[204704] = "BIS,R",
+		[193464] = "BIS,R",
 		[134487] = "BIS,R",
 		[133201] = "BIS,R",
 		[159630] = "BIS,R",
@@ -807,11 +808,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207166] = "BIS",
 		[207168] = "BIS",
 		[207787] = "BIS",
-		[207784] = "BIS,M+",
+		[207784] = "BIS",
 		[193511] = "BIS,R",
 		[204704] = "BIS,R",
 		[207946] = "BIS,R",
-		[159400] = "BIS,R",
+		[207819] = "BIS,R",
 		[134464] = "BIS,R",
 		[134487] = "BIS,R",
 		[133192] = "BIS,R",

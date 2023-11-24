@@ -1001,7 +1001,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	}
 end
 
--- DATA FROM: 08.11.2023
+-- DATA FROM: 24.11.2023
 if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
@@ -1233,6 +1233,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[47156] = "BIS,PVE,P4",
 		[47528] = "BIS,PVE,P4",
 		[47526] = "BIS,PVE,P4",
+		[45459] = "BIS,PVE,P4",
 	}
 
 	BIS["WRATH"]["DEATHKNIGHT"][3] = {
@@ -2654,7 +2655,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[50398] = "BIS,PVE,P4",
 		[50664] = "BIS,PVE,P4",
 		[50348] = "BIS,PVE,P4",
-		[47477] = "BIS,PVE,P4",
+		[50365] = "BIS,PVE,P4",
 		[50732] = "BIS,PVE,P4",
 		[50719] = "BIS,PVE,P4",
 		[50684] = "BIS,PVE,P4",
@@ -2766,6 +2767,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[47327] = "BIS,PVE,P4",
 		[47054] = "BIS,PVE,P4",
 		[50345] = "BIS,PVE,P4",
+		[47477] = "BIS,PVE,P4",
 		[45518] = "BIS,PVE,P4",
 		[47316] = "BIS,PVE,P4",
 		[47188] = "BIS,PVE,P4",
@@ -2918,6 +2920,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[47662] = "BIS,PVE,P4",
 		[50714] = "BIS,PVE,P4",
 		[51836] = "BIS,PVE,P4",
+		[47215] = "BIS,PVE,P4",
 	}
 
 	BIS["WRATH"]["PALADIN"][2] = {
@@ -4700,7 +4703,6 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[50363] = "BIS,PVE,P4",
 		[50737] = "BIS,PVE,P4",
 		[50628] = "BIS,PVE,P4",
-		[50357] = "BIS,PVE,P4",
 		[50365] = "BIS,PVE,P4",
 		[50734] = "BIS,PVE,P4",
 		[52026] = "BIS,PVE,P4",
@@ -4929,6 +4931,8 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[45612] = "BIS,PVE,P4",
 		[46035] = "BIS,PVE,P4",
 		[45038] = "BIS,PVE,P4",
+		[51875] = "BIS,PVE,P4",
+		[51910] = "BIS,PVE,P4",
 		[51812] = "BIS,PVE,P4",
 		[47085] = "BIS,PVE,P4",
 		[47448] = "BIS,PVE,P4",

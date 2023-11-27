@@ -9625,27 +9625,29 @@ function SpecBisTooltip:InitBFS()
 		end
 	end
 
-	for i, bf in pairs(bfs) do
-		table.sort(
-			bf,
-			function(a, b)
-				if sortBfs[a[3]] == nil then
-					D4:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", a[3])
+	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+		for i, bf in pairs(bfs) do
+			table.sort(
+				bf,
+				function(a, b)
+					if sortBfs[a[3]] == nil then
+						D4:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", a[3])
 
-					return true
+						return true
+					end
+
+					if sortBfs[b[3]] == nil then
+						D4:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", b[3])
+
+						return false
+					end
+
+					if sortBfs[a[3]] == sortBfs[b[3]] then return a[1] < b[1] end
+
+					return sortBfs[a[3]] < sortBfs[b[3]]
 				end
-
-				if sortBfs[b[3]] == nil then
-					D4:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", b[3])
-
-					return false
-				end
-
-				if sortBfs[a[3]] == sortBfs[b[3]] then return a[1] < b[1] end
-
-				return sortBfs[a[3]] < sortBfs[b[3]]
-			end
-		)
+			)
+		end
 	end
 end
 

@@ -1,5 +1,5 @@
 ## Interface: 11500
-## Version: 0.4.44
+## Version: 0.5.0
 ## Title: SpecBisTooltip |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
@@ -9,5 +9,11 @@
 ## X-Curse-Project-ID: 827800 
 ## X-Wago-ID: 56n9g2N9 
 
+libs\D4Lib\D4Lib.xml
+
+locale/enUS.lua
+locale/deDE.lua
+
 data.lua
+datawowhead.lua
 core.lua

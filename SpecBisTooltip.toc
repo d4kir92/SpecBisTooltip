@@ -3,7 +3,7 @@
 ## Interface-Wrath: 30403
 ## Interface: 100200
 
-## Version: 0.4.44
+## Version: 0.5.0
 ## Title: SpecBisTooltip by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
@@ -14,5 +14,11 @@
 ## X-Wago-ID: 56n9g2N9 
 ## IconTexture: 136031
 
+libs\D4Lib\D4Lib.xml
+
+locale/enUS.lua
+locale/deDE.lua
+
 data.lua
+datawowhead.lua
 core.lua

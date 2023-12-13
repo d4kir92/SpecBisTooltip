@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 05.12.2023
+-- DATA FROM: 13.12.2023
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -31,7 +31,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207159] = "BIS,R", -- Ring
 		[207166] = "BIS,R", -- Trinket
 		[207169] = "BIS,R", -- Trinket
-		[207799] = "BIS,R", -- Weapon
+		[206448] = "BIS,R", -- Weapon
 		[208614] = "A", -- Trinket
 		[207174] = "A", -- Trinket
 		[207168] = "A", -- Trinket
@@ -169,6 +169,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207581] = "A", -- Trinket
 		[207165] = "A", -- Trinket
 		[208614] = "A", -- Trinket
+		[136978] = "A", -- Trinket
 		[158319] = "A", -- Trinket
 		[207566] = "B", -- Trinket
 		[137312] = "F", -- Trinket
@@ -521,6 +522,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207165] = "BIS,R", -- Trinket
 		[207785] = "BIS,R", -- Weapon
 		[193005] = "A", -- Trinket
+		[136978] = "A", -- Trinket
 		[191491] = "A", -- Trinket
 		[191492] = "B", -- Trinket
 		[193006] = "B", -- Trinket
@@ -564,13 +566,14 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207175] = "A", -- Trinket
 		[208614] = "A", -- Trinket
 		[137306] = "A", -- Trinket
+		[136978] = "A", -- Trinket
 		[136716] = "A", -- Trinket
 		[207566] = "B", -- Trinket
 		[198478] = "B", -- Trinket
+		[207167] = "B", -- Trinket
 		[158319] = "C", -- Trinket
 		[193005] = "C", -- Trinket
 		[191492] = "D", -- Trinket
-		[207167] = "D", -- Trinket
 	}
 
 	BIS["RETAIL"]["HUNTER"][3] = {
@@ -600,6 +603,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207166] = "BIS,R", -- Trinket
 		[207165] = "BIS,R", -- Trinket
 		[207793] = "BIS,R", -- Weapon
+		[136978] = "A", -- Trinket
 		[207175] = "A", -- Trinket
 		[207581] = "A", -- Trinket
 		[208614] = "A", -- Trinket
@@ -639,13 +643,13 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207172] = "BIS,R", -- Trinket
 		[208616] = "BIS,R", -- Staff
 		[207581] = "A", -- Trinket
-		[207168] = "A", -- Trinket
 		[208615] = "A", -- Trinket
-		[56290] = "C", -- Trinket
+		[207168] = "A", -- Trinket
 		[159610] = "B", -- Trinket
 		[137306] = "B", -- Trinket
 		[208614] = "B", -- Trinket
 		[159631] = "B", -- Trinket
+		[56290] = "C", -- Trinket
 		[207579] = "D", -- Trinket
 		[209343] = "F", -- Trinket
 		[136716] = "F", -- Trinket

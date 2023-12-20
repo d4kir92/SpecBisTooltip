@@ -59,7 +59,7 @@ function SpecBisTooltip:InitSettings()
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T132117:16:16:0:0|t v|cff3FC7EB%s", "0.5.4")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.6.0")
 		}
 	)
 
@@ -107,6 +107,23 @@ function SpecBisTooltip:InitSettings()
 			["value"] = SBTTAB["SHOWOTHERSPECS"],
 			["funcV"] = function(sel, checked)
 				SBTTAB["SHOWOTHERSPECS"] = checked
+			end
+		}
+	)
+
+	y = y - 20
+	if SBTTAB["SHOWOTHERCLASSES"] == nil then
+		SBTTAB["SHOWOTHERCLASSES"] = false
+	end
+
+	D4:CreateCheckbox(
+		{
+			["name"] = "LID_SHOWOTHERCLASSES",
+			["parent"] = sbt_settings,
+			["pTab"] = {"TOPLEFT", 10, y},
+			["value"] = SBTTAB["SHOWOTHERCLASSES"],
+			["funcV"] = function(sel, checked)
+				SBTTAB["SHOWOTHERCLASSES"] = checked
 			end
 		}
 	)
@@ -265,42 +282,55 @@ local function AddToTooltip(tooltip, id, specId, icon, trinket)
 	end
 
 	if trinket and typ == "NOTBIS" and not SpecBisTooltip:CheckIfTrinketData("INVTYPE_TRINKET") then
-		tooltip:AddDoubleLine("NO BIS DATA FOR YOUR TRINKETS IN THIS SPEC")
+		tooltip:AddDoubleLine("NO BIS DATA FOR YOUR TRINKETS IN THIS SPEC", "|T136031:20:20:0:0|t")
 	end
 
 	if GetBISText(typ) ~= "" then
-		tooltip:AddDoubleLine(iconText .. " " .. GetBISText(typ))
+		tooltip:AddDoubleLine(iconText .. " " .. GetBISText(typ), "|T136031:20:20:0:0|t")
 	else
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and not tContains(invalidEquipSlots, itemEquipLoc) then
-			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc))
+			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
 		end
 	end
 end
 
-local function AddBisForSpec(tooltip, itemId, yourSpecId)
+local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
+	local _, ownClassName = UnitClass("player")
 	local bfs = SpecBisTooltip:GetBFS(itemId)
 	local num = 0
 	if bfs then
 		for i, text in pairs(bfs) do
 			local className = text[1]
 			local specId = text[2]
-			if specId ~= yourSpecId then
+			if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
 				if num == 0 then
-					tooltip:AddDoubleLine("Other Specs:")
+					if otherClasses then
+						tooltip:AddDoubleLine(D4:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+					else
+						tooltip:AddDoubleLine(D4:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+					end
 				end
 
 				num = num + 1
 				local classIcon = SpecBisTooltip:GetClassIcon(className)
 				local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
 				local bisText = GetBISText(text[3])
-				tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText))
+				if otherClasses then
+					tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
+				else
+					tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
+				end
 			end
 		end
-	end
 
-	if num == 0 then
-		tooltip:AddDoubleLine("No other specs need this.")
+		if num == 0 then
+			if otherClasses then
+				tooltip:AddDoubleLine(D4:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			else
+				tooltip:AddDoubleLine(D4:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			end
+		end
 	end
 end
 
@@ -320,13 +350,17 @@ local function OnTooltipSetItem(tooltip, data)
 	if id == nil then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
 	if specId then
-		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) then
-			tooltip:AddDoubleLine("Your Spec:")
+		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) or D4:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
+			tooltip:AddDoubleLine(D4:Trans("LID_YOURSPEC") .. ":", "|T136031:20:20:0:0|t")
 		end
 
 		AddToTooltip(tooltip, id, specId, icon, itemType == "INVTYPE_TRINKET")
 		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) then
-			AddBisForSpec(tooltip, id, specId)
+			AddBisForSpec(tooltip, id, specId, false)
+		end
+
+		if D4:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
+			AddBisForSpec(tooltip, id, specId, true)
 		end
 	else
 		local lvl = UnitLevel("PLAYER")

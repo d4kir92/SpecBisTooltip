@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 16.12.2023
+-- DATA FROM: 20.12.2023
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -912,23 +912,22 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 
 	BIS["RETAIL"]["PALADIN"][2] = {
 		[207191] = "BIS", -- Head
-		[137311] = "BIS,M+", -- Neck
+		[133359] = "BIS,M+", -- Neck
 		[207189] = "BIS", -- Shoulders
-		[158375] = "BIS,M+", -- Cloak
+		[136977] = "BIS,M+", -- Cloak
 		[207194] = "BIS", -- Chest
 		[109876] = "BIS,M+", -- Wrist
 		[207192] = "BIS", -- Gloves
-		[159450] = "BIS,M+", -- Belt
+		[207188] = "BIS", -- Belt
 		[207824] = "BIS,M+", -- Legs
 		[109795] = "BIS,M+", -- Boots
-		[134487] = "BIS,M+", -- Ring
+		[162548] = "BIS,M+", -- Ring
 		[134490] = "BIS,M+", -- Ring
 		[159632] = "BIS,M+", -- Weapon
 		[158713] = "BIS,M+", -- Shield
-		[207163] = "BIS,R", -- Neck
+		[208445] = "BIS,R", -- Neck
 		[207161] = "BIS,R", -- Cloak
 		[207150] = "BIS,R", -- Wrist
-		[207157] = "BIS,R", -- Belt
 		[207190] = "BIS,R", -- Legs
 		[207156] = "BIS,R", -- Boots
 		[207159] = "BIS,R", -- Ring
@@ -990,11 +989,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207581] = "B", -- Trinket
 		[207175] = "B", -- Trinket
 		[207566] = "B", -- Trinket
+		[136978] = "B", -- Trinket
 		[110014] = "C", -- Trinket
 		[133197] = "C", -- Trinket
 		[159616] = "C", -- Trinket
 		[137312] = "C", -- Trinket
-		[136715] = "F", -- Trinket
+		[136715] = "C", -- Trinket
 	}
 
 	BIS["RETAIL"]["PRIEST"] = {}
@@ -1405,7 +1405,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"]["WARLOCK"] = {}
 	BIS["RETAIL"]["WARLOCK"][1] = {
 		[207272] = "BIS", -- Head
-		[56288] = "BIS,M+", -- Neck
+		[137311] = "BIS,M+", -- Neck
 		[207270] = "BIS", -- Shoulders
 		[159294] = "BIS,M+", -- Cloak
 		[207275] = "BIS", -- Chest
@@ -1415,7 +1415,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207271] = "BIS", -- Legs
 		[134419] = "BIS,M+", -- Boots
 		[134528] = "BIS,M+", -- Ring
-		[134487] = "BIS,M+", -- Ring
+		[162548] = "BIS,M+", -- Ring
 		[159630] = "BIS,M+", -- Trinket
 		[159610] = "BIS,M+", -- Trinket
 		[208321] = "BIS,M+", -- Staff

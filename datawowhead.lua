@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 20.12.2023
+-- DATA FROM: 27.12.2023
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -1446,7 +1446,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 
 	BIS["RETAIL"]["WARLOCK"][2] = {
 		[207272] = "BIS", -- Head
-		[56288] = "BIS,M+", -- Neck
+		[137311] = "BIS,M+", -- Neck
 		[207270] = "BIS", -- Shoulders
 		[159294] = "BIS,M+", -- Cloak
 		[207275] = "BIS", -- Chest

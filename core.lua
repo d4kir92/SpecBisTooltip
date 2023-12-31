@@ -59,7 +59,7 @@ function SpecBisTooltip:InitSettings()
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.6.3")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.6.4")
 		}
 	)
 
@@ -347,7 +347,7 @@ local function OnTooltipSetItem(tooltip, data)
 	end
 
 	local itemType = select(9, GetItemInfo(id))
-	if id == nil then return end
+	if id == nil or itemType == "" then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
 	if specId then
 		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) or D4:GV(SBTTAB, "SHOWOTHERCLASSES", false) then

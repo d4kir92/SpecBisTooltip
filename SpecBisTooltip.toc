@@ -3,7 +3,7 @@
 ## Interface-Wrath: 30403
 ## Interface: 100200
 
-## Version: 0.6.6
+## Version: 0.7.0
 ## Title: SpecBisTooltip by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR

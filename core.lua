@@ -195,30 +195,33 @@ function SpecBisTooltip:GetTalentInfo()
 
 			if icon == nil then
 				local _, class = UnitClass("PLAYER")
-				if class == "DRUID" then
-					icon = 625999
-				elseif class == "HUNTER" then
-					icon = 626000
-				elseif class == "MAGE" then
-					icon = 626001
-				elseif class == "PALADIN" then
-					if specid == 1 then
-						icon = 135920
-					elseif specid == 2 then
-						icon = 135893
-					elseif specid == 3 then
-						icon = 135873
+				icon = SpecBisTooltip:GetSpecIcon(class, specid)
+				if icon == nil then
+					if class == "DRUID" then
+						icon = 625999
+					elseif class == "HUNTER" then
+						icon = 626000
+					elseif class == "MAGE" then
+						icon = 626001
+					elseif class == "PALADIN" then
+						if specid == 1 then
+							icon = 135920
+						elseif specid == 2 then
+							icon = 135893
+						elseif specid == 3 then
+							icon = 135873
+						end
+					elseif class == "PRIEST" then
+						icon = 626004
+					elseif class == "ROGUE" then
+						icon = 626005
+					elseif class == "SHAMAN" then
+						icon = 626006
+					elseif class == "WARLOCK" then
+						icon = 626007
+					elseif class == "WARRIOR" then
+						icon = 626008
 					end
-				elseif class == "PRIEST" then
-					icon = 626004
-				elseif class == "ROGUE" then
-					icon = 626005
-				elseif class == "SHAMAN" then
-					icon = 626006
-				elseif class == "WARLOCK" then
-					icon = 626007
-				elseif class == "WARRIOR" then
-					icon = 626008
 				end
 			end
 		end
@@ -252,6 +255,8 @@ local function GetBISText(typ)
 		return "|cff90ee90BIS In PVE/Phase 6"
 	elseif typ == "BIS,PVE" then
 		return "|cff90ee90BIS In PVE"
+	elseif typ == "BIS,PVE,SOD25" then
+		return "|cff90ee90BIS In PVE/SOD 25"
 	elseif typ == "BIS,PVP" then
 		return "|cff90ee90BIS In PVP"
 	elseif typ == "S" then
@@ -270,6 +275,8 @@ local function GetBISText(typ)
 		return "|cffff4b47F"
 	elseif typ == "No" then
 		return "|cffff4b47NOT BIS"
+	elseif typ == "" then
+		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText")
 	end
 
 	return ""

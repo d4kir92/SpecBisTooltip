@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.7.1")
+	D4:SetVersion(AddonName, 136031, "0.8.0")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.7.1")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.8.0")
 		}
 	)
 
@@ -234,47 +234,49 @@ end
 
 local function GetBISText(typ)
 	if typ == "NOTBIS" then
-		return "|cffff4b47NOT BIS"
-	elseif typ == "BIS,M+" then
-		return "|cff90ee90BIS In M+"
-	elseif typ == "BIS,R" then
-		return "|cff90ee90BIS In Raid"
-	elseif typ == "BIS" then
-		return "|cff90ee90BIS In M+/Raid"
+		return "|cffff4b47" .. D4:Trans("LID_NOTBIS")
+	elseif typ == "BISO" then
+		return "|cff90ee90" .. D4:Trans("LID_BISO")
+	elseif typ == "BISMR" then
+		return "|cff90ee90" .. D4:Trans("LID_BISMR")
+	elseif typ == "BISM" then
+		return "|cff90ee90" .. D4:Trans("LID_BISM")
+	elseif typ == "BISR" then
+		return "|cff90ee90" .. D4:Trans("LID_BISR")
 	elseif typ == "BIS,PVE,P1" then
-		return "|cff90ee90BIS In PVE/Phase 1"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 1)
 	elseif typ == "BIS,PVE,P2" then
-		return "|cff90ee90BIS In PVE/Phase 2"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 2)
 	elseif typ == "BIS,PVE,P3" then
-		return "|cff90ee90BIS In PVE/Phase 3"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 3)
 	elseif typ == "BIS,PVE,P4" then
-		return "|cff90ee90BIS In PVE/Phase 4"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 4)
 	elseif typ == "BIS,PVE,P5" then
-		return "|cff90ee90BIS In PVE/Phase 5"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 5)
 	elseif typ == "BIS,PVE,P6" then
-		return "|cff90ee90BIS In PVE/Phase 6"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 6)
 	elseif typ == "BIS,PVE" then
-		return "|cff90ee90BIS In PVE"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVE")
 	elseif typ == "BIS,PVE,SOD25" then
-		return "|cff90ee90BIS In PVE/SOD 25"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVESODX", nil, 25)
 	elseif typ == "BIS,PVP" then
-		return "|cff90ee90BIS In PVP"
+		return "|cff90ee90" .. D4:Trans("LID_BISPVP")
 	elseif typ == "S" then
-		return "|cff90ee90S"
+		return "|cff90ee90" .. D4:Trans("LID_BISTRINKETX", nil, "S")
 	elseif typ == "A" then
-		return "|cffffff4bA"
+		return "|cffffff4b" .. D4:Trans("LID_BISTRINKETX", nil, "A")
 	elseif typ == "B" then
-		return "|cffffff4bB"
+		return "|cffffff4b" .. D4:Trans("LID_BISTRINKETX", nil, "B")
 	elseif typ == "C" then
-		return "|cffbf9000C"
+		return "|cffbf9000" .. D4:Trans("LID_BISTRINKETX", nil, "B")
 	elseif typ == "D" then
-		return "|cffbf9000D"
+		return "|cffbf9000" .. D4:Trans("LID_BISTRINKETX", nil, "B")
 	elseif typ == "E" then
-		return "|cffff4b47E"
+		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "B")
 	elseif typ == "F" then
-		return "|cffff4b47F"
+		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "B")
 	elseif typ == "No" then
-		return "|cffff4b47NOT BIS"
+		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "No")
 	elseif typ == "" then
 		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText")
 	end

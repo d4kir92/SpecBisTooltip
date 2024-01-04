@@ -1,9 +1,5 @@
 function D4:Trans(key, lang, t1, t2, t3)
     D4.trans = D4.trans or {}
-    if lang ~= nil then
-        print(key, lang)
-    end
-
     if lang == nil then
         lang = GetLocale()
     end

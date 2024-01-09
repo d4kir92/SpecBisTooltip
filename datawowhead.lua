@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 04.01.2024
+-- DATA FROM: 09.01.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -733,15 +733,15 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207795] = "BISR", -- Staff
 		[207782] = "BISR", -- Main Hand
 		[207796] = "BISR", -- Off Hand
-		[159610] = "A", -- Trinket
+		[159630] = "S", -- Trinket
+		[110004] = "A", -- Trinket
 		[207167] = "A", -- Trinket
+		[159610] = "A", -- Trinket
 		[159631] = "A", -- Trinket
 		[133201] = "A", -- Trinket
 		[208615] = "B", -- Trinket
-		[159630] = "B", -- Trinket
 		[137301] = "B", -- Trinket
 		[136716] = "B", -- Trinket
-		[110004] = "B", -- Trinket
 		[203729] = "C", -- Trinket
 		[202615] = "C", -- Trinket
 		[207579] = "D", -- Trinket
@@ -6684,7 +6684,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 02.01.2024
+-- DATA FROM: 09.01.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -7197,6 +7197,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[4265] = "BIS,PVE,SOD25",
 		[1978] = "BIS,PVE,SOD25",
 		[209527] = "BIS,PVE,SOD25",
+		[209421] = "BIS,PVE,SOD25",
 		[6468] = "BIS,PVE,SOD25",
 		[10410] = "BIS,PVE,SOD25",
 		[7754] = "BIS,PVE,SOD25",
@@ -7207,7 +7208,6 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[12985] = "BIS,PVE,SOD25",
 		[4381] = "BIS,PVE,SOD25",
 		[1976] = "BIS,PVE,SOD25",
-		[209421] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["DRUID"][4] = {
@@ -7410,10 +7410,10 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[13094] = "BIS,PVE,SOD25",
 		[209668] = "BIS,PVE,SOD25",
 		[211451] = "BIS,PVE,SOD25",
+		[211420] = "BIS,PVE,SOD25",
 		[21566] = "BIS,PVE,SOD25",
 		[209693] = "BIS,PVE,SOD25",
 		[14639] = "BIS,PVE,SOD25",
-		[211420] = "BIS,PVE,SOD25",
 		[211456] = "BIS,PVE,SOD25",
 		[209694] = "BIS,PVE,SOD25",
 		[209822] = "BIS,PVE,SOD25",
@@ -7625,6 +7625,10 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[4410] = "BIS,PVE,SOD25",
 		[15462] = "BIS,PVE,SOD25",
 		[5355] = "BIS,PVE,SOD25",
+		[209830] = "BIS,PVE,SOD25",
+		[213087] = "BIS,PVE,SOD25",
+		[20429] = "BIS,PVE,SOD25",
+		[20439] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["HUNTER"][2] = {
@@ -7813,6 +7817,10 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[4410] = "BIS,PVE,SOD25",
 		[15462] = "BIS,PVE,SOD25",
 		[5355] = "BIS,PVE,SOD25",
+		[209830] = "BIS,PVE,SOD25",
+		[213087] = "BIS,PVE,SOD25",
+		[20429] = "BIS,PVE,SOD25",
+		[20439] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["HUNTER"][3] = {
@@ -8001,6 +8009,10 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[4410] = "BIS,PVE,SOD25",
 		[15462] = "BIS,PVE,SOD25",
 		[5355] = "BIS,PVE,SOD25",
+		[209830] = "BIS,PVE,SOD25",
+		[213087] = "BIS,PVE,SOD25",
+		[20429] = "BIS,PVE,SOD25",
+		[20439] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["MAGE"] = {}
@@ -8542,6 +8554,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[5611] = "BIS,PVE,SOD25",
 		[4838] = "BIS,PVE,SOD25",
 		[2292] = "BIS,PVE,SOD25",
+		[209679] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["PALADIN"][2] = {} -- NO GUIDE
@@ -8859,6 +8872,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[4827] = "BIS,PVE,SOD25",
 		[2911] = "BIS,PVE,SOD25",
 		[4829] = "BIS,PVE,SOD25",
+		[6282] = "BIS,PVE,SOD25",
 		[4037] = "BIS,PVE,SOD25",
 		[9797] = "BIS,PVE,SOD25",
 		[12987] = "BIS,PVE,SOD25",
@@ -8912,7 +8926,6 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[5250] = "BIS,PVE,SOD25",
 		[6806] = "BIS,PVE,SOD25",
 		[12977] = "BIS,PVE,SOD25",
-		[6282] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["PRIEST"][2] = {
@@ -9121,6 +9134,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[4827] = "BIS,PVE,SOD25",
 		[2911] = "BIS,PVE,SOD25",
 		[4829] = "BIS,PVE,SOD25",
+		[6282] = "BIS,PVE,SOD25",
 		[4037] = "BIS,PVE,SOD25",
 		[9797] = "BIS,PVE,SOD25",
 		[12987] = "BIS,PVE,SOD25",
@@ -9174,7 +9188,6 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[5250] = "BIS,PVE,SOD25",
 		[6806] = "BIS,PVE,SOD25",
 		[12977] = "BIS,PVE,SOD25",
-		[6282] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["PRIEST"][3] = {
@@ -10208,6 +10221,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[12997] = "BIS,PVE,SOD25",
 		[13079] = "BIS,PVE,SOD25",
 		[209673] = "BIS,PVE,SOD25",
+		[6472] = "BIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["SHAMAN"][2] = {
@@ -11400,29 +11414,28 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[51227] = "BIS,PVE,P4",
 		[41398] = "BIS,PVE,P4",
 		[40111] = "BIS,PVE,P4",
-		[50728] = "BIS,PVE,P4",
-		[40143] = "BIS,PVE,P4",
+		[54581] = "BIS,PVE,P4",
+		[40142] = "BIS,PVE,P4",
 		[51229] = "BIS,PVE,P4",
 		[47545] = "BIS,PVE,P4",
 		[51225] = "BIS,PVE,P4",
 		[49110] = "BIS,PVE,P4",
-		[50670] = "BIS,PVE,P4",
+		[54580] = "BIS,PVE,P4",
 		[51226] = "BIS,PVE,P4",
-		[40125] = "BIS,PVE,P4",
 		[50707] = "BIS,PVE,P4",
 		[40117] = "BIS,PVE,P4",
 		[50645] = "BIS,PVE,P4",
-		[42153] = "BIS,PVE,P4",
 		[42142] = "BIS,PVE,P4",
-		[50607] = "BIS,PVE,P4",
+		[54578] = "BIS,PVE,P4",
+		[40143] = "BIS,PVE,P4",
 		[50402] = "BIS,PVE,P4",
 		[50618] = "BIS,PVE,P4",
-		[50343] = "BIS,PVE,P4",
+		[54590] = "BIS,PVE,P4",
 		[50363] = "BIS,PVE,P4",
 		[49623] = "BIS,PVE,P4",
 		[50733] = "BIS,PVE,P4",
 		[47546] = "BIS,PVE,P4",
-		[47131] = "BIS,PVE,P4",
+		[40125] = "BIS,PVE,P4",
 		[50078] = "BIS,PVE,P4",
 		[50082] = "BIS,PVE,P4",
 		[50080] = "BIS,PVE,P4",
@@ -11444,7 +11457,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[48673] = "BIS,PVE,P4",
 		[51214] = "BIS,PVE,P4",
 		[51923] = "BIS,PVE,P4",
-		[40142] = "BIS,PVE,P4",
+		[50670] = "BIS,PVE,P4",
 		[50659] = "BIS,PVE,P4",
 		[50655] = "BIS,PVE,P4",
 		[47442] = "BIS,PVE,P4",
@@ -11463,8 +11476,10 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[51211] = "BIS,PVE,P4",
 		[49903] = "BIS,PVE,P4",
 		[50639] = "BIS,PVE,P4",
+		[50607] = "BIS,PVE,P4",
 		[51856] = "BIS,PVE,P4",
 		[49906] = "BIS,PVE,P4",
+		[50728] = "BIS,PVE,P4",
 		[51822] = "BIS,PVE,P4",
 		[50633] = "BIS,PVE,P4",
 		[47433] = "BIS,PVE,P4",
@@ -11475,6 +11490,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[47443] = "BIS,PVE,P4",
 		[47075] = "BIS,PVE,P4",
 		[45608] = "BIS,PVE,P4",
+		[47131] = "BIS,PVE,P4",
+		[50343] = "BIS,PVE,P4",
 		[47115] = "BIS,PVE,P4",
 		[50362] = "BIS,PVE,P4",
 		[47464] = "BIS,PVE,P4",
@@ -11496,9 +11513,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209422] = "BIS,PVE,SOD25",
 		[15531] = "BIS,PVE,SOD25",
 		[213088] = "BIS,PVE,SOD25",
-		[211504] = "BIS,PVE,SOD25",
+		[210794] = "BIS,PVE,SOD25",
 		[4438] = "BIS,PVE,SOD25",
-		[211423] = "BIS,PVE,SOD25",
+		[209568] = "BIS,PVE,SOD25",
 		[6460] = "BIS,PVE,SOD25",
 		[209566] = "BIS,PVE,SOD25",
 		[211506] = "BIS,PVE,SOD25",
@@ -11508,6 +11525,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[21568] = "BIS,PVE,SOD25",
 		[209562] = "BIS,PVE,SOD25",
 		[209563] = "BIS,PVE,SOD25",
+		[209525] = "BIS,PVE,SOD25",
+		[209694] = "BIS,PVE,SOD25",
 		[1282] = "BIS,PVE,SOD25",
 		[7130] = "BIS,PVE,SOD25",
 		[14573] = "BIS,PVE,SOD25",
@@ -11516,12 +11535,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[9838] = "BIS,PVE,SOD25",
 		[6449] = "BIS,PVE,SOD25",
 		[5193] = "BIS,PVE,SOD25",
-		[210794] = "BIS,PVE,SOD25",
+		[211504] = "BIS,PVE,SOD25",
 		[2870] = "BIS,PVE,SOD25",
 		[6627] = "BIS,PVE,SOD25",
 		[13012] = "BIS,PVE,SOD25",
 		[15459] = "BIS,PVE,SOD25",
-		[209568] = "BIS,PVE,SOD25",
+		[211423] = "BIS,PVE,SOD25",
 		[16978] = "BIS,PVE,SOD25",
 		[16659] = "BIS,PVE,SOD25",
 		[7107] = "BIS,PVE,SOD25",
@@ -11540,8 +11559,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209567] = "BIS,PVE,SOD25",
 		[7230] = "BIS,PVE,SOD25",
 		[6505] = "BIS,PVE,SOD25",
-		[209525] = "BIS,PVE,SOD25",
-		[209436] = "BIS,PVE,SOD25",
+		[16886] = "BIS,PVE,SOD25",
+		[211454] = "BIS,PVE,SOD25",
 		[1292] = "BIS,PVE,SOD25",
 		[5191] = "BIS,PVE,SOD25",
 		[209688] = "BIS,PVE,SOD25",
@@ -11555,35 +11574,35 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[43432] = "BIS,PVE,P4",
 		[43418] = "BIS,PVE,P4",
 		[43423] = "BIS,PVE,P4",
-		[43397] = "BIS,PVE,P4",
-		[49084] = "BIS,PVE,P4",
 		[206953] = "BIS,PVE,P4",
+		[49084] = "BIS,PVE,P4",
+		[43397] = "BIS,PVE,P4",
 		[51227] = "BIS,PVE,P4",
 		[41398] = "BIS,PVE,P4",
 		[40117] = "BIS,PVE,P4",
-		[50633] = "BIS,PVE,P4",
+		[54581] = "BIS,PVE,P4",
+		[40142] = "BIS,PVE,P4",
 		[51229] = "BIS,PVE,P4",
 		[47545] = "BIS,PVE,P4",
 		[51225] = "BIS,PVE,P4",
-		[49110] = "BIS,PVE,P4",
-		[50670] = "BIS,PVE,P4",
-		[42156] = "BIS,PVE,P4",
-		[50675] = "BIS,PVE,P4",
-		[40143] = "BIS,PVE,P4",
-		[50620] = "BIS,PVE,P4",
 		[40111] = "BIS,PVE,P4",
+		[49110] = "BIS,PVE,P4",
+		[54580] = "BIS,PVE,P4",
+		[50675] = "BIS,PVE,P4",
+		[50707] = "BIS,PVE,P4",
 		[51228] = "BIS,PVE,P4",
-		[50639] = "BIS,PVE,P4",
+		[54578] = "BIS,PVE,P4",
 		[50618] = "BIS,PVE,P4",
 		[50402] = "BIS,PVE,P4",
-		[50343] = "BIS,PVE,P4",
 		[50363] = "BIS,PVE,P4",
+		[54590] = "BIS,PVE,P4",
 		[49623] = "BIS,PVE,P4",
+		[42142] = "BIS,PVE,P4",
 		[42153] = "BIS,PVE,P4",
 		[50730] = "BIS,PVE,P4",
 		[50733] = "BIS,PVE,P4",
+		[40143] = "BIS,PVE,P4",
 		[47546] = "BIS,PVE,P4",
-		[40125] = "BIS,PVE,P4",
 		[50078] = "BIS,PVE,P4",
 		[50082] = "BIS,PVE,P4",
 		[50080] = "BIS,PVE,P4",
@@ -11605,7 +11624,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[48673] = "BIS,PVE,P4",
 		[51214] = "BIS,PVE,P4",
 		[51923] = "BIS,PVE,P4",
-		[40142] = "BIS,PVE,P4",
+		[50670] = "BIS,PVE,P4",
 		[50659] = "BIS,PVE,P4",
 		[50655] = "BIS,PVE,P4",
 		[47442] = "BIS,PVE,P4",
@@ -11616,7 +11635,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[47492] = "BIS,PVE,P4",
 		[47240] = "BIS,PVE,P4",
 		[41611] = "BIS,PVE,P4",
-		[50707] = "BIS,PVE,P4",
+		[50620] = "BIS,PVE,P4",
 		[50688] = "BIS,PVE,P4",
 		[47429] = "BIS,PVE,P4",
 		[47002] = "BIS,PVE,P4",
@@ -11625,10 +11644,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[51211] = "BIS,PVE,P4",
 		[50645] = "BIS,PVE,P4",
 		[49903] = "BIS,PVE,P4",
+		[50639] = "BIS,PVE,P4",
 		[50607] = "BIS,PVE,P4",
 		[51856] = "BIS,PVE,P4",
 		[49906] = "BIS,PVE,P4",
 		[50728] = "BIS,PVE,P4",
+		[50633] = "BIS,PVE,P4",
 		[51822] = "BIS,PVE,P4",
 		[47433] = "BIS,PVE,P4",
 		[47060] = "BIS,PVE,P4",
@@ -11639,6 +11660,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[47075] = "BIS,PVE,P4",
 		[45608] = "BIS,PVE,P4",
 		[47131] = "BIS,PVE,P4",
+		[50343] = "BIS,PVE,P4",
 		[47115] = "BIS,PVE,P4",
 		[50362] = "BIS,PVE,P4",
 		[47464] = "BIS,PVE,P4",
@@ -11658,9 +11680,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209422] = "BIS,PVE,SOD25",
 		[15531] = "BIS,PVE,SOD25",
 		[213088] = "BIS,PVE,SOD25",
-		[211504] = "BIS,PVE,SOD25",
+		[210794] = "BIS,PVE,SOD25",
 		[4438] = "BIS,PVE,SOD25",
-		[211423] = "BIS,PVE,SOD25",
+		[209568] = "BIS,PVE,SOD25",
 		[6460] = "BIS,PVE,SOD25",
 		[209566] = "BIS,PVE,SOD25",
 		[211506] = "BIS,PVE,SOD25",
@@ -11670,6 +11692,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[21568] = "BIS,PVE,SOD25",
 		[209562] = "BIS,PVE,SOD25",
 		[209563] = "BIS,PVE,SOD25",
+		[209525] = "BIS,PVE,SOD25",
+		[209694] = "BIS,PVE,SOD25",
 		[1282] = "BIS,PVE,SOD25",
 		[7130] = "BIS,PVE,SOD25",
 		[14573] = "BIS,PVE,SOD25",
@@ -11678,12 +11702,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[9838] = "BIS,PVE,SOD25",
 		[6449] = "BIS,PVE,SOD25",
 		[5193] = "BIS,PVE,SOD25",
-		[210794] = "BIS,PVE,SOD25",
+		[211504] = "BIS,PVE,SOD25",
 		[2870] = "BIS,PVE,SOD25",
 		[6627] = "BIS,PVE,SOD25",
 		[13012] = "BIS,PVE,SOD25",
 		[15459] = "BIS,PVE,SOD25",
-		[209568] = "BIS,PVE,SOD25",
+		[211423] = "BIS,PVE,SOD25",
 		[16978] = "BIS,PVE,SOD25",
 		[16659] = "BIS,PVE,SOD25",
 		[7107] = "BIS,PVE,SOD25",
@@ -11702,8 +11726,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209567] = "BIS,PVE,SOD25",
 		[7230] = "BIS,PVE,SOD25",
 		[6505] = "BIS,PVE,SOD25",
-		[209525] = "BIS,PVE,SOD25",
-		[209436] = "BIS,PVE,SOD25",
+		[16886] = "BIS,PVE,SOD25",
+		[211454] = "BIS,PVE,SOD25",
 		[1292] = "BIS,PVE,SOD25",
 		[5191] = "BIS,PVE,SOD25",
 		[209688] = "BIS,PVE,SOD25",

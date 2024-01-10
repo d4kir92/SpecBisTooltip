@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.8.3")
+	D4:SetVersion(AddonName, 136031, "0.8.4")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.8.3")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.8.4")
 		}
 	)
 
@@ -277,6 +277,20 @@ local function GetBISText(typ)
 		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "B")
 	elseif typ == "No" then
 		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "No")
+	elseif typ == "PREBIS,PVE,SOD25" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVESODX", nil, 25)
+	elseif typ == "PREBIS,PVE,P1" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 1)
+	elseif typ == "PREBIS,PVE,P2" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 2)
+	elseif typ == "PREBIS,PVE,P3" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 3)
+	elseif typ == "PREBIS,PVE,P4" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 4)
+	elseif typ == "PREBIS,PVE,P5" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 5)
+	elseif typ == "PREBIS,PVE,P6" then
+		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 6)
 	elseif typ == "" then
 		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText")
 	end

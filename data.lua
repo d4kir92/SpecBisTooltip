@@ -118,6 +118,30 @@ local specIcons = {
 	},
 }
 
+local classIds = {
+	["WARRIOR"] = 1,
+	["PALADIN"] = 2,
+	["HUNTER"] = 3,
+	["ROGUE"] = 4,
+	["PRIEST"] = 5,
+	["DEATHKNIGHT"] = 6,
+	["SHAMAN"] = 7,
+	["MAGE"] = 8,
+	["WARLOCK"] = 9,
+	["MONK"] = 10,
+	["DRUID"] = 11,
+	["DEMONHUNTER"] = 12,
+	["EVOKER"] = 13,
+}
+
 function SpecBisTooltip:GetSpecIcon(className, specId)
+	if GetSpecializationInfoForClassID then
+		local classId = classIds[className]
+		if classId then
+			local _, _, _, icon = GetSpecializationInfoForClassID(classId, specId)
+			if icon then return icon end
+		end
+	end
+
 	return specIcons[className][specId]
 end

@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 09.01.2024
+-- DATA FROM: 13.01.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -67,7 +67,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207786] = "BISO", -- Weapon
 		[207789] = "BISO", -- Weapon
 		[207858] = "BISO", -- Belt
-		[139241] = "BISO", -- Boots
+		[207156] = "BISO", -- Boots
 		[207566] = "BISO", -- Trinket
 		[206448] = "BISO", -- Weapon
 		[137311] = "BISM", -- Neck
@@ -508,12 +508,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207159] = "BISR", -- Ring
 		[207162] = "BISR", -- Ring
 		[207167] = "A", -- Trinket
+		[136716] = "B", -- Trinket
 		[159631] = "B", -- Trinket
 		[133201] = "B", -- Trinket
 		[110004] = "B", -- Trinket
 		[207168] = "B", -- Trinket
 		[137301] = "C", -- Trinket
-		[136716] = "C", -- Trinket
 		[207579] = "C", -- Trinket
 		[137306] = "D", -- Trinket
 		[207581] = "D", -- Trinket

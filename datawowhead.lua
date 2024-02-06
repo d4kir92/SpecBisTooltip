@@ -6858,7 +6858,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 13.01.2024
+-- DATA FROM: 06.02.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -7224,6 +7224,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[211420] = "PREBIS,PVE,SOD25",
 		[209687] = "PREBIS,PVE,SOD25",
 		[5355] = "PREBIS,PVE,SOD25",
+		[209421] = "PREBIS,PVE,SOD25",
+		[2933] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["DRUID"][3] = {
@@ -7351,7 +7353,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209673] = "BIS,PVE,SOD25",
 		[209692] = "BIS,PVE,SOD25",
 		[213087] = "BIS,PVE,SOD25",
-		[209687] = "BIS,PVE,SOD25",
+		[211512] = "BIS,PVE,SOD25",
 		[209524] = "BIS,PVE,SOD25",
 		[211423] = "BIS,PVE,SOD25",
 		[9827] = "BIS,PVE,SOD25",
@@ -7366,9 +7368,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[2264] = "PREBIS,PVE,SOD25",
 		[213088] = "PREBIS,PVE,SOD25",
 		[2059] = "PREBIS,PVE,SOD25",
+		[209687] = "PREBIS,PVE,SOD25",
 		[209572] = "PREBIS,PVE,SOD25",
 		[209675] = "PREBIS,PVE,SOD25",
-		[211512] = "PREBIS,PVE,SOD25",
 		[15351] = "PREBIS,PVE,SOD25",
 		[4265] = "PREBIS,PVE,SOD25",
 		[1978] = "PREBIS,PVE,SOD25",
@@ -8322,6 +8324,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209674] = "PREBIS,PVE,SOD25",
 		[211461] = "PREBIS,PVE,SOD25",
 		[20428] = "PREBIS,PVE,SOD25",
+		[12984] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["MAGE"][2] = {
@@ -9085,9 +9088,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[2271] = "PREBIS,PVE,SOD25",
 		[212584] = "PREBIS,PVE,SOD25",
 		[6505] = "PREBIS,PVE,SOD25",
+		[2042] = "PREBIS,PVE,SOD25",
 		[5201] = "PREBIS,PVE,SOD25",
 		[890] = "PREBIS,PVE,SOD25",
-		[2042] = "PREBIS,PVE,SOD25",
 		[211456] = "PREBIS,PVE,SOD25",
 		[209694] = "PREBIS,PVE,SOD25",
 		[209822] = "PREBIS,PVE,SOD25",
@@ -9105,6 +9108,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[5250] = "PREBIS,PVE,SOD25",
 		[6806] = "PREBIS,PVE,SOD25",
 		[12977] = "PREBIS,PVE,SOD25",
+		[13062] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["PRIEST"][2] = {
@@ -9347,9 +9351,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[2271] = "PREBIS,PVE,SOD25",
 		[212584] = "PREBIS,PVE,SOD25",
 		[6505] = "PREBIS,PVE,SOD25",
+		[2042] = "PREBIS,PVE,SOD25",
 		[5201] = "PREBIS,PVE,SOD25",
 		[890] = "PREBIS,PVE,SOD25",
-		[2042] = "PREBIS,PVE,SOD25",
 		[211456] = "PREBIS,PVE,SOD25",
 		[209694] = "PREBIS,PVE,SOD25",
 		[209822] = "PREBIS,PVE,SOD25",
@@ -9367,6 +9371,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[5250] = "PREBIS,PVE,SOD25",
 		[6806] = "PREBIS,PVE,SOD25",
 		[12977] = "PREBIS,PVE,SOD25",
+		[13062] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["PRIEST"][3] = {
@@ -9767,8 +9772,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[212586] = "PREBIS,PVE,SOD25",
 		[212582] = "PREBIS,PVE,SOD25",
 		[13024] = "PREBIS,PVE,SOD25",
-		[5191] = "PREBIS,PVE,SOD25",
 		[1482] = "PREBIS,PVE,SOD25",
+		[5191] = "PREBIS,PVE,SOD25",
 		[3186] = "PREBIS,PVE,SOD25",
 		[6472] = "PREBIS,PVE,SOD25",
 		[209436] = "PREBIS,PVE,SOD25",
@@ -9783,6 +9788,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209563] = "PREBIS,PVE,SOD25",
 		[3021] = "PREBIS,PVE,SOD25",
 		[15462] = "PREBIS,PVE,SOD25",
+		[4794] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["ROGUE"][2] = {
@@ -10166,8 +10172,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[212586] = "PREBIS,PVE,SOD25",
 		[212582] = "PREBIS,PVE,SOD25",
 		[13024] = "PREBIS,PVE,SOD25",
-		[5191] = "PREBIS,PVE,SOD25",
 		[1482] = "PREBIS,PVE,SOD25",
+		[5191] = "PREBIS,PVE,SOD25",
 		[3186] = "PREBIS,PVE,SOD25",
 		[6472] = "PREBIS,PVE,SOD25",
 		[209436] = "PREBIS,PVE,SOD25",
@@ -10182,6 +10188,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[209563] = "PREBIS,PVE,SOD25",
 		[3021] = "PREBIS,PVE,SOD25",
 		[15462] = "PREBIS,PVE,SOD25",
+		[4794] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["SHAMAN"] = {}
@@ -11600,6 +11607,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[50363] = "BIS,PVE,P4",
 		[49623] = "BIS,PVE,P4",
 		[50733] = "BIS,PVE,P4",
+		[43423] = "PREBIS,PVE,P4",
+		[43421] = "PREBIS,PVE,P4",
+		[43416] = "PREBIS,PVE,P4",
+		[43399] = "PREBIS,PVE,P4",
+		[49084] = "PREBIS,PVE,P4",
+		[206953] = "PREBIS,PVE,P4",
 		[41398] = "PREBIS,PVE,P4",
 		[40111] = "PREBIS,PVE,P4",
 		[40142] = "PREBIS,PVE,P4",
@@ -11741,6 +11754,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[3209] = "PREBIS,PVE,SOD25",
 		[4835] = "PREBIS,PVE,SOD25",
 		[6388] = "PREBIS,PVE,SOD25",
+		[1975] = "PREBIS,PVE,SOD25",
+		[6220] = "PREBIS,PVE,SOD25",
+		[209691] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["WARRIOR"][2] = {
@@ -11761,6 +11777,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[49623] = "BIS,PVE,P4",
 		[50730] = "BIS,PVE,P4",
 		[50733] = "BIS,PVE,P4",
+		[43432] = "PREBIS,PVE,P4",
+		[43418] = "PREBIS,PVE,P4",
+		[43423] = "PREBIS,PVE,P4",
+		[206953] = "PREBIS,PVE,P4",
+		[49084] = "PREBIS,PVE,P4",
+		[43397] = "PREBIS,PVE,P4",
 		[41398] = "PREBIS,PVE,P4",
 		[40117] = "PREBIS,PVE,P4",
 		[40142] = "PREBIS,PVE,P4",
@@ -11902,6 +11924,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[3209] = "PREBIS,PVE,SOD25",
 		[4835] = "PREBIS,PVE,SOD25",
 		[6388] = "PREBIS,PVE,SOD25",
+		[1975] = "PREBIS,PVE,SOD25",
+		[6220] = "PREBIS,PVE,SOD25",
+		[209691] = "PREBIS,PVE,SOD25",
 	}
 
 	BIS["CLASSIC"]["WARRIOR"][3] = {

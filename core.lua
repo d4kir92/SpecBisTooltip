@@ -1,7 +1,7 @@
 -- By D4KiR
 local AddonName, SpecBisTooltip = ...
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
-local invalidEquipSlots = {"INVTYPE_TABARD", "INVTYPE_BODY",}
+local invalidEquipSlots = {"INVTYPE_TABARD", "INVTYPE_BODY", "INVTYPE_BAG",}
 local SBTSetup = CreateFrame("FRAME", "SBTSetup")
 SBTSetup:RegisterEvent("PLAYER_LOGIN")
 SBTSetup:SetScript(
@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.8.15")
+	D4:SetVersion(AddonName, 136031, "0.8.16")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.8.15")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.8.16")
 		}
 	)
 

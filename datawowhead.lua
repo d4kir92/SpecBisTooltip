@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 17.02.2024
+-- DATA FROM: 27.02.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -368,7 +368,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207170] = "BISR", -- Trinket
 		[133201] = "A", -- Trinket
 		[193005] = "A", -- Trinket
-		[136714] = "B", -- Trinket
+		[136714] = "A", -- Trinket
 		[203729] = "B", -- Trinket
 		[202614] = "B", -- Trinket
 		[207581] = "B", -- Trinket
@@ -461,12 +461,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[159631] = "B", -- Trinket
 		[202614] = "B", -- Trinket
 		[207581] = "B", -- Trinket
-		[158320] = "B", -- Trinket
 		[191491] = "B", -- Trinket
 		[207171] = "C", -- Trinket
 		[136714] = "D", -- Trinket
 		[207579] = "D", -- Trinket
-		[110009] = "F", -- Trinket
 	}
 
 	BIS["RETAIL"]["EVOKER"][3] = {
@@ -581,7 +579,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207220] = "BISO", -- Boots
 		[192999] = "BISO", -- Ring
 		[207159] = "BISO", -- Ring
-		[207581] = "BISO", -- Trinket
+		[109999] = "BISO", -- Trinket
 		[207168] = "BISO", -- Trinket
 		[207780] = "BISO", -- Weapon
 		[134499] = "BISM", -- Neck
@@ -592,16 +590,16 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[134464] = "BISM", -- Boots
 		[134487] = "BISM", -- Ring
 		[134531] = "BISM", -- Ring
-		[109999] = "BISM", -- Trinket
+		[136978] = "BISM", -- Trinket
 		[207986] = "BISM", -- Weapon
 		[207161] = "BISR", -- Cloak
 		[207145] = "BISR", -- Boots
 		[208442] = "BISR", -- Ring
 		[207165] = "BISR", -- Trinket
+		[207581] = "A", -- Trinket
 		[207175] = "A", -- Trinket
 		[208614] = "A", -- Trinket
 		[137306] = "A", -- Trinket
-		[136978] = "A", -- Trinket
 		[136716] = "A", -- Trinket
 		[207566] = "B", -- Trinket
 		[198478] = "B", -- Trinket

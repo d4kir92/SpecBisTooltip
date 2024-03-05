@@ -1729,7 +1729,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	}
 end
 
--- DATA FROM: 27.02.2024
+-- DATA FROM: 05.03.2024
 if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
@@ -1959,6 +1959,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[47528] = "BIS,PVE,P4",
 		[47526] = "BIS,PVE,P4",
 		[45459] = "BIS,PVE,P4",
+		[49903] = "BIS,PVE,P4",
 	}
 
 	BIS["WRATH"]["DEATHKNIGHT"][3] = {
@@ -3249,10 +3250,10 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 		[44684] = "BIS,PVE,P4",
 		[51283] = "BIS,PVE,P4",
 		[50663] = "BIS,PVE,P4",
-		[50348] = "BIS,PVE,P4",
 		[50628] = "BIS,PVE,P4",
 		[50651] = "BIS,PVE,P4",
 		[50686] = "BIS,PVE,P4",
+		[50348] = "BIS,PVE,P4",
 		[49908] = "BIS,PVE,P4",
 		[50276] = "BIS,PVE,P4",
 		[50279] = "BIS,PVE,P4",

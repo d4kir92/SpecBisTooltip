@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 07.03.2024
+-- DATA FROM: 09.03.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -6864,7 +6864,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 07.03.2024
+-- DATA FROM: 09.03.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -7598,6 +7598,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[213300] = {"PREBIS,PVE,SOD40", "", ""},
 		[211455] = {"PREBIS,PVE,SOD40", "", ""},
 		[217292] = {"PREBIS,PVE,SOD40", "", ""},
+		[20098] = {"PREBIS,PVE,SOD40", "", ""},
 		[209685] = {"PREBIS,PVE,SOD40", "", ""},
 		[213329] = {"PREBIS,PVE,SOD40", "", ""},
 		[217009] = {"PREBIS,PVE,SOD40", "", ""},
@@ -7610,6 +7611,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[210795] = {"PREBIS,PVE,SOD40", "", ""},
 		[213290] = {"PREBIS,PVE,SOD40", "", ""},
 		[20641] = {"PREBIS,PVE,SOD40", "", ""},
+		[20095] = {"PREBIS,PVE,SOD40", "", ""},
 		[209686] = {"PREBIS,PVE,SOD40", "", ""},
 		[217301] = {"PREBIS,PVE,SOD40", "", ""},
 		[217290] = {"PREBIS,PVE,SOD40", "", ""},
@@ -8923,6 +8925,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[7724] = {"PREBIS,PVE,SOD40", "", ""},
 		[215380] = {"PREBIS,PVE,SOD40", "", ""},
 		[213416] = {"PREBIS,PVE,SOD40", "", ""},
+		[217308] = {"PREBIS,PVE,SOD40", "", ""},
 		[213325] = {"PREBIS,PVE,SOD40", "", ""},
 		[20125] = {"PREBIS,PVE,SOD40", "", ""},
 		[10768] = {"PREBIS,PVE,SOD40", "", ""},
@@ -9905,6 +9908,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19513] = {"PREBIS,PVE,SOD40", "", ""},
 		[744] = {"PREBIS,PVE,SOD40", "", ""},
 		[15287] = {"PREBIS,PVE,SOD40", "", ""},
+		[7447] = {"PREBIS,PVE,SOD40", "", ""},
 		[17772] = {"PREBIS,PVE,SOD40", "", ""},
 		[7378] = {"PREBIS,PVE,SOD40", "", ""},
 	}
@@ -10301,6 +10305,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19513] = {"PREBIS,PVE,SOD40", "", ""},
 		[744] = {"PREBIS,PVE,SOD40", "", ""},
 		[15287] = {"PREBIS,PVE,SOD40", "", ""},
+		[7447] = {"PREBIS,PVE,SOD40", "", ""},
 		[17772] = {"PREBIS,PVE,SOD40", "", ""},
 		[7378] = {"PREBIS,PVE,SOD40", "", ""},
 	}

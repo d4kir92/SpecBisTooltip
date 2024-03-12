@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.2")
+	D4:SetVersion(AddonName, 136031, "0.9.3")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.2")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.3")
 		}
 	)
 
@@ -91,6 +91,40 @@ function SpecBisTooltip:InitSettings()
 				else
 					D4:HideMMBtn("SpecBisTooltip")
 				end
+			end
+		}
+	)
+
+	y = y - 20
+	if SBTTAB["SHOWPREBIS"] == nil then
+		SBTTAB["SHOWPREBIS"] = true
+	end
+
+	D4:CreateCheckbox(
+		{
+			["name"] = "LID_SHOWPREBIS",
+			["parent"] = sbt_settings,
+			["pTab"] = {"TOPLEFT", 10, y},
+			["value"] = SBTTAB["SHOWPREBIS"],
+			["funcV"] = function(sel, checked)
+				SBTTAB["SHOWPREBIS"] = checked
+			end
+		}
+	)
+
+	y = y - 20
+	if SBTTAB["SHOWOLDERPHASES"] == nil then
+		SBTTAB["SHOWOLDERPHASES"] = true
+	end
+
+	D4:CreateCheckbox(
+		{
+			["name"] = "LID_SHOWOLDERPHASES",
+			["parent"] = sbt_settings,
+			["pTab"] = {"TOPLEFT", 10, y},
+			["value"] = SBTTAB["SHOWOLDERPHASES"],
+			["funcV"] = function(sel, checked)
+				SBTTAB["SHOWOLDERPHASES"] = checked
 			end
 		}
 	)
@@ -232,82 +266,186 @@ function SpecBisTooltip:GetTalentInfo()
 	return nil, nil
 end
 
+local col_green = "|cff90ee90"
+local col_orange = "|cffbf9000"
+local col_yellow = "|cffffff4b"
+local col_red = "|cffff4b47"
+local bisTextLookup = {
+	["NOTBIS"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_NOTBIS"}
+	},
+	["BISO"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISO"}
+	},
+	["BISMR"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISMR"}
+	},
+	["BISM"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISM"}
+	},
+	["BISR"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISR"}
+	},
+	["BIS,PVE"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVE"}
+	},
+	["BIS,PVE,P1"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVEPHASEX", nil, 1}
+	},
+	["BIS,PVE,P2"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVEPHASEX", nil, 2}
+	},
+	["BIS,PVE,P3"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVEPHASEX", nil, 3}
+	},
+	["BIS,PVE,P4"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVEPHASEX", nil, 4}
+	},
+	["BIS,PVE,P5"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVEPHASEX", nil, 5}
+	},
+	["BIS,PVE,P6"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVEPHASEX", nil, 6}
+	},
+	["BIS,PVE,SOD25"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVESODX", nil, 25}
+	},
+	["BIS,PVE,SOD40"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVESODX", nil, 40}
+	},
+	["BIS,PVE,SOD50"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVESODX", nil, 50}
+	},
+	["BIS,PVE,SOD60"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVESODX", nil, 60}
+	},
+	["BIS,PVP"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVP"}
+	},
+	["S"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISTRINKETX", nil, "S"}
+	},
+	["A"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_BISTRINKETX", nil, "A"}
+	},
+	["B"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_BISTRINKETX", nil, "B"}
+	},
+	["C"] = {
+		colorCode = col_orange,
+		translationArgs = {"LID_BISTRINKETX", nil, "C"}
+	},
+	["D"] = {
+		colorCode = col_orange,
+		translationArgs = {"LID_BISTRINKETX", nil, "D"}
+	},
+	["E"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "E"}
+	},
+	["F"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "F"}
+	},
+	["No"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "No"}
+	},
+	["PREBIS,PVE"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVE"}
+	},
+	["PREBIS,PVE,P1"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 1}
+	},
+	["PREBIS,PVE,P2"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 2}
+	},
+	["PREBIS,PVE,P3"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 3}
+	},
+	["PREBIS,PVE,P4"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 4}
+	},
+	["PREBIS,PVE,P5"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 5}
+	},
+	["PREBIS,PVE,P6"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 6}
+	},
+	["PREBIS,PVE,SOD25"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVESODX", nil, 25}
+	},
+	["PREBIS,PVE,SOD40"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVESODX", nil, 40}
+	},
+	["PREBIS,PVE,SOD50"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVESODX", nil, 50}
+	},
+	["PREBIS,PVE,SOD60"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVESODX", nil, 60}
+	},
+}
+
+local oldPhases = {}
+if D4:GetWoWBuild() == "CLASSIC" then
+	oldPhases["BIS,PVE,SOD25"] = true
+elseif D4:GetWoWBuild() == "WRATH" then
+	oldPhases["BIS,PVE,P1"] = true
+	oldPhases["BIS,PVE,P2"] = true
+	oldPhases["BIS,PVE,P3"] = true
+end
+
 local function GetBISText(typ)
-	if typ == "NOTBIS" then
-		return "|cffff4b47" .. D4:Trans("LID_NOTBIS")
-	elseif typ == "BISO" then
-		return "|cff90ee90" .. D4:Trans("LID_BISO")
-	elseif typ == "BISMR" then
-		return "|cff90ee90" .. D4:Trans("LID_BISMR")
-	elseif typ == "BISM" then
-		return "|cff90ee90" .. D4:Trans("LID_BISM")
-	elseif typ == "BISR" then
-		return "|cff90ee90" .. D4:Trans("LID_BISR")
-	elseif typ == "BIS,PVE,P1" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 1)
-	elseif typ == "BIS,PVE,P2" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 2)
-	elseif typ == "BIS,PVE,P3" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 3)
-	elseif typ == "BIS,PVE,P4" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 4)
-	elseif typ == "BIS,PVE,P5" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 5)
-	elseif typ == "BIS,PVE,P6" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVEPHASEX", nil, 6)
-	elseif typ == "BIS,PVE" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVE")
-	elseif typ == "BIS,PVE,SOD25" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVESODX", nil, 25)
-	elseif typ == "BIS,PVE,SOD40" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVESODX", nil, 40)
-	elseif typ == "BIS,PVE,SOD50" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVESODX", nil, 50)
-	elseif typ == "BIS,PVE,SOD60" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVESODX", nil, 60)
-	elseif typ == "BIS,PVP" then
-		return "|cff90ee90" .. D4:Trans("LID_BISPVP")
-	elseif typ == "S" then
-		return "|cff90ee90" .. D4:Trans("LID_BISTRINKETX", nil, "S")
-	elseif typ == "A" then
-		return "|cffffff4b" .. D4:Trans("LID_BISTRINKETX", nil, "A")
-	elseif typ == "B" then
-		return "|cffffff4b" .. D4:Trans("LID_BISTRINKETX", nil, "B")
-	elseif typ == "C" then
-		return "|cffbf9000" .. D4:Trans("LID_BISTRINKETX", nil, "B")
-	elseif typ == "D" then
-		return "|cffbf9000" .. D4:Trans("LID_BISTRINKETX", nil, "B")
-	elseif typ == "E" then
-		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "B")
-	elseif typ == "F" then
-		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "B")
-	elseif typ == "No" then
-		return "|cffff4b47" .. D4:Trans("LID_BISTRINKETX", nil, "No")
-	elseif typ == "PREBIS,PVE,SOD25" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVESODX", nil, 25)
-	elseif typ == "PREBIS,PVE,SOD40" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVESODX", nil, 40)
-	elseif typ == "PREBIS,PVE,SOD50" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVESODX", nil, 50)
-	elseif typ == "PREBIS,PVE,SOD60" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVESODX", nil, 60)
-	elseif typ == "PREBIS,PVE,P1" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 1)
-	elseif typ == "PREBIS,PVE,P2" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 2)
-	elseif typ == "PREBIS,PVE,P3" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 3)
-	elseif typ == "PREBIS,PVE,P4" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 4)
-	elseif typ == "PREBIS,PVE,P5" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 5)
-	elseif typ == "PREBIS,PVE,P6" then
-		return "|cffffff4b" .. D4:Trans("LID_PREBISPVEPHASEX", nil, 6)
-	elseif typ == "" then
-		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText")
+	local entry = bisTextLookup[typ]
+	if not D4:GV(SBTTAB, "SHOWPREBIS", true) and string.find(typ, "PRE", 1, true) then
+		entry = bisTextLookup["NOTBIS"]
 	end
 
-	return ""
+	if not D4:GV(SBTTAB, "SHOWOLDERPHASES", true) and oldPhases[typ] then
+		entry = bisTextLookup["NOTBIS"]
+	end
+
+	if entry then
+		local colorCode = entry.colorCode
+		local text = D4:Trans(unpack(entry.translationArgs))
+
+		return colorCode .. text
+	else
+		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText")
+
+		return ""
+	end
 end
 
 local function AddToTooltip(tooltip, id, specId, icon, trinket)
@@ -321,11 +459,14 @@ local function AddToTooltip(tooltip, id, specId, icon, trinket)
 		tooltip:AddDoubleLine("NO BIS DATA FOR YOUR TRINKETS IN THIS SPEC", "|T136031:20:20:0:0|t")
 	end
 
-	if GetBISText(typ) ~= "" then
-		if source and source ~= "" then
-			tooltip:AddDoubleLine(iconText .. " " .. GetBISText(typ), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
-		else
-			tooltip:AddDoubleLine(iconText .. " " .. GetBISText(typ), "|T136031:20:20:0:0|t")
+	local bisText = GetBISText(typ)
+	if bisText ~= "" then
+		if bisText ~= "BLOCKED" then
+			if source and source ~= "" then
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+			else
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+			end
 		end
 	else
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
@@ -356,18 +497,20 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 				local classIcon = SpecBisTooltip:GetClassIcon(className)
 				local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
 				local bisText = GetBISText(text[3][1])
-				local source = text[3][2]
-				if otherClasses then
-					if source and source ~= "" then
-						tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+				if bisText ~= "BLOCKED" then
+					local source = text[3][2]
+					if otherClasses then
+						if source and source ~= "" then
+							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+						else
+							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
+						end
 					else
-						tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
-					end
-				else
-					if source and source ~= "" then
-						tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
-					else
-						tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
+						if source and source ~= "" then
+							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+						else
+							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
+						end
 					end
 				end
 			end

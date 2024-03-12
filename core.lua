@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.4")
+	D4:SetVersion(AddonName, 136031, "0.9.5")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.4")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.5")
 		}
 	)
 
@@ -415,6 +415,14 @@ local bisTextLookup = {
 		colorCode = col_yellow,
 		translationArgs = {"LID_PREBISPVESODX", nil, 60}
 	},
+	["?"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "?"}
+	},
+	["??????"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "?????"}
+	},
 }
 
 local oldPhases = {}
@@ -442,7 +450,7 @@ local function GetBISText(typ)
 
 		return colorCode .. text
 	else
-		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText")
+		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText:", typ)
 
 		return ""
 	end

@@ -1,5 +1,5 @@
 ## Interface: 30403
-## Version: 0.9.5
+## Version: 0.9.6
 ## Title: SpecBisTooltip |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
@@ -11,9 +11,9 @@
 
 libs\D4Lib\D4Lib.xml
 
-locale/enUS.lua
-locale/esES.lua
-locale/deDE.lua
+locale\enUS.lua
+locale\esES.lua
+locale\deDE.lua
 
 data.lua
 datawowhead.lua

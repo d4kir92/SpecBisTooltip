@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.5")
+	D4:SetVersion(AddonName, 136031, "0.9.6")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.5")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.6")
 		}
 	)
 
@@ -179,7 +179,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
 		if once then
 			once = false
-			D4:MSG("SpecBisTooltip", 136031, "Missing Spec for Class: " .. class)
+			D4:MSG("SpecBisTooltip", 136031, "Missing Spec for Class: " .. class .. " OR no spec selected")
 		end
 
 		return
@@ -434,6 +434,7 @@ elseif D4:GetWoWBuild() == "WRATH" then
 	oldPhases["BIS,PVE,P3"] = true
 end
 
+local missingTypes = {}
 local function GetBISText(typ)
 	local entry = bisTextLookup[typ]
 	if not D4:GV(SBTTAB, "SHOWPREBIS", true) and string.find(typ, "PRE", 1, true) then
@@ -450,7 +451,10 @@ local function GetBISText(typ)
 
 		return colorCode .. text
 	else
-		D4:MSG("SpecBisTooltip", 136031, "Missing Typ in GetBISText:", typ)
+		if missingTypes[tostring(typ)] == nil then
+			missingTypes[tostring(typ)] = true
+			D4:MSG("SpecBisTooltip", 136031, "Missing Type in GetBISText:", tostring(typ), "Level:", UnitLevel("player"))
+		end
 
 		return ""
 	end
@@ -458,6 +462,7 @@ end
 
 local function AddToTooltip(tooltip, id, specId, icon, trinket)
 	local typ, source = SpecBisTooltip:GetSpecItemTyp(id, specId)
+	if typ == nil then return end
 	local iconText = ""
 	if icon then
 		iconText = "|T" .. icon .. ":20:20:0:0|t"
@@ -504,20 +509,22 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 				num = num + 1
 				local classIcon = SpecBisTooltip:GetClassIcon(className)
 				local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
-				local bisText = GetBISText(text[3][1])
-				if bisText ~= "BLOCKED" then
-					local source = text[3][2]
-					if otherClasses then
-						if source and source ~= "" then
-							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+				if text[3][1] then
+					local bisText = GetBISText(text[3][1])
+					if bisText ~= "BLOCKED" then
+						local source = text[3][2]
+						if otherClasses then
+							if source and source ~= "" then
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+							else
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
+							end
 						else
-							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
-						end
-					else
-						if source and source ~= "" then
-							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
-						else
-							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
+							if source and source ~= "" then
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+							else
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
+							end
 						end
 					end
 				end

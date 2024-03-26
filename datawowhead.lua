@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 09.03.2024
+-- DATA FROM: 26.03.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -856,7 +856,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[133190] = {"BISO", "Throne of the Tides", "Feet"},
 		[207159] = {"BISO", "Larodar, Keeper of the Flame", "Finger"},
 		[134490] = {"BISO", "Black Rook Hold", "Finger"},
-		[207552] = {"BISO", "Dawn of the Infinite", "Trinket"},
+		[207170] = {"BISO", "Larodar, Keeper of the Flame", "Trinket"},
 		[110004] = {"BISO", "The Everbloom", "Trinket"},
 		[208321] = {"BISO", "Dawn of the Infinite", "Two Hand"},
 		[134499] = {"BISM", "Black Rook Hold", "Neck"},
@@ -865,17 +865,17 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[134451] = {"BISM", "Black Rook Hold", "Legs"},
 		[134528] = {"BISM", "Black Rook Hold", "Finger"},
 		[133201] = {"BISM", "Throne of the Tides", "Trinket"},
+		[207552] = {"BISM", "Dawn of the Infinite", "Trinket"},
 		[207133] = {"BISR", "Gnarlroot", "Head"},
 		[208445] = {"BISR", "Nymue", "Neck"},
 		[207244] = {"BISR", "Larodar, Keeper of the Flame", "Legs"},
 		[207126] = {"BISR", "Gnarlroot", "Feet"},
 		[208442] = {"BISR", "Amirdrassil, the Dream's Hope", "Finger"},
 		[207168] = {"BISR", "Urctos", "Trinket"},
-		[207171] = {"BISR", "Fyrakk", "Trinket"},
 		[208616] = {"BISR", "Nymue", "Two Hand"},
+		[207171] = {"A", "Fyrakk", "Trinket"},
 		[204202] = {"B", "Neltharion", "Trinket"},
 		[158320] = {"B", "Atal'Dazar", "Trinket"},
-		[207170] = {"B", "Larodar, Keeper of the Flame", "Trinket"},
 		[203729] = {"C", "Neldris", "Trinket"},
 		[202614] = {"C", "Rashok", "Trinket"},
 		[207581] = {"C", "Dawn of the Infinite", "Trinket"},
@@ -952,7 +952,6 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[109795] = {"BISM", "The Everbloom", "Boots"},
 		[134490] = {"BISM", "Black Rook Hold", "Ring"},
 		[207174] = {"BISM", "Fyrakk", "Trinket"},
-		[207172] = {"BISM", "Tindral Sageswift", "Trinket"},
 		[207999] = {"BISM", "Dawn of the Infinite", "Main Hand"},
 		[119173] = {"BISM", "The Everbloom", "Shield"},
 		[207161] = {"BISR", "Smolderon", "Cloak"},
@@ -1127,7 +1126,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[207162] = {"BISO", "Igira the Cruel", "Ring"},
 		[134531] = {"BISO", "Darkheart Thicket", "Ring"},
 		[207168] = {"BISO", "Urctos", "Trinket"},
-		[207552] = {"BISO", "Dawn of the Infinite", "Trinket"},
+		[207170] = {"BISO", "Larodar, Keeper of the Flame", "Trinket"},
 		[207794] = {"BISO", "Gnarlroot", "Staff"},
 		[207788] = {"BISO", "Fyrakk", "Main Hand"},
 		[158322] = {"BISO", "Atal'Dazar", "Off Hand"},
@@ -1141,13 +1140,13 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		[134423] = {"BISM", "Darkheart Thicket", "Belt"},
 		[109807] = {"BISM", "The Everbloom", "Legs"},
 		[158362] = {"BISM", "Waycrest Manor", "Ring"},
+		[110004] = {"BISM", "The Everbloom", "Trinket"},
 		[133201] = {"BISM", "Throne of the Tides", "Trinket"},
 		[133184] = {"BISM", "Throne of the Tides", "Staff"},
 		[207999] = {"BISM", "Dawn of the Infinite", "Main Hand"},
 		[207123] = {"BISR", "Nymue", "Boots"},
 		[207159] = {"BISR", "Larodar, Keeper of the Flame", "Ring"},
-		[207170] = {"BISR", "Larodar, Keeper of the Flame", "Trinket"},
-		[110004] = {"S", "The Everbloom", "Trinket"},
+		[207552] = {"S", "Tyr, the Infinite Keeper", "Trinket"},
 		[193003] = {"A", "Crafting: Jewelcrafting", "Trinket"},
 		[191491] = {"A", "Crafting: Alchemy", "Trinket"},
 		[207171] = {"A", "Fyrakk -  ", "Trinket"},
@@ -6864,7 +6863,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 09.03.2024
+-- DATA FROM: 26.03.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -7065,6 +7064,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[7685] = {"PREBIS,PVE,SOD40", "", ""},
 		[217259] = {"PREBIS,PVE,SOD40", "", ""},
 		[132539] = {"PREBIS,PVE,SOD40", "", ""},
+		[217250] = {"PREBIS,PVE,SOD40", "", ""},
 	}
 
 	BIS["CLASSIC"]["DRUID"][2] = {
@@ -7420,7 +7420,13 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[213087] = {"PREBIS,PVE,SOD40", "", ""},
 		[19512] = {"PREBIS,PVE,SOD40", "", ""},
 		[215461] = {"PREBIS,PVE,SOD40", "", ""},
+		[13095] = {"PREBIS,PVE,SOD40", "", ""},
 		[15163] = {"PREBIS,PVE,SOD40", "", ""},
+		[9428] = {"PREBIS,PVE,SOD40", "", ""},
+		[213318] = {"PREBIS,PVE,SOD40", "", ""},
+		[9647] = {"PREBIS,PVE,SOD40", "", ""},
+		[11193] = {"PREBIS,PVE,SOD40", "", ""},
+		[215115] = {"PREBIS,PVE,SOD40", "", ""},
 	}
 
 	BIS["CLASSIC"]["DRUID"][4] = {
@@ -7838,6 +7844,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[216621] = {"PREBIS,PVE,SOD40", "", ""},
 		[217307] = {"PREBIS,PVE,SOD40", "", ""},
 		[19564] = {"PREBIS,PVE,SOD40", "", ""},
+		[13138] = {"PREBIS,PVE,SOD40", "", ""},
 		[213355] = {"PREBIS,PVE,SOD40", "", ""},
 		[215382] = {"PREBIS,PVE,SOD40", "", ""},
 		[6802] = {"PREBIS,PVE,SOD40", "", ""},
@@ -8043,6 +8050,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[216621] = {"PREBIS,PVE,SOD40", "", ""},
 		[217307] = {"PREBIS,PVE,SOD40", "", ""},
 		[19564] = {"PREBIS,PVE,SOD40", "", ""},
+		[13138] = {"PREBIS,PVE,SOD40", "", ""},
 		[213355] = {"PREBIS,PVE,SOD40", "", ""},
 		[215382] = {"PREBIS,PVE,SOD40", "", ""},
 		[6802] = {"PREBIS,PVE,SOD40", "", ""},
@@ -8248,6 +8256,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[216621] = {"PREBIS,PVE,SOD40", "", ""},
 		[217307] = {"PREBIS,PVE,SOD40", "", ""},
 		[19564] = {"PREBIS,PVE,SOD40", "", ""},
+		[13138] = {"PREBIS,PVE,SOD40", "", ""},
 		[213355] = {"PREBIS,PVE,SOD40", "", ""},
 		[215382] = {"PREBIS,PVE,SOD40", "", ""},
 		[6802] = {"PREBIS,PVE,SOD40", "", ""},
@@ -8903,25 +8912,39 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[7719] = {"PREBIS,PVE,SOD40", "", ""},
 		[211505] = {"PREBIS,PVE,SOD40", "", ""},
 		[9647] = {"PREBIS,PVE,SOD40", "", ""},
+		[14946] = {"PREBIS,PVE,SOD40", "", ""},
+		[9971] = {"PREBIS,PVE,SOD40", "", ""},
+		[14909] = {"PREBIS,PVE,SOD40", "", ""},
+		[9292] = {"PREBIS,PVE,SOD40", "", ""},
+		[14901] = {"PREBIS,PVE,SOD40", "", ""},
+		[2278] = {"PREBIS,PVE,SOD40", "", ""},
+		[7755] = {"PREBIS,PVE,SOD40", "", ""},
 		[213305] = {"PREBIS,PVE,SOD40", "", ""},
 		[216621] = {"PREBIS,PVE,SOD40", "", ""},
 		[5257] = {"PREBIS,PVE,SOD40", "", ""},
+		[7492] = {"PREBIS,PVE,SOD40", "", ""},
+		[9898] = {"PREBIS,PVE,SOD40", "", ""},
+		[15594] = {"PREBIS,PVE,SOD40", "", ""},
 		[217008] = {"PREBIS,PVE,SOD40", "", ""},
 		[211504] = {"PREBIS,PVE,SOD40", "", ""},
+		[10583] = {"PREBIS,PVE,SOD40", "", ""},
+		[6773] = {"PREBIS,PVE,SOD40", "", ""},
 		[213314] = {"PREBIS,PVE,SOD40", "", ""},
 		[213316] = {"PREBIS,PVE,SOD40", "", ""},
 		[11195] = {"PREBIS,PVE,SOD40", "", ""},
+		[9966] = {"PREBIS,PVE,SOD40", "", ""},
+		[9286] = {"PREBIS,PVE,SOD40", "", ""},
 		[213318] = {"PREBIS,PVE,SOD40", "", ""},
 		[213317] = {"PREBIS,PVE,SOD40", "", ""},
 		[9409] = {"PREBIS,PVE,SOD40", "", ""},
 		[14956] = {"PREBIS,PVE,SOD40", "", ""},
 		[10094] = {"PREBIS,PVE,SOD40", "", ""},
 		[213288] = {"PREBIS,PVE,SOD40", "", ""},
-		[213320] = {"PREBIS,PVE,SOD40", "", ""},
 		[211423] = {"PREBIS,PVE,SOD40", "", ""},
 		[867] = {"PREBIS,PVE,SOD40", "", ""},
 		[9410] = {"PREBIS,PVE,SOD40", "", ""},
 		[7938] = {"PREBIS,PVE,SOD40", "", ""},
+		[213320] = {"PREBIS,PVE,SOD40", "", ""},
 		[7724] = {"PREBIS,PVE,SOD40", "", ""},
 		[215380] = {"PREBIS,PVE,SOD40", "", ""},
 		[213416] = {"PREBIS,PVE,SOD40", "", ""},
@@ -8931,19 +8954,21 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[10768] = {"PREBIS,PVE,SOD40", "", ""},
 		[10706] = {"PREBIS,PVE,SOD40", "", ""},
 		[213327] = {"PREBIS,PVE,SOD40", "", ""},
+		[213322] = {"PREBIS,PVE,SOD40", "", ""},
 		[217009] = {"PREBIS,PVE,SOD40", "", ""},
 		[10740] = {"PREBIS,PVE,SOD40", "", ""},
+		[10330] = {"PREBIS,PVE,SOD40", "", ""},
 		[15564] = {"PREBIS,PVE,SOD40", "", ""},
 		[213330] = {"PREBIS,PVE,SOD40", "", ""},
 		[213333] = {"PREBIS,PVE,SOD40", "", ""},
 		[211506] = {"PREBIS,PVE,SOD40", "", ""},
+		[20128] = {"PREBIS,PVE,SOD40", "", ""},
 		[6423] = {"PREBIS,PVE,SOD40", "", ""},
 		[213340] = {"PREBIS,PVE,SOD40", "", ""},
 		[213341] = {"PREBIS,PVE,SOD40", "", ""},
 		[217007] = {"PREBIS,PVE,SOD40", "", ""},
 		[10089] = {"PREBIS,PVE,SOD40", "", ""},
 		[213335] = {"PREBIS,PVE,SOD40", "", ""},
-		[20128] = {"PREBIS,PVE,SOD40", "", ""},
 		[17772] = {"PREBIS,PVE,SOD40", "", ""},
 		[209422] = {"PREBIS,PVE,SOD40", "", ""},
 		[19540] = {"PREBIS,PVE,SOD40", "", ""},
@@ -8974,7 +8999,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[213408] = {"PREBIS,PVE,SOD40", "", ""},
 		[870] = {"PREBIS,PVE,SOD40", "", ""},
 		[209574] = {"PREBIS,PVE,SOD40", "", ""},
-		[20110] = {"PREBIS,PVE,SOD40", "", ""},
+		[13058] = {"PREBIS,PVE,SOD40", "", ""},
+		[6149] = {"PREBIS,PVE,SOD40", "", ""},
 	}
 
 	BIS["CLASSIC"]["PRIEST"] = {}
@@ -9248,6 +9274,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[13064] = {"PREBIS,PVE,SOD40", "", ""},
 		[209674] = {"PREBIS,PVE,SOD40", "", ""},
 		[5216] = {"PREBIS,PVE,SOD40", "", ""},
+		[4734] = {"PREBIS,PVE,SOD40", "", ""},
+		[1664] = {"PREBIS,PVE,SOD40", "", ""},
 	}
 
 	BIS["CLASSIC"]["PRIEST"][2] = {
@@ -9520,6 +9548,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[13064] = {"PREBIS,PVE,SOD40", "", ""},
 		[209674] = {"PREBIS,PVE,SOD40", "", ""},
 		[5216] = {"PREBIS,PVE,SOD40", "", ""},
+		[4734] = {"PREBIS,PVE,SOD40", "", ""},
+		[1664] = {"PREBIS,PVE,SOD40", "", ""},
 	}
 
 	BIS["CLASSIC"]["PRIEST"][3] = {
@@ -12004,6 +12034,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[213355] = {"PREBIS,PVE,SOD40", "", ""},
 		[209563] = {"PREBIS,PVE,SOD40", "", ""},
 		[209688] = {"PREBIS,PVE,SOD40", "", ""},
+		[213293] = {"PREBIS,PVE,SOD40", "", ""},
 		[10777] = {"PREBIS,PVE,SOD40", "", ""},
 		[17772] = {"PREBIS,PVE,SOD40", "", ""},
 		[18585] = {"PREBIS,PVE,SOD40", "", ""},
@@ -12177,6 +12208,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[213355] = {"PREBIS,PVE,SOD40", "", ""},
 		[209563] = {"PREBIS,PVE,SOD40", "", ""},
 		[209688] = {"PREBIS,PVE,SOD40", "", ""},
+		[213293] = {"PREBIS,PVE,SOD40", "", ""},
 		[10777] = {"PREBIS,PVE,SOD40", "", ""},
 		[17772] = {"PREBIS,PVE,SOD40", "", ""},
 		[18585] = {"PREBIS,PVE,SOD40", "", ""},

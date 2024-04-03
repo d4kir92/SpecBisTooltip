@@ -53,14 +53,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.12")
+	D4:SetVersion(AddonName, 136031, "0.9.13")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.12")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.13")
 		}
 	)
 
@@ -427,8 +427,8 @@ local bisTextLookup = {
 
 local oldPhases = {}
 if D4:GetWoWBuild() == "CLASSIC" then
-	--oldPhases["BIS,PVE,SOD40"] = true
-	--oldPhases["PREBIS,PVE,SOD40"] = true
+	oldPhases["BIS,PVE,SOD40"] = true
+	oldPhases["PREBIS,PVE,SOD40"] = true
 	oldPhases["BIS,PVE,SOD25"] = true
 	oldPhases["PREBIS,PVE,SOD25"] = true
 elseif D4:GetWoWBuild() == "WRATH" then

@@ -1,7 +1,11 @@
 -- By D4KiR
 local AddonName, SpecBisTooltip = ...
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
-local invalidEquipSlots = {"INVTYPE_TABARD", "INVTYPE_BODY", "INVTYPE_BAG",}
+local invalidEquipSlots = {}
+invalidEquipSlots["INVTYPE_TABARD"] = true
+invalidEquipSlots["INVTYPE_BODY"] = true
+invalidEquipSlots["INVTYPE_BAG"] = true
+invalidEquipSlots["INVTYPE_NON_EQUIP_IGNORE"] = true
 local SBTSetup = CreateFrame("FRAME", "SBTSetup")
 SBTSetup:RegisterEvent("PLAYER_LOGIN")
 SBTSetup:SetScript(
@@ -53,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.14")
+	D4:SetVersion(AddonName, 136031, "0.9.15")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.14")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.15")
 		}
 	)
 
@@ -486,7 +490,7 @@ local function AddToTooltip(tooltip, id, specId, icon, trinket)
 		end
 	else
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
-		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and not tContains(invalidEquipSlots, itemEquipLoc) then
+		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
 			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
 		end
 	end
@@ -558,6 +562,7 @@ local function OnTooltipSetItem(tooltip, data)
 
 	local itemType = select(9, GetItemInfo(id))
 	if id == nil or itemType == "" then return end
+	if invalidEquipSlots[itemType] then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
 	if specId then
 		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) or D4:GV(SBTTAB, "SHOWOTHERCLASSES", false) then

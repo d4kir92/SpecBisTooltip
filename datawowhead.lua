@@ -6863,7 +6863,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 05.04.2024
+-- DATA FROM: 06.04.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -9028,8 +9028,9 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[223195] = {"BIS,PVE,SOD50", "", ""},
 		[221307] = {"BIS,PVE,SOD50", "", ""},
 		[210741] = {"BIS,PVE,SOD50", "", ""},
-		[215435] = {"BIS,PVE,SOD50", "", ""},
+		[221457] = {"BIS,PVE,SOD50", "", ""},
 		[215380] = {"PREBIS,PVE,SOD50", "", ""},
+		[223526] = {"PREBIS,PVE,SOD50", "", ""},
 		[220511] = {"PREBIS,PVE,SOD50", "", ""},
 		[220804] = {"PREBIS,PVE,SOD50", "", ""},
 		[220516] = {"PREBIS,PVE,SOD50", "", ""},
@@ -9037,6 +9038,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[14961] = {"PREBIS,PVE,SOD50", "", ""},
 		[220529] = {"PREBIS,PVE,SOD50", "", ""},
 		[220795] = {"PREBIS,PVE,SOD50", "", ""},
+		[221381] = {"PREBIS,PVE,SOD50", "", ""},
+		[11874] = {"PREBIS,PVE,SOD50", "", ""},
 		[11626] = {"PREBIS,PVE,SOD50", "", ""},
 		[213307] = {"PREBIS,PVE,SOD50", "", ""},
 		[216621] = {"PREBIS,PVE,SOD50", "", ""},
@@ -9089,15 +9092,14 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[221442] = {"PREBIS,PVE,SOD50", "", ""},
 		[213348] = {"PREBIS,PVE,SOD50", "", ""},
 		[211449] = {"PREBIS,PVE,SOD50", "", ""},
-		[223526] = {"PREBIS,PVE,SOD50", "", ""},
 		[220686] = {"PREBIS,PVE,SOD50", "", ""},
 		[221441] = {"PREBIS,PVE,SOD50", "", ""},
 		[2915] = {"PREBIS,PVE,SOD50", "", ""},
 		[220173] = {"PREBIS,PVE,SOD50", "", ""},
 		[218083] = {"PREBIS,PVE,SOD50", "", ""},
 		[6043] = {"PREBIS,PVE,SOD50", "", ""},
-		[221457] = {"PREBIS,PVE,SOD50", "", ""},
 		[209574] = {"PREBIS,PVE,SOD50", "", ""},
+		[215435] = {"PREBIS,PVE,SOD50", "", ""},
 		[216506] = {"PREBIS,PVE,SOD50", "", ""},
 		[213304] = {"PREBIS,PVE,SOD50", "", ""},
 		[215166] = {"PREBIS,PVE,SOD50", "", ""},

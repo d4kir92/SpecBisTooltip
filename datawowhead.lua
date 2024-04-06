@@ -9183,6 +9183,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[213408] = {"PREBIS,PVE,SOD50", "", ""},
 		[870] = {"PREBIS,PVE,SOD50", "", ""},
 		[13058] = {"PREBIS,PVE,SOD50", "", ""},
+		[20106] = {"PREBIS,PVE,SOD50", "", ""},
 		[6149] = {"PREBIS,PVE,SOD50", "", ""},
 	}
 

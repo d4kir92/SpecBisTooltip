@@ -6864,7 +6864,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 06.04.2024
+-- DATA FROM: 07.04.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -7908,6 +7908,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19515] = {"PREBIS,PVE,SOD50", "", ""},
 		[13138] = {"PREBIS,PVE,SOD50", "", ""},
 		[209534] = {"PREBIS,PVE,SOD50", "", ""},
+		[17772] = {"PREBIS,PVE,SOD50", "", ""},
 		[19564] = {"PREBIS,PVE,SOD50", "", ""},
 		[223963] = {"PREBIS,PVE,SOD50", "", ""},
 		[213355] = {"PREBIS,PVE,SOD50", "", ""},
@@ -8115,6 +8116,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19515] = {"PREBIS,PVE,SOD50", "", ""},
 		[13138] = {"PREBIS,PVE,SOD50", "", ""},
 		[209534] = {"PREBIS,PVE,SOD50", "", ""},
+		[17772] = {"PREBIS,PVE,SOD50", "", ""},
 		[19564] = {"PREBIS,PVE,SOD50", "", ""},
 		[223963] = {"PREBIS,PVE,SOD50", "", ""},
 		[213355] = {"PREBIS,PVE,SOD50", "", ""},
@@ -8322,6 +8324,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 		[19515] = {"PREBIS,PVE,SOD50", "", ""},
 		[13138] = {"PREBIS,PVE,SOD50", "", ""},
 		[209534] = {"PREBIS,PVE,SOD50", "", ""},
+		[17772] = {"PREBIS,PVE,SOD50", "", ""},
 		[19564] = {"PREBIS,PVE,SOD50", "", ""},
 		[223963] = {"PREBIS,PVE,SOD50", "", ""},
 		[213355] = {"PREBIS,PVE,SOD50", "", ""},

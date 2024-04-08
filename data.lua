@@ -1,25 +1,5 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
-local buildNr = select(4, GetBuildInfo())
-local buildName = "CLASSIC"
-if buildNr >= 100000 then
-	buildName = "RETAIL"
-elseif buildNr > 39999 then
-	buildName = "CATA"
-elseif buildNr > 29999 then
-	buildName = "WRATH"
-elseif buildNr > 19999 then
-	buildName = "TBC"
-end
-
-function SpecBisTooltip:GetWoWBuildNr()
-	return buildNr
-end
-
-function SpecBisTooltip:GetWoWBuild()
-	return buildName
-end
-
 local classIcons = {
 	["DEATHKNIGHT"] = 135771,
 	["DEMONHUNTER"] = 1260827,
@@ -43,7 +23,7 @@ end
 function SpecBisTooltip:CheckIfTrinketData(invtype)
 	local _, class = UnitClass("player")
 	local specId = SpecBisTooltip:GetTalentInfo()
-	local tab = BIS[SpecBisTooltip:GetWoWBuild()][class][specId]
+	local tab = BIS[D4:GetWoWBuild()][class][specId]
 	for i, v in pairs(tab) do
 		local itemType = select(9, GetItemInfo(i))
 		if itemType == invtype then return true end

@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.23")
+	D4:SetVersion(AddonName, 136031, "0.9.24")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.23")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.24")
 		}
 	)
 
@@ -171,7 +171,7 @@ end
 local once = true
 function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
+	if SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
 			D4:MSG("SpecBisTooltip", 136031, "Missing Class: " .. class)
@@ -180,7 +180,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 		return
 	end
 
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
+	if SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class][specId] == nil then
 		if once then
 			once = false
 			D4:MSG("SpecBisTooltip", 136031, "Missing Spec for Class: " .. class .. " OR no spec selected")
@@ -189,7 +189,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 		return
 	end
 
-	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId] then return SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId][1], SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId][2] end
+	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class][specId][itemId] then return SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class][specId][itemId][1], SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class][specId][itemId][2] end
 
 	return "NOTBIS", nil
 end

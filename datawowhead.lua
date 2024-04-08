@@ -2,7 +2,7 @@
 local _, SpecBisTooltip = ...
 local BIS = {}
 -- DATA FROM: 06.04.2024
-if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+if D4:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"][1] = {
@@ -1729,7 +1729,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 end
 
 -- DATA FROM: 06.04.2024
-if SpecBisTooltip:GetWoWBuild() == "WRATH" then
+if D4:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"][1] = {
@@ -6865,7 +6865,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 end
 
 -- DATA FROM: 08.04.2024
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if D4:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
 	BIS["CLASSIC"]["DRUID"][1] = {
@@ -12873,7 +12873,7 @@ local function AddToSOD(class, specid, tab)
 end
 
 -- SOD 40
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if D4:GetWoWBuild() == "CLASSIC" then
 	AddToSOD(
 		"DRUID",
 		1,
@@ -16185,7 +16185,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 end
 
 -- SOD 25
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if D4:GetWoWBuild() == "CLASSIC" then
 	AddToSOD(
 		"DRUID",
 		1,
@@ -18646,7 +18646,7 @@ end
 function SpecBisTooltip:CheckIfTrinketData(invtype)
 	local _, class = UnitClass("player")
 	local specId = SpecBisTooltip:GetTalentInfo()
-	local tab = BIS[SpecBisTooltip:GetWoWBuild()][class][specId]
+	local tab = BIS[D4:GetWoWBuild()][class][specId]
 	for i, v in pairs(tab) do
 		local itemType = select(9, GetItemInfo(i))
 		if itemType == invtype then return true end

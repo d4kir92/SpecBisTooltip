@@ -8067,7 +8067,7 @@ if D4:GetWoWBuild() == "CLASSIC" then
 	}
 
 	BIS["CLASSIC"]["MAGE"][3] = {
-		gearPlaner == NULL[3075]{"BIS,PVE,SOD50", "Shadowsworn Adept (Drop)", ""},
+		[3075] = {"BIS,PVE,SOD50", "Shadowsworn Adept (Drop)", ""},
 		[20037] = {"BIS,PVE,SOD50", "Destroy Morphaz (Quest)", ""},
 		[220750] = {"BIS,PVE,SOD50", "Fractured Mind Pauldrons (Created)", ""},
 		[220611] = {"BIS,PVE,SOD50", "UNKNOWN", ""},

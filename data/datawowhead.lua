@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
--- DATA FROM: 06.04.2024
+-- DATA FROM: 12.04.2024
 if D4:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -6864,7 +6864,7 @@ if D4:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 12.04.2024
+-- DATA FROM: 13.04.2024
 if D4:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -8051,23 +8051,23 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[19310] = {"PREBIS,PVE,P5", "Jekyll Flandring (Sold)", ""},
 		[11904] = {"PREBIS,PVE,P5", "It's Dangerous to Go Alone (Quest)", ""},
 		[21603] = {"PREBIS,PVE,P5", "Lord Kri (Drop)", ""},
-		[3075] = {"BIS,PVE,SOD50", "Shadowsworn Adept (Drop)", ""},
+		[215111] = {"BIS,PVE,SOD50", "Gneuro-Linked Arcano-Filament Monocle (Created)", ""},
 		[20037] = {"BIS,PVE,SOD50", "Destroy Morphaz (Quest)", ""},
 		[220750] = {"BIS,PVE,SOD50", "Fractured Mind Pauldrons (Created)", ""},
 		[220611] = {"BIS,PVE,SOD50", "Gasher (Drop)", ""},
 		[220680] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[19596] = {"BIS,PVE,SOD50", "Illiyana Moonblaze (Sold)", ""},
 		[220548] = {"BIS,PVE,SOD50", "Gasher (Drop)", ""},
-		[14304] = {"BIS,PVE,SOD50", "Gordok Hyena (Drop)", ""},
+		[20097] = {"BIS,PVE,SOD50", "Samuel Hawke (Sold)", ""},
 		[220679] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220681] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220628] = {"BIS,PVE,SOD50", "A Broken Ritual (Quest)", ""},
-		[12543] = {"BIS,PVE,SOD50", "The Princess's Surprise (Quest)", ""},
+		[221453] = {"BIS,PVE,SOD50", "Mai'zin (Sold)", ""},
 		[220634] = {"BIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
 		[213347] = {"BIS,PVE,SOD50", "Mekgineer Thermaplugg (Drop)", ""},
-		[17780] = {"BIS,PVE,SOD50", "Princess Theradras (Drop)", ""},
+		[223964] = {"BIS,PVE,SOD50", "Princess Theradras (Drop)", ""},
 		[220599] = {"BIS,PVE,SOD50", "Hazzas (Drop)", ""},
-		[220604] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
+		[11748] = {"BIS,PVE,SOD50", "Pyromancer Loregrain (Drop)", ""},
 	}
 
 	BIS["CLASSIC"]["MAGE"][3] = {
@@ -8127,23 +8127,23 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[19310] = {"PREBIS,PVE,P5", "Jekyll Flandring (Sold)", ""},
 		[11904] = {"PREBIS,PVE,P5", "It's Dangerous to Go Alone (Quest)", ""},
 		[21603] = {"PREBIS,PVE,P5", "Lord Kri (Drop)", ""},
-		[3075] = {"BIS,PVE,SOD50", "Shadowsworn Adept (Drop)", ""},
+		[215111] = {"BIS,PVE,SOD50", "Gneuro-Linked Arcano-Filament Monocle (Created)", ""},
 		[20037] = {"BIS,PVE,SOD50", "Destroy Morphaz (Quest)", ""},
 		[220750] = {"BIS,PVE,SOD50", "Fractured Mind Pauldrons (Created)", ""},
 		[220611] = {"BIS,PVE,SOD50", "Gasher (Drop)", ""},
 		[220680] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[19596] = {"BIS,PVE,SOD50", "Illiyana Moonblaze (Sold)", ""},
 		[220548] = {"BIS,PVE,SOD50", "Gasher (Drop)", ""},
-		[14304] = {"BIS,PVE,SOD50", "Gordok Hyena (Drop)", ""},
+		[20097] = {"BIS,PVE,SOD50", "Samuel Hawke (Sold)", ""},
 		[220679] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220681] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220628] = {"BIS,PVE,SOD50", "A Broken Ritual (Quest)", ""},
-		[12543] = {"BIS,PVE,SOD50", "The Princess's Surprise (Quest)", ""},
+		[221453] = {"BIS,PVE,SOD50", "Mai'zin (Sold)", ""},
 		[220634] = {"BIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
 		[213347] = {"BIS,PVE,SOD50", "Mekgineer Thermaplugg (Drop)", ""},
-		[17780] = {"BIS,PVE,SOD50", "Princess Theradras (Drop)", ""},
+		[223964] = {"BIS,PVE,SOD50", "Princess Theradras (Drop)", ""},
 		[220599] = {"BIS,PVE,SOD50", "Hazzas (Drop)", ""},
-		[220604] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
+		[11748] = {"BIS,PVE,SOD50", "Pyromancer Loregrain (Drop)", ""},
 	}
 
 	BIS["CLASSIC"]["PALADIN"] = {}

@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.42")
+	D4:SetVersion(AddonName, 136031, "0.9.43")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.42")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.43")
 		}
 	)
 
@@ -560,8 +560,9 @@ local function OnTooltipSetItem(tooltip, data)
 		end
 	end
 
+	if id == nil then return end
 	local itemType = select(9, GetItemInfo(id))
-	if id == nil or itemType == "" then return end
+	if itemType == "" then return end
 	if invalidEquipSlots[itemType] then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
 	if specId then

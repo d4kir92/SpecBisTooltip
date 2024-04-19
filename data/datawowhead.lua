@@ -6864,7 +6864,7 @@ if D4:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 16.04.2024
+-- DATA FROM: 19.04.2024
 if D4:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -8428,7 +8428,9 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[215461] = {"PREBIS,PVE,SOD50", "Mekgineer Thermaplugg (Drop)", ""},
 		[10725] = {"PREBIS,PVE,SOD50", "Gnomish Battle Chicken (Created)", ""},
 		[221028] = {"PREBIS,PVE,SOD50", "Sigil of Living Dreams (Created)", ""},
-		[217308] = {"PREBIS,PVE,SOD50", "Sigil of Innovation (Created)", ""},
+		[221024] = {"PREBIS,PVE,SOD50", "Flask of Everlasting Nightmares (Created)", ""},
+		[215162] = {"PREBIS,PVE,SOD50", "Mildly Irradiated Rejuvenation Potion (Created)", ""},
+		[10646] = {"PREBIS,PVE,SOD50", "Goblin Sapper Charge (Created)", ""},
 		[213348] = {"PREBIS,PVE,SOD50", "Mekgineer Thermaplugg (Drop)", ""},
 		[221442] = {"PREBIS,PVE,SOD50", "Quartermaster Kyleen (Sold)", ""},
 		[20512] = {"PREBIS,PVE,SOD50", "Forging the Mightstone (Quest)", ""},
@@ -8437,18 +8439,19 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[211449] = {"PREBIS,PVE,SOD50", "The Heart of the Void (Quest)", ""},
 		[209693] = {"PREBIS,PVE,SOD50", "Aku'mai (Drop)", ""},
 		[220632] = {"PREBIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
+		[871] = {"PREBIS,PVE,SOD50", "Timberweb Recluse (Drop)", ""},
 		[223520] = {"PREBIS,PVE,SOD50", "Tinkerer Gizlock (Drop)", ""},
 		[221456] = {"PREBIS,PVE,SOD50", "Mai'zin (Sold)", ""},
+		[220582] = {"PREBIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
 		[11915] = {"PREBIS,PVE,SOD50", "Shizzle's Flyer (Quest)", ""},
+		[221365] = {"PREBIS,PVE,SOD50", "Blood Alchemy (Created)", ""},
 		[221518] = {"PREBIS,PVE,SOD50", "The Price of Hope (Quest)", ""},
 		[9423] = {"PREBIS,PVE,SOD50", "Stone Steward (Drop)", ""},
 		[2915] = {"PREBIS,PVE,SOD50", "Blood Elf Reclaimer (Drop)", ""},
 		[220686] = {"PREBIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
 		[220173] = {"PREBIS,PVE,SOD50", "Mai'zin (Sold)", ""},
-		[12811] = {"PREBIS,PVE,SOD50", "Archivist Galford (Drop)", ""},
 		[11086] = {"PREBIS,PVE,SOD50", "Chief Ukorz Sandscalp (Drop)", ""},
 		[9379] = {"PREBIS,PVE,SOD50", "Antu'sul (Drop)", ""},
-		[221365] = {"PREBIS,PVE,SOD50", "Blood Alchemy (Created)", ""},
 		[209574] = {"PREBIS,PVE,SOD50", "Lorgus Jett (Drop)", ""},
 		[215435] = {"PREBIS,PVE,SOD50", "Grubbis (Drop)", ""},
 		[10330] = {"PREBIS,PVE,SOD50", "Scarlet Commander Mograine (Drop)", ""},
@@ -8619,6 +8622,8 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[220579] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
 		[220599] = {"BIS,PVE,SOD50", "Hazzas (Drop)", ""},
 		[220604] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
+		[220683] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
+		[220685] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220523] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
 		[220623] = {"BIS,PVE,SOD50", "Jammal'an the Prophet (Drop)", ""},
 		[220750] = {"BIS,PVE,SOD50", "Fractured Mind Pauldrons (Created)", ""},
@@ -8797,6 +8802,8 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[220579] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
 		[220599] = {"BIS,PVE,SOD50", "Hazzas (Drop)", ""},
 		[220604] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
+		[220683] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
+		[220685] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220523] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
 		[220623] = {"BIS,PVE,SOD50", "Jammal'an the Prophet (Drop)", ""},
 		[220750] = {"BIS,PVE,SOD50", "Fractured Mind Pauldrons (Created)", ""},

@@ -1732,7 +1732,7 @@ if D4:GetWoWBuild() == "RETAIL" then
 	}
 end
 
--- DATA FROM: 09.04.2024
+-- DATA FROM: 28.04.2024
 if D4:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
@@ -6868,7 +6868,7 @@ if D4:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 25.04.2024
+-- DATA FROM: 28.04.2024
 if D4:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -9448,8 +9448,8 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[220743] = {"BIS,PVE,SOD50", "Cacophonous Chain Shoulderguards (Created)", ""},
 		[220611] = {"BIS,PVE,SOD50", "Gasher (Drop)", ""},
 		[220657] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
-		[19584] = {"BIS,PVE,SOD50", "Illiyana Moonblaze (Sold)", ""},
-		[220831] = {"BIS,PVE,SOD50", "Lady Palanseer (Sold)", ""},
+		[19584] = {"BIS,PVE,SOD50", "Kelm Hargunth (Sold)", ""},
+		[220831] = {"BIS,PVE,SOD50", "Sergeant Ba'sha (Sold)", ""},
 		[223192] = {"BIS,PVE,SOD50", "Shadowtooth Emissary (Sold)", ""},
 		[220658] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
 		[220659] = {"BIS,PVE,SOD50", "Zalgo the Explorer (Sold)", ""},
@@ -10052,13 +10052,13 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[220889] = {"BIS,PVE,SOD50", "Captain Dirgehammer (Sold)", ""},
 		[220887] = {"BIS,PVE,SOD50", "Captain Dirgehammer (Sold)", ""},
 		[221025] = {"BIS,PVE,SOD50", "Void-Powered Invoker's Vambraces (Created)", ""},
-		[220890] = {"BIS,PVE,SOD50", "Captain Dirgehammer (Sold)", ""},
+		[220890] = {"BIS,PVE,SOD50", "Officer Areyn (Sold)", ""},
 		[20097] = {"BIS,PVE,SOD50", "Samuel Hawke (Sold)", ""},
 		[216673] = {"BIS,PVE,SOD50", "Gnome Improvement (Quest)", ""},
 		[11811] = {"BIS,PVE,SOD50", "Smoking Heart of the Mountain (Created)", ""},
 		[220633] = {"BIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
 		[943] = {"BIS,PVE,SOD50", "Primordial Behemoth (Drop)", ""},
-		[15280] = {"BIS,PVE,SOD50", "Hukku (Drop)", ""},
+		[15280] = {"BIS,PVE,SOD50", "Ceruleos (Drop)", ""},
 		[220523] = {"BIS,PVE,SOD50", "Shade of Eranikus (Drop)", ""},
 		[220623] = {"BIS,PVE,SOD50", "Jammal'an the Prophet (Drop)", ""},
 		[220750] = {"BIS,PVE,SOD50", "Fractured Mind Pauldrons (Created)", ""},
@@ -10379,7 +10379,7 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[220589] = {"BIS,PVE,SOD50", "Hazzas (Drop)", ""},
 		[220571] = {"BIS,PVE,SOD50", "Festering Rotslime (Drop)", ""},
 		[220686] = {"BIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
-		[9974] = {"BIS,PVE,SOD50", "Deep Lurker (Drop)", ""},
+		[9974] = {"BIS,PVE,SOD50", "Scarlet Cleric (Drop)", ""},
 	}
 
 	BIS["CLASSIC"]["WARRIOR"][2] = {
@@ -10506,7 +10506,7 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[220589] = {"BIS,PVE,SOD50", "Hazzas (Drop)", ""},
 		[220571] = {"BIS,PVE,SOD50", "Festering Rotslime (Drop)", ""},
 		[220686] = {"BIS,PVE,SOD50", "Avatar of Hakkar (Drop)", ""},
-		[9974] = {"BIS,PVE,SOD50", "Deep Lurker (Drop)", ""},
+		[9974] = {"BIS,PVE,SOD50", "Scarlet Cleric (Drop)", ""},
 	}
 
 	BIS["CLASSIC"]["WARRIOR"][3] = {

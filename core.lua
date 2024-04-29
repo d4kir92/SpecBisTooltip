@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.49")
+	D4:SetVersion(AddonName, 136031, "0.9.50")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.49")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.50")
 		}
 	)
 
@@ -163,6 +163,23 @@ function SpecBisTooltip:InitSettings()
 			["value"] = SBTTAB["SHOWOTHERCLASSES"],
 			["funcV"] = function(sel, checked)
 				SBTTAB["SHOWOTHERCLASSES"] = checked
+			end
+		}
+	)
+
+	y = y - 20
+	if SBTTAB["SHOWNOTBIS"] == nil then
+		SBTTAB["SHOWNOTBIS"] = true
+	end
+
+	D4:CreateCheckbox(
+		{
+			["name"] = "LID_SHOWNOTBIS",
+			["parent"] = sbt_settings,
+			["pTab"] = {"TOPLEFT", 10, y},
+			["value"] = SBTTAB["SHOWNOTBIS"],
+			["funcV"] = function(sel, checked)
+				SBTTAB["SHOWNOTBIS"] = checked
 			end
 		}
 	)
@@ -443,15 +460,16 @@ end
 
 local missingTypes = {}
 local function GetBISText(typ)
-	local entry = bisTextLookup[typ]
 	if not D4:GV(SBTTAB, "SHOWPREBIS", true) and string.find(typ, "PRE", 1, true) then
-		entry = bisTextLookup["NOTBIS"]
+		typ = "NOTBIS"
 	end
 
 	if not D4:GV(SBTTAB, "SHOWOLDERPHASES", true) and oldPhases[typ] then
-		entry = bisTextLookup["NOTBIS"]
+		typ = "NOTBIS"
 	end
 
+	local entry = bisTextLookup[typ]
+	if typ == "NOTBIS" and not D4:GV(SBTTAB, "SHOWNOTBIS", true) then return "" end
 	if entry then
 		local colorCode = entry.colorCode
 		local text = D4:Trans(unpack(entry.translationArgs))
@@ -518,7 +536,7 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 				local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
 				if text[3][1] then
 					local bisText = GetBISText(text[3][1])
-					if bisText ~= "BLOCKED" then
+					if bisText ~= "" and bisText ~= "BLOCKED" then
 						local source = text[3][2]
 						if otherClasses then
 							if source and source ~= "" then

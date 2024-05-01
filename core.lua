@@ -360,21 +360,53 @@ local bisTextLookup = {
 		colorCode = col_green,
 		translationArgs = {"LID_BISPVP"}
 	},
+	["S+"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISTRINKETX", nil, "S+"}
+	},
 	["S"] = {
 		colorCode = col_green,
 		translationArgs = {"LID_BISTRINKETX", nil, "S"}
+	},
+	["S-"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISTRINKETX", nil, "S-"}
+	},
+	["A+"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_BISTRINKETX", nil, "A+"}
 	},
 	["A"] = {
 		colorCode = col_yellow,
 		translationArgs = {"LID_BISTRINKETX", nil, "A"}
 	},
+	["A-"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_BISTRINKETX", nil, "A-"}
+	},
+	["B+"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_BISTRINKETX", nil, "B+"}
+	},
 	["B"] = {
 		colorCode = col_yellow,
 		translationArgs = {"LID_BISTRINKETX", nil, "B"}
 	},
+	["B-"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_BISTRINKETX", nil, "B-"}
+	},
+	["C+"] = {
+		colorCode = col_orange,
+		translationArgs = {"LID_BISTRINKETX", nil, "C+"}
+	},
 	["C"] = {
 		colorCode = col_orange,
 		translationArgs = {"LID_BISTRINKETX", nil, "C"}
+	},
+	["C-"] = {
+		colorCode = col_orange,
+		translationArgs = {"LID_BISTRINKETX", nil, "C-"}
 	},
 	["D"] = {
 		colorCode = col_orange,

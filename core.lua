@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.52")
+	D4:SetVersion(AddonName, 136031, "0.9.53")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.52")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.53")
 		}
 	)
 
@@ -231,6 +231,10 @@ function SpecBisTooltip:GetTalentInfo()
 		local ps = 0
 		for i = 1, 4 do
 			local _, iconTexture, pointsSpent = GetTalentTabInfo(i)
+			if D4:GetWoWBuild() == "CATA" then
+				_, _, _, iconTexture, pointsSpent = GetTalentTabInfo(i)
+			end
+
 			if pointsSpent ~= nil and pointsSpent > ps then
 				ps = pointsSpent
 				specid = i
@@ -315,6 +319,10 @@ local bisTextLookup = {
 	["BIS,PVE"] = {
 		colorCode = col_green,
 		translationArgs = {"LID_BISPVE"}
+	},
+	["BIS,PREPATCH"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPREPATCH"}
 	},
 	["BIS,PVE,P1"] = {
 		colorCode = col_green,
@@ -488,6 +496,7 @@ elseif D4:GetWoWBuild() == "WRATH" then
 	oldPhases["BIS,PVE,P1"] = true
 	oldPhases["BIS,PVE,P2"] = true
 	oldPhases["BIS,PVE,P3"] = true
+elseif D4:GetWoWBuild() == "CATA" then
 end
 
 local missingTypes = {}
@@ -651,9 +660,7 @@ local function OnTooltipSetItem(tooltip, data)
 	end
 end
 
-if TooltipDataProcessor then
-	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
-else
+if ItemRefTooltip and GameTooltip and ItemRefTooltip:HasScript("OnTooltipSetItem") and GameTooltip:HasScript("OnTooltipSetItem") then
 	ItemRefTooltip:HookScript(
 		"OnTooltipSetItem",
 		function(tooltip, ...)
@@ -667,4 +674,6 @@ else
 			OnTooltipSetItem(tooltip, ...)
 		end
 	)
+elseif TooltipDataProcessor then
+	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 end

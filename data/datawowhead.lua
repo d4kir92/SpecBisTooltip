@@ -10488,7 +10488,7 @@ if D4:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 07.05.2024
+-- DATA FROM: 17.05.2024
 if D4:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -12082,6 +12082,7 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[10330] = {"PREBIS,PVE,SOD50", "Scarlet Commander Mograine (Drop)", ""},
 		[13058] = {"PREBIS,PVE,SOD50", "Earthen Stonecarver (Drop)", ""},
 		[216506] = {"PREBIS,PVE,SOD50", "Mai'zin (Sold)", ""},
+		[17714] = {"PREBIS,PVE,SOD50", "Princess Theradras (Drop)", ""},
 		[6149] = {"PREBIS,PVE,SOD50", "Dreadmaul Ogre Mage (Drop)", ""},
 	}
 

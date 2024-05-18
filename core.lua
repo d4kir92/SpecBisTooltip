@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.59")
+	D4:SetVersion(AddonName, 136031, "0.9.60")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.59")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.60")
 		}
 	)
 
@@ -527,7 +527,7 @@ local function GetBISText(typ)
 end
 
 local function AddToTooltip(tooltip, id, specId, icon, trinket)
-	local typ, source = SpecBisTooltip:GetSpecItemTyp(id, specId)
+	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTyp(id, specId)
 	if typ == nil then return end
 	local iconText = ""
 	if icon then
@@ -539,10 +539,11 @@ local function AddToTooltip(tooltip, id, specId, icon, trinket)
 	end
 
 	local bisText = GetBISText(typ)
+	local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
 	if bisText ~= "" then
 		if bisText ~= "BLOCKED" then
-			if source and source ~= "" then
-				tooltip:AddDoubleLine(iconText .. " " .. bisText, D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+			if sourceTyp and sourceTyp ~= "" then
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
 			else
 				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
 			end
@@ -578,16 +579,17 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 				if text[3][1] then
 					local bisText = GetBISText(text[3][1])
 					if bisText ~= "" and bisText ~= "BLOCKED" then
-						local source = text[3][2]
+						local sourceUrl = text[3][2]
+						local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
 						if otherClasses then
-							if source and source ~= "" then
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+							if sourceTyp and sourceTyp ~= "" then
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
 							else
 								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
 							end
 						else
-							if source and source ~= "" then
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. source .. " |T136031:20:20:0:0|t")
+							if sourceTyp and sourceTyp ~= "" then
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
 							else
 								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
 							end

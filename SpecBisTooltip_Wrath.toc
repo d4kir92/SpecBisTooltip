@@ -1,5 +1,5 @@
 ## Interface: 30403
-## Version: 0.9.59
+## Version: 0.9.60
 ## Title: SpecBisTooltip |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
@@ -21,6 +21,7 @@ locale\ruRU.lua
 locale\zhCN.lua
 
 data.lua
+data\datasources.lua
 data\datasod.lua
 data\datawowhead.lua
 core.lua

@@ -1406,6 +1406,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "Darkmoon Earthquake Deck"
         s["quest;reward=27652"] = "Dark Assassins"
         s["quest;reward=27653"] = "Dark Assassins"
+        s["spell;created=86653"] = "Silver Inlaid Leaf"
+        s["object;contained=147557"] = "Stolen Silver"
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -2038,6 +2040,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "[Darkmoon Earthquake Deck]"
         s["quest;reward=27652"] = "Dunkle Auftragsmörder"
         s["quest;reward=27653"] = "[Dark Assassins]"
+        s["spell;created=86653"] = "Blatt mit Silberintarsien"
+        s["object;contained=147557"] = "Gestohlenes Silber"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2670,6 +2674,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "[Darkmoon Earthquake Deck]"
         s["quest;reward=27652"] = "[Dark Assassins]"
         s["quest;reward=27653"] = "[Dark Assassins]"
+        s["spell;created=86653"] = "Hoja con incrustaciones de plata"
+        s["object;contained=147557"] = "Plata robada"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -3302,6 +3308,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "[Darkmoon Earthquake Deck]"
         s["quest;reward=27652"] = "Assassins noirs"
         s["quest;reward=27653"] = "[Dark Assassins]"
+        s["spell;created=86653"] = "Feuille damasquinée en argent"
+        s["object;contained=147557"] = "Argent volé"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -3934,6 +3942,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "[Darkmoon Earthquake Deck]"
         s["quest;reward=27652"] = "[Dark Assassins]"
         s["quest;reward=27653"] = "[Dark Assassins]"
+        s["spell;created=86653"] = "Silver Inlaid Leaf"
+        s["object;contained=147557"] = "Stolen Silver"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -4566,6 +4576,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "[Darkmoon Earthquake Deck]"
         s["quest;reward=27652"] = "Темные убийцы"
         s["quest;reward=27653"] = "[Dark Assassins]"
+        s["spell;created=86653"] = "Инкрустированный серебром лист"
+        s["object;contained=147557"] = "Похищенное серебро"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -5198,6 +5210,8 @@ if D4:GetWoWBuild() == "CATA" then
         s["quest;reward=27667"] = "[Darkmoon Earthquake Deck]"
         s["quest;reward=27652"] = "[Dark Assassins]"
         s["quest;reward=27653"] = "[Dark Assassins]"
+        s["spell;created=86653"] = "嵌银之叶"
+        s["object;contained=147557"] = "[Stolen Silver]"
     end
 end
 

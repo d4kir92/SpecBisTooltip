@@ -1,5 +1,6 @@
 -- By D4KiR
 local AddonName, SpecBisTooltip = ...
+local debug = false
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
 local invalidEquipSlots = {}
 invalidEquipSlots["INVTYPE_TABARD"] = true
@@ -57,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.9.66")
+	D4:SetVersion(AddonName, 136031, "0.10.0")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.9.66")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.0")
 		}
 	)
 
@@ -187,6 +188,7 @@ end
 
 local once = true
 function SpecBisTooltip:GetItemTyp(class, specId, itemId)
+	if itemId == nil then return "NOTBIS", nil end
 	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
 	if SpecBisTooltip:GetBisTable()[D4:GetWoWBuild()][class] == nil then
 		if once then
@@ -526,7 +528,9 @@ local function GetBISText(typ)
 	end
 end
 
-local function AddToTooltip(tooltip, id, specId, icon, trinket)
+local function AddToTooltip(tooltip, id, specId, icon, invType)
+	local _, class = UnitClass("PLAYER")
+	if id == nil then return end
 	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTyp(id, specId)
 	if typ == nil then return end
 	local iconText = ""
@@ -534,7 +538,7 @@ local function AddToTooltip(tooltip, id, specId, icon, trinket)
 		iconText = "|T" .. icon .. ":20:20:0:0|t"
 	end
 
-	if trinket and typ == "NOTBIS" and not SpecBisTooltip:CheckIfTrinketData("INVTYPE_TRINKET") then
+	if invType == "INVTYPE_TRINKET" and typ == "NOTBIS" and not SpecBisTooltip:CheckIfTrinketData("INVTYPE_TRINKET") then
 		tooltip:AddDoubleLine("NO BIS DATA FOR YOUR TRINKETS IN THIS SPEC", "|T136031:20:20:0:0|t")
 	end
 
@@ -542,8 +546,19 @@ local function AddToTooltip(tooltip, id, specId, icon, trinket)
 	local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
 	if bisText ~= "" then
 		if bisText ~= "BLOCKED" then
-			if sourceTyp and sourceTyp ~= "" then
-				tooltip:AddDoubleLine(iconText .. " " .. bisText, D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+			if typ == "NOTBIS" then
+				sourceTyp, sourceName = SpecBisTooltip:GetBisSource(invType, class, specId)
+				if sourceTyp == "catalyst" then
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, format(D4:Trans("yourbissource"), D4:Trans(sourceTyp)) .. " |T136031:20:20:0:0|t")
+				else
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, format(D4:Trans("yourbissource"), sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")") .. " |T136031:20:20:0:0|t")
+				end
+			elseif sourceTyp and sourceTyp ~= "" then
+				if sourceTyp == "catalyst" then
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, D4:Trans("LID_SOURCE") .. ": " .. D4:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+				else
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+				end
 			else
 				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
 			end
@@ -583,13 +598,21 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 						local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
 						if otherClasses then
 							if sourceTyp and sourceTyp ~= "" then
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+								if sourceTyp == "catalyst" then
+									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. D4:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+								else
+									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+								end
 							else
 								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
 							end
 						else
 							if sourceTyp and sourceTyp ~= "" then
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+								if sourceTyp == "catalyst" then
+									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. D4:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+								else
+									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), D4:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+								end
 							else
 								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
 							end
@@ -626,12 +649,16 @@ local function OnTooltipSetItem(tooltip, data)
 	if itemType == "" then return end
 	if invalidEquipSlots[itemType] then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
+	if debug then
+		tooltip:AddDoubleLine("ID: " .. id)
+	end
+
 	if specId then
 		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) or D4:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
 			tooltip:AddDoubleLine(D4:Trans("LID_YOURSPEC") .. ":", "|T136031:20:20:0:0|t")
 		end
 
-		AddToTooltip(tooltip, id, specId, icon, itemType == "INVTYPE_TRINKET")
+		AddToTooltip(tooltip, id, specId, icon, itemType)
 		if D4:GV(SBTTAB, "SHOWOTHERSPECS", true) then
 			AddBisForSpec(tooltip, id, specId, false)
 		end

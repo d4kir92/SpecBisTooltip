@@ -58,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.10.1")
+	D4:SetVersion(AddonName, 136031, "0.10.2")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.1")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.2")
 		}
 	)
 
@@ -548,10 +548,14 @@ local function AddToTooltip(tooltip, id, specId, icon, invType)
 		if bisText ~= "BLOCKED" then
 			if typ == "NOTBIS" then
 				sourceTyp, sourceName = SpecBisTooltip:GetBisSource(invType, class, specId)
-				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(iconText .. " " .. bisText, format(D4:Trans("yourbissource"), D4:Trans(sourceTyp)) .. " |T136031:20:20:0:0|t")
+				if sourceTyp and sourceTyp ~= "" then
+					if sourceTyp == "catalyst" then
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, format(D4:Trans("yourbissource"), D4:Trans(sourceTyp)) .. " |T136031:20:20:0:0|t")
+					else
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, format(D4:Trans("yourbissource"), sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")") .. " |T136031:20:20:0:0|t")
+					end
 				else
-					tooltip:AddDoubleLine(iconText .. " " .. bisText, format(D4:Trans("yourbissource"), sourceName .. " " .. "(" .. D4:Trans(sourceTyp) .. ")") .. " |T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
 				end
 			elseif sourceTyp and sourceTyp ~= "" then
 				if sourceTyp == "catalyst" then

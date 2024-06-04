@@ -11837,7 +11837,7 @@ if D4:GetWoWBuild() == "WRATH" then
 	}
 end
 
--- DATA FROM: 28.05.2024
+-- DATA FROM: 04.06.2024
 if D4:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
@@ -13357,6 +13357,7 @@ if D4:GetWoWBuild() == "CLASSIC" then
 		[13058] = {"PREBIS,PVE,SOD50", "npc;drop=7397", "INVTYPE_2HWEAPON"},
 		[216506] = {"PREBIS,PVE,SOD50", "npc;sold=218115", "INVTYPE_2HWEAPON"},
 		[17714] = {"PREBIS,PVE,SOD50", "npc;drop=12201", "INVTYPE_WRIST"},
+		[220569] = {"PREBIS,PVE,SOD50", "npc;drop=218819", "INVTYPE_2HWEAPON"},
 	}
 
 	BIS["CLASSIC"]["PRIEST"] = {}

@@ -1442,6 +1442,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "Azureborne Seer <Servant of Deathwing>"
         s["npc;drop=45265"] = "Twilight Soul Blade"
         s["npc;drop=42802"] = "Drakonid Slayer"
+        s["npc;drop=42767"] = "Ivoroc"
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -2109,6 +2110,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "[Azureborne Seer] <[Servant of Deathwing]>"
         s["npc;drop=45265"] = "[Twilight Soul Blade]"
         s["npc;drop=42802"] = "[Drakonid Slayer]"
+        s["npc;drop=42767"] = "Ivoroc"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2776,6 +2778,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "[Azureborne Seer] <[Servant of Deathwing]>"
         s["npc;drop=45265"] = "[Twilight Soul Blade]"
         s["npc;drop=42802"] = "[Drakonid Slayer]"
+        s["npc;drop=42767"] = "Ivoroc"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -3443,6 +3446,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "[Azureborne Seer] <[Servant of Deathwing]>"
         s["npc;drop=45265"] = "[Twilight Soul Blade]"
         s["npc;drop=42802"] = "[Drakonid Slayer]"
+        s["npc;drop=42767"] = "Ivoroc"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -4110,6 +4114,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "[Azureborne Seer] <[Servant of Deathwing]>"
         s["npc;drop=45265"] = "[Twilight Soul Blade]"
         s["npc;drop=42802"] = "[Drakonid Slayer]"
+        s["npc;drop=42767"] = "[Ivoroc]"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -4777,6 +4782,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "[Azureborne Seer] <[Servant of Deathwing]>"
         s["npc;drop=45265"] = "[Twilight Soul Blade]"
         s["npc;drop=42802"] = "[Drakonid Slayer]"
+        s["npc;drop=42767"] = "Иворок"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -5444,6 +5450,7 @@ if D4:GetWoWBuild() == "CATA" then
         s["npc;drop=39855"] = "[Azureborne Seer] <[Servant of Deathwing]>"
         s["npc;drop=45265"] = "[Twilight Soul Blade]"
         s["npc;drop=42802"] = "[Drakonid Slayer]"
+        s["npc;drop=42767"] = "[Ivoroc]"
     end
 end
 

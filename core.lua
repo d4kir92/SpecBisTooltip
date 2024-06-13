@@ -58,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	D4:SetVersion(AddonName, 136031, "0.10.8")
+	D4:SetVersion(AddonName, 136031, "0.10.9")
 	sbt_settings = D4:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.8")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.9")
 		}
 	)
 
@@ -242,7 +242,7 @@ function SpecBisTooltip:GetTalentInfo()
 				specid = i
 				icon = iconTexture
 				local _, class = UnitClass("PLAYER")
-				if GetActiveTalentGroup and class == "DRUID" then
+				if GetActiveTalentGroup and class == "DRUID" and D4:GetWoWBuild() ~= "CATA" then
 					local group = GetActiveTalentGroup()
 					local role = GetTalentGroupRole(group)
 					if role == "DAMAGER" then

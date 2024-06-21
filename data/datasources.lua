@@ -5,7 +5,7 @@ function SpecBisTooltip:GetSource(sourceId)
     if sourceId == nil then return "", "" end
     if sourceId == "npc;sold=213278" then return "catalyst", "catalyst" end
     local sourceStr = s[sourceId]
-    --if sourceId == "npc;sold=213285" then return "catalyst", D4:Trans("catalyst") end
+    --if sourceId == "npc;sold=213285" then return "catalyst", SpecBisTooltip:Trans("catalyst") end
     if sourceStr then
         local st = string.find(sourceId, "=")
         if st ~= nil then
@@ -18,7 +18,7 @@ function SpecBisTooltip:GetSource(sourceId)
     end
 end
 
-if D4:GetWoWBuild() == "RETAIL" then
+if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=219946"] = "Harrostrasza <Carefree Chaperone>"
         s["npc;drop=208478"] = "Volcoross"
@@ -776,7 +776,7 @@ if D4:GetWoWBuild() == "RETAIL" then
     end
 end
 
-if D4:GetWoWBuild() == "CATA" then
+if SpecBisTooltip:GetWoWBuild() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=36789"] = "Valithria Dreamwalker"
         s["npc;drop=36855"] = "Lady Deathwhisper"
@@ -5454,7 +5454,7 @@ if D4:GetWoWBuild() == "CATA" then
     end
 end
 
-if D4:GetWoWBuild() == "CLASSIC" then
+if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = "Nefarian"
         s["npc;drop=11502"] = "Ragnaros"

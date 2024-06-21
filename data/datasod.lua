@@ -1,7 +1,7 @@
 local _, SpecBisTooltip = ...
 function SpecBisTooltip:AddOldSodPhases()
     -- SOD 40
-    if D4:GetWoWBuild() == "CLASSIC" then
+    if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         SpecBisTooltip:AddToSOD(
             "DRUID",
             1,
@@ -3313,7 +3313,7 @@ function SpecBisTooltip:AddOldSodPhases()
     end
 
     -- SOD 25
-    if D4:GetWoWBuild() == "CLASSIC" then
+    if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         SpecBisTooltip:AddToSOD(
             "DRUID",
             1,

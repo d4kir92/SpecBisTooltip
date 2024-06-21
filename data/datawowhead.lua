@@ -2,7 +2,7 @@
 local _, SpecBisTooltip = ...
 local BIS = {}
 -- DATA FROM: 07.06.2024
-if D4:GetWoWBuild() == "RETAIL" then
+if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 	BIS["RETAIL"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"] = {}
 	BIS["RETAIL"]["DEATHKNIGHT"][1] = {
@@ -1746,7 +1746,7 @@ if D4:GetWoWBuild() == "RETAIL" then
 end
 
 -- DATA FROM: 19.06.2024
-if D4:GetWoWBuild() == "CATA" then
+if SpecBisTooltip:GetWoWBuild() == "CATA" then
 	BIS["CATA"] = {}
 	BIS["CATA"]["DEATHKNIGHT"] = {}
 	BIS["CATA"]["DEATHKNIGHT"][1] = {
@@ -6737,7 +6737,7 @@ if D4:GetWoWBuild() == "CATA" then
 end
 
 -- DATA FROM: 28.04.2024
-if D4:GetWoWBuild() == "WRATH" then
+if SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	BIS["WRATH"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"] = {}
 	BIS["WRATH"]["DEATHKNIGHT"][1] = {
@@ -11873,7 +11873,7 @@ if D4:GetWoWBuild() == "WRATH" then
 end
 
 -- DATA FROM: 04.06.2024
-if D4:GetWoWBuild() == "CLASSIC" then
+if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	BIS["CLASSIC"] = {}
 	BIS["CLASSIC"]["DRUID"] = {}
 	BIS["CLASSIC"]["DRUID"][1] = {
@@ -15320,7 +15320,7 @@ SpecBisTooltip:AddOldSodPhases()
 function SpecBisTooltip:CheckIfTrinketData(invtype)
 	local _, class = UnitClass("player")
 	local specId = SpecBisTooltip:GetTalentInfo()
-	local tab = BIS[D4:GetWoWBuild()][class][specId]
+	local tab = BIS[SpecBisTooltip:GetWoWBuild()][class][specId]
 	for i, v in pairs(tab) do
 		local itemType = select(9, GetItemInfo(i))
 		if itemType == invtype then return true end
@@ -15379,7 +15379,7 @@ sortBfs["?"] = 36
 sortBfs["?????"] = 37
 local bfs = {}
 function SpecBisTooltip:InitBFS()
-	local pool = D4:GetWoWBuild()
+	local pool = SpecBisTooltip:GetWoWBuild()
 	if BIS[pool] then
 		for className, classTab in pairs(BIS[pool]) do
 			for specId, specTab in pairs(classTab) do
@@ -15396,13 +15396,13 @@ function SpecBisTooltip:InitBFS()
 			bf,
 			function(a, b)
 				if sortBfs[a[3][1]] == nil then
-					D4:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", a[3][1])
+					SpecBisTooltip:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", a[3][1])
 
 					return true
 				end
 
 				if sortBfs[b[3][1]] == nil then
-					D4:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", b[3][1])
+					SpecBisTooltip:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", b[3][1])
 
 					return false
 				end
@@ -15428,7 +15428,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId)
 
 	if bfi[class][specId] == nil then
 		bfi[class][specId] = {}
-		local pool = D4:GetWoWBuild()
+		local pool = SpecBisTooltip:GetWoWBuild()
 		if BIS[pool] then
 			for itemId, tab in pairs(BIS[pool][class][specId]) do
 				local phase = tab[1]

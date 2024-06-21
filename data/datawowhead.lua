@@ -15396,13 +15396,13 @@ function SpecBisTooltip:InitBFS()
 			bf,
 			function(a, b)
 				if sortBfs[a[3][1]] == nil then
-					SpecBisTooltip:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", a[3][1])
+					SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
 
 					return true
 				end
 
 				if sortBfs[b[3][1]] == nil then
-					SpecBisTooltip:MSG("SpecBisTooltip", 136031, "MISSING SORTING KEY", b[3][1])
+					SpecBisTooltip:MSG("MISSING SORTING KEY", b[3][1])
 
 					return false
 				end

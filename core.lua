@@ -28,7 +28,7 @@ SBTSetup:SetScript(
 					end,
 					["funcSR"] = function()
 						SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)
-						SpecBisTooltip:MSG("SpecBisTooltip", 136031, "Minimap Button is now hidden.")
+						SpecBisTooltip:MSG("Minimap Button is now hidden.")
 						SpecBisTooltip:HideMMBtn("SpecBisTooltip")
 					end,
 				}
@@ -58,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.17")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.18")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.17")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.18")
 		}
 	)
 
@@ -193,7 +193,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
-			SpecBisTooltip:MSG("SpecBisTooltip", 136031, "Missing Class: " .. class)
+			SpecBisTooltip:MSG("Missing Class: " .. class)
 		end
 
 		return
@@ -202,7 +202,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
 		if once then
 			once = false
-			SpecBisTooltip:MSG("SpecBisTooltip", 136031, "Missing Spec for Class: " .. class .. " OR no spec selected")
+			SpecBisTooltip:MSG("Missing Spec for Class: " .. class .. " OR no spec selected")
 		end
 
 		return
@@ -521,7 +521,7 @@ local function GetBISText(typ)
 	else
 		if missingTypes[tostring(typ)] == nil then
 			missingTypes[tostring(typ)] = true
-			SpecBisTooltip:MSG("SpecBisTooltip", 136031, "Missing Type in GetBISText:", tostring(typ), "Level:", UnitLevel("player"))
+			SpecBisTooltip:MSG("Missing Type in GetBISText:", tostring(typ), "Level:", UnitLevel("player"))
 		end
 
 		return ""
@@ -682,7 +682,7 @@ local function OnTooltipSetItem(tooltip, data)
 			)
 		elseif specNotFoundOnce then
 			specNotFoundOnce = false
-			SpecBisTooltip:MSG("SpecBisTooltip", 136031, "Spec not found")
+			SpecBisTooltip:MSG("Spec not found")
 			C_Timer.After(
 				10,
 				function()

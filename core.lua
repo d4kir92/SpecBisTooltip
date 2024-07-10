@@ -58,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.25")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.26")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.25")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.26")
 		}
 	)
 
@@ -232,11 +232,7 @@ function SpecBisTooltip:GetTalentInfo()
 	else
 		local ps = 0
 		for i = 1, 4 do
-			local _, iconTexture, pointsSpent = GetTalentTabInfo(i)
-			if SpecBisTooltip:GetWoWBuild() == "CATA" then
-				_, _, _, iconTexture, pointsSpent = GetTalentTabInfo(i)
-			end
-
+			local _, _, _, iconTexture, pointsSpent = GetTalentTabInfo(i)
 			if pointsSpent ~= nil and pointsSpent > ps then
 				ps = pointsSpent
 				specid = i
@@ -490,6 +486,8 @@ local bisTextLookup = {
 
 local oldPhases = {}
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+	oldPhases["BIS,PVE,SOD50"] = true
+	oldPhases["PREBIS,PVE,SOD50"] = true
 	oldPhases["BIS,PVE,SOD40"] = true
 	oldPhases["PREBIS,PVE,SOD40"] = true
 	oldPhases["BIS,PVE,SOD25"] = true

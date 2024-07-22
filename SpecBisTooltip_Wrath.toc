@@ -16,12 +16,18 @@ locale\deDE.lua
 locale\esES.lua
 locale\frFR.lua
 locale\itIT.lua
+locale\koKR.lua
 locale\ptBR.lua
 locale\ruRU.lua
 locale\zhCN.lua
+locale\zhTW.lua
 
 data.lua
+data\datasources-retail.lua
+data\datasources-cata.lua
+data\datasources-classic.lua
 data\datasources.lua
+
 data\datasod.lua
 data\datawowhead.lua
 core.lua

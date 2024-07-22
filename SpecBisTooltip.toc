@@ -4,7 +4,7 @@
 ## Interface-Cata: 40400
 ## Interface: 100207, 110000
 
-## Version: 0.10.31
+## Version: 0.10.32
 ## Title: SpecBisTooltip by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
@@ -35,5 +35,11 @@ data\datasources-classic.lua
 data\datasources.lua
 
 data\datasod.lua
+
+data\datawowhead-retail.lua
+data\datawowhead-cata.lua
+data\datawowhead-wrath.lua
+data\datawowhead-classic.lua
 data\datawowhead.lua
+
 core.lua

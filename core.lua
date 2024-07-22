@@ -58,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.31")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.32")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.31")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.32")
 		}
 	)
 
@@ -577,59 +577,67 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	local _, ownClassName = UnitClass("player")
 	local bfs = SpecBisTooltip:GetBFS(itemId)
 	local num = 0
-	if bfs then
-		for i, text in pairs(bfs) do
-			local className = text[1]
-			local specId = text[2]
-			if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
-				if num == 0 then
-					if otherClasses then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
-					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
-					end
-				end
+	if bfs == nil then
+		if otherClasses then
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+		else
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+		end
 
-				num = num + 1
-				local classIcon = SpecBisTooltip:GetClassIcon(className)
-				local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
-				if text[3][1] then
-					local bisText = GetBISText(text[3][1])
-					if bisText ~= "" and bisText ~= "BLOCKED" then
-						local sourceUrl = text[3][2]
-						local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
-						if otherClasses then
-							if sourceTyp and sourceTyp ~= "" then
-								if sourceTyp == "catalyst" then
-									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
-								else
-									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
-								end
+		return
+	end
+
+	for i, text in pairs(bfs) do
+		local className = text[1]
+		local specId = text[2]
+		if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
+			if num == 0 then
+				if otherClasses then
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+				else
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+				end
+			end
+
+			num = num + 1
+			local classIcon = SpecBisTooltip:GetClassIcon(className)
+			local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
+			if text[3][1] then
+				local bisText = GetBISText(text[3][1])
+				if bisText ~= "" and bisText ~= "BLOCKED" then
+					local sourceUrl = text[3][2]
+					local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
+					if otherClasses then
+						if sourceTyp and sourceTyp ~= "" then
+							if sourceTyp == "catalyst" then
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
 							else
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
 							end
 						else
-							if sourceTyp and sourceTyp ~= "" then
-								if sourceTyp == "catalyst" then
-									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
-								else
-									tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
-								end
+							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
+						end
+					else
+						if sourceTyp and sourceTyp ~= "" then
+							if sourceTyp == "catalyst" then
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
 							else
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
+								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
 							end
+						else
+							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
 						end
 					end
 				end
 			end
 		end
+	end
 
-		if num == 0 then
-			if otherClasses then
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
-			else
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
-			end
+	if num == 0 then
+		if otherClasses then
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+		else
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
 		end
 	end
 end

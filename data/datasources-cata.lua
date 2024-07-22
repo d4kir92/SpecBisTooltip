@@ -1,5 +1,11 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
+local s = {}
+if SpecBisTooltip:GetWoWBuild() == "CATA" then
+    function SpecBisTooltip:GetTranslationMap()
+        return s
+    end
+end
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=36789"] = "Valithria Dreamwalker"

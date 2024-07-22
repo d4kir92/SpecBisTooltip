@@ -1,5 +1,12 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
+local s = {}
+if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+    function SpecBisTooltip:GetTranslationMap()
+        return s
+    end
+end
+
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=219946"] = "Harrostrasza <Carefree Chaperone>"

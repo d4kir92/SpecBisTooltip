@@ -1,9 +1,10 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
-local s = {}
 function SpecBisTooltip:GetSource(sourceId)
     if sourceId == nil then return "", "" end
     if sourceId == "npc;sold=213278" then return "catalyst", "catalyst" end
+    local s = SpecBisTooltip:GetTranslationMap()
+    if s == nil then return "", "" end
     local sourceStr = s[sourceId]
     --if sourceId == "npc;sold=213285" then return "catalyst", SpecBisTooltip:Trans("catalyst") end
     if sourceStr then

@@ -1,4 +1,4 @@
--- ruRU Russian
+-- ruRU
 local _, SpecBisTooltip = ...
 SpecBisTooltip:AddTrans("ruRU", "LID_GENERAL", "Общие")
 SpecBisTooltip:AddTrans("ruRU", "LID_SHOWMINIMAPBUTTON", "Показать кнопку миниатюры")

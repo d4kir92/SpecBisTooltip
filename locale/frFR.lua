@@ -1,4 +1,4 @@
--- frFR French
+-- frFR
 local _, SpecBisTooltip = ...
 SpecBisTooltip:AddTrans("frFR", "LID_GENERAL", "Général")
 SpecBisTooltip:AddTrans("frFR", "LID_SHOWMINIMAPBUTTON", "Bouton d'affichage de la mini-carte")

@@ -1,4 +1,4 @@
--- itIT Italian
+-- itIT
 local _, SpecBisTooltip = ...
 SpecBisTooltip:AddTrans("itIT", "LID_GENERAL", "Generale")
 SpecBisTooltip:AddTrans("itIT", "LID_SHOWMINIMAPBUTTON", "Mostra pulsante della minimappa")

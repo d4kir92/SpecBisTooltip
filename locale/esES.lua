@@ -1,4 +1,4 @@
--- esES Spanish
+-- esES
 local _, SpecBisTooltip = ...
 SpecBisTooltip:AddTrans("esES", "LID_GENERAL", "General")
 SpecBisTooltip:AddTrans("esES", "LID_SHOWMINIMAPBUTTON", "Botón Mostrar minimapa")

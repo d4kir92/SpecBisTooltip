@@ -1,4 +1,4 @@
--- enUS English
+-- enUS
 local _, SpecBisTooltip = ...
 SpecBisTooltip:AddTrans("enUS", "LID_GENERAL", "General")
 SpecBisTooltip:AddTrans("enUS", "LID_SHOWMINIMAPBUTTON", "Show Minimap Button")

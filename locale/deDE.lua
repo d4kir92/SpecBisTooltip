@@ -1,4 +1,4 @@
--- deDE German Deutsch
+-- deDE
 local _, SpecBisTooltip = ...
 SpecBisTooltip:AddTrans("deDE", "LID_GENERAL", "Allgemein")
 SpecBisTooltip:AddTrans("deDE", "LID_SHOWMINIMAPBUTTON", "Minimap Knopf anzeigen")

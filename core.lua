@@ -58,14 +58,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.33")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.34")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.33")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.34")
 		}
 	)
 
@@ -225,7 +225,7 @@ function SpecBisTooltip:GetTalentInfo()
 	if GetSpecialization then
 		specid = GetSpecialization()
 		if GetSpecializationInfo then
-			_, _, _, icon, _, _ = GetSpecializationInfo(specid)
+			_, _, _, icon = GetSpecializationInfo(specid)
 		end
 
 		return specid, icon

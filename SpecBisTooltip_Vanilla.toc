@@ -1,5 +1,5 @@
 ## Interface: 11503
-## Version: 0.10.34
+## Version: 0.10.35
 ## Title: SpecBisTooltip |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR

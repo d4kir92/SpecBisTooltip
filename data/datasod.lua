@@ -1,3 +1,4 @@
+-- By D4KiR
 local _, SpecBisTooltip = ...
 function SpecBisTooltip:AddOldSodPhases()
     -- SOD 50

@@ -15,30 +15,39 @@ SBTSetup:SetScript(
 		if event == "PLAYER_LOGIN" then
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
-			local mmbtn = nil
-			SpecBisTooltip:CreateMinimapButton(
-				{
-					["name"] = "SpecBisTooltip",
-					["icon"] = 136031,
-					["var"] = mmbtn,
-					["dbtab"] = SBTTAB,
-					["vTT"] = {"SpecBisTooltip", "Leftclick: Open Settings", "Shift + Rightclick - Hide Minimap Icon"},
-					["funcL"] = function()
-						SpecBisTooltip:ToggleSettings()
-					end,
-					["funcSR"] = function()
-						SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)
-						SpecBisTooltip:MSG("Minimap Button is now hidden.")
-						SpecBisTooltip:HideMMBtn("SpecBisTooltip")
-					end,
-				}
-			)
+			C_Timer.After(
+				0,
+				function()
+					local mmbtn = nil
+					SpecBisTooltip:CreateMinimapButton(
+						{
+							["name"] = "SpecBisTooltip",
+							["icon"] = 136031,
+							["var"] = mmbtn,
+							["dbtab"] = SBTTAB,
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.38"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["funcL"] = function()
+								SpecBisTooltip:ToggleSettings()
+								print("TOGGLE SETTINGsa")
+							end,
+							["funcR"] = function()
+								SpecBisTooltip:HideMMBtn("SpecBisTooltip")
+							end,
+							["funcSR"] = function()
+								SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)
+								SpecBisTooltip:MSG("Minimap Button is now hidden.")
+								SpecBisTooltip:HideMMBtn("SpecBisTooltip")
+							end,
+						}
+					)
 
-			if SpecBisTooltip:GV(SBTTAB, "SHOWMINIMAPBUTTON", true) then
-				SpecBisTooltip:ShowMMBtn("SpecBisTooltip")
-			else
-				SpecBisTooltip:HideMMBtn("SpecBisTooltip")
-			end
+					if SpecBisTooltip:GV(SBTTAB, "SHOWMINIMAPBUTTON", SpecBisTooltip:GetWoWBuild() ~= "RETAIL") then
+						SpecBisTooltip:ShowMMBtn("SpecBisTooltip")
+					else
+						SpecBisTooltip:HideMMBtn("SpecBisTooltip")
+					end
+				end
+			)
 
 			SpecBisTooltip:InitSettings()
 		end
@@ -58,14 +67,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.37")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.38")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.37")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.38")
 		}
 	)
 

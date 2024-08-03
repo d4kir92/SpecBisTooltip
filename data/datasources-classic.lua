@@ -757,6 +757,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "Baron Geddon"
         s["npc;drop=10418"] = "Crimson Guardsman"
         s["npc;drop=228438"] = "Ragnaros"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "Clean Up Quel'Serrar Era to SoD [DNT]"
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1508,6 +1510,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "Purpurroter Gardist"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -2259,6 +2263,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "Crimson Guardsman"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "[Create Hunter Epic Staff DND]"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -3010,6 +3016,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "Custodio Carmesí"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -3761,6 +3769,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "Gardien cramoisi"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -4512,6 +4522,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "Кровавый охранник"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -5263,6 +5275,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "红衣卫兵"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -5952,6 +5966,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "진홍십자군 보초"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -6641,6 +6657,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228433"] = "[Baron Geddon]"
         s["npc;drop=10418"] = "Guarda Carmesim"
         s["npc;drop=228438"] = "[Ragnaros]"
+        s["spell;created=462630"] = "Create Hunter Epic Staff DND"
+        s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
     end
 
     function SpecBisTooltip:TranslationzhTW()

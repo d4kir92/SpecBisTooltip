@@ -25,10 +25,9 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.38"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.39"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
-								print("TOGGLE SETTINGsa")
 							end,
 							["funcR"] = function()
 								SpecBisTooltip:HideMMBtn("SpecBisTooltip")
@@ -67,20 +66,20 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.38")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.39")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.38")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.39")
 		}
 	)
 
 	local y = -30
 	if SBTTAB["SHOWMINIMAPBUTTON"] == nil then
-		SBTTAB["SHOWMINIMAPBUTTON"] = true
+		SBTTAB["SHOWMINIMAPBUTTON"] = SpecBisTooltip:GetWoWBuild() ~= "RETAIL"
 	end
 
 	SpecBisTooltip:AddCategory(

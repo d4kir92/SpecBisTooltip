@@ -759,6 +759,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "Ragnaros"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "Clean Up Quel'Serrar Era to SoD [DNT]"
+        s["spell;created=20873"] = "Fiery Chain Shoulders"
+        s["spell;created=20876"] = "Dark Iron Leggings"
+        s["npc;drop=15741"] = "Colossus of Regal"
+        s["spell;created=461747"] = "Incandescent Mooncloth Vest"
+        s["spell;created=23662"] = "Wisdom of the Timbermaw"
+        s["spell;created=462282"] = "Embroidered Belt of the Archmage"
+        s["npc;drop=15220"] = "The Duke of Zephyrs <Abyssal Council>"
+        s["spell;created=429351"] = "Extraplanar Spidersilk Boots"
+        s["spell;created=461743"] = "Sageblade of the Archmagus"
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1512,6 +1521,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "Feurige Kettenschultern"
+        s["spell;created=20876"] = "Dunkeleisengamaschen"
+        s["npc;drop=15741"] = "Koloss des Regalschwarms"
+        s["spell;created=461747"] = "Gleißende Mondstoffweste"
+        s["spell;created=23662"] = "Weisheit der Holzschlundfeste"
+        s["spell;created=462282"] = "Bestickter Gürtel des Erzmagiers"
+        s["npc;drop=15220"] = "Der Fürst der Stürme <Abyssischer Rat>"
+        s["spell;created=429351"] = "Extraplanare Spinnenseidenstiefel"
+        s["spell;created=461743"] = "Weisenklinge des Erzmagiers"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -2265,6 +2283,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "[Create Hunter Epic Staff DND]"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "Fiery Chain Shoulders"
+        s["spell;created=20876"] = "Dark Iron Leggings"
+        s["npc;drop=15741"] = "Colossus of Regal"
+        s["spell;created=461747"] = "[Incandescent Mooncloth Vest]"
+        s["spell;created=23662"] = "Wisdom of the Timbermaw"
+        s["spell;created=462282"] = "[Embroidered Belt of the Archmage]"
+        s["npc;drop=15220"] = "The Duke of Zephyrs"
+        s["spell;created=429351"] = "[Extraplanar Spidersilk Boots]"
+        s["spell;created=461743"] = "[Sageblade of the Archmagus]"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -3018,6 +3045,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "Hombreras abrasadoras de anillas"
+        s["spell;created=20876"] = "Leotardos Hierro Negro"
+        s["npc;drop=15741"] = "Coloso de Regal"
+        s["spell;created=461747"] = "Jubón de tela lunar incandescente"
+        s["spell;created=23662"] = "Sabiduría de los Fauces de Madera"
+        s["spell;created=462282"] = "Cinturón bordado del archimago"
+        s["npc;drop=15220"] = "Duque de los Céfiros"
+        s["spell;created=429351"] = "Botas de seda de araña extrabidimensional"
+        s["spell;created=461743"] = "Hoja sabia del archimago"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -3771,6 +3807,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "Epaulières en anneaux de feu"
+        s["spell;created=20876"] = "Jambières en sombrefer"
+        s["npc;drop=15741"] = "Colosse de Regal"
+        s["spell;created=461747"] = "Gilet en étoffe lunaire incandescent"
+        s["spell;created=23662"] = "Sagesse des Grumegueules"
+        s["spell;created=462282"] = "Ceinture brodée de l’archimage"
+        s["npc;drop=15220"] = "Le duc des Zéphyrs <Conseil abyssal>"
+        s["spell;created=429351"] = "Bottes en soie d’araignée extraplanaires"
+        s["spell;created=461743"] = "Lame feuille-de-saule de l’archimagus"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -4524,6 +4569,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "Пламенные плетеные наплечники"
+        s["spell;created=20876"] = "Поножи из черного железа"
+        s["npc;drop=15741"] = "Колосс Регала"
+        s["spell;created=461747"] = "Раскаленный жилет из луноткани"
+        s["spell;created=23662"] = "Мудрость Древобрюхов"
+        s["spell;created=462282"] = "Расшитый пояс верховного мага"
+        s["npc;drop=15220"] = "Герцог Ветров"
+        s["spell;created=429351"] = "Экстрапланарные сапоги из паучьего шелка"
+        s["spell;created=461743"] = "Клинок архимага"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -5277,6 +5331,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "炽热链甲护肩"
+        s["spell;created=20876"] = "黑铁护腿"
+        s["npc;drop=15741"] = "雷戈巨甲虫"
+        s["spell;created=461747"] = "炽火月布外衣"
+        s["spell;created=23662"] = "木喉之智"
+        s["spell;created=462282"] = "刺绣大法师腰带"
+        s["npc;drop=15220"] = "微风公爵"
+        s["spell;created=429351"] = "超界蛛丝之靴"
+        s["spell;created=461743"] = "魔法导师的贤明剑"
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -5968,6 +6031,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "불타는 사슬 어깨보호구"
+        s["spell;created=20876"] = "검은무쇠 다리보호구"
+        s["npc;drop=15741"] = "레갈 거대괴수"
+        s["spell;created=461747"] = "강렬한 달빛매듭 조끼"
+        s["spell;created=23662"] = "나무구렁일족의 지혜"
+        s["spell;created=462282"] = "수놓은 대마법사의 허리띠"
+        s["npc;drop=15220"] = "서풍의 군주 <심연의 의회>"
+        s["spell;created=429351"] = "다른 차원의 거미줄 장화"
+        s["spell;created=461743"] = "대현자의 주문칼날"
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -6659,6 +6731,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=228438"] = "[Ragnaros]"
         s["spell;created=462630"] = "Create Hunter Epic Staff DND"
         s["spell;created=465693"] = "[Clean Up Quel'Serrar Era to SoD [DNT]]"
+        s["spell;created=20873"] = "Omoplatas Encadeadas Abrasadoras"
+        s["spell;created=20876"] = "Perneiras de Ferro Negro"
+        s["npc;drop=15741"] = "Colosso de Régia"
+        s["spell;created=461747"] = "Colete de Lunatrama Incandescente"
+        s["spell;created=23662"] = "Sabedoria dos Presamatos"
+        s["spell;created=462282"] = "Molde: Cinto Ornado do Arquimago"
+        s["npc;drop=15220"] = "O Duque dos Zéfiros <Conselho Abissal>"
+        s["spell;created=429351"] = "Botas de Sedaracna Extraplanares"
+        s["spell;created=461743"] = "Lâmina do Sábio do Arquimago"
     end
 
     function SpecBisTooltip:TranslationzhTW()

@@ -1389,6 +1389,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["quest;reward=29186"] = "Der Fetisch des Hexlords"
         s["npc;drop=52322"] = "Hexendoktorin Qu'in <Medizinfrau>"
         s["npc;drop=23584"] = "Bär der Amani"
+        s["npc;drop=23863"] = "Daakara <Der Unbesiegbare>"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2772,6 +2773,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["quest;reward=29186"] = "Le fétiche du seigneur des maléfices"
         s["npc;drop=52322"] = "Féticheuse Qu'in <Femme-médecin>"
         s["npc;drop=23584"] = "Ours amani"
+        s["object;contained=186648"] = "Malle d'Hazlek"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -4154,6 +4156,8 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["quest;reward=29186"] = "Фетиш повелителя проклятий"
         s["npc;drop=52322"] = "Доктор Ку'ин <Тролль-знахарка>"
         s["npc;drop=23584"] = "Аманийский медведь"
+        s["npc;drop=52151"] = "Мандокир Повелитель Крови"
+        s["npc;drop=52269"] = "Ренатаки"
     end
 
     function SpecBisTooltip:TranslationzhCN()

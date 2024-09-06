@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
--- DATA FROM: 04.09.2024
+-- DATA FROM: 05.09.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     BIS["CLASSIC"] = {}
     BIS["CLASSIC"]["DRUID"] = {}

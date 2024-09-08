@@ -14,7 +14,7 @@ function SpecBisTooltip:GetSource(sourceId)
 
             return sourceTyp, sourceStr
         else
-            print("FAILED TO FIND", sourceId)
+            print("[SpecBisTooltip] FAILED TO FIND", sourceId)
         end
     end
 end

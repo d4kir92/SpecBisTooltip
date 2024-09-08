@@ -118,7 +118,7 @@ local classIds = {
 }
 
 function SpecBisTooltip:GetSpecIcon(className, specId)
-	if GetSpecializationInfoForClassID then
+	if SpecBisTooltip:GetWoWBuild() == "RETAIL" and GetSpecializationInfoForClassID then
 		local classId = classIds[className]
 		if classId then
 			local _, _, _, icon = GetSpecializationInfoForClassID(classId, specId)

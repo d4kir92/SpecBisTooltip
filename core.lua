@@ -25,7 +25,7 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.44"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.45"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
 							end,
@@ -66,14 +66,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.44")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.45")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.44")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.45")
 		}
 	)
 
@@ -581,6 +581,16 @@ local function AddToTooltip(tooltip, id, specId, icon, invType)
 	end
 end
 
+local function AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
+	if bisText ~= "" and bisText ~= "BLOCKED" then
+		if otherClasses then
+			tooltip:AddDoubleLine(format("%s %s", leftText, oldBisText), "|T136031:20:20:0:0|t")
+		else
+			tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, oldBisText), "|T136031:20:20:0:0|t")
+		end
+	end
+end
+
 local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	local _, ownClassName = UnitClass("player")
 	local bfs = SpecBisTooltip:GetBFS(itemId)
@@ -595,9 +605,22 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 		return
 	end
 
-	for i, text in pairs(bfs) do
-		local className = text[1]
-		local specId = text[2]
+	local oldBisText = nil
+	local leftText = ""
+	local max = 0
+	local lastTab = ""
+	for i, tab in pairs(bfs) do
+		local className = tab[1]
+		local specId = tab[2]
+		if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
+			max = max + 1
+			lastTab = tab
+		end
+	end
+
+	for i, tab in pairs(bfs) do
+		local className = tab[1]
+		local specId = tab[2]
 		if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
 			if num == 0 then
 				if otherClasses then
@@ -608,34 +631,22 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 			end
 
 			num = num + 1
-			local classIcon = SpecBisTooltip:GetClassIcon(className)
 			local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
-			if text[3][1] then
-				local bisText = GetBISText(text[3][1])
-				if bisText ~= "" and bisText ~= "BLOCKED" then
-					local sourceUrl = text[3][2]
-					local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
-					if otherClasses then
-						if sourceTyp and sourceTyp ~= "" then
-							if sourceTyp == "catalyst" then
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
-							else
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
-							end
-						else
-							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t |T%s:20:20:0:0|t %s", classIcon, specIcon, bisText), "|T136031:20:20:0:0|t")
-						end
-					else
-						if sourceTyp and sourceTyp ~= "" then
-							if sourceTyp == "catalyst" then
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
-							else
-								tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
-							end
-						else
-							tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, bisText), "|T136031:20:20:0:0|t")
-						end
-					end
+			if tab[3][1] then
+				local bisText = GetBISText(tab[3][1])
+				if oldBisText == nil then
+					oldBisText = bisText
+				end
+
+				if oldBisText ~= bisText or otherClasses == false then
+					AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
+					oldBisText = bisText
+					leftText = ""
+				end
+
+				leftText = leftText .. format("|T%s:20:20:0:0|t", specIcon)
+				if max > 1 and tab == lastTab then
+					AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
 				end
 			end
 		end

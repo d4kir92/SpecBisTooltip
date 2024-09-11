@@ -89,6 +89,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Rune-Branded Grasps"
         s["spell;created=446938"] = "Consecrated Cuffs"
         s["spell;created=444199"] = "Vagabond's Bounding Baton"
+        s["object;contained=413590"] = "Bountiful Coffer"
+        s["spell;created=450234"] = "Everforged Greataxe"
+        s["spell;created=435384"] = "Ring of Earthen Craftsmanship"
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -161,6 +164,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Runengezeichneter Handschutz"
         s["spell;created=446938"] = "Geweihte Manschetten"
         s["spell;created=444199"] = "Belebter Baton des Vagabunden"
+        s["spell;created=450235"] = "Geladenes Hexerschwert"
+        s["object;contained=413590"] = "Großzügiger Kasten"
+        s["spell;created=450234"] = "Ewiggeschmiedete Großaxt"
+        s["spell;created=435384"] = "Ring der irdenen Handwerkskunst"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -228,6 +235,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Mandiletes con runas marcadas"
         s["spell;created=446938"] = "Puños consagrados"
         s["spell;created=444199"] = "Bastón delimitador de vagabundo"
+        s["object;contained=413590"] = "Arca pródiga"
+        s["spell;created=450234"] = "Gran hacha de forja eterna"
+        s["spell;created=435384"] = "Anillo de artesanía terránea"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -294,6 +304,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Poignées marquées de runes"
         s["spell;created=446938"] = "Crispins consacrés"
         s["spell;created=444199"] = "Férule de vagabondage"
+        s["npc;drop=207205"] = "Garde de la tempête Gorren"
+        s["object;contained=413590"] = "Coffre abondant"
+        s["spell;created=450234"] = "Bardiche en forge perpétuelle"
+        s["spell;created=435384"] = "Anneau d’artisanat terrestre"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -361,6 +375,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Guardamani Marchiati con Rune"
         s["spell;created=446938"] = "Polsiere Consacrate"
         s["spell;created=444199"] = "Bacchetta Vincolante del Vagabondo"
+        s["object;contained=413590"] = "Scrigno Fruttuoso"
+        s["spell;created=450234"] = "Grandascia Eternoforgiata"
+        s["spell;created=435384"] = "Anello dell'Artigianato Terrigeno"
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -436,6 +453,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "룬낙인 손아귀"
         s["spell;created=446938"] = "축성된 소매장식"
         s["spell;created=444199"] = "방랑자의 도약하는 지휘봉"
+        s["npc;drop=223779"] = "Anub'arash <[The Thousand Scars]>"
+        s["npc;drop=128650"] = "난도질꾼 레드후크"
+        s["npc;drop=128649"] = "하사관 베인브릿지"
+        s["object;contained=413590"] = "풍요로운 금고"
+        s["spell;created=450234"] = "영원벼림 거대도끼"
+        s["spell;created=435384"] = "토석인 장인 정신의 반지"
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -503,6 +526,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Agarres com Marcações Rúnicas"
         s["spell;created=446938"] = "Manilhas Consagradas"
         s["spell;created=444199"] = "Bastão Vinculante do Vagabundo"
+        s["spell;created=450237"] = "Quebra-fuça Carregado"
+        s["object;contained=413590"] = "Cofre Abundante"
+        s["spell;created=450234"] = "Machadão Semperforja"
+        s["spell;created=435384"] = "Anel da Confecção Terrana"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -581,6 +608,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "Захваты с руническим клеймом"
         s["spell;created=446938"] = "Освященные манжеты"
         s["spell;created=444199"] = "Ограничивающий жезл бродяги"
+        s["object;contained=413590"] = "Богатый сундук"
+        s["spell;created=450234"] = "Выкованный навеки большой топор"
+        s["spell;created=435384"] = "Кольцо мастерства земельников"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -655,6 +685,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "符烙手套"
         s["spell;created=446938"] = "圣化腕扣"
         s["spell;created=444199"] = "流浪者的划界指挥棒"
+        s["npc;drop=40319"] = "达加·燃影者 <暮光之锤信使>"
+        s["npc;drop=213217"] = "代言人布洛克"
+        s["npc;drop=213119"] = "虚空代言人艾里克"
+        s["object;contained=413590"] = "丰裕宝匣"
+        s["spell;created=450234"] = "永铸巨斧"
+        s["spell;created=435384"] = "土灵匠工之戒"
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -729,5 +765,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441053"] = "符烙手套"
         s["spell;created=446938"] = "圣化腕扣"
         s["spell;created=444199"] = "流浪者的划界指挥棒"
+        s["npc;drop=40319"] = "达加·燃影者 <暮光之锤信使>"
+        s["npc;drop=213217"] = "代言人布洛克"
+        s["npc;drop=213119"] = "虚空代言人艾里克"
+        s["object;contained=413590"] = "丰裕宝匣"
+        s["spell;created=450234"] = "永铸巨斧"
+        s["spell;created=435384"] = "土灵匠工之戒"
     end
 end

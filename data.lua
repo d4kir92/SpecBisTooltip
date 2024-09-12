@@ -21,18 +21,6 @@ function SpecBisTooltip:GetClassIcon(className)
 	return classIcons[className]
 end
 
-function SpecBisTooltip:CheckIfTrinketData(invtype)
-	local _, class = UnitClass("player")
-	local specId = SpecBisTooltip:GetTalentInfo()
-	local tab = BIS[SpecBisTooltip:GetWoWBuild()][class][specId]
-	for i, v in pairs(tab) do
-		local itemType = select(9, GetItemInfo(i))
-		if itemType == invtype then return true end
-	end
-
-	return false
-end
-
 local specIcons = {
 	["DEATHKNIGHT"] = {
 		[1] = 135770,

@@ -25,7 +25,7 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.47"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.48"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
 							end,
@@ -66,14 +66,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.47")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.48")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.47")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.48")
 		}
 	)
 
@@ -504,7 +504,6 @@ elseif SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	oldPhases["BIS,PVE,P1"] = true
 	oldPhases["BIS,PVE,P2"] = true
 	oldPhases["BIS,PVE,P3"] = true
-elseif SpecBisTooltip:GetWoWBuild() == "CATA" then
 end
 
 local missingTypes = {}
@@ -542,10 +541,6 @@ local function AddToTooltip(tooltip, id, specId, icon, invType)
 	local iconText = ""
 	if icon then
 		iconText = "|T" .. icon .. ":20:20:0:0|t"
-	end
-
-	if invType == "INVTYPE_TRINKET" and typ == "NOTBIS" and not SpecBisTooltip:CheckIfTrinketData("INVTYPE_TRINKET") then
-		tooltip:AddDoubleLine("NO BIS DATA FOR YOUR TRINKETS IN THIS SPEC", "|T136031:20:20:0:0|t")
 	end
 
 	local bisText = GetBISText(typ)
@@ -591,6 +586,12 @@ local function AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIco
 	end
 end
 
+local function FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName)
+	if otherClasses then return className ~= ownClassName end
+
+	return specId ~= yourSpecId and className == ownClassName
+end
+
 local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	local _, ownClassName = UnitClass("player")
 	local bfs = SpecBisTooltip:GetBFS(itemId)
@@ -612,7 +613,7 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	for i, tab in pairs(bfs) do
 		local className = tab[1]
 		local specId = tab[2]
-		if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
+		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
 			max = max + 1
 			lastTab = tab
 		end
@@ -621,7 +622,7 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	for i, tab in pairs(bfs) do
 		local className = tab[1]
 		local specId = tab[2]
-		if specId ~= yourSpecId and ((otherClasses and className ~= ownClassName) or (otherClasses == false and className == ownClassName)) then
+		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
 			if num == 0 then
 				if otherClasses then
 					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
@@ -630,7 +631,6 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 				end
 			end
 
-			num = num + 1
 			local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
 			if tab[3][1] then
 				local bisText = GetBISText(tab[3][1])
@@ -644,11 +644,13 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 					leftText = ""
 				end
 
-				leftText = leftText .. format("|T%s:20:20:0:0|t", specIcon)
-				if max > 1 and tab == lastTab then
+				leftText = leftText .. format("|T%s:20:20:0:0|t", specIcon) --.. specId
+				if otherClasses and max > 1 and tab == lastTab then
 					AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
 				end
 			end
+
+			num = num + 1
 		end
 	end
 

@@ -11,18 +11,6 @@ function SpecBisTooltip:AddToSOD(class, specid, tab)
 end
 
 SpecBisTooltip:AddOldSodPhases()
-function SpecBisTooltip:CheckIfTrinketData(invtype)
-	local _, class = UnitClass("player")
-	local specId = SpecBisTooltip:GetTalentInfo()
-	local tab = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId]
-	for i, v in pairs(tab) do
-		local itemType = select(9, GetItemInfo(i))
-		if itemType == invtype then return true end
-	end
-
-	return false
-end
-
 local sortBfs = {}
 sortBfs["BISO"] = 1
 sortBfs["BISMR"] = 2

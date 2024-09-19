@@ -238,6 +238,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Arca pródiga"
         s["spell;created=450234"] = "Gran hacha de forja eterna"
         s["spell;created=435384"] = "Anillo de artesanía terránea"
+        s["npc;drop=219778"] = "Reina Ansurek"
+        s["npc;drop=214506"] = "Tuercelinajes Ovi'nax"
+        s["npc;drop=228470"] = "Princesa del Nexo Ky'veza"
+        s["npc;drop=214502"] = "El horror vinculado a la sangre"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -308,6 +313,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Coffre abondant"
         s["spell;created=450234"] = "Bardiche en forge perpétuelle"
         s["spell;created=435384"] = "Anneau d’artisanat terrestre"
+        s["npc;drop=219778"] = "Reine Ansurek"
+        s["npc;drop=214506"] = "Toressaim Ovi'nax"
+        s["npc;drop=228470"] = "Princesse-nexus Ky'veza"
+        s["npc;drop=214502"] = "L'horreur liée par le sang"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -378,6 +388,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Scrigno Fruttuoso"
         s["spell;created=450234"] = "Grandascia Eternoforgiata"
         s["spell;created=435384"] = "Anello dell'Artigianato Terrigeno"
+        s["npc;drop=219778"] = "Regina Ansurek"
+        s["npc;drop=214506"] = "Mutastirpe Ovi'nax"
+        s["npc;drop=228470"] = "Principessa del Nexus Ky'veza"
+        s["npc;drop=214502"] = "Orrore Vincolasangue"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -459,6 +474,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "풍요로운 금고"
         s["spell;created=450234"] = "영원벼림 거대도끼"
         s["spell;created=435384"] = "토석인 장인 정신의 반지"
+        s["npc;drop=219778"] = "여왕 안수레크"
+        s["npc;drop=214506"] = "혈족왜곡자 오비낙스"
+        s["npc;drop=228470"] = "연합공작 카이베자"
+        s["npc;drop=214502"] = "피결속 공포"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -530,6 +550,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Cofre Abundante"
         s["spell;created=450234"] = "Machadão Semperforja"
         s["spell;created=435384"] = "Anel da Confecção Terrana"
+        s["npc;drop=219778"] = "Rainha Ansurek"
+        s["npc;drop=214506"] = "Prolemante Ovi'nax"
+        s["npc;drop=228470"] = "Princesa do Nexus Ky'veza"
+        s["npc;drop=214502"] = "O Terror Sanguino"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -611,6 +636,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Богатый сундук"
         s["spell;created=450234"] = "Выкованный навеки большой топор"
         s["spell;created=435384"] = "Кольцо мастерства земельников"
+        s["npc;drop=219778"] = "Королева Ансурек"
+        s["npc;drop=214506"] = "Исказитель яиц Ови'накс"
+        s["npc;drop=228470"] = "Принцесса Нексуса Ки'веза"
+        s["npc;drop=214502"] = "Скованный кровью ужас"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -691,6 +721,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "丰裕宝匣"
         s["spell;created=450234"] = "永铸巨斧"
         s["spell;created=435384"] = "土灵匠工之戒"
+        s["npc;drop=219778"] = "安苏雷克女王"
+        s["npc;drop=214506"] = "虫巢扭曲者欧维纳克斯"
+        s["npc;drop=228470"] = "节点女亲王凯威扎"
+        s["npc;drop=214502"] = "血缚恐魔"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -771,5 +806,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "丰裕宝匣"
         s["spell;created=450234"] = "永铸巨斧"
         s["spell;created=435384"] = "土灵匠工之戒"
+        s["npc;drop=219778"] = "安苏雷克女王"
+        s["npc;drop=214506"] = "虫巢扭曲者欧维纳克斯"
+        s["npc;drop=228470"] = "节点女亲王凯威扎"
+        s["npc;drop=214502"] = "血缚恐魔"
+        s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
     end
 end

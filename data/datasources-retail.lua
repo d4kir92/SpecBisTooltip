@@ -92,6 +92,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Bountiful Coffer"
         s["spell;created=450234"] = "Everforged Greataxe"
         s["spell;created=435384"] = "Ring of Earthen Craftsmanship"
+        s["spell;created=450224"] = "Everforged Helm"
+        s["spell;created=441065"] = "Glyph-Etched Binding"
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -168,6 +170,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = "Großzügiger Kasten"
         s["spell;created=450234"] = "Ewiggeschmiedete Großaxt"
         s["spell;created=435384"] = "Ring der irdenen Handwerkskunst"
+        s["spell;created=450224"] = "Ewiggeschmiedeter Helm"
+        s["spell;created=441065"] = "Glyphengravierte Bindungen"
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -243,6 +247,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "Princesa del Nexo Ky'veza"
         s["npc;drop=214502"] = "El horror vinculado a la sangre"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "Yelmo de forja eterna"
+        s["spell;created=441065"] = "Ataduras con glifos grabados"
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -318,6 +324,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "Princesse-nexus Ky'veza"
         s["npc;drop=214502"] = "L'horreur liée par le sang"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "Heaume en forge perpétuelle"
+        s["spell;created=441065"] = "Lien gravé de glyphes"
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -393,6 +401,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "Principessa del Nexus Ky'veza"
         s["npc;drop=214502"] = "Orrore Vincolasangue"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "Elmo Eternoforgiato"
+        s["spell;created=441065"] = "Cinta Incisa con Glifi"
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -479,6 +489,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "연합공작 카이베자"
         s["npc;drop=214502"] = "피결속 공포"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "영원벼림 투구"
+        s["spell;created=441065"] = "문양새김 결속띠"
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -555,6 +567,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "Princesa do Nexus Ky'veza"
         s["npc;drop=214502"] = "O Terror Sanguino"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "Elmo Semperforja"
+        s["spell;created=441065"] = "Amarra Gravada com Glifos"
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -641,6 +655,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "Принцесса Нексуса Ки'веза"
         s["npc;drop=214502"] = "Скованный кровью ужас"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "Выкованный навеки шлем"
+        s["spell;created=441065"] = "Гравированная символами обвязка"
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -726,6 +742,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "节点女亲王凯威扎"
         s["npc;drop=214502"] = "血缚恐魔"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "永铸之盔"
+        s["spell;created=441065"] = "刻纹腰链"
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -811,5 +829,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=228470"] = "节点女亲王凯威扎"
         s["npc;drop=214502"] = "血缚恐魔"
         s["npc;drop=228713"] = "[DNT] Tug of War Stalker"
+        s["spell;created=450224"] = "永铸之盔"
+        s["spell;created=441065"] = "刻纹腰链"
     end
 end

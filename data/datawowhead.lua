@@ -57,40 +57,60 @@ sortBfs["No"] = 35
 sortBfs["?"] = 36
 sortBfs["?????"] = 37
 local bfs = {}
-function SpecBisTooltip:InitBFS()
-	local pool = SpecBisTooltip:GetWoWBuild()
+function SpecBisTooltip:InitBFSContent(pool, content)
+	bfs[content] = {}
 	if SpecBisTooltip:GetBisTable()[pool] then
 		for className, classTab in pairs(SpecBisTooltip:GetBisTable()[pool]) do
 			for specId, specTab in pairs(classTab) do
-				for itemId, itemTyp in pairs(specTab) do
-					bfs[itemId] = bfs[itemId] or {}
-					table.insert(bfs[itemId], {className, specId, itemTyp})
+				for itemId, itemTab in pairs(specTab[content]) do
+					bfs[content][itemId] = bfs[content][itemId] or {}
+					table.insert(bfs[content][itemId], {className, specId, itemTab})
 				end
 			end
 		end
 	end
+end
 
-	for i, bf in pairs(bfs) do
-		table.sort(
-			bf,
-			function(a, b)
-				if sortBfs[a[3][1]] == nil then
-					SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
-
-					return true
+function SpecBisTooltip:InitBFS()
+	local pool = SpecBisTooltip:GetWoWBuild()
+	if pool ~= "RETAIL" then
+		if SpecBisTooltip:GetBisTable()[pool] then
+			for className, classTab in pairs(SpecBisTooltip:GetBisTable()[pool]) do
+				for specId, specTab in pairs(classTab) do
+					for itemId, itemTyp in pairs(specTab) do
+						bfs[itemId] = bfs[itemId] or {}
+						table.insert(bfs[itemId], {className, specId, itemTyp})
+					end
 				end
-
-				if sortBfs[b[3][1]] == nil then
-					SpecBisTooltip:MSG("MISSING SORTING KEY", b[3][1])
-
-					return false
-				end
-
-				if sortBfs[a[3][1]] == sortBfs[b[3][1]] then return a[1] < b[1] end
-
-				return sortBfs[a[3][1]] < sortBfs[b[3][1]]
 			end
-		)
+		end
+
+		for i, bf in pairs(bfs) do
+			table.sort(
+				bf,
+				function(a, b)
+					if sortBfs[a[3][1]] == nil then
+						SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
+
+						return true
+					end
+
+					if sortBfs[b[3][1]] == nil then
+						SpecBisTooltip:MSG("MISSING SORTING KEY", b[3][1])
+
+						return false
+					end
+
+					if sortBfs[a[3][1]] == sortBfs[b[3][1]] then return a[1] < b[1] end
+
+					return sortBfs[a[3][1]] < sortBfs[b[3][1]]
+				end
+			)
+		end
+	else
+		SpecBisTooltip:InitBFSContent(pool, "BISO")
+		SpecBisTooltip:InitBFSContent(pool, "BISR")
+		SpecBisTooltip:InitBFSContent(pool, "BISM")
 	end
 end
 
@@ -99,6 +119,13 @@ function SpecBisTooltip:GetBFS(itemId)
 	return bfs[itemId]
 end
 
+function SpecBisTooltip:GetBFSRetail(itemId, content)
+	if bfs[content] and bfs[content][itemId] then return bfs[content][itemId] end
+
+	return nil
+end
+
+--return bfs[content][itemId]
 local bfi = {}
 function SpecBisTooltip:GetBisSource(invType, class, specId)
 	if bfi[class] == nil then
@@ -132,6 +159,35 @@ function SpecBisTooltip:GetBisSource(invType, class, specId)
 	end
 
 	local itemId = bfi[class][specId][invType]
+	local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
+	local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
+
+	return sourceTyp, sourceName
+end
+
+function SpecBisTooltip:GetBisSourceRetail(invType, class, specId, content)
+	if bfi[class] == nil then
+		bfi[class] = {}
+	end
+
+	if bfi[class][specId] == nil then
+		bfi[class][specId] = {}
+	end
+
+	if bfi[class][specId][content] == nil then
+		bfi[class][specId][content] = {}
+		local pool = SpecBisTooltip:GetWoWBuild()
+		if SpecBisTooltip:GetBisTable()[pool] and SpecBisTooltip:GetBisTable()[pool][class] and SpecBisTooltip:GetBisTable()[pool][class][specId] and SpecBisTooltip:GetBisTable()[pool][class][specId][content] then
+			for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content]) do
+				local slot = tab[2]
+				if bfi[class][specId][content][slot] == nil then
+					bfi[class][specId][content][slot] = itemId
+				end
+			end
+		end
+	end
+
+	local itemId = bfi[class][specId][content][invType]
 	local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
 	local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
 

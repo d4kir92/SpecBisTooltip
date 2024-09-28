@@ -1,6 +1,5 @@
 -- By D4KiR
 local AddonName, SpecBisTooltip = ...
-local debug = false
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
 local invalidEquipSlots = {}
 invalidEquipSlots["INVTYPE_TABARD"] = true
@@ -25,7 +24,7 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.10.51"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.0"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
 							end,
@@ -66,14 +65,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.10.51")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.0")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.10.51")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.0")
 		}
 	)
 
@@ -195,6 +194,7 @@ function SpecBisTooltip:InitSettings()
 end
 
 local once = true
+local once2 = true
 function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	if itemId == nil then return "NOTBIS", nil end
 	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
@@ -208,8 +208,8 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	end
 
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
-		if once then
-			once = false
+		if once2 then
+			once2 = false
 			SpecBisTooltip:MSG("Missing Spec for Class: " .. class .. " OR no spec selected")
 		end
 
@@ -221,9 +221,42 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 	return "NOTBIS", nil
 end
 
+function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content)
+	if itemId == nil then return "NOTBIS", nil end
+	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
+		if once then
+			once = false
+			SpecBisTooltip:MSG("Missing Class: " .. class)
+		end
+
+		return
+	end
+
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
+		if once2 then
+			once2 = false
+			SpecBisTooltip:MSG("Missing Spec for Class: " .. class .. " OR no spec selected")
+		end
+
+		return
+	end
+
+	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId] then return content, SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId][1] end
+
+	return "NOTBIS", nil
+end
+
 function SpecBisTooltip:GetSpecItemTyp(itemId, specId)
 	local _, engClass = UnitClass("PLAYER")
 	if engClass and specId then return SpecBisTooltip:GetItemTyp(engClass, specId, itemId) end
+
+	return nil, nil
+end
+
+function SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content)
+	local _, engClass = UnitClass("PLAYER")
+	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, content) end
 
 	return nil, nil
 end
@@ -533,6 +566,43 @@ local function GetBISText(typ)
 	end
 end
 
+local function AddToTooltipRetail(tooltip, id, specId, icon, invType, content)
+	if id == nil then return end
+	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(id, specId, content)
+	if typ == nil then return end
+	local iconText = ""
+	if icon then
+		iconText = "|T" .. icon .. ":20:20:0:0|t"
+	end
+
+	local bisText = GetBISText(typ)
+	local sourceTyp, sourceName = SpecBisTooltip:GetSource(sourceUrl)
+	if bisText ~= "" then
+		if bisText ~= "BLOCKED" then
+			if typ == "NOTBIS" then
+				return false
+			elseif sourceTyp and sourceTyp ~= "" then
+				if sourceTyp == "catalyst" then
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+				else
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " " .. "(" .. SpecBisTooltip:Trans(sourceTyp) .. ")" .. " |T136031:20:20:0:0|t")
+				end
+			else
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+			end
+		end
+
+		return true
+	else
+		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
+		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
+			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
+		end
+	end
+
+	return false
+end
+
 local function AddToTooltip(tooltip, id, specId, icon, invType)
 	local _, class = UnitClass("PLAYER")
 	if id == nil then return end
@@ -583,6 +653,12 @@ local function AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIco
 		else
 			tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, oldBisText), "|T136031:20:20:0:0|t")
 		end
+	end
+end
+
+local function AddBisTooltipRetail(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
+	if bisText ~= "" and bisText ~= "BLOCKED" then
+		tooltip:AddDoubleLine(format("%s %s", leftText, oldBisText), "|T136031:20:20:0:0|t")
 	end
 end
 
@@ -663,6 +739,58 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	end
 end
 
+local function AddBisForSpecRetail(tooltip, itemId, yourSpecId, otherClasses, content, first)
+	if first == nil then
+		first = false
+	end
+
+	local _, ownClassName = UnitClass("player")
+	local bfs = SpecBisTooltip:GetBFSRetail(itemId, content)
+	local num = 0
+	if bfs == nil then return false end
+	local oldBisText = nil
+	local leftText = ""
+	local max = 0
+	local lastTab = ""
+	for i, tab in pairs(bfs) do
+		local className = tab[1]
+		local specId = tab[2]
+		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
+			max = max + 1
+			lastTab = tab
+		end
+	end
+
+	for i, tab in pairs(bfs) do
+		local className = tab[1]
+		local specId = tab[2]
+		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
+			if first and num == 0 and max > 0 then
+				if otherClasses then
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+				else
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+				end
+			end
+
+			local specIcon = SpecBisTooltip:GetSpecIcon(className, specId)
+			local bisText = GetBISText(content)
+			if oldBisText == nil then
+				oldBisText = bisText
+			end
+
+			leftText = leftText .. format("|T%s:20:20:0:0|t", specIcon) --.. specId
+			if max > 0 and tab == lastTab then
+				AddBisTooltipRetail(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
+			end
+
+			num = num + 1
+		end
+	end
+
+	return max > 0
+end
+
 local specNotFoundOnce = true
 local function OnTooltipSetItem(tooltip, data)
 	local id = nil
@@ -680,7 +808,7 @@ local function OnTooltipSetItem(tooltip, data)
 	if itemType == "" then return end
 	if invalidEquipSlots[itemType] then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
-	if debug then
+	if SpecBisTooltip.DEBUG then
 		tooltip:AddDoubleLine("ID: " .. id)
 	end
 
@@ -689,13 +817,70 @@ local function OnTooltipSetItem(tooltip, data)
 			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ":", "|T136031:20:20:0:0|t")
 		end
 
-		AddToTooltip(tooltip, id, specId, icon, itemType)
-		if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
-			AddBisForSpec(tooltip, id, specId, false)
-		end
+		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+			local foundCount = 0
+			if AddToTooltipRetail(tooltip, id, specId, icon, itemType, "BISO") then
+				foundCount = foundCount + 1
+			end
 
-		if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
-			AddBisForSpec(tooltip, id, specId, true)
+			if AddToTooltipRetail(tooltip, id, specId, icon, itemType, "BISR") then
+				foundCount = foundCount + 1
+			end
+
+			if AddToTooltipRetail(tooltip, id, specId, icon, itemType, "BISM") then
+				foundCount = foundCount + 1
+			end
+
+			if foundCount == 0 then
+				tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. GetBISText("NOTBIS"), "|T136031:20:20:0:0|t")
+			end
+
+			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
+				local first = true
+				if AddBisForSpecRetail(tooltip, id, specId, false, "BISO", first) then
+					first = false
+				end
+
+				if AddBisForSpecRetail(tooltip, id, specId, false, "BISR", first) then
+					first = false
+				end
+
+				if AddBisForSpecRetail(tooltip, id, specId, false, "BISM", first) then
+					first = false
+				end
+
+				if first then
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+				end
+			end
+
+			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
+				local first = true
+				if AddBisForSpecRetail(tooltip, id, specId, true, "BISO", first) then
+					first = false
+				end
+
+				if AddBisForSpecRetail(tooltip, id, specId, true, "BISR", first) then
+					first = false
+				end
+
+				if AddBisForSpecRetail(tooltip, id, specId, true, "BISM", first) then
+					first = false
+				end
+
+				if first then
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+				end
+			end
+		else
+			AddToTooltip(tooltip, id, specId, icon, itemType)
+			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
+				AddBisForSpec(tooltip, id, specId, false)
+			end
+
+			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
+				AddBisForSpec(tooltip, id, specId, true)
+			end
 		end
 	else
 		local lvl = UnitLevel("PLAYER")

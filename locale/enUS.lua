@@ -1,5 +1,6 @@
 -- enUS
 local _, SpecBisTooltip = ...
+SpecBisTooltip.DEBUG = true
 SpecBisTooltip:AddTrans("enUS", "LID_GENERAL", "General")
 SpecBisTooltip:AddTrans("enUS", "LID_SHOWMINIMAPBUTTON", "Show Minimap Button")
 SpecBisTooltip:AddTrans("enUS", "LID_SHOWOTHERSPECS", "Show other Specs")

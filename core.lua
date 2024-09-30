@@ -24,7 +24,7 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.0"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.1"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
 							end,
@@ -65,14 +65,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.0")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.1")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.0")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.1")
 		}
 	)
 
@@ -387,21 +387,29 @@ local bisTextLookup = {
 		colorCode = col_green,
 		translationArgs = {"LID_BISPVEPHASEX", nil, 6}
 	},
-	["BIS,PVE,SOD25"] = {
+	["BIS,PVE,SODP1"] = {
 		colorCode = col_green,
-		translationArgs = {"LID_BISPVESODX", nil, 25}
+		translationArgs = {"LID_BISPVESODX", nil, 1}
 	},
-	["BIS,PVE,SOD40"] = {
+	["BIS,PVE,SODP2"] = {
 		colorCode = col_green,
-		translationArgs = {"LID_BISPVESODX", nil, 40}
+		translationArgs = {"LID_BISPVESODX", nil, 2}
 	},
-	["BIS,PVE,SOD50"] = {
+	["BIS,PVE,SODP3"] = {
 		colorCode = col_green,
-		translationArgs = {"LID_BISPVESODX", nil, 50}
+		translationArgs = {"LID_BISPVESODX", nil, 3}
 	},
-	["BIS,PVE,SOD60"] = {
+	["BIS,PVE,SODP4"] = {
 		colorCode = col_green,
-		translationArgs = {"LID_BISPVESODX", nil, 60}
+		translationArgs = {"LID_BISPVESODX", nil, 4}
+	},
+	["BIS,PVE,SODP5"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVESODX", nil, 5}
+	},
+	["BIS,PVE,SODP6"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BISPVESODX", nil, 6}
 	},
 	["BIS,PVP"] = {
 		colorCode = col_green,
@@ -499,21 +507,29 @@ local bisTextLookup = {
 		colorCode = col_yellow,
 		translationArgs = {"LID_PREBISPVEPHASEX", nil, 6}
 	},
-	["PREBIS,PVE,SOD25"] = {
+	["PREBIS,PVE,SODP1"] = {
 		colorCode = col_yellow,
-		translationArgs = {"LID_PREBISPVESODX", nil, 25}
+		translationArgs = {"LID_PREBISPVESODX", nil, 1}
 	},
-	["PREBIS,PVE,SOD40"] = {
+	["PREBIS,PVE,SODP2"] = {
 		colorCode = col_yellow,
-		translationArgs = {"LID_PREBISPVESODX", nil, 40}
+		translationArgs = {"LID_PREBISPVESODX", nil, 2}
 	},
-	["PREBIS,PVE,SOD50"] = {
+	["PREBIS,PVE,SODP3"] = {
 		colorCode = col_yellow,
-		translationArgs = {"LID_PREBISPVESODX", nil, 50}
+		translationArgs = {"LID_PREBISPVESODX", nil, 3}
 	},
-	["PREBIS,PVE,SOD60"] = {
+	["PREBIS,PVE,SODP4"] = {
 		colorCode = col_yellow,
-		translationArgs = {"LID_PREBISPVESODX", nil, 60}
+		translationArgs = {"LID_PREBISPVESODX", nil, 4}
+	},
+	["PREBIS,PVE,SODP5"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVESODX", nil, 5}
+	},
+	["PREBIS,PVE,SODP6"] = {
+		colorCode = col_yellow,
+		translationArgs = {"LID_PREBISPVESODX", nil, 6}
 	},
 	["?"] = {
 		colorCode = col_red,
@@ -527,12 +543,14 @@ local bisTextLookup = {
 
 local oldPhases = {}
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
-	oldPhases["BIS,PVE,SOD50"] = true
-	oldPhases["PREBIS,PVE,SOD50"] = true
-	oldPhases["BIS,PVE,SOD40"] = true
-	oldPhases["PREBIS,PVE,SOD40"] = true
-	oldPhases["BIS,PVE,SOD25"] = true
-	oldPhases["PREBIS,PVE,SOD25"] = true
+	oldPhases["BIS,PVE,SODP4"] = true
+	oldPhases["PREBIS,PVE,SODP4"] = true
+	oldPhases["BIS,PVE,SODP3"] = true
+	oldPhases["PREBIS,PVE,SODP3"] = true
+	oldPhases["BIS,PVE,SODP2"] = true
+	oldPhases["PREBIS,PVE,SODP2"] = true
+	oldPhases["BIS,PVE,SODP1"] = true
+	oldPhases["PREBIS,PVE,SODP1"] = true
 elseif SpecBisTooltip:GetWoWBuild() == "WRATH" then
 	oldPhases["BIS,PVE,P1"] = true
 	oldPhases["BIS,PVE,P2"] = true

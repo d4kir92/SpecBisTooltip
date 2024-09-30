@@ -67,8 +67,33 @@ function SpecBisTooltip:InitBFSContent(pool, content)
 		for className, classTab in pairs(SpecBisTooltip:GetBisTable()[pool]) do
 			for specId, specTab in pairs(classTab) do
 				for itemId, itemTab in pairs(specTab[content]) do
-					bfs[content][itemId] = bfs[content][itemId] or {}
-					table.insert(bfs[content][itemId], {className, specId, itemTab})
+					if itemId > 100 then
+						bfs[content][itemId] = bfs[content][itemId] or {}
+						local found = false
+						for i, v in pairs(bfs[content][itemId]) do
+							if v[1] == className and v[2] == specId then
+								found = true
+							end
+						end
+
+						if not found then
+							table.insert(bfs[content][itemId], {className, specId, itemTab})
+						end
+					else
+						for itemId2, itemTab2 in pairs(specTab[content][itemId]) do
+							bfs[content][itemId2] = bfs[content][itemId2] or {}
+							local found = false
+							for i, v in pairs(bfs[content][itemId2]) do
+								if v[1] == className and v[2] == specId then
+									found = true
+								end
+							end
+
+							if not found then
+								table.insert(bfs[content][itemId2], {className, specId, itemTab2})
+							end
+						end
+					end
 				end
 			end
 		end
@@ -124,12 +149,13 @@ function SpecBisTooltip:GetBFS(itemId)
 end
 
 function SpecBisTooltip:GetBFSRetail(itemId, content)
+	local heroSpecID = C_ClassTalents.GetActiveHeroTalentSpec()
+	if heroSpecID and bfs[content] and bfs[content][heroSpecID] and bfs[content][heroSpecID][itemId] then return bfs[content][heroSpecID][itemId] end
 	if bfs[content] and bfs[content][itemId] then return bfs[content][itemId] end
 
 	return nil
 end
 
---return bfs[content][itemId]
 local bfi = {}
 function SpecBisTooltip:GetBisSource(invType, class, specId)
 	if bfi[class] == nil then

@@ -157,12 +157,7 @@ end
 local bfi = {}
 function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 	local n = num or 1
-	if invType == nil then
-		SpecBisTooltip:MSG("[GetBisSource] Missing InvType")
-
-		return nil, nil, nil
-	end
-
+	if invType == nil then return nil, nil, nil end
 	if specId == nil then
 		SpecBisTooltip:MSG("[GetBisSource] Missing SpecId")
 

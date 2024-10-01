@@ -24,7 +24,7 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.6"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.7"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
 							end,
@@ -65,14 +65,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.6")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.7")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.6")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.7")
 		}
 	)
 
@@ -170,8 +170,6 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content)
 
 			if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId] then return content, SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId][1] end
 		end
-	else
-		SpecBisTooltip:MSG("INVALID SLOT", itemEquipLoc, name)
 	end
 
 	return "NOTBIS", nil

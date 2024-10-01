@@ -2,21 +2,30 @@
 local _, SpecBisTooltip = ...
 function SpecBisTooltip:GetSource(sourceId)
     if sourceId == nil then return "", "" end
-    if sourceId == "npc;sold=213278" then return "catalyst", "catalyst" end
+    if sourceId == "npc;sold=213278" then return "catalyst", "catalyst", "catalyst" end -- DF
+    if sourceId == "npc;sold=224270" then return "catalyst", "catalyst", "catalyst" end -- TWW
     local s = SpecBisTooltip:GetTranslationMap()
     if s == nil then return "", "" end
     local sourceStr = s[sourceId]
-    --if sourceId == "npc;sold=213285" then return "catalyst", SpecBisTooltip:Trans("catalyst") end
+    if sourceId == "npc;sold=213285" then return "catalyst", SpecBisTooltip:Trans("catalyst") end
+    local location = ""
     if sourceStr then
+        if type(sourceStr) == "table" then
+            location = sourceStr[2]
+            sourceStr = sourceStr[1]
+        end
+
         local st = string.find(sourceId, "=")
         if st ~= nil then
             local sourceTyp = string.sub(sourceId, 1, st - 1)
 
-            return sourceTyp, sourceStr
+            return sourceTyp, sourceStr, location
         else
             print("[SpecBisTooltip] FAILED TO FIND", sourceId)
         end
     end
+
+    return nil, nil, nil
 end
 
 local lang = GetLocale()

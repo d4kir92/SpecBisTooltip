@@ -155,21 +155,22 @@ function SpecBisTooltip:GetBFSRetail(itemId, content)
 end
 
 local bfi = {}
-function SpecBisTooltip:GetBisSource(invType, class, specId, content)
+function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
+	local n = num or 1
 	if invType == nil then
-		SpecBisTooltip:Msg("[GetBisSource] Missing InvType")
+		SpecBisTooltip:MSG("[GetBisSource] Missing InvType")
 
 		return nil, nil, nil
 	end
 
 	if specId == nil then
-		SpecBisTooltip:Msg("[GetBisSource] Missing SpecId")
+		SpecBisTooltip:MSG("[GetBisSource] Missing SpecId")
 
 		return nil, nil, nil
 	end
 
 	if specId == nil then
-		SpecBisTooltip:Msg("[GetBisSource] Missing SpecId")
+		SpecBisTooltip:MSG("[GetBisSource] Missing SpecId")
 
 		return nil, nil, nil
 	end
@@ -188,59 +189,71 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content)
 				if pool == "CLASSIC" then
 					if EngravingFrame ~= nil and strfind(phase, "SOD", 1, true) then
 						if bfi[class][specId][slot] == nil then
-							bfi[class][specId][slot] = itemId
+							bfi[class][specId][slot] = {}
 						end
+
+						table.insert(bfi[class][specId][slot], itemId)
 					elseif EngravingFrame == nil and strfind(phase, "SOD", 1, true) == nil then
 						if bfi[class][specId][slot] == nil then
-							bfi[class][specId][slot] = itemId
+							bfi[class][specId][slot] = {}
 						end
+
+						table.insert(bfi[class][specId][slot], itemId)
 					end
 				else
 					slot = tab[2]
 					if type(itemId) == "string" then
-						for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][itemId]) do
-							slot = tab2[2]
-							if bfi[class][specId][slot] == nil then
-								bfi[class][specId][slot] = itemId2
+						if itemId == content then
+							for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][itemId]) do
+								slot = tab2[2]
+								if bfi[class][specId][slot] == nil then
+									bfi[class][specId][slot] = {}
+								end
+
+								table.insert(bfi[class][specId][slot], itemId2)
 							end
 						end
 					else
 						if bfi[class][specId][slot] == nil then
-							bfi[class][specId][slot] = itemId
+							bfi[class][specId][slot] = {}
 						end
+
+						table.insert(bfi[class][specId][slot], itemId)
 					end
 				end
 			end
 		end
 	end
 
-	local itemId = bfi[class][specId][invType]
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
-		if content == nil then
-			local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO")
-			if sourceUrl == nil then
-				_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR")
+	if bfi[class][specId][invType] then
+		local itemId = bfi[class][specId][invType][n]
+		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+			if content == nil then
+				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO")
 				if sourceUrl == nil then
-					_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM")
+					_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR")
+					if sourceUrl == nil then
+						_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM")
+					end
 				end
-			end
 
-			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-
-			return sourceTyp, sourceName, sourceLocation
-		else
-			local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content)
-			if sourceUrl then
 				local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
 				return sourceTyp, sourceName, sourceLocation
-			end
-		end
-	else
-		local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
-		local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
+			else
+				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content)
+				if sourceUrl then
+					local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-		return sourceTyp, sourceName, sourceLocation
+					return sourceTyp, sourceName, sourceLocation
+				end
+			end
+		else
+			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
+			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
+
+			return sourceTyp, sourceName, sourceLocation
+		end
 	end
 
 	return nil, nil, nil

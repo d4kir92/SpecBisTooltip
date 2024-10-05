@@ -140,6 +140,7 @@ function SpecBisTooltip:InitBFS()
 		SpecBisTooltip:InitBFSContent(pool, "BISO")
 		SpecBisTooltip:InitBFSContent(pool, "BISR")
 		SpecBisTooltip:InitBFSContent(pool, "BISM")
+		SpecBisTooltip:InitBFSContent(pool, "TRINKETS")
 	end
 end
 

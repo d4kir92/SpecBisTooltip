@@ -96,6 +96,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"Bountiful Coffer", "The Dread Pit"}
         s["spell;created=441065"] = {"Glyph-Etched Binding", "CRAFTING"}
         s["npc;drop=215657"] = {"Ulgrax the Devourer", "Nerub-ar Palace"}
+        s["object;contained=413563"] = {"Heavy Trunk", "Mycomancer Cavern"}
+        s["npc;drop=202318"] = {"Response Team Watcher", "Zaralek Cavern"}
+        s["npc;drop=203355"] = {"Captain Reykal", "Zaralek Cavern"}
+        s["spell;created=427185"] = {"Algari Alchemist Stone", "CRAFTING"}
+        s["npc;sold=219222"] = {"Lalandi <Conquest Quartermaster>", "Dornogal"}
+        s["item:contained=229354"] = {"Algari Adventurer's Cache", ""}
+        s["item:contained=229129"] = {"Cache of Delver's Spoils", ""}
+        s["quest;reward=78636"] = {"Retaking the Mines", ""}
+        s["quest;reward=79342"] = {"As He Departs", ""}
+        s["quest;reward=78232"] = {"Rewriting the Rewritten", ""}
+        s["spell;created=455393"] = {"Radiance", ""}
+        s["spell;created=455394"] = {"Ascension", ""}
+        s["spell;created=455392"] = {"Symbiosis", ""}
+        s["spell;created=455391"] = {"Vivacity", ""}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -176,6 +190,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=215657"] = {"Ulgrax der Verschlinger", "Palast der Nerub'ar"}
         s["spell;created=450222"] = {"Ewiggeschmiedeter Großgürtel", "CRAFTING"}
         s["npc;drop=219778"] = {"Königin Ansurek", "Palast der Nerub'ar"}
+        s["object;contained=413563"] = {"Schwere Truhe", "Mykomantenhöhle"}
+        s["npc;drop=202318"] = {"Hüterin der Eingreiftruppe", "Zaralekhöhle"}
+        s["npc;drop=203355"] = {"Hauptmann Reykal", "Zaralekhöhle"}
+        s["spell;created=427185"] = {"Algarischer Alchemistenstein", "CRAFTING"}
+        s["npc;sold=219222"] = {"Lalandi <Rüstmeister für Eroberungspunkte>", "Dornogal"}
+        s["item:contained=229354"] = {"Truhe eines Algariabenteurers", ""}
+        s["item:contained=229129"] = {"Erbeutete Tiefenforscherschätze", ""}
+        s["quest;reward=78636"] = {"Rückeroberung der Minen", ""}
+        s["quest;reward=79342"] = {"Als er geht", ""}
+        s["quest;reward=78232"] = {"Manipulation der Manipulierten", ""}
+        s["spell;created=455393"] = {"Strahlen", ""}
+        s["spell;created=455394"] = {"Aszendenz", ""}
+        s["spell;created=455392"] = {"Symbiose", ""}
+        s["spell;created=455391"] = {"Lebhaftigkeit", ""}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -255,6 +283,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"Arca pródiga", "Foso del Pavor"}
         s["spell;created=441065"] = {"Ataduras con glifos grabados", "CRAFTING"}
         s["npc;drop=215657"] = {"Ul'grax el Devorador", "Palacio Nerub'ar"}
+        s["object;contained=413563"] = {"Baúl pesado", "Caverna del Micomante"}
+        s["npc;drop=202318"] = {"Vigía del equipo de respuesta", "Caverna Zaralek"}
+        s["npc;drop=203355"] = {"Capitana Reykal", "Caverna Zaralek"}
+        s["spell;created=427185"] = {"Piedra de alquimista algariana", "CRAFTING"}
+        s["npc;sold=219222"] = {"Lalandi <Intendente de conquista>", "Dornogal"}
+        s["item:contained=229354"] = {"Alijo de aventurero algariano", ""}
+        s["item:contained=229129"] = {"Alijo de botín de las profundidades", ""}
+        s["quest;reward=78636"] = {"La reconquista de las minas", ""}
+        s["quest;reward=79342"] = {"Y llega la despedida", ""}
+        s["quest;reward=78232"] = {"Reescribir lo reescrito", ""}
+        s["spell;created=455393"] = {"Resplandor", ""}
+        s["spell;created=455394"] = {"Ascensión", ""}
+        s["spell;created=455392"] = {"Simbiosis", ""}
+        s["spell;created=455391"] = {"Vivacidad", ""}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -334,6 +376,19 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"Coffre abondant", "La fosse de l’Effroi"}
         s["spell;created=441065"] = {"Lien gravé de glyphes", "CRAFTING"}
         s["npc;drop=215657"] = {"Ulgrax le Dévoreur", "Palais des Nérub’ar"}
+        s["object;contained=413563"] = {"Malle lourde", "Grotte de Mycomancie"}
+        s["npc;drop=202318"] = {"Gardienne de l'équipe d'intervention", "Grotte de Zaralek"}
+        s["npc;drop=203355"] = {"Capitaine Reykal", "Grotte de Zaralek"}
+        s["spell;created=427185"] = {"Pierre d’alchimiste algarie", "CRAFTING"}
+        s["npc;sold=219222"] = {"Lalandi <Intendante des emblèmes de conquête>", "Dornogal"}
+        s["item:contained=229354"] = {"Cache d’aventurier algari", ""}
+        s["item:contained=229129"] = {"Cache de butin des Gouffres", ""}
+        s["quest;reward=78636"] = {"Reprendre les mines", ""}
+        s["quest;reward=79342"] = {"Dans son départ", ""}
+        s["quest;reward=78232"] = {"Réécrire la réécriture", ""}
+        s["spell;created=455394"] = {"Sublimation", ""}
+        s["spell;created=455392"] = {"Symbiose", ""}
+        s["spell;created=455391"] = {"Vivacité", ""}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -413,6 +468,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"Scrigno Fruttuoso", "Fossa del Terrore"}
         s["spell;created=441065"] = {"Cinta Incisa con Glifi", "CRAFTING"}
         s["npc;drop=215657"] = {"Ulgrax il Divoratore", "Palazzo dei Nerub'ar"}
+        s["object;contained=413563"] = {"Baule Pesante", "Caverna del Micomante"}
+        s["npc;drop=202318"] = {"Osservatrice della Squadra di Risposta", "Caverna di Zaralek"}
+        s["npc;drop=203355"] = {"Capitana Reykal", "Caverna di Zaralek"}
+        s["spell;created=427185"] = {"Pietra Alchemica Algari", "CRAFTING"}
+        s["npc;sold=219222"] = {"Lalandi <Quartiermastro della Conquista>", "Dornogal"}
+        s["item:contained=229354"] = {"Cassa dell'Avventuriero Algari", ""}
+        s["item:contained=229129"] = {"Cassa di Spoglie delle Scorribande", ""}
+        s["quest;reward=78636"] = {"Riconquistare le miniere", ""}
+        s["quest;reward=79342"] = {"Mentre se ne va", ""}
+        s["quest;reward=78232"] = {"Riscrivere i riscritti", ""}
+        s["spell;created=455393"] = {"Radiosità", ""}
+        s["spell;created=455394"] = {"Ascensione", ""}
+        s["spell;created=455392"] = {"Simbiosi", ""}
+        s["spell;created=455391"] = {"Vivacità", ""}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -503,6 +572,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"풍요로운 금고", "공포의 무저갱"}
         s["spell;created=441065"] = {"문양새김 결속띠", "CRAFTING"}
         s["npc;drop=215657"] = {"포식자 울그락스", "네룹아르 궁전"}
+        s["object;contained=413563"] = {"육중한 보관함", "일몰의 성소"}
+        s["npc;drop=202318"] = {"대응반 감시자", "자랄레크 동굴"}
+        s["npc;drop=203355"] = {"대장 레이칼", "자랄레크 동굴"}
+        s["spell;created=427185"] = {"알가르 연금술사 돌", "CRAFTING"}
+        s["npc;sold=219222"] = {"랄란디 <정복 병참장교>", "도르노갈"}
+        s["item:contained=229354"] = {"알가르 모험가의 보관함", ""}
+        s["item:contained=229129"] = {"구렁 탐험가의 전리품 보관함", ""}
+        s["quest;reward=78636"] = {"광산 탈환", ""}
+        s["quest;reward=79342"] = {"떠나는 길에", ""}
+        s["quest;reward=78232"] = {"퇴고의 퇴고", ""}
+        s["spell;created=455393"] = {"광휘", ""}
+        s["spell;created=455394"] = {"승천", ""}
+        s["spell;created=455392"] = {"공생", ""}
+        s["spell;created=455391"] = {"생기", ""}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -583,6 +666,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"Cofre Abundante", "Fosso do Pavor"}
         s["spell;created=441065"] = {"Amarra Gravada com Glifos", "CRAFTING"}
         s["npc;drop=215657"] = {"Ulgrax, o Devorador", "Palácio Nerub-ar"}
+        s["object;contained=413563"] = {"Baú Pesado", "Caverna Micomante"}
+        s["npc;drop=202318"] = {"Vigia da Equipe de Resposta", "Caverna Zaralek"}
+        s["npc;drop=203355"] = {"Capitã Reykal", "Caverna Zaralek"}
+        s["spell;created=427185"] = {"Pedra do Alquimista Algari", "CRAFTING"}
+        s["npc;sold=219222"] = {"Lalandi <Intendente de Dominação>", "Dornogal"}
+        s["item:contained=229354"] = {"Baú do Aventureiro Algari", ""}
+        s["item:contained=229129"] = {"Baú de Espólios do Imersor", ""}
+        s["quest;reward=78636"] = {"Retomada das minas", ""}
+        s["quest;reward=79342"] = {"E ele se vai", ""}
+        s["quest;reward=78232"] = {"Reprogramando o reprogramado", ""}
+        s["spell;created=455393"] = {"Resplendor", ""}
+        s["spell;created=455394"] = {"Ascensão", ""}
+        s["spell;created=455392"] = {"Simbiose", ""}
+        s["spell;created=455391"] = {"Vivacidade", ""}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -673,6 +770,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=413590"] = {"Богатый сундук", "Яма Ужаса"}
         s["spell;created=441065"] = {"Гравированная символами обвязка", "CRAFTING"}
         s["npc;drop=215657"] = {"Улгракс Пожиратель", "Неруб'арский дворец"}
+        s["object;contained=413563"] = {"Тяжелый ларь", "Пещера микомантов"}
+        s["npc;drop=202318"] = {"Дозорная группы реагирования", "Пещера Заралек"}
+        s["npc;drop=203355"] = {"Капитан Рэйкал", "Пещера Заралек"}
+        s["item:contained=229354"] = {"Тайник алгарийского искателя приключений", ""}
+        s["item:contained=229129"] = {"Тайник с трофеями из вылазок", ""}
+        s["quest;reward=78636"] = {"Битва за рудники", ""}
+        s["quest;reward=79342"] = {"Расставание", ""}
+        s["quest;reward=78232"] = {"Переписывая переписанное", ""}
+        s["spell;created=455393"] = {"Сияние", ""}
+        s["spell;created=455394"] = {"Вознесение", ""}
+        s["spell;created=455392"] = {"Симбиоз", ""}
+        s["spell;created=427185"] = {"Алгарийский алхимический камень", "CRAFTING"}
+        s["spell;created=455391"] = {"Бодрость", ""}
+        s["npc;sold=219222"] = {"Лаланди <Награды за очки завоевания>", "Дорногал"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -762,6 +873,20 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441065"] = {"刻纹腰链", "CRAFTING"}
         s["npc;drop=215657"] = {"噬灭者乌格拉克斯", "尼鲁巴尔王宫"}
         s["spell;created=444070"] = {"肾上腺素激涌腰带", "CRAFTING"}
+        s["item:contained=229354"] = {"阿加冒险者的宝箱", ""}
+        s["object;contained=413563"] = {"沉重之箱", "丝菌师洞穴"}
+        s["item:contained=229129"] = {"一箱地下堡行者的宝藏", ""}
+        s["quest;reward=78636"] = {"夺回矿坑", ""}
+        s["npc;drop=202318"] = {"响应战队守护者", "查拉雷克洞窟"}
+        s["npc;drop=203355"] = {"雷卡尔上尉", "查拉雷克洞窟"}
+        s["quest;reward=79342"] = {"他的辞别", ""}
+        s["quest;reward=78232"] = {"反复覆写", ""}
+        s["spell;created=455393"] = {"光辉", ""}
+        s["spell;created=455394"] = {"扬升", ""}
+        s["spell;created=455392"] = {"共生", ""}
+        s["spell;created=427185"] = {"阿加炼金石", "CRAFTING"}
+        s["spell;created=455391"] = {"盎溢", ""}
+        s["npc;sold=219222"] = {"拉兰迪 <征服军需官>", "多恩诺嘉尔"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -851,5 +976,19 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=441065"] = {"刻纹腰链", "CRAFTING"}
         s["npc;drop=215657"] = {"噬灭者乌格拉克斯", "尼鲁巴尔王宫"}
         s["spell;created=444070"] = {"肾上腺素激涌腰带", "CRAFTING"}
+        s["item:contained=229354"] = {"阿加冒险者的宝箱", ""}
+        s["object;contained=413563"] = {"沉重之箱", "丝菌师洞穴"}
+        s["item:contained=229129"] = {"一箱地下堡行者的宝藏", ""}
+        s["quest;reward=78636"] = {"夺回矿坑", ""}
+        s["npc;drop=202318"] = {"响应战队守护者", "查拉雷克洞窟"}
+        s["npc;drop=203355"] = {"雷卡尔上尉", "查拉雷克洞窟"}
+        s["quest;reward=79342"] = {"他的辞别", ""}
+        s["quest;reward=78232"] = {"反复覆写", ""}
+        s["spell;created=455393"] = {"光辉", ""}
+        s["spell;created=455394"] = {"扬升", ""}
+        s["spell;created=455392"] = {"共生", ""}
+        s["spell;created=427185"] = {"阿加炼金石", "CRAFTING"}
+        s["spell;created=455391"] = {"盎溢", ""}
+        s["npc;sold=219222"] = {"拉兰迪 <征服军需官>", "多恩诺嘉尔"}
     end
 end

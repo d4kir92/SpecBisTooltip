@@ -24,7 +24,7 @@ SBTSetup:SetScript(
 							["icon"] = 136031,
 							["var"] = mmbtn,
 							["dbtab"] = SBTTAB,
-							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.11"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+							["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.12"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 							["funcL"] = function()
 								SpecBisTooltip:ToggleSettings()
 							end,
@@ -65,14 +65,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.11")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.12")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.11")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.12")
 		}
 	)
 
@@ -398,17 +398,41 @@ local bisTextLookup = {
 		colorCode = col_orange,
 		translationArgs = {"BISTRINKETX", nil, "C-"}
 	},
+	["D+"] = {
+		colorCode = col_orange,
+		translationArgs = {"BISTRINKETX", nil, "D+"}
+	},
 	["D"] = {
 		colorCode = col_orange,
 		translationArgs = {"BISTRINKETX", nil, "D"}
+	},
+	["D-"] = {
+		colorCode = col_orange,
+		translationArgs = {"BISTRINKETX", nil, "D-"}
+	},
+	["E+"] = {
+		colorCode = col_red,
+		translationArgs = {"BISTRINKETX", nil, "E+"}
 	},
 	["E"] = {
 		colorCode = col_red,
 		translationArgs = {"BISTRINKETX", nil, "E"}
 	},
+	["E-"] = {
+		colorCode = col_red,
+		translationArgs = {"BISTRINKETX", nil, "E-"}
+	},
+	["F+"] = {
+		colorCode = col_red,
+		translationArgs = {"BISTRINKETX", nil, "F+"}
+	},
 	["F"] = {
 		colorCode = col_red,
 		translationArgs = {"BISTRINKETX", nil, "F"}
+	},
+	["F-"] = {
+		colorCode = col_red,
+		translationArgs = {"BISTRINKETX", nil, "F-"}
 	},
 	["No"] = {
 		colorCode = col_red,

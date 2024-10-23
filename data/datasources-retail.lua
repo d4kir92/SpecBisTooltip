@@ -110,6 +110,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"Ascension", ""}
         s["spell;created=455392"] = {"Symbiosis", ""}
         s["spell;created=455391"] = {"Vivacity", ""}
+        s["npc;drop=226305"] = {"Emperor Dagran Thaurissan", "Blackrock Depths"}
+        s["npc;drop=226306"] = {"Golem Lord Argelmach", "Blackrock Depths"}
+        s["npc;drop=226315"] = {"Lord Roccor", "Blackrock Depths"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -204,6 +207,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"Aszendenz", ""}
         s["spell;created=455392"] = {"Symbiose", ""}
         s["spell;created=455391"] = {"Lebhaftigkeit", ""}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Schwarzfelstiefen"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Schwarzfelstiefen"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "Schwarzfelstiefen"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -297,6 +303,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"Ascensión", ""}
         s["spell;created=455392"] = {"Simbiosis", ""}
         s["spell;created=455391"] = {"Vivacidad", ""}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Profundidades de Roca Negra"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Profundidades de Roca Negra"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "Profundidades de Roca Negra"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -389,6 +398,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"Sublimation", ""}
         s["spell;created=455392"] = {"Symbiose", ""}
         s["spell;created=455391"] = {"Vivacité", ""}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Les profondeurs de Rochenoire"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Les profondeurs de Rochenoire"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "Les profondeurs de Rochenoire"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -482,6 +494,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"Ascensione", ""}
         s["spell;created=455392"] = {"Simbiosi", ""}
         s["spell;created=455391"] = {"Vivacità", ""}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Sotterranei di Roccianera"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Sotterranei di Roccianera"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "Sotterranei di Roccianera"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -586,6 +601,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"승천", ""}
         s["spell;created=455392"] = {"공생", ""}
         s["spell;created=455391"] = {"생기", ""}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "검은바위 나락"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "검은바위 나락"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "검은바위 나락"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -680,6 +698,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=455394"] = {"Ascensão", ""}
         s["spell;created=455392"] = {"Simbiose", ""}
         s["spell;created=455391"] = {"Vivacidade", ""}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Abismo Rocha Negra"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Abismo Rocha Negra"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "Abismo Rocha Negra"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -784,6 +805,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=427185"] = {"Алгарийский алхимический камень", "CRAFTING"}
         s["spell;created=455391"] = {"Бодрость", ""}
         s["npc;sold=219222"] = {"Лаланди <Награды за очки завоевания>", "Дорногал"}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Глубины Черной горы"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Глубины Черной горы"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "Глубины Черной горы"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -887,6 +911,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=427185"] = {"阿加炼金石", "CRAFTING"}
         s["spell;created=455391"] = {"盎溢", ""}
         s["npc;sold=219222"] = {"拉兰迪 <征服军需官>", "多恩诺嘉尔"}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "黑石深渊"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "黑石深渊"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "黑石深渊"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -990,5 +1017,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=427185"] = {"阿加炼金石", "CRAFTING"}
         s["spell;created=455391"] = {"盎溢", ""}
         s["npc;sold=219222"] = {"拉兰迪 <征服军需官>", "多恩诺嘉尔"}
+        s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "黑石深渊"}
+        s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "黑石深渊"}
+        s["npc;drop=226315"] = {"[Lord Roccor]", "黑石深渊"}
     end
 end

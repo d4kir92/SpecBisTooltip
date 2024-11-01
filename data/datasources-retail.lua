@@ -113,6 +113,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"Emperor Dagran Thaurissan", "Blackrock Depths"}
         s["npc;drop=226306"] = {"Golem Lord Argelmach", "Blackrock Depths"}
         s["npc;drop=226315"] = {"Lord Roccor", "Blackrock Depths"}
+        s["npc;drop=217489"] = {"Anub'arash <The Thousand Scars>", "Nerub-ar Palace"}
+        s["npc;drop=223839"] = {"Queen's Guard Ge'zah", "Nerub-ar Palace"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -210,6 +212,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Schwarzfelstiefen"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Schwarzfelstiefen"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "Schwarzfelstiefen"}
+        s["npc;sold=224270"] = {"Ip'xal <Ausstatterin des Helden>", "Stadt der Fäden"}
+        s["npc;drop=217489"] = {"Anub'arash <Die Tausend Narben>", "Palast der Nerub'ar"}
+        s["npc;drop=223839"] = {"Königinnenwache Ge'zah", "Palast der Nerub'ar"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -306,6 +311,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Profundidades de Roca Negra"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Profundidades de Roca Negra"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "Profundidades de Roca Negra"}
+        s["npc;sold=224270"] = {"Ip'xal <Sastra de héroes>", "Ciudad Tejida"}
+        s["npc;drop=217489"] = {"Anub'arash <Las Mil Cicatrices>", "Palacio Nerub'ar"}
+        s["npc;drop=223839"] = {"Guardia de la reina Ge'zah", "Palacio Nerub'ar"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -401,6 +409,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Les profondeurs de Rochenoire"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Les profondeurs de Rochenoire"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "Les profondeurs de Rochenoire"}
+        s["npc;sold=224270"] = {"Ip'xal <Tailleuse héroïque>", "Cité des Fils"}
+        s["npc;drop=217489"] = {"Anub'arash <Les Mille cicatrices>", "Palais des Nérub’ar"}
+        s["npc;drop=223839"] = {"Garde de la reine Ge'zah", "Palais des Nérub’ar"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -497,6 +508,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Sotterranei di Roccianera"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Sotterranei di Roccianera"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "Sotterranei di Roccianera"}
+        s["npc;sold=224270"] = {"Ip'xal <Stilista dell'Eroe>", "Città dei Fili"}
+        s["npc;drop=217489"] = {"Anub'arash <Le Mille Cicatrici>", "Palazzo dei Nerub'ar"}
+        s["npc;drop=223839"] = {"Guardia della Regina Ge'zah", "Palazzo dei Nerub'ar"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -604,6 +618,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "검은바위 나락"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "검은바위 나락"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "검은바위 나락"}
+        s["npc;drop=217489"] = {"아눕아라쉬 <일천 개의 상흔>", "네룹아르 궁전"}
+        s["npc;drop=223839"] = {"여왕 근위병 게자", "네룹아르 궁전"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -701,6 +717,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Abismo Rocha Negra"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Abismo Rocha Negra"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "Abismo Rocha Negra"}
+        s["npc;sold=224270"] = {"Ip'xal <Provedora do Herói>", "Cidade das Tramas"}
+        s["npc;drop=217489"] = {"Anub'arash <As Mil Cicatrizes>", "Palácio Nerub-ar"}
+        s["npc;drop=223839"] = {"Guarda da Rainha Ge'zah", "Palácio Nerub-ar"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -808,6 +827,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "Глубины Черной горы"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "Глубины Черной горы"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "Глубины Черной горы"}
+        s["npc;drop=217489"] = {"Ануб'араш <Меченный тысячей шрамов>", "Неруб'арский дворец"}
+        s["npc;drop=223839"] = {"Стражник королевы Ге'за", "Неруб'арский дворец"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -914,6 +935,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "黑石深渊"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "黑石深渊"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "黑石深渊"}
+        s["npc;drop=217489"] = {"阿努巴拉什 <千疤者>", "尼鲁巴尔王宫"}
+        s["npc;drop=223839"] = {"女王亲卫杰扎", "尼鲁巴尔王宫"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -1020,5 +1043,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226305"] = {"[Emperor Dagran Thaurissan]", "黑石深渊"}
         s["npc;drop=226306"] = {"[Golem Lord Argelmach]", "黑石深渊"}
         s["npc;drop=226315"] = {"[Lord Roccor]", "黑石深渊"}
+        s["npc;drop=217489"] = {"阿努巴拉什 <千疤者>", "尼鲁巴尔王宫"}
+        s["npc;drop=223839"] = {"女王亲卫杰扎", "尼鲁巴尔王宫"}
     end
 end

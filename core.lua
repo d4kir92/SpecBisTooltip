@@ -7,7 +7,7 @@ invalidEquipSlots["INVTYPE_BODY"] = true
 invalidEquipSlots["INVTYPE_BAG"] = true
 invalidEquipSlots["INVTYPE_NON_EQUIP_IGNORE"] = true
 local SBTSetup = CreateFrame("FRAME", "SBTSetup")
-SBTSetup:RegisterEvent("PLAYER_LOGIN")
+SpecBisTooltip:RegisterEvent(SBTSetup, "PLAYER_LOGIN")
 SBTSetup:SetScript(
 	"OnEvent",
 	function(self, event, ...)
@@ -21,7 +21,7 @@ SBTSetup:SetScript(
 					["icon"] = 136031,
 					["var"] = mmbtn,
 					["dbtab"] = SBTTAB,
-					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.18"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.11.19"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 					["funcL"] = function()
 						SpecBisTooltip:ToggleSettings()
 					end,
@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.18")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.11.19")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.18")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.11.19")
 		}
 	)
 
@@ -869,9 +869,9 @@ local function OnTooltipSetItem(tooltip, data)
 		sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetBisSource(itemType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
 		if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
 			if sourceTyp == "catalyst" then
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ":", SpecBisTooltip:Trans("SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. " (" .. SpecBisTooltip:Trans(SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. "):", SpecBisTooltip:Trans("SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
 			else
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ":", SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "] |T136031:20:20:0:0|t")
+				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. " (" .. SpecBisTooltip:Trans(SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. "):", SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "] |T136031:20:20:0:0|t")
 			end
 		else
 			tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ":", "|T136031:20:20:0:0|t")

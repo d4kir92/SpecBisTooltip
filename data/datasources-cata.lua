@@ -256,6 +256,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"Earthen Scale Sabatons", "CRAFTING"}
         s["spell;created=99449"] = {"Don Tayo's Inferno Mittens", "CRAFTING"}
         s["spell;created=99657"] = {"Unbreakable Guardian", "CRAFTING"}
+        s["npc;sold=54402"] = {"Lurah Wrathvine <Crystallized Firestone Collector>", "Mount Hyjal"}
+        s["npc;drop=52409"] = {"Ragnaros", "Firelands"}
+        s["npc;drop=52571"] = {"Majordomo Staghelm <Archdruid of the Flame>", "Firelands"}
+        s["npc;drop=53691"] = {"Shannox", "Firelands"}
+        s["npc;drop=52498"] = {"Beth'tilac <The Red Widow>", "Firelands"}
+        s["npc;drop=52558"] = {"Lord Rhyolith", "Firelands"}
+        s["npc;drop=52530"] = {"Alysrazor", "Firelands"}
+        s["npc;drop=53494"] = {"Baleroc <The Gatekeeper>", "Firelands"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -477,6 +485,11 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"Irdene Schuppensabatons", "CRAFTING"}
         s["spell;created=99449"] = {"Don Tayos Infernofäustlinge", "CRAFTING"}
         s["spell;created=99657"] = {"Unzerstörbarer Wächter", "CRAFTING"}
+        s["npc;sold=54402"] = {"Lurah Zornranke <Sammlerin kristallisierten Feuersteins>", "Hyjal"}
+        s["npc;drop=52571"] = {"Majordomus Hirschhaupt <Erzdruide der Flamme>", "Feuerlande"}
+        s["npc;drop=52498"] = {"Beth'tilac <Die rote Witwe>", "Feuerlande"}
+        s["npc;drop=52530"] = {"Alysrazar", "Feuerlande"}
+        s["npc;drop=53494"] = {"Baloroc <Der Torwächter>", "Feuerlande"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -698,6 +711,13 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"Escarpes de escamas terráneos", "CRAFTING"}
         s["spell;created=99449"] = {"Mitones infernales de Don Tayo", "CRAFTING"}
         s["spell;created=99657"] = {"Guardiana irrompible", "CRAFTING"}
+        s["npc;sold=54402"] = {"Lurah Vid de la Ira <Coleccionista de piedras de fuego cristalizadas>", "Monte Hyjal"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "Tierras de Fuego"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "Tierras de Fuego"}
+        s["npc;drop=52498"] = {"Beth'tilac <La Viuda Roja>", "Tierras de Fuego"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "Tierras de Fuego"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "Tierras de Fuego"}
+        s["npc;drop=53494"] = {"Baleroc <El Guardián de la Puerta>", "Tierras de Fuego"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -922,6 +942,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"Solerets terrestres en écailles", "CRAFTING"}
         s["spell;created=99449"] = {"Mitaines infernales de don Tayo", "CRAFTING"}
         s["spell;created=99657"] = {"Gardien incassable", "CRAFTING"}
+        s["npc;sold=54402"] = {"Lurah Irevigne <Collectionneuse de pierres de feu cristallisées>", "Mont Hyjal"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "Terres de Feu"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "Terres de Feu"}
+        s["npc;drop=53691"] = {"[Shannox]", "Terres de Feu"}
+        s["npc;drop=52498"] = {"[Beth'tilac] <[The Red Widow]>", "Terres de Feu"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "Terres de Feu"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "Terres de Feu"}
+        s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "Terres de Feu"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -1081,6 +1109,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;sold=53881"] = {"[Ayla Shadowstorm] <[Treasures of Elune]>", "Molten Front"}
         s["npc;sold=52822"] = {"[Zen'Vorka] <[Favors of the World Tree]>", "Molten Front"}
         s["npc;sold=53214"] = {"[Damek Bloombeard] <[Exceptional Equipment]>", "Molten Front"}
+        s["npc;sold=54402"] = {"[Lurah Wrathvine] <[Crystallized Firestone Collector]>", "Mount Hyjal"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "Firelands"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "Firelands"}
+        s["npc;drop=53691"] = {"[Shannox]", "Firelands"}
+        s["npc;drop=52498"] = {"[Beth'tilac] <[The Red Widow]>", "Firelands"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "Firelands"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "Firelands"}
+        s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "Firelands"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -1331,6 +1367,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"대지의 미늘 발덮개", "CRAFTING"}
         s["spell;created=99449"] = {"돈 타요의 지옥불 벙어리장갑", "CRAFTING"}
         s["spell;created=99657"] = {"깨지지 않는 수호자", "CRAFTING"}
+        s["npc;sold=54402"] = {"[Lurah Wrathvine] <[Crystallized Firestone Collector]>", "하이잘 산"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "불의 땅"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "불의 땅"}
+        s["npc;drop=53691"] = {"[Shannox]", "불의 땅"}
+        s["npc;drop=52498"] = {"[Beth'tilac] <[The Red Widow]>", "불의 땅"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "불의 땅"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "불의 땅"}
+        s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "불의 땅"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1559,6 +1603,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"Escarpes de Escama Terrana", "CRAFTING"}
         s["spell;created=99449"] = {"Mitenes Infernais de Dom Tayo", "CRAFTING"}
         s["spell;created=99657"] = {"Guardião Inquebrantável", "CRAFTING"}
+        s["npc;sold=54402"] = {"[Lurah Wrathvine] <[Crystallized Firestone Collector]>", "Monte Hyjal"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "Terras do Fogo"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "Terras do Fogo"}
+        s["npc;drop=53691"] = {"[Shannox]", "Terras do Fogo"}
+        s["npc;drop=52498"] = {"[Beth'tilac] <[The Red Widow]>", "Terras do Fogo"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "Terras do Fogo"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "Terras do Fogo"}
+        s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "Terras do Fogo"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1809,6 +1861,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"Башмаки из земляных чешуек", "CRAFTING"}
         s["spell;created=99449"] = {"Инфернальные полуперчатки дона Тайо", "CRAFTING"}
         s["spell;created=99657"] = {"Непреклонный страж", "CRAFTING"}
+        s["npc;sold=54402"] = {"Лура Гневная Лоза <Собиратель кристаллизованного кремня>", "Хиджал"}
+        s["npc;drop=52409"] = {"Рагнарос", "Огненные Просторы"}
+        s["npc;drop=52571"] = {"Мажордом Фэндрал Олений Шлем <Верховный друид пламени>", "Огненные Просторы"}
+        s["npc;drop=53691"] = {"Шэннокс", "Огненные Просторы"}
+        s["npc;drop=52498"] = {"Бет'тилак <Красная Вдова>", "Огненные Просторы"}
+        s["npc;drop=52558"] = {"Повелитель Риолит", "Огненные Просторы"}
+        s["npc;drop=52530"] = {"Алисразор", "Огненные Просторы"}
+        s["npc;drop=53494"] = {"Бейлрок <Привратник>", "Огненные Просторы"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -2058,6 +2118,14 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"土灵鳞甲马靴", "CRAFTING"}
         s["spell;created=99449"] = {"唐塔约的地狱火手套", "CRAFTING"}
         s["spell;created=99657"] = {"铁卫", "CRAFTING"}
+        s["npc;sold=54402"] = {"[Lurah Wrathvine] <[Crystallized Firestone Collector]>", "海加尔山"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "火焰之地"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "火焰之地"}
+        s["npc;drop=53691"] = {"[Shannox]", "火焰之地"}
+        s["npc;drop=52498"] = {"[Beth'tilac] <[The Red Widow]>", "火焰之地"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "火焰之地"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "火焰之地"}
+        s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "火焰之地"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -2307,5 +2375,13 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=99455"] = {"土灵鳞甲马靴", "CRAFTING"}
         s["spell;created=99449"] = {"唐塔约的地狱火手套", "CRAFTING"}
         s["spell;created=99657"] = {"铁卫", "CRAFTING"}
+        s["npc;sold=54402"] = {"[Lurah Wrathvine] <[Crystallized Firestone Collector]>", "海加尔山"}
+        s["npc;drop=52409"] = {"[Ragnaros]", "火焰之地"}
+        s["npc;drop=52571"] = {"[Majordomo Staghelm] <[Archdruid of the Flame]>", "火焰之地"}
+        s["npc;drop=53691"] = {"[Shannox]", "火焰之地"}
+        s["npc;drop=52498"] = {"[Beth'tilac] <[The Red Widow]>", "火焰之地"}
+        s["npc;drop=52558"] = {"[Lord Rhyolith]", "火焰之地"}
+        s["npc;drop=52530"] = {"[Alysrazor]", "火焰之地"}
+        s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "火焰之地"}
     end
 end

@@ -40,4 +40,6 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "PREFERREDBISO", "Overall Ausrüstung")
     SpecBisTooltip:AddTrans("deDE", "PREFERREDBISR", "Raid Ausrüstung")
     SpecBisTooltip:AddTrans("deDE", "PREFERREDBISM", "M+ Ausrüstung")
+    SpecBisTooltip:AddTrans("deDE", "HOLDMODIFIER", "[Shift halten]")
+    SpecBisTooltip:AddTrans("deDE", "SMALLERTOOLTIP", "Kleinerer Tooltip")
 end

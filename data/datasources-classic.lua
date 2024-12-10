@@ -7,6 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
+-- DATA FROM: 10.12.3024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}
@@ -734,6 +735,96 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["npc;drop=10184"] = {"Onyxia", "Onyxia's Lair"}
         s["npc;drop=14890"] = {"Taerar", "Duskwood"}
         s["npc;drop=14888"] = {"Lethon", "Duskwood"}
+        s["npc;drop=15369"] = {"Ayamiss the Hunter", "Ruins of Ahn'Qiraj"}
+        s["quest;reward=86678"] = {"Champion's Battlegear", "Silithus"}
+        s["spell;created=1216020"] = {"Idol of Sidereal Wrath", "CRAFTING"}
+        s["spell;created=1213538"] = {"Qiraji Silk Cloak", "CRAFTING"}
+        s["spell;created=469683"] = {"Summon Haruspex's Bracers DND", "CRAFTING"}
+        s["npc;drop=15370"] = {"Buru the Gorger", "Ruins of Ahn'Qiraj"}
+        s["npc;drop=235197"] = {"Taerar", "Ashenvale"}
+        s["npc;sold=15192"] = {"Anachronos", "Tanaris"}
+        s["spell;created=1213595"] = {"Tear of the Dreamer", "CRAFTING"}
+        s["spell;created=1213502"] = {"Obsidian Stormhammer", "CRAFTING"}
+        s["npc;sold=15500"] = {"Keyl Swiftclaw", "Silithus"}
+        s["spell;created=1216340"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1216022"] = {"Idol of Feline Ferocity", "CRAFTING"}
+        s["npc;drop=228230"] = {"Harrigen <The Undermarket>", "Burning Steppes"}
+        s["spell;created=1213536"] = {"Qiraji Silk Cape", "CRAFTING"}
+        s["quest;reward=86675"] = {"Volunteer's Battlegear", "Silithus"}
+        s["spell;created=23704"] = {"Timbermaw Brawlers", "CRAFTING"}
+        s["quest;reward=86676"] = {"Veteran's Battlegear", "Silithus"}
+        s["spell;created=1213593"] = {"Speedstone", "CRAFTING"}
+        s["spell;created=1216385"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213500"] = {"Obsidian Destroyer", "CRAFTING"}
+        s["spell;created=1216024"] = {"Idol of Ursin Power", "CRAFTING"}
+        s["spell;created=24121"] = {"Primal Batskin Jerkin", "CRAFTING"}
+        s["spell;created=1213738"] = {"Bramblewood Helm", "CRAFTING"}
+        s["spell;created=1213736"] = {"Bramblewood Boots", "CRAFTING"}
+        s["spell;created=1213598"] = {"Lodestone of Retaliation", "CRAFTING"}
+        s["spell;created=1216366"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213521"] = {"Razorbramble Cowl", "CRAFTING"}
+        s["spell;created=1213525"] = {"Razorbramble Leathers", "CRAFTING"}
+        s["spell;created=1213523"] = {"Razorbramble Shoulderpads", "CRAFTING"}
+        s["npc;drop=15348"] = {"Kurinnaxx", "Ruins of Ahn'Qiraj"}
+        s["npc;drop=15544"] = {"Vem", "Ahn'Qiraj"}
+        s["spell;created=1213603"] = {"Ruby-Encrusted Broach", "CRAFTING"}
+        s["spell;created=1216319"] = {"Void-Touched", "CRAFTING"}
+        s["quest;reward=86677"] = {"Stalwart's Battlegear", "Silithus"}
+        s["spell;created=1213635"] = {"Enchanted Mushroom", "CRAFTING"}
+        s["spell;created=1213540"] = {"Qiraji Silk Drape", "CRAFTING"}
+        s["npc;drop=235232"] = {"Ysondre", "The Hinterlands"}
+        s["quest;reward=86449"] = {"Treasure of the Timeless One", "Silithus"}
+        s["quest;reward=86674"] = {"The Perfect Poison", "Silithus"}
+        s["spell;created=1216365"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=468563"] = {"Punctured Voodoo Doll HUN DND", "CRAFTING"}
+        s["spell;created=469772"] = {"Create Zul'Gurub Talisman HUN R4 DND", "CRAFTING"}
+        s["spell;created=469775"] = {"Summon Predator's Belt DND", "CRAFTING"}
+        s["quest;reward=85559"] = {"Night Falls", "Un'Goro Crater"}
+        s["spell;created=24137"] = {"Bloodsoul Shoulders", "CRAFTING"}
+        s["spell;created=1216384"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1216387"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1216327"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=466116"] = {"Attune Staff of Inferno", "CRAFTING"}
+        s["spell;created=1213628"] = {"Enchanted Prayer Tome", "CRAFTING"}
+        s["quest;reward=86672"] = {"Imperial Qiraji Armaments", "Blackwing Lair"}
+        s["spell;created=1216005"] = {"Libram of Righteousness", "CRAFTING"}
+        s["spell;created=1213481"] = {"Razorspike Headcage", "CRAFTING"}
+        s["spell;created=1213484"] = {"Razorspike Shoulderplate", "CRAFTING"}
+        s["spell;created=1214884"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213588"] = {"Tuned Force Reactive Disk", "CRAFTING"}
+        s["spell;created=1214270"] = {"Jagged Obsidian Shield", "CRAFTING"}
+        s["spell;created=1213490"] = {"Razorspike Battleplate", "CRAFTING"}
+        s["spell;created=1213506"] = {"Obsidian Defender", "CRAFTING"}
+        s["spell;created=1216379"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1216007"] = {"Libram of the Exorcist", "CRAFTING"}
+        s["spell;created=1216382"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213534"] = {"Qiraji Silk Scarf", "CRAFTING"}
+        s["spell;created=1216375"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213492"] = {"Obsidian Reaver", "CRAFTING"}
+        s["spell;created=1216377"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213498"] = {"Obsidian Champion", "CRAFTING"}
+        s["quest;reward=86671"] = {"Imperial Qiraji Regalia", "Blackwing Lair"}
+        s["npc;drop=234880"] = {"Emeriss", "Duskwood"}
+        s["spell;created=469677"] = {"Summon Augur's BP DND", "CRAFTING"}
+        s["spell;created=469679"] = {"Summon Augur's Bracers DND", "CRAFTING"}
+        s["spell;created=469678"] = {"Summon Augur's Belt DND", "CRAFTING"}
+        s["spell;created=469676"] = {"Create Zul'Gurub Talisman SHM R4 DND", "CRAFTING"}
+        s["spell;created=468555"] = {"Punctured Voodoo Doll SHM DND", "CRAFTING"}
+        s["spell;created=1216354"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1216014"] = {"Totem of Pyroclastic Thunder", "CRAFTING"}
+        s["spell;created=1213742"] = {"Sylvan Crown", "CRAFTING"}
+        s["spell;created=1213740"] = {"Sylvan Shoulders", "CRAFTING"}
+        s["spell;created=28210"] = {"Gaea's Embrace", "CRAFTING"}
+        s["spell;created=1213744"] = {"Sylvan Vest", "CRAFTING"}
+        s["spell;created=1214306"] = {"Dreamscale Bracers", "CRAFTING"}
+        s["spell;created=1214307"] = {"Dreamscale Mitts", "CRAFTING"}
+        s["npc;drop=235180"] = {"Lethon", "Feralas"}
+        s["quest;reward=9248"] = {"A Humble Offering", "Silithus"}
+        s["quest;reward=86442"] = {"Nefarius's Corruption", "Blackwing Lair"}
+        s["spell;created=1213532"] = {"Vampiric Robe", "CRAFTING"}
+        s["object;contained=495503"] = {"Chromatic Hoard", "Blackwing Lair"}
+        s["spell;created=1216372"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=29036"] = {"Summon Drape of Unyielding Strength DND", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1321,6 +1412,78 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=85454"] = {"[A Just Reward]", ""}
         s["spell;created=467790"] = {"Stab der Ordnung kombinieren", ""}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", ""}
+        s["npc;drop=15369"] = {"Ayamiss der Jäger", "Ruinen von Ahn'Qiraj"}
+        s["quest;reward=86678"] = {"Schlachtrüstung des Feldherren", "Silithus"}
+        s["spell;created=1216020"] = {"Götze des siderischen Zorns", "CRAFTING"}
+        s["spell;created=1213538"] = {"Qirajiseidenumhang", "CRAFTING"}
+        s["npc;drop=15370"] = {"Buru der Verschlinger", "Ruinen von Ahn'Qiraj"}
+        s["spell;created=1213595"] = {"Träne des Träumers", "CRAFTING"}
+        s["spell;created=1213502"] = {"Obsidiansturmhammer", "CRAFTING"}
+        s["spell;created=1216340"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1216022"] = {"Götze der Katzenwildheit", "CRAFTING"}
+        s["npc;drop=228230"] = {"Harrigen <Der Untermarkt>", "Brennende Steppe"}
+        s["spell;created=1213536"] = {"Qirajiseidencape", "CRAFTING"}
+        s["quest;reward=86675"] = {"Schlachtrüstung des Kriegsfreiwilligen", "Silithus"}
+        s["spell;created=23704"] = {"Kampfhandschuhe der Holzschlundfeste", "CRAFTING"}
+        s["quest;reward=86676"] = {"Schlachtrüstung des Veteranen", "Silithus"}
+        s["spell;created=1213593"] = {"Geschwindigkeitsstein", "CRAFTING"}
+        s["spell;created=1216385"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213500"] = {"Obsidianzerstörer", "CRAFTING"}
+        s["spell;created=1216024"] = {"Götze der Bärenwut", "CRAFTING"}
+        s["spell;created=24121"] = {"Urzeitliche Fledermaushautwams", "CRAFTING"}
+        s["spell;created=1213738"] = {"Dornenholzhelm", "CRAFTING"}
+        s["spell;created=1213736"] = {"Dornenholzstiefel", "CRAFTING"}
+        s["spell;created=1213598"] = {"Leitstein der Vergeltung", "CRAFTING"}
+        s["spell;created=1216366"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213521"] = {"Messerdornengugel", "CRAFTING"}
+        s["spell;created=1213525"] = {"Messerdornenlederwams", "CRAFTING"}
+        s["spell;created=1213523"] = {"Messerdornenschulterpolster", "CRAFTING"}
+        s["spell;created=1213603"] = {"Rubinbesetzte Brosche", "CRAFTING"}
+        s["spell;created=1216319"] = {"Leerenberührt", "CRAFTING"}
+        s["quest;reward=86677"] = {"Schlachtrüstung des Gefolgsmanns", "Silithus"}
+        s["spell;created=1213635"] = {"Verzauberter Pilz", "CRAFTING"}
+        s["spell;created=1213540"] = {"Qirajiseidentuch", "CRAFTING"}
+        s["quest;reward=86449"] = {"Der Schatz des Zeitlosen", "Silithus"}
+        s["quest;reward=86674"] = {"Das perfekte Gift", "Silithus"}
+        s["spell;created=1216365"] = {"Leerenberührt", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "Un'Goro-Krater"}
+        s["spell;created=24137"] = {"Blutseelenschultern", "CRAFTING"}
+        s["spell;created=1216384"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1216387"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1216327"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=466116"] = {"Stab des Infernos abstimmen", "CRAFTING"}
+        s["spell;created=1213628"] = {"Verzauberter Gebetsband", "CRAFTING"}
+        s["quest;reward=86672"] = {"Imperiale Qirajiwaffen", "Pechschwingenhort"}
+        s["spell;created=1216005"] = {"Buchband der Rechtschaffenheit", "CRAFTING"}
+        s["spell;created=1213481"] = {"Klingenstachelhirnkasten", "CRAFTING"}
+        s["spell;created=1213484"] = {"Klingenstachelschulterplatten", "CRAFTING"}
+        s["spell;created=1214884"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213588"] = {"Gestimmte machtreaktive Scheibe", "CRAFTING"}
+        s["spell;created=1214270"] = {"Gezackter Obsidianschild", "CRAFTING"}
+        s["spell;created=1213490"] = {"Klingenstachelkampfplatte", "CRAFTING"}
+        s["spell;created=1213506"] = {"Obsidianverteidiger", "CRAFTING"}
+        s["spell;created=1216379"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1216007"] = {"Buchband des Exorzisten", "CRAFTING"}
+        s["spell;created=1216382"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213534"] = {"Qirajiseidenschal", "CRAFTING"}
+        s["spell;created=1216375"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213492"] = {"Obsidianhäscher", "CRAFTING"}
+        s["spell;created=1216377"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213498"] = {"Obsidianchampion", "CRAFTING"}
+        s["quest;reward=86671"] = {"Imperiale Qirajiinsignien", "Pechschwingenhort"}
+        s["spell;created=1216354"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1216014"] = {"Totem des pyroklastischen Donners", "CRAFTING"}
+        s["spell;created=1213742"] = {"Sylvankrone", "CRAFTING"}
+        s["spell;created=1213740"] = {"Sylvanschultern", "CRAFTING"}
+        s["spell;created=28210"] = {"Gaeas Umarmung", "CRAFTING"}
+        s["spell;created=1213744"] = {"Sylvanweste", "CRAFTING"}
+        s["spell;created=1214306"] = {"Traumschuppenarmschienen", "CRAFTING"}
+        s["spell;created=1214307"] = {"Traumschuppenfäustlinge", "CRAFTING"}
+        s["quest;reward=9248"] = {"Eine bescheidene Darbringung", "Silithus"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "Pechschwingenhort"}
+        s["spell;created=1213532"] = {"Vampirrobe", "CRAFTING"}
+        s["object;contained=495503"] = {"Chromatischer Hort", "Pechschwingenhort"}
+        s["spell;created=1216372"] = {"Leerenberührt", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -1922,6 +2085,84 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=85454"] = {"[A Just Reward]", ""}
         s["spell;created=467790"] = {"Combinar bastón de orden", ""}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", ""}
+        s["npc;drop=15369"] = {"Ayamiss el Cazador", "Ruinas de Ahn'Qiraj"}
+        s["quest;reward=86678"] = {"[Champion's Battlegear]", "Silithus"}
+        s["spell;created=1216020"] = {"Ídolo de cólera sideral", "CRAFTING"}
+        s["spell;created=1213538"] = {"Capa de seda Qiraji", "CRAFTING"}
+        s["npc;drop=15370"] = {"Buru el Manducador", "Ruinas de Ahn'Qiraj"}
+        s["npc;drop=235197"] = {"[Taerar]", "Vallefresno"}
+        s["npc;sold=15192"] = {"Anacronos", "Tanaris"}
+        s["spell;created=1213595"] = {"Lágrima del soñador", "CRAFTING"}
+        s["spell;created=1213502"] = {"Martillo de tormenta de obsidiana", "CRAFTING"}
+        s["npc;sold=15500"] = {"Keyl Patacerce", "Silithus"}
+        s["spell;created=1216340"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1216022"] = {"Ídolo de ferocidad felina", "CRAFTING"}
+        s["npc;drop=228230"] = {"[Harrigen] <[The Undermarket]>", "Las Estepas Ardientes"}
+        s["spell;created=1213536"] = {"Manteo de seda Qiraji", "CRAFTING"}
+        s["quest;reward=86675"] = {"[Volunteer's Battlegear]", "Silithus"}
+        s["spell;created=23704"] = {"Camorrista Fauces de Madera", "CRAFTING"}
+        s["quest;reward=86676"] = {"[Veteran's Battlegear]", "Silithus"}
+        s["spell;created=1213593"] = {"Piedraveloz", "CRAFTING"}
+        s["spell;created=1216385"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213500"] = {"Destructora de obsidiana", "CRAFTING"}
+        s["spell;created=1216024"] = {"Ídolo de poder osuno", "CRAFTING"}
+        s["spell;created=24121"] = {"Chaleco primigenio de piel de murciélago", "CRAFTING"}
+        s["spell;created=1213738"] = {"Yelmo zarzal", "CRAFTING"}
+        s["spell;created=1213736"] = {"Botas zarzal", "CRAFTING"}
+        s["spell;created=1213598"] = {"Magnetita de la represalia", "CRAFTING"}
+        s["spell;created=1216366"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213521"] = {"Capucha de filozarza", "CRAFTING"}
+        s["spell;created=1213525"] = {"Cuero de filozarza", "CRAFTING"}
+        s["spell;created=1213523"] = {"Hombreras de filozarza", "CRAFTING"}
+        s["spell;created=1213603"] = {"Broche incrustado de rubíes", "CRAFTING"}
+        s["spell;created=1216319"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["quest;reward=86677"] = {"[Stalwart's Battlegear]", "Silithus"}
+        s["spell;created=1213635"] = {"Seta encantada", "CRAFTING"}
+        s["spell;created=1213540"] = {"Mantón de seda Qiraji", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "Tierras del Interior"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "Silithus"}
+        s["quest;reward=86674"] = {"[The Perfect Poison]", "Silithus"}
+        s["spell;created=1216365"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "Cráter de Un'Goro"}
+        s["spell;created=24137"] = {"Hombreras Almasangre", "CRAFTING"}
+        s["spell;created=1216384"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1216387"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1216327"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=466116"] = {"Armonizar bastón infernal", "CRAFTING"}
+        s["spell;created=1213628"] = {"Libro de plegarias encantado", "CRAFTING"}
+        s["quest;reward=86672"] = {"[Imperial Qiraji Armaments]", "Guarida Alanegra"}
+        s["spell;created=1216005"] = {"Tratado sobre Rectitud", "CRAFTING"}
+        s["spell;created=1213481"] = {"Jaula de cabeza de zarzapúa", "CRAFTING"}
+        s["spell;created=1213484"] = {"Hombreras de zarzapúa", "CRAFTING"}
+        s["spell;created=1214884"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213588"] = {"Disco reactivo de potencia afinado", "CRAFTING"}
+        s["spell;created=1214270"] = {"Escudo dentado de obsidiana", "CRAFTING"}
+        s["spell;created=1213490"] = {"Placa de batalla de zarzapúa", "CRAFTING"}
+        s["spell;created=1213506"] = {"Defensora de obsidiana", "CRAFTING"}
+        s["spell;created=1216379"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1216007"] = {"Tratado del exorcista", "CRAFTING"}
+        s["spell;created=1216382"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213534"] = {"Bufanda de seda Qiraji", "CRAFTING"}
+        s["spell;created=1216375"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213492"] = {"Atracadora de obsidiana", "CRAFTING"}
+        s["spell;created=1216377"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213498"] = {"Campeón de obsidiana", "CRAFTING"}
+        s["quest;reward=86671"] = {"[Imperial Qiraji Regalia]", "Guarida Alanegra"}
+        s["npc;drop=234880"] = {"[Emeriss]", "Bosque del Ocaso"}
+        s["spell;created=1216354"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1216014"] = {"Tótem de trueno piroclástico", "CRAFTING"}
+        s["spell;created=1213742"] = {"Corona nemorosa", "CRAFTING"}
+        s["spell;created=1213740"] = {"Hombreras nemorosas", "CRAFTING"}
+        s["spell;created=28210"] = {"Abrazo de Gaea", "CRAFTING"}
+        s["spell;created=1213744"] = {"Jubón nemoroso", "CRAFTING"}
+        s["spell;created=1214306"] = {"Brazales de escamas oníricas", "CRAFTING"}
+        s["spell;created=1214307"] = {"Mitones de escamas oníricas", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "Feralas"}
+        s["quest;reward=9248"] = {"Una humilde ofrenda", "Silithus"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "Guarida Alanegra"}
+        s["spell;created=1213532"] = {"Toga vampírica", "CRAFTING"}
+        s["object;contained=495503"] = {"[Chromatic Hoard]", "Guarida Alanegra"}
+        s["spell;created=1216372"] = {"Tocado por el Vacío", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -2522,6 +2763,80 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=468840"] = {"Combiner la faux du Chaos", "CRAFTING"}
         s["spell;created=467790"] = {"Combiner le bâton de l’ordre", "CRAFTING"}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", "Montagnes d'Alterac"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "Les Paluns (Wetlands)"}
+        s["npc;drop=15369"] = {"Ayamiss le Chasseur", "Ruines d'Ahn'Qiraj"}
+        s["quest;reward=86678"] = {"Équipement de guerre de champion", "Silithus"}
+        s["spell;created=1216020"] = {"Idole de courroux sidéral", "CRAFTING"}
+        s["spell;created=1213538"] = {"Cape en soie qiraji", "CRAFTING"}
+        s["npc;drop=15370"] = {"Buru Grandgosier", "Ruines d'Ahn'Qiraj"}
+        s["spell;created=1213595"] = {"Larme de la Rêveuse", "CRAFTING"}
+        s["spell;created=1213502"] = {"Marteau-tempête d’obsidienne", "CRAFTING"}
+        s["spell;created=1216340"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1216022"] = {"Idole de férocité féline", "CRAFTING"}
+        s["npc;drop=228230"] = {"Harrigen <Le Sous-marché>", "Steppes ardentes"}
+        s["spell;created=1213536"] = {"Pèlerine en soie qiraji", "CRAFTING"}
+        s["quest;reward=86675"] = {"L’équipement de guerre des volontaires", "Silithus"}
+        s["spell;created=23704"] = {"Batailleurs grumegueules", "CRAFTING"}
+        s["quest;reward=86676"] = {"La tenue de combat de vétéran", "Silithus"}
+        s["spell;created=1213593"] = {"Pierre de vitesse", "CRAFTING"}
+        s["spell;created=1216385"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213500"] = {"Destructeur d’obsidienne", "CRAFTING"}
+        s["spell;created=1216024"] = {"Idole de la puissance ursine", "CRAFTING"}
+        s["spell;created=24121"] = {"Pourpoint en peau de chauve-souris primordiale", "CRAFTING"}
+        s["spell;created=1213738"] = {"Casque de la ronceraie", "CRAFTING"}
+        s["spell;created=1213736"] = {"Bottes de la ronceraie", "CRAFTING"}
+        s["spell;created=1213598"] = {"Magnétite de vengeance", "CRAFTING"}
+        s["spell;created=1216366"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213521"] = {"Capuche de Roncerasoir", "CRAFTING"}
+        s["spell;created=1213525"] = {"Armure en cuir de Roncerasoir", "CRAFTING"}
+        s["spell;created=1213523"] = {"Protège-épaules de Roncerasoir", "CRAFTING"}
+        s["spell;created=1213603"] = {"Broche incrustée de rubis", "CRAFTING"}
+        s["spell;created=1216319"] = {"Touché par le Vide", "CRAFTING"}
+        s["quest;reward=86677"] = {"Équipement de guerre de fidèle", "Silithus"}
+        s["spell;created=1213635"] = {"Champignon enchanté", "CRAFTING"}
+        s["spell;created=1213540"] = {"Drapé en soie qiraji", "CRAFTING"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "Silithus"}
+        s["quest;reward=86674"] = {"Le poison parfait", "Silithus"}
+        s["spell;created=1216365"] = {"Touché par le Vide", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "Cratère d'Un'Goro"}
+        s["spell;created=24137"] = {"Epaulières d'âmesang", "CRAFTING"}
+        s["spell;created=1216384"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1216387"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1216327"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=466116"] = {"Harmonisation du bâton infernal", "CRAFTING"}
+        s["spell;created=1213628"] = {"Tome de prière enchanté", "CRAFTING"}
+        s["quest;reward=86672"] = {"Les armes impériales qiraji", "Repaire de l'Aile noire"}
+        s["spell;created=1216005"] = {"Libram de piété", "CRAFTING"}
+        s["spell;created=1213481"] = {"Cervelière de Tranchépic", "CRAFTING"}
+        s["spell;created=1213484"] = {"Plaques d’épaules de Tranchépic", "CRAFTING"}
+        s["spell;created=1214884"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213588"] = {"Disque de force réactif syntonisé", "CRAFTING"}
+        s["spell;created=1214270"] = {"Bouclier dentelé en obsidienne", "CRAFTING"}
+        s["spell;created=1213490"] = {"Harnois de bataille d’épaules de Tranchépic", "CRAFTING"}
+        s["spell;created=1213506"] = {"Défenseur d’obsidienne", "CRAFTING"}
+        s["spell;created=1216379"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1216007"] = {"Libram de l’exorciste", "CRAFTING"}
+        s["spell;created=1216382"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213534"] = {"Écharpe en soie qiraji", "CRAFTING"}
+        s["spell;created=1216375"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213492"] = {"Saccageur en obsidienne", "CRAFTING"}
+        s["spell;created=1216377"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213498"] = {"Championne en obsidienne", "CRAFTING"}
+        s["quest;reward=86671"] = {"L’équipement impérial qiraji", "Repaire de l'Aile noire"}
+        s["spell;created=1216354"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1216014"] = {"Totem de tonnerre pyroclastique", "CRAFTING"}
+        s["spell;created=1213742"] = {"Couronne sylvestre", "CRAFTING"}
+        s["spell;created=1213740"] = {"Épaulières sylvestres", "CRAFTING"}
+        s["spell;created=28210"] = {"Etreinte de Gaïa", "CRAFTING"}
+        s["spell;created=1213744"] = {"Gilet sylvestre", "CRAFTING"}
+        s["spell;created=1214306"] = {"Brassards de rêvécaille", "CRAFTING"}
+        s["spell;created=1214307"] = {"Mitaines de rêvécaille", "CRAFTING"}
+        s["npc;drop=235180"] = {"Léthon", "Feralas"}
+        s["quest;reward=9248"] = {"Une humble offrande", "Silithus"}
+        s["quest;reward=86442"] = {"La corruption de Nefarius", "Repaire de l'Aile noire"}
+        s["spell;created=1213532"] = {"Robe vampirique", "CRAFTING"}
+        s["object;contained=495503"] = {"Trésor chromatique", "Repaire de l'Aile noire"}
+        s["spell;created=1216372"] = {"Touché par le Vide", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -2868,6 +3183,85 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=84152"] = {"[An Earnest Proposition]", "Ironforge"}
         s["quest;reward=84548"] = {"[Garona: A Study on Stealth and Treachery]", "Dire Maul"}
         s["quest;reward=53"] = {"Sweet Amber", "Westfall"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "Wetlands"}
+        s["quest;reward=86678"] = {"[Champion's Battlegear]", "Silithus"}
+        s["spell;created=1216020"] = {"[Idol of Sidereal Wrath]", "CRAFTING"}
+        s["spell;created=469683"] = {"[Summon Haruspex's Bracers DND]", "CRAFTING"}
+        s["npc;drop=235197"] = {"[Taerar]", "Ashenvale"}
+        s["spell;created=1213595"] = {"[Tear of the Dreamer]", "CRAFTING"}
+        s["spell;created=1213502"] = {"[Obsidian Stormhammer]", "CRAFTING"}
+        s["spell;created=1216340"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1216022"] = {"[Idol of Feline Ferocity]", "CRAFTING"}
+        s["npc;drop=228230"] = {"[Harrigen] <[The Undermarket]>", "Burning Steppes"}
+        s["spell;created=1213536"] = {"[Qiraji Silk Cape]", "CRAFTING"}
+        s["quest;reward=86675"] = {"[Volunteer's Battlegear]", "Silithus"}
+        s["quest;reward=86676"] = {"[Veteran's Battlegear]", "Silithus"}
+        s["spell;created=1213593"] = {"[Speedstone]", "CRAFTING"}
+        s["spell;created=1216385"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213500"] = {"[Obsidian Destroyer]", "CRAFTING"}
+        s["spell;created=1216024"] = {"[Idol of Ursin Power]", "CRAFTING"}
+        s["spell;created=1213738"] = {"[Bramblewood Helm]", "CRAFTING"}
+        s["spell;created=1213736"] = {"[Bramblewood Boots]", "CRAFTING"}
+        s["spell;created=1213598"] = {"[Lodestone of Retaliation]", "CRAFTING"}
+        s["spell;created=1216366"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213521"] = {"[Razorbramble Cowl]", "CRAFTING"}
+        s["spell;created=1213525"] = {"[Razorbramble Leathers]", "CRAFTING"}
+        s["spell;created=1213523"] = {"[Razorbramble Shoulderpads]", "CRAFTING"}
+        s["spell;created=1213603"] = {"[Ruby-Encrusted Broach]", "CRAFTING"}
+        s["spell;created=1216319"] = {"[Void-Touched]", "CRAFTING"}
+        s["quest;reward=86677"] = {"[Stalwart's Battlegear]", "Silithus"}
+        s["spell;created=1213635"] = {"[Enchanted Mushroom]", "CRAFTING"}
+        s["spell;created=1213540"] = {"[Qiraji Silk Drape]", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "The Hinterlands"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "Silithus"}
+        s["quest;reward=86674"] = {"[The Perfect Poison]", "Silithus"}
+        s["spell;created=1216365"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=468563"] = {"[Punctured Voodoo Doll HUN DND]", "CRAFTING"}
+        s["spell;created=469772"] = {"[Create Zul'Gurub Talisman HUN R4 DND]", "CRAFTING"}
+        s["spell;created=469775"] = {"[Summon Predator's Belt DND]", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "Un'Goro Crater"}
+        s["spell;created=1216384"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1216387"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1216327"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=466116"] = {"[Attune Staff of Inferno]", "CRAFTING"}
+        s["spell;created=1213628"] = {"[Enchanted Prayer Tome]", "CRAFTING"}
+        s["quest;reward=86672"] = {"[Imperial Qiraji Armaments]", "Blackwing Lair"}
+        s["spell;created=1216005"] = {"[Libram of Righteousness]", "CRAFTING"}
+        s["spell;created=1213481"] = {"[Razorspike Headcage]", "CRAFTING"}
+        s["spell;created=1213484"] = {"[Razorspike Shoulderplate]", "CRAFTING"}
+        s["spell;created=1214884"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213588"] = {"[Tuned Force Reactive Disk]", "CRAFTING"}
+        s["spell;created=1214270"] = {"[Jagged Obsidian Shield]", "CRAFTING"}
+        s["spell;created=1213490"] = {"[Razorspike Battleplate]", "CRAFTING"}
+        s["spell;created=1213506"] = {"[Obsidian Defender]", "CRAFTING"}
+        s["spell;created=1216379"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1216007"] = {"[Libram of the Exorcist]", "CRAFTING"}
+        s["spell;created=1216382"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213534"] = {"[Qiraji Silk Scarf]", "CRAFTING"}
+        s["spell;created=1216375"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213492"] = {"[Obsidian Reaver]", "CRAFTING"}
+        s["spell;created=1216377"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213498"] = {"[Obsidian Champion]", "CRAFTING"}
+        s["quest;reward=86671"] = {"[Imperial Qiraji Regalia]", "Blackwing Lair"}
+        s["npc;drop=234880"] = {"[Emeriss]", "Duskwood"}
+        s["spell;created=469677"] = {"[Summon Augur's BP DND]", "CRAFTING"}
+        s["spell;created=469679"] = {"[Summon Augur's Bracers DND]", "CRAFTING"}
+        s["spell;created=469678"] = {"[Summon Augur's Belt DND]", "CRAFTING"}
+        s["spell;created=469676"] = {"[Create Zul'Gurub Talisman SHM R4 DND]", "CRAFTING"}
+        s["spell;created=468555"] = {"[Punctured Voodoo Doll SHM DND]", "CRAFTING"}
+        s["spell;created=1216354"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1216014"] = {"[Totem of Pyroclastic Thunder]", "CRAFTING"}
+        s["spell;created=1213742"] = {"[Sylvan Crown]", "CRAFTING"}
+        s["spell;created=1213740"] = {"[Sylvan Shoulders]", "CRAFTING"}
+        s["spell;created=1213744"] = {"[Sylvan Vest]", "CRAFTING"}
+        s["spell;created=1214306"] = {"[Dreamscale Bracers]", "CRAFTING"}
+        s["spell;created=1214307"] = {"[Dreamscale Mitts]", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "Feralas"}
+        s["quest;reward=9248"] = {"A Humble Offering", "Silithus"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "Blackwing Lair"}
+        s["spell;created=1213532"] = {"[Vampiric Robe]", "CRAFTING"}
+        s["object;contained=495503"] = {"[Chromatic Hoard]", "Blackwing Lair"}
+        s["spell;created=1216372"] = {"[Void-Touched]", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -3538,6 +3932,88 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=467790"] = {"질서의 지팡이 결합", "CRAFTING"}
         s["npc;drop=16011"] = {"로데브", "낙스라마스"}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", "알터랙 산맥"}
+        s["npc;drop=10184"] = {"오닉시아", "화산 심장부"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "저습지"}
+        s["npc;drop=15369"] = {"사냥꾼 아야미스", "안퀴라즈 폐허"}
+        s["quest;reward=86678"] = {"영웅의 전투장비", "실리더스"}
+        s["spell;created=1216020"] = {"별의 분노의 우상", "CRAFTING"}
+        s["spell;created=1213538"] = {"퀴라지 비단 망토", "CRAFTING"}
+        s["npc;drop=15370"] = {"먹보 부루", "안퀴라즈 폐허"}
+        s["npc;drop=235197"] = {"[Taerar]", "잿빛 골짜기"}
+        s["npc;sold=15192"] = {"아나크로노스", "타나리스"}
+        s["spell;created=1213595"] = {"꿈꾸는 자의 눈물", "CRAFTING"}
+        s["spell;created=1213502"] = {"흑요석 폭풍망치", "CRAFTING"}
+        s["npc;sold=15500"] = {"케일 스위프트클로", "실리더스"}
+        s["spell;created=1216340"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1216022"] = {"표범의 야성의 우상", "CRAFTING"}
+        s["npc;drop=228230"] = {"해리겐 <암거래상단>", "불타는 평원"}
+        s["spell;created=1213536"] = {"퀴라지 비단 단망토", "CRAFTING"}
+        s["quest;reward=86675"] = {"지원자의 전투장비", "실리더스"}
+        s["spell;created=23704"] = {"나무구렁일족 장갑", "CRAFTING"}
+        s["quest;reward=86676"] = {"정예 용사의 전투장비", "실리더스"}
+        s["spell;created=1213593"] = {"신속의 돌", "CRAFTING"}
+        s["spell;created=1216385"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213500"] = {"흑요석 파괴철퇴", "CRAFTING"}
+        s["spell;created=1216024"] = {"곰의 힘의 우상", "CRAFTING"}
+        s["spell;created=24121"] = {"원시 박쥐가죽 웃옷", "CRAFTING"}
+        s["spell;created=1213738"] = {"가시나무 투구", "CRAFTING"}
+        s["spell;created=1213736"] = {"가시나무 장화", "CRAFTING"}
+        s["spell;created=1213598"] = {"응징의 자철석", "CRAFTING"}
+        s["spell;created=1216366"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213521"] = {"서슬가시 수도두건", "CRAFTING"}
+        s["spell;created=1213525"] = {"서슬가시 가죽갑옷", "CRAFTING"}
+        s["spell;created=1213523"] = {"서슬가시 어깨덧대", "CRAFTING"}
+        s["npc;drop=15348"] = {"쿠린낙스", "안퀴라즈 폐허"}
+        s["npc;drop=15544"] = {"벰", "안퀴라즈"}
+        s["spell;created=1213603"] = {"루비로 뒤덮인 브로치", "CRAFTING"}
+        s["spell;created=1216319"] = {"공허의 손길", "CRAFTING"}
+        s["quest;reward=86677"] = {"신념의 전투장비", "실리더스"}
+        s["spell;created=1213635"] = {"마력 깃든 버섯", "CRAFTING"}
+        s["spell;created=1213540"] = {"퀴라지 비단 외투", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "동부 내륙지"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "실리더스"}
+        s["quest;reward=86674"] = {"[The Perfect Poison]", "실리더스"}
+        s["spell;created=1216365"] = {"공허의 손길", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "운고로 분화구"}
+        s["spell;created=24137"] = {"붉은영혼의 어깨보호구", "CRAFTING"}
+        s["spell;created=1216384"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1216387"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1216327"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=466116"] = {"지옥불의 지팡이 조율", "CRAFTING"}
+        s["spell;created=1213628"] = {"마력 깃든 기도서", "CRAFTING"}
+        s["quest;reward=86672"] = {"제국의 퀴라지 무기", "검은날개 둥지"}
+        s["spell;created=1216005"] = {"정의의 성서", "CRAFTING"}
+        s["spell;created=1213481"] = {"칼가시 머리우리", "CRAFTING"}
+        s["spell;created=1213484"] = {"칼가시 어깨철갑", "CRAFTING"}
+        s["spell;created=1214884"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213588"] = {"조율된 마력장 원반", "CRAFTING"}
+        s["spell;created=1214270"] = {"뾰족한 흑요석 방패", "CRAFTING"}
+        s["spell;created=1213490"] = {"칼가시 전투판금", "CRAFTING"}
+        s["spell;created=1213506"] = {"흑요석 방어 도끼", "CRAFTING"}
+        s["spell;created=1216379"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1216007"] = {"퇴마사의 성서", "CRAFTING"}
+        s["spell;created=1216382"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213534"] = {"퀴라지 비단 목도리", "CRAFTING"}
+        s["spell;created=1216375"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213492"] = {"흑요석 약탈자", "CRAFTING"}
+        s["spell;created=1216377"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213498"] = {"흑요석 용사의 검", "CRAFTING"}
+        s["quest;reward=86671"] = {"제국의 퀴라지 표장", "검은날개 둥지"}
+        s["npc;drop=234880"] = {"[Emeriss]", "그늘숲"}
+        s["spell;created=1216354"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1216014"] = {"용암 천둥의 토템", "CRAFTING"}
+        s["spell;created=1213742"] = {"숲의 관", "CRAFTING"}
+        s["spell;created=1213740"] = {"숲의 어깨보호구", "CRAFTING"}
+        s["spell;created=28210"] = {"가이아의 은총", "CRAFTING"}
+        s["spell;created=1213744"] = {"숲의 조끼", "CRAFTING"}
+        s["spell;created=1214306"] = {"꿈비늘 팔보호구", "CRAFTING"}
+        s["spell;created=1214307"] = {"꿈비늘 반장갑", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "페랄라스"}
+        s["quest;reward=9248"] = {"겸손한 제안", "실리더스"}
+        s["quest;reward=86442"] = {"네파리우스의 타락", "검은날개 둥지"}
+        s["spell;created=1213532"] = {"흡혈의 로브", "CRAFTING"}
+        s["object;contained=495503"] = {"오색 비축품", "검은날개 둥지"}
+        s["spell;created=1216372"] = {"공허의 손길", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -4155,6 +4631,87 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=467790"] = {"Combinar Cajado da Ordem", "CRAFTING"}
         s["npc;drop=16011"] = {"Repugnaz", "Naxxramas"}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", "Montanhas de Alterac"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "Pantanal"}
+        s["npc;drop=15369"] = {"Ayamiss, o Caçador", "Ruínas de Ahn'Qiraj"}
+        s["quest;reward=86678"] = {"[Champion's Battlegear]", "Silithus"}
+        s["spell;created=1216020"] = {"Ídolo da Ira Sideral", "CRAFTING"}
+        s["spell;created=1213538"] = {"Manto de Seda Qiraji", "CRAFTING"}
+        s["npc;drop=15370"] = {"Buru, o Banqueteador", "Ruínas de Ahn'Qiraj"}
+        s["npc;drop=235197"] = {"[Taerar]", "Vale Gris"}
+        s["npc;sold=15192"] = {"Anacronos", "Tanaris"}
+        s["spell;created=1213595"] = {"Lágrima da Sonhadora", "CRAFTING"}
+        s["spell;created=1213502"] = {"Martelo da Tempestade Obsidiano", "CRAFTING"}
+        s["npc;sold=15500"] = {"Keyl Garralesta", "Silithus"}
+        s["spell;created=1216340"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1216022"] = {"Ídolo de Ferocidade Felina", "CRAFTING"}
+        s["npc;drop=228230"] = {"Harolges <O Submercado>", "Estepes Ardentes"}
+        s["spell;created=1213536"] = {"Capa de Seda Qiraji", "CRAFTING"}
+        s["quest;reward=86675"] = {"[Volunteer's Battlegear]", "Silithus"}
+        s["spell;created=23704"] = {"Soqueiras dos Presamatos", "CRAFTING"}
+        s["quest;reward=86676"] = {"[Veteran's Battlegear]", "Silithus"}
+        s["spell;created=1213593"] = {"Pedracélere", "CRAFTING"}
+        s["spell;created=1216385"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213500"] = {"Destruidor Obsidiano", "CRAFTING"}
+        s["spell;created=1216024"] = {"Ídolo de Poder Ursino", "CRAFTING"}
+        s["spell;created=24121"] = {"Gibão Primevo de Pele de Morcego", "CRAFTING"}
+        s["spell;created=1213738"] = {"Elmo de Sarça", "CRAFTING"}
+        s["spell;created=1213736"] = {"Botas de Sarça", "CRAFTING"}
+        s["spell;created=1213598"] = {"Magnetita da Retaliação", "CRAFTING"}
+        s["spell;created=1216366"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213521"] = {"Capucho de Espinheira-brava", "CRAFTING"}
+        s["spell;created=1213525"] = {"Couros de Espinheira-brava", "CRAFTING"}
+        s["spell;created=1213523"] = {"Ombreiras de Espinheira-brava", "CRAFTING"}
+        s["npc;drop=15348"] = {"Korinnaxx", "Ruínas de Ahn'Qiraj"}
+        s["npc;drop=15544"] = {"Veim", "Ahn'Qiraj"}
+        s["spell;created=1213603"] = {"Broche Incrustado de Rubis", "CRAFTING"}
+        s["spell;created=1216319"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["quest;reward=86677"] = {"[Stalwart's Battlegear]", "Silithus"}
+        s["spell;created=1213635"] = {"Cogumelo Encantado", "CRAFTING"}
+        s["spell;created=1213540"] = {"Clâmide de Seda Qiraji", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "Terras Agrestes"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "Silithus"}
+        s["quest;reward=86674"] = {"[The Perfect Poison]", "Silithus"}
+        s["spell;created=1216365"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "Cratera Un'Goro"}
+        s["spell;created=24137"] = {"Omoplatas Almassangre", "CRAFTING"}
+        s["spell;created=1216384"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1216387"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1216327"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=466116"] = {"Harmonizar Cajado do Inferno", "CRAFTING"}
+        s["spell;created=1213628"] = {"Tomo Encantado de Orações", "CRAFTING"}
+        s["quest;reward=86672"] = {"[Imperial Qiraji Armaments]", "Covil Asa Negra"}
+        s["spell;created=1216005"] = {"Incunábulo da Retidão", "CRAFTING"}
+        s["spell;created=1213481"] = {"Jaula Craniana Aguilâmina", "CRAFTING"}
+        s["spell;created=1213484"] = {"Placa d'Ombros Aguilâmina", "CRAFTING"}
+        s["spell;created=1214884"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213588"] = {"Disco de Força Reativa Ajustado", "CRAFTING"}
+        s["spell;created=1214270"] = {"Escudo Serrilhado Obsidiano", "CRAFTING"}
+        s["spell;created=1213490"] = {"Loriga Aguilâmina", "CRAFTING"}
+        s["spell;created=1213506"] = {"Defensor Obsidiano", "CRAFTING"}
+        s["spell;created=1216379"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1216007"] = {"Incunábulo do Exorcista", "CRAFTING"}
+        s["spell;created=1216382"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213534"] = {"Lenço de Seda Qiraji", "CRAFTING"}
+        s["spell;created=1216375"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213492"] = {"Aniquilador Obsidiano", "CRAFTING"}
+        s["spell;created=1216377"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213498"] = {"Campeão Obsidiano", "CRAFTING"}
+        s["quest;reward=86671"] = {"[Imperial Qiraji Regalia]", "Covil Asa Negra"}
+        s["npc;drop=234880"] = {"[Emeriss]", "Floresta do Crepúsculo"}
+        s["spell;created=1216354"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1216014"] = {"Totem de Trovão Piroclástico", "CRAFTING"}
+        s["spell;created=1213742"] = {"Coroa Silvestre", "CRAFTING"}
+        s["spell;created=1213740"] = {"Omoplatas Silvestres", "CRAFTING"}
+        s["spell;created=28210"] = {"Abraço de Gaia", "CRAFTING"}
+        s["spell;created=1213744"] = {"Colete Silvestre", "CRAFTING"}
+        s["spell;created=1214306"] = {"Braçadeiras de Escama de Sonhos", "CRAFTING"}
+        s["spell;created=1214307"] = {"Luvetes de Escama de Sonhos", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "Feralas"}
+        s["quest;reward=9248"] = {"Uma humilde oferenda", "Silithus"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "Covil Asa Negra"}
+        s["spell;created=1213532"] = {"Veste Vampírica", "CRAFTING"}
+        s["object;contained=495503"] = {"[Chromatic Hoard]", "Covil Asa Negra"}
+        s["spell;created=1216372"] = {"Tocado pelo Caos", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -4825,6 +5382,88 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=467790"] = {"Объединение посоха порядка", "CRAFTING"}
         s["npc;drop=16011"] = {"Мерзот", "Наксрамас"}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", "Альтеракские горы"}
+        s["npc;drop=10184"] = {"Ониксия", "Огненные Недра"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "Болотина"}
+        s["npc;drop=15369"] = {"Аямисса Охотница", "Руины Ан'Киража"}
+        s["quest;reward=86678"] = {"[Champion's Battlegear]", "Силитус"}
+        s["spell;created=1216020"] = {"Идол сидерического гнева", "CRAFTING"}
+        s["spell;created=1213538"] = {"Плащ из киражского шелка", "CRAFTING"}
+        s["npc;drop=15370"] = {"Буру Ненасытный", "Руины Ан'Киража"}
+        s["npc;drop=235197"] = {"[Taerar]", "Ясеневый лес"}
+        s["npc;sold=15192"] = {"Анахронос", "Танарис"}
+        s["spell;created=1213595"] = {"Слеза Дремлющей", "CRAFTING"}
+        s["spell;created=1213502"] = {"Обсидиановый буремолот", "CRAFTING"}
+        s["npc;sold=15500"] = {"Кейл Стремительный Коготь", "Силитус"}
+        s["spell;created=1216340"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1216022"] = {"Идол кошачьей свирепости", "CRAFTING"}
+        s["npc;drop=228230"] = {"Харриген <Черный рынок>", "Пылающие степи"}
+        s["spell;created=1213536"] = {"Накидка из киражского шелка", "CRAFTING"}
+        s["quest;reward=86675"] = {"[Volunteer's Battlegear]", "Силитус"}
+        s["spell;created=23704"] = {"Боевые перчатки Древобрюхов", "CRAFTING"}
+        s["quest;reward=86676"] = {"[Veteran's Battlegear]", "Силитус"}
+        s["spell;created=1213593"] = {"Быстрокамень", "CRAFTING"}
+        s["spell;created=1216385"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213500"] = {"Обсидиановый разрушитель", "CRAFTING"}
+        s["spell;created=1216024"] = {"Идол медвежьей силы", "CRAFTING"}
+        s["spell;created=24121"] = {"Изначальный жакет из кожи летучей мыши", "CRAFTING"}
+        s["spell;created=1213738"] = {"Ежевичный шлем", "CRAFTING"}
+        s["spell;created=1213736"] = {"Ежевичные сапоги", "CRAFTING"}
+        s["spell;created=1213598"] = {"Магнит воздаяния", "CRAFTING"}
+        s["spell;created=1216366"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213521"] = {"Клобук бритвенного терна", "CRAFTING"}
+        s["spell;created=1213525"] = {"Кожаная броня бритвенного терна", "CRAFTING"}
+        s["spell;created=1213523"] = {"Наплечные пластины бритвенного терна", "CRAFTING"}
+        s["npc;drop=15348"] = {"Куриннакс", "Руины Ан'Киража"}
+        s["npc;drop=15544"] = {"Вем", "Ан'Кираж"}
+        s["spell;created=1213603"] = {"Украшенная рубинами брошь", "CRAFTING"}
+        s["spell;created=1216319"] = {"Метка Бездны", "CRAFTING"}
+        s["quest;reward=86677"] = {"[Stalwart's Battlegear]", "Силитус"}
+        s["spell;created=1213635"] = {"Зачарованный гриб", "CRAFTING"}
+        s["spell;created=1213540"] = {"Пелерина из киражского шелка", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "Внутренние земли"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "Силитус"}
+        s["quest;reward=86674"] = {"[The Perfect Poison]", "Силитус"}
+        s["spell;created=1216365"] = {"Метка Бездны", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "Кратер Ун'Горо"}
+        s["spell;created=24137"] = {"Наплечники кровавого духа", "CRAFTING"}
+        s["spell;created=1216384"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1216387"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1216327"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=466116"] = {"Настройка посоха адского пламени", "CRAFTING"}
+        s["spell;created=1213628"] = {"Зачарованный молитвенник", "CRAFTING"}
+        s["quest;reward=86672"] = {"[Imperial Qiraji Armaments]", "Логово Крыла Тьмы"}
+        s["spell;created=1216005"] = {"Манускрипт праведности", "CRAFTING"}
+        s["spell;created=1213481"] = {"Наголовник бритвенных шипов", "CRAFTING"}
+        s["spell;created=1213484"] = {"Латные наплечники бритвенных шипов", "CRAFTING"}
+        s["spell;created=1214884"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213588"] = {"Настроенный реактивный диск", "CRAFTING"}
+        s["spell;created=1214270"] = {"Звездчатый обсидиановый щит", "CRAFTING"}
+        s["spell;created=1213490"] = {"Боевой доспех бритвенных шипов", "CRAFTING"}
+        s["spell;created=1213506"] = {"Обсидиановый страж", "CRAFTING"}
+        s["spell;created=1216379"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1216007"] = {"Манускрипт экзорциста", "CRAFTING"}
+        s["spell;created=1216382"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213534"] = {"Платок из киражского шелка", "CRAFTING"}
+        s["spell;created=1216375"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213492"] = {"Обсидиановый разоритель", "CRAFTING"}
+        s["spell;created=1216377"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213498"] = {"Обсидиановый защитник", "CRAFTING"}
+        s["quest;reward=86671"] = {"[Imperial Qiraji Regalia]", "Логово Крыла Тьмы"}
+        s["npc;drop=234880"] = {"[Emeriss]", "Сумеречный лес"}
+        s["spell;created=1216354"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1216014"] = {"Тотем вулканического грома", "CRAFTING"}
+        s["spell;created=1213742"] = {"Лесная корона", "CRAFTING"}
+        s["spell;created=1213740"] = {"Лесные наплечники", "CRAFTING"}
+        s["spell;created=28210"] = {"Облачение Геи", "CRAFTING"}
+        s["spell;created=1213744"] = {"Лесной жилет", "CRAFTING"}
+        s["spell;created=1214306"] = {"Наручи чешуи сна", "CRAFTING"}
+        s["spell;created=1214307"] = {"Полуперчатки чешуи сна", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "Фералас"}
+        s["quest;reward=9248"] = {"Скромный подарок", "Силитус"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "Логово Крыла Тьмы"}
+        s["spell;created=1213532"] = {"Вампирское одеяние", "CRAFTING"}
+        s["object;contained=495503"] = {"[Chromatic Hoard]", "Логово Крыла Тьмы"}
+        s["spell;created=1216372"] = {"Метка Бездны", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -5495,6 +6134,88 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=467790"] = {"组合秩序法杖", "CRAFTING"}
         s["npc;drop=16011"] = {"洛欧塞布", "纳克萨玛斯"}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", "奥特兰克山脉"}
+        s["npc;drop=10184"] = {"奥妮克希亚", "熔火之心"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "湿地"}
+        s["npc;drop=15369"] = {"狩猎者阿亚米斯", "安其拉废墟"}
+        s["quest;reward=86678"] = {"[Champion's Battlegear]", "希利苏斯"}
+        s["spell;created=1216020"] = {"星象愤怒神像", "CRAFTING"}
+        s["spell;created=1213538"] = {"其拉丝质披风", "CRAFTING"}
+        s["npc;drop=15370"] = {"吞咽者布鲁", "安其拉废墟"}
+        s["npc;drop=235197"] = {"[Taerar]", "灰谷"}
+        s["npc;sold=15192"] = {"阿纳克洛斯", "塔纳利斯"}
+        s["spell;created=1213595"] = {"沉睡者之泪", "CRAFTING"}
+        s["spell;created=1213502"] = {"黑曜石风暴战锤", "CRAFTING"}
+        s["npc;sold=15500"] = {"凯伊·迅爪", "希利苏斯"}
+        s["spell;created=1216340"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216022"] = {"灵猫凶猛神像", "CRAFTING"}
+        s["npc;drop=228230"] = {"哈里根 <黑市>", "燃烧平原"}
+        s["spell;created=1213536"] = {"其拉丝质斗篷", "CRAFTING"}
+        s["quest;reward=86675"] = {"[Volunteer's Battlegear]", "希利苏斯"}
+        s["spell;created=23704"] = {"木喉作战手套", "CRAFTING"}
+        s["quest;reward=86676"] = {"[Veteran's Battlegear]", "希利苏斯"}
+        s["spell;created=1213593"] = {"神速石", "CRAFTING"}
+        s["spell;created=1216385"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213500"] = {"黑曜石毁灭者", "CRAFTING"}
+        s["spell;created=1216024"] = {"熊威宏力神像", "CRAFTING"}
+        s["spell;created=24121"] = {"原始蝙蝠皮外套", "CRAFTING"}
+        s["spell;created=1213738"] = {"荆木头盔", "CRAFTING"}
+        s["spell;created=1213736"] = {"荆木长靴", "CRAFTING"}
+        s["spell;created=1213598"] = {"报应磁石", "CRAFTING"}
+        s["spell;created=1216366"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213521"] = {"锋芒棘刺风帽", "CRAFTING"}
+        s["spell;created=1213525"] = {"锋芒棘刺皮甲", "CRAFTING"}
+        s["spell;created=1213523"] = {"锋芒棘刺肩垫", "CRAFTING"}
+        s["npc;drop=15348"] = {"库林纳克斯", "安其拉废墟"}
+        s["npc;drop=15544"] = {"维姆", "安其拉"}
+        s["spell;created=1213603"] = {"红宝石外壳胸针", "CRAFTING"}
+        s["spell;created=1216319"] = {"虚触", "CRAFTING"}
+        s["quest;reward=86677"] = {"[Stalwart's Battlegear]", "希利苏斯"}
+        s["spell;created=1213635"] = {"魔化菌菇", "CRAFTING"}
+        s["spell;created=1213540"] = {"其拉丝质披肩", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "辛特兰"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "希利苏斯"}
+        s["quest;reward=86674"] = {"完美的毒药", "希利苏斯"}
+        s["spell;created=1216365"] = {"虚触", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "安戈洛环形山"}
+        s["spell;created=24137"] = {"血魂护肩", "CRAFTING"}
+        s["spell;created=1216384"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216387"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216327"] = {"虚触", "CRAFTING"}
+        s["spell;created=466116"] = {"调谐狱火法杖", "CRAFTING"}
+        s["spell;created=1213628"] = {"魔化祷言集", "CRAFTING"}
+        s["quest;reward=86672"] = {"其拉帝王武器", "黑翼之巢"}
+        s["spell;created=1216005"] = {"正义圣契", "CRAFTING"}
+        s["spell;created=1213481"] = {"锋芒刺针头盔", "CRAFTING"}
+        s["spell;created=1213484"] = {"锋芒刺针肩铠", "CRAFTING"}
+        s["spell;created=1214884"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213588"] = {"调试的力反馈盾牌", "CRAFTING"}
+        s["spell;created=1214270"] = {"碎裂黑曜石盾牌", "CRAFTING"}
+        s["spell;created=1213490"] = {"锋芒刺针战铠", "CRAFTING"}
+        s["spell;created=1213506"] = {"黑曜石防御者", "CRAFTING"}
+        s["spell;created=1216379"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216007"] = {"驱魔圣契", "CRAFTING"}
+        s["spell;created=1216382"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213534"] = {"其拉丝质头巾", "CRAFTING"}
+        s["spell;created=1216375"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213492"] = {"黑曜石掠夺者", "CRAFTING"}
+        s["spell;created=1216377"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213498"] = {"黑曜石圣剑", "CRAFTING"}
+        s["quest;reward=86671"] = {"其拉帝王徽记", "黑翼之巢"}
+        s["npc;drop=234880"] = {"[Emeriss]", "暮色森林"}
+        s["spell;created=1216354"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216014"] = {"火岩惊雷图腾", "CRAFTING"}
+        s["spell;created=1213742"] = {"林栖者头冠", "CRAFTING"}
+        s["spell;created=1213740"] = {"林栖者护肩", "CRAFTING"}
+        s["spell;created=28210"] = {"盖亚的拥抱", "CRAFTING"}
+        s["spell;created=1213744"] = {"林栖者外套", "CRAFTING"}
+        s["spell;created=1214306"] = {"梦幻龙鳞护腕", "CRAFTING"}
+        s["spell;created=1214307"] = {"梦幻龙鳞手套", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "菲拉斯"}
+        s["quest;reward=9248"] = {"谦卑的馈赠", "希利苏斯"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "黑翼之巢"}
+        s["spell;created=1213532"] = {"吸血鬼长袍", "CRAFTING"}
+        s["object;contained=495503"] = {"[Chromatic Hoard]", "黑翼之巢"}
+        s["spell;created=1216372"] = {"虚触", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -6165,5 +6886,87 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=467790"] = {"组合秩序法杖", "CRAFTING"}
         s["npc;drop=16011"] = {"洛欧塞布", "纳克萨玛斯"}
         s["quest;reward=84881"] = {"[Into the Hold of Shadows]", "奥特兰克山脉"}
+        s["npc;drop=10184"] = {"奥妮克希亚", "熔火之心"}
+        s["quest;reward=85454"] = {"[A Just Reward]", "湿地"}
+        s["npc;drop=15369"] = {"狩猎者阿亚米斯", "安其拉废墟"}
+        s["quest;reward=86678"] = {"[Champion's Battlegear]", "希利苏斯"}
+        s["spell;created=1216020"] = {"星象愤怒神像", "CRAFTING"}
+        s["spell;created=1213538"] = {"其拉丝质披风", "CRAFTING"}
+        s["npc;drop=15370"] = {"吞咽者布鲁", "安其拉废墟"}
+        s["npc;drop=235197"] = {"[Taerar]", "灰谷"}
+        s["npc;sold=15192"] = {"阿纳克洛斯", "塔纳利斯"}
+        s["spell;created=1213595"] = {"沉睡者之泪", "CRAFTING"}
+        s["spell;created=1213502"] = {"黑曜石风暴战锤", "CRAFTING"}
+        s["npc;sold=15500"] = {"凯伊·迅爪", "希利苏斯"}
+        s["spell;created=1216340"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216022"] = {"灵猫凶猛神像", "CRAFTING"}
+        s["npc;drop=228230"] = {"哈里根 <黑市>", "燃烧平原"}
+        s["spell;created=1213536"] = {"其拉丝质斗篷", "CRAFTING"}
+        s["quest;reward=86675"] = {"[Volunteer's Battlegear]", "希利苏斯"}
+        s["spell;created=23704"] = {"木喉作战手套", "CRAFTING"}
+        s["quest;reward=86676"] = {"[Veteran's Battlegear]", "希利苏斯"}
+        s["spell;created=1213593"] = {"神速石", "CRAFTING"}
+        s["spell;created=1216385"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213500"] = {"黑曜石毁灭者", "CRAFTING"}
+        s["spell;created=1216024"] = {"熊威宏力神像", "CRAFTING"}
+        s["spell;created=24121"] = {"原始蝙蝠皮外套", "CRAFTING"}
+        s["spell;created=1213738"] = {"荆木头盔", "CRAFTING"}
+        s["spell;created=1213736"] = {"荆木长靴", "CRAFTING"}
+        s["spell;created=1213598"] = {"报应磁石", "CRAFTING"}
+        s["spell;created=1216366"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213521"] = {"锋芒棘刺风帽", "CRAFTING"}
+        s["spell;created=1213525"] = {"锋芒棘刺皮甲", "CRAFTING"}
+        s["spell;created=1213523"] = {"锋芒棘刺肩垫", "CRAFTING"}
+        s["npc;drop=15348"] = {"库林纳克斯", "安其拉废墟"}
+        s["npc;drop=15544"] = {"维姆", "安其拉"}
+        s["spell;created=1213603"] = {"红宝石外壳胸针", "CRAFTING"}
+        s["spell;created=1216319"] = {"虚触", "CRAFTING"}
+        s["quest;reward=86677"] = {"[Stalwart's Battlegear]", "希利苏斯"}
+        s["spell;created=1213635"] = {"魔化菌菇", "CRAFTING"}
+        s["spell;created=1213540"] = {"其拉丝质披肩", "CRAFTING"}
+        s["npc;drop=235232"] = {"[Ysondre]", "辛特兰"}
+        s["quest;reward=86449"] = {"[Treasure of the Timeless One]", "希利苏斯"}
+        s["quest;reward=86674"] = {"完美的毒药", "希利苏斯"}
+        s["spell;created=1216365"] = {"虚触", "CRAFTING"}
+        s["quest;reward=85559"] = {"[Night Falls]", "安戈洛环形山"}
+        s["spell;created=24137"] = {"血魂护肩", "CRAFTING"}
+        s["spell;created=1216384"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216387"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216327"] = {"虚触", "CRAFTING"}
+        s["spell;created=466116"] = {"调谐狱火法杖", "CRAFTING"}
+        s["spell;created=1213628"] = {"魔化祷言集", "CRAFTING"}
+        s["quest;reward=86672"] = {"其拉帝王武器", "黑翼之巢"}
+        s["spell;created=1216005"] = {"正义圣契", "CRAFTING"}
+        s["spell;created=1213481"] = {"锋芒刺针头盔", "CRAFTING"}
+        s["spell;created=1213484"] = {"锋芒刺针肩铠", "CRAFTING"}
+        s["spell;created=1214884"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213588"] = {"调试的力反馈盾牌", "CRAFTING"}
+        s["spell;created=1214270"] = {"碎裂黑曜石盾牌", "CRAFTING"}
+        s["spell;created=1213490"] = {"锋芒刺针战铠", "CRAFTING"}
+        s["spell;created=1213506"] = {"黑曜石防御者", "CRAFTING"}
+        s["spell;created=1216379"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216007"] = {"驱魔圣契", "CRAFTING"}
+        s["spell;created=1216382"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213534"] = {"其拉丝质头巾", "CRAFTING"}
+        s["spell;created=1216375"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213492"] = {"黑曜石掠夺者", "CRAFTING"}
+        s["spell;created=1216377"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213498"] = {"黑曜石圣剑", "CRAFTING"}
+        s["quest;reward=86671"] = {"其拉帝王徽记", "黑翼之巢"}
+        s["npc;drop=234880"] = {"[Emeriss]", "暮色森林"}
+        s["spell;created=1216354"] = {"虚触", "CRAFTING"}
+        s["spell;created=1216014"] = {"火岩惊雷图腾", "CRAFTING"}
+        s["spell;created=1213742"] = {"林栖者头冠", "CRAFTING"}
+        s["spell;created=1213740"] = {"林栖者护肩", "CRAFTING"}
+        s["spell;created=28210"] = {"盖亚的拥抱", "CRAFTING"}
+        s["spell;created=1213744"] = {"林栖者外套", "CRAFTING"}
+        s["spell;created=1214306"] = {"梦幻龙鳞护腕", "CRAFTING"}
+        s["spell;created=1214307"] = {"梦幻龙鳞手套", "CRAFTING"}
+        s["npc;drop=235180"] = {"[Lethon]", "菲拉斯"}
+        s["quest;reward=9248"] = {"谦卑的馈赠", "希利苏斯"}
+        s["quest;reward=86442"] = {"[Nefarius's Corruption]", "黑翼之巢"}
+        s["spell;created=1213532"] = {"吸血鬼长袍", "CRAFTING"}
+        s["object;contained=495503"] = {"[Chromatic Hoard]", "黑翼之巢"}
+        s["spell;created=1216372"] = {"虚触", "CRAFTING"}
     end
 end

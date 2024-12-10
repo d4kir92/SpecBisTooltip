@@ -7,6 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
+-- SOURCE FROM: 10.12.3024
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=44245"] = {"Faldren Tillsdale <Valor Quartermaster>", "Stormwind City"}

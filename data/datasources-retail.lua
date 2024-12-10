@@ -7,6 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
+-- SOURCE FROM: 10.12.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -115,6 +116,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226315"] = {"Lord Roccor", "Blackrock Depths"}
         s["npc;drop=217489"] = {"Anub'arash <The Thousand Scars>", "Nerub-ar Palace"}
         s["npc;drop=223839"] = {"Queen's Guard Ge'zah", "Nerub-ar Palace"}
+        s["spell;created=447314"] = {"Studious Brilliance Expeditor", "CRAFTING"}
+        s["spell;created=446939"] = {"Consecrated Cord", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -215,6 +218,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=224270"] = {"Ip'xal <Ausstatterin des Helden>", "Stadt der Fäden"}
         s["npc;drop=217489"] = {"Anub'arash <Die Tausend Narben>", "Palast der Nerub'ar"}
         s["npc;drop=223839"] = {"Königinnenwache Ge'zah", "Palast der Nerub'ar"}
+        s["spell;created=447314"] = {"Gelehriger Brillanzbeschleuniger", "CRAFTING"}
+        s["spell;created=446939"] = {"Geweihte Kordel", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -314,6 +319,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=224270"] = {"Ip'xal <Sastra de héroes>", "Ciudad Tejida"}
         s["npc;drop=217489"] = {"Anub'arash <Las Mil Cicatrices>", "Palacio Nerub'ar"}
         s["npc;drop=223839"] = {"Guardia de la reina Ge'zah", "Palacio Nerub'ar"}
+        s["spell;created=447314"] = {"Expedidor de luminosidad estudioso", "CRAFTING"}
+        s["spell;created=446939"] = {"Cordón consagrado", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -412,6 +419,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=224270"] = {"Ip'xal <Tailleuse héroïque>", "Cité des Fils"}
         s["npc;drop=217489"] = {"Anub'arash <Les Mille cicatrices>", "Palais des Nérub’ar"}
         s["npc;drop=223839"] = {"Garde de la reine Ge'zah", "Palais des Nérub’ar"}
+        s["spell;created=447314"] = {"Expéditeur d’illumination studieuse", "CRAFTING"}
+        s["spell;created=446939"] = {"Corde consacrée", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -511,6 +520,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=224270"] = {"Ip'xal <Stilista dell'Eroe>", "Città dei Fili"}
         s["npc;drop=217489"] = {"Anub'arash <Le Mille Cicatrici>", "Palazzo dei Nerub'ar"}
         s["npc;drop=223839"] = {"Guardia della Regina Ge'zah", "Palazzo dei Nerub'ar"}
+        s["spell;created=447314"] = {"Acceleratore di Acume Erudito", "CRAFTING"}
+        s["spell;created=446939"] = {"Fascione Consacrato", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -620,6 +631,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226315"] = {"[Lord Roccor]", "검은바위 나락"}
         s["npc;drop=217489"] = {"아눕아라쉬 <일천 개의 상흔>", "네룹아르 궁전"}
         s["npc;drop=223839"] = {"여왕 근위병 게자", "네룹아르 궁전"}
+        s["spell;created=447314"] = {"근면한 총명함 촉진기", "CRAFTING"}
+        s["spell;created=446939"] = {"축성된 장식끈", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -720,6 +733,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=224270"] = {"Ip'xal <Provedora do Herói>", "Cidade das Tramas"}
         s["npc;drop=217489"] = {"Anub'arash <As Mil Cicatrizes>", "Palácio Nerub-ar"}
         s["npc;drop=223839"] = {"Guarda da Rainha Ge'zah", "Palácio Nerub-ar"}
+        s["spell;created=447314"] = {"Facilitador de Inteligência Acadêmica", "CRAFTING"}
+        s["spell;created=446939"] = {"Cordão Consagrado", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -829,6 +844,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226315"] = {"[Lord Roccor]", "Глубины Черной горы"}
         s["npc;drop=217489"] = {"Ануб'араш <Меченный тысячей шрамов>", "Неруб'арский дворец"}
         s["npc;drop=223839"] = {"Стражник королевы Ге'за", "Неруб'арский дворец"}
+        s["spell;created=447314"] = {"Ускоритель мыслительного процесса", "CRAFTING"}
+        s["spell;created=446939"] = {"Освященный шнурованный ремень", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -937,6 +954,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=226315"] = {"[Lord Roccor]", "黑石深渊"}
         s["npc;drop=217489"] = {"阿努巴拉什 <千疤者>", "尼鲁巴尔王宫"}
         s["npc;drop=223839"] = {"女王亲卫杰扎", "尼鲁巴尔王宫"}
+        s["spell;created=447314"] = {"勤勉聪慧激励器", "CRAFTING"}
+        s["spell;created=446939"] = {"圣化腰索", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

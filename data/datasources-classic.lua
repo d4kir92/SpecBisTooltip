@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
--- DATA FROM: 10.12.3024
+-- DATA FROM: 10.12.2024
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}

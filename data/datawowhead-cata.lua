@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
--- DATA FROM: 10.12.4024
+-- DATA FROM: 10.12.2024
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     BIS["CATA"] = {}
     BIS["CATA"]["DEATHKNIGHT"] = {}

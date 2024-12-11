@@ -178,7 +178,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 	if bfi[class][specId] == nil then
 		bfi[class][specId] = {}
 		local pool = SpecBisTooltip:GetWoWBuild()
-		if SpecBisTooltip:GetBisTable()[pool] then
+		if SpecBisTooltip:GetBisTable()[pool] and SpecBisTooltip:GetBisTable()[pool][class][specId] then
 			for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId]) do
 				local phase = tab[1]
 				local slot = tab[3]

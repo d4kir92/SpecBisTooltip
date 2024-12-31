@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 10.12.2024
+-- SOURCE FROM: 31.12.2024
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -118,6 +118,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Queen's Guard Ge'zah", "Nerub-ar Palace"}
         s["spell;created=447314"] = {"Studious Brilliance Expeditor", "CRAFTING"}
         s["spell;created=446939"] = {"Consecrated Cord", "CRAFTING"}
+        s["spell;created=450229"] = {"Everforged Stabber", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -220,6 +221,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Königinnenwache Ge'zah", "Palast der Nerub'ar"}
         s["spell;created=447314"] = {"Gelehriger Brillanzbeschleuniger", "CRAFTING"}
         s["spell;created=446939"] = {"Geweihte Kordel", "CRAFTING"}
+        s["spell;created=450229"] = {"Ewiggeschmiedeter Stecher", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -321,6 +323,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Guardia de la reina Ge'zah", "Palacio Nerub'ar"}
         s["spell;created=447314"] = {"Expedidor de luminosidad estudioso", "CRAFTING"}
         s["spell;created=446939"] = {"Cordón consagrado", "CRAFTING"}
+        s["spell;created=450229"] = {"Apuñaladora de forja eterna", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -421,6 +424,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Garde de la reine Ge'zah", "Palais des Nérub’ar"}
         s["spell;created=447314"] = {"Expéditeur d’illumination studieuse", "CRAFTING"}
         s["spell;created=446939"] = {"Corde consacrée", "CRAFTING"}
+        s["spell;created=450229"] = {"Eustache en forge perpétuelle", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -522,6 +526,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Guardia della Regina Ge'zah", "Palazzo dei Nerub'ar"}
         s["spell;created=447314"] = {"Acceleratore di Acume Erudito", "CRAFTING"}
         s["spell;created=446939"] = {"Fascione Consacrato", "CRAFTING"}
+        s["spell;created=450229"] = {"Daga Eternoforgiata", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -633,6 +638,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"여왕 근위병 게자", "네룹아르 궁전"}
         s["spell;created=447314"] = {"근면한 총명함 촉진기", "CRAFTING"}
         s["spell;created=446939"] = {"축성된 장식끈", "CRAFTING"}
+        s["spell;created=450229"] = {"영원벼림 찌르개", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -735,6 +741,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Guarda da Rainha Ge'zah", "Palácio Nerub-ar"}
         s["spell;created=447314"] = {"Facilitador de Inteligência Acadêmica", "CRAFTING"}
         s["spell;created=446939"] = {"Cordão Consagrado", "CRAFTING"}
+        s["spell;created=450229"] = {"Apunhalador Semperforja", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -846,6 +853,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"Стражник королевы Ге'за", "Неруб'арский дворец"}
         s["spell;created=447314"] = {"Ускоритель мыслительного процесса", "CRAFTING"}
         s["spell;created=446939"] = {"Освященный шнурованный ремень", "CRAFTING"}
+        s["spell;created=450229"] = {"Выкованный навеки пронзатель", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -956,6 +964,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=223839"] = {"女王亲卫杰扎", "尼鲁巴尔王宫"}
         s["spell;created=447314"] = {"勤勉聪慧激励器", "CRAFTING"}
         s["spell;created=446939"] = {"圣化腰索", "CRAFTING"}
+        s["spell;created=450229"] = {"永铸戳刺者", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

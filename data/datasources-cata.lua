@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
--- SOURCE FROM: 10.12.2024
+-- SOURCE FROM: 22.01.2025
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=44245"] = {"Faldren Tillsdale <Valor Quartermaster>", "Stormwind City"}
@@ -265,6 +265,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"Lord Rhyolith", "Firelands"}
         s["npc;drop=52530"] = {"Alysrazor", "Firelands"}
         s["npc;drop=53494"] = {"Baleroc <The Gatekeeper>", "Firelands"}
+        s["quest;reward=29331"] = {"Elemental Bonds: The Vow", "Mount Hyjal"}
+        s["npc;drop=53616"] = {"Kar the Everburning <Firelord>", "Firelands"}
+        s["npc;drop=54161"] = {"Flame Archon", "Firelands"}
+        s["npc;sold=52549"] = {"Sergeant Thunderhorn <Conquest Quartermaster>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -491,6 +495,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52498"] = {"Beth'tilac <Die rote Witwe>", "Feuerlande"}
         s["npc;drop=52530"] = {"Alysrazar", "Feuerlande"}
         s["npc;drop=53494"] = {"Baloroc <Der Torwächter>", "Feuerlande"}
+        s["quest;reward=29331"] = {"Elementare Bande: Das Gelübde", "Hyjal"}
+        s["npc;drop=53616"] = {"Kar der Ewigbrennende <Feuerfürst>", "Feuerlande"}
+        s["npc;drop=54161"] = {"Flammenarchon", "Feuerlande"}
+        s["npc;sold=52549"] = {"Unteroffizier Donnerhorn <Rüstmeister für Eroberungspunkte>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -719,6 +727,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "Tierras de Fuego"}
         s["npc;drop=52530"] = {"[Alysrazor]", "Tierras de Fuego"}
         s["npc;drop=53494"] = {"Baleroc <El Guardián de la Puerta>", "Tierras de Fuego"}
+        s["quest;reward=29331"] = {"[Elemental Bonds: The Vow]", "Monte Hyjal"}
+        s["npc;drop=53616"] = {"Kar el Abrasador <Señor del Fuego>", "Tierras de Fuego"}
+        s["npc;drop=54161"] = {"Arconte de fuego", "Tierras de Fuego"}
+        s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -951,6 +963,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "Terres de Feu"}
         s["npc;drop=52530"] = {"[Alysrazor]", "Terres de Feu"}
         s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "Terres de Feu"}
+        s["quest;reward=29331"] = {"Liens élémentaires : Le serment", "Mont Hyjal"}
+        s["npc;drop=53616"] = {"Kar le Semperardent <Seigneur du Feu>", "Terres de Feu"}
+        s["npc;drop=54161"] = {"Archonte des flammes", "Terres de Feu"}
+        s["npc;sold=52549"] = {"Sergent Corne-Tonnerre <Intendant de conquête>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -1118,6 +1134,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "Firelands"}
         s["npc;drop=52530"] = {"[Alysrazor]", "Firelands"}
         s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "Firelands"}
+        s["quest;reward=29331"] = {"[Elemental Bonds: The Vow]", "Mount Hyjal"}
+        s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "Firelands"}
+        s["npc;drop=54161"] = {"[Flame Archon]", "Firelands"}
+        s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -1376,6 +1396,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "불의 땅"}
         s["npc;drop=52530"] = {"[Alysrazor]", "불의 땅"}
         s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "불의 땅"}
+        s["quest;reward=29331"] = {"[Elemental Bonds: The Vow]", "하이잘 산"}
+        s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "불의 땅"}
+        s["npc;drop=54161"] = {"[Flame Archon]", "불의 땅"}
+        s["npc;sold=52549"] = {"하사관 썬더혼 <정복 병참장교>", "오그리마"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1612,6 +1636,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "Terras do Fogo"}
         s["npc;drop=52530"] = {"[Alysrazor]", "Terras do Fogo"}
         s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "Terras do Fogo"}
+        s["quest;reward=29331"] = {"Prisão elemental: Juramento", "Monte Hyjal"}
+        s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "Terras do Fogo"}
+        s["npc;drop=54161"] = {"[Flame Archon]", "Terras do Fogo"}
+        s["npc;sold=52549"] = {"Sargento Chifre Troante <Intendente de Dominação>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1870,6 +1898,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"Повелитель Риолит", "Огненные Просторы"}
         s["npc;drop=52530"] = {"Алисразор", "Огненные Просторы"}
         s["npc;drop=53494"] = {"Бейлрок <Привратник>", "Огненные Просторы"}
+        s["quest;reward=29331"] = {"Власть стихий: обет", "Хиджал"}
+        s["npc;drop=53616"] = {"Кар Вечнопылающий <Повелитель огня>", "Огненные Просторы"}
+        s["npc;drop=54161"] = {"Полыхающий архонт", "Огненные Просторы"}
+        s["npc;sold=52549"] = {"Сержант Громовой Рог <Награды за очки завоевания>", "Оргриммар"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -2127,6 +2159,10 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "火焰之地"}
         s["npc;drop=52530"] = {"[Alysrazor]", "火焰之地"}
         s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "火焰之地"}
+        s["quest;reward=29331"] = {"[Elemental Bonds: The Vow]", "海加尔山"}
+        s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "火焰之地"}
+        s["npc;drop=54161"] = {"[Flame Archon]", "火焰之地"}
+        s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "奥格瑞玛"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -2384,5 +2420,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=52558"] = {"[Lord Rhyolith]", "火焰之地"}
         s["npc;drop=52530"] = {"[Alysrazor]", "火焰之地"}
         s["npc;drop=53494"] = {"[Baleroc] <[The Gatekeeper]>", "火焰之地"}
+        s["quest;reward=29331"] = {"[Elemental Bonds: The Vow]", "海加尔山"}
+        s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "火焰之地"}
+        s["npc;drop=54161"] = {"[Flame Archon]", "火焰之地"}
+        s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "奥格瑞玛"}
     end
 end

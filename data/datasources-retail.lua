@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 31.12.2024
+-- SOURCE FROM: 22.01.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -119,6 +119,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Studious Brilliance Expeditor", "CRAFTING"}
         s["spell;created=446939"] = {"Consecrated Cord", "CRAFTING"}
         s["spell;created=450229"] = {"Everforged Stabber", "CRAFTING"}
+        s["npc;drop=229992"] = {"Stalagnarok", "Siren Isle"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -324,6 +325,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Expedidor de luminosidad estudioso", "CRAFTING"}
         s["spell;created=446939"] = {"Cordón consagrado", "CRAFTING"}
         s["spell;created=450229"] = {"Apuñaladora de forja eterna", "CRAFTING"}
+        s["npc;drop=229992"] = {"Estalagmirok", "Isla de la Sirena"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -639,6 +641,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"근면한 총명함 촉진기", "CRAFTING"}
         s["spell;created=446939"] = {"축성된 장식끈", "CRAFTING"}
         s["spell;created=450229"] = {"영원벼림 찌르개", "CRAFTING"}
+        s["npc;drop=229992"] = {"스탈라그나로그", "세이렌의 섬"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -742,6 +745,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Facilitador de Inteligência Acadêmica", "CRAFTING"}
         s["spell;created=446939"] = {"Cordão Consagrado", "CRAFTING"}
         s["spell;created=450229"] = {"Apunhalador Semperforja", "CRAFTING"}
+        s["npc;drop=229992"] = {"Estalagnarok", "Ilha das Sirenas"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -854,6 +858,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Ускоритель мыслительного процесса", "CRAFTING"}
         s["spell;created=446939"] = {"Освященный шнурованный ремень", "CRAFTING"}
         s["spell;created=450229"] = {"Выкованный навеки пронзатель", "CRAFTING"}
+        s["npc;drop=229992"] = {"Сталагнарос", "Остров Сирен"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -965,6 +970,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"勤勉聪慧激励器", "CRAFTING"}
         s["spell;created=446939"] = {"圣化腰索", "CRAFTING"}
         s["spell;created=450229"] = {"永铸戳刺者", "CRAFTING"}
+        s["npc;drop=210108"] = {"E.D.N.A.", "矶石宝库"}
+        s["npc;drop=229992"] = {"石笋纳罗克", "海妖岛"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

@@ -21,7 +21,7 @@ SBTSetup:SetScript(
 					["icon"] = 136031,
 					["var"] = mmbtn,
 					["dbtab"] = SBTTAB,
-					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.5"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.6"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 					["funcL"] = function()
 						SpecBisTooltip:ToggleSettings()
 					end,
@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.5")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.6")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.5")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.6")
 		}
 	)
 
@@ -354,6 +354,10 @@ local bisTextLookup = {
 		colorCode = col_green,
 		translationArgs = {"BISPVESODX", nil, 6}
 	},
+	["BIS,PVE,SODP7"] = {
+		colorCode = col_green,
+		translationArgs = {"BISPVESODX", nil, 7}
+	},
 	["BIS,PVP"] = {
 		colorCode = col_green,
 		translationArgs = {"BISPVP"}
@@ -497,6 +501,10 @@ local bisTextLookup = {
 	["PREBIS,PVE,SODP6"] = {
 		colorCode = col_yellow,
 		translationArgs = {"PREBISPVESODX", nil, 6}
+	},
+	["PREBIS,PVE,SODP7"] = {
+		colorCode = col_yellow,
+		translationArgs = {"PREBISPVESODX", nil, 7}
 	},
 	["?"] = {
 		colorCode = col_red,

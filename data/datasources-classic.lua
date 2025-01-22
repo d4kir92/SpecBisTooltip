@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
--- DATA FROM: 10.12.2024
+-- SOURCE FROM: 22.01.2025
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}
@@ -825,6 +825,20 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["object;contained=495503"] = {"Chromatic Hoard", "Blackwing Lair"}
         s["spell;created=1216372"] = {"Void-Touched", "CRAFTING"}
         s["spell;created=29036"] = {"Summon Drape of Unyielding Strength DND", "CRAFTING"}
+        s["quest;reward=86673"] = {"The Fall of Ossirian", "Silithus"}
+        s["quest;reward=86670"] = {"The Savior of Kalimdor", "Ahn'Qiraj"}
+        s["quest;reward=86760"] = {"Darkmoon Beast Deck", "Elwynn Forest"}
+        s["quest;reward=86762"] = {"Darkmoon Elementals Deck", "Elwynn Forest"}
+        s["quest;reward=86680"] = {"Waking Legends", "Moonglade"}
+        s["npc;sold=15502"] = {"Andorgos <Brood of Malygos>", "Ahn'Qiraj"}
+        s["npc;sold=15504"] = {"Vethsera <Brood of Ysera>", "Ahn'Qiraj"}
+        s["npc;sold=15503"] = {"Kandrostrasz <Brood of Alexstrasza>", "Ahn'Qiraj"}
+        s["spell;created=1214303"] = {"Dreamscale Kilt", "CRAFTING"}
+        s["quest;reward=85063"] = {"Culmination", "Winterspring"}
+        s["npc;drop=3975"] = {"Herod <The Scarlet Champion>", "Scarlet Monastery"}
+        s["spell;created=1216364"] = {"Void-Touched", "CRAFTING"}
+        s["spell;created=1213633"] = {"Enchanted Totem", "CRAFTING"}
+        s["spell;created=1216381"] = {"Void-Touched", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1484,6 +1498,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"Vampirrobe", "CRAFTING"}
         s["object;contained=495503"] = {"Chromatischer Hort", "Pechschwingenhort"}
         s["spell;created=1216372"] = {"Leerenberührt", "CRAFTING"}
+        s["quest;reward=86673"] = {"Der Untergang von Ossirian", "Silithus"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "Ahn'Qiraj"}
+        s["quest;reward=86760"] = {"Bestienkartenset des Dunkelmond-Jahrmarkts", "Wald von Elwynn"}
+        s["quest;reward=86762"] = {"Elementarkartenset des Dunkelmond-Jahrmarkts", "Wald von Elwynn"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "Moonglade"}
+        s["spell;created=1214303"] = {"Traumschuppenkilt", "CRAFTING"}
+        s["quest;reward=85063"] = {"Höhepunkt", "Winterspring"}
+        s["npc;drop=3975"] = {"Herod <Der Scharlachrote Held>", "Das scharlachrote Kloster"}
+        s["spell;created=1216364"] = {"Leerenberührt", "CRAFTING"}
+        s["spell;created=1213633"] = {"Verzaubertes Totem", "CRAFTING"}
+        s["spell;created=1216381"] = {"Leerenberührt", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2163,6 +2188,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"Toga vampírica", "CRAFTING"}
         s["object;contained=495503"] = {"[Chromatic Hoard]", "Guarida Alanegra"}
         s["spell;created=1216372"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "Silithus"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "Ahn'Qiraj"}
+        s["quest;reward=86760"] = {"[Darkmoon Beast Deck]", "Bosque de Elwynn"}
+        s["quest;reward=86762"] = {"[Darkmoon Elementals Deck]", "Bosque de Elwynn"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "Claro de la Luna"}
+        s["spell;created=1214303"] = {"Falda de escamas oníricas", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "Cuna del Invierno"}
+        s["npc;drop=3975"] = {"Herod <El Campeón Escarlata>", "Monasterio Escarlata"}
+        s["spell;created=1216364"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["spell;created=1213633"] = {"Tótem encantado", "CRAFTING"}
+        s["spell;created=1216381"] = {"Tocado por el Vacío", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -2837,6 +2873,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"Robe vampirique", "CRAFTING"}
         s["object;contained=495503"] = {"Trésor chromatique", "Repaire de l'Aile noire"}
         s["spell;created=1216372"] = {"Touché par le Vide", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "Silithus"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "Ahn'Qiraj"}
+        s["quest;reward=86760"] = {"Suite de Fauves de Sombrelune", "Forêt d'Elwynn"}
+        s["quest;reward=86762"] = {"Suite d’Élémentaires de Sombrelune", "Forêt d'Elwynn"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "Reflet-de-Lune (Moonglade)"}
+        s["spell;created=1214303"] = {"Kilt de rêvécaille", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "Berceau-de-l'Hiver (Winterspring)"}
+        s["npc;drop=3975"] = {"Herod <Le champion écarlate>", "Monastère écarlate"}
+        s["spell;created=1216364"] = {"Touché par le Vide", "CRAFTING"}
+        s["spell;created=1213633"] = {"Totem enchanté", "CRAFTING"}
+        s["spell;created=1216381"] = {"Touché par le Vide", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -3262,6 +3309,18 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"[Vampiric Robe]", "CRAFTING"}
         s["object;contained=495503"] = {"[Chromatic Hoard]", "Blackwing Lair"}
         s["spell;created=1216372"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213538"] = {"[Qiraji Silk Cloak]", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "Silithus"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "Ahn'Qiraj"}
+        s["quest;reward=86760"] = {"[Darkmoon Beast Deck]", "Elwynn Forest"}
+        s["quest;reward=86762"] = {"[Darkmoon Elementals Deck]", "Elwynn Forest"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "Moonglade"}
+        s["spell;created=1214303"] = {"[Dreamscale Kilt]", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "Winterspring"}
+        s["npc;drop=3975"] = {"Herod", "Scarlet Monastery"}
+        s["spell;created=1216364"] = {"[Void-Touched]", "CRAFTING"}
+        s["spell;created=1213633"] = {"[Enchanted Totem]", "CRAFTING"}
+        s["spell;created=1216381"] = {"[Void-Touched]", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -4014,6 +4073,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"흡혈의 로브", "CRAFTING"}
         s["object;contained=495503"] = {"오색 비축품", "검은날개 둥지"}
         s["spell;created=1216372"] = {"공허의 손길", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "실리더스"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "안퀴라즈"}
+        s["quest;reward=86760"] = {"[Darkmoon Beast Deck]", "엘윈 숲"}
+        s["quest;reward=86762"] = {"[Darkmoon Elementals Deck]", "엘윈 숲"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "달숲"}
+        s["spell;created=1214303"] = {"꿈비늘 킬트", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "여명의 설원"}
+        s["npc;drop=3975"] = {"헤로드 <붉은십자군 용사>", "붉은십자군 수도원"}
+        s["spell;created=1216364"] = {"공허의 손길", "CRAFTING"}
+        s["spell;created=1213633"] = {"마력 깃든 토템", "CRAFTING"}
+        s["spell;created=1216381"] = {"공허의 손길", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -4712,6 +4782,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"Veste Vampírica", "CRAFTING"}
         s["object;contained=495503"] = {"[Chromatic Hoard]", "Covil Asa Negra"}
         s["spell;created=1216372"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "Silithus"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "Ahn'Qiraj"}
+        s["quest;reward=86760"] = {"[Darkmoon Beast Deck]", "Floresta de Elwynn"}
+        s["quest;reward=86762"] = {"[Darkmoon Elementals Deck]", "Floresta de Elwynn"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "Clareira da Lua"}
+        s["spell;created=1214303"] = {"Kilt de Escama de Sonhos", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "Hibérnia"}
+        s["npc;drop=3975"] = {"Herodes <O Campeão Escarlate>", "Monastério Escarlate"}
+        s["spell;created=1216364"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["spell;created=1213633"] = {"Totem Encantado", "CRAFTING"}
+        s["spell;created=1216381"] = {"Tocado pelo Caos", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -5464,6 +5545,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"Вампирское одеяние", "CRAFTING"}
         s["object;contained=495503"] = {"[Chromatic Hoard]", "Логово Крыла Тьмы"}
         s["spell;created=1216372"] = {"Метка Бездны", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "Силитус"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "Ан'Кираж"}
+        s["quest;reward=86760"] = {"Карты Новолуния: Звери", "Элвиннский лес"}
+        s["quest;reward=86762"] = {"Карты Новолуния: Элементали", "Элвиннский лес"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "Лунная поляна"}
+        s["spell;created=1214303"] = {"Килт чешуи сна", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "Зимние Ключи"}
+        s["npc;drop=3975"] = {"Герод <Герой Алого ордена>", "Монастырь Алого ордена"}
+        s["spell;created=1216364"] = {"Метка Бездны", "CRAFTING"}
+        s["spell;created=1213633"] = {"Зачарованный тотем", "CRAFTING"}
+        s["spell;created=1216381"] = {"Метка Бездны", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -6216,6 +6308,17 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"吸血鬼长袍", "CRAFTING"}
         s["object;contained=495503"] = {"[Chromatic Hoard]", "黑翼之巢"}
         s["spell;created=1216372"] = {"虚触", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "希利苏斯"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "安其拉"}
+        s["quest;reward=86760"] = {"暗月野兽套牌", "艾尔文森林"}
+        s["quest;reward=86762"] = {"暗月元素套牌", "艾尔文森林"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "月光林地"}
+        s["spell;created=1214303"] = {"梦幻龙鳞褶裙", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "冬泉谷"}
+        s["npc;drop=3975"] = {"赫洛德 <血色十字军勇士>", "血色修道院"}
+        s["spell;created=1216364"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213633"] = {"魔化图腾", "CRAFTING"}
+        s["spell;created=1216381"] = {"虚触", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -6968,5 +7071,16 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213532"] = {"吸血鬼长袍", "CRAFTING"}
         s["object;contained=495503"] = {"[Chromatic Hoard]", "黑翼之巢"}
         s["spell;created=1216372"] = {"虚触", "CRAFTING"}
+        s["quest;reward=86673"] = {"[The Fall of Ossirian]", "希利苏斯"}
+        s["quest;reward=86670"] = {"[The Savior of Kalimdor]", "安其拉"}
+        s["quest;reward=86760"] = {"暗月野兽套牌", "艾尔文森林"}
+        s["quest;reward=86762"] = {"暗月元素套牌", "艾尔文森林"}
+        s["quest;reward=86680"] = {"[Waking Legends]", "月光林地"}
+        s["spell;created=1214303"] = {"梦幻龙鳞褶裙", "CRAFTING"}
+        s["quest;reward=85063"] = {"[Culmination]", "冬泉谷"}
+        s["npc;drop=3975"] = {"赫洛德 <血色十字军勇士>", "血色修道院"}
+        s["spell;created=1216364"] = {"虚触", "CRAFTING"}
+        s["spell;created=1213633"] = {"魔化图腾", "CRAFTING"}
+        s["spell;created=1216381"] = {"虚触", "CRAFTING"}
     end
 end

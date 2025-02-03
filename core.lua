@@ -21,7 +21,7 @@ SBTSetup:SetScript(
 					["icon"] = 136031,
 					["var"] = mmbtn,
 					["dbtab"] = SBTTAB,
-					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.8"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.9"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 					["funcL"] = function()
 						SpecBisTooltip:ToggleSettings()
 					end,
@@ -57,14 +57,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.8")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.9")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.8")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.9")
 		}
 	)
 
@@ -202,75 +202,6 @@ function SpecBisTooltip:GetSpecItemTypTrinketRetail(itemId, specId)
 	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, "TRINKETS") end
 
 	return nil, nil, nil
-end
-
-function SpecBisTooltip:GetTalentInfo()
-	local specid, icon
-	if GetSpecialization then
-		specid = GetSpecialization()
-		if GetSpecializationInfo then
-			_, _, _, icon = GetSpecializationInfo(specid)
-		end
-
-		return specid, icon
-	else
-		local ps = 0
-		for i = 1, 4 do
-			local _, _, _, iconTexture, pointsSpent = GetTalentTabInfo(i)
-			if pointsSpent ~= nil and pointsSpent > ps then
-				ps = pointsSpent
-				specid = i
-				icon = iconTexture
-				local _, class = UnitClass("PLAYER")
-				if GetActiveTalentGroup and class == "DRUID" and SpecBisTooltip:GetWoWBuild() ~= "CATA" then
-					local group = GetActiveTalentGroup()
-					local role = GetTalentGroupRole(group)
-					if role == "DAMAGER" then
-						specid = 2
-						icon = 132115
-					elseif role == "TANK" then
-						specid = 3
-					end
-				end
-			end
-
-			if icon == nil then
-				local _, class = UnitClass("PLAYER")
-				icon = SpecBisTooltip:GetSpecIcon(class, specid)
-				if icon == nil then
-					if class == "DRUID" then
-						icon = 625999
-					elseif class == "HUNTER" then
-						icon = 626000
-					elseif class == "MAGE" then
-						icon = 626001
-					elseif class == "PALADIN" then
-						if specid == 1 then
-							icon = 135920
-						elseif specid == 2 then
-							icon = 135893
-						elseif specid == 3 then
-							icon = 135873
-						end
-					elseif class == "PRIEST" then
-						icon = 626004
-					elseif class == "ROGUE" then
-						icon = 626005
-					elseif class == "SHAMAN" then
-						icon = 626006
-					elseif class == "WARLOCK" then
-						icon = 626007
-					elseif class == "WARRIOR" then
-						icon = 626008
-					end
-				end
-			end
-		end
-
-		return specid, icon
-	end
-
-	return nil, nil
 end
 
 local col_green = "|cff90ee90"

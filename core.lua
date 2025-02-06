@@ -21,7 +21,7 @@ SBTSetup:SetScript(
 					["icon"] = 136031,
 					["var"] = mmbtn,
 					["dbtab"] = SBTTAB,
-					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.10"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.11"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 					["funcL"] = function()
 						SpecBisTooltip:ToggleSettings()
 					end,
@@ -30,14 +30,9 @@ SBTSetup:SetScript(
 						SpecBisTooltip:HideMMBtn("SpecBisTooltip")
 						SpecBisTooltip:MSG("Minimap Button is now hidden.")
 					end,
+					["dbkey"] = "SHOWMINIMAPBUTTON"
 				}
 			)
-
-			if SpecBisTooltip:GV(SBTTAB, "SHOWMINIMAPBUTTON", SpecBisTooltip:GetWoWBuild() ~= "RETAIL") then
-				SpecBisTooltip:ShowMMBtn("SpecBisTooltip")
-			else
-				SpecBisTooltip:HideMMBtn("SpecBisTooltip")
-			end
 
 			SpecBisTooltip:InitSettings()
 		end
@@ -55,24 +50,12 @@ function SpecBisTooltip:ToggleSettings()
 	end
 end
 
-function SpecBisTooltip:InitSettings()
-	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.10")
-	sbt_settings = SpecBisTooltip:CreateFrame(
-		{
-			["name"] = "SpecBisTooltip",
-			["pTab"] = {"CENTER"},
-			["sw"] = 520,
-			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.10")
-		}
-	)
-
-	local x = 15
-	local y = -10
+function SpecBisTooltip:GetSettingsContent(parent)
+	local x = 5
+	local y = 0
 	SpecBisTooltip:SetAppendX(x)
 	SpecBisTooltip:SetAppendY(y)
-	SpecBisTooltip:SetAppendParent(sbt_settings)
+	SpecBisTooltip:SetAppendParent(parent)
 	SpecBisTooltip:SetAppendTab(SBTTAB)
 	SpecBisTooltip:AppendCategory("GENERAL")
 	SpecBisTooltip:AppendCheckbox(
@@ -105,6 +88,41 @@ function SpecBisTooltip:InitSettings()
 	else
 		SpecBisTooltip:AppendCheckbox("SHOWOLDERPHASES", true)
 	end
+end
+
+function SpecBisTooltip:InitSettings()
+	SBTTAB = SBTTAB or {}
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.11")
+	sbt_settings = SpecBisTooltip:CreateFrame(
+		{
+			["name"] = "SpecBisTooltip",
+			["pTab"] = {"CENTER"},
+			["sw"] = 520,
+			["sh"] = 520,
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.11")
+		}
+	)
+
+	sbt_settings.SF = CreateFrame("ScrollFrame", "sbt_settings_SF", sbt_settings, "UIPanelScrollFrameTemplate")
+	sbt_settings.SF:SetPoint("TOPLEFT", sbt_settings, 8, -25)
+	sbt_settings.SF:SetPoint("BOTTOMRIGHT", sbt_settings, -30, 8)
+	sbt_settings.SC = CreateFrame("Frame", "sbt_settings_SC", sbt_settings.SF)
+	sbt_settings.SC:SetSize(sbt_settings.SF:GetSize())
+	sbt_settings.SC:SetPoint("TOPLEFT", sbt_settings.SF, "TOPLEFT", 0, 0)
+	sbt_settings.SF:SetScrollChild(sbt_settings.SC)
+	sbt_settings.SF.bg = sbt_settings.SF:CreateTexture("sbt_settings.SF.bg", "ARTWORK")
+	sbt_settings.SF.bg:SetAllPoints(sbt_settings.SF)
+	if sbt_settings.SF.bg.SetColorTexture then
+		sbt_settings.SF.bg:SetColorTexture(0.03, 0.03, 0.03, 0.5)
+	else
+		sbt_settings.SF.bg:SetTexture(0.03, 0.03, 0.03, 0.5)
+	end
+
+	SpecBisTooltip:GetSettingsContent(sbt_settings.SC)
+	local frame = CreateFrame("Frame")
+	SpecBisTooltip:GetSettingsContent(frame)
+	local category = Settings.RegisterCanvasLayoutCategory(frame, "SpecBisTooltip |T136031:16:16:0:0|t")
+	Settings.RegisterAddOnCategory(category)
 end
 
 function SpecBisTooltip:HoldModifierText()

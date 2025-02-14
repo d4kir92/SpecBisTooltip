@@ -4,7 +4,7 @@
 ## Interface-Cata: 40401, 40402
 ## Interface: 110007, 110100
 
-## Version: 0.12.13
+## Version: 0.12.14
 ## Title: SpecBisTooltip by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR

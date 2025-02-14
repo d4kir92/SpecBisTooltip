@@ -21,7 +21,7 @@ SBTSetup:SetScript(
 					["icon"] = 136031,
 					["var"] = mmbtn,
 					["dbtab"] = SBTTAB,
-					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.12"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.13"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
 					["funcL"] = function()
 						SpecBisTooltip:ToggleSettings()
 					end,
@@ -92,14 +92,14 @@ end
 
 function SpecBisTooltip:InitSettings()
 	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.12")
+	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.13")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.12")
+			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.13")
 		}
 	)
 
@@ -896,7 +896,7 @@ local function OnTooltipSetItem(tooltip, data)
 		tooltip:AddDoubleLine("SpecBisTooltip ItemId: " .. id)
 	end
 
-	if specId then
+	if specId and icon then
 		local _, class = UnitClass("PLAYER")
 		sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetBisSource(itemType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
 		if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then

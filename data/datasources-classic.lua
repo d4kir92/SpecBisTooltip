@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
--- SOURCE FROM: 22.01.2025
+-- SOURCE FROM: 19.02.2025
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}
@@ -839,6 +839,66 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"Void-Touched", "CRAFTING"}
         s["spell;created=1213633"] = {"Enchanted Totem", "CRAFTING"}
         s["spell;created=1216381"] = {"Void-Touched", "CRAFTING"}
+        s["npc;sold=16135"] = {"Rayne <Cenarion Circle>", "Eastern Plaguelands"}
+        s["npc;drop=16061"] = {"Instructor Razuvious", "Naxxramas"}
+        s["quest;reward=87360"] = {"The Fall of Kel'Thuzad", "Eastern Plaguelands"}
+        s["npc;drop=237964"] = {"Harbinger of Sin", "Karazhan Crypts"}
+        s["npc;drop=16143"] = {"Shadow of Doom", "Blasted Lands"}
+        s["npc;drop=16380"] = {"Bone Witch", "Burning Steppes"}
+        s["quest;reward=87438"] = {"Argent Dawn Leather Gloves", "Eastern Plaguelands"}
+        s["npc;drop=238233"] = {"Kaigy Maryla <The Failed Apprentice>", "Karazhan Crypts"}
+        s["quest;reward=88723"] = {"Superior Armaments of Battle - Revered Amongst the Dawn", "Eastern Plaguelands"}
+        s["npc;drop=16060"] = {"Gothik the Harvester", "Naxxramas"}
+        s["npc;drop=15936"] = {"Heigan the Unclean", "Naxxramas"}
+        s["npc;drop=15931"] = {"Grobbulus", "Naxxramas"}
+        s["npc;drop=15932"] = {"Gluth", "Naxxramas"}
+        s["npc;drop=15989"] = {"Sapphiron", "Naxxramas"}
+        s["npc;drop=14697"] = {"Lumbering Horror", "Burning Steppes"}
+        s["npc;drop=237439"] = {"Kharon", "Karazhan Crypts"}
+        s["quest;reward=87440"] = {"Argent Dawn Cloth Gloves", "Eastern Plaguelands"}
+        s["npc;drop=15928"] = {"Thaddius", "Naxxramas"}
+        s["npc;drop=15953"] = {"Grand Widow Faerlina", "Naxxramas"}
+        s["npc;drop=15956"] = {"Anub'Rekhan", "Naxxramas"}
+        s["npc;drop=15954"] = {"Noth the Plaguebringer", "Naxxramas"}
+        s["npc;drop=238234"] = {"Barian Maryla <The Failed Apprentice>", "Karazhan Crypts"}
+        s["npc;drop=238024"] = {"Creeping Malison", "Karazhan Crypts"}
+        s["spell;created=1223762"] = {"Glacial Cloak", "CRAFTING"}
+        s["npc;drop=16028"] = {"Patchwerk", "Naxxramas"}
+        s["npc;drop=238055"] = {"Dark Rider", "Karazhan Crypts"}
+        s["npc;drop=238560"] = {"The Warden", "Karazhan Crypts"}
+        s["npc;drop=238638"] = {"Echo of the Baroness", "Karazhan Crypts"}
+        s["spell;created=24179"] = {"Create Seal of the Dawn", "CRAFTING"}
+        s["npc;drop=238213"] = {"Sairuh Maryla <The Failed Apprentice>", "Karazhan Crypts"}
+        s["quest;reward=88728"] = {"Epic Armaments of Battle - Exalted Amongst the Dawn", "Eastern Plaguelands"}
+        s["npc;drop=238511"] = {"The Gravekeeper", "Karazhan Crypts"}
+        s["npc;drop=16379"] = {"Spirit of the Damned", "Burning Steppes"}
+        s["npc;sold=16132"] = {"Huntsman Leopold <The Scarlet Crusade>", "Eastern Plaguelands"}
+        s["quest;reward=87435"] = {"Argent Dawn Mail Gloves", "Eastern Plaguelands"}
+        s["npc;sold=16116"] = {"Archmage Angela Dosantos <Brotherhood of the Light>", "Eastern Plaguelands"}
+        s["npc;sold=16115"] = {"Commander Eligor Dawnbringer <Brotherhood of the Light>", "Eastern Plaguelands"}
+        s["quest;reward=87434"] = {"Argent Dawn Plate Gloves", "Eastern Plaguelands"}
+        s["spell;created=1223787"] = {"Icebane Breastplate", "CRAFTING"}
+        s["spell;created=1223791"] = {"Icebane Bracers", "CRAFTING"}
+        s["spell;created=1223789"] = {"Icebane Gauntlets", "CRAFTING"}
+        s["quest;reward=88730"] = {"The Only Song I Know...", "Eastern Plaguelands"}
+        s["spell;created=1223780"] = {"Polar Tunic", "CRAFTING"}
+        s["spell;created=1223784"] = {"Polar Bracers", "CRAFTING"}
+        s["spell;created=1223782"] = {"Polar Gloves", "CRAFTING"}
+        s["quest;reward=86445"] = {"The Wrath of Neptulon", "Tanaris"}
+        s["npc;sold=16113"] = {"Father Inigo Montoy <Brotherhood of the Light>", "Eastern Plaguelands"}
+        s["spell;created=1223760"] = {"Glacial Vest", "CRAFTING"}
+        s["spell;created=1223764"] = {"Glacial Gloves", "CRAFTING"}
+        s["npc;sold=16131"] = {"Rohan the Assassin <The Scarlet Crusade>", "Eastern Plaguelands"}
+        s["spell;created=1214137"] = {"Obsidian Heartseeker", "CRAFTING"}
+        s["npc;sold=16134"] = {"Rimblat Earthshatter <The Earthen Ring>", "Eastern Plaguelands"}
+        s["npc;drop=238678"] = {"Unk'omon <The Winged Sorrow>", "Karazhan Crypts"}
+        s["spell;created=1223766"] = {"Glacial Wrists", "CRAFTING"}
+        s["spell;created=1223772"] = {"Frosty Wrists", "CRAFTING"}
+        s["npc;sold=16133"] = {"Mataus the Wrathcaster <The Scarlet Crusade>", "Eastern Plaguelands"}
+        s["spell;created=1213504"] = {"Obsidian Sageblade", "CRAFTING"}
+        s["spell;created=1213527"] = {"Vampiric Cowl", "CRAFTING"}
+        s["spell;created=1213530"] = {"Vampiric Shawl", "CRAFTING"}
+        s["npc;sold=16112"] = {"Korfax, Champion of the Light <Brotherhood of the Light>", "Eastern Plaguelands"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1509,6 +1569,61 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"Leerenberührt", "CRAFTING"}
         s["spell;created=1213633"] = {"Verzaubertes Totem", "CRAFTING"}
         s["spell;created=1216381"] = {"Leerenberührt", "CRAFTING"}
+        s["npc;sold=16135"] = {"Rayne <Der Zirkel des Cenarius>", "Östliche Pestländer"}
+        s["npc;drop=16061"] = {"Instrukteur Razuvious", "Naxxramas"}
+        s["quest;reward=87360"] = {"Der Niedergang Kel'Thuzads", "Östliche Pestländer"}
+        s["npc;drop=237964"] = {"Herold der Sünde", "Karazhangruften"}
+        s["npc;drop=16143"] = {"Schatten der Verdammnis", "Verwüstete Lande"}
+        s["npc;drop=16380"] = {"Knochenhexe", "Brennende Steppe"}
+        s["quest;reward=87438"] = {"Lederhandschuhe der Argentumdämmerung", "Östliche Pestländer"}
+        s["npc;drop=238233"] = {"Kaigy Maryla <Der versagte Lehrling>", "Karazhangruften"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "Östliche Pestländer"}
+        s["npc;drop=16060"] = {"Gothik der Seelenjäger", "Naxxramas"}
+        s["npc;drop=15936"] = {"Heigan der Unreine", "Naxxramas"}
+        s["npc;drop=15989"] = {"Saphiron", "Naxxramas"}
+        s["npc;drop=14697"] = {"Schwerfälliger Horror", "Brennende Steppe"}
+        s["quest;reward=87440"] = {"Stoffhandschuhe der Argentumdämmerung", "Östliche Pestländer"}
+        s["npc;drop=15953"] = {"Großwitwe Faerlina", "Naxxramas"}
+        s["npc;drop=15954"] = {"Noth der Seuchenfürst", "Naxxramas"}
+        s["npc;drop=238234"] = {"Barian Maryla <Der versagte Lehrling>", "Karazhangruften"}
+        s["npc;drop=238024"] = {"Schleichender Fluch", "Karazhangruften"}
+        s["spell;created=1223762"] = {"Gletscherumhang", "CRAFTING"}
+        s["npc;drop=16028"] = {"Flickwerk", "Naxxramas"}
+        s["npc;drop=238055"] = {"Dunkler Reiter", "Karazhangruften"}
+        s["npc;drop=238560"] = {"Der Wärter", "Karazhangruften"}
+        s["npc;drop=238638"] = {"Echo der Baronin", "Karazhangruften"}
+        s["spell;created=24179"] = {"Siegel der Dämmerung herstellen", "CRAFTING"}
+        s["npc;drop=238213"] = {"Sairuh Maryla <Der versagte Lehrling>", "Karazhangruften"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "Östliche Pestländer"}
+        s["npc;drop=238511"] = {"Der Grabhüter", "Karazhangruften"}
+        s["npc;drop=16379"] = {"Geist der Verdammten", "Brennende Steppe"}
+        s["npc;sold=16132"] = {"Jäger Leopold <Der Scharlachrote Kreuzzug>", "Östliche Pestländer"}
+        s["quest;reward=87435"] = {"Kettenhandschuhe der Argentumdämmerung", "Östliche Pestländer"}
+        s["npc;sold=16116"] = {"Erzmagierin Angela Dosantos <Bruderschaft des Lichts>", "Östliche Pestländer"}
+        s["npc;sold=16115"] = {"Kommandant Eligor Dawnbringer <Bruderschaft des Lichts>", "Östliche Pestländer"}
+        s["quest;reward=87434"] = {"Plattenhandschuhe der Argentumdämmerung", "Östliche Pestländer"}
+        s["spell;created=1223787"] = {"Eisfluchbrustplatte", "CRAFTING"}
+        s["spell;created=1223791"] = {"Eisflucharmschienen", "CRAFTING"}
+        s["spell;created=1223789"] = {"Eisfluchstulpen", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "Östliche Pestländer"}
+        s["spell;created=1223780"] = {"Polartunika", "CRAFTING"}
+        s["spell;created=1223784"] = {"Polararmschienen", "CRAFTING"}
+        s["spell;created=1223782"] = {"Polarhandschuhe", "CRAFTING"}
+        s["quest;reward=86445"] = {"Der Zorn von Neptulon", "Tanaris"}
+        s["npc;sold=16113"] = {"Vater Inigo Montoy <Bruderschaft des Lichts>", "Östliche Pestländer"}
+        s["spell;created=1223760"] = {"Gletscherweste", "CRAFTING"}
+        s["spell;created=1223764"] = {"Gletscherhandschuhe", "CRAFTING"}
+        s["npc;sold=16131"] = {"Rohan der Assassine <Der Scharlachrote Kreuzzug>", "Östliche Pestländer"}
+        s["spell;created=1214137"] = {"Obsidianherzsucher", "CRAFTING"}
+        s["npc;sold=16134"] = {"Rimblat Erdspalter <Der irdene Ring>", "Östliche Pestländer"}
+        s["npc;drop=238678"] = {"Un'G'wöhnlich <Der geflügelte Kummer>", "Karazhangruften"}
+        s["spell;created=1223766"] = {"Gletscherhandschutz", "CRAFTING"}
+        s["spell;created=1223772"] = {"Frostige Handgelenke", "CRAFTING"}
+        s["npc;sold=16133"] = {"Mataus der Zornwirker <Der Scharlachrote Kreuzzug>", "Östliche Pestländer"}
+        s["spell;created=1213504"] = {"Obsidianweisenklinge", "CRAFTING"}
+        s["spell;created=1213527"] = {"Vampirgugel", "CRAFTING"}
+        s["spell;created=1213530"] = {"Vampirschal", "CRAFTING"}
+        s["npc;sold=16112"] = {"Korfax der Held des Lichts <Bruderschaft des Lichts>", "Östliche Pestländer"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2199,6 +2314,60 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"Tocado por el Vacío", "CRAFTING"}
         s["spell;created=1213633"] = {"Tótem encantado", "CRAFTING"}
         s["spell;created=1216381"] = {"Tocado por el Vacío", "CRAFTING"}
+        s["npc;sold=16135"] = {"Rayne", "Tierras de la Peste del Este"}
+        s["quest;reward=87360"] = {"[The Fall of Kel'Thuzad]", "Tierras de la Peste del Este"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "Criptas de Karazhan"}
+        s["npc;drop=16143"] = {"Sombra del Apocalipsis", "Las Tierras Devastadas"}
+        s["npc;drop=16380"] = {"Bruja Osaria", "Las Estepas Ardientes"}
+        s["quest;reward=87438"] = {"[Argent Dawn Leather Gloves]", "Tierras de la Peste del Este"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "Criptas de Karazhan"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "Tierras de la Peste del Este"}
+        s["npc;drop=16060"] = {"Gothik el Cosechador", "Naxxramas"}
+        s["npc;drop=15936"] = {"Heigan el Impuro", "Naxxramas"}
+        s["npc;drop=14697"] = {"Horror pesado", "Las Estepas Ardientes"}
+        s["npc;drop=237439"] = {"[Kharon]", "Criptas de Karazhan"}
+        s["quest;reward=87440"] = {"[Argent Dawn Cloth Gloves]", "Tierras de la Peste del Este"}
+        s["npc;drop=15953"] = {"Gran Viuda Faerlina", "Naxxramas"}
+        s["npc;drop=15954"] = {"Noth el Pesteador", "Naxxramas"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "Criptas de Karazhan"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "Criptas de Karazhan"}
+        s["spell;created=1223762"] = {"Capa glacial", "CRAFTING"}
+        s["npc;drop=16028"] = {"Remendejo", "Naxxramas"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "Criptas de Karazhan"}
+        s["npc;drop=238560"] = {"[The Warden]", "Criptas de Karazhan"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "Criptas de Karazhan"}
+        s["spell;created=24179"] = {"Crear Sello del Amanecer", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "Criptas de Karazhan"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "Tierras de la Peste del Este"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "Criptas de Karazhan"}
+        s["npc;drop=16379"] = {"Espíritu de los Malditos", "Las Estepas Ardientes"}
+        s["npc;sold=16132"] = {"Cazador Leopold", "Tierras de la Peste del Este"}
+        s["quest;reward=87435"] = {"[Argent Dawn Mail Gloves]", "Tierras de la Peste del Este"}
+        s["npc;sold=16116"] = {"Archimaga Ángela Dosantos", "Tierras de la Peste del Este"}
+        s["npc;sold=16115"] = {"Comandante Eligor Albar", "Tierras de la Peste del Este"}
+        s["quest;reward=87434"] = {"[Argent Dawn Plate Gloves]", "Tierras de la Peste del Este"}
+        s["spell;created=1223787"] = {"Coraza Deliriohelado", "CRAFTING"}
+        s["spell;created=1223791"] = {"Brazales Deliriohelado", "CRAFTING"}
+        s["spell;created=1223789"] = {"Guanteletes Deliriohelado", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "Tierras de la Peste del Este"}
+        s["spell;created=1223780"] = {"Guerrera polar", "CRAFTING"}
+        s["spell;created=1223784"] = {"Brazales polares", "CRAFTING"}
+        s["spell;created=1223782"] = {"Guantes polares", "CRAFTING"}
+        s["quest;reward=86445"] = {"[The Wrath of Neptulon]", "Tanaris"}
+        s["npc;sold=16113"] = {"Padre Íñigo Montoya", "Tierras de la Peste del Este"}
+        s["spell;created=1223760"] = {"Jubón glacial", "CRAFTING"}
+        s["spell;created=1223764"] = {"Guantes glaciales", "CRAFTING"}
+        s["npc;sold=16131"] = {"Rohan el Asesino", "Tierras de la Peste del Este"}
+        s["spell;created=1214137"] = {"Buscacorazones de obsidiana", "CRAFTING"}
+        s["npc;sold=16134"] = {"Rimblat Rompeterra", "Tierras de la Peste del Este"}
+        s["npc;drop=238678"] = {"Pok'o Kmun <La Pena Alada>", "Criptas de Karazhan"}
+        s["spell;created=1223766"] = {"Muñequeras glaciales", "CRAFTING"}
+        s["spell;created=1223772"] = {"Muñequeras escarchadas", "CRAFTING"}
+        s["npc;sold=16133"] = {"Mataus el Colérico", "Tierras de la Peste del Este"}
+        s["spell;created=1213504"] = {"Hoja sabia de obsidiana", "CRAFTING"}
+        s["spell;created=1213527"] = {"Capucha vampírica", "CRAFTING"}
+        s["spell;created=1213530"] = {"Chal vampírico", "CRAFTING"}
+        s["npc;sold=16112"] = {"Korfax, Campeón de la Luz", "Tierras de la Peste del Este"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -2884,6 +3053,62 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"Touché par le Vide", "CRAFTING"}
         s["spell;created=1213633"] = {"Totem enchanté", "CRAFTING"}
         s["spell;created=1216381"] = {"Touché par le Vide", "CRAFTING"}
+        s["npc;sold=16135"] = {"Rayne <Le Cercle cénarien>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=16061"] = {"Instructeur Razuvious", "Naxxramas"}
+        s["quest;reward=87360"] = {"La chute de Kel’Thuzad", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "Cryptes de Karazhan"}
+        s["npc;drop=16143"] = {"Ombre funeste", "Terres foudroyées (Blasted Lands)"}
+        s["npc;drop=16380"] = {"Sorcière des ossements", "Steppes ardentes"}
+        s["quest;reward=87438"] = {"[Argent Dawn Leather Gloves]", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "Cryptes de Karazhan"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=16060"] = {"Gothik le Moissonneur", "Naxxramas"}
+        s["npc;drop=15936"] = {"Heigan l'Impur", "Naxxramas"}
+        s["npc;drop=15989"] = {"Saphiron", "Naxxramas"}
+        s["npc;drop=14697"] = {"Horreur chancelante", "Steppes ardentes"}
+        s["npc;drop=237439"] = {"[Kharon]", "Cryptes de Karazhan"}
+        s["quest;reward=87440"] = {"[Argent Dawn Cloth Gloves]", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=15953"] = {"Grande veuve Faerlina", "Naxxramas"}
+        s["npc;drop=15954"] = {"Noth le Porte-peste", "Naxxramas"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "Cryptes de Karazhan"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "Cryptes de Karazhan"}
+        s["spell;created=1223762"] = {"Cape glaciaire", "CRAFTING"}
+        s["npc;drop=16028"] = {"Le Recousu", "Naxxramas"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "Cryptes de Karazhan"}
+        s["npc;drop=238560"] = {"[The Warden]", "Cryptes de Karazhan"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "Cryptes de Karazhan"}
+        s["spell;created=24179"] = {"Création du Sceau de l'Aube", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "Cryptes de Karazhan"}
+        s["quest;reward=88728"] = {"Armes de bataille épiques – Exalté auprès de l’Aube", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "Cryptes de Karazhan"}
+        s["npc;drop=16379"] = {"Esprit de damné", "Steppes ardentes"}
+        s["npc;sold=16132"] = {"Veneur Leopold <La Croisade écarlate>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["quest;reward=87435"] = {"Gants en mailles de l’Aube d’argent", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;sold=16116"] = {"Archimage Angela Dosantos <Fraternité de la Lumière>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;sold=16115"] = {"Commandant Eligor Dawnbringer <Fraternité de la Lumière>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["quest;reward=87434"] = {"[Argent Dawn Plate Gloves]", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["spell;created=1223787"] = {"Cuirasse plaie-de-glace", "CRAFTING"}
+        s["spell;created=1223791"] = {"Brassards plaie-de-glace", "CRAFTING"}
+        s["spell;created=1223789"] = {"Gantelets plaie-de-glace", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["spell;created=1223780"] = {"Tunique polaire", "CRAFTING"}
+        s["spell;created=1223784"] = {"Brassards polaires", "CRAFTING"}
+        s["spell;created=1223782"] = {"Gants polaires", "CRAFTING"}
+        s["quest;reward=86445"] = {"Le courroux de Neptulon", "Tanaris"}
+        s["npc;sold=16113"] = {"Père Inigo Montoy <Fraternité de la Lumière>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["spell;created=1223760"] = {"Gilet glaciaire", "CRAFTING"}
+        s["spell;created=1223764"] = {"Gants glaciaires", "CRAFTING"}
+        s["npc;sold=16131"] = {"Rohan l'Assassin <La Croisade écarlate>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["spell;created=1214137"] = {"Crève-cœur en obsidienne", "CRAFTING"}
+        s["npc;sold=16134"] = {"Rimblat Brise-terre <Le Cercle terrestre>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["npc;drop=238678"] = {"Peuk'ommun <Le Chagrin ailé>", "Cryptes de Karazhan"}
+        s["spell;created=1223766"] = {"Poignets glaciaires", "CRAFTING"}
+        s["spell;created=1223772"] = {"Poignets givrés", "CRAFTING"}
+        s["npc;sold=16133"] = {"Mataus la Voix du courroux <La Croisade écarlate>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["spell;created=1213504"] = {"Lame feuille-de-saule d’obsidienne", "CRAFTING"}
+        s["spell;created=1213527"] = {"Capuche vampirique", "CRAFTING"}
+        s["spell;created=1213530"] = {"Châle vampirique", "CRAFTING"}
+        s["npc;sold=16112"] = {"Korfax, Champion de la Lumière <Fraternité de la Lumière>", "Maleterres de l'est (Eastern Plaguelands)"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -3321,6 +3546,50 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"[Void-Touched]", "CRAFTING"}
         s["spell;created=1213633"] = {"[Enchanted Totem]", "CRAFTING"}
         s["spell;created=1216381"] = {"[Void-Touched]", "CRAFTING"}
+        s["npc;sold=16135"] = {"Rayne", "Eastern Plaguelands"}
+        s["quest;reward=87360"] = {"[The Fall of Kel'Thuzad]", "Eastern Plaguelands"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "Karazhan Crypts"}
+        s["quest;reward=87438"] = {"[Argent Dawn Leather Gloves]", "Eastern Plaguelands"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "Karazhan Crypts"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "Eastern Plaguelands"}
+        s["npc;drop=237439"] = {"[Kharon]", "Karazhan Crypts"}
+        s["quest;reward=87440"] = {"[Argent Dawn Cloth Gloves]", "Eastern Plaguelands"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "Karazhan Crypts"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "Karazhan Crypts"}
+        s["spell;created=1223762"] = {"[Glacial Cloak]", "CRAFTING"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "Karazhan Crypts"}
+        s["npc;drop=238560"] = {"[The Warden]", "Karazhan Crypts"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "Karazhan Crypts"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "Karazhan Crypts"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "Eastern Plaguelands"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "Karazhan Crypts"}
+        s["npc;sold=16132"] = {"Huntsman Leopold", "Eastern Plaguelands"}
+        s["quest;reward=87435"] = {"[Argent Dawn Mail Gloves]", "Eastern Plaguelands"}
+        s["npc;sold=16116"] = {"Archmage Angela Dosantos", "Eastern Plaguelands"}
+        s["npc;sold=16115"] = {"Commander Eligor Dawnbringer", "Eastern Plaguelands"}
+        s["quest;reward=87434"] = {"[Argent Dawn Plate Gloves]", "Eastern Plaguelands"}
+        s["spell;created=1223787"] = {"[Icebane Breastplate]", "CRAFTING"}
+        s["spell;created=1223791"] = {"[Icebane Bracers]", "CRAFTING"}
+        s["spell;created=1223789"] = {"[Icebane Gauntlets]", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "Eastern Plaguelands"}
+        s["spell;created=1223780"] = {"[Polar Tunic]", "CRAFTING"}
+        s["spell;created=1223784"] = {"[Polar Bracers]", "CRAFTING"}
+        s["spell;created=1223782"] = {"[Polar Gloves]", "CRAFTING"}
+        s["quest;reward=86445"] = {"[The Wrath of Neptulon]", "Tanaris"}
+        s["npc;sold=16113"] = {"Father Inigo Montoy", "Eastern Plaguelands"}
+        s["spell;created=1223760"] = {"[Glacial Vest]", "CRAFTING"}
+        s["spell;created=1223764"] = {"[Glacial Gloves]", "CRAFTING"}
+        s["npc;sold=16131"] = {"Rohan the Assassin", "Eastern Plaguelands"}
+        s["spell;created=1214137"] = {"[Obsidian Heartseeker]", "CRAFTING"}
+        s["npc;sold=16134"] = {"Rimblat Earthshatter", "Eastern Plaguelands"}
+        s["npc;drop=238678"] = {"[Unk'omon] <[The Winged Sorrow]>", "Karazhan Crypts"}
+        s["spell;created=1223766"] = {"[Glacial Wrists]", "CRAFTING"}
+        s["spell;created=1223772"] = {"[Frosty Wrists]", "CRAFTING"}
+        s["npc;sold=16133"] = {"Mataus the Wrathcaster", "Eastern Plaguelands"}
+        s["spell;created=1213504"] = {"[Obsidian Sageblade]", "CRAFTING"}
+        s["spell;created=1213527"] = {"[Vampiric Cowl]", "CRAFTING"}
+        s["spell;created=1213530"] = {"[Vampiric Shawl]", "CRAFTING"}
+        s["npc;sold=16112"] = {"Korfax, Champion of the Light", "Eastern Plaguelands"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -4084,6 +4353,66 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"공허의 손길", "CRAFTING"}
         s["spell;created=1213633"] = {"마력 깃든 토템", "CRAFTING"}
         s["spell;created=1216381"] = {"공허의 손길", "CRAFTING"}
+        s["npc;sold=16135"] = {"레이네 <세나리온 의회>", "동부 역병지대"}
+        s["npc;drop=16061"] = {"훈련교관 라주비어스", "낙스라마스"}
+        s["quest;reward=87360"] = {"[The Fall of Kel'Thuzad]", "동부 역병지대"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "카라잔 납골당"}
+        s["npc;drop=16143"] = {"파멸의 망령", "저주받은 땅"}
+        s["npc;drop=16380"] = {"스컬지 해골마술사", "불타는 평원"}
+        s["quest;reward=87438"] = {"[Argent Dawn Leather Gloves]", "동부 역병지대"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "카라잔 납골당"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "동부 역병지대"}
+        s["npc;drop=16060"] = {"영혼의 착취자 고딕", "낙스라마스"}
+        s["npc;drop=15936"] = {"부정의 헤이건", "낙스라마스"}
+        s["npc;drop=15931"] = {"그라불루스", "낙스라마스"}
+        s["npc;drop=15932"] = {"글루스", "낙스라마스"}
+        s["npc;drop=15989"] = {"사피론", "낙스라마스"}
+        s["npc;drop=14697"] = {"성큼걸이 누더기골렘", "불타는 평원"}
+        s["npc;drop=237439"] = {"[Kharon]", "카라잔 납골당"}
+        s["quest;reward=87440"] = {"[Argent Dawn Cloth Gloves]", "동부 역병지대"}
+        s["npc;drop=15928"] = {"타디우스", "낙스라마스"}
+        s["npc;drop=15953"] = {"귀부인 팰리나", "낙스라마스"}
+        s["npc;drop=15956"] = {"아눕레칸", "낙스라마스"}
+        s["npc;drop=15954"] = {"역병술사 노스", "낙스라마스"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "카라잔 납골당"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "카라잔 납골당"}
+        s["spell;created=1223762"] = {"빙하의 망토", "CRAFTING"}
+        s["npc;drop=16028"] = {"패치워크", "낙스라마스"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "카라잔 납골당"}
+        s["npc;drop=238560"] = {"[The Warden]", "카라잔 납골당"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "카라잔 납골당"}
+        s["spell;created=24179"] = {"여명의 문장 생성", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "카라잔 납골당"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "동부 역병지대"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "카라잔 납골당"}
+        s["npc;drop=16379"] = {"저주받은 자의 영혼", "불타는 평원"}
+        s["npc;sold=16132"] = {"사냥꾼 레오폴드 <붉은 십자군>", "동부 역병지대"}
+        s["quest;reward=87435"] = {"은빛 여명회 사슬 장갑", "동부 역병지대"}
+        s["npc;sold=16116"] = {"대마법사 안젤라 도산토스 <빛의 결사단>", "동부 역병지대"}
+        s["npc;sold=16115"] = {"사령관 엘리고르 돈브링어 <빛의 결사단>", "동부 역병지대"}
+        s["quest;reward=87434"] = {"[Argent Dawn Plate Gloves]", "동부 역병지대"}
+        s["spell;created=1223787"] = {"얼음막이 흉갑", "CRAFTING"}
+        s["spell;created=1223791"] = {"얼음막이 팔보호구", "CRAFTING"}
+        s["spell;created=1223789"] = {"얼음막이 건틀릿", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "동부 역병지대"}
+        s["spell;created=1223780"] = {"북극의 튜닉", "CRAFTING"}
+        s["spell;created=1223784"] = {"북극의 팔보호구", "CRAFTING"}
+        s["spell;created=1223782"] = {"북극의 장갑", "CRAFTING"}
+        s["quest;reward=86445"] = {"넵튤론의 분노", "타나리스"}
+        s["npc;sold=16113"] = {"신부 이니고 몬토이 <빛의 결사단>", "동부 역병지대"}
+        s["spell;created=1223760"] = {"빙하의 조끼", "CRAFTING"}
+        s["spell;created=1223764"] = {"빙하의 장갑", "CRAFTING"}
+        s["npc;sold=16131"] = {"암살자 로한 <붉은 십자군>", "동부 역병지대"}
+        s["spell;created=1214137"] = {"흑요석 심장적출 단검", "CRAFTING"}
+        s["npc;sold=16134"] = {"림블랫 어스쉐터 <속세의 고리회>", "동부 역병지대"}
+        s["npc;drop=238678"] = {"[Unk'omon] <[The Winged Sorrow]>", "카라잔 납골당"}
+        s["spell;created=1223766"] = {"빙하의 손목보호대", "CRAFTING"}
+        s["spell;created=1223772"] = {"싸늘한 손목보호구", "CRAFTING"}
+        s["npc;sold=16133"] = {"분노의 마타우스 <붉은 십자군>", "동부 역병지대"}
+        s["spell;created=1213504"] = {"흑요석 현자의 검", "CRAFTING"}
+        s["spell;created=1213527"] = {"흡혈의 수도두건", "CRAFTING"}
+        s["spell;created=1213530"] = {"흡혈의 어깨망토", "CRAFTING"}
+        s["npc;sold=16112"] = {"빛의 용사 코팩스 <빛의 결사단>", "동부 역병지대"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -4793,6 +5122,61 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"Tocado pelo Caos", "CRAFTING"}
         s["spell;created=1213633"] = {"Totem Encantado", "CRAFTING"}
         s["spell;created=1216381"] = {"Tocado pelo Caos", "CRAFTING"}
+        s["npc;sold=16135"] = {"Rayne", "Terras Pestilentas Orientais"}
+        s["npc;drop=16061"] = {"Instrutor Razúvio", "Naxxramas"}
+        s["quest;reward=87360"] = {"[The Fall of Kel'Thuzad]", "Terras Pestilentas Orientais"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "Criptas de Karazhan"}
+        s["npc;drop=16143"] = {"Sombra da Perdição", "Barreira do Inferno"}
+        s["npc;drop=16380"] = {"Bruxa dos Ossos", "Estepes Ardentes"}
+        s["quest;reward=87438"] = {"[Argent Dawn Leather Gloves]", "Terras Pestilentas Orientais"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "Criptas de Karazhan"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "Terras Pestilentas Orientais"}
+        s["npc;drop=16060"] = {"Gothik, o Ceifador", "Naxxramas"}
+        s["npc;drop=15936"] = {"Heigan, o Sujo", "Naxxramas"}
+        s["npc;drop=14697"] = {"Horror Claudicante", "Estepes Ardentes"}
+        s["npc;drop=237439"] = {"[Kharon]", "Criptas de Karazhan"}
+        s["quest;reward=87440"] = {"[Argent Dawn Cloth Gloves]", "Terras Pestilentas Orientais"}
+        s["npc;drop=15953"] = {"Grã-viúva Faerlina", "Naxxramas"}
+        s["npc;drop=15954"] = {"Noth, o Pestífero", "Naxxramas"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "Criptas de Karazhan"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "Criptas de Karazhan"}
+        s["spell;created=1223762"] = {"Manto Glacial", "CRAFTING"}
+        s["npc;drop=16028"] = {"Retalhoso", "Naxxramas"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "Criptas de Karazhan"}
+        s["npc;drop=238560"] = {"[The Warden]", "Criptas de Karazhan"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "Criptas de Karazhan"}
+        s["spell;created=24179"] = {"Criar Selo da Aurora", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "Criptas de Karazhan"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "Terras Pestilentas Orientais"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "Criptas de Karazhan"}
+        s["npc;drop=16379"] = {"Espírito dos Malditos", "Estepes Ardentes"}
+        s["npc;sold=16132"] = {"Guarda-caça Leopold", "Terras Pestilentas Orientais"}
+        s["quest;reward=87435"] = {"[Argent Dawn Mail Gloves]", "Terras Pestilentas Orientais"}
+        s["npc;sold=16116"] = {"Arquimaga Ângela Santoro", "Terras Pestilentas Orientais"}
+        s["npc;sold=16115"] = {"Commander Eligor Dawnbringer", "Terras Pestilentas Orientais"}
+        s["quest;reward=87434"] = {"[Argent Dawn Plate Gloves]", "Terras Pestilentas Orientais"}
+        s["spell;created=1223787"] = {"Peitoral da Perdição Gélida", "CRAFTING"}
+        s["spell;created=1223791"] = {"Braçadeiras da Perdição Gélida", "CRAFTING"}
+        s["spell;created=1223789"] = {"Manoplas da Perdição Gélida", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "Terras Pestilentas Orientais"}
+        s["spell;created=1223780"] = {"Túnica Polar", "CRAFTING"}
+        s["spell;created=1223784"] = {"Braçadeiras Polares", "CRAFTING"}
+        s["spell;created=1223782"] = {"Luvas Polares", "CRAFTING"}
+        s["quest;reward=86445"] = {"[The Wrath of Neptulon]", "Tanaris"}
+        s["npc;sold=16113"] = {"Padre Inigo Montoy", "Terras Pestilentas Orientais"}
+        s["spell;created=1223760"] = {"Colete Glacial", "CRAFTING"}
+        s["spell;created=1223764"] = {"Luvas Glaciais", "CRAFTING"}
+        s["npc;sold=16131"] = {"Rohan, o Assassino", "Terras Pestilentas Orientais"}
+        s["spell;created=1214137"] = {"Acerta-peito Obsidiano", "CRAFTING"}
+        s["npc;sold=16134"] = {"Rimblat Quebraterra", "Terras Pestilentas Orientais"}
+        s["npc;drop=238678"] = {"[Unk'omon] <[The Winged Sorrow]>", "Criptas de Karazhan"}
+        s["spell;created=1223766"] = {"Pulsos Glaciais", "CRAFTING"}
+        s["spell;created=1223772"] = {"Pulsos Gélidos", "CRAFTING"}
+        s["npc;sold=16133"] = {"Mataus, o Arauto da Ira", "Terras Pestilentas Orientais"}
+        s["spell;created=1213504"] = {"Lâmina do Sábio Obsidiana", "CRAFTING"}
+        s["spell;created=1213527"] = {"Capucho Vampírico", "CRAFTING"}
+        s["spell;created=1213530"] = {"Xale Vampírico", "CRAFTING"}
+        s["npc;sold=16112"] = {"Korfax, Champion of the Light", "Terras Pestilentas Orientais"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -5556,6 +5940,66 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"Метка Бездны", "CRAFTING"}
         s["spell;created=1213633"] = {"Зачарованный тотем", "CRAFTING"}
         s["spell;created=1216381"] = {"Метка Бездны", "CRAFTING"}
+        s["npc;sold=16135"] = {"Райн <Круг Кенария>", "Восточные Чумные земли"}
+        s["npc;drop=16061"] = {"Инструктор Разувиус", "Наксрамас"}
+        s["quest;reward=87360"] = {"[The Fall of Kel'Thuzad]", "Восточные Чумные земли"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "Склепы Каражана"}
+        s["npc;drop=16143"] = {"Тень Рока", "Выжженные земли"}
+        s["npc;drop=16380"] = {"Костяной ведьмак", "Пылающие степи"}
+        s["quest;reward=87438"] = {"[Argent Dawn Leather Gloves]", "Восточные Чумные земли"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "Склепы Каражана"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "Восточные Чумные земли"}
+        s["npc;drop=16060"] = {"Готик Жнец", "Наксрамас"}
+        s["npc;drop=15936"] = {"Хейган Нечестивый", "Наксрамас"}
+        s["npc;drop=15931"] = {"Гроббулус", "Наксрамас"}
+        s["npc;drop=15932"] = {"Глут", "Наксрамас"}
+        s["npc;drop=15989"] = {"Сапфирон", "Наксрамас"}
+        s["npc;drop=14697"] = {"Неуклюжий ужас", "Пылающие степи"}
+        s["npc;drop=237439"] = {"[Kharon]", "Склепы Каражана"}
+        s["quest;reward=87440"] = {"[Argent Dawn Cloth Gloves]", "Восточные Чумные земли"}
+        s["npc;drop=15928"] = {"Таддиус", "Наксрамас"}
+        s["npc;drop=15953"] = {"Великая вдова Фарлина", "Наксрамас"}
+        s["npc;drop=15956"] = {"Ануб'Рекан", "Наксрамас"}
+        s["npc;drop=15954"] = {"Нот Чумной", "Наксрамас"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "Склепы Каражана"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "Склепы Каражана"}
+        s["spell;created=1223762"] = {"Ледовый плащ", "CRAFTING"}
+        s["npc;drop=16028"] = {"Лоскутик", "Наксрамас"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "Склепы Каражана"}
+        s["npc;drop=238560"] = {"[The Warden]", "Склепы Каражана"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "Склепы Каражана"}
+        s["spell;created=24179"] = {"Создание печати Рассвета", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "Склепы Каражана"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "Восточные Чумные земли"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "Склепы Каражана"}
+        s["npc;drop=16379"] = {"Дух проклятого", "Пылающие степи"}
+        s["npc;sold=16132"] = {"Охотник Леопольд <Алый орден>", "Восточные Чумные земли"}
+        s["quest;reward=87435"] = {"[Argent Dawn Mail Gloves]", "Восточные Чумные земли"}
+        s["npc;sold=16116"] = {"Верховный маг Анджела Досантос <Братство Света>", "Восточные Чумные земли"}
+        s["npc;sold=16115"] = {"Командир Элигор Утросвет <Братство Света>", "Восточные Чумные земли"}
+        s["quest;reward=87434"] = {"[Argent Dawn Plate Gloves]", "Восточные Чумные земли"}
+        s["spell;created=1223787"] = {"Кираса Ледяной погибели", "CRAFTING"}
+        s["spell;created=1223791"] = {"Наручи Ледяной погибели", "CRAFTING"}
+        s["spell;created=1223789"] = {"Рукавицы Ледяной погибели", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "Восточные Чумные земли"}
+        s["spell;created=1223780"] = {"Снежный мундир", "CRAFTING"}
+        s["spell;created=1223784"] = {"Снежные наручи", "CRAFTING"}
+        s["spell;created=1223782"] = {"Снежные перчатки", "CRAFTING"}
+        s["quest;reward=86445"] = {"[The Wrath of Neptulon]", "Танарис"}
+        s["npc;sold=16113"] = {"Отец Иниго Монтой <Братство Света>", "Восточные Чумные земли"}
+        s["spell;created=1223760"] = {"Ледовый жилет", "CRAFTING"}
+        s["spell;created=1223764"] = {"Ледовые перчатки", "CRAFTING"}
+        s["npc;sold=16131"] = {"Роган Убийца <Алый орден>", "Восточные Чумные земли"}
+        s["spell;created=1214137"] = {"Обсидиановый искатель сердец", "CRAFTING"}
+        s["npc;sold=16134"] = {"Римблат Землекрушитель <Служители Земли>", "Восточные Чумные земли"}
+        s["npc;drop=238678"] = {"[Unk'omon] <[The Winged Sorrow]>", "Склепы Каражана"}
+        s["spell;created=1223766"] = {"Ледовые накулачники", "CRAFTING"}
+        s["spell;created=1223772"] = {"Морозные накулачники", "CRAFTING"}
+        s["npc;sold=16133"] = {"Матеус Заклинатель Гнева <Алый орден>", "Восточные Чумные земли"}
+        s["spell;created=1213504"] = {"Обсидиановый клинок мудреца", "CRAFTING"}
+        s["spell;created=1213527"] = {"Вампирский клобук", "CRAFTING"}
+        s["spell;created=1213530"] = {"Вампирский платок", "CRAFTING"}
+        s["npc;sold=16112"] = {"Корфакс, Воитель Света <Братство Света>", "Восточные Чумные земли"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -6319,6 +6763,66 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"虚触", "CRAFTING"}
         s["spell;created=1213633"] = {"魔化图腾", "CRAFTING"}
         s["spell;created=1216381"] = {"虚触", "CRAFTING"}
+        s["npc;sold=16135"] = {"莱茵 <塞纳里奥议会>", "东瘟疫之地"}
+        s["npc;drop=16061"] = {"教官拉苏维奥斯", "纳克萨玛斯"}
+        s["quest;reward=87360"] = {"克尔苏加德的末日", "东瘟疫之地"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "卡拉赞墓穴"}
+        s["npc;drop=16143"] = {"末日之影", "诅咒之地"}
+        s["npc;drop=16380"] = {"骨巫", "燃烧平原"}
+        s["quest;reward=87438"] = {"银色黎明皮甲手套", "东瘟疫之地"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "卡拉赞墓穴"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "东瘟疫之地"}
+        s["npc;drop=16060"] = {"收割者戈提克", "纳克萨玛斯"}
+        s["npc;drop=15936"] = {"肮脏的希尔盖", "纳克萨玛斯"}
+        s["npc;drop=15931"] = {"格罗布鲁斯", "纳克萨玛斯"}
+        s["npc;drop=15932"] = {"格拉斯", "纳克萨玛斯"}
+        s["npc;drop=15989"] = {"萨菲隆", "纳克萨玛斯"}
+        s["npc;drop=14697"] = {"笨拙的憎恶", "燃烧平原"}
+        s["npc;drop=237439"] = {"[Kharon]", "卡拉赞墓穴"}
+        s["quest;reward=87440"] = {"银色黎明布甲手套", "东瘟疫之地"}
+        s["npc;drop=15928"] = {"塔迪乌斯", "纳克萨玛斯"}
+        s["npc;drop=15953"] = {"黑女巫法琳娜", "纳克萨玛斯"}
+        s["npc;drop=15956"] = {"阿努布雷坎", "纳克萨玛斯"}
+        s["npc;drop=15954"] = {"瘟疫使者诺斯", "纳克萨玛斯"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "卡拉赞墓穴"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "卡拉赞墓穴"}
+        s["spell;created=1223762"] = {"冰川披风", "CRAFTING"}
+        s["npc;drop=16028"] = {"帕奇维克", "纳克萨玛斯"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "卡拉赞墓穴"}
+        s["npc;drop=238560"] = {"[The Warden]", "卡拉赞墓穴"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "卡拉赞墓穴"}
+        s["spell;created=24179"] = {"制造黎明徽记", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "卡拉赞墓穴"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "东瘟疫之地"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "卡拉赞墓穴"}
+        s["npc;drop=16379"] = {"诅咒者之魂", "燃烧平原"}
+        s["npc;sold=16132"] = {"猎手雷奥普德 <血色十字军>", "东瘟疫之地"}
+        s["quest;reward=87435"] = {"[Argent Dawn Mail Gloves]", "东瘟疫之地"}
+        s["npc;sold=16116"] = {"大法师安吉拉·杜萨图斯 <圣光兄弟会>", "东瘟疫之地"}
+        s["npc;sold=16115"] = {"指挥官埃里戈尔·黎明使者 <圣光兄弟会>", "东瘟疫之地"}
+        s["quest;reward=87434"] = {"银色黎明板甲手套", "东瘟疫之地"}
+        s["spell;created=1223787"] = {"破冰胸甲", "CRAFTING"}
+        s["spell;created=1223791"] = {"破冰护腕", "CRAFTING"}
+        s["spell;created=1223789"] = {"破冰护手", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "东瘟疫之地"}
+        s["spell;created=1223780"] = {"北极外套", "CRAFTING"}
+        s["spell;created=1223784"] = {"北极护腕", "CRAFTING"}
+        s["spell;created=1223782"] = {"北极手套", "CRAFTING"}
+        s["quest;reward=86445"] = {"[The Wrath of Neptulon]", "塔纳利斯"}
+        s["npc;sold=16113"] = {"英尼戈·蒙托尔神父 <圣光兄弟会>", "东瘟疫之地"}
+        s["spell;created=1223760"] = {"冰川外衣", "CRAFTING"}
+        s["spell;created=1223764"] = {"冰川手套", "CRAFTING"}
+        s["npc;sold=16131"] = {"杀手洛汗 <血色十字军>", "东瘟疫之地"}
+        s["spell;created=1214137"] = {"黑曜石觅心者", "CRAFTING"}
+        s["npc;sold=16134"] = {"雷布拉特·碎地者 <陶土议会>", "东瘟疫之地"}
+        s["npc;drop=238678"] = {"[Unk'omon] <[The Winged Sorrow]>", "卡拉赞墓穴"}
+        s["spell;created=1223766"] = {"冰川护腕", "CRAFTING"}
+        s["spell;created=1223772"] = {"冰霜护腕", "CRAFTING"}
+        s["npc;sold=16133"] = {"愤怒者玛塔乌斯 <血色十字军>", "东瘟疫之地"}
+        s["spell;created=1213504"] = {"黑曜石先知之刃", "CRAFTING"}
+        s["spell;created=1213527"] = {"吸血鬼风帽", "CRAFTING"}
+        s["spell;created=1213530"] = {"吸血鬼披巾", "CRAFTING"}
+        s["npc;sold=16112"] = {"科尔法克斯，圣光之勇士 <圣光兄弟会>", "东瘟疫之地"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -7082,5 +7586,65 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1216364"] = {"虚触", "CRAFTING"}
         s["spell;created=1213633"] = {"魔化图腾", "CRAFTING"}
         s["spell;created=1216381"] = {"虚触", "CRAFTING"}
+        s["npc;sold=16135"] = {"莱茵 <塞纳里奥议会>", "东瘟疫之地"}
+        s["npc;drop=16061"] = {"教官拉苏维奥斯", "纳克萨玛斯"}
+        s["quest;reward=87360"] = {"克尔苏加德的末日", "东瘟疫之地"}
+        s["npc;drop=237964"] = {"[Harbinger of Sin]", "卡拉赞墓穴"}
+        s["npc;drop=16143"] = {"末日之影", "诅咒之地"}
+        s["npc;drop=16380"] = {"骨巫", "燃烧平原"}
+        s["quest;reward=87438"] = {"银色黎明皮甲手套", "东瘟疫之地"}
+        s["npc;drop=238233"] = {"[Kaigy Maryla] <[The Failed Apprentice]>", "卡拉赞墓穴"}
+        s["quest;reward=88723"] = {"[Superior Armaments of Battle - Revered Amongst the Dawn]", "东瘟疫之地"}
+        s["npc;drop=16060"] = {"收割者戈提克", "纳克萨玛斯"}
+        s["npc;drop=15936"] = {"肮脏的希尔盖", "纳克萨玛斯"}
+        s["npc;drop=15931"] = {"格罗布鲁斯", "纳克萨玛斯"}
+        s["npc;drop=15932"] = {"格拉斯", "纳克萨玛斯"}
+        s["npc;drop=15989"] = {"萨菲隆", "纳克萨玛斯"}
+        s["npc;drop=14697"] = {"笨拙的憎恶", "燃烧平原"}
+        s["npc;drop=237439"] = {"[Kharon]", "卡拉赞墓穴"}
+        s["quest;reward=87440"] = {"银色黎明布甲手套", "东瘟疫之地"}
+        s["npc;drop=15928"] = {"塔迪乌斯", "纳克萨玛斯"}
+        s["npc;drop=15953"] = {"黑女巫法琳娜", "纳克萨玛斯"}
+        s["npc;drop=15956"] = {"阿努布雷坎", "纳克萨玛斯"}
+        s["npc;drop=15954"] = {"瘟疫使者诺斯", "纳克萨玛斯"}
+        s["npc;drop=238234"] = {"[Barian Maryla] <[The Failed Apprentice]>", "卡拉赞墓穴"}
+        s["npc;drop=238024"] = {"[Creeping Malison]", "卡拉赞墓穴"}
+        s["spell;created=1223762"] = {"冰川披风", "CRAFTING"}
+        s["npc;drop=16028"] = {"帕奇维克", "纳克萨玛斯"}
+        s["npc;drop=238055"] = {"[Dark Rider]", "卡拉赞墓穴"}
+        s["npc;drop=238560"] = {"[The Warden]", "卡拉赞墓穴"}
+        s["npc;drop=238638"] = {"[Echo of the Baroness]", "卡拉赞墓穴"}
+        s["spell;created=24179"] = {"制造黎明徽记", "CRAFTING"}
+        s["npc;drop=238213"] = {"[Sairuh Maryla] <[The Failed Apprentice]>", "卡拉赞墓穴"}
+        s["quest;reward=88728"] = {"[Epic Armaments of Battle - Exalted Amongst the Dawn]", "东瘟疫之地"}
+        s["npc;drop=238511"] = {"[The Gravekeeper]", "卡拉赞墓穴"}
+        s["npc;drop=16379"] = {"诅咒者之魂", "燃烧平原"}
+        s["npc;sold=16132"] = {"猎手雷奥普德 <血色十字军>", "东瘟疫之地"}
+        s["quest;reward=87435"] = {"[Argent Dawn Mail Gloves]", "东瘟疫之地"}
+        s["npc;sold=16116"] = {"大法师安吉拉·杜萨图斯 <圣光兄弟会>", "东瘟疫之地"}
+        s["npc;sold=16115"] = {"指挥官埃里戈尔·黎明使者 <圣光兄弟会>", "东瘟疫之地"}
+        s["quest;reward=87434"] = {"银色黎明板甲手套", "东瘟疫之地"}
+        s["spell;created=1223787"] = {"破冰胸甲", "CRAFTING"}
+        s["spell;created=1223791"] = {"破冰护腕", "CRAFTING"}
+        s["spell;created=1223789"] = {"破冰护手", "CRAFTING"}
+        s["quest;reward=88730"] = {"[The Only Song I Know...]", "东瘟疫之地"}
+        s["spell;created=1223780"] = {"北极外套", "CRAFTING"}
+        s["spell;created=1223784"] = {"北极护腕", "CRAFTING"}
+        s["spell;created=1223782"] = {"北极手套", "CRAFTING"}
+        s["quest;reward=86445"] = {"[The Wrath of Neptulon]", "塔纳利斯"}
+        s["npc;sold=16113"] = {"英尼戈·蒙托尔神父 <圣光兄弟会>", "东瘟疫之地"}
+        s["spell;created=1223760"] = {"冰川外衣", "CRAFTING"}
+        s["spell;created=1223764"] = {"冰川手套", "CRAFTING"}
+        s["npc;sold=16131"] = {"杀手洛汗 <血色十字军>", "东瘟疫之地"}
+        s["spell;created=1214137"] = {"黑曜石觅心者", "CRAFTING"}
+        s["npc;sold=16134"] = {"雷布拉特·碎地者 <陶土议会>", "东瘟疫之地"}
+        s["npc;drop=238678"] = {"[Unk'omon] <[The Winged Sorrow]>", "卡拉赞墓穴"}
+        s["spell;created=1223766"] = {"冰川护腕", "CRAFTING"}
+        s["spell;created=1223772"] = {"冰霜护腕", "CRAFTING"}
+        s["npc;sold=16133"] = {"愤怒者玛塔乌斯 <血色十字军>", "东瘟疫之地"}
+        s["spell;created=1213504"] = {"黑曜石先知之刃", "CRAFTING"}
+        s["spell;created=1213527"] = {"吸血鬼风帽", "CRAFTING"}
+        s["spell;created=1213530"] = {"吸血鬼披巾", "CRAFTING"}
+        s["npc;sold=16112"] = {"科尔法克斯，圣光之勇士 <圣光兄弟会>", "东瘟疫之地"}
     end
 end

@@ -1,13 +1,15 @@
 ## Interface: 40401, 40402
-## Version: 0.12.15
-## Title: SpecBisTooltip |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
+## Version: 0.12.16
+## Title: S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r  |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
+## X-Category: D4KiR
 ## DefaultState: enabled
 ## SavedVariables: SBTTAB
 ## SavedVariablesPerCharacter: SBTTABPC
 ## X-Curse-Project-ID: 827800
 ## X-Wago-ID: 56n9g2N9
+## IconTexture: 136031
 
 libs\D4Lib\D4Lib.xml
 

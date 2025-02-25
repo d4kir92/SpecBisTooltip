@@ -1,5 +1,5 @@
 -- By D4KiR
-local AddonName, SpecBisTooltip = ...
+local _, SpecBisTooltip = ...
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
 local invalidEquipSlots = {}
 invalidEquipSlots["INVTYPE_TABARD"] = true
@@ -12,6 +12,8 @@ SBTSetup:SetScript(
 	"OnEvent",
 	function(self, event, ...)
 		if event == "PLAYER_LOGIN" then
+			SBTTAB = SBTTAB or {}
+			SpecBisTooltip:SetVersion(136031, "0.12.16")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil
@@ -21,7 +23,7 @@ SBTSetup:SetScript(
 					["icon"] = 136031,
 					["var"] = mmbtn,
 					["dbtab"] = SBTTAB,
-					["vTT"] = {{"SpecBisTooltip |T136031:16:16:0:0|t", "v|cff3FC7EB0.12.15"}, {"Leftclick", "Open Settings"}, {"Rightclick", "Hide Minimap Icon"}},
+					["vTT"] = {{"|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r", "v|cff3FC7EB" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
 					["funcL"] = function()
 						SpecBisTooltip:ToggleSettings()
 					end,
@@ -91,15 +93,13 @@ function SpecBisTooltip:GetSettingsContent(parent)
 end
 
 function SpecBisTooltip:InitSettings()
-	SBTTAB = SBTTAB or {}
-	SpecBisTooltip:SetVersion(AddonName, 136031, "0.12.15")
 	sbt_settings = SpecBisTooltip:CreateFrame(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
 			["sw"] = 520,
 			["sh"] = 520,
-			["title"] = format("SpecBisTooltip |T136031:16:16:0:0|t v|cff3FC7EB%s", "0.12.15")
+			["title"] = format("|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r v|cff3FC7EB%s", SpecBisTooltip:GetVersion())
 		}
 	)
 
@@ -121,7 +121,7 @@ function SpecBisTooltip:InitSettings()
 	SpecBisTooltip:GetSettingsContent(sbt_settings.SC)
 	local frame = CreateFrame("Frame")
 	SpecBisTooltip:GetSettingsContent(frame)
-	local category = Settings.RegisterCanvasLayoutCategory(frame, "SpecBisTooltip |T136031:16:16:0:0|t")
+	local category = Settings.RegisterCanvasLayoutCategory(frame, "|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r")
 	Settings.RegisterAddOnCategory(category)
 end
 
@@ -893,7 +893,7 @@ local function OnTooltipSetItem(tooltip, data)
 
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
 	if SpecBisTooltip.DEBUG then
-		tooltip:AddDoubleLine("SpecBisTooltip ItemId: " .. id)
+		tooltip:AddDoubleLine("S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r  ItemId: " .. id)
 	end
 
 	if specId and icon then

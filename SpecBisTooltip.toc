@@ -4,10 +4,11 @@
 ## Interface-Cata: 40401, 40402
 ## Interface: 110007, 110100
 
-## Version: 0.12.15
-## Title: SpecBisTooltip by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
+## Version: 0.12.16
+## Title: S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r  by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D4KiR
+## X-Category: D4KiR
 ## DefaultState: enabled
 ## SavedVariables: SBTTAB
 ## SavedVariablesPerCharacter: SBTTABPC

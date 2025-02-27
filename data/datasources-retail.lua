@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 18.02.2025
+-- SOURCE FROM: 27.02.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -120,6 +120,47 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=446939"] = {"Consecrated Cord", "CRAFTING"}
         s["spell;created=450229"] = {"Everforged Stabber", "CRAFTING"}
         s["npc;drop=229992"] = {"Stalagnarok", "Siren Isle"}
+        s["npc;sold=231824"] = {"Kari Bridgeblaster <Junkmaster>", "Undermine"}
+        s["npc;drop=226396"] = {"Swampface", "Operation: Floodgate"}
+        s["npc;drop=229181"] = {"Flarendo <The Furious>", "Liberation of Undermine"}
+        s["npc;drop=144246"] = {"K.U.-J.0.", "Operation: Mechagon"}
+        s["npc;drop=241526"] = {"Chrome King Gallywix", "Liberation of Undermine"}
+        s["npc;drop=228458"] = {"One-Armed Bandit", "Liberation of Undermine"}
+        s["npc;drop=228652"] = {"Rik Reverb <Official Gallywix Hype Man>", "Liberation of Undermine"}
+        s["npc;drop=164451"] = {"Dessia the Decapitator", "Theater of Pain"}
+        s["npc;drop=129227"] = {"Azerokk", "The MOTHERLODE!!"}
+        s["npc;drop=225821"] = {"The Geargrinder <Vexie's War Tank>", "Liberation of Undermine"}
+        s["npc;drop=230583"] = {"Sprocketmonger Lockenstock", "Liberation of Undermine"}
+        s["npc;drop=229953"] = {"Mug'Zee <Heads of Security>", "Liberation of Undermine"}
+        s["npc;drop=230322"] = {"Stix Bunkjunker", "Liberation of Undermine"}
+        s["npc;drop=131227"] = {"Mogul Razdunk", "The MOTHERLODE!!"}
+        s["npc;drop=129231"] = {"Rixxa Fluxflame <Chief Scientist>", "The MOTHERLODE!!"}
+        s["npc;drop=162317"] = {"Gorechop", "Theater of Pain"}
+        s["npc;drop=226404"] = {"Geezle Gigazap", "Operation: Floodgate"}
+        s["npc;drop=165946"] = {"Mordretha, the Endless Empress", "Theater of Pain"}
+        s["npc;drop=226403"] = {"Keeza Quickfuse", "Operation: Floodgate"}
+        s["npc;drop=132713"] = {"Mogul Razdunk", "The MOTHERLODE!!"}
+        s["npc;drop=230828"] = {"Chief Foreman Gutso <Venture Co.>", "Undermine"}
+        s["npc;drop=230800"] = {"Slugger the Smart", "Undermine"}
+        s["npc;drop=230934"] = {"Ratspit <Court of Rats>", "Undermine"}
+        s["npc;drop=152619"] = {"King Mechagon", "Operation: Mechagon"}
+        s["npc;drop=150397"] = {"King Mechagon", "Operation: Mechagon"}
+        s["npc;drop=129214"] = {"Coin-Operated Crowd Pummeler", "The MOTHERLODE!!"}
+        s["npc;drop=144248"] = {"Head Machinist Sparkflux", "Operation: Mechagon"}
+        s["spell;created=447315"] = {"Overclocked Idea Generator", "CRAFTING"}
+        s["npc;drop=208745"] = {"The Candle King", "Darkflame Cleft"}
+        s["npc;drop=162329"] = {"Xav the Unfallen", "Theater of Pain"}
+        s["npc;drop=226398"] = {"Big M.O.M.M.A.", "Operation: Floodgate"}
+        s["quest;reward=83125"] = {"Price Hike", "Zuldazar"}
+        s["object;contained=476068"] = {"Papa's Prized Putter", "Undermine"}
+        s["npc;drop=144244"] = {"The Platinum Pummeler", "Operation: Mechagon"}
+        s["spell;created=473400"] = {"Reconfiguring for Spell Casting", "CRAFTING"}
+        s["npc;drop=162309"] = {"Kul'tharok", "Theater of Pain"}
+        s["npc;drop=207940"] = {"Prioress Murrpray", "Priory of the Sacred Flame"}
+        s["npc;drop=242255"] = {"Geezle Gigazap", "Operation: Floodgate"}
+        s["npc;drop=150222"] = {"Gunker", "Operation: Mechagon"}
+        s["npc;drop=230946"] = {"V.V. Goosworth <Disgraced Slimeologist>", "Undermine"}
+        s["npc;drop=150159"] = {"King Gobbamak", "Operation: Mechagon"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -223,6 +264,44 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Gelehriger Brillanzbeschleuniger", "CRAFTING"}
         s["spell;created=446939"] = {"Geweihte Kordel", "CRAFTING"}
         s["spell;created=450229"] = {"Ewiggeschmiedeter Stecher", "CRAFTING"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "Lorenhall"}
+        s["npc;drop=226396"] = {"[Swampface]", "Operation: Schleuse"}
+        s["npc;drop=229181"] = {"[Flarendo]", "Befreiung von Lorenhall"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "Befreiung von Lorenhall"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "Befreiung von Lorenhall"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "Befreiung von Lorenhall"}
+        s["npc;drop=164451"] = {"Dessia die Enthaupterin", "Theater der Schmerzen"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "Befreiung von Lorenhall"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "Befreiung von Lorenhall"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "Befreiung von Lorenhall"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "Befreiung von Lorenhall"}
+        s["npc;drop=131227"] = {"Mogul Ratztunk", "Das RIESENFLÖZ!!"}
+        s["npc;drop=129231"] = {"Rixxa Fluxflamme <Leitende Wissenschaftlerin>", "Das RIESENFLÖZ!!"}
+        s["npc;drop=162317"] = {"Bluthack", "Theater der Schmerzen"}
+        s["npc;drop=226404"] = {"Giesel Gigaschock", "Operation: Schleuse"}
+        s["npc;drop=165946"] = {"Mordretha, die Unendliche Kaiserin", "Theater der Schmerzen"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "Operation: Schleuse"}
+        s["npc;drop=132713"] = {"Mogul Ratztunk", "Das RIESENFLÖZ!!"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "Lorenhall"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "Lorenhall"}
+        s["npc;drop=230934"] = {"[Ratspit]", "Lorenhall"}
+        s["npc;drop=152619"] = {"König Mechagon", "Operation: Mechagon"}
+        s["npc;drop=150397"] = {"König Mechagon", "Operation: Mechagon"}
+        s["npc;drop=129214"] = {"Münzbetriebener Meuteverprügler", "Das RIESENFLÖZ!!"}
+        s["npc;drop=144248"] = {"Hochmaschinist Funkenstrom", "Operation: Mechagon"}
+        s["spell;created=447315"] = {"Übertakteter Ideengenerator", "CRAFTING"}
+        s["npc;drop=208745"] = {"Der Kerzenkönig", "Dunkelflammenspalt"}
+        s["npc;drop=162329"] = {"Xav der Unbesiegte", "Theater der Schmerzen"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "Operation: Schleuse"}
+        s["quest;reward=83125"] = {"", "Zuldazar"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "Lorenhall"}
+        s["npc;drop=144244"] = {"Der Platinprügler", "Operation: Mechagon"}
+        s["spell;created=473400"] = {"Für Zauberwirken rekonfigurieren", "CRAFTING"}
+        s["npc;drop=207940"] = {"Priorin Murrbet", "Priorat der Heiligen Flamme"}
+        s["npc;drop=242255"] = {"[Geezle Gigazap]", "Operation: Schleuse"}
+        s["npc;drop=150222"] = {"Schmierer", "Operation: Mechagon"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "Lorenhall"}
+        s["npc;drop=150159"] = {"König Gobbamak", "Operation: Mechagon"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -326,6 +405,43 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=446939"] = {"Cordón consagrado", "CRAFTING"}
         s["spell;created=450229"] = {"Apuñaladora de forja eterna", "CRAFTING"}
         s["npc;drop=229992"] = {"Estalagmirok", "Isla de la Sirena"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "Minahonda"}
+        s["npc;drop=226396"] = {"[Swampface]", "Operación: Compuerta"}
+        s["npc;drop=229181"] = {"[Flarendo]", "Liberación de Minahonda"}
+        s["npc;drop=144246"] = {"KU-J0", "Operación: Mecandria"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "Liberación de Minahonda"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "Liberación de Minahonda"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "Liberación de Minahonda"}
+        s["npc;drop=164451"] = {"Dessia la Decapitadora", "Teatro del Dolor"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "Liberación de Minahonda"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "Liberación de Minahonda"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "Liberación de Minahonda"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "Liberación de Minahonda"}
+        s["npc;drop=129231"] = {"Rixxa Flujollama <Jefa científica>", "VETA MADRE"}
+        s["npc;drop=162317"] = {"Tajasangre", "Teatro del Dolor"}
+        s["npc;drop=226404"] = {"Geezle Gigachispa", "Operación: Compuerta"}
+        s["npc;drop=165946"] = {"Mordretha, la Emperatriz Eterna", "Teatro del Dolor"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "Operación: Compuerta"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "Minahonda"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "Minahonda"}
+        s["npc;drop=230934"] = {"[Ratspit]", "Minahonda"}
+        s["npc;drop=152619"] = {"Rey Mecandria", "Operación: Mecandria"}
+        s["npc;drop=150397"] = {"Rey Mecandria", "Operación: Mecandria"}
+        s["npc;drop=129214"] = {"Repartetundas de pago", "VETA MADRE"}
+        s["npc;drop=144248"] = {"Maquinista jefe Flujochispa", "Operación: Mecandria"}
+        s["spell;created=447315"] = {"Generador de ideas sobrecargado", "CRAFTING"}
+        s["npc;drop=208745"] = {"Rey Vela", "Grieta de Flama Oscura"}
+        s["npc;drop=162329"] = {"Xav el Invicto", "Teatro del Dolor"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "Operación: Compuerta"}
+        s["quest;reward=83125"] = {"", "Zuldazar"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "Minahonda"}
+        s["npc;drop=144244"] = {"Repartetundas de platino", "Operación: Mecandria"}
+        s["spell;created=473400"] = {"Reconfiguración para lanzamiento de hechizos", "CRAFTING"}
+        s["npc;drop=207940"] = {"Priora Murrezo", "Priorato de la Llama Sagrada"}
+        s["npc;drop=242255"] = {"[Geezle Gigazap]", "Operación: Compuerta"}
+        s["npc;drop=150222"] = {"Mugroso", "Operación: Mecandria"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "Minahonda"}
+        s["npc;drop=150159"] = {"Rey Gobbamak", "Operación: Mecandria"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -427,6 +543,44 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Expéditeur d’illumination studieuse", "CRAFTING"}
         s["spell;created=446939"] = {"Corde consacrée", "CRAFTING"}
         s["spell;created=450229"] = {"Eustache en forge perpétuelle", "CRAFTING"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "Terremine"}
+        s["npc;drop=226396"] = {"[Swampface]", "Opération Vannes ouvertes"}
+        s["npc;drop=229181"] = {"[Flarendo]", "Libération de Terremine"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "Libération de Terremine"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "Libération de Terremine"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "Libération de Terremine"}
+        s["npc;drop=164451"] = {"Dessia la Décapiteuse", "Théâtre de la Souffrance"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "Libération de Terremine"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "Libération de Terremine"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "Libération de Terremine"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "Libération de Terremine"}
+        s["npc;drop=131227"] = {"Nabab Razzbam", "Le Filon"}
+        s["npc;drop=129231"] = {"Rixxa Fluxifuge <Scientifique en chef>", "Le Filon"}
+        s["npc;drop=162317"] = {"Trancheboyau", "Théâtre de la Souffrance"}
+        s["npc;drop=226404"] = {"[Geezle Gigazap]", "Opération Vannes ouvertes"}
+        s["npc;drop=165946"] = {"Mordretha, l'impératrice immortelle", "Théâtre de la Souffrance"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "Opération Vannes ouvertes"}
+        s["npc;drop=132713"] = {"Nabab Razzbam", "Le Filon"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "Terremine"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "Terremine"}
+        s["npc;drop=230934"] = {"[Ratspit]", "Terremine"}
+        s["npc;drop=152619"] = {"Roi Mécagone", "Opération Mécagone"}
+        s["npc;drop=150397"] = {"Roi Mécagone", "Opération Mécagone"}
+        s["npc;drop=129214"] = {"Disperseur de foule automatique", "Le Filon"}
+        s["npc;drop=144248"] = {"Machiniste en chef Electroflux", "Opération Mécagone"}
+        s["spell;created=447315"] = {"Générateur d’idées débridé", "CRAFTING"}
+        s["npc;drop=208745"] = {"Le roi-bougie", "Faille de Flamme-Noire"}
+        s["npc;drop=162329"] = {"Xav l'Invaincu", "Théâtre de la Souffrance"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "Opération Vannes ouvertes"}
+        s["quest;reward=83125"] = {"", "Zuldazar"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "Terremine"}
+        s["npc;drop=144244"] = {"Le « Tabasseur de platine »", "Opération Mécagone"}
+        s["spell;created=473400"] = {"Reconfiguration pour les sorts", "CRAFTING"}
+        s["npc;drop=207940"] = {"Prieuresse Murrpray", "Prieuré de la Flamme sacrée"}
+        s["npc;drop=242255"] = {"[Geezle Gigazap]", "Opération Vannes ouvertes"}
+        s["npc;drop=150222"] = {"Salcrass", "Opération Mécagone"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "Terremine"}
+        s["npc;drop=150159"] = {"Roi Gobbamak", "Opération Mécagone"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -529,6 +683,43 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=447314"] = {"Acceleratore di Acume Erudito", "CRAFTING"}
         s["spell;created=446939"] = {"Fascione Consacrato", "CRAFTING"}
         s["spell;created=450229"] = {"Daga Eternoforgiata", "CRAFTING"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "Cavafonda"}
+        s["npc;drop=226396"] = {"[Swampface]", "Operazione: Paratoia"}
+        s["npc;drop=229181"] = {"[Flarendo]", "Liberazione di Cavafonda"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "Liberazione di Cavafonda"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "Liberazione di Cavafonda"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "Liberazione di Cavafonda"}
+        s["npc;drop=164451"] = {"Dessia la Decapitatrice", "Teatro del Dolore"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "Liberazione di Cavafonda"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "Liberazione di Cavafonda"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "Liberazione di Cavafonda"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "Liberazione di Cavafonda"}
+        s["npc;drop=131227"] = {"Magnate Trucirazzi", "Vena Madre"}
+        s["npc;drop=129231"] = {"Rixxa Flussafumi <Capo Scienziato>", "Vena Madre"}
+        s["npc;drop=162317"] = {"Fendisangue", "Teatro del Dolore"}
+        s["npc;drop=226404"] = {"Geezle Gigascossa", "Operazione: Paratoia"}
+        s["npc;drop=165946"] = {"Mordretha, l'Imperatrice Eterna", "Teatro del Dolore"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "Operazione: Paratoia"}
+        s["npc;drop=132713"] = {"Magnate Trucirazzi", "Vena Madre"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "Cavafonda"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "Cavafonda"}
+        s["npc;drop=230934"] = {"[Ratspit]", "Cavafonda"}
+        s["npc;drop=152619"] = {"Re Meccagon", "Operazione: Meccagon"}
+        s["npc;drop=150397"] = {"Re Meccagon", "Operazione: Meccagon"}
+        s["npc;drop=129214"] = {"Sfollagente a Gettoni", "Vena Madre"}
+        s["npc;drop=144248"] = {"Gran Macchinista Flussascintille", "Operazione: Meccagon"}
+        s["spell;created=447315"] = {"Generatore di Idee Velocizzato", "CRAFTING"}
+        s["npc;drop=208745"] = {"Il Re delle Candele", "Faglia di Fiammoscura"}
+        s["npc;drop=162329"] = {"Xav l'Immortale", "Teatro del Dolore"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "Operazione: Paratoia"}
+        s["quest;reward=83125"] = {"", "Zuldazar"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "Cavafonda"}
+        s["npc;drop=144244"] = {"Flagellatore Platinato", "Operazione: Meccagon"}
+        s["spell;created=473400"] = {"Riconfigurazione per Lancio d'Incantesimi", "CRAFTING"}
+        s["npc;drop=207940"] = {"Priora Fedecerda", "Prioria della Fiamma Sacra"}
+        s["npc;drop=150222"] = {"Sporcheria", "Operazione: Meccagon"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "Cavafonda"}
+        s["npc;drop=150159"] = {"Re Gobbamak", "Operazione: Meccagon"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -642,6 +833,46 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=446939"] = {"축성된 장식끈", "CRAFTING"}
         s["spell;created=450229"] = {"영원벼림 찌르개", "CRAFTING"}
         s["npc;drop=229992"] = {"스탈라그나로그", "세이렌의 섬"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "언더마인"}
+        s["npc;drop=226396"] = {"[Swampface]", "작전명: 수문"}
+        s["npc;drop=229181"] = {"[Flarendo]", "언더마인 해방전선"}
+        s["npc;drop=144246"] = {"쿠.조.", "작전명: 메카곤"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "언더마인 해방전선"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "언더마인 해방전선"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "언더마인 해방전선"}
+        s["npc;drop=164451"] = {"참수자 데시아", "고통의 투기장"}
+        s["npc;drop=129227"] = {"아제로크", "왕노다지 광산!!"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "언더마인 해방전선"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "언더마인 해방전선"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "언더마인 해방전선"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "언더마인 해방전선"}
+        s["npc;drop=131227"] = {"모굴 라즈덩크", "왕노다지 광산!!"}
+        s["npc;drop=129231"] = {"릭사 플럭스플레임 <수석 과학자>", "왕노다지 광산!!"}
+        s["npc;drop=162317"] = {"선혈토막", "고통의 투기장"}
+        s["npc;drop=226404"] = {"기즐 기가잽", "작전명: 수문"}
+        s["npc;drop=165946"] = {"무한의 여제 모르드레타", "고통의 투기장"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "작전명: 수문"}
+        s["npc;drop=132713"] = {"모굴 라즈덩크", "왕노다지 광산!!"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "언더마인"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "언더마인"}
+        s["npc;drop=230934"] = {"[Ratspit]", "언더마인"}
+        s["npc;drop=152619"] = {"왕 메카곤", "작전명: 메카곤"}
+        s["npc;drop=150397"] = {"왕 메카곤", "작전명: 메카곤"}
+        s["npc;drop=129214"] = {"동전 투입식 군중 난타기", "왕노다지 광산!!"}
+        s["npc;drop=144248"] = {"수석 기계공 스파크플럭스", "작전명: 메카곤"}
+        s["spell;created=447315"] = {"과부하된 발상 생성기", "CRAFTING"}
+        s["npc;drop=208745"] = {"양초왕", "어둠불꽃 동굴"}
+        s["npc;drop=162329"] = {"몰락하지 않은 자 자브", "고통의 투기장"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "작전명: 수문"}
+        s["quest;reward=83125"] = {"", "줄다자르"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "언더마인"}
+        s["npc;drop=144244"] = {"백금 난타로봇", "작전명: 메카곤"}
+        s["spell;created=473400"] = {"주문 시전 맞춤 조정", "CRAFTING"}
+        s["npc;drop=162309"] = {"쿨타로크", "고통의 투기장"}
+        s["npc;drop=207940"] = {"수도원장 머프레이", "신성한 불꽃의 수도원"}
+        s["npc;drop=150222"] = {"진창오물", "작전명: 메카곤"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "언더마인"}
+        s["npc;drop=150159"] = {"왕 고바막", "작전명: 메카곤"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -746,6 +977,43 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=446939"] = {"Cordão Consagrado", "CRAFTING"}
         s["spell;created=450229"] = {"Apunhalador Semperforja", "CRAFTING"}
         s["npc;drop=229992"] = {"Estalagnarok", "Ilha das Sirenas"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "Inframina"}
+        s["npc;drop=226396"] = {"[Swampface]", "Operação: Comporta"}
+        s["npc;drop=229181"] = {"[Flarendo]", "Libertação da Inframina"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "Libertação da Inframina"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "Libertação da Inframina"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "Libertação da Inframina"}
+        s["npc;drop=164451"] = {"Déssia, a Decapitadora", "Teatro da Dor"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "Libertação da Inframina"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "Libertação da Inframina"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "Libertação da Inframina"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "Libertação da Inframina"}
+        s["npc;drop=131227"] = {"Dalberto Frustrus", "MEGAMINA!!!"}
+        s["npc;drop=129231"] = {"Rixxa Fazfaísca <Cientista-chefe>", "MEGAMINA!!!"}
+        s["npc;drop=162317"] = {"Estripança", "Teatro da Dor"}
+        s["npc;drop=226404"] = {"Guizol Gigazap", "Operação: Comporta"}
+        s["npc;drop=165946"] = {"Mordretha, a Imperatriz Infinda", "Teatro da Dor"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "Operação: Comporta"}
+        s["npc;drop=132713"] = {"Barão dos Negócios Frustrus", "MEGAMINA!!!"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "Inframina"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "Inframina"}
+        s["npc;drop=230934"] = {"[Ratspit]", "Inframina"}
+        s["npc;drop=152619"] = {"Rei Gnomecan", "Operação: Gnomecan"}
+        s["npc;drop=150397"] = {"Rei Gnomecan", "Operação: Gnomecan"}
+        s["npc;drop=129214"] = {"Espanca-gente de Ficha", "MEGAMINA!!!"}
+        s["npc;drop=144248"] = {"Maquinista-chefe Fluichispa", "Operação: Gnomecan"}
+        s["spell;created=447315"] = {"Gerador de Ideias Turbinado", "CRAFTING"}
+        s["npc;drop=208745"] = {"O Rei da Vela", "Fenda Chamanegra"}
+        s["npc;drop=162329"] = {"Xav, o Não-caído", "Teatro da Dor"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "Operação: Comporta"}
+        s["quest;reward=83125"] = {"", "Zuldazar"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "Inframina"}
+        s["npc;drop=144244"] = {"Esbordoador de Platina", "Operação: Gnomecan"}
+        s["spell;created=473400"] = {"Reconfigurando para Lançamento de Feitiços", "CRAFTING"}
+        s["npc;drop=207940"] = {"Priora Orália", "Priorado da Chama Sagrada"}
+        s["npc;drop=150222"] = {"Visgueiro", "Operação: Gnomecan"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "Inframina"}
+        s["npc;drop=150159"] = {"Rei Gobbamak", "Operação: Gnomecan"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -859,6 +1127,47 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=446939"] = {"Освященный шнурованный ремень", "CRAFTING"}
         s["spell;created=450229"] = {"Выкованный навеки пронзатель", "CRAFTING"}
         s["npc;drop=229992"] = {"Сталагнарос", "Остров Сирен"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "Нижняя Шахта"}
+        s["npc;drop=226396"] = {"[Swampface]", "Операция: шлюз"}
+        s["npc;drop=229181"] = {"[Flarendo]", "Освобождение Нижней Шахты"}
+        s["npc;drop=144246"] = {"КУ-ДЖ0", "Операция 'Мехагон'"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "Освобождение Нижней Шахты"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "Освобождение Нижней Шахты"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "Освобождение Нижней Шахты"}
+        s["npc;drop=164451"] = {"Дессия Обезглавливательница", "Театр Боли"}
+        s["npc;drop=129227"] = {"Азерокк", "ЗОЛОТАЯ ЖИЛА!!!"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "Освобождение Нижней Шахты"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "Освобождение Нижней Шахты"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "Освобождение Нижней Шахты"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "Освобождение Нижней Шахты"}
+        s["npc;drop=131227"] = {"Шеф Разданк", "ЗОЛОТАЯ ЖИЛА!!!"}
+        s["npc;drop=129231"] = {"Рикса Огневерт <Старший ученый>", "ЗОЛОТАЯ ЖИЛА!!!"}
+        s["npc;drop=162317"] = {"Кроворуб", "Театр Боли"}
+        s["npc;drop=226404"] = {"Гизл Гигабжик", "Операция: шлюз"}
+        s["npc;drop=165946"] = {"Мордрета, Вечная императрица", "Театр Боли"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "Операция: шлюз"}
+        s["npc;drop=132713"] = {"Шеф Разданк", "ЗОЛОТАЯ ЖИЛА!!!"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "Нижняя Шахта"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "Нижняя Шахта"}
+        s["npc;drop=230934"] = {"[Ratspit]", "Нижняя Шахта"}
+        s["npc;drop=152619"] = {"Король Мехагон", "Операция 'Мехагон'"}
+        s["npc;drop=150397"] = {"Король Мехагон", "Операция 'Мехагон'"}
+        s["npc;drop=129214"] = {"Платный разгонятель толпы", "ЗОЛОТАЯ ЖИЛА!!!"}
+        s["npc;drop=144248"] = {"Главный машинист Искроточец", "Операция 'Мехагон'"}
+        s["spell;created=447315"] = {"Перегруженный генератор идей", "CRAFTING"}
+        s["npc;drop=208745"] = {"Свечной Король", "Расселина Темного Пламени"}
+        s["npc;drop=162329"] = {"Ксав Несломленный", "Театр Боли"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "Операция: шлюз"}
+        s["quest;reward=83125"] = {"", "Зулдазар"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "Нижняя Шахта"}
+        s["npc;drop=144244"] = {"'Платиновый лупцеватор'", "Операция 'Мехагон'"}
+        s["spell;created=473400"] = {"Рекалибровка для заклинаний", "CRAFTING"}
+        s["npc;drop=162309"] = {"Кул'тарок", "Театр Боли"}
+        s["npc;drop=207940"] = {"Настоятельница Муррпрэй", "Приорат Священного Пламени"}
+        s["npc;drop=242255"] = {"[Geezle Gigazap]", "Операция: шлюз"}
+        s["npc;drop=150222"] = {"Токсикоид", "Операция 'Мехагон'"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "Нижняя Шахта"}
+        s["npc;drop=150159"] = {"Король Гоббамак", "Операция 'Мехагон'"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -972,6 +1281,46 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["spell;created=450229"] = {"永铸戳刺者", "CRAFTING"}
         s["npc;drop=210108"] = {"E.D.N.A.", "矶石宝库"}
         s["npc;drop=229992"] = {"石笋纳罗克", "海妖岛"}
+        s["npc;sold=231824"] = {"[Kari Bridgeblaster]", "安德麦"}
+        s["npc;drop=226396"] = {"[Swampface]", "水闸行动"}
+        s["npc;drop=229181"] = {"[Flarendo]", "解放安德麦"}
+        s["npc;drop=144246"] = {"狂犬K.U.-J.0.", "麦卡贡行动"}
+        s["npc;drop=241526"] = {"[Chrome King Gallywix]", "解放安德麦"}
+        s["npc;drop=228458"] = {"[One-Armed Bandit]", "解放安德麦"}
+        s["npc;drop=228652"] = {"[Rik Reverb]", "解放安德麦"}
+        s["npc;drop=164451"] = {"斩首者德茜雅", "伤逝剧场"}
+        s["npc;drop=129227"] = {"艾泽洛克", "暴富矿区！！"}
+        s["npc;drop=225821"] = {"[The Geargrinder]", "解放安德麦"}
+        s["npc;drop=230583"] = {"[Sprocketmonger Lockenstock]", "解放安德麦"}
+        s["npc;drop=229953"] = {"[Mug'Zee]", "解放安德麦"}
+        s["npc;drop=230322"] = {"[Stix Bunkjunker]", "解放安德麦"}
+        s["npc;drop=131227"] = {"商业大亨拉兹敦克", "暴富矿区！！"}
+        s["npc;drop=129231"] = {"瑞克莎·流火", "暴富矿区！！"}
+        s["npc;drop=162317"] = {"斩血", "伤逝剧场"}
+        s["npc;drop=165946"] = {"无尽女皇莫德蕾莎", "伤逝剧场"}
+        s["npc;drop=226403"] = {"[Keeza Quickfuse]", "水闸行动"}
+        s["npc;drop=132713"] = {"商业大亨拉兹敦克", "暴富矿区！！"}
+        s["npc;drop=230828"] = {"[Chief Foreman Gutso]", "安德麦"}
+        s["npc;drop=230800"] = {"[Slugger the Smart]", "安德麦"}
+        s["npc;drop=230934"] = {"[Ratspit]", "安德麦"}
+        s["npc;drop=152619"] = {"麦卡贡国王", "麦卡贡行动"}
+        s["npc;drop=150397"] = {"麦卡贡国王", "麦卡贡行动"}
+        s["npc;drop=129214"] = {"投币式群体打击者", "暴富矿区！！"}
+        s["npc;drop=144248"] = {"首席机械师闪流", "麦卡贡行动"}
+        s["spell;created=447315"] = {"超频构想发生器", "CRAFTING"}
+        s["npc;drop=208745"] = {"蜡烛之王", "暗焰裂口"}
+        s["npc;drop=162329"] = {"无堕者哈夫", "伤逝剧场"}
+        s["npc;drop=226398"] = {"[Big M.O.M.M.A.]", "水闸行动"}
+        s["quest;reward=83125"] = {"", "祖达萨"}
+        s["object;contained=476068"] = {"[Papa's Prized Putter]", "安德麦"}
+        s["npc;drop=144244"] = {"白金拳手", "麦卡贡行动"}
+        s["spell;created=473400"] = {"施法重配置", "CRAFTING"}
+        s["npc;drop=162309"] = {"库尔萨洛克", "伤逝剧场"}
+        s["npc;drop=207940"] = {"隐修院长穆普雷", "圣焰隐修院"}
+        s["npc;drop=242255"] = {"[Geezle Gigazap]", "水闸行动"}
+        s["npc;drop=150222"] = {"冈克", "麦卡贡行动"}
+        s["npc;drop=230946"] = {"[V.V. Goosworth]", "安德麦"}
+        s["npc;drop=150159"] = {"戈巴马克国王", "麦卡贡行动"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

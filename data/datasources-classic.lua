@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
--- SOURCE FROM: 19.02.2025
+-- SOURCE FROM: 28.02.2025
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}
@@ -899,6 +899,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"Vampiric Cowl", "CRAFTING"}
         s["spell;created=1213530"] = {"Vampiric Shawl", "CRAFTING"}
         s["npc;sold=16112"] = {"Korfax, Champion of the Light <Brotherhood of the Light>", "Eastern Plaguelands"}
+        s["spell;created=1214145"] = {"Obsidian Shotgun", "CRAFTING"}
+        s["quest;reward=88729"] = {"Ramaladni's Icy Grasp", "Eastern Plaguelands"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1624,6 +1626,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"Vampirgugel", "CRAFTING"}
         s["spell;created=1213530"] = {"Vampirschal", "CRAFTING"}
         s["npc;sold=16112"] = {"Korfax der Held des Lichts <Bruderschaft des Lichts>", "Östliche Pestländer"}
+        s["spell;created=1214145"] = {"Obsidianschrotflinte", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "Östliche Pestländer"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2368,6 +2372,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"Capucha vampírica", "CRAFTING"}
         s["spell;created=1213530"] = {"Chal vampírico", "CRAFTING"}
         s["npc;sold=16112"] = {"Korfax, Campeón de la Luz", "Tierras de la Peste del Este"}
+        s["spell;created=1214145"] = {"Escopeta de obsidiana", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "Tierras de la Peste del Este"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -3109,6 +3115,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"Capuche vampirique", "CRAFTING"}
         s["spell;created=1213530"] = {"Châle vampirique", "CRAFTING"}
         s["npc;sold=16112"] = {"Korfax, Champion de la Lumière <Fraternité de la Lumière>", "Maleterres de l'est (Eastern Plaguelands)"}
+        s["spell;created=1214145"] = {"Fusil en obsidienne", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "Maleterres de l'est (Eastern Plaguelands)"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -3590,6 +3598,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"[Vampiric Cowl]", "CRAFTING"}
         s["spell;created=1213530"] = {"[Vampiric Shawl]", "CRAFTING"}
         s["npc;sold=16112"] = {"Korfax, Champion of the Light", "Eastern Plaguelands"}
+        s["spell;created=1214145"] = {"[Obsidian Shotgun]", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "Eastern Plaguelands"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -4413,6 +4423,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"흡혈의 수도두건", "CRAFTING"}
         s["spell;created=1213530"] = {"흡혈의 어깨망토", "CRAFTING"}
         s["npc;sold=16112"] = {"빛의 용사 코팩스 <빛의 결사단>", "동부 역병지대"}
+        s["spell;created=1214145"] = {"흑요석 산탄총", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "동부 역병지대"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -5177,6 +5189,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"Capucho Vampírico", "CRAFTING"}
         s["spell;created=1213530"] = {"Xale Vampírico", "CRAFTING"}
         s["npc;sold=16112"] = {"Korfax, Champion of the Light", "Terras Pestilentas Orientais"}
+        s["spell;created=1214145"] = {"Espingarda Obsidiana", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "Terras Pestilentas Orientais"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -6000,6 +6014,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"Вампирский клобук", "CRAFTING"}
         s["spell;created=1213530"] = {"Вампирский платок", "CRAFTING"}
         s["npc;sold=16112"] = {"Корфакс, Воитель Света <Братство Света>", "Восточные Чумные земли"}
+        s["spell;created=1214145"] = {"Обсидиановый дробовик", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "Восточные Чумные земли"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -6823,6 +6839,8 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"吸血鬼风帽", "CRAFTING"}
         s["spell;created=1213530"] = {"吸血鬼披巾", "CRAFTING"}
         s["npc;sold=16112"] = {"科尔法克斯，圣光之勇士 <圣光兄弟会>", "东瘟疫之地"}
+        s["spell;created=1214145"] = {"黑曜石猎枪", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "东瘟疫之地"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -7646,5 +7664,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["spell;created=1213527"] = {"吸血鬼风帽", "CRAFTING"}
         s["spell;created=1213530"] = {"吸血鬼披巾", "CRAFTING"}
         s["npc;sold=16112"] = {"科尔法克斯，圣光之勇士 <圣光兄弟会>", "东瘟疫之地"}
+        s["spell;created=1214145"] = {"黑曜石猎枪", "CRAFTING"}
+        s["quest;reward=88729"] = {"[Ramaladni's Icy Grasp]", "东瘟疫之地"}
     end
 end

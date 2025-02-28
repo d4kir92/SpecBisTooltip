@@ -201,11 +201,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 					slot = tab[2]
 					if type(itemId) == "string" then
 						if itemId == content then
-							local heroSpecID = nil
-							if C_ClassTalents and C_ClassTalents.GetActiveHeroTalentSpec then
-								heroSpecID = C_ClassTalents.GetActiveHeroTalentSpec()
-							end
-
+							local heroSpecID = SpecBisTooltip:GetHeroSpecId()
 							if heroSpecID and SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID] then
 								for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID]) do
 									slot = tab2[2]

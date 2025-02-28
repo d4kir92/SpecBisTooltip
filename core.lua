@@ -13,7 +13,7 @@ SBTSetup:SetScript(
 	function(self, event, ...)
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.22")
+			SpecBisTooltip:SetVersion(136031, "0.12.23")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil
@@ -180,11 +180,7 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content)
 	end
 
 	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) then
-		local heroSpecID = nil
-		if C_ClassTalents and C_ClassTalents.GetActiveHeroTalentSpec then
-			heroSpecID = C_ClassTalents.GetActiveHeroTalentSpec()
-		end
-
+		local heroSpecID = SpecBisTooltip:GetHeroSpecId()
 		if heroSpecID and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][heroSpecID] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][heroSpecID][itemId] then
 			return content, SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][heroSpecID][itemId][1]
 		else

@@ -184,7 +184,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 			for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId]) do
 				local phase = tab[1]
 				local slot = tab[3]
-				if pool == "CLASSIC" then
+				if pool == "CLASSIC" or pool == "CATA" then
 					if slot then
 						if EngravingFrame ~= nil and strfind(phase, "SOD", 1, true) then
 							bfi[class][specId][slot] = bfi[class][specId][slot] or {}
@@ -198,11 +198,26 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 					slot = tab[2]
 					if type(itemId) == "string" then
 						if itemId == content then
-							for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][itemId]) do
-								slot = tab2[2]
-								if slot then
-									bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-									table.insert(bfi[class][specId][slot], itemId2)
+							local heroSpecID = nil
+							if C_ClassTalents and C_ClassTalents.GetActiveHeroTalentSpec then
+								heroSpecID = C_ClassTalents.GetActiveHeroTalentSpec()
+							end
+
+							if heroSpecID and SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID] then
+								for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID]) do
+									slot = tab2[2]
+									if slot then
+										bfi[class][specId][slot] = bfi[class][specId][slot] or {}
+										table.insert(bfi[class][specId][slot], itemId2)
+									end
+								end
+							else
+								for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content]) do
+									slot = tab2[2]
+									if slot then
+										bfi[class][specId][slot] = bfi[class][specId][slot] or {}
+										table.insert(bfi[class][specId][slot], itemId2)
+									end
 								end
 							end
 						end

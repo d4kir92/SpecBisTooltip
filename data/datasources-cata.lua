@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
--- SOURCE FROM: 18.02.2025
+-- SOURCE FROM: 28.02.2025
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=44245"] = {"Faldren Tillsdale <Valor Quartermaster>", "Stormwind City"}
@@ -269,6 +269,33 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"Kar the Everburning <Firelord>", "Firelands"}
         s["npc;drop=54161"] = {"Flame Archon", "Firelands"}
         s["npc;sold=52549"] = {"Sergeant Thunderhorn <Conquest Quartermaster>", "Orgrimmar"}
+        s["quest;reward=29312"] = {"The Stuff of Legends", "Stormwind City"}
+        s["npc;drop=55689"] = {"Hagara the Stormbinder", "Dragon Soul"}
+        s["npc;drop=55308"] = {"Warlord Zon'ozz", "Dragon Soul"}
+        s["npc;drop=55265"] = {"Morchok", "Dragon Soul"}
+        s["npc;drop=55294"] = {"Ultraxion", "Dragon Soul"}
+        s["npc;drop=55312"] = {"Yor'sahj the Unsleeping", "Dragon Soul"}
+        s["npc;drop=56173"] = {"Deathwing <The Destroyer>", "Dragon Soul"}
+        s["npc;drop=57821"] = {"Lieutenant Shara <The Twilight's Hammer>", "Dragon Soul"}
+        s["spell;created=101932"] = {"Titanguard Wristplates", "CRAFTING"}
+        s["npc;sold=241467"] = {"Sylstrasza <Obsidian Fragment Exchange>", "Orgrimmar"}
+        s["npc;drop=54938"] = {"Archbishop Benedictus", "Hour of Twilight"}
+        s["npc;drop=53879"] = {"Deathwing <The Destroyer>", "Dragon Soul"}
+        s["spell;created=101925"] = {"Unstoppable Destroyer's Legplates", "CRAFTING"}
+        s["spell;created=101931"] = {"Bracers of Destructive Strength", "CRAFTING"}
+        s["spell;created=101933"] = {"Leggings of Nature's Champion", "CRAFTING"}
+        s["spell;created=101937"] = {"Bracers of Flowing Serenity", "CRAFTING"}
+        s["npc;drop=56427"] = {"Warmaster Blackhorn", "Dragon Soul"}
+        s["spell;created=101940"] = {"Bladeshadow Wristguards", "CRAFTING"}
+        s["spell;created=101941"] = {"Bracers of the Hunter-Killer", "CRAFTING"}
+        s["spell;created=101921"] = {"Lavaquake Legwraps", "CRAFTING"}
+        s["spell;created=101923"] = {"Bracers of Unconquered Power", "CRAFTING"}
+        s["spell;created=101929"] = {"Soul Redeemer Bracers", "CRAFTING"}
+        s["npc;drop=55869"] = {"Alizabal <Mistress of Hate>", "Baradin Hold"}
+        s["spell;created=101922"] = {"Dreamwraps of the Light", "CRAFTING"}
+        s["spell;created=101934"] = {"Deathscale Leggings", "CRAFTING"}
+        s["spell;created=101939"] = {"Thundering Deathscale Wristguards", "CRAFTING"}
+        s["npc;drop=55085"] = {"Peroth'arn", "Well of Eternity"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -499,6 +526,30 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"Kar der Ewigbrennende <Feuerfürst>", "Feuerlande"}
         s["npc;drop=54161"] = {"Flammenarchon", "Feuerlande"}
         s["npc;sold=52549"] = {"Unteroffizier Donnerhorn <Rüstmeister für Eroberungspunkte>", "Orgrimmar"}
+        s["quest;reward=29312"] = {"Der Stoff, aus dem Legenden sind", "Sturmwind"}
+        s["npc;drop=55689"] = {"Hagara die Sturmbinderin", "Drachenseele"}
+        s["npc;drop=55308"] = {"Kriegsherr Zon'ozz", "Drachenseele"}
+        s["npc;drop=55312"] = {"Yor'sahj der Unermüdliche", "Drachenseele"}
+        s["npc;drop=56173"] = {"Todesschwinge <Der Zerstörer>", "Drachenseele"}
+        s["npc;drop=57821"] = {"Leutnant Shara <Schattenhammer>", "Drachenseele"}
+        s["spell;created=101932"] = {"Handgelenkplatten der Titanenwache", "CRAFTING"}
+        s["npc;sold=241467"] = {"Sylstrasza <Obsidianfragmenthändlerin>", "Orgrimmar"}
+        s["npc;drop=54938"] = {"Erzbischof Benedictus", "Stunde des Zwielichts"}
+        s["npc;drop=53879"] = {"Todesschwinge <Der Zerstörer>", "Drachenseele"}
+        s["spell;created=101925"] = {"Beinplatten des unaufhaltsamen Zerstörers", "CRAFTING"}
+        s["spell;created=101931"] = {"Armschienen der zerstörerischen Stärke", "CRAFTING"}
+        s["spell;created=101933"] = {"Gamaschen des Champions der Natur", "CRAFTING"}
+        s["spell;created=101937"] = {"Armschienen der fließenden Ruhe", "CRAFTING"}
+        s["npc;drop=56427"] = {"Kriegsmeister Schwarzhorn", "Drachenseele"}
+        s["spell;created=101940"] = {"Klingenschattenhandgelenksschützer", "CRAFTING"}
+        s["spell;created=101941"] = {"Armschienen des Zielsuchers", "CRAFTING"}
+        s["spell;created=101921"] = {"Beinwickel des Lavabebens", "CRAFTING"}
+        s["spell;created=101923"] = {"Armschienen der uneroberten Macht", "CRAFTING"}
+        s["spell;created=101929"] = {"Armschienen des Seelenretters", "CRAFTING"}
+        s["npc;drop=55869"] = {"Alizabal <Herrin des Hasses>", "Baradinfestung"}
+        s["spell;created=101922"] = {"Traumwickel des Lichts", "CRAFTING"}
+        s["spell;created=101934"] = {"Todesschuppengamaschen", "CRAFTING"}
+        s["spell;created=101939"] = {"Donnernde Todesschuppenhandgelenksschützer", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -731,6 +782,31 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"Kar el Abrasador <Señor del Fuego>", "Tierras de Fuego"}
         s["npc;drop=54161"] = {"Arconte de fuego", "Tierras de Fuego"}
         s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "Orgrimmar"}
+        s["quest;reward=29312"] = {"[The Stuff of Legends]", "Ciudad de Ventormenta"}
+        s["npc;drop=55689"] = {"Hagara la Vinculatormentas", "Alma de Dragón"}
+        s["npc;drop=55308"] = {"Señor de la guerra Zon'ozz", "Alma de Dragón"}
+        s["npc;drop=55312"] = {"Yor'sahj el Velador", "Alma de Dragón"}
+        s["npc;drop=56173"] = {"Alamuerte <El Destructor>", "Alma de Dragón"}
+        s["npc;drop=57821"] = {"Teniente Shara <El Martillo Crepuscular>", "Alma de Dragón"}
+        s["spell;created=101932"] = {"Muñequeras con protección de titanes", "CRAFTING"}
+        s["npc;sold=241467"] = {"Sylstrasza <Intercambio de fragmentos de obsidiana>", "Orgrimmar"}
+        s["npc;drop=54938"] = {"[Archbishop Benedictus]", "Hora del Crepúsculo"}
+        s["npc;drop=53879"] = {"Alamuerte <El Destructor>", "Alma de Dragón"}
+        s["spell;created=101925"] = {"Ataduras de destructor imparable", "CRAFTING"}
+        s["spell;created=101931"] = {"Brazales de fuerza destructiva", "CRAFTING"}
+        s["spell;created=101933"] = {"Leotardos de campeón de la naturaleza", "CRAFTING"}
+        s["spell;created=101937"] = {"Brazales de serenidad fluida", "CRAFTING"}
+        s["npc;drop=56427"] = {"Maestro de guerra Cuerno Negro", "Alma de Dragón"}
+        s["spell;created=101940"] = {"Guardamuñecas Filosombra", "CRAFTING"}
+        s["spell;created=101941"] = {"Brazales del matacazadores", "CRAFTING"}
+        s["spell;created=101921"] = {"Ataduras de temblor de lava", "CRAFTING"}
+        s["spell;created=101923"] = {"Brazales de poder invicto", "CRAFTING"}
+        s["spell;created=101929"] = {"Brazales de redentor de almas", "CRAFTING"}
+        s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "Bastión de Baradin"}
+        s["spell;created=101922"] = {"Envoltura onírica de la Luz", "CRAFTING"}
+        s["spell;created=101934"] = {"Leotardos Muertescama", "CRAFTING"}
+        s["spell;created=101939"] = {"Guardamuñecas Muertescama del trueno", "CRAFTING"}
+        s["npc;drop=55085"] = {"[Peroth'arn]", "Pozo de la Eternidad"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -967,6 +1043,31 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"Kar le Semperardent <Seigneur du Feu>", "Terres de Feu"}
         s["npc;drop=54161"] = {"Archonte des flammes", "Terres de Feu"}
         s["npc;sold=52549"] = {"Sergent Corne-Tonnerre <Intendant de conquête>", "Orgrimmar"}
+        s["quest;reward=29312"] = {"L’étoffe des légendes", "Hurlevent"}
+        s["npc;drop=55689"] = {"Hagara la Lieuse des tempêtes", "L’Âme des dragons"}
+        s["npc;drop=55308"] = {"Seigneur de guerre Zon’ozz", "L’Âme des dragons"}
+        s["npc;drop=55312"] = {"Yor'sahj l’Insomniaque", "L’Âme des dragons"}
+        s["npc;drop=56173"] = {"Aile de mort <Le Destructeur>", "L’Âme des dragons"}
+        s["npc;drop=57821"] = {"Lieutenant Shara <Marteau du crépuscule>", "L’Âme des dragons"}
+        s["spell;created=101932"] = {"Plates de poignets de garde des titans", "CRAFTING"}
+        s["npc;sold=241467"] = {"Sylstrasza <Echange de fragments d'obsidienne>", "Orgrimmar"}
+        s["npc;drop=54938"] = {"Archevêque Benedictus", "L’Heure du Crépuscule"}
+        s["npc;drop=53879"] = {"Aile de mort <Le Destructeur>", "L’Âme des dragons"}
+        s["spell;created=101925"] = {"Cuissards de destructeur irrésistible", "CRAFTING"}
+        s["spell;created=101931"] = {"Brassards de force destructrice", "CRAFTING"}
+        s["spell;created=101933"] = {"Jambières de champion de la Nature", "CRAFTING"}
+        s["spell;created=101937"] = {"Brassards de sérénité fluide", "CRAFTING"}
+        s["npc;drop=56427"] = {"Maître de guerre Corne-Noire", "L’Âme des dragons"}
+        s["spell;created=101940"] = {"Garde-poignets ombrelames", "CRAFTING"}
+        s["spell;created=101941"] = {"Brassards du chasseur-tueur", "CRAFTING"}
+        s["spell;created=101921"] = {"Jambards de tremblement de lave", "CRAFTING"}
+        s["spell;created=101923"] = {"Brassards de puissance insoumise", "CRAFTING"}
+        s["spell;created=101929"] = {"Brassards de rédempteur d’âme", "CRAFTING"}
+        s["npc;drop=55869"] = {"Alizabal <Maîtresse de la haine>", "Bastion de Baradin"}
+        s["spell;created=101922"] = {"Protège-rêves de la Lumière", "CRAFTING"}
+        s["spell;created=101934"] = {"Jambières en mortécailles", "CRAFTING"}
+        s["spell;created=101939"] = {"Garde-poignets en mortécailles de tonnerre", "CRAFTING"}
+        s["npc;drop=55085"] = {"Peroth’arn", "Puits d’éternité"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -1138,6 +1239,20 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "Firelands"}
         s["npc;drop=54161"] = {"[Flame Archon]", "Firelands"}
         s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "Orgrimmar"}
+        s["quest;reward=29312"] = {"[The Stuff of Legends]", "Stormwind City"}
+        s["npc;drop=55689"] = {"[Hagara the Stormbinder]", "Dragon Soul"}
+        s["npc;drop=55308"] = {"[Warlord Zon'ozz]", "Dragon Soul"}
+        s["npc;drop=55265"] = {"[Morchok]", "Dragon Soul"}
+        s["npc;drop=55294"] = {"[Ultraxion]", "Dragon Soul"}
+        s["npc;drop=55312"] = {"[Yor'sahj the Unsleeping]", "Dragon Soul"}
+        s["npc;drop=56173"] = {"[Deathwing] <[The Destroyer]>", "Dragon Soul"}
+        s["npc;drop=57821"] = {"[Lieutenant Shara] <[The Twilight's Hammer]>", "Dragon Soul"}
+        s["npc;sold=241467"] = {"[Sylstrasza] <[Obsidian Fragment Exchange]>", "Orgrimmar"}
+        s["npc;drop=54938"] = {"[Archbishop Benedictus]", "Hour of Twilight"}
+        s["npc;drop=53879"] = {"[Deathwing] <[The Destroyer]>", "Dragon Soul"}
+        s["npc;drop=56427"] = {"[Warmaster Blackhorn]", "Dragon Soul"}
+        s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "Baradin Hold"}
+        s["npc;drop=55085"] = {"[Peroth'arn]", "Well of Eternity"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -1400,6 +1515,33 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "불의 땅"}
         s["npc;drop=54161"] = {"[Flame Archon]", "불의 땅"}
         s["npc;sold=52549"] = {"하사관 썬더혼 <정복 병참장교>", "오그리마"}
+        s["quest;reward=29312"] = {"[The Stuff of Legends]", "스톰윈드"}
+        s["npc;drop=55689"] = {"[Hagara the Stormbinder]", "용의 영혼"}
+        s["npc;drop=55308"] = {"[Warlord Zon'ozz]", "용의 영혼"}
+        s["npc;drop=55265"] = {"[Morchok]", "용의 영혼"}
+        s["npc;drop=55294"] = {"[Ultraxion]", "용의 영혼"}
+        s["npc;drop=55312"] = {"[Yor'sahj the Unsleeping]", "용의 영혼"}
+        s["npc;drop=56173"] = {"[Deathwing] <[The Destroyer]>", "용의 영혼"}
+        s["npc;drop=57821"] = {"[Lieutenant Shara] <[The Twilight's Hammer]>", "용의 영혼"}
+        s["spell;created=101932"] = {"티탄의 수호 판금손목", "CRAFTING"}
+        s["npc;sold=241467"] = {"실스트라자 <흑요석 파편 교환>", "오그리마"}
+        s["npc;drop=54938"] = {"[Archbishop Benedictus]", "황혼의 시간"}
+        s["npc;drop=53879"] = {"[Deathwing] <[The Destroyer]>", "용의 영혼"}
+        s["spell;created=101925"] = {"막을 수 없는 파괴자의 다리갑옷", "CRAFTING"}
+        s["spell;created=101931"] = {"파괴적인 힘의 팔보호구", "CRAFTING"}
+        s["spell;created=101933"] = {"자연의 용사 다리보호구", "CRAFTING"}
+        s["spell;created=101937"] = {"샘솟는 평온의 팔보호구", "CRAFTING"}
+        s["npc;drop=56427"] = {"[Warmaster Blackhorn]", "용의 영혼"}
+        s["spell;created=101940"] = {"칼날그림자 손목보호구", "CRAFTING"}
+        s["spell;created=101941"] = {"사냥꾼 암살자의 팔보호구", "CRAFTING"}
+        s["spell;created=101921"] = {"용암지진 바지", "CRAFTING"}
+        s["spell;created=101923"] = {"정복되지 않은 힘의 팔보호구", "CRAFTING"}
+        s["spell;created=101929"] = {"영혼 복원자 팔보호구", "CRAFTING"}
+        s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "바라딘 요새"}
+        s["spell;created=101922"] = {"빛의 꿈결두름", "CRAFTING"}
+        s["spell;created=101934"] = {"죽음비늘 다리보호구", "CRAFTING"}
+        s["spell;created=101939"] = {"천둥치는 죽음비늘 손목보호구", "CRAFTING"}
+        s["npc;drop=55085"] = {"페로스안", "영원의 샘"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1640,6 +1782,32 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "Terras do Fogo"}
         s["npc;drop=54161"] = {"[Flame Archon]", "Terras do Fogo"}
         s["npc;sold=52549"] = {"Sargento Chifre Troante <Intendente de Dominação>", "Orgrimmar"}
+        s["quest;reward=29312"] = {"[The Stuff of Legends]", "Ventobravo"}
+        s["npc;drop=55689"] = {"[Hagara the Stormbinder]", "Alma Dragônica"}
+        s["npc;drop=55308"] = {"[Warlord Zon'ozz]", "Alma Dragônica"}
+        s["npc;drop=55265"] = {"[Morchok]", "Alma Dragônica"}
+        s["npc;drop=55294"] = {"[Ultraxion]", "Alma Dragônica"}
+        s["npc;drop=55312"] = {"[Yor'sahj the Unsleeping]", "Alma Dragônica"}
+        s["npc;drop=56173"] = {"[Deathwing] <[The Destroyer]>", "Alma Dragônica"}
+        s["npc;drop=57821"] = {"[Lieutenant Shara] <[The Twilight's Hammer]>", "Alma Dragônica"}
+        s["spell;created=101932"] = {"Braceletes da Guarda Titânica", "CRAFTING"}
+        s["npc;sold=241467"] = {"Sylstrasza <Troca de Fragmentos Obsidianos>", "Orgrimmar"}
+        s["npc;drop=54938"] = {"Arcebispo Benedictus", "Hora do Crepúsculo"}
+        s["npc;drop=53879"] = {"[Deathwing] <[The Destroyer]>", "Alma Dragônica"}
+        s["spell;created=101925"] = {"Coxotes do Destruidor Implacável", "CRAFTING"}
+        s["spell;created=101931"] = {"Braçadeiras da Força Destrutiva", "CRAFTING"}
+        s["spell;created=101933"] = {"Perneiras do Campeão da Natureza", "CRAFTING"}
+        s["spell;created=101937"] = {"Braçadeiras da Serenidade Fluida", "CRAFTING"}
+        s["npc;drop=56427"] = {"[Warmaster Blackhorn]", "Alma Dragônica"}
+        s["spell;created=101940"] = {"Munhequeiras Laminumbra", "CRAFTING"}
+        s["spell;created=101941"] = {"Braçadeiras do Caçador-assassino", "CRAFTING"}
+        s["spell;created=101921"] = {"Culotes da Magmoto", "CRAFTING"}
+        s["spell;created=101923"] = {"Braçadeiras do Poder Insubjugável", "CRAFTING"}
+        s["spell;created=101929"] = {"Braçadeiras do Redentor de Almas", "CRAFTING"}
+        s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "Guarnição Baradin"}
+        s["spell;created=101922"] = {"Braça-sonhos da Luz", "CRAFTING"}
+        s["spell;created=101934"] = {"Perneiras de Mortescama", "CRAFTING"}
+        s["spell;created=101939"] = {"Munhequeiras de Mortescama Trovejantes", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1902,6 +2070,33 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"Кар Вечнопылающий <Повелитель огня>", "Огненные Просторы"}
         s["npc;drop=54161"] = {"Полыхающий архонт", "Огненные Просторы"}
         s["npc;sold=52549"] = {"Сержант Громовой Рог <Награды за очки завоевания>", "Оргриммар"}
+        s["quest;reward=29312"] = {"Посох легенд", "Штормград"}
+        s["npc;drop=55689"] = {"Хагара Владычица Штормов", "Душа Дракона"}
+        s["npc;drop=55308"] = {"Полководец Зон'озз", "Душа Дракона"}
+        s["npc;drop=55265"] = {"Морхок", "Душа Дракона"}
+        s["npc;drop=55294"] = {"Ультраксион", "Душа Дракона"}
+        s["npc;drop=55312"] = {"Йор'садж Неспящий", "Душа Дракона"}
+        s["npc;drop=56173"] = {"Смертокрыл <Разрушитель>", "Душа Дракона"}
+        s["npc;drop=57821"] = {"Лейтенант Шара <Сумеречный молот>", "Душа Дракона"}
+        s["spell;created=101932"] = {"Наручи титанового стража", "CRAFTING"}
+        s["npc;sold=241467"] = {"Сильстраза <Обмен обсидиановых фрагментов>", "Оргриммар"}
+        s["npc;drop=54938"] = {"Архиепископ Бенедикт", "Время Сумерек"}
+        s["npc;drop=53879"] = {"Смертокрыл <Разрушитель>", "Душа Дракона"}
+        s["spell;created=101925"] = {"Ножные латы неудержимого разрушителя", "CRAFTING"}
+        s["spell;created=101931"] = {"Наручи разрушительной силы", "CRAFTING"}
+        s["spell;created=101933"] = {"Поножи защитника природы", "CRAFTING"}
+        s["spell;created=101937"] = {"Наручи вечной безмятежности", "CRAFTING"}
+        s["npc;drop=56427"] = {"Воевода Черный Рог", "Душа Дракона"}
+        s["spell;created=101940"] = {"Накулачники Тени Клинка", "CRAFTING"}
+        s["spell;created=101941"] = {"Наручи охотника-убийцы", "CRAFTING"}
+        s["spell;created=101921"] = {"Бриджи лавового землетрясения", "CRAFTING"}
+        s["spell;created=101923"] = {"Наручи непобедимой силы", "CRAFTING"}
+        s["spell;created=101929"] = {"Наручи спасителя душ", "CRAFTING"}
+        s["npc;drop=55869"] = {"Ализабаль <Госпожа Ненависти>", "Крепость Барадин"}
+        s["spell;created=101922"] = {"Мечтательные повязки света", "CRAFTING"}
+        s["spell;created=101934"] = {"Поножи из смертоносной чешуи", "CRAFTING"}
+        s["spell;created=101939"] = {"Грозовые накулачники из смертоносной чешуи", "CRAFTING"}
+        s["npc;drop=55085"] = {"Перот'арн", "Источник Вечности"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -2163,6 +2358,33 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "火焰之地"}
         s["npc;drop=54161"] = {"[Flame Archon]", "火焰之地"}
         s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "奥格瑞玛"}
+        s["quest;reward=29312"] = {"[The Stuff of Legends]", "暴风城"}
+        s["npc;drop=55689"] = {"[Hagara the Stormbinder]", "巨龙之魂"}
+        s["npc;drop=55308"] = {"[Warlord Zon'ozz]", "巨龙之魂"}
+        s["npc;drop=55265"] = {"[Morchok]", "巨龙之魂"}
+        s["npc;drop=55294"] = {"[Ultraxion]", "巨龙之魂"}
+        s["npc;drop=55312"] = {"[Yor'sahj the Unsleeping]", "巨龙之魂"}
+        s["npc;drop=56173"] = {"[Deathwing] <[The Destroyer]>", "巨龙之魂"}
+        s["npc;drop=57821"] = {"[Lieutenant Shara] <[The Twilight's Hammer]>", "巨龙之魂"}
+        s["spell;created=101932"] = {"守护泰坦腕甲", "CRAFTING"}
+        s["npc;sold=241467"] = {"[Sylstrasza] <[Obsidian Fragment Exchange]>", "奥格瑞玛"}
+        s["npc;drop=54938"] = {"[Archbishop Benedictus]", "暮光审判"}
+        s["npc;drop=53879"] = {"[Deathwing] <[The Destroyer]>", "巨龙之魂"}
+        s["spell;created=101925"] = {"无敌毁灭者腿铠", "CRAFTING"}
+        s["spell;created=101931"] = {"毁灭之力护腕", "CRAFTING"}
+        s["spell;created=101933"] = {"自然勇士护腿", "CRAFTING"}
+        s["spell;created=101937"] = {"流静束腕", "CRAFTING"}
+        s["npc;drop=56427"] = {"[Warmaster Blackhorn]", "巨龙之魂"}
+        s["spell;created=101940"] = {"刃影护腕", "CRAFTING"}
+        s["spell;created=101941"] = {"猎人杀手束腕", "CRAFTING"}
+        s["spell;created=101921"] = {"熔岩地震护腿", "CRAFTING"}
+        s["spell;created=101923"] = {"不羁之力束腕", "CRAFTING"}
+        s["spell;created=101929"] = {"灵魂救赎腕甲", "CRAFTING"}
+        s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "巴拉丁监狱"}
+        s["spell;created=101922"] = {"光芒梦境之束", "CRAFTING"}
+        s["spell;created=101934"] = {"死鳞腿铠", "CRAFTING"}
+        s["spell;created=101939"] = {"雷霆死鳞护腕", "CRAFTING"}
+        s["npc;drop=55085"] = {"[Peroth'arn]", "永恒之井"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -2424,5 +2646,32 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=53616"] = {"[Kar the Everburning] <[Firelord]>", "火焰之地"}
         s["npc;drop=54161"] = {"[Flame Archon]", "火焰之地"}
         s["npc;sold=52549"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "奥格瑞玛"}
+        s["quest;reward=29312"] = {"[The Stuff of Legends]", "暴风城"}
+        s["npc;drop=55689"] = {"[Hagara the Stormbinder]", "巨龙之魂"}
+        s["npc;drop=55308"] = {"[Warlord Zon'ozz]", "巨龙之魂"}
+        s["npc;drop=55265"] = {"[Morchok]", "巨龙之魂"}
+        s["npc;drop=55294"] = {"[Ultraxion]", "巨龙之魂"}
+        s["npc;drop=55312"] = {"[Yor'sahj the Unsleeping]", "巨龙之魂"}
+        s["npc;drop=56173"] = {"[Deathwing] <[The Destroyer]>", "巨龙之魂"}
+        s["npc;drop=57821"] = {"[Lieutenant Shara] <[The Twilight's Hammer]>", "巨龙之魂"}
+        s["spell;created=101932"] = {"守护泰坦腕甲", "CRAFTING"}
+        s["npc;sold=241467"] = {"[Sylstrasza] <[Obsidian Fragment Exchange]>", "奥格瑞玛"}
+        s["npc;drop=54938"] = {"[Archbishop Benedictus]", "暮光审判"}
+        s["npc;drop=53879"] = {"[Deathwing] <[The Destroyer]>", "巨龙之魂"}
+        s["spell;created=101925"] = {"无敌毁灭者腿铠", "CRAFTING"}
+        s["spell;created=101931"] = {"毁灭之力护腕", "CRAFTING"}
+        s["spell;created=101933"] = {"自然勇士护腿", "CRAFTING"}
+        s["spell;created=101937"] = {"流静束腕", "CRAFTING"}
+        s["npc;drop=56427"] = {"[Warmaster Blackhorn]", "巨龙之魂"}
+        s["spell;created=101940"] = {"刃影护腕", "CRAFTING"}
+        s["spell;created=101941"] = {"猎人杀手束腕", "CRAFTING"}
+        s["spell;created=101921"] = {"熔岩地震护腿", "CRAFTING"}
+        s["spell;created=101923"] = {"不羁之力束腕", "CRAFTING"}
+        s["spell;created=101929"] = {"灵魂救赎腕甲", "CRAFTING"}
+        s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "巴拉丁监狱"}
+        s["spell;created=101922"] = {"光芒梦境之束", "CRAFTING"}
+        s["spell;created=101934"] = {"死鳞腿铠", "CRAFTING"}
+        s["spell;created=101939"] = {"雷霆死鳞护腕", "CRAFTING"}
+        s["npc;drop=55085"] = {"[Peroth'arn]", "永恒之井"}
     end
 end

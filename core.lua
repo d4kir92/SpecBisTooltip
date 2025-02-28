@@ -13,7 +13,7 @@ SBTSetup:SetScript(
 	function(self, event, ...)
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.21")
+			SpecBisTooltip:SetVersion(136031, "0.12.22")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

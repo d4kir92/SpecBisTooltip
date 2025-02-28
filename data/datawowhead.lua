@@ -10,7 +10,10 @@ function SpecBisTooltip:AddToSOD(class, specid, tab)
 	end
 end
 
-SpecBisTooltip:AddOldSodPhases()
+if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
+	SpecBisTooltip:AddOldSodPhases()
+end
+
 local sortBfs = {}
 sortBfs["BISO"] = 1
 sortBfs["BISMR"] = 2

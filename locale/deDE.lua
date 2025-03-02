@@ -31,6 +31,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "npc;sold", "Kaufen")
     SpecBisTooltip:AddTrans("deDE", "npc;drop", "Drop")
     SpecBisTooltip:AddTrans("deDE", "object;contained", "Enthalten")
+    SpecBisTooltip:AddTrans("deDE", "item:contained", "Enthalten")
     SpecBisTooltip:AddTrans("deDE", "catalyst", "Katalysator")
     SpecBisTooltip:AddTrans("deDE", "catalyst/unknown", "Katalysator/Unbekannt")
     SpecBisTooltip:AddTrans("deDE", "unknown", "Unbekannt")

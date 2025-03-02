@@ -21,7 +21,7 @@ function SpecBisTooltip:GetSource(sourceId)
 
             return sourceTyp, sourceStr, location
         else
-            print("[SpecBisTooltip] FAILED TO FIND", sourceId)
+            SpecBisTooltip:MSG("FAILED TO FIND", sourceId)
         end
     end
 
@@ -51,5 +51,5 @@ if SpecBisTooltip.TranslationenUS then
         SpecBisTooltip:TranslationzhTW()
     end
 else
-    print("[SpecBisTooltip] Missing TRANSLATIONS")
+    SpecBisTooltip:MSG("Missing TRANSLATIONS")
 end

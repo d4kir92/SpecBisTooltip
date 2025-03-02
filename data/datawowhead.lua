@@ -161,7 +161,8 @@ function SpecBisTooltip:GetBFSRetail(itemId, content)
 end
 
 local bfi = {}
-function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
+function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide)
+	guide = guide or false
 	local n = num or 1
 	if invType == nil then return nil, nil, nil end
 	if specId == nil then
@@ -231,6 +232,10 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 
 	if bfi[class][specId][invType] then
 		local itemId = bfi[class][specId][invType][n]
+		if not guide and SBTTABPC and SBTTABPC[invType] then
+			itemId = SBTTABPC[invType]
+		end
+
 		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 			if content == nil then
 				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO")
@@ -243,51 +248,22 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num)
 
 				local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-				return sourceTyp, sourceName, sourceLocation
+				return sourceTyp, sourceName, sourceLocation, itemId
 			else
 				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content)
 				if sourceUrl then
 					local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-					return sourceTyp, sourceName, sourceLocation
+					return sourceTyp, sourceName, sourceLocation, itemId
 				end
 			end
 		else
 			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
 			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-			return sourceTyp, sourceName, sourceLocation
+			return sourceTyp, sourceName, sourceLocation, itemId
 		end
 	end
 
-	return nil, nil, nil
-end
-
-function SpecBisTooltip:GetBisSourceRetail(invType, class, specId, content)
-	if bfi[class] == nil then
-		bfi[class] = {}
-	end
-
-	if bfi[class][specId] == nil then
-		bfi[class][specId] = {}
-	end
-
-	if bfi[class][specId][content] == nil then
-		bfi[class][specId][content] = {}
-		local pool = SpecBisTooltip:GetWoWBuild()
-		if SpecBisTooltip:GetBisTable()[pool] and SpecBisTooltip:GetBisTable()[pool][class] and SpecBisTooltip:GetBisTable()[pool][class][specId] and SpecBisTooltip:GetBisTable()[pool][class][specId][content] then
-			for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content]) do
-				local slot = tab[2]
-				if bfi[class][specId][content][slot] == nil then
-					bfi[class][specId][content][slot] = itemId
-				end
-			end
-		end
-	end
-
-	local itemId = bfi[class][specId][content][invType]
-	local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
-	local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-
-	return sourceTyp, sourceName, sourceLocation
+	return nil, nil, nil, nil
 end

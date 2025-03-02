@@ -13,7 +13,8 @@ SBTSetup:SetScript(
 	function(self, event, ...)
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.23")
+			SBTTABPC = SBTTABPC or {}
+			SpecBisTooltip:SetVersion(136031, "0.12.24")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil
@@ -90,6 +91,19 @@ function SpecBisTooltip:GetSettingsContent(parent)
 	else
 		SpecBisTooltip:AppendCheckbox("SHOWOLDERPHASES", true)
 	end
+
+	SpecBisTooltip:AppendCategory("CUSTOMBISIDS")
+	local specId = SpecBisTooltip:GetTalentInfo()
+	local _, class = UnitClass("PLAYER")
+	for i, slot in pairs(validEquipSlots) do
+		local _, _, _, itemId = SpecBisTooltip:GetBisSource(slot, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
+		local text = ""
+		if itemId then
+			text = " (Guide-ItemId: " .. itemId .. ")"
+		end
+
+		SpecBisTooltip:AppendEditbox(slot, "", function(sel, val) end, 14, nil, true, SBTTABPC, "", text)
+	end
 end
 
 function SpecBisTooltip:InitSettings()
@@ -131,7 +145,7 @@ end
 
 local once = true
 local once2 = true
-function SpecBisTooltip:GetItemTyp(class, specId, itemId)
+function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	if itemId == nil then return "NOTBIS", nil end
 	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
@@ -150,6 +164,15 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId)
 		end
 
 		return
+	end
+
+	if SBTTABPC and SBTTABPC[invType] and SBTTABPC[invType] > 0 then
+		SBTTABPC[invType] = tonumber(SBTTABPC[invType])
+		if SBTTABPC[invType] == itemId then
+			return "BIS", nil
+		else
+			return "NOTBIS", nil
+		end
 	end
 
 	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId] then return SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId][1], SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId][2] end
@@ -197,9 +220,9 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content)
 	return "NOTBIS", nil, nil
 end
 
-function SpecBisTooltip:GetSpecItemTyp(itemId, specId)
+function SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
 	local _, engClass = UnitClass("PLAYER")
-	if engClass and specId then return SpecBisTooltip:GetItemTyp(engClass, specId, itemId) end
+	if engClass and specId then return SpecBisTooltip:GetItemTyp(engClass, specId, itemId, invType) end
 
 	return nil, nil, nil
 end
@@ -618,7 +641,7 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 	local n = num or 1
 	local _, class = UnitClass("PLAYER")
 	if id == nil then return end
-	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTyp(id, specId)
+	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTyp(id, specId, invType)
 	if typ == nil then return end
 	local iconText = ""
 	if icon then

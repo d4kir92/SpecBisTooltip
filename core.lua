@@ -1,47 +1,13 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
+local validEquipSlotsClassic = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_RELIC",}
+local validEquipSlotsRetail = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_SHIELD"}
 local invalidEquipSlots = {}
 invalidEquipSlots["INVTYPE_TABARD"] = true
 invalidEquipSlots["INVTYPE_BODY"] = true
 invalidEquipSlots["INVTYPE_BAG"] = true
 invalidEquipSlots["INVTYPE_NON_EQUIP_IGNORE"] = true
-local SBTSetup = CreateFrame("FRAME", "SBTSetup")
-SpecBisTooltip:RegisterEvent(SBTSetup, "PLAYER_LOGIN")
-SBTSetup:SetScript(
-	"OnEvent",
-	function(self, event, ...)
-		if event == "PLAYER_LOGIN" then
-			SBTTAB = SBTTAB or {}
-			SBTTABPC = SBTTABPC or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.28")
-			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
-			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
-			local mmbtn = nil
-			SpecBisTooltip:CreateMinimapButton(
-				{
-					["name"] = "SpecBisTooltip",
-					["icon"] = 136031,
-					["var"] = mmbtn,
-					["dbtab"] = SBTTAB,
-					["vTT"] = {{"|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r", "v|cff3FC7EB" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
-					["funcL"] = function()
-						SpecBisTooltip:ToggleSettings()
-					end,
-					["funcR"] = function()
-						SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)
-						SpecBisTooltip:HideMMBtn("SpecBisTooltip")
-						SpecBisTooltip:MSG("Minimap Button is now hidden.")
-					end,
-					["dbkey"] = "SHOWMINIMAPBUTTON"
-				}
-			)
-
-			SpecBisTooltip:InitSettings()
-		end
-	end
-)
-
 local sbt_settings = nil
 function SpecBisTooltip:ToggleSettings()
 	if sbt_settings then
@@ -95,14 +61,54 @@ function SpecBisTooltip:GetSettingsContent(parent)
 	SpecBisTooltip:AppendCategory("CUSTOMBISIDS")
 	local specId = SpecBisTooltip:GetTalentInfo()
 	local _, class = UnitClass("PLAYER")
-	for i, slot in pairs(validEquipSlots) do
-		local _, _, _, itemId = SpecBisTooltip:GetBisSource(slot, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
+	local r = 1
+	local t = 1
+	local tab = validEquipSlots
+	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+		tab = validEquipSlotsRetail
+	else
+		tab = validEquipSlotsClassic
+	end
+
+	for i, invType in pairs(tab) do
+		local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
 		local text = ""
 		if itemId then
 			text = " (Guide-ItemId: " .. itemId .. ")"
 		end
 
-		SpecBisTooltip:AppendEditbox(slot, "", function(sel, val) end, 14, nil, true, SBTTABPC, "", text)
+		local n = nil
+		local typ = invType
+		if invType == "INVTYPE_FINGER" then
+			n = r
+		elseif invType == "INVTYPE_TRINKET" then
+			n = t
+		end
+
+		if n then
+			typ = invType .. n
+		end
+
+		SpecBisTooltip:AppendEditbox(typ, "", function(sel, val) end, 14, nil, true, SBTTABPC, "", text)
+		if invType == "INVTYPE_FINGER" or invType == "INVTYPE_TRINKET" then
+			if invType == "INVTYPE_FINGER" then
+				r = r + 1
+			elseif invType == "INVTYPE_TRINKET" then
+				t = t + 1
+			end
+
+			if invType == "INVTYPE_FINGER" then
+				n = r
+			elseif invType == "INVTYPE_TRINKET" then
+				n = t
+			end
+
+			if n then
+				typ = invType .. n
+			end
+
+			SpecBisTooltip:AppendEditbox(typ, "", function(sel, val) end, 14, nil, true, SBTTABPC, "", text)
+		end
 	end
 end
 
@@ -111,8 +117,8 @@ function SpecBisTooltip:InitSettings()
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
-			["sw"] = 520,
-			["sh"] = 520,
+			["sw"] = 600,
+			["sh"] = 600,
 			["title"] = format("|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r v|cff3FC7EB%s", SpecBisTooltip:GetVersion())
 		}
 	)
@@ -166,10 +172,24 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 		return
 	end
 
-	if SBTTABPC and SBTTABPC[invType] and SBTTABPC[invType] > 0 then
-		SBTTABPC[invType] = tonumber(SBTTABPC[invType])
-		if SBTTABPC[invType] == itemId then
+	if SBTTABPC then
+		if SBTTABPC[invType .. 1] then
+			SBTTABPC[invType .. 1] = tonumber(SBTTABPC[invType .. 1])
+		end
+
+		if SBTTABPC[invType .. 2] then
+			SBTTABPC[invType .. 2] = tonumber(SBTTABPC[invType .. 2])
+		end
+
+		if SBTTABPC[invType .. 1] and SBTTABPC[invType .. 1] == itemId or SBTTABPC[invType .. 2] and SBTTABPC[invType .. 2] == itemId then
 			return "BIS", nil
+		elseif SBTTABPC[invType] then
+			SBTTABPC[invType] = tonumber(SBTTABPC[invType])
+			if SBTTABPC[invType] == itemId then
+				return "BIS", nil
+			else
+				return "NOTBIS", nil
+			end
 		else
 			return "NOTBIS", nil
 		end
@@ -180,7 +200,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	return "NOTBIS", nil
 end
 
-function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content)
+function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType)
 	if itemId == nil then return "NOTBIS", nil, nil end
 	local name, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
 	if name == nil then return end
@@ -227,16 +247,16 @@ function SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
 	return nil, nil, nil
 end
 
-function SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content)
+function SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
 	local _, engClass = UnitClass("PLAYER")
-	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, content) end
+	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, content, invType) end
 
 	return nil, nil, nil
 end
 
 function SpecBisTooltip:GetSpecItemTypTrinketRetail(itemId, specId)
 	local _, engClass = UnitClass("PLAYER")
-	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, "TRINKETS") end
+	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, "TRINKETS", "INVTYPE_TRINKET") end
 
 	return nil, nil, nil
 end
@@ -886,6 +906,7 @@ local function OnTooltipSetItem(tooltip, data)
 
 	if id == nil then return end
 	local itemType = select(9, GetItemInfo(id))
+	if itemType == nil then return end
 	if itemType == "" then return end
 	if invalidEquipSlots[itemType] then return end
 	local n = 1
@@ -903,7 +924,7 @@ local function OnTooltipSetItem(tooltip, data)
 		end
 	end
 
-	if itemType == "INVTYPE_WEAPON" or itemType == "INVTYPE_2HWEAPON" or itemType == "INVTYPE_WEAPONMAINHAND" or itemType == "INVTYPE_WEAPONOFFHAND" then
+	if itemType == "INVTYPE_WEAPON" or itemType == "INVTYPE_2HWEAPON" or itemType == "INVTYPE_WEAPONMAINHAND" or itemType == "INVTYPE_WEAPONOFFHAND" or itemType == "INVTYPE_HOLDABLE" then
 		local weapon2 = GetInventoryItemID("player", "SECONDARYHANDSLOT")
 		if weapon2 == id then
 			n = 2
@@ -1045,25 +1066,61 @@ local function OnTooltipSetItem(tooltip, data)
 	end
 end
 
-C_Timer.After(
-	4,
-	function()
-		if ItemRefTooltip and GameTooltip and ItemRefTooltip:HasScript("OnTooltipSetItem") and GameTooltip:HasScript("OnTooltipSetItem") then
-			ItemRefTooltip:HookScript(
-				"OnTooltipSetItem",
-				function(tooltip, ...)
-					OnTooltipSetItem(tooltip, ...)
-				end
+local SBTSetup = CreateFrame("FRAME", "SBTSetup")
+SpecBisTooltip:RegisterEvent(SBTSetup, "PLAYER_LOGIN")
+SBTSetup:SetScript(
+	"OnEvent",
+	function(self, event, ...)
+		if event == "PLAYER_LOGIN" then
+			SBTTAB = SBTTAB or {}
+			SBTTABPC = SBTTABPC or {}
+			SpecBisTooltip:SetVersion(136031, "0.12.29")
+			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
+			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
+			local mmbtn = nil
+			SpecBisTooltip:CreateMinimapButton(
+				{
+					["name"] = "SpecBisTooltip",
+					["icon"] = 136031,
+					["var"] = mmbtn,
+					["dbtab"] = SBTTAB,
+					["vTT"] = {{"|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r", "v|cff3FC7EB" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
+					["funcL"] = function()
+						SpecBisTooltip:ToggleSettings()
+					end,
+					["funcR"] = function()
+						SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)
+						SpecBisTooltip:HideMMBtn("SpecBisTooltip")
+						SpecBisTooltip:MSG("Minimap Button is now hidden.")
+					end,
+					["dbkey"] = "SHOWMINIMAPBUTTON"
+				}
 			)
 
-			GameTooltip:HookScript(
-				"OnTooltipSetItem",
-				function(tooltip, ...)
-					OnTooltipSetItem(tooltip, ...)
+			C_Timer.After(
+				4,
+				function()
+					if ItemRefTooltip and GameTooltip and ItemRefTooltip:HasScript("OnTooltipSetItem") and GameTooltip:HasScript("OnTooltipSetItem") then
+						ItemRefTooltip:HookScript(
+							"OnTooltipSetItem",
+							function(tooltip, ...)
+								OnTooltipSetItem(tooltip, ...)
+							end
+						)
+
+						GameTooltip:HookScript(
+							"OnTooltipSetItem",
+							function(tooltip, ...)
+								OnTooltipSetItem(tooltip, ...)
+							end
+						)
+					elseif TooltipDataProcessor then
+						TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
+					end
+
+					SpecBisTooltip:InitSettings()
 				end
 			)
-		elseif TooltipDataProcessor then
-			TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 		end
 	end
 )

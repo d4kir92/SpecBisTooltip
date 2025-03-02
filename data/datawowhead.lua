@@ -232,8 +232,12 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 	if bfi[class][specId][invType] then
 		local itemId = bfi[class][specId][invType][n]
-		if not guide and SBTTABPC and SBTTABPC[invType] then
-			itemId = SBTTABPC[invType]
+		if not guide and SBTTABPC then
+			if n and SBTTABPC[invType .. n] then
+				itemId = SBTTABPC[invType .. n]
+			elseif SBTTABPC[invType] then
+				itemId = SBTTABPC[invType]
+			end
 		end
 
 		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
@@ -258,7 +262,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 				end
 			end
 		else
-			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId)
+			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
 			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
 			return sourceTyp, sourceName, sourceLocation, itemId

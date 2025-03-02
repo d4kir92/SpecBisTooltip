@@ -1074,7 +1074,7 @@ SBTSetup:SetScript(
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.29")
+			SpecBisTooltip:SetVersion(136031, "0.12.30")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil
@@ -1098,7 +1098,7 @@ SBTSetup:SetScript(
 			)
 
 			C_Timer.After(
-				4,
+				1,
 				function()
 					if ItemRefTooltip and GameTooltip and ItemRefTooltip:HasScript("OnTooltipSetItem") and GameTooltip:HasScript("OnTooltipSetItem") then
 						ItemRefTooltip:HookScript(

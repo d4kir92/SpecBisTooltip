@@ -161,18 +161,17 @@ function SpecBisTooltip:GetBFSRetail(itemId, content)
 end
 
 local bfi = {}
+local missingSpec = false
 function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide)
 	guide = guide or false
 	local n = num or 1
 	if invType == nil then return nil, nil, nil end
 	if specId == nil then
-		SpecBisTooltip:MSG("[GetBisSource] Missing SpecId")
-
-		return nil, nil, nil
-	end
-
-	if specId == nil then
-		SpecBisTooltip:MSG("[GetBisSource] Missing SpecId")
+		local level = UnitLevel("player")
+		if level >= 10 and not missingSpec then
+			missingSpec = true
+			SpecBisTooltip:MSG("[GetBisSource] Missing SpecId (Talents not set?)")
+		end
 
 		return nil, nil, nil
 	end

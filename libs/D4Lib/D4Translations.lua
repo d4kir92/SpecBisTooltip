@@ -13,9 +13,9 @@ function D4:Trans(key, lang, t1, t2, t3)
     elseif D4.trans["enUS"] and D4.trans["enUS"][key] ~= nil then
         result = D4.trans["enUS"][key]
     else
-        if key ~= "" and missingTranslations[key] == nil then
+        if key and key ~= "" and missingTranslations[key] == nil then
             missingTranslations[key] = true
-            D4:MSG("MISSING TRANSLATION KEY:", key, lang, t1, t2, t3)
+            D4:MSG("MISSING TRANSLATION KEY [" .. key .. "]", "(", lang, t1, t2, t3, ")")
         end
 
         return key

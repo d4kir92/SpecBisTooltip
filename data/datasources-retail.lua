@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 02.03.2025
+-- SOURCE FROM: 07.03.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -161,6 +161,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Gunker", "Operation: Mechagon"}
         s["npc;drop=230946"] = {"V.V. Goosworth <Disgraced Slimeologist>", "Undermine"}
         s["npc;drop=150159"] = {"King Gobbamak", "Operation: Mechagon"}
+        s["object;contained=507768"] = {"Jettisoned Pile of Goblin-Bucks", "Sidestreet Sluice"}
+        s["npc;drop=231310"] = {"Darkfuse Precipitant", "Undermine"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -302,6 +304,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Schmierer", "Operation: Mechagon"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Lorenhall"}
         s["npc;drop=150159"] = {"König Gobbamak", "Operation: Mechagon"}
+        s["npc;drop=231310"] = {"Fällmittel der Düsternisverschmolzenen", "Lorenhall"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -442,6 +445,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Mugroso", "Operación: Mecandria"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Minahonda"}
         s["npc;drop=150159"] = {"Rey Gobbamak", "Operación: Mecandria"}
+        s["npc;drop=231310"] = {"Precipitante de Fundisombras", "Minahonda"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -581,6 +585,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Salcrass", "Opération Mécagone"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Terremine"}
         s["npc;drop=150159"] = {"Roi Gobbamak", "Opération Mécagone"}
+        s["npc;drop=231310"] = {"Précipitant imprégné de ténèbres", "Terremine"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -720,6 +725,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Sporcheria", "Operazione: Meccagon"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Cavafonda"}
         s["npc;drop=150159"] = {"Re Gobbamak", "Operazione: Meccagon"}
+        s["npc;drop=231310"] = {"Precipitante dei Micciascura", "Cavafonda"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -873,6 +879,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"진창오물", "작전명: 메카곤"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "언더마인"}
         s["npc;drop=150159"] = {"왕 고바막", "작전명: 메카곤"}
+        s["npc;drop=231310"] = {"다크퓨즈 침전물", "언더마인"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1014,6 +1021,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Visgueiro", "Operação: Gnomecan"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Inframina"}
         s["npc;drop=150159"] = {"Rei Gobbamak", "Operação: Gnomecan"}
+        s["npc;drop=231310"] = {"Precipitante Sombrafuso", "Inframina"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1168,6 +1176,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"Токсикоид", "Операция 'Мехагон'"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Нижняя Шахта"}
         s["npc;drop=150159"] = {"Король Гоббамак", "Операция 'Мехагон'"}
+        s["npc;drop=231310"] = {"Стимулирующий реагент Мрачных Минеров", "Нижняя Шахта"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -1321,6 +1330,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150222"] = {"冈克", "麦卡贡行动"}
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "安德麦"}
         s["npc;drop=150159"] = {"戈巴马克国王", "麦卡贡行动"}
+        s["npc;drop=231310"] = {"暗索沉淀剂", "安德麦"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

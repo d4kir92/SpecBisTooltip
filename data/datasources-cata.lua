@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
--- SOURCE FROM: 28.02.2025
+-- SOURCE FROM: 07.03.2025
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=44245"] = {"Faldren Tillsdale <Valor Quartermaster>", "Stormwind City"}
@@ -296,6 +296,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"Deathscale Leggings", "CRAFTING"}
         s["spell;created=101939"] = {"Thundering Deathscale Wristguards", "CRAFTING"}
         s["npc;drop=55085"] = {"Peroth'arn", "Well of Eternity"}
+        s["quest;reward=30118"] = {"Patricide", "Dragon Soul"}
+        s["spell;created=101935"] = {"Bladeshadow Leggings", "CRAFTING"}
+        s["npc;sold=54658"] = {"Sergeant Thunderhorn <Conquest Quartermaster>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -550,6 +553,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101922"] = {"Traumwickel des Lichts", "CRAFTING"}
         s["spell;created=101934"] = {"Todesschuppengamaschen", "CRAFTING"}
         s["spell;created=101939"] = {"Donnernde Todesschuppenhandgelenksschützer", "CRAFTING"}
+        s["quest;reward=30118"] = {"[Patricide]", "Drachenseele"}
+        s["spell;created=101935"] = {"Klingenschattengamaschen", "CRAFTING"}
+        s["npc;sold=54658"] = {"Unteroffizier Donnerhorn <Rüstmeister für Eroberungspunkte>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -807,6 +813,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"Leotardos Muertescama", "CRAFTING"}
         s["spell;created=101939"] = {"Guardamuñecas Muertescama del trueno", "CRAFTING"}
         s["npc;drop=55085"] = {"[Peroth'arn]", "Pozo de la Eternidad"}
+        s["quest;reward=30118"] = {"[Patricide]", "Alma de Dragón"}
+        s["spell;created=101935"] = {"Leotardos Filosombra", "CRAFTING"}
+        s["npc;sold=54658"] = {"Sargento Tronacuerno <Intendente de conquista>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -1068,6 +1077,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"Jambières en mortécailles", "CRAFTING"}
         s["spell;created=101939"] = {"Garde-poignets en mortécailles de tonnerre", "CRAFTING"}
         s["npc;drop=55085"] = {"Peroth’arn", "Puits d’éternité"}
+        s["quest;reward=30118"] = {"[Patricide]", "L’Âme des dragons"}
+        s["spell;created=101935"] = {"Jambières ombrelames", "CRAFTING"}
+        s["npc;sold=54658"] = {"Sergent Corne-Tonnerre <Intendant de conquête>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -1253,6 +1265,8 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["npc;drop=56427"] = {"[Warmaster Blackhorn]", "Dragon Soul"}
         s["npc;drop=55869"] = {"[Alizabal] <[Mistress of Hate]>", "Baradin Hold"}
         s["npc;drop=55085"] = {"[Peroth'arn]", "Well of Eternity"}
+        s["quest;reward=30118"] = {"[Patricide]", "Dragon Soul"}
+        s["npc;sold=54658"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -1542,6 +1556,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"죽음비늘 다리보호구", "CRAFTING"}
         s["spell;created=101939"] = {"천둥치는 죽음비늘 손목보호구", "CRAFTING"}
         s["npc;drop=55085"] = {"페로스안", "영원의 샘"}
+        s["quest;reward=30118"] = {"[Patricide]", "용의 영혼"}
+        s["spell;created=101935"] = {"칼날그림자 다리보호구", "CRAFTING"}
+        s["npc;sold=54658"] = {"하사관 썬더혼 <정복 병참장교>", "오그리마"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1808,6 +1825,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101922"] = {"Braça-sonhos da Luz", "CRAFTING"}
         s["spell;created=101934"] = {"Perneiras de Mortescama", "CRAFTING"}
         s["spell;created=101939"] = {"Munhequeiras de Mortescama Trovejantes", "CRAFTING"}
+        s["quest;reward=30118"] = {"[Patricide]", "Alma Dragônica"}
+        s["spell;created=101935"] = {"Perneiras Laminumbra", "CRAFTING"}
+        s["npc;sold=54658"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "Orgrimmar"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -2097,6 +2117,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"Поножи из смертоносной чешуи", "CRAFTING"}
         s["spell;created=101939"] = {"Грозовые накулачники из смертоносной чешуи", "CRAFTING"}
         s["npc;drop=55085"] = {"Перот'арн", "Источник Вечности"}
+        s["quest;reward=30118"] = {"[Patricide]", "Душа Дракона"}
+        s["spell;created=101935"] = {"Поножи Тени Клинка", "CRAFTING"}
+        s["npc;sold=54658"] = {"Сержант Громовой Рог <Награды за очки завоевания>", "Оргриммар"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -2385,6 +2408,9 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"死鳞腿铠", "CRAFTING"}
         s["spell;created=101939"] = {"雷霆死鳞护腕", "CRAFTING"}
         s["npc;drop=55085"] = {"[Peroth'arn]", "永恒之井"}
+        s["quest;reward=30118"] = {"[Patricide]", "巨龙之魂"}
+        s["spell;created=101935"] = {"刃影护腿", "CRAFTING"}
+        s["npc;sold=54658"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "奥格瑞玛"}
     end
 
     function SpecBisTooltip:TranslationzhTW()
@@ -2673,5 +2699,8 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         s["spell;created=101934"] = {"死鳞腿铠", "CRAFTING"}
         s["spell;created=101939"] = {"雷霆死鳞护腕", "CRAFTING"}
         s["npc;drop=55085"] = {"[Peroth'arn]", "永恒之井"}
+        s["quest;reward=30118"] = {"[Patricide]", "巨龙之魂"}
+        s["spell;created=101935"] = {"刃影护腿", "CRAFTING"}
+        s["npc;sold=54658"] = {"[Sergeant Thunderhorn] <[Conquest Quartermaster]>", "奥格瑞玛"}
     end
 end

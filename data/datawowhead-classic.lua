@@ -8,7 +8,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 end
 
 if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-    -- DATA FROM: 02.03.2025
+    -- DATA FROM: 07.03.2025
     if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         BIS["CLASSIC"] = {}
         BIS["CLASSIC"]["DRUID"] = {}
@@ -27,6 +27,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [234463] = {"BIS,PVE,SODP7", "quest;reward=86678", "INVTYPE_FINGER"},
             [231280] = {"BIS,PVE,SODP7", "spell;created=468559", "INVTYPE_TRINKET"},
             [236351] = {"BIS,PVE,SODP7", "quest;reward=87360", "INVTYPE_TRINKET"},
+            [236401] = {"BIS,PVE,SODP7", "quest;reward=87443", "INVTYPE_2HWEAPON"},
             [232390] = {"BIS,PVE,SODP7", "npc;sold=227853", "INVTYPE_RELIC"},
             [235869] = {"PREBIS,PVE,SODP7", "npc;drop=237964", "INVTYPE_HEAD"},
             [235887] = {"PREBIS,PVE,SODP7", "npc;drop=238234", "INVTYPE_NECK"},
@@ -132,6 +133,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236283] = {"BIS,PVE,SODP7", "npc;drop=16011", "INVTYPE_FINGER"},
             [236329] = {"BIS,PVE,SODP7", "npc;drop=15989", "INVTYPE_TRINKET"},
             [231280] = {"BIS,PVE,SODP7", "spell;created=468559", "INVTYPE_TRINKET"},
+            [236401] = {"BIS,PVE,SODP7", "quest;reward=87443", "INVTYPE_2HWEAPON"},
             [234002] = {"BIS,PVE,SODP7", "spell;created=1213635", "INVTYPE_RELIC"},
             [237288] = {"PREBIS,PVE,SODP7", "quest;reward=88723", "INVTYPE_HEAD"},
             [235887] = {"PREBIS,PVE,SODP7", "npc;drop=238234", "INVTYPE_NECK"},
@@ -226,6 +228,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236273] = {"BIS,PVE,SODP7", "npc;drop=15954", "INVTYPE_FINGER"},
             [231282] = {"BIS,PVE,SODP7", "spell;created=468556", "INVTYPE_TRINKET"},
             [236351] = {"BIS,PVE,SODP7", "quest;reward=87360", "INVTYPE_TRINKET"},
+            [236400] = {"BIS,PVE,SODP7", "quest;reward=87442", "INVTYPE_2HWEAPON"},
             [236349] = {"BIS,PVE,SODP7", "npc;drop=15990", "INVTYPE_RANGED"},
             [226564] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [237279] = {"PREBIS,PVE,SODP7", "quest;reward=88728", "INVTYPE_NECK"},
@@ -261,6 +264,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236273] = {"BIS,PVE,SODP7", "npc;drop=15954", "INVTYPE_FINGER"},
             [230243] = {"BIS,PVE,SODP7", "npc;drop=13020", "INVTYPE_TRINKET"},
             [236351] = {"BIS,PVE,SODP7", "quest;reward=87360", "INVTYPE_TRINKET"},
+            [236400] = {"BIS,PVE,SODP7", "quest;reward=87442", "INVTYPE_2HWEAPON"},
             [236349] = {"BIS,PVE,SODP7", "npc;drop=15990", "INVTYPE_RANGED"},
             [226562] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [237279] = {"PREBIS,PVE,SODP7", "quest;reward=88728", "INVTYPE_NECK"},
@@ -296,6 +300,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236273] = {"BIS,PVE,SODP7", "npc;drop=15954", "INVTYPE_FINGER"},
             [230243] = {"BIS,PVE,SODP7", "npc;drop=13020", "INVTYPE_TRINKET"},
             [236351] = {"BIS,PVE,SODP7", "quest;reward=87360", "INVTYPE_TRINKET"},
+            [236400] = {"BIS,PVE,SODP7", "quest;reward=87442", "INVTYPE_2HWEAPON"},
             [236349] = {"BIS,PVE,SODP7", "npc;drop=15990", "INVTYPE_RANGED"},
             [226562] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [237279] = {"PREBIS,PVE,SODP7", "quest;reward=88728", "INVTYPE_NECK"},
@@ -442,6 +447,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [234033] = {"BIS,PVE,SODP7", "npc;sold=15192", "INVTYPE_FINGER"},
             [236329] = {"BIS,PVE,SODP7", "npc;drop=15989", "INVTYPE_TRINKET"},
             [233994] = {"BIS,PVE,SODP7", "spell;created=1213603", "INVTYPE_TRINKET"},
+            [236399] = {"BIS,PVE,SODP7", "quest;reward=87441", "INVTYPE_2HWEAPON"},
             [236310] = {"BIS,PVE,SODP7", "npc;drop=16061", "INVTYPE_RANGED"},
             [226573] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [235887] = {"PREBIS,PVE,SODP7", "npc;drop=238234", "INVTYPE_NECK"},
@@ -477,6 +483,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [234033] = {"BIS,PVE,SODP7", "npc;sold=15192", "INVTYPE_FINGER"},
             [236329] = {"BIS,PVE,SODP7", "npc;drop=15989", "INVTYPE_TRINKET"},
             [233994] = {"BIS,PVE,SODP7", "spell;created=1213603", "INVTYPE_TRINKET"},
+            [236399] = {"BIS,PVE,SODP7", "quest;reward=87441", "INVTYPE_2HWEAPON"},
             [236310] = {"BIS,PVE,SODP7", "npc;drop=16061", "INVTYPE_RANGED"},
             [226573] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [235887] = {"PREBIS,PVE,SODP7", "npc;drop=238234", "INVTYPE_NECK"},
@@ -512,6 +519,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [233431] = {"BIS,PVE,SODP7", "npc;sold=15500", "INVTYPE_FINGER"},
             [236331] = {"BIS,PVE,SODP7", "npc;drop=15989", "INVTYPE_TRINKET"},
             [236351] = {"BIS,PVE,SODP7", "quest;reward=87360", "INVTYPE_TRINKET"},
+            [236399] = {"BIS,PVE,SODP7", "quest;reward=87441", "INVTYPE_2HWEAPON"},
             [236349] = {"BIS,PVE,SODP7", "npc;drop=15990", "INVTYPE_RANGED"},
             [226584] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [18691] = {"PREBIS,PVE,SODP7", "npc;drop=10432", "INVTYPE_NECK"},
@@ -771,6 +779,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236318] = {"BIS,PVE,SODP7", "object;contained=181366", "INVTYPE_FINGER"},
             [231284] = {"BIS,PVE,SODP7", "spell;created=468557", "INVTYPE_TRINKET"},
             [236302] = {"BIS,PVE,SODP7", "npc;drop=15928", "INVTYPE_TRINKET"},
+            [236398] = {"BIS,PVE,SODP7", "quest;reward=87444", "INVTYPE_2HWEAPON"},
             [236349] = {"BIS,PVE,SODP7", "npc;drop=15990", "INVTYPE_RANGED"},
             [226549] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [228536] = {"PREBIS,PVE,SODP7", "npc;drop=10812", "INVTYPE_NECK"},
@@ -843,6 +852,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236318] = {"BIS,PVE,SODP7", "object;contained=181366", "INVTYPE_FINGER"},
             [231284] = {"BIS,PVE,SODP7", "spell;created=468557", "INVTYPE_TRINKET"},
             [236302] = {"BIS,PVE,SODP7", "npc;drop=15928", "INVTYPE_TRINKET"},
+            [236398] = {"BIS,PVE,SODP7", "quest;reward=87444", "INVTYPE_2HWEAPON"},
             [236349] = {"BIS,PVE,SODP7", "npc;drop=15990", "INVTYPE_RANGED"},
             [226549] = {"PREBIS,PVE,SODP7", "npc;sold=227819", "INVTYPE_HEAD"},
             [228536] = {"PREBIS,PVE,SODP7", "npc;drop=10812", "INVTYPE_NECK"},

@@ -123,6 +123,18 @@ function SpecBisTooltip:InitBFS()
 			table.sort(
 				bf,
 				function(a, b)
+					if a == nil then
+						SpecBisTooltip:MSG("[InitBFS] a is nil")
+
+						return false
+					end
+
+					if b == nil then
+						SpecBisTooltip:MSG("[InitBFS] b is nil")
+
+						return false
+					end
+
 					if sortBfs[a[3][1]] == nil then
 						SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
 

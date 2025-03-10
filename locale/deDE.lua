@@ -11,6 +11,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "NOOTHERCLASSNEEDSTHIS", "Keine andere Klasse benötigt dies")
     SpecBisTooltip:AddTrans("deDE", "NOOTHERSPECNEEDSTHIS", "Keine andere Spezialisierung benötigt dies")
     SpecBisTooltip:AddTrans("deDE", "NOTBIS", "NICHT BIS")
+    SpecBisTooltip:AddTrans("deDE", "BIS", "BIS")
     SpecBisTooltip:AddTrans("deDE", "BISO", "BIS Insgesamt")
     SpecBisTooltip:AddTrans("deDE", "BISMR", "BIS in M+/Schlachtzug")
     SpecBisTooltip:AddTrans("deDE", "BISM", "BIS in M+")

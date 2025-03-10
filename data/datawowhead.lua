@@ -197,14 +197,13 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		local pool = SpecBisTooltip:GetWoWBuild()
 		if SpecBisTooltip:GetBisTable()[pool] and SpecBisTooltip:GetBisTable()[pool][class][specId] then
 			for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId]) do
-				local phase = tab[1]
 				local slot = tab[3]
 				if pool == "CLASSIC" or pool == "CATA" then
 					if slot then
-						if EngravingFrame ~= nil and strfind(phase, "SOD", 1, true) then
+						if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
 							bfi[class][specId][slot] = bfi[class][specId][slot] or {}
 							table.insert(bfi[class][specId][slot], itemId)
-						elseif EngravingFrame == nil and strfind(phase, "SOD", 1, true) == nil then
+						else
 							bfi[class][specId][slot] = bfi[class][specId][slot] or {}
 							table.insert(bfi[class][specId][slot], itemId)
 						end
@@ -253,11 +252,11 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 			if content == nil then
-				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO")
+				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO", invType)
 				if sourceUrl == nil then
-					_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR")
+					_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR", invType)
 					if sourceUrl == nil then
-						_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM")
+						_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM", invType)
 					end
 				end
 
@@ -265,11 +264,13 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 				return sourceTyp, sourceName, sourceLocation, itemId
 			else
-				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content)
+				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
 				if sourceUrl then
 					local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
 					return sourceTyp, sourceName, sourceLocation, itemId
+				else
+					return nil, nil, nil, itemId
 				end
 			end
 		else

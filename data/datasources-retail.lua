@@ -163,6 +163,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150159"] = {"King Gobbamak", "Operation: Mechagon"}
         s["object;contained=507768"] = {"Jettisoned Pile of Goblin-Bucks", "Sidestreet Sluice"}
         s["npc;drop=231310"] = {"Darkfuse Precipitant", "Undermine"}
+        s["npc;drop=229288"] = {"King Flamespite <Flarendo's Manager>", "Liberation of Undermine"}
+        s["npc;drop=229284"] = {"Guk Boomdog <The Slop Hawker>", "Liberation of Undermine"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -305,6 +307,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Lorenhall"}
         s["npc;drop=150159"] = {"König Gobbamak", "Operation: Mechagon"}
         s["npc;drop=231310"] = {"Fällmittel der Düsternisverschmolzenen", "Lorenhall"}
+        s["npc;drop=229288"] = {"König Bösflamme <Leuchtendos Manager>", "Befreiung von Lorenhall"}
+        s["npc;drop=229284"] = {"Guk Bummhund <Der Grützehändler>", "Befreiung von Lorenhall"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -446,6 +450,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Minahonda"}
         s["npc;drop=150159"] = {"Rey Gobbamak", "Operación: Mecandria"}
         s["npc;drop=231310"] = {"Precipitante de Fundisombras", "Minahonda"}
+        s["npc;drop=229288"] = {"Rey Escupellamas <Gerente de Flarendo>", "Liberación de Minahonda"}
+        s["npc;drop=229284"] = {"Guk Bumcan <El vendedor de bazofia>", "Liberación de Minahonda"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -586,6 +592,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Terremine"}
         s["npc;drop=150159"] = {"Roi Gobbamak", "Opération Mécagone"}
         s["npc;drop=231310"] = {"Précipitant imprégné de ténèbres", "Terremine"}
+        s["npc;drop=229288"] = {"Roi Hargnembrase <Impresario de Fusendo>", "Libération de Terremine"}
+        s["npc;drop=229284"] = {"Guk Boumouaf <Vendeur de gruau>", "Libération de Terremine"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -726,6 +734,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Cavafonda"}
         s["npc;drop=150159"] = {"Re Gobbamak", "Operazione: Meccagon"}
         s["npc;drop=231310"] = {"Precipitante dei Micciascura", "Cavafonda"}
+        s["npc;drop=229288"] = {"Re Ontardente <Responsabile di Motorendo>", "Liberazione di Cavafonda"}
+        s["npc;drop=229284"] = {"Guk Tirabotte <Il Venditore di Sbobba>", "Liberazione di Cavafonda"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -880,6 +890,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "언더마인"}
         s["npc;drop=150159"] = {"왕 고바막", "작전명: 메카곤"}
         s["npc;drop=231310"] = {"다크퓨즈 침전물", "언더마인"}
+        s["npc;drop=229288"] = {"왕 불꽃원한 <플레렌도의 담당자>", "언더마인 해방전선"}
+        s["npc;drop=229284"] = {"구크 붐도그 <음식물 행상인>", "언더마인 해방전선"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1022,6 +1034,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Inframina"}
         s["npc;drop=150159"] = {"Rei Gobbamak", "Operação: Gnomecan"}
         s["npc;drop=231310"] = {"Precipitante Sombrafuso", "Inframina"}
+        s["npc;drop=229288"] = {"Rei Flamódio <Empresário de Flarendo>", "Libertação da Inframina"}
+        s["npc;drop=229284"] = {"Guk Bumcão <Falcoeiro de Meleca>", "Libertação da Inframina"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1177,6 +1191,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "Нижняя Шахта"}
         s["npc;drop=150159"] = {"Король Гоббамак", "Операция 'Мехагон'"}
         s["npc;drop=231310"] = {"Стимулирующий реагент Мрачных Минеров", "Нижняя Шахта"}
+        s["npc;drop=229288"] = {"Король Флэймспайт <Менеджер Пламендо>", "Освобождение Нижней Шахты"}
+        s["npc;drop=229284"] = {"Гук Бумгавс <Продавец варева>", "Освобождение Нижней Шахты"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -1332,6 +1348,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=150159"] = {"戈巴马克国王", "麦卡贡行动"}
         s["npc;drop=231310"] = {"暗索沉淀剂", "安德麦"}
         s["npc;drop=226404"] = {"吉泽尔·超震", "水闸行动"}
+        s["npc;drop=229288"] = {"喷焰大王 <弗莱兰多的经理>", "解放安德麦"}
+        s["npc;drop=229284"] = {"古克·轰犬 <污液贩子>", "解放安德麦"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

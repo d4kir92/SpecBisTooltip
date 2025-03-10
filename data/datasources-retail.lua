@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 07.03.2025
+-- SOURCE FROM: 10.03.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -1331,6 +1331,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=230946"] = {"[V.V. Goosworth]", "安德麦"}
         s["npc;drop=150159"] = {"戈巴马克国王", "麦卡贡行动"}
         s["npc;drop=231310"] = {"暗索沉淀剂", "安德麦"}
+        s["npc;drop=226404"] = {"吉泽尔·超震", "水闸行动"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

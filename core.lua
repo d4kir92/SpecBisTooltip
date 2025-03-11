@@ -74,7 +74,7 @@ function SpecBisTooltip:GetSettingsContent(parent)
 		local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
 		local text = ""
 		if itemId then
-			text = " (Guide-ItemId: " .. itemId .. ")"
+			text = " (" .. SpecBisTooltip:Trans("GUIDEITEMID") .. ": " .. itemId .. ")"
 		end
 
 		local n = nil
@@ -90,6 +90,7 @@ function SpecBisTooltip:GetSettingsContent(parent)
 		end
 
 		SpecBisTooltip:AppendEditbox(typ, "", function(sel, val) end, 14, nil, true, SBTTABPC, "", text)
+		SpecBisTooltip:AppendEditbox(typ .. "_SOURCE", "", function(sel, val) end, 34, nil, false, SBTTABPC, "")
 		if invType == "INVTYPE_FINGER" or invType == "INVTYPE_TRINKET" then
 			if invType == "INVTYPE_FINGER" then
 				r = r + 1
@@ -108,6 +109,7 @@ function SpecBisTooltip:GetSettingsContent(parent)
 			end
 
 			SpecBisTooltip:AppendEditbox(typ, "", function(val) end, 14, nil, true, SBTTABPC, "", text)
+			SpecBisTooltip:AppendEditbox(typ .. "_SOURCE", "", function(val) end, 34, nil, false, SBTTABPC, "")
 		end
 	end
 end
@@ -190,8 +192,6 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 			else
 				return "NOTBIS", nil
 			end
-		else
-			return "NOTBIS", nil
 		end
 	end
 
@@ -240,8 +240,6 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 			else
 				return "NOTBIS", nil
 			end
-		else
-			return "NOTBIS", nil
 		end
 	end
 
@@ -693,12 +691,13 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 
 	local bisText = GetBISText(typ)
 	local itemId = nil
+	local custom = nil
 	local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 	if bisText ~= "" then
 		if bisText ~= "BLOCKED" then
 			if typ == "NOTBIS" then
 				if invType then
-					sourceTyp, sourceName, sourceLocation, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, n)
+					sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, n)
 					if sourceTyp and sourceTyp ~= "" then
 						if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 							if sourceTyp == "catalyst" then
@@ -723,7 +722,20 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 						end
 					else
 						if itemId then
-							tooltip:AddDoubleLine(iconText .. " " .. bisText .. ": " .. itemId, "|T136031:20:20:0:0|t")
+							if custom then
+								local source = SBTTABPC[invType .. "_SOURCE"]
+								if n then
+									source = SBTTABPC[invType .. n .. "_SOURCE"]
+								end
+
+								if source and source ~= "" then
+									tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("yourbissource"), source) .. " |T136031:20:20:0:0|t")
+								else
+									tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, " |T136031:20:20:0:0|t")
+								end
+							else
+								tooltip:AddDoubleLine(iconText .. " " .. bisText .. ": " .. itemId, "|T136031:20:20:0:0|t")
+							end
 						else
 							tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
 						end
@@ -966,7 +978,7 @@ local function OnTooltipSetItem(tooltip, data)
 
 	if specId and icon then
 		local _, class = UnitClass("PLAYER")
-		local sourceTyp, sourceName, sourceLocation, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
+		local sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
 		if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
 			if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 				if sourceTyp == "catalyst" then
@@ -991,9 +1003,22 @@ local function OnTooltipSetItem(tooltip, data)
 			end
 		else
 			if itemId then
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
+				if custom then
+					local source = SBTTABPC[invType .. "_SOURCE"]
+					if n then
+						source = SBTTABPC[invType .. n .. "_SOURCE"]
+					end
+
+					if source and source ~= "" then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("yourbissource"), source) .. " |T136031:20:20:0:0|t")
+					else
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. " [C]: " .. itemId, " |T136031:20:20:0:0|t")
+					end
+				else
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
+				end
 			else
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ":", "|T136031:20:20:0:0|t")
+				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC"), "|T136031:20:20:0:0|t")
 			end
 		end
 
@@ -1106,7 +1131,7 @@ SBTSetup:SetScript(
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.38")
+			SpecBisTooltip:SetVersion(136031, "0.12.39")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

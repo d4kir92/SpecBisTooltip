@@ -240,13 +240,16 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		end
 	end
 
+	local custom = false
 	if bfi[class][specId][invType] then
 		local itemId = bfi[class][specId][invType][n]
 		if not guide and SBTTABPC then
 			if n and SBTTABPC[invType .. n] then
 				itemId = SBTTABPC[invType .. n]
+				custom = true
 			elseif SBTTABPC[invType] then
 				itemId = SBTTABPC[invType]
+				custom = true
 			end
 		end
 
@@ -262,24 +265,24 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 				local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-				return sourceTyp, sourceName, sourceLocation, itemId
+				return sourceTyp, sourceName, sourceLocation, itemId, custom
 			else
 				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
 				if sourceUrl then
 					local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-					return sourceTyp, sourceName, sourceLocation, itemId
+					return sourceTyp, sourceName, sourceLocation, itemId, custom
 				else
-					return nil, nil, nil, itemId
+					return nil, nil, nil, itemId, custom
 				end
 			end
 		else
 			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
 			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
 
-			return sourceTyp, sourceName, sourceLocation, itemId
+			return sourceTyp, sourceName, sourceLocation, itemId, custom
 		end
 	end
 
-	return nil, nil, nil, nil
+	return nil, nil, nil, nil, custom
 end

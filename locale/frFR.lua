@@ -3,7 +3,7 @@ local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("frFR", "GENERAL", "Général")
     SpecBisTooltip:AddTrans("frFR", "SHOWMINIMAPBUTTON", "Bouton d'affichage de la mini-carte")
-    SpecBisTooltip:AddTrans("frUS", "SHOWOTHERSPECS", "Afficher les autres spécifications")
+    SpecBisTooltip:AddTrans("frFR", "SHOWOTHERSPECS", "Afficher les autres spécifications")
     SpecBisTooltip:AddTrans("frFR", "SHOWOTHERCLASSES", "Afficher les autres classes")
     SpecBisTooltip:AddTrans("frFR", "YOURSPEC", "Votre spécialisation")
     SpecBisTooltip:AddTrans("frFR", "OTHERSPECS", "Autres spécialisations")

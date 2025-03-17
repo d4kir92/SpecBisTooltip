@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 13.03.2025
+-- DATA FROM: 17.03.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -125,6 +125,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230198] = {"npc;drop=241526", "A"},
             [178808] = {"npc;drop=162317", "A"},
             [230199] = {"npc;drop=229953", "A"},
+            [230193] = {"npc;drop=230583", "A"},
             [232541] = {"npc;drop=226403", "A"},
             [230197] = {"npc;drop=225821", "A"},
             [230027] = {"npc;drop=228458", "B"},
@@ -134,13 +135,13 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [219308] = {"npc;drop=207946", "B"},
             [230019] = {"npc;drop=225821", "B"},
             [215178] = {"object;contained=413590", "B"},
+            [219307] = {"npc;drop=210797", "B"},
             [235363] = {"npc;drop=230800", "C"},
             [178811] = {"npc;drop=165946", "C"},
             [219298] = {"npc;drop=218002", "C"},
             [234217] = {"item:contained=235639", "C"},
             [230194] = {"npc;drop=228652", "C"},
             [230190] = {"npc;drop=229181", "C"},
-            [219307] = {"npc;drop=210797", "D"},
             [235359] = {"npc;drop=230934", "D"},
             [232546] = {"npc;drop=144246", "D"},
             [210816] = {"spell;created=427185", "D"},
@@ -752,7 +753,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 
     BIS["RETAIL"]["DRUID"][2] = {
         ["BISO"] = {
-            [22] = {
+            [21] = {
                 [229307] = {"npc;sold=231824", "INVTYPE_HEAD"},
                 [228841] = {"npc;drop=228652", "INVTYPE_NECK"},
                 [229305] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
@@ -788,7 +789,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             },
         },
         ["BISR"] = {
-            [22] = {
+            [21] = {
                 [229307] = {"npc;sold=231824", "INVTYPE_HEAD"},
                 [228841] = {"npc;drop=228652", "INVTYPE_NECK"},
                 [229305] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
@@ -824,7 +825,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             },
         },
         ["BISM"] = {
-            [22] = {
+            [21] = {
                 [229307] = {"npc;sold=231824", "INVTYPE_HEAD"},
                 [221060] = {"npc;drop=210267", "INVTYPE_NECK"},
                 [229305] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
@@ -1948,8 +1949,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         ["TRINKETS"] = {
             [168973] = {"npc;drop=144248", "S"},
             [230192] = {"npc;drop=229953", "S"},
-            [219299] = {"npc;drop=214661", "S"},
             [230027] = {"npc;drop=228458", "A+"},
+            [219299] = {"npc;drop=214661", "A+"},
             [234217] = {"item:contained=235639", "A+"},
             [230198] = {"npc;drop=241526", "A"},
             [178809] = {"npc;drop=162309", "A"},

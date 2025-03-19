@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 17.03.2025
+-- DATA FROM: 19.03.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -694,7 +694,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228411] = {"catalyst/unknown", "INVTYPE_FINGER"},
             [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISR"] = {
             [229307] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -711,7 +711,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228411] = {"catalyst/unknown", "INVTYPE_FINGER"},
             [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISM"] = {
             [229307] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -987,7 +987,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230186] = {"npc;drop=230583", "INVTYPE_TRINKET"},
             [228896] = {"npc;drop=230322", "INVTYPE_WEAPON"},
             [228906] = {"npc;drop=228458", "INVTYPE_HOLDABLE"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISR"] = {
             [229307] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -1006,7 +1006,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
             [228896] = {"npc;drop=230322", "INVTYPE_WEAPON"},
             [228906] = {"npc;drop=228458", "INVTYPE_HOLDABLE"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISM"] = {
             [234498] = {"npc;drop=226403", "INVTYPE_HEAD"},
@@ -1062,7 +1062,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [178871] = {"npc;drop=164451", "INVTYPE_FINGER"},
                 [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
             [37] = {
                 [228859] = {"npc;drop=230322", "INVTYPE_HEAD"},
@@ -1079,7 +1079,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [178871] = {"npc;drop=164451", "INVTYPE_FINGER"},
                 [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
         },
         ["BISR"] = {
@@ -1098,7 +1098,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [228840] = {"npc;drop=229181", "INVTYPE_FINGER"},
                 [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
             [37] = {
                 [228859] = {"npc;drop=230322", "INVTYPE_HEAD"},
@@ -1115,7 +1115,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [228840] = {"npc;drop=229181", "INVTYPE_FINGER"},
                 [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
         },
         ["BISM"] = {
@@ -1197,7 +1197,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
             [230186] = {"npc;drop=230583", "INVTYPE_TRINKET"},
             [228898] = {"npc;drop=230583", "INVTYPE_2HWEAPON"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISR"] = {
             [229280] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -1215,7 +1215,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230186] = {"npc;drop=230583", "INVTYPE_TRINKET"},
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
             [228898] = {"npc;drop=230583", "INVTYPE_2HWEAPON"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISM"] = {
             [178799] = {"npc;drop=164451", "INVTYPE_HEAD"},
@@ -1272,7 +1272,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
                 [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
                 [219299] = {"npc;drop=214661", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
             [38] = {
                 [229280] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -1291,7 +1291,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
                 [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
                 [219299] = {"npc;drop=214661", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
         },
         ["BISR"] = {
@@ -1310,7 +1310,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [215133] = {"spell;created=435382", "INVTYPE_FINGER"},
                 [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
             [38] = {
                 [229280] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -1327,7 +1327,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [215133] = {"spell;created=435382", "INVTYPE_FINGER"},
                 [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
                 [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
-                [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+                [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
             },
         },
         ["BISM"] = {
@@ -3098,6 +3098,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230199] = {"npc;drop=229953", "B"},
             [230198] = {"npc;drop=241526", "B"},
             [159612] = {"npc;drop=129227", "B"},
+            [232891] = {"object;contained=507768", "B"},
             [230197] = {"npc;drop=225821", "C"},
             [219672] = {"spell;created=455393", "C"},
             [234217] = {"item:contained=235639", "C"},
@@ -3377,7 +3378,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [159462] = {"npc;drop=129214", "INVTYPE_FINGER"},
             [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISR"] = {
             [229262] = {"npc;sold=231824", "INVTYPE_HEAD"},
@@ -3394,7 +3395,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228843] = {"npc;drop=228458", "INVTYPE_FINGER"},
             [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
             [230198] = {"npc;drop=241526", "INVTYPE_TRINKET"},
-            [232805] = {"spell;created=473400", "INVTYPE_2HWEAPON"},
+            [232526] = {"npc;drop=228458", "INVTYPE_2HWEAPON"},
         },
         ["BISM"] = {
             [178799] = {"npc;drop=164451", "INVTYPE_HEAD"},
@@ -4089,12 +4090,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230027] = {"npc;drop=228458", "S"},
             [230193] = {"npc;drop=230583", "A"},
             [230029] = {"npc;drop=241526", "A"},
-            [230199] = {"npc;drop=229953", "A"},
+            [232485] = {"npc;drop=230828", "A"},
             [230194] = {"npc;drop=228652", "A"},
             [234217] = {"item:contained=235639", "A"},
-            [219297] = {"npc;drop=210271", "A"},
             [230026] = {"npc;drop=230322", "A"},
-            [232485] = {"npc;drop=230828", "B"},
             [235363] = {"npc;drop=230800", "B"},
             [230190] = {"npc;drop=229181", "B"},
             [219298] = {"npc;drop=218002", "B"},
@@ -4103,6 +4102,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230197] = {"npc;drop=225821", "B"},
             [219307] = {"npc;drop=210797", "B"},
             [235359] = {"npc;drop=230934", "B"},
+            [219297] = {"npc;drop=210271", "B"},
+            [230199] = {"npc;drop=229953", "B"},
             [234821] = {"object;contained=476068", "C"},
             [232546] = {"npc;drop=144246", "C"},
             [210816] = {"spell;created=427185", "C"},

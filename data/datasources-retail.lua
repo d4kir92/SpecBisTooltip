@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 19.03.2025
+-- SOURCE FROM: 20.03.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}

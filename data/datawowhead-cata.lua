@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
--- DATA FROM: 10.03.2025
+-- DATA FROM: 25.03.2025
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     BIS["CATA"] = {}
     BIS["CATA"]["DEATHKNIGHT"] = {}
@@ -584,7 +584,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78365] = {"BIS,PVE,P4", "npc;drop=55265", "INVTYPE_CHEST"},
         [78391] = {"BIS,PVE,P4", "npc;drop=55308", "INVTYPE_WAIST"},
         [78719] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_LEGS"},
-        [71447] = {"BIS,PVE,P4", "npc;drop=53691", "INVTYPE_FEET"},
+        [78449] = {"BIS,PVE,P4", "npc;drop=56427", "INVTYPE_FEET"},
         [78417] = {"BIS,PVE,P4", "npc;drop=55689", "INVTYPE_WRIST"},
         [78461] = {"BIS,PVE,P4", "npc;drop=53879", "INVTYPE_HAND"},
         [78491] = {"BIS,PVE,P4", "npc;drop=55265", "INVTYPE_FINGER"},

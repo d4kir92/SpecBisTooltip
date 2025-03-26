@@ -8,7 +8,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 end
 
 if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-    -- DATA FROM: 10.03.2025
+    -- DATA FROM: 26.03.2025
     if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         BIS["CLASSIC"] = {}
         BIS["CLASSIC"]["DRUID"] = {}
@@ -162,7 +162,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [234802] = {"BIS,PVE,SODP7", "quest;reward=86670", "INVTYPE_CLOAK"},
             [236043] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_CHEST"},
             [236042] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_WRIST"},
-            [235876] = {"BIS,PVE,SODP7", "npc;drop=237439", "INVTYPE_HAND"},
+            [236047] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_HAND"},
             [236048] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_WAIST"},
             [236045] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_LEGS"},
             [233407] = {"BIS,PVE,SODP7", "npc;sold=15503", "INVTYPE_FEET"},
@@ -181,7 +181,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [234802] = {"BIS,PVE,SODP7", "quest;reward=86670", "INVTYPE_CLOAK"},
             [236043] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_CHEST"},
             [236042] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_WRIST"},
-            [235876] = {"BIS,PVE,SODP7", "npc;drop=237439", "INVTYPE_HAND"},
+            [236047] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_HAND"},
             [236048] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_WAIST"},
             [236045] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_LEGS"},
             [233407] = {"BIS,PVE,SODP7", "npc;sold=15503", "INVTYPE_FEET"},
@@ -200,7 +200,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [234802] = {"BIS,PVE,SODP7", "quest;reward=86670", "INVTYPE_CLOAK"},
             [236043] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_CHEST"},
             [236042] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_WRIST"},
-            [235876] = {"BIS,PVE,SODP7", "npc;drop=237439", "INVTYPE_HAND"},
+            [236047] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_HAND"},
             [236048] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_WAIST"},
             [236045] = {"BIS,PVE,SODP7", "npc;sold=16132", "INVTYPE_LEGS"},
             [233407] = {"BIS,PVE,SODP7", "npc;sold=15503", "INVTYPE_FEET"},

@@ -367,6 +367,10 @@ local bisTextLookup = {
 		colorCode = col_green,
 		translationArgs = {"BISPVESODX", nil, 7}
 	},
+	["BIS,PVE,SODP8"] = {
+		colorCode = col_green,
+		translationArgs = {"BISPVESODX", nil, 8}
+	},
 	["BIS,PVP"] = {
 		colorCode = col_green,
 		translationArgs = {"BISPVP"}
@@ -514,6 +518,10 @@ local bisTextLookup = {
 	["PREBIS,PVE,SODP7"] = {
 		colorCode = col_yellow,
 		translationArgs = {"PREBISPVESODX", nil, 7}
+	},
+	["PREBIS,PVE,SODP8"] = {
+		colorCode = col_yellow,
+		translationArgs = {"PREBISPVESODX", nil, 8}
 	},
 	["?"] = {
 		colorCode = col_red,

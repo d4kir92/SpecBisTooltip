@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "WRATH" then
     end
 end
 
--- DATA FROM: 28.04.2024
+-- DATA FROM: 14.04.2025
 if SpecBisTooltip:GetWoWBuild() == "WRATH" then
     BIS["WRATH"] = {}
     BIS["WRATH"]["DEATHKNIGHT"] = {}

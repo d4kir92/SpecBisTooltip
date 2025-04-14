@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 08.04.2025
+-- DATA FROM: 14.04.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -134,10 +134,10 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [219308] = {"npc;drop=207946", "B"},
             [230019] = {"npc;drop=225821", "B"},
             [215178] = {"object;contained=413590", "B"},
+            [178808] = {"npc;drop=162317", "B"},
             [219307] = {"npc;drop=210797", "B"},
             [235363] = {"npc;drop=230800", "C"},
             [178811] = {"npc;drop=165946", "C"},
-            [178808] = {"npc;drop=162317", "C"},
             [219298] = {"npc;drop=218002", "C"},
             [234217] = {"item:contained=235639", "C"},
             [230194] = {"npc;drop=228652", "C"},
@@ -2579,7 +2579,6 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230194] = {"npc;drop=228652", "A"},
             [219305] = {"npc;drop=208743", "A"},
             [219308] = {"npc;drop=207946", "A"},
-            [215178] = {"object;contained=413590", "A"},
             [210816] = {"spell;created=427185", "A"},
             [178809] = {"npc;drop=162309", "A"},
             [225668] = {"item:contained=229354", "B"},
@@ -2822,7 +2821,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"]["PRIEST"] = {}
     BIS["RETAIL"]["PRIEST"][1] = {
         ["BISO"] = {
-            [229334] = {"npc;sold=231824", "INVTYPE_HEAD"},
+            [228871] = {"npc;drop=230322", "INVTYPE_HEAD"},
             [228841] = {"npc;drop=228652", "INVTYPE_NECK"},
             [229332] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
             [222817] = {"spell;created=446940", "INVTYPE_CLOAK"},
@@ -2830,7 +2829,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228881] = {"npc;drop=241526", "INVTYPE_WRIST"},
             [229335] = {"npc;sold=231824", "INVTYPE_HAND"},
             [168958] = {"npc;drop=144244", "INVTYPE_WAIST"},
-            [228865] = {"npc;drop=225821", "INVTYPE_LEGS"},
+            [229333] = {"npc;sold=231824", "INVTYPE_LEGS"},
             [228879] = {"npc;drop=229953", "INVTYPE_FEET"},
             [231265] = {"npc;drop=241526", "INVTYPE_FINGER"},
             [228843] = {"npc;drop=228458", "INVTYPE_FINGER"},
@@ -2840,7 +2839,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [222566] = {"spell;created=444197", "INVTYPE_HOLDABLE"},
         },
         ["BISR"] = {
-            [229334] = {"npc;sold=231824", "INVTYPE_HEAD"},
+            [228871] = {"npc;drop=230322", "INVTYPE_HEAD"},
             [228841] = {"npc;drop=228652", "INVTYPE_NECK"},
             [229332] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
             [228839] = {"npc;drop=225821", "INVTYPE_CLOAK"},
@@ -2848,7 +2847,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228881] = {"npc;drop=241526", "INVTYPE_WRIST"},
             [229335] = {"npc;sold=231824", "INVTYPE_HAND"},
             [228882] = {"npc;drop=230583", "INVTYPE_WAIST"},
-            [228865] = {"npc;drop=225821", "INVTYPE_LEGS"},
+            [229333] = {"npc;sold=231824", "INVTYPE_LEGS"},
             [228879] = {"npc;drop=229953", "INVTYPE_FEET"},
             [231265] = {"npc;drop=241526", "INVTYPE_FINGER"},
             [228843] = {"npc;drop=228458", "INVTYPE_FINGER"},
@@ -2858,7 +2857,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228906] = {"npc;drop=228458", "INVTYPE_HOLDABLE"},
         },
         ["BISM"] = {
-            [229334] = {"npc;sold=231824", "INVTYPE_HEAD"},
+            [221131] = {"npc;drop=207940", "INVTYPE_HEAD"},
             [221060] = {"npc;drop=210267", "INVTYPE_NECK"},
             [229332] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
             [234507] = {"npc;drop=226404", "INVTYPE_CLOAK"},
@@ -2866,7 +2865,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [159240] = {"npc;drop=129231", "INVTYPE_WRIST"},
             [229335] = {"npc;sold=231824", "INVTYPE_HAND"},
             [168958] = {"npc;drop=144244", "INVTYPE_WAIST"},
-            [221050] = {"npc;drop=207207", "INVTYPE_LEGS"},
+            [229333] = {"npc;sold=231824", "INVTYPE_LEGS"},
             [168964] = {"npc;drop=144244", "INVTYPE_FEET"},
             [221099] = {"npc;drop=210153", "INVTYPE_FINGER"},
             [178871] = {"npc;drop=164451", "INVTYPE_FINGER"},
@@ -2881,9 +2880,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [230198] = {"npc;drop=241526", "S"},
             [230186] = {"npc;drop=230583", "S"},
             [219306] = {"npc;drop=208745", "S"},
-            [230194] = {"npc;drop=228652", "A"},
+            [219305] = {"npc;drop=208743", "A"},
             [234217] = {"item:contained=235639", "A"},
-            [219305] = {"npc;drop=208743", "B"},
+            [230194] = {"npc;drop=228652", "B"},
             [219308] = {"npc;drop=207946", "B"},
             [219296] = {"npc;drop=207207", "C"},
             [169344] = {"npc;drop=144248", "C"},

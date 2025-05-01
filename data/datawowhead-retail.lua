@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 19.04.2025
+-- DATA FROM: 01.05.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -2193,8 +2193,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         },
         ["TRINKETS"] = {
             [230198] = {"npc;drop=241526", "A"},
-            [230193] = {"npc;drop=230583", "A"},
             [230192] = {"npc;drop=229953", "A"},
+            [230193] = {"npc;drop=230583", "A"},
             [169344] = {"npc;drop=144248", "A"},
             [230197] = {"npc;drop=225821", "A"},
             [230027] = {"npc;drop=228458", "A"},

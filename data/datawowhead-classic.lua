@@ -8,7 +8,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 end
 
 if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-    -- DATA FROM: 01.05.2025
+    -- DATA FROM: 07.05.2025
     if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         BIS["CLASSIC"] = {}
         BIS["CLASSIC"]["DRUID"] = {}
@@ -314,7 +314,7 @@ if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 
             [236123] = {"BIS,PVE,SODP8", "npc;sold=16115", "INVTYPE_FEET"},
             [241032] = {"BIS,PVE,SODP8", "npc;drop=241006", "INVTYPE_FINGER"},
             [236116] = {"BIS,PVE,SODP8", "npc;sold=16115", "INVTYPE_FINGER"},
-            [241068] = {"BIS,PVE,SODP8", "npc;drop=240812", "INVTYPE_TRINKET"},
+            [242317] = {"BIS,PVE,SODP8", "quest;reward=89444", "INVTYPE_TRINKET"},
             [233994] = {"BIS,PVE,SODP8", "spell;created=1213603", "INVTYPE_TRINKET"},
             [241006] = {"BIS,PVE,SODP8", "npc;drop=241006", "INVTYPE_WEAPONMAINHAND"},
             [241018] = {"BIS,PVE,SODP8", "npc;drop=240811", "INVTYPE_SHIELD"},

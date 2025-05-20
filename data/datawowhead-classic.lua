@@ -8,7 +8,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 end
 
 if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-    -- DATA FROM: 13.05.2025
+    -- DATA FROM: 20.05.2025
     if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         BIS["CLASSIC"] = {}
         BIS["CLASSIC"]["DRUID"] = {}

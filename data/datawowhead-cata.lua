@@ -7,27 +7,11 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     end
 end
 
--- DATA FROM: 25.03.2025
+-- DATA FROM: 20.05.2025
 if SpecBisTooltip:GetWoWBuild() == "CATA" then
     BIS["CATA"] = {}
     BIS["CATA"]["DEATHKNIGHT"] = {}
     BIS["CATA"]["DEATHKNIGHT"][1] = {
-        [78687] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77090] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
-        [78751] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
-        [78663] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
-        [78416] = {"BIS,PVE,P4", "npc;drop=55689", "INVTYPE_WAIST"},
-        [78716] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_LEGS"},
-        [78389] = {"BIS,PVE,P4", "npc;drop=55308", "INVTYPE_FEET"},
-        [78373] = {"BIS,PVE,P4", "npc;drop=55265", "INVTYPE_WRIST"},
-        [78678] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_HAND"},
-        [78432] = {"BIS,PVE,P4", "npc;drop=55294", "INVTYPE_FINGER"},
-        [78492] = {"BIS,PVE,P4", "npc;drop=55312", "INVTYPE_FINGER"},
-        [77992] = {"BIS,PVE,P4", "npc;drop=55294", "INVTYPE_TRINKET"},
-        [78003] = {"BIS,PVE,P4", "npc;drop=55312", "INVTYPE_TRINKET"},
-        [77097] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
-        [78478] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_2HWEAPON"},
-        [77081] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
         [77155] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
         [77092] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78846] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
@@ -187,22 +171,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
     }
 
     BIS["CATA"]["DRUID"][3] = {
-        [78694] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77091] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
-        [78743] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
-        [78665] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
-        [78388] = {"BIS,PVE,P4", "npc;drop=55308", "INVTYPE_WAIST"},
-        [78713] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_LEGS"},
-        [78462] = {"BIS,PVE,P4", "npc;drop=53879", "INVTYPE_FEET"},
-        [78446] = {"BIS,PVE,P4", "npc;drop=56427", "INVTYPE_WRIST"},
-        [78684] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_HAND"},
-        [78489] = {"BIS,PVE,P4", "npc;drop=55689", "INVTYPE_FINGER"},
-        [78413] = {"BIS,PVE,P4", "npc;drop=55689", "INVTYPE_FINGER"},
-        [78003] = {"BIS,PVE,P4", "npc;drop=55312", "INVTYPE_TRINKET"},
-        [77994] = {"BIS,PVE,P4", "npc;drop=53879", "INVTYPE_TRINKET"},
-        [71415] = {"BIS,PVE,P4", "npc;drop=52558", "INVTYPE_CLOAK"},
-        [78473] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_2HWEAPON"},
-        [77080] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
         [77148] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
         [77091] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78838] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},

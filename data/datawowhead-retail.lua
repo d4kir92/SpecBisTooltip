@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 20.05.2025
+-- DATA FROM: 27.05.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -650,13 +650,13 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [159612] = {"npc;drop=129227", "A"},
             [178811] = {"npc;drop=165946", "A"},
             [230197] = {"npc;drop=225821", "A"},
-            [219297] = {"npc;drop=210271", "A"},
             [230194] = {"npc;drop=228652", "A-"},
             [230193] = {"npc;drop=230583", "A-"},
             [230199] = {"npc;drop=229953", "A-"},
             [230026] = {"npc;drop=230322", "B"},
             [230027] = {"npc;drop=228458", "B"},
             [230189] = {"npc;drop=230322", "B"},
+            [219297] = {"npc;drop=210271", "B-"},
             [219304] = {"npc;drop=210153", "B-"},
             [230019] = {"npc;drop=225821", "C"},
             [219294] = {"npc;drop=209230", "C"},
@@ -2828,7 +2828,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228879] = {"npc;drop=229953", "INVTYPE_FEET"},
             [231265] = {"npc;drop=241526", "INVTYPE_FINGER"},
             [228843] = {"npc;drop=228458", "INVTYPE_FINGER"},
-            [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
+            [230186] = {"npc;drop=230583", "INVTYPE_TRINKET"},
             [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
             [228896] = {"npc;drop=230322", "INVTYPE_WEAPON"},
             [222566] = {"spell;created=444197", "INVTYPE_HOLDABLE"},
@@ -2846,7 +2846,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228879] = {"npc;drop=229953", "INVTYPE_FEET"},
             [231265] = {"npc;drop=241526", "INVTYPE_FINGER"},
             [228843] = {"npc;drop=228458", "INVTYPE_FINGER"},
-            [230192] = {"npc;drop=229953", "INVTYPE_TRINKET"},
+            [230186] = {"npc;drop=230583", "INVTYPE_TRINKET"},
             [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
             [228896] = {"npc;drop=230322", "INVTYPE_WEAPON"},
             [228906] = {"npc;drop=228458", "INVTYPE_HOLDABLE"},

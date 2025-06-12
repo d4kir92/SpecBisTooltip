@@ -584,7 +584,7 @@ function D4:AppendColorPicker(key, value, func, x)
     Y = Y - 30
 end
 
-function D4:AppendEditbox(key, value, func, x, y, numeric, tab, prefix, suffix)
+function D4:AppendEditbox(key, value, func, x, y, numeric, tab, prefix, suffix, lstr)
     value = value or false
     x = x or X
     if tab == nil and TAB == nil then
@@ -603,9 +603,10 @@ function D4:AppendEditbox(key, value, func, x, y, numeric, tab, prefix, suffix)
         val = t[key]
     end
 
+    Y = Y - 4
     D4:CreateEditBox(
         {
-            ["name"] = key,
+            ["name"] = lstr or "LID_" .. key,
             ["parent"] = PARENT,
             ["pTab"] = {"TOPLEFT", x or X, y or Y},
             ["value"] = val,

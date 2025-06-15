@@ -30,6 +30,19 @@ function D4:GetParent(frame)
     return nil
 end
 
+function D4:GetText(frame)
+    if frame == nil then return nil end
+    local ok, parent = pcall(
+        function()
+            if type(frame) == "table" and type(frame.GetText) == "function" then return frame:GetText() end
+        end
+    )
+
+    if ok then return parent end
+
+    return nil
+end
+
 function D4:TrySetParent(frame, parent)
     if frame == nil then
         D4:INFO("[D4] Missing Frame for TrySetParent", frame)
@@ -604,7 +617,7 @@ function D4:AppendEditbox(key, value, func, x, y, numeric, tab, prefix, suffix, 
     end
 
     Y = Y - 4
-    D4:CreateEditBox(
+    local eb = D4:CreateEditBox(
         {
             ["name"] = lstr or "LID_" .. key,
             ["parent"] = PARENT,
@@ -628,7 +641,7 @@ function D4:AppendEditbox(key, value, func, x, y, numeric, tab, prefix, suffix, 
 
     Y = Y - 20
 
-    return Y
+    return Y, eb
 end
 
 function D4:CreateDropdown(key, value, choices, parent, func)

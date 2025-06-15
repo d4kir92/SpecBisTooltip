@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 27.05.2025
+-- DATA FROM: 15.06.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -1297,7 +1297,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [228859] = {"npc;drop=230322", "INVTYPE_HEAD"},
                 [228841] = {"npc;drop=228652", "INVTYPE_NECK"},
                 [229278] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
-                [222817] = {"spell;created=446940", "INVTYPE_CLOAK"},
+                [228839] = {"npc;drop=225821", "INVTYPE_CLOAK"},
                 [229283] = {"npc;sold=231824", "INVTYPE_CHEST"},
                 [228878] = {"npc;drop=229953", "INVTYPE_WRIST"},
                 [229281] = {"npc;sold=231824", "INVTYPE_HAND"},
@@ -1314,7 +1314,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [228859] = {"npc;drop=230322", "INVTYPE_HEAD"},
                 [228841] = {"npc;drop=228652", "INVTYPE_NECK"},
                 [229278] = {"npc;sold=231824", "INVTYPE_SHOULDER"},
-                [222817] = {"spell;created=446940", "INVTYPE_CLOAK"},
+                [228839] = {"npc;drop=225821", "INVTYPE_CLOAK"},
                 [229283] = {"npc;sold=231824", "INVTYPE_CHEST"},
                 [228878] = {"npc;drop=229953", "INVTYPE_WRIST"},
                 [229281] = {"npc;sold=231824", "INVTYPE_HAND"},
@@ -1552,7 +1552,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [229274] = {"npc;sold=231824", "INVTYPE_CHEST"},
                 [219342] = {"spell;created=441066", "INVTYPE_WRIST"},
                 [229272] = {"npc;sold=231824", "INVTYPE_HAND"},
-                [228877] = {"npc;drop=241526", "INVTYPE_WAIST"},
+                [245966] = {"catalyst/unknown", "INVTYPE_WAIST"},
+                [245966] = {"catalyst/unknown", "INVTYPE_WAIST"},
                 [229270] = {"npc;sold=231824", "INVTYPE_LEGS"},
                 [228862] = {"npc;drop=225821", "INVTYPE_FEET"},
                 [231265] = {"npc;drop=241526", "INVTYPE_FINGER"},
@@ -1560,7 +1561,6 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
                 [228840] = {"npc;drop=229181", "INVTYPE_FINGER"},
                 [230027] = {"npc;drop=228458", "INVTYPE_TRINKET"},
                 [232541] = {"npc;drop=226403", "INVTYPE_TRINKET"},
-                [232485] = {"npc;drop=230828", "INVTYPE_TRINKET"},
                 [228893] = {"npc;drop=229953", "INVTYPE_RANGED"},
             },
             [44] = {
@@ -3341,7 +3341,6 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [178811] = {"npc;drop=165946", "B"},
             [234217] = {"item:contained=235639", "B"},
             [225638] = {"item:contained=229354", "B"},
-            [230189] = {"npc;drop=230322", "B"},
             [219304] = {"npc;drop=210153", "B"},
             [230194] = {"npc;drop=228652", "B"},
             [219295] = {"npc;drop=207205", "C"},
@@ -3934,7 +3933,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [228851] = {"npc;drop=229953", "INVTYPE_CHEST"},
             [222435] = {"spell;created=450226", "INVTYPE_WRIST"},
             [229236] = {"npc;sold=231824", "INVTYPE_HAND"},
-            [229232] = {"catalyst/unknown", "INVTYPE_WAIST"},
+            [245966] = {"catalyst/unknown", "INVTYPE_WAIST"},
             [229234] = {"npc;sold=231824", "INVTYPE_LEGS"},
             [228887] = {"npc;drop=241526", "INVTYPE_FEET"},
             [228840] = {"npc;drop=229181", "INVTYPE_FINGER"},
@@ -3989,7 +3988,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [229238] = {"npc;sold=231824", "INVTYPE_CHEST"},
             [222435] = {"spell;created=450226", "INVTYPE_WRIST"},
             [229236] = {"npc;sold=231824", "INVTYPE_HAND"},
-            [221040] = {"npc;drop=207205", "INVTYPE_WAIST"},
+            [245966] = {"catalyst/unknown", "INVTYPE_WAIST"},
             [221034] = {"npc;drop=209230", "INVTYPE_LEGS"},
             [221123] = {"npc;drop=207939", "INVTYPE_FEET"},
             [221200] = {"npc;drop=207940", "INVTYPE_FINGER"},

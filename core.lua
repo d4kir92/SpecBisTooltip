@@ -74,7 +74,7 @@ function SpecBisTooltip:GetSettingsContent(parent)
 		local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
 		local text = ""
 		if itemId then
-			text = " (" .. SpecBisTooltip:Trans("GUIDEITEMID") .. ": " .. itemId .. ")"
+			text = " (" .. SpecBisTooltip:Trans("LID_GUIDEITEMID") .. ": " .. itemId .. ")"
 		end
 
 		local n = nil
@@ -148,7 +148,7 @@ function SpecBisTooltip:InitSettings()
 end
 
 function SpecBisTooltip:HoldModifierText()
-	return SpecBisTooltip:Trans("HOLDMODIFIER") .. " "
+	return SpecBisTooltip:Trans("LID_HOLDMODIFIER") .. " "
 end
 
 local once = true
@@ -289,251 +289,251 @@ local col_red = "|cffff4b47"
 local bisTextLookup = {
 	["NOTBIS"] = {
 		colorCode = col_red,
-		translationArgs = {"NOTBIS"}
+		translationArgs = {"LID_NOTBIS"}
 	},
 	["BISO"] = {
 		colorCode = col_green,
-		translationArgs = {"BISO"}
+		translationArgs = {"LID_BISO"}
 	},
 	["BISMR"] = {
 		colorCode = col_green,
-		translationArgs = {"BISMR"}
+		translationArgs = {"LID_BISMR"}
 	},
 	["BISM"] = {
 		colorCode = col_green,
-		translationArgs = {"BISM"}
+		translationArgs = {"LID_BISM"}
 	},
 	["BISR"] = {
 		colorCode = col_green,
-		translationArgs = {"BISR"}
+		translationArgs = {"LID_BISR"}
 	},
 	["BIS,PVE"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVE"}
+		translationArgs = {"LID_BISPVE"}
 	},
 	["BIS,PREPATCH"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPREPATCH"}
+		translationArgs = {"LID_BISPREPATCH"}
 	},
 	["BIS,PVE,P1"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVEPHASEX", nil, 1}
+		translationArgs = {"LID_BISPVEPHASEX", nil, 1}
 	},
 	["BIS,PVE,P2"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVEPHASEX", nil, 2}
+		translationArgs = {"LID_BISPVEPHASEX", nil, 2}
 	},
 	["BIS,PVE,P3"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVEPHASEX", nil, 3}
+		translationArgs = {"LID_BISPVEPHASEX", nil, 3}
 	},
 	["BIS,PVE,P4"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVEPHASEX", nil, 4}
+		translationArgs = {"LID_BISPVEPHASEX", nil, 4}
 	},
 	["BIS,PVE,P5"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVEPHASEX", nil, 5}
+		translationArgs = {"LID_BISPVEPHASEX", nil, 5}
 	},
 	["BIS,PVE,P6"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVEPHASEX", nil, 6}
+		translationArgs = {"LID_BISPVEPHASEX", nil, 6}
 	},
 	["BIS,PVE,SODP1"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 1}
+		translationArgs = {"LID_BISPVESODX", nil, 1}
 	},
 	["BIS,PVE,SODP2"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 2}
+		translationArgs = {"LID_BISPVESODX", nil, 2}
 	},
 	["BIS,PVE,SODP3"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 3}
+		translationArgs = {"LID_BISPVESODX", nil, 3}
 	},
 	["BIS,PVE,SODP4"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 4}
+		translationArgs = {"LID_BISPVESODX", nil, 4}
 	},
 	["BIS,PVE,SODP5"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 5}
+		translationArgs = {"LID_BISPVESODX", nil, 5}
 	},
 	["BIS,PVE,SODP6"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 6}
+		translationArgs = {"LID_BISPVESODX", nil, 6}
 	},
 	["BIS,PVE,SODP7"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 7}
+		translationArgs = {"LID_BISPVESODX", nil, 7}
 	},
 	["BIS,PVE,SODP8"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVESODX", nil, 8}
+		translationArgs = {"LID_BISPVESODX", nil, 8}
 	},
 	["BIS,PVP"] = {
 		colorCode = col_green,
-		translationArgs = {"BISPVP"}
+		translationArgs = {"LID_BISPVP"}
 	},
 	["S+"] = {
 		colorCode = col_green,
-		translationArgs = {"BISTRINKETX", nil, "S+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "S+"}
 	},
 	["S"] = {
 		colorCode = col_green,
-		translationArgs = {"BISTRINKETX", nil, "S"}
+		translationArgs = {"LID_BISTRINKETX", nil, "S"}
 	},
 	["S-"] = {
 		colorCode = col_green,
-		translationArgs = {"BISTRINKETX", nil, "S-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "S-"}
 	},
 	["A+"] = {
 		colorCode = col_yellow,
-		translationArgs = {"BISTRINKETX", nil, "A+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "A+"}
 	},
 	["A"] = {
 		colorCode = col_yellow,
-		translationArgs = {"BISTRINKETX", nil, "A"}
+		translationArgs = {"LID_BISTRINKETX", nil, "A"}
 	},
 	["A-"] = {
 		colorCode = col_yellow,
-		translationArgs = {"BISTRINKETX", nil, "A-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "A-"}
 	},
 	["B+"] = {
 		colorCode = col_yellow,
-		translationArgs = {"BISTRINKETX", nil, "B+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "B+"}
 	},
 	["B"] = {
 		colorCode = col_yellow,
-		translationArgs = {"BISTRINKETX", nil, "B"}
+		translationArgs = {"LID_BISTRINKETX", nil, "B"}
 	},
 	["B-"] = {
 		colorCode = col_yellow,
-		translationArgs = {"BISTRINKETX", nil, "B-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "B-"}
 	},
 	["C+"] = {
 		colorCode = col_orange,
-		translationArgs = {"BISTRINKETX", nil, "C+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "C+"}
 	},
 	["C"] = {
 		colorCode = col_orange,
-		translationArgs = {"BISTRINKETX", nil, "C"}
+		translationArgs = {"LID_BISTRINKETX", nil, "C"}
 	},
 	["C-"] = {
 		colorCode = col_orange,
-		translationArgs = {"BISTRINKETX", nil, "C-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "C-"}
 	},
 	["D+"] = {
 		colorCode = col_orange,
-		translationArgs = {"BISTRINKETX", nil, "D+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "D+"}
 	},
 	["D"] = {
 		colorCode = col_orange,
-		translationArgs = {"BISTRINKETX", nil, "D"}
+		translationArgs = {"LID_BISTRINKETX", nil, "D"}
 	},
 	["D-"] = {
 		colorCode = col_orange,
-		translationArgs = {"BISTRINKETX", nil, "D-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "D-"}
 	},
 	["E+"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "E+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "E+"}
 	},
 	["E"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "E"}
+		translationArgs = {"LID_BISTRINKETX", nil, "E"}
 	},
 	["E-"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "E-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "E-"}
 	},
 	["F+"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "F+"}
+		translationArgs = {"LID_BISTRINKETX", nil, "F+"}
 	},
 	["F"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "F"}
+		translationArgs = {"LID_BISTRINKETX", nil, "F"}
 	},
 	["F-"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "F-"}
+		translationArgs = {"LID_BISTRINKETX", nil, "F-"}
 	},
 	["No"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "No"}
+		translationArgs = {"LID_BISTRINKETX", nil, "No"}
 	},
 	["PREBIS,PVE"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVE"}
+		translationArgs = {"LID_PREBISPVE"}
 	},
 	["PREBIS,PVE,P1"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVEPHASEX", nil, 1}
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 1}
 	},
 	["PREBIS,PVE,P2"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVEPHASEX", nil, 2}
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 2}
 	},
 	["PREBIS,PVE,P3"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVEPHASEX", nil, 3}
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 3}
 	},
 	["PREBIS,PVE,P4"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVEPHASEX", nil, 4}
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 4}
 	},
 	["PREBIS,PVE,P5"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVEPHASEX", nil, 5}
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 5}
 	},
 	["PREBIS,PVE,P6"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVEPHASEX", nil, 6}
+		translationArgs = {"LID_PREBISPVEPHASEX", nil, 6}
 	},
 	["PREBIS,PVE,SODP1"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 1}
+		translationArgs = {"LID_PREBISPVESODX", nil, 1}
 	},
 	["PREBIS,PVE,SODP2"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 2}
+		translationArgs = {"LID_PREBISPVESODX", nil, 2}
 	},
 	["PREBIS,PVE,SODP3"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 3}
+		translationArgs = {"LID_PREBISPVESODX", nil, 3}
 	},
 	["PREBIS,PVE,SODP4"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 4}
+		translationArgs = {"LID_PREBISPVESODX", nil, 4}
 	},
 	["PREBIS,PVE,SODP5"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 5}
+		translationArgs = {"LID_PREBISPVESODX", nil, 5}
 	},
 	["PREBIS,PVE,SODP6"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 6}
+		translationArgs = {"LID_PREBISPVESODX", nil, 6}
 	},
 	["PREBIS,PVE,SODP7"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 7}
+		translationArgs = {"LID_PREBISPVESODX", nil, 7}
 	},
 	["PREBIS,PVE,SODP8"] = {
 		colorCode = col_yellow,
-		translationArgs = {"PREBISPVESODX", nil, 8}
+		translationArgs = {"LID_PREBISPVESODX", nil, 8}
 	},
 	["?"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "?"}
+		translationArgs = {"LID_BISTRINKETX", nil, "?"}
 	},
 	["??????"] = {
 		colorCode = col_red,
-		translationArgs = {"BISTRINKETX", nil, "?????"}
+		translationArgs = {"LID_BISTRINKETX", nil, "?????"}
 	},
 	["TRINKETS"] = {
 		colorCode = col_red,
-		translationArgs = {""}
+		translationArgs = {"LID_"}
 	}
 }
 
@@ -598,12 +598,12 @@ local function AddToTooltipRetail(tooltip, id, specId, icon, content, invType)
 			elseif sourceTyp and sourceTyp ~= "" then
 				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 					if sourceTyp == "catalyst" then
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
 						if sourceLocation and sourceLocation ~= "" then
-							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
 						else
-							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans(sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
 						end
 					end
 				else
@@ -651,12 +651,12 @@ local function AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 			elseif sourceTyp and sourceTyp ~= "" then
 				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 					if sourceTyp == "catalyst" then
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
 						if sourceLocation and sourceLocation ~= "" then
-							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
 						else
-							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans(sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
 						end
 					end
 				else
@@ -709,12 +709,12 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 					if sourceTyp and sourceTyp ~= "" then
 						if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 							if sourceTyp == "catalyst" then
-								tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("yourbissource"), SpecBisTooltip:Trans(sourceTyp)) .. " |T136031:20:20:0:0|t")
+								tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("LID_yourbissource"), SpecBisTooltip:Trans("LID_" .. sourceTyp)) .. " |T136031:20:20:0:0|t")
 							else
 								if sourceLocation and sourceLocation ~= "" then
-									tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("yourbissource"), sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "]") .. " |T136031:20:20:0:0|t")
+									tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("LID_yourbissource"), sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]") .. " |T136031:20:20:0:0|t")
 								else
-									tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("yourbissource"), sourceName .. " [" .. SpecBisTooltip:Trans(sourceTyp) .. "]") .. " |T136031:20:20:0:0|t")
+									tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("LID_yourbissource"), sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]") .. " |T136031:20:20:0:0|t")
 								end
 							end
 						else
@@ -737,7 +737,7 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 								end
 
 								if source and source ~= "" then
-									tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("yourbissource"), source) .. " |T136031:20:20:0:0|t")
+									tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
 								else
 									tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, " |T136031:20:20:0:0|t")
 								end
@@ -754,12 +754,12 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 			elseif sourceTyp and sourceTyp ~= "" then
 				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 					if sourceTyp == "catalyst" then
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
 						if sourceLocation and sourceLocation ~= "" then
-							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
 						else
-							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans(sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "]" .. " |T136031:20:20:0:0|t")
 						end
 					end
 				else
@@ -813,9 +813,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	local num = 0
 	if bfs == nil then
 		if otherClasses then
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
 		else
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
 		end
 
 		return
@@ -840,9 +840,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
 			if num == 0 then
 				if otherClasses then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
 				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
 				end
 			end
 
@@ -871,9 +871,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 
 	if num == 0 then
 		if otherClasses then
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
 		else
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
 		end
 	end
 end
@@ -906,9 +906,9 @@ local function AddBisForSpecRetail(tooltip, itemId, yourSpecId, otherClasses, co
 		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
 			if first and num == 0 and max > 0 then
 				if otherClasses then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
 				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
 				end
 			end
 
@@ -936,7 +936,7 @@ end
 
 local specNotFoundOnce = true
 local function GetPrefferredText()
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then return " (" .. SpecBisTooltip:Trans(SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. ")" end
+	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then return " (" .. SpecBisTooltip:Trans("LID_" .. SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. ")" end
 
 	return ""
 end
@@ -990,22 +990,22 @@ local function OnTooltipSetItem(tooltip, data)
 		if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
 			if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
 				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("SOURCE") .. ": " .. SpecBisTooltip:Trans(sourceTyp) .. " |T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 				else
 					if sourceLocation and sourceLocation ~= "" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans(sourceTyp) .. "] |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
 					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans(sourceTyp) .. "] |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
 					end
 				end
 			else
 				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
 				else
 					if sourceLocation and sourceLocation ~= "" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
 					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
 					end
 				end
 			end
@@ -1018,15 +1018,15 @@ local function OnTooltipSetItem(tooltip, data)
 					end
 
 					if source and source ~= "" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("yourbissource"), source) .. " |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
 					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. " [C]: " .. itemId, " |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, " |T136031:20:20:0:0|t")
 					end
 				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
 				end
 			else
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("YOURSPEC"), "|T136031:20:20:0:0|t")
+				tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC"), "|T136031:20:20:0:0|t")
 			end
 		end
 
@@ -1072,7 +1072,7 @@ local function OnTooltipSetItem(tooltip, data)
 				end
 
 				if first then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
 				end
 			end
 
@@ -1095,7 +1095,7 @@ local function OnTooltipSetItem(tooltip, data)
 				end
 
 				if first then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
 				end
 			end
 		else
@@ -1139,7 +1139,7 @@ SBTSetup:SetScript(
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.65")
+			SpecBisTooltip:SetVersion(136031, "0.12.66")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

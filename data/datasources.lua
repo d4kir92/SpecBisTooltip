@@ -7,7 +7,7 @@ function SpecBisTooltip:GetSource(sourceId)
     local s = SpecBisTooltip:GetTranslationMap()
     if s == nil then return "", "" end
     local sourceStr = s[sourceId]
-    if sourceId == "npc;sold=213285" then return "catalyst", SpecBisTooltip:Trans("catalyst") end
+    if sourceId == "npc;sold=213285" then return "catalyst", SpecBisTooltip:Trans("LID_catalyst") end
     local location = ""
     if sourceStr then
         if type(sourceStr) == "table" then

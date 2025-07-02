@@ -1,5 +1,5 @@
 ## Interface: 11507
-## Version: 0.12.65
+## Version: 0.12.66
 ## Title: S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D|cff3FC7EB4KiR |T132115:16:16:0:0|t
@@ -27,6 +27,7 @@ locale\zhTW.lua
 
 data.lua
 data\datasources-retail.lua
+data\datasources-mists.lua
 data\datasources-cata.lua
 data\datasources-classic.lua
 data\datasources.lua
@@ -34,6 +35,7 @@ data\datasources.lua
 data\datasod.lua
 
 data\datawowhead-retail.lua
+data\datawowhead-mists.lua
 data\datawowhead-cata.lua
 data\datawowhead-wrath.lua
 data\datawowhead-classic.lua

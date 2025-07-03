@@ -935,6 +935,7 @@ local function AddBisForSpecRetail(tooltip, itemId, yourSpecId, otherClasses, co
 end
 
 local specNotFoundOnce = true
+local specIconNotFoundOnce = true
 local function GetPrefferredText()
 	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then return " (" .. SpecBisTooltip:Trans("LID_" .. SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. ")" end
 
@@ -984,129 +985,140 @@ local function OnTooltipSetItem(tooltip, data)
 		tooltip:AddDoubleLine("S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r  ItemId: " .. id)
 	end
 
-	if specId and icon then
-		local _, class = UnitClass("PLAYER")
-		local sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
-		if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
-			if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
-				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
-				else
-					if sourceLocation and sourceLocation ~= "" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
+	if specId then
+		if icon then
+			local _, class = UnitClass("PLAYER")
+			local sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
+			if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
+				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
+					if sourceTyp == "catalyst" then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
+						if sourceLocation and sourceLocation ~= "" then
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
+						else
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
+						end
+					end
+				else
+					if sourceTyp == "catalyst" then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+					else
+						if sourceLocation and sourceLocation ~= "" then
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+						else
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+						end
 					end
 				end
 			else
-				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
-				else
-					if sourceLocation and sourceLocation ~= "" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+				if itemId then
+					if custom then
+						local source = SBTTABPC[invType .. "_SOURCE"]
+						if n then
+							source = SBTTABPC[invType .. n .. "_SOURCE"]
+						end
+
+						if source and source ~= "" then
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
+						else
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, " |T136031:20:20:0:0|t")
+						end
 					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
 					end
+				else
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC"), "|T136031:20:20:0:0|t")
 				end
 			end
-		else
-			if itemId then
-				if custom then
-					local source = SBTTABPC[invType .. "_SOURCE"]
-					if n then
-						source = SBTTABPC[invType .. n .. "_SOURCE"]
+
+			if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+				local foundCount = 0
+				if AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType) then
+					foundCount = foundCount + 1
+				end
+
+				if AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType) then
+					foundCount = foundCount + 1
+				end
+
+				if AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType) then
+					foundCount = foundCount + 1
+				end
+
+				local bisText = GetBISText("NOTBIS")
+				if foundCount == 0 and bisText and bisText ~= "" then
+					if invType == "INVTYPE_TRINKET" then
+						AddToTooltipTrinketRetail(tooltip, id, specId, icon)
+					else
+						tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. bisText, "|T136031:20:20:0:0|t")
+					end
+				end
+
+				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
+					local first = true
+					if AddBisForSpecRetail(tooltip, id, specId, false, "BISO", first) then
+						first = false
 					end
 
-					if source and source ~= "" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
-					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, " |T136031:20:20:0:0|t")
+					if AddBisForSpecRetail(tooltip, id, specId, false, "BISR", first) then
+						first = false
 					end
-				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
+
+					if AddBisForSpecRetail(tooltip, id, specId, false, "BISM", first) then
+						first = false
+					end
+
+					if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, false, "TRINKETS", first) then
+						first = false
+					end
+
+					if first then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+					end
+				end
+
+				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
+					local first = true
+					if AddBisForSpecRetail(tooltip, id, specId, true, "BISO", first) then
+						first = false
+					end
+
+					if AddBisForSpecRetail(tooltip, id, specId, true, "BISR", first) then
+						first = false
+					end
+
+					if AddBisForSpecRetail(tooltip, id, specId, true, "BISM", first) then
+						first = false
+					end
+
+					if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, true, "TRINKETS", first) then
+						first = false
+					end
+
+					if first then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+					end
 				end
 			else
-				tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC"), "|T136031:20:20:0:0|t")
-			end
-		end
+				AddToTooltip(tooltip, id, specId, icon, invType)
+				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
+					AddBisForSpec(tooltip, id, specId, false)
+				end
 
-		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
-			local foundCount = 0
-			if AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType) then
-				foundCount = foundCount + 1
-			end
-
-			if AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType) then
-				foundCount = foundCount + 1
-			end
-
-			if AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType) then
-				foundCount = foundCount + 1
-			end
-
-			local bisText = GetBISText("NOTBIS")
-			if foundCount == 0 and bisText and bisText ~= "" then
-				if invType == "INVTYPE_TRINKET" then
-					AddToTooltipTrinketRetail(tooltip, id, specId, icon)
-				else
-					tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. bisText, "|T136031:20:20:0:0|t")
+				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
+					AddBisForSpec(tooltip, id, specId, true)
 				end
 			end
-
-			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
-				local first = true
-				if AddBisForSpecRetail(tooltip, id, specId, false, "BISO", first) then
-					first = false
+		elseif specIconNotFoundOnce then
+			specIconNotFoundOnce = false
+			SpecBisTooltip:MSG("Icon for Spec not found")
+			C_Timer.After(
+				10,
+				function()
+					specIconNotFoundOnce = true
 				end
-
-				if AddBisForSpecRetail(tooltip, id, specId, false, "BISR", first) then
-					first = false
-				end
-
-				if AddBisForSpecRetail(tooltip, id, specId, false, "BISM", first) then
-					first = false
-				end
-
-				if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, false, "TRINKETS", first) then
-					first = false
-				end
-
-				if first then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
-				end
-			end
-
-			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
-				local first = true
-				if AddBisForSpecRetail(tooltip, id, specId, true, "BISO", first) then
-					first = false
-				end
-
-				if AddBisForSpecRetail(tooltip, id, specId, true, "BISR", first) then
-					first = false
-				end
-
-				if AddBisForSpecRetail(tooltip, id, specId, true, "BISM", first) then
-					first = false
-				end
-
-				if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, true, "TRINKETS", first) then
-					first = false
-				end
-
-				if first then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
-				end
-			end
-		else
-			AddToTooltip(tooltip, id, specId, icon, invType)
-			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then
-				AddBisForSpec(tooltip, id, specId, false)
-			end
-
-			if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
-				AddBisForSpec(tooltip, id, specId, true)
-			end
+			)
 		end
 	else
 		local lvl = UnitLevel("PLAYER")
@@ -1139,7 +1151,7 @@ SBTSetup:SetScript(
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.66")
+			SpecBisTooltip:SetVersion(136031, "0.12.67")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

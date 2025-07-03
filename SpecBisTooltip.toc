@@ -5,7 +5,7 @@
 ## Interface-Mists: 50500
 ## Interface: 110007, 110100, 110105, 110107, 110200
 
-## Version: 0.12.66
+## Version: 0.12.67
 ## Title: S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r |T136031:16:16:0:0|t by |cff3FC7EBD4KiR |T132115:16:16:0:0|t
 ## Notes: SpecBisTooltip
 ## Author: D|cff3FC7EB4KiR |T132115:16:16:0:0|t

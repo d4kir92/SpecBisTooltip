@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 14.04.2025
+-- SOURCE FROM: 10.07.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -165,6 +165,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231310"] = {"Darkfuse Precipitant", "Undermine"}
         s["npc;drop=229288"] = {"King Flamespite <Flarendo's Manager>", "Liberation of Undermine"}
         s["npc;drop=229284"] = {"Guk Boomdog <The Slop Hawker>", "Liberation of Undermine"}
+        s["spell;created=441051"] = {"Rune-Branded Tunic", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -310,6 +311,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"König Bösflamme <Leuchtendos Manager>", "Befreiung von Lorenhall"}
         s["npc;drop=229284"] = {"Guk Bummhund <Der Grützehändler>", "Befreiung von Lorenhall"}
         s["object;contained=507768"] = {"Über Bord geworfener Haufen Goblinkohle", "Ausgrabungsstätte 9"}
+        s["spell;created=441051"] = {"Runengezeichnete Tunika", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -454,6 +456,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"Rey Escupellamas <Gerente de Flarendo>", "Liberación de Minahonda"}
         s["npc;drop=229284"] = {"Guk Bumcan <El vendedor de bazofia>", "Liberación de Minahonda"}
         s["object;contained=507768"] = {"Montón desechado de goblindólares", "Excavación 9"}
+        s["spell;created=441051"] = {"Guerrera con runas marcadas", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -597,6 +600,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"Roi Hargnembrase <Impresario de Fusendo>", "Libération de Terremine"}
         s["npc;drop=229284"] = {"Guk Boumouaf <Vendeur de gruau>", "Libération de Terremine"}
         s["object;contained=507768"] = {"Tas de devises gobelines éjectées", "Site d’excavation 9"}
+        s["spell;created=441051"] = {"Tunique marquée de runes", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -740,6 +744,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"Re Ontardente <Responsabile di Motorendo>", "Liberazione di Cavafonda"}
         s["npc;drop=229284"] = {"Guk Tirabotte <Il Venditore di Sbobba>", "Liberazione di Cavafonda"}
         s["object;contained=507768"] = {"Mucchio di Soldi dei Goblin Gettati", "Sito di Scavo 9"}
+        s["spell;created=441051"] = {"Giubba Marchiata con Rune", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -897,6 +902,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"왕 불꽃원한 <플레렌도의 담당자>", "언더마인 해방전선"}
         s["npc;drop=229284"] = {"구크 붐도그 <음식물 행상인>", "언더마인 해방전선"}
         s["object;contained=507768"] = {"버려진 고블린 화폐 더미", "채굴지 9호"}
+        s["spell;created=441051"] = {"룬낙인 튜닉", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1042,6 +1048,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"Rei Flamódio <Empresário de Flarendo>", "Libertação da Inframina"}
         s["npc;drop=229284"] = {"Guk Bumcão <Falcoeiro de Meleca>", "Libertação da Inframina"}
         s["object;contained=507768"] = {"Pilha de Moedas Goblínicas Descartadas", "Sítio de Escavação 9"}
+        s["spell;created=441051"] = {"Túnica com Marcações Rúnicas", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1200,6 +1207,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"Король Флэймспайт <Менеджер Пламендо>", "Освобождение Нижней Шахты"}
         s["npc;drop=229284"] = {"Гук Бумгавс <Продавец варева>", "Освобождение Нижней Шахты"}
         s["object;contained=507768"] = {"Выброшенная куча гоблинской валюты", "Место раскопок 9"}
+        s["spell;created=441051"] = {"Мундир с руническим клеймом", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -1358,6 +1366,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"喷焰大王 <弗莱兰多的经理>", "解放安德麦"}
         s["npc;drop=229284"] = {"古克·轰犬 <污液贩子>", "解放安德麦"}
         s["object;contained=507768"] = {"丢弃的地精货币堆", "九号挖掘场"}
+        s["spell;created=441051"] = {"符烙胸甲", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

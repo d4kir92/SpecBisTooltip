@@ -596,7 +596,7 @@ local function AddToTooltipRetail(tooltip, id, specId, icon, content, invType)
 			if typ == "NOTBIS" then
 				return false
 			elseif sourceTyp and sourceTyp ~= "" then
-				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
+				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 					if sourceTyp == "catalyst" then
 						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
@@ -649,7 +649,7 @@ local function AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 			if typ == "NOTBIS" then
 				return false
 			elseif sourceTyp and sourceTyp ~= "" then
-				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
+				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 					if sourceTyp == "catalyst" then
 						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
@@ -707,7 +707,7 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 				if invType then
 					sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, n)
 					if sourceTyp and sourceTyp ~= "" then
-						if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
+						if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 							if sourceTyp == "catalyst" then
 								tooltip:AddDoubleLine(iconText .. " " .. bisText, format(SpecBisTooltip:Trans("LID_yourbissource"), SpecBisTooltip:Trans("LID_" .. sourceTyp)) .. " |T136031:20:20:0:0|t")
 							else
@@ -752,7 +752,7 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 					tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
 				end
 			elseif sourceTyp and sourceTyp ~= "" then
-				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
+				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 					if sourceTyp == "catalyst" then
 						tooltip:AddDoubleLine(iconText .. " " .. bisText, SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
@@ -990,7 +990,7 @@ local function OnTooltipSetItem(tooltip, data)
 			local _, class = UnitClass("PLAYER")
 			local sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
 			if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
-				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsShiftKeyDown() then
+				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 					if sourceTyp == "catalyst" then
 						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
 					else
@@ -1151,7 +1151,7 @@ SBTSetup:SetScript(
 		if event == "PLAYER_LOGIN" then
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
-			SpecBisTooltip:SetVersion(136031, "0.12.69")
+			SpecBisTooltip:SetVersion(136031, "0.12.70")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

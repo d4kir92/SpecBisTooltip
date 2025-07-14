@@ -158,9 +158,9 @@ function D4:CreateMinimapButton(params)
         "OnClick",
         function(sel, btnName)
             if sel.isMouseDown then return end
-            if btnName == "LeftButton" and IsShiftKeyDown() and params.funcSL then
+            if btnName == "LeftButton" and IsControlKeyDown() and params.funcSL then
                 params:funcSL()
-            elseif btnName == "RightButton" and IsShiftKeyDown() and params.funcSR then
+            elseif btnName == "RightButton" and IsControlKeyDown() and params.funcSR then
                 params:funcSR()
             elseif btnName == "LeftButton" and params.funcL then
                 params:funcL()
@@ -244,9 +244,9 @@ function D4:CreateMinimapButton(params)
                 notCheckable = true,
                 func = function(button, menuInputData, menu)
                     local btnName = menuInputData.buttonName
-                    if btnName == "LeftButton" and IsShiftKeyDown() and params.funcSL then
+                    if btnName == "LeftButton" and IsControlKeyDown() and params.funcSL then
                         params:funcSL()
-                    elseif btnName == "RightButton" and IsShiftKeyDown() and params.funcSR then
+                    elseif btnName == "RightButton" and IsControlKeyDown() and params.funcSR then
                         params:funcSR()
                     elseif btnName == "LeftButton" and params.funcL then
                         params:funcL()

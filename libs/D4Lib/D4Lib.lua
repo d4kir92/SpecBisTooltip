@@ -134,7 +134,8 @@ function D4:ForeachChildren(frame, callback, from)
     for x = 1, frame:GetNumChildren() do
         local child = select(x, frame:GetChildren())
         if child then
-            callback(child, x)
+            local ret = callback(child, x)
+            if ret then return ret end
         else
             return
         end
@@ -163,7 +164,8 @@ function D4:ForeachRegions(frame, callback, from)
     for x = 1, frame:GetNumRegions() do
         local region = select(x, frame:GetRegions())
         if region then
-            callback(region, x)
+            local ret = callback(region, x)
+            if ret then return ret end
         else
             return
         end
@@ -186,8 +188,39 @@ local ICON_TAG_LIST_EN = {
     ["skull"] = 8,
 }
 
-function D4:SafeExec(sel, func)
-    if InCombatLockdown() and sel:IsProtected() then return end
+local callbacks = {}
+local fSecure = CreateFrame("Frame")
+D4:RegisterEvent(fSecure, "PLAYER_REGEN_ENABLED")
+fSecure:SetScript(
+    "OnEvent",
+    function()
+        for i, func in pairs(callbacks) do
+            func()
+        end
+
+        callbacks = {}
+    end
+)
+
+function D4:SafeExec(sel, func, from)
+    if sel == nil then
+        D4:MSG("[D4][SafeExec] MISSING FRAME", from)
+
+        return
+    end
+
+    if from == nil then
+        D4:MSG("[D4][SafeExec] MISSING FROM", D4:GetName(sel))
+
+        return
+    end
+
+    if InCombatLockdown() and sel:IsProtected() then
+        callbacks[from] = func
+
+        return
+    end
+
     func()
 end
 
@@ -274,8 +307,13 @@ function D4:LoadAddOn(name)
     return nil
 end
 
-function D4:IsAddOnLoaded(name)
-    if C_AddOns and C_AddOns.IsAddOnLoaded then return C_AddOns.IsAddOnLoaded(name) end
+function D4:IsAddOnLoaded(name, from)
+    if C_AddOns and C_AddOns.IsAddOnLoaded then
+        local loaded, _ = C_AddOns.IsAddOnLoaded(name)
+
+        return loaded
+    end
+
     if IsAddOnLoaded then return IsAddOnLoaded(name) end
     D4:MSG("[D4][IsAddOnLoaded] FAILED")
 
@@ -851,7 +889,7 @@ function D4:GetFrameByName(name)
 end
 
 local f = CreateFrame("Frame")
-f:RegisterEvent("PLAYER_LOGIN")
+D4:RegisterEvent(f, "PLAYER_LOGIN")
 f:SetScript(
     "OnEvent",
     function(self, event, ...)

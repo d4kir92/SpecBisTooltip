@@ -42,7 +42,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "LID_PREFERREDBISO", "Overall Ausrüstung")
     SpecBisTooltip:AddTrans("deDE", "LID_PREFERREDBISR", "Raid Ausrüstung")
     SpecBisTooltip:AddTrans("deDE", "LID_PREFERREDBISM", "M+ Ausrüstung")
-    SpecBisTooltip:AddTrans("deDE", "LID_HOLDMODIFIER", "[Shift halten]")
+    SpecBisTooltip:AddTrans("deDE", "LID_HOLDMODIFIER", "[Strg halten]")
     SpecBisTooltip:AddTrans("deDE", "LID_SMALLERTOOLTIP", "Kleinerer Tooltip")
     SpecBisTooltip:AddTrans("deDE", "LID_CUSTOMBISIDS", "Benutzerdefinierte BIS Gegenstand-IDs")
     SpecBisTooltip:AddTrans("deDE", "LID_INVTYPE_HEAD", "Kopf")

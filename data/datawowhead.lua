@@ -197,46 +197,62 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 	if bfi[class][specId] == nil then
 		bfi[class][specId] = {}
 		local pool = SpecBisTooltip:GetWoWBuild()
-		if SpecBisTooltip:GetBisTable()[pool] and SpecBisTooltip:GetBisTable()[pool][class][specId] then
-			for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId]) do
-				local slot = tab[3]
-				if pool == "CLASSIC" or pool == "CATA" then
-					if slot then
-						if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-							bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-							table.insert(bfi[class][specId][slot], itemId)
-						else
-							bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-							table.insert(bfi[class][specId][slot], itemId)
-						end
-					end
-				else
-					slot = tab[2]
-					if type(itemId) == "string" then
-						if itemId == content then
-							local heroSpecID = SpecBisTooltip:GetHeroSpecId()
-							if heroSpecID and SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID] then
-								for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID]) do
-									slot = tab2[2]
-									if slot then
-										bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-										table.insert(bfi[class][specId][slot], itemId2)
-									end
-								end
-							else
-								for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content]) do
-									slot = tab2[2]
-									if slot then
-										bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-										table.insert(bfi[class][specId][slot], itemId2)
-									end
-								end
-							end
-						end
-					elseif slot then
+		if SpecBisTooltip:GetBisTable()[pool] == nil then
+			SpecBisTooltip:MSG("Missing POOL!", pool)
+
+			return
+		end
+
+		if SpecBisTooltip:GetBisTable()[pool][class] == nil then
+			SpecBisTooltip:MSG("Missing Class!", class)
+
+			return
+		end
+
+		if SpecBisTooltip:GetBisTable()[pool][class][specId] == nil then
+			SpecBisTooltip:MSG("Missing specId!", specId)
+
+			return
+		end
+
+		for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId]) do
+			local slot = tab[3]
+			if pool == "CLASSIC" or pool == "CATA" then
+				if slot then
+					if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
+						bfi[class][specId][slot] = bfi[class][specId][slot] or {}
+						table.insert(bfi[class][specId][slot], itemId)
+					else
 						bfi[class][specId][slot] = bfi[class][specId][slot] or {}
 						table.insert(bfi[class][specId][slot], itemId)
 					end
+				end
+			else
+				slot = tab[2]
+				if type(itemId) == "string" then
+					if itemId == content then
+						local heroSpecID = SpecBisTooltip:GetHeroSpecId()
+						if heroSpecID and SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID] then
+							for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID]) do
+								slot = tab2[2]
+								if slot then
+									bfi[class][specId][slot] = bfi[class][specId][slot] or {}
+									table.insert(bfi[class][specId][slot], itemId2)
+								end
+							end
+						else
+							for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content]) do
+								slot = tab2[2]
+								if slot then
+									bfi[class][specId][slot] = bfi[class][specId][slot] or {}
+									table.insert(bfi[class][specId][slot], itemId2)
+								end
+							end
+						end
+					end
+				elseif slot then
+					bfi[class][specId][slot] = bfi[class][specId][slot] or {}
+					table.insert(bfi[class][specId][slot], itemId)
 				end
 			end
 		end

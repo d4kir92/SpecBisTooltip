@@ -913,8 +913,8 @@ else
     -- DATA FROM: 17.07.2025
     if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         BIS["CLASSIC"] = {}
-        BIS["CLASSIC"]["DRUID ERA"] = {}
-        BIS["CLASSIC"]["DRUID ERA"][1] = {
+        BIS["CLASSIC"]["DRUID"] = {}
+        BIS["CLASSIC"]["DRUID"][1] = {
             [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
             [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
             [19370] = {"BIS,PVE,P5", "npc;drop=12435", "INVTYPE_SHOULDER"},
@@ -934,8 +934,8 @@ else
             [23197] = {"BIS,PVE,P5", "npc;drop=11497", "INVTYPE_RELIC"},
         }
 
-        BIS["CLASSIC"]["DRUID ERA"][2] = {}
-        BIS["CLASSIC"]["DRUID ERA"][3] = {
+        BIS["CLASSIC"]["DRUID"][2] = {}
+        BIS["CLASSIC"]["DRUID"][3] = {
             [16451] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_HEAD"},
             [18404] = {"BIS,PVE,P5", "quest;reward=7491", "INVTYPE_NECK"},
             [21665] = {"BIS,PVE,P5", "npc;drop=15510", "INVTYPE_SHOULDER"},
@@ -954,7 +954,7 @@ else
             [23198] = {"BIS,PVE,P5", "npc;drop=10435", "INVTYPE_RELIC"},
         }
 
-        BIS["CLASSIC"]["DRUID ERA"][4] = {
+        BIS["CLASSIC"]["DRUID"][4] = {
             [19132] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_HEAD"},
             [21712] = {"BIS,PVE,P5", "quest;reward=8802", "INVTYPE_NECK"},
             [18810] = {"BIS,PVE,P5", "npc;drop=12018", "INVTYPE_SHOULDER"},

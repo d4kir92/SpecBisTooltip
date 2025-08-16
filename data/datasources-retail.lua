@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 17.07.2025
+-- SOURCE FROM: 16.08.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -166,6 +166,39 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229288"] = {"King Flamespite <Flarendo's Manager>", "Liberation of Undermine"}
         s["npc;drop=229284"] = {"Guk Boomdog <The Slop Hawker>", "Liberation of Undermine"}
         s["spell;created=441051"] = {"Rune-Branded Tunic", "CRAFTING"}
+        s["npc;drop=247989"] = {"Forgeweaver Araz", "Manaforge Omega"}
+        s["npc;drop=237861"] = {"Fractillus <The Shatterer>", "Manaforge Omega"}
+        s["npc;drop=175646"] = {"P.O.S.T. Master", "Tazavesh, the Veiled Market"}
+        s["npc;drop=156827"] = {"Echelon", "Halls of Atonement"}
+        s["npc;drop=233814"] = {"Plexus Sentinel", "Manaforge Omega"}
+        s["npc;drop=237661"] = {"Adarus Duskblaze", "Manaforge Omega"}
+        s["npc;drop=177269"] = {"So'leah <Cartel So>", "Tazavesh, the Veiled Market"}
+        s["npc;drop=233815"] = {"Loom'ithar", "Manaforge Omega"}
+        s["npc;drop=237763"] = {"Nexus-King Salhadaar", "Manaforge Omega"}
+        s["npc;drop=233824"] = {"Dimensius", "Manaforge Omega"}
+        s["npc;drop=234933"] = {"Taah'bat <The Relentless>", "Eco-Dome Al'dani"}
+        s["spell;created=1249111"] = {"Receive Wraps", "CRAFTING"}
+        s["npc;drop=233816"] = {"Soulbinder Naazindhri", "Manaforge Omega"}
+        s["npc;drop=165408"] = {"Halkias <The Sin-Stained Goliath>", "Halls of Atonement"}
+        s["npc;drop=175663"] = {"Hylbrande <Sword of the Keepers>", "Tazavesh, the Veiled Market"}
+        s["npc;drop=164185"] = {"Echelon", "Halls of Atonement"}
+        s["npc;drop=165410"] = {"High Adjudicator Aleez", "Halls of Atonement"}
+        s["npc;drop=176556"] = {"Alcruux <The Glutton>", "Tazavesh, the Veiled Market"}
+        s["npc;drop=247283"] = {"Soul-Scribe", "Eco-Dome Al'dani"}
+        s["npc;drop=175546"] = {"Timecap'n Hooktail", "Tazavesh, the Veiled Market"}
+        s["npc;drop=175806"] = {"So'azmi", "Tazavesh, the Veiled Market"}
+        s["npc;drop=176563"] = {"Zo'gron", "Tazavesh, the Veiled Market"}
+        s["npc;drop=176705"] = {"Venza Goldfuse", "Tazavesh, the Veiled Market"}
+        s["npc;drop=234893"] = {"Azhiccar", "Eco-Dome Al'dani"}
+        s["npc;drop=164218"] = {"Lord Chamberlain", "Halls of Atonement"}
+        s["npc;drop=175616"] = {"Zo'phex <The Sentinel>", "Tazavesh, the Veiled Market"}
+        s["spell;created=450223"] = {"Everforged Defender", "CRAFTING"}
+        s["npc;drop=244752"] = {"Nexus-Princess Ky'veza", "Voidrazor Sanctuary"}
+        s["npc;drop=231981"] = {"Maw of the Sands", "K'aresh"}
+        s["npc;drop=234845"] = {"Sthaarbs <the Mindroiler>", "K'aresh"}
+        s["object;contained=416265"] = {"Pilfered Trunk", "The Dread Pit"}
+        s["npc;drop=235853"] = {"Waygate Watcher", "Manaforge Omega"}
+        s["npc;drop=239454"] = {"Darkmage Zadus", "Manaforge Omega"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -312,6 +345,25 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"Guk Bummhund <Der Grützehändler>", "Befreiung von Lorenhall"}
         s["object;contained=507768"] = {"Über Bord geworfener Haufen Goblinkohle", "Ausgrabungsstätte 9"}
         s["spell;created=441051"] = {"Runengezeichnete Tunika", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "Die Manaschmiede Omega"}
+        s["npc;drop=175646"] = {"P.O.S.T.-Meister", "Tazavesh, der Verhüllte Markt"}
+        s["npc;drop=177269"] = {"So'leah <Kartell So>", "Tazavesh, der Verhüllte Markt"}
+        s["npc;drop=234933"] = {"Taah'bat <Die Erbarmungslosen>", "Die Biokuppel Al'dani"}
+        s["spell;created=1249111"] = {"Wickel erhalten", "CRAFTING"}
+        s["npc;drop=165408"] = {"Halkias <Der Sündenbefleckte Goliath>", "Hallen der Sühne"}
+        s["npc;drop=175663"] = {"Hylbrand <Schwert der Hüter>", "Tazavesh, der Verhüllte Markt"}
+        s["npc;drop=165410"] = {"Hochadjudikatorin Aleez", "Hallen der Sühne"}
+        s["npc;drop=176556"] = {"Alcruux <Der Nimmersatt>", "Tazavesh, der Verhüllte Markt"}
+        s["npc;drop=247283"] = {"Seelenschreiberin", "Die Biokuppel Al'dani"}
+        s["npc;drop=175546"] = {"Zeitkäpt'n Hakenschwanz", "Tazavesh, der Verhüllte Markt"}
+        s["npc;drop=176705"] = {"Venza Goldschmelz", "Tazavesh, der Verhüllte Markt"}
+        s["npc;drop=164218"] = {"Oberster Kämmerer", "Hallen der Sühne"}
+        s["npc;drop=175616"] = {"Zo'phex <Der Hüter>", "Tazavesh, der Verhüllte Markt"}
+        s["spell;created=450223"] = {"Ewiggeschmiedeter Verteidiger", "CRAFTING"}
+        s["npc;drop=244752"] = {"Nexusprinzessin Ky'veza", "Das Leerenmesserrefugium"}
+        s["npc;drop=231981"] = {"Schlund der Sande", "K'aresh"}
+        s["npc;drop=234845"] = {"Sthaarbs <der Geisttrüber>", "K'aresh"}
+        s["object;contained=416265"] = {"Stibitzte Truhe", "Der Terrorschacht"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -457,6 +509,25 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"Guk Bumcan <El vendedor de bazofia>", "Liberación de Minahonda"}
         s["object;contained=507768"] = {"Montón desechado de goblindólares", "Excavación 9"}
         s["spell;created=441051"] = {"Guerrera con runas marcadas", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "Forja de Maná Omega"}
+        s["npc;drop=175646"] = {"Jefe de correos", "Tazavesh, el Mercado Velado"}
+        s["npc;drop=177269"] = {"So'leah <Cártel So>", "Tazavesh, el Mercado Velado"}
+        s["npc;drop=234933"] = {"Taah'bat <El Incansable>", "Ecodomo Al'dani"}
+        s["spell;created=1249111"] = {"Recibir mantón", "CRAFTING"}
+        s["npc;drop=165408"] = {"Halkias <El goliat impenitente>", "Salas de la Expiación"}
+        s["npc;drop=175663"] = {"Hylbrande <Espada de los guardianes>", "Tazavesh, el Mercado Velado"}
+        s["npc;drop=165410"] = {"Gran adjudicadora Aleez", "Salas de la Expiación"}
+        s["npc;drop=176556"] = {"Alcruux <El Glotón>", "Tazavesh, el Mercado Velado"}
+        s["npc;drop=247283"] = {"Escriba de almas", "Ecodomo Al'dani"}
+        s["npc;drop=175546"] = {"Cronocapitana Colagarfio", "Tazavesh, el Mercado Velado"}
+        s["npc;drop=176705"] = {"Venza Fundioro", "Tazavesh, el Mercado Velado"}
+        s["npc;drop=164218"] = {"Lord chambelán", "Salas de la Expiación"}
+        s["npc;drop=175616"] = {"Zo'phex <El Centinela>", "Tazavesh, el Mercado Velado"}
+        s["spell;created=450223"] = {"Defensor de forja eterna", "CRAFTING"}
+        s["npc;drop=244752"] = {"Princesa del Nexo Ky'veza", "Santuario Filovacío"}
+        s["npc;drop=231981"] = {"Fauce de las arenas", "K'aresh"}
+        s["npc;drop=234845"] = {"Sthaarbs <El Tuercementes>", "K'aresh"}
+        s["object;contained=416265"] = {"Baúl birlado", "Foso del Pavor"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -601,6 +672,25 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"Guk Boumouaf <Vendeur de gruau>", "Libération de Terremine"}
         s["object;contained=507768"] = {"Tas de devises gobelines éjectées", "Site d’excavation 9"}
         s["spell;created=441051"] = {"Tunique marquée de runes", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "Manaforge Oméga"}
+        s["npc;drop=175646"] = {"Maître de P.O.S.T.E.", "Tazavesh, le marché dissimulé"}
+        s["npc;drop=177269"] = {"So'leah <Cartel So>", "Tazavesh, le marché dissimulé"}
+        s["npc;drop=234933"] = {"Taah'bat <L'Implacable>", "Écodôme Al’dani"}
+        s["spell;created=1249111"] = {"Recevoir les bandelettes", "CRAFTING"}
+        s["npc;drop=165408"] = {"Halkias <Le goliath vicié>", "Salles de l’Expiation"}
+        s["npc;drop=175663"] = {"Hylbrande <Epée des gardiens>", "Tazavesh, le marché dissimulé"}
+        s["npc;drop=165410"] = {"Grande adjudicatrice Alize", "Salles de l’Expiation"}
+        s["npc;drop=176556"] = {"Alcruux <Le glouton>", "Tazavesh, le marché dissimulé"}
+        s["npc;drop=247283"] = {"Scribe de l'âme", "Écodôme Al’dani"}
+        s["npc;drop=175546"] = {"Chronocapitaine Harpagone", "Tazavesh, le marché dissimulé"}
+        s["npc;drop=176705"] = {"Venza Mèchedor", "Tazavesh, le marché dissimulé"}
+        s["npc;drop=164218"] = {"Grand chambellan", "Salles de l’Expiation"}
+        s["npc;drop=175616"] = {"Zo'phex <La Sentinelle>", "Tazavesh, le marché dissimulé"}
+        s["spell;created=450223"] = {"Défenseur en forge perpétuelle", "CRAFTING"}
+        s["npc;drop=244752"] = {"Princesse-nexus Ky'veza", "Sanctuaire du Rasoir du Vide"}
+        s["npc;drop=231981"] = {"Gueule des sables", "K’aresh"}
+        s["npc;drop=234845"] = {"Sthaarbs <L'Agitateur>", "K’aresh"}
+        s["object;contained=416265"] = {"Malle chapardée", "La fosse de l’Effroi"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -745,6 +835,26 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"Guk Tirabotte <Il Venditore di Sbobba>", "Liberazione di Cavafonda"}
         s["object;contained=507768"] = {"Mucchio di Soldi dei Goblin Gettati", "Sito di Scavo 9"}
         s["spell;created=441051"] = {"Giubba Marchiata con Rune", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "Manaforgia Omega"}
+        s["npc;drop=175646"] = {"Direttore della P.O.S.T.A.", "Tazavesh, il Bazar Celato"}
+        s["npc;drop=156827"] = {"Eminenth", "Sale della Redenzione"}
+        s["npc;drop=177269"] = {"So'leah <Cartello So>", "Tazavesh, il Bazar Celato"}
+        s["npc;drop=234933"] = {"Taah'bat <L'Implacabile>", "Ecosfera Al'dani"}
+        s["spell;created=1249111"] = {"Ricevimento Fasciature", "CRAFTING"}
+        s["npc;drop=165408"] = {"Halkias <Mastodonte Macchiato dal Peccato>", "Sale della Redenzione"}
+        s["npc;drop=175663"] = {"Hylbrande <Spada dei Custodi>", "Tazavesh, il Bazar Celato"}
+        s["npc;drop=164185"] = {"Eminenth", "Sale della Redenzione"}
+        s["npc;drop=165410"] = {"Gran Giudice Aleez", "Sale della Redenzione"}
+        s["npc;drop=176556"] = {"Alcruux <L'Ingordo>", "Tazavesh, il Bazar Celato"}
+        s["npc;drop=175546"] = {"Capitano del Tempo Coduncino", "Tazavesh, il Bazar Celato"}
+        s["npc;drop=176705"] = {"Venza Micciadoro", "Tazavesh, il Bazar Celato"}
+        s["npc;drop=164218"] = {"Ciambellano Supremo", "Sale della Redenzione"}
+        s["npc;drop=175616"] = {"Zo'phex <La Sentinella>", "Tazavesh, il Bazar Celato"}
+        s["spell;created=450223"] = {"Difensore Eternoforgiato", "CRAFTING"}
+        s["npc;drop=244752"] = {"Principessa del Nexus Ky'veza", "Santuario Fendivuoto"}
+        s["npc;drop=231981"] = {"Fauci delle Sabbie", "K'aresh"}
+        s["npc;drop=234845"] = {"Sthaarbs <Il Turbamenti>", "K'aresh"}
+        s["object;contained=416265"] = {"Baule Trafugato", "Fossa del Terrore"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -903,6 +1013,29 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"구크 붐도그 <음식물 행상인>", "언더마인 해방전선"}
         s["object;contained=507768"] = {"버려진 고블린 화폐 더미", "채굴지 9호"}
         s["spell;created=441051"] = {"룬낙인 튜닉", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "마나괴철로 종극점"}
+        s["npc;drop=175646"] = {"우.정.국.장.", "미지의 시장 타자베쉬"}
+        s["npc;drop=156827"] = {"에첼론", "속죄의 전당"}
+        s["npc;drop=177269"] = {"소레아 <소 중개단>", "미지의 시장 타자베쉬"}
+        s["npc;drop=234933"] = {"타바트 <가혹한 자>", "생태지구 알다니"}
+        s["spell;created=1249111"] = {"붕대 받기", "CRAFTING"}
+        s["npc;drop=165408"] = {"할키아스 <죄악에 물든 거수>", "속죄의 전당"}
+        s["npc;drop=175663"] = {"힐브란데 <수호자의 칼>", "미지의 시장 타자베쉬"}
+        s["npc;drop=164185"] = {"에첼론", "속죄의 전당"}
+        s["npc;drop=165410"] = {"대심판관 알리즈", "속죄의 전당"}
+        s["npc;drop=176556"] = {"알크룩스 <게걸먹보>", "미지의 시장 타자베쉬"}
+        s["npc;drop=175546"] = {"시간선장 후크테일", "미지의 시장 타자베쉬"}
+        s["npc;drop=175806"] = {"소아즈미", "미지의 시장 타자베쉬"}
+        s["npc;drop=176563"] = {"조그론", "미지의 시장 타자베쉬"}
+        s["npc;drop=176705"] = {"벤자 골드퓨즈", "미지의 시장 타자베쉬"}
+        s["npc;drop=234893"] = {"아즈히카르", "생태지구 알다니"}
+        s["npc;drop=164218"] = {"시종장", "속죄의 전당"}
+        s["npc;drop=175616"] = {"조펙스 <파수꾼>", "미지의 시장 타자베쉬"}
+        s["spell;created=450223"] = {"영원벼림 파수 방패", "CRAFTING"}
+        s["npc;drop=244752"] = {"연합공작 카이베자", "공허서슬 성역"}
+        s["npc;drop=231981"] = {"모래의 아귀", "크아레쉬"}
+        s["npc;drop=234845"] = {"스타브스 <정신교란자>", "크아레쉬"}
+        s["object;contained=416265"] = {"도둑맞은 보관함", "공포의 무저갱"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1049,6 +1182,27 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"Guk Bumcão <Falcoeiro de Meleca>", "Libertação da Inframina"}
         s["object;contained=507768"] = {"Pilha de Moedas Goblínicas Descartadas", "Sítio de Escavação 9"}
         s["spell;created=441051"] = {"Túnica com Marcações Rúnicas", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "Manaforja Ômega"}
+        s["npc;drop=175646"] = {"Chefe do C.O.R.R.E.I.O", "Tazavesh, o Mercado Oculto"}
+        s["npc;drop=156827"] = {"Escalon", "Salões da Expiação"}
+        s["npc;drop=177269"] = {"So'leah <Cartel So>", "Tazavesh, o Mercado Oculto"}
+        s["npc;drop=234933"] = {"Taah'bat <O Incansável>", "Ecodomo Al'dani"}
+        s["spell;created=1249111"] = {"Receber Faixas", "CRAFTING"}
+        s["npc;drop=165408"] = {"Hálkias <Golias Maculado pelo Pecado>", "Salões da Expiação"}
+        s["npc;drop=175663"] = {"Hylbrande <Espada dos Guardiões>", "Tazavesh, o Mercado Oculto"}
+        s["npc;drop=164185"] = {"Escalon", "Salões da Expiação"}
+        s["npc;drop=165410"] = {"Alta-adjudicadora Alee", "Salões da Expiação"}
+        s["npc;drop=176556"] = {"Alcruux <O Glutão>", "Tazavesh, o Mercado Oculto"}
+        s["npc;drop=247283"] = {"Escriba d'Alma", "Ecodomo Al'dani"}
+        s["npc;drop=175546"] = {"Capitã Temporal Rabo-de-gancho", "Tazavesh, o Mercado Oculto"}
+        s["npc;drop=176705"] = {"Vina Fusauro", "Tazavesh, o Mercado Oculto"}
+        s["npc;drop=164218"] = {"Lorde Camarista", "Salões da Expiação"}
+        s["npc;drop=175616"] = {"Zo'phex <A Sentinela>", "Tazavesh, o Mercado Oculto"}
+        s["spell;created=450223"] = {"Defensor Semperforja", "CRAFTING"}
+        s["npc;drop=244752"] = {"Princesa do Nexus Ky'veza", "Santuário Navalha do Caos"}
+        s["npc;drop=231981"] = {"Bocarra das Areias", "K'aresh"}
+        s["npc;drop=234845"] = {"Sthaarbs <o Espiramente>", "K'aresh"}
+        s["object;contained=416265"] = {"Baú Furtado", "Fosso do Pavor"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1208,6 +1362,29 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"Гук Бумгавс <Продавец варева>", "Освобождение Нижней Шахты"}
         s["object;contained=507768"] = {"Выброшенная куча гоблинской валюты", "Место раскопок 9"}
         s["spell;created=441051"] = {"Мундир с руническим клеймом", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "Манагорн Омега"}
+        s["npc;drop=175646"] = {"ПОЧТ-мейстер", "Тайный рынок Тазавеш"}
+        s["npc;drop=156827"] = {"Эшелон", "Чертоги Покаяния"}
+        s["npc;drop=177269"] = {"Со'лея <Картель Со>", "Тайный рынок Тазавеш"}
+        s["npc;drop=234933"] = {"Таа'бат <Неумолимый>", "Заповедник 'Аль'дани'"}
+        s["spell;created=1249111"] = {"Получение повязок", "CRAFTING"}
+        s["npc;drop=165408"] = {"Халкиас <Запятнанный грехом голиаф>", "Чертоги Покаяния"}
+        s["npc;drop=175663"] = {"Хильбранд <Меч Хранителей>", "Тайный рынок Тазавеш"}
+        s["npc;drop=164185"] = {"Эшелон", "Чертоги Покаяния"}
+        s["npc;drop=165410"] = {"Верховный адъюдикатор Ализа", "Чертоги Покаяния"}
+        s["npc;drop=176556"] = {"Алькруукс <Обжора>", "Тайный рынок Тазавеш"}
+        s["npc;drop=175546"] = {"Хронокэп Крюкохвост", "Тайный рынок Тазавеш"}
+        s["npc;drop=175806"] = {"Со'азми", "Тайный рынок Тазавеш"}
+        s["npc;drop=176563"] = {"Зо'грон", "Тайный рынок Тазавеш"}
+        s["npc;drop=176705"] = {"Венца Голдаплавс", "Тайный рынок Тазавеш"}
+        s["npc;drop=234893"] = {"Ажиккар", "Заповедник 'Аль'дани'"}
+        s["npc;drop=164218"] = {"Лорд-камергер", "Чертоги Покаяния"}
+        s["npc;drop=175616"] = {"Зо'фекс <Часовой>", "Тайный рынок Тазавеш"}
+        s["spell;created=450223"] = {"Выкованный навеки защитник", "CRAFTING"}
+        s["npc;drop=244752"] = {"Принцесса Нексуса Ки'веза", "Убежище рассекателя Бездны"}
+        s["npc;drop=231981"] = {"Пасть песков", "К'ареш"}
+        s["npc;drop=234845"] = {"Стаарбс <Будоражащий>", "К'ареш"}
+        s["object;contained=416265"] = {"Опустошенный ларь", "Яма Ужаса"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -1367,6 +1544,29 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=229284"] = {"古克·轰犬 <污液贩子>", "解放安德麦"}
         s["object;contained=507768"] = {"丢弃的地精货币堆", "九号挖掘场"}
         s["spell;created=441051"] = {"符烙胸甲", "CRAFTING"}
+        s["npc;drop=237861"] = {"Fractillus <[The Shatterer]>", "法力熔炉：欧米伽"}
+        s["npc;drop=175646"] = {"P.O.S.T.总管", "塔扎维什，帷纱集市"}
+        s["npc;drop=156827"] = {"艾谢朗", "赎罪大厅"}
+        s["npc;drop=177269"] = {"索·莉亚 <索财团>", "塔扎维什，帷纱集市"}
+        s["npc;drop=234933"] = {"塔尔·巴特 <无情者>", "奥尔达尼生态圆顶"}
+        s["spell;created=1249111"] = {"收到裹布", "CRAFTING"}
+        s["npc;drop=165408"] = {"哈尔吉亚斯 <罪污巨像>", "赎罪大厅"}
+        s["npc;drop=175663"] = {"希尔布兰德 <守护者之剑>", "塔扎维什，帷纱集市"}
+        s["npc;drop=164185"] = {"艾谢朗", "赎罪大厅"}
+        s["npc;drop=165410"] = {"高阶裁决官阿丽兹", "赎罪大厅"}
+        s["npc;drop=176556"] = {"阿尔克鲁克斯 <暴食者>", "塔扎维什，帷纱集市"}
+        s["npc;drop=175546"] = {"时空船长钩尾", "塔扎维什，帷纱集市"}
+        s["npc;drop=175806"] = {"索·阿兹密", "塔扎维什，帷纱集市"}
+        s["npc;drop=176563"] = {"佐·格伦", "塔扎维什，帷纱集市"}
+        s["npc;drop=176705"] = {"雯扎·金线", "塔扎维什，帷纱集市"}
+        s["npc;drop=234893"] = {"阿兹希卡", "奥尔达尼生态圆顶"}
+        s["npc;drop=164218"] = {"宫务大臣", "赎罪大厅"}
+        s["npc;drop=175616"] = {"佐·菲克斯 <哨卫>", "塔扎维什，帷纱集市"}
+        s["spell;created=450223"] = {"永铸防御者", "CRAFTING"}
+        s["npc;drop=244752"] = {"节点女亲王凯威扎", "虚空之锋庇护所"}
+        s["npc;drop=231981"] = {"沙海之喉", "卡雷什"}
+        s["npc;drop=234845"] = {"司萨阿布斯 <心智搅荡者>", "卡雷什"}
+        s["object;contained=416265"] = {"失窃之箱", "恐惧陷坑"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

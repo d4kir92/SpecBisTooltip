@@ -304,3 +304,382 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 	return nil, nil, nil, nil, custom
 end
+
+local head = "INVTYPE_HEAD"
+local shoulder = "INVTYPE_SHOULDER"
+local chest = "INVTYPE_CHEST"
+local hand = "INVTYPE_HAND"
+local legs = "INVTYPE_LEGS"
+local token = {
+	["RETAIL"] = {
+		-- HUNTER, MAGE, DRUID
+		[237582] = {
+			["HUNTER"] = chest,
+			["MAGE"] = chest,
+			["DRUID"] = chest
+		},
+		[237594] = {
+			["HUNTER"] = legs,
+			["MAGE"] = legs,
+			["DRUID"] = legs
+		},
+		[237586] = {
+			["HUNTER"] = hand,
+			["MAGE"] = hand,
+			["DRUID"] = hand
+		},
+		[237598] = {
+			["HUNTER"] = shoulder,
+			["MAGE"] = shoulder,
+			["DRUID"] = shoulder
+		},
+		[237598] = {
+			["HUNTER"] = head,
+			["MAGE"] = head,
+			["DRUID"] = head
+		},
+		-- DEATHKNIGHT, WARLOCK, DEMONHUNTER
+		[237581] = {
+			["DEATHKNIGHT"] = chest,
+			["WARLOCK"] = chest,
+			["DEMONHUNTER"] = chest
+		},
+		[237593] = {
+			["DEATHKNIGHT"] = legs,
+			["WARLOCK"] = legs,
+			["DEMONHUNTER"] = legs
+		},
+		[237585] = {
+			["DEATHKNIGHT"] = hand,
+			["WARLOCK"] = hand,
+			["DEMONHUNTER"] = hand
+		},
+		[237597] = {
+			["DEATHKNIGHT"] = shoulder,
+			["WARLOCK"] = shoulder,
+			["DEMONHUNTER"] = shoulder
+		},
+		[237589] = {
+			["DEATHKNIGHT"] = head,
+			["WARLOCK"] = head,
+			["DEMONHUNTER"] = head
+		},
+		-- PALADIN, PRIEST, SHAMAN
+		[237583] = {
+			["PALADIN"] = chest,
+			["PRIEST"] = chest,
+			["SHAMAN"] = chest
+		},
+		[237595] = {
+			["PALADIN"] = legs,
+			["PRIEST"] = legs,
+			["SHAMAN"] = legs
+		},
+		[237587] = {
+			["PALADIN"] = hand,
+			["PRIEST"] = hand,
+			["SHAMAN"] = hand
+		},
+		[237599] = {
+			["PALADIN"] = shoulder,
+			["PRIEST"] = shoulder,
+			["SHAMAN"] = shoulder
+		},
+		[237591] = {
+			["PALADIN"] = head,
+			["PRIEST"] = head,
+			["SHAMAN"] = head
+		},
+		-- WARRIOR, ROGUE, MONK, EVOKER
+		[237584] = {
+			["WARRIOR"] = chest,
+			["ROGUE"] = chest,
+			["MONK"] = chest,
+			["EVOKER"] = chest
+		},
+		[237596] = {
+			["WARRIOR"] = legs,
+			["ROGUE"] = legs,
+			["MONK"] = legs,
+			["EVOKER"] = legs
+		},
+		[237588] = {
+			["WARRIOR"] = hand,
+			["ROGUE"] = hand,
+			["MONK"] = hand,
+			["EVOKER"] = hand
+		},
+		[237600] = {
+			["WARRIOR"] = shoulder,
+			["ROGUE"] = shoulder,
+			["MONK"] = shoulder,
+			["EVOKER"] = shoulder
+		},
+		[237592] = {
+			["WARRIOR"] = head,
+			["ROGUE"] = head,
+			["MONK"] = head,
+			["EVOKER"] = head
+		},
+	},
+	["MISTS"] = {
+		-- HUNTER, MAGE, DRUID
+		[0] = {
+			["HUNTER"] = chest,
+			["MAGE"] = chest,
+			["DRUID"] = chest
+		},
+		[0] = {
+			["HUNTER"] = legs,
+			["MAGE"] = legs,
+			["DRUID"] = legs
+		},
+		[0] = {
+			["HUNTER"] = hand,
+			["MAGE"] = hand,
+			["DRUID"] = hand
+		},
+		[0] = {
+			["HUNTER"] = shoulder,
+			["MAGE"] = shoulder,
+			["DRUID"] = shoulder
+		},
+		[0] = {
+			["HUNTER"] = head,
+			["MAGE"] = head,
+			["DRUID"] = head
+		},
+		-- DEATHKNIGHT, WARLOCK, DEMONHUNTER
+		[0] = {
+			["DEATHKNIGHT"] = chest,
+			["WARLOCK"] = chest,
+			["DEMONHUNTER"] = chest
+		},
+		[0] = {
+			["DEATHKNIGHT"] = legs,
+			["WARLOCK"] = legs,
+			["DEMONHUNTER"] = legs
+		},
+		[0] = {
+			["DEATHKNIGHT"] = hand,
+			["WARLOCK"] = hand,
+			["DEMONHUNTER"] = hand
+		},
+		[0] = {
+			["DEATHKNIGHT"] = shoulder,
+			["WARLOCK"] = shoulder,
+			["DEMONHUNTER"] = shoulder
+		},
+		[0] = {
+			["DEATHKNIGHT"] = head,
+			["WARLOCK"] = head,
+			["DEMONHUNTER"] = head
+		},
+		-- PALADIN, PRIEST, SHAMAN
+		[0] = {
+			["PALADIN"] = chest,
+			["PRIEST"] = chest,
+			["SHAMAN"] = chest
+		},
+		[0] = {
+			["PALADIN"] = legs,
+			["PRIEST"] = legs,
+			["SHAMAN"] = legs
+		},
+		[0] = {
+			["PALADIN"] = hand,
+			["PRIEST"] = hand,
+			["SHAMAN"] = hand
+		},
+		[0] = {
+			["PALADIN"] = shoulder,
+			["PRIEST"] = shoulder,
+			["SHAMAN"] = shoulder
+		},
+		[0] = {
+			["PALADIN"] = head,
+			["PRIEST"] = head,
+			["SHAMAN"] = head
+		},
+		-- WARRIOR, ROGUE, MONK, EVOKER
+		[0] = {
+			["WARRIOR"] = chest,
+			["ROGUE"] = chest,
+			["MONK"] = chest,
+			["EVOKER"] = chest
+		},
+		[0] = {
+			["WARRIOR"] = legs,
+			["ROGUE"] = legs,
+			["MONK"] = legs,
+			["EVOKER"] = legs
+		},
+		[0] = {
+			["WARRIOR"] = hand,
+			["ROGUE"] = hand,
+			["MONK"] = hand,
+			["EVOKER"] = hand
+		},
+		[0] = {
+			["WARRIOR"] = shoulder,
+			["ROGUE"] = shoulder,
+			["MONK"] = shoulder,
+			["EVOKER"] = shoulder
+		},
+		[0] = {
+			["WARRIOR"] = head,
+			["ROGUE"] = head,
+			["MONK"] = head,
+			["EVOKER"] = head
+		},
+	},
+	["CLASSIC"] = {
+		-- HUNTER, MAGE, DRUID
+		[0] = {
+			["HUNTER"] = chest,
+			["MAGE"] = chest,
+			["DRUID"] = chest
+		},
+		[0] = {
+			["HUNTER"] = legs,
+			["MAGE"] = legs,
+			["DRUID"] = legs
+		},
+		[0] = {
+			["HUNTER"] = hand,
+			["MAGE"] = hand,
+			["DRUID"] = hand
+		},
+		[0] = {
+			["HUNTER"] = shoulder,
+			["MAGE"] = shoulder,
+			["DRUID"] = shoulder
+		},
+		[0] = {
+			["HUNTER"] = head,
+			["MAGE"] = head,
+			["DRUID"] = head
+		},
+		-- DEATHKNIGHT, WARLOCK, DEMONHUNTER
+		[0] = {
+			["DEATHKNIGHT"] = chest,
+			["WARLOCK"] = chest,
+			["DEMONHUNTER"] = chest
+		},
+		[0] = {
+			["DEATHKNIGHT"] = legs,
+			["WARLOCK"] = legs,
+			["DEMONHUNTER"] = legs
+		},
+		[0] = {
+			["DEATHKNIGHT"] = hand,
+			["WARLOCK"] = hand,
+			["DEMONHUNTER"] = hand
+		},
+		[0] = {
+			["DEATHKNIGHT"] = shoulder,
+			["WARLOCK"] = shoulder,
+			["DEMONHUNTER"] = shoulder
+		},
+		[0] = {
+			["DEATHKNIGHT"] = head,
+			["WARLOCK"] = head,
+			["DEMONHUNTER"] = head
+		},
+		-- PALADIN, PRIEST, SHAMAN
+		[0] = {
+			["PALADIN"] = chest,
+			["PRIEST"] = chest,
+			["SHAMAN"] = chest
+		},
+		[0] = {
+			["PALADIN"] = legs,
+			["PRIEST"] = legs,
+			["SHAMAN"] = legs
+		},
+		[0] = {
+			["PALADIN"] = hand,
+			["PRIEST"] = hand,
+			["SHAMAN"] = hand
+		},
+		[0] = {
+			["PALADIN"] = shoulder,
+			["PRIEST"] = shoulder,
+			["SHAMAN"] = shoulder
+		},
+		[0] = {
+			["PALADIN"] = head,
+			["PRIEST"] = head,
+			["SHAMAN"] = head
+		},
+		-- WARRIOR, ROGUE, MONK, EVOKER
+		[0] = {
+			["WARRIOR"] = chest,
+			["ROGUE"] = chest,
+			["MONK"] = chest,
+			["EVOKER"] = chest
+		},
+		[0] = {
+			["WARRIOR"] = legs,
+			["ROGUE"] = legs,
+			["MONK"] = legs,
+			["EVOKER"] = legs
+		},
+		[0] = {
+			["WARRIOR"] = hand,
+			["ROGUE"] = hand,
+			["MONK"] = hand,
+			["EVOKER"] = hand
+		},
+		[0] = {
+			["WARRIOR"] = shoulder,
+			["ROGUE"] = shoulder,
+			["MONK"] = shoulder,
+			["EVOKER"] = shoulder
+		},
+		[0] = {
+			["WARRIOR"] = head,
+			["ROGUE"] = head,
+			["MONK"] = head,
+			["EVOKER"] = head
+		},
+	}
+}
+
+function SpecBisTooltip:GetTokenTable()
+	return token
+end
+
+function SpecBisTooltip:CheckIfSetItem(id)
+	if id and select(16, SpecBisTooltip:GetItemInfo(id)) then return id end
+
+	return nil
+end
+
+function SpecBisTooltip:GetSlotBis(class, specId, invType, typ)
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then return end
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then return end
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][typ] == nil then return end
+	for id, tab in pairs(SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][typ]) do
+		if tab[2] == invType then return id end
+	end
+end
+
+function SpecBisTooltip:IsBisToken(class, specId, id)
+	local invType = nil
+	local pool = SpecBisTooltip:GetWoWBuild()
+	local tab = SpecBisTooltip:GetTokenTable()
+	if tab and tab[pool] and tab[pool][id] and tab[pool][id][class] then
+		invType = tab[pool][id][class]
+		local bisItem1 = SpecBisTooltip:CheckIfSetItem(SpecBisTooltip:GetSlotBis(class, specId, invType, "BISO"))
+		local bisItem2 = SpecBisTooltip:CheckIfSetItem(SpecBisTooltip:GetSlotBis(class, specId, invType, "BISR"))
+		local bisItem3 = SpecBisTooltip:CheckIfSetItem(SpecBisTooltip:GetSlotBis(class, specId, invType, "BISM"))
+		if bisItem1 or bisItem2 or bisItem3 then
+			return bisItem1, bisItem2, bisItem3
+		else
+			return id
+		end
+	end
+
+	return nil
+end

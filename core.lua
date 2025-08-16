@@ -291,6 +291,10 @@ local bisTextLookup = {
 		colorCode = col_red,
 		translationArgs = {"LID_NOTBIS"}
 	},
+	["BIS"] = {
+		colorCode = col_green,
+		translationArgs = {"LID_BIS"}
+	},
 	["BISO"] = {
 		colorCode = col_green,
 		translationArgs = {"LID_BISO"}
@@ -865,7 +869,9 @@ local function GetPrefferredText()
 end
 
 local function OnTooltipSetItem(tooltip, data)
+	local _, class = UnitClass("PLAYER")
 	local id = nil
+	local isToken = false
 	if data and data.id then
 		id = data.id
 	elseif tooltip.GetItem then
@@ -879,7 +885,18 @@ local function OnTooltipSetItem(tooltip, data)
 	local invType = select(9, GetItemInfo(id))
 	if invType == nil then return end
 	if invType == "" then return end
-	if invalidEquipSlots[invType] then return end
+	local specId, icon = SpecBisTooltip:GetTalentInfo()
+	if SpecBisTooltip.DEBUG then
+		tooltip:AddDoubleLine("S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r  ItemId: " .. id)
+	end
+
+	if invalidEquipSlots[invType] then
+		local id1, id2, id3 = SpecBisTooltip:IsBisToken(class, specId, id)
+		if id1 == nil and id2 == nil and id3 == nil then return end
+		id = id1 or id2 or id3
+		isToken = true
+	end
+
 	local n = 1
 	if invType == "INVTYPE_TRINKET" then
 		local trinket2 = GetInventoryItemID("player", "TRINKET1SLOT")
@@ -902,14 +919,8 @@ local function OnTooltipSetItem(tooltip, data)
 		end
 	end
 
-	local specId, icon = SpecBisTooltip:GetTalentInfo()
-	if SpecBisTooltip.DEBUG then
-		tooltip:AddDoubleLine("S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r  ItemId: " .. id)
-	end
-
 	if specId then
 		if icon then
-			local _, class = UnitClass("PLAYER")
 			local sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
 			if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
 				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
@@ -1001,25 +1012,29 @@ local function OnTooltipSetItem(tooltip, data)
 				end
 
 				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
-					local first = true
-					if AddBisForSpecRetail(tooltip, id, specId, true, "BISO", first) then
-						first = false
-					end
+					if isToken then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSESMAYALSO"), "|T136031:20:20:0:0|t")
+					else
+						local first = true
+						if AddBisForSpecRetail(tooltip, id, specId, true, "BISO", first) then
+							first = false
+						end
 
-					if AddBisForSpecRetail(tooltip, id, specId, true, "BISR", first) then
-						first = false
-					end
+						if AddBisForSpecRetail(tooltip, id, specId, true, "BISR", first) then
+							first = false
+						end
 
-					if AddBisForSpecRetail(tooltip, id, specId, true, "BISM", first) then
-						first = false
-					end
+						if AddBisForSpecRetail(tooltip, id, specId, true, "BISM", first) then
+							first = false
+						end
 
-					if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, true, "TRINKETS", first) then
-						first = false
-					end
+						if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, true, "TRINKETS", first) then
+							first = false
+						end
 
-					if first then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+						if first then
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+						end
 					end
 				end
 			else
@@ -1029,7 +1044,11 @@ local function OnTooltipSetItem(tooltip, data)
 				end
 
 				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
-					AddBisForSpec(tooltip, id, specId, true)
+					if isToken then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSESMAYALSO"), "|T136031:20:20:0:0|t")
+					else
+						AddBisForSpec(tooltip, id, specId, true)
+					end
 				end
 			end
 		elseif specIconNotFoundOnce then
@@ -1074,7 +1093,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.12.78")
+			SpecBisTooltip:SetVersion(136031, "0.13.0")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

@@ -681,7 +681,7 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 						if source and source ~= "" then
 							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
 						else
-							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, "|T136031:20:20:0:0|t")
 						end
 					else
 						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
@@ -712,7 +712,7 @@ end
 local function AddBisTooltipRetail(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
 	if bisText ~= "" and bisText ~= "BLOCKED" then
 		rightText = rightText or ""
-		tooltip:AddDoubleLine(leftText, oldBisText .. " |T136031:20:20:0:0|t")
+		tooltip:AddDoubleLine(leftText .. " " .. oldBisText, "|T136031:20:20:0:0|t")
 	end
 end
 
@@ -955,7 +955,7 @@ local function OnTooltipSetItem(tooltip, data)
 						if source and source ~= "" then
 							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
 						else
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, "|T136031:20:20:0:0|t")
 						end
 					else
 						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
@@ -1093,7 +1093,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.13.0")
+			SpecBisTooltip:SetVersion(136031, "0.13.1")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

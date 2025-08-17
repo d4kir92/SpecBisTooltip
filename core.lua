@@ -588,41 +588,8 @@ local function AddToTooltipRetail(tooltip, id, specId, icon, content, invType)
 	if id == nil then return end
 	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(id, specId, content, invType)
 	if typ == nil then return end
-	local iconText = ""
-	if icon then
-		iconText = "|T" .. icon .. ":20:20:0:0|t"
-	end
 
-	local bisText = GetBISText(typ)
-	local sourceTyp, _, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-	if bisText ~= "" then
-		if bisText ~= "BLOCKED" then
-			if typ == "NOTBIS" then
-				return false
-			elseif sourceTyp and sourceTyp ~= "" then
-				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-				else
-					if sourceLocation and sourceLocation ~= "" then
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-					else
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-					end
-				end
-			else
-				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-			end
-		end
-
-		return true
-	else
-		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
-		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
-			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
-		end
-	end
-
-	return false
+	return typ, sourceUrl
 end
 
 local function AddToTooltipTrinketRetail(tooltip, id, specId, icon)
@@ -868,6 +835,40 @@ local function GetPrefferredText()
 	return ""
 end
 
+function SpecBisTooltip:AddBisText(tooltip, specId, id, icon, typ, sourceUrl)
+	local iconText = ""
+	if icon then
+		iconText = "|T" .. icon .. ":20:20:0:0|t"
+	end
+
+	local bisText = GetBISText(typ)
+	local sourceTyp, _, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
+	if bisText ~= "" then
+		if bisText ~= "BLOCKED" then
+			if typ == "NOTBIS" then
+				return false
+			elseif sourceTyp and sourceTyp ~= "" then
+				if sourceTyp == "catalyst" then
+					tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+				else
+					if sourceLocation and sourceLocation ~= "" then
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+					else
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+					end
+				end
+			else
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+			end
+		end
+	else
+		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
+		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
+			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
+		end
+	end
+end
+
 local function OnTooltipSetItem(tooltip, data)
 	local _, class = UnitClass("PLAYER")
 	local id = nil
@@ -966,25 +967,22 @@ local function OnTooltipSetItem(tooltip, data)
 			end
 
 			if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
-				local foundCount = 0
-				if AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType) then
-					foundCount = foundCount + 1
+				local sourceTyp1, sourceUrl1 = AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType)
+				local sourceTyp2, sourceUrl2 = AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType)
+				local sourceTyp3, sourceUrl3 = AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType)
+				if sourceTyp1 == "BISO" and sourceTyp2 == "BISR" and sourceTyp3 == "BISM" then
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, "BIS", sourceUrl1)
+				else
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, sourceTyp1, sourceUrl1)
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, sourceTyp2, sourceUrl2)
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, sourceTyp3, sourceUrl3)
 				end
 
-				if AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType) then
-					foundCount = foundCount + 1
-				end
-
-				if AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType) then
-					foundCount = foundCount + 1
-				end
-
-				local bisText = GetBISText("NOTBIS")
-				if foundCount == 0 and bisText and bisText ~= "" then
+				if sourceTyp1 == "NOTBIS" and sourceTyp2 == "NOTBIS" and sourceTyp3 == "NOTBIS" and GetBISText("NOTBIS") then
 					if invType == "INVTYPE_TRINKET" then
 						AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 					else
-						tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. bisText, "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. GetBISText("NOTBIS"), "|T136031:20:20:0:0|t")
 					end
 				end
 
@@ -1093,7 +1091,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.13.1")
+			SpecBisTooltip:SetVersion(136031, "0.13.2")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

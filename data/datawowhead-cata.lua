@@ -48,7 +48,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78479] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_WEAPON"},
         [77081] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
         [77155] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77090] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78831] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [78754] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [77185] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
@@ -58,9 +57,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78497] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [65072] = {"PREBIS,PVE,P4", "npc;drop=43296", "INVTYPE_TRINKET"},
         [77977] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
-        [77097] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78488] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPON"},
-        [77081] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
     }
 
     BIS["CATA"]["DEATHKNIGHT"][3] = {
@@ -81,7 +78,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78478] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_2HWEAPON"},
         [77081] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
         [78782] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77090] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78831] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [78754] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [77185] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
@@ -93,9 +89,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78497] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77977] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
         [77972] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77097] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78487] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_2HWEAPON"},
-        [77081] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
     }
 
     BIS["CATA"]["DRUID"] = {}
@@ -132,7 +126,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [77098] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78484] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [78441] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_HOLDABLE"},
-        [77082] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
     }
 
     BIS["CATA"]["DRUID"][2] = {
@@ -468,7 +461,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78496] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77981] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77976] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
-        [77096] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78485] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [78458] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_SHIELD"},
     }
@@ -527,7 +519,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [77097] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78478] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_2HWEAPON"},
         [78788] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77090] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78470] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_SHOULDER"},
         [78822] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [78888] = {"PREBIS,PVE,P4", "npc;drop=57821", "INVTYPE_WAIST"},
@@ -539,7 +530,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78497] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [73496] = {"PREBIS,PVE,P4", "npc;drop=55869", "INVTYPE_TRINKET"},
         [77977] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
-        [77097] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78487] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_2HWEAPON"},
         [77081] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
     }
@@ -565,7 +555,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78392] = {"BIS,PVE,P4", "npc;drop=55308", "INVTYPE_RANGED"},
         [78795] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
         [77089] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
-        [78366] = {"PREBIS,PVE,P4", "npc;drop=55265", "INVTYPE_SHOULDER"},
         [77187] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
         [78814] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_LEGS"},
         [77177] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_FEET"},
@@ -575,7 +564,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78496] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77976] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
         [77975] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
-        [77096] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78485] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [77245] = {"PREBIS,PVE,P4", "npc;drop=55294", "INVTYPE_HOLDABLE"},
         [77078] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RANGED"},
@@ -612,7 +600,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78496] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77976] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
         [77981] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77096] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78485] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [77245] = {"PREBIS,PVE,P4", "npc;drop=55294", "INVTYPE_HOLDABLE"},
         [77078] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RANGED"},
@@ -747,7 +734,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [77950] = {"BIS,PVE,P4", "quest;reward=30118", "INVTYPE_SHIELD"},
         [78369] = {"BIS,PVE,P4", "npc;drop=55265", "INVTYPE_THROWN"},
         [77148] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77091] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78833] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [71045] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [77180] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
@@ -795,10 +781,8 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78427] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_FINGER"},
         [77975] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
         [68925] = {"PREBIS,PVE,P4", "npc;drop=52409", "INVTYPE_TRINKET"},
-        [77096] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78484] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [78458] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_SHIELD"},
-        [77083] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
     }
 
     BIS["CATA"]["SHAMAN"][2] = {
@@ -833,7 +817,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [77979] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77095] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78481] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPON"},
-        [71567] = {"PREBIS,PVE,P4", "npc;sold=54402", "INVTYPE_RELIC"},
     }
 
     BIS["CATA"]["SHAMAN"][3] = {
@@ -867,10 +850,8 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78496] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77976] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_TRINKET"},
         [77981] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77096] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78485] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [78458] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_SHIELD"},
-        [77082] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RELIC"},
     }
 
     BIS["CATA"]["WARLOCK"] = {}
@@ -892,7 +873,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [71086] = {"BIS,PVE,P4", "quest;reward=29312", "INVTYPE_2HWEAPON"},
         [78392] = {"BIS,PVE,P4", "npc;drop=55308", "INVTYPE_RANGED"},
         [78797] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77088] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78844] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [78825] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [78398] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_WAIST"},
@@ -904,7 +884,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78495] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77971] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77980] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77098] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78484] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [72829] = {"PREBIS,PVE,P4", "npc;drop=55085", "INVTYPE_HOLDABLE"},
         [77079] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RANGED"},
@@ -940,7 +919,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78495] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77971] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77980] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77098] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78484] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [72829] = {"PREBIS,PVE,P4", "npc;drop=55085", "INVTYPE_HOLDABLE"},
         [77079] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RANGED"},
@@ -976,7 +954,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78495] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77971] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77980] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77098] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78484] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPONMAINHAND"},
         [72829] = {"PREBIS,PVE,P4", "npc;drop=55085", "INVTYPE_HOLDABLE"},
         [77079] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_RANGED"},
@@ -1001,7 +978,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78478] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_2HWEAPON"},
         [77087] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_THROWN"},
         [78783] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77090] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78830] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [77119] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [77185] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
@@ -1013,9 +989,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [77110] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_FINGER"},
         [77972] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77982] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77097] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78487] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_2HWEAPON"},
-        [77087] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_THROWN"},
     }
 
     BIS["CATA"]["WARRIOR"][2] = {
@@ -1036,7 +1010,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78478] = {"BIS,PVE,P4", "npc;drop=56173", "INVTYPE_2HWEAPON"},
         [77087] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_THROWN"},
         [78783] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77090] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78830] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [77119] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [77185] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
@@ -1048,9 +1021,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [77110] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_FINGER"},
         [77972] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77982] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77097] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78487] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_2HWEAPON"},
-        [77087] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_THROWN"},
     }
 
     BIS["CATA"]["WARRIOR"][3] = {
@@ -1072,7 +1043,6 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78448] = {"BIS,PVE,P4", "npc;drop=56427", "INVTYPE_SHIELD"},
         [77085] = {"BIS,PVE,P4", "npc;sold=44245", "INVTYPE_THROWN"},
         [78784] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_HEAD"},
-        [77092] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_NECK"},
         [78829] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_SHOULDER"},
         [77120] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CHEST"},
         [77186] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_WAIST"},
@@ -1084,9 +1054,7 @@ if SpecBisTooltip:GetWoWBuild() == "CATA" then
         [78498] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_FINGER"},
         [77983] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
         [77970] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_TRINKET"},
-        [77099] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_CLOAK"},
         [78488] = {"PREBIS,PVE,P4", "npc;drop=54938", "INVTYPE_WEAPON"},
         [78456] = {"PREBIS,PVE,P4", "npc;sold=241467", "INVTYPE_SHIELD"},
-        [77085] = {"PREBIS,PVE,P4", "npc;sold=44245", "INVTYPE_THROWN"},
     }
 end

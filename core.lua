@@ -115,7 +115,7 @@ function SpecBisTooltip:GetSettingsContent(parent)
 end
 
 function SpecBisTooltip:InitSettings()
-	sbt_settings = SpecBisTooltip:CreateFrame(
+	sbt_settings = SpecBisTooltip:CreateWindow(
 		{
 			["name"] = "SpecBisTooltip",
 			["pTab"] = {"CENTER"},
@@ -155,7 +155,7 @@ local once = true
 local once2 = true
 function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	if itemId == nil then return "NOTBIS", nil end
-	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
+	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
@@ -202,7 +202,7 @@ end
 
 function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType)
 	if itemId == nil then return "NOTBIS", nil, nil end
-	local name, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(itemId)
+	local name, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
 	if name == nil then return end
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
@@ -613,7 +613,7 @@ local function AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 
 		return true
 	else
-		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
+		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(id)
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
 			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
 		end
@@ -659,7 +659,7 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 			end
 		end
 	else
-		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
+		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(id)
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
 			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
 		end
@@ -678,7 +678,6 @@ end
 
 local function AddBisTooltipRetail(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
 	if bisText ~= "" and bisText ~= "BLOCKED" then
-		rightText = rightText or ""
 		tooltip:AddDoubleLine(leftText .. " " .. oldBisText, "|T136031:20:20:0:0|t")
 	end
 end
@@ -862,7 +861,7 @@ function SpecBisTooltip:AddBisText(tooltip, specId, id, icon, typ, sourceUrl)
 			end
 		end
 	else
-		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = GetItemInfo(id)
+		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(id)
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then
 			tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t")
 		end
@@ -876,14 +875,14 @@ local function OnTooltipSetItem(tooltip, data)
 	if data and data.id then
 		id = data.id
 	elseif tooltip.GetItem then
-		name, link = tooltip:GetItem()
+		local _, link = tooltip:GetItem()
 		if link then
 			id = tonumber(strmatch(link, "item:(%d+):"))
 		end
 	end
 
 	if id == nil then return end
-	local invType = select(9, GetItemInfo(id))
+	local invType = select(9, SpecBisTooltip:GetItemInfo(id))
 	if invType == nil then return end
 	if invType == "" then return end
 	local specId, icon = SpecBisTooltip:GetTalentInfo()
@@ -900,21 +899,21 @@ local function OnTooltipSetItem(tooltip, data)
 
 	local n = 1
 	if invType == "INVTYPE_TRINKET" then
-		local trinket2 = GetInventoryItemID("player", "TRINKET1SLOT")
+		local trinket2 = GetInventoryItemID("player", getglobal("INVSLOT_TRINKET2"))
 		if trinket2 == id then
 			n = 2
 		end
 	end
 
 	if invType == "INVTYPE_FINGER" then
-		local ring2 = GetInventoryItemID("player", "FINGER1SLOT")
+		local ring2 = GetInventoryItemID("player", getglobal("INVSLOT_FINGER2"))
 		if ring2 == id then
 			n = 2
 		end
 	end
 
 	if invType == "INVTYPE_WEAPON" or invType == "INVTYPE_2HWEAPON" or invType == "INVTYPE_WEAPONMAINHAND" or invType == "INVTYPE_WEAPONOFFHAND" or invType == "INVTYPE_HOLDABLE" then
-		local weapon2 = GetInventoryItemID("player", "SECONDARYHANDSLOT")
+		local weapon2 = GetInventoryItemID("player", getglobal("INVSLOT_OFFHAND"))
 		if weapon2 == id then
 			n = 2
 		end
@@ -1091,7 +1090,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.13.2")
+			SpecBisTooltip:SetVersion(136031, "0.13.3")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

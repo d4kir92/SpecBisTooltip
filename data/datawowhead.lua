@@ -1,5 +1,6 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
+local C_Seasons = getglobal("C_Seasons")
 function SpecBisTooltip:AddToSOD(class, specid, tab)
 	if tab then
 		for i, v in pairs(tab) do
@@ -333,7 +334,7 @@ local token = {
 			["MAGE"] = shoulder,
 			["DRUID"] = shoulder
 		},
-		[237598] = {
+		[237590] = {
 			["HUNTER"] = head,
 			["MAGE"] = head,
 			["DRUID"] = head
@@ -429,104 +430,104 @@ local token = {
 			["MAGE"] = chest,
 			["DRUID"] = chest
 		},
-		[0] = {
+		[1] = {
 			["HUNTER"] = legs,
 			["MAGE"] = legs,
 			["DRUID"] = legs
 		},
-		[0] = {
+		[2] = {
 			["HUNTER"] = hand,
 			["MAGE"] = hand,
 			["DRUID"] = hand
 		},
-		[0] = {
+		[3] = {
 			["HUNTER"] = shoulder,
 			["MAGE"] = shoulder,
 			["DRUID"] = shoulder
 		},
-		[0] = {
+		[4] = {
 			["HUNTER"] = head,
 			["MAGE"] = head,
 			["DRUID"] = head
 		},
 		-- DEATHKNIGHT, WARLOCK, DEMONHUNTER
-		[0] = {
+		[5] = {
 			["DEATHKNIGHT"] = chest,
 			["WARLOCK"] = chest,
 			["DEMONHUNTER"] = chest
 		},
-		[0] = {
+		[6] = {
 			["DEATHKNIGHT"] = legs,
 			["WARLOCK"] = legs,
 			["DEMONHUNTER"] = legs
 		},
-		[0] = {
+		[7] = {
 			["DEATHKNIGHT"] = hand,
 			["WARLOCK"] = hand,
 			["DEMONHUNTER"] = hand
 		},
-		[0] = {
+		[8] = {
 			["DEATHKNIGHT"] = shoulder,
 			["WARLOCK"] = shoulder,
 			["DEMONHUNTER"] = shoulder
 		},
-		[0] = {
+		[9] = {
 			["DEATHKNIGHT"] = head,
 			["WARLOCK"] = head,
 			["DEMONHUNTER"] = head
 		},
 		-- PALADIN, PRIEST, SHAMAN
-		[0] = {
+		[10] = {
 			["PALADIN"] = chest,
 			["PRIEST"] = chest,
 			["SHAMAN"] = chest
 		},
-		[0] = {
+		[11] = {
 			["PALADIN"] = legs,
 			["PRIEST"] = legs,
 			["SHAMAN"] = legs
 		},
-		[0] = {
+		[12] = {
 			["PALADIN"] = hand,
 			["PRIEST"] = hand,
 			["SHAMAN"] = hand
 		},
-		[0] = {
+		[13] = {
 			["PALADIN"] = shoulder,
 			["PRIEST"] = shoulder,
 			["SHAMAN"] = shoulder
 		},
-		[0] = {
+		[14] = {
 			["PALADIN"] = head,
 			["PRIEST"] = head,
 			["SHAMAN"] = head
 		},
 		-- WARRIOR, ROGUE, MONK, EVOKER
-		[0] = {
+		[15] = {
 			["WARRIOR"] = chest,
 			["ROGUE"] = chest,
 			["MONK"] = chest,
 			["EVOKER"] = chest
 		},
-		[0] = {
+		[16] = {
 			["WARRIOR"] = legs,
 			["ROGUE"] = legs,
 			["MONK"] = legs,
 			["EVOKER"] = legs
 		},
-		[0] = {
+		[17] = {
 			["WARRIOR"] = hand,
 			["ROGUE"] = hand,
 			["MONK"] = hand,
 			["EVOKER"] = hand
 		},
-		[0] = {
+		[18] = {
 			["WARRIOR"] = shoulder,
 			["ROGUE"] = shoulder,
 			["MONK"] = shoulder,
 			["EVOKER"] = shoulder
 		},
-		[0] = {
+		[19] = {
 			["WARRIOR"] = head,
 			["ROGUE"] = head,
 			["MONK"] = head,
@@ -540,104 +541,104 @@ local token = {
 			["MAGE"] = chest,
 			["DRUID"] = chest
 		},
-		[0] = {
+		[1] = {
 			["HUNTER"] = legs,
 			["MAGE"] = legs,
 			["DRUID"] = legs
 		},
-		[0] = {
+		[2] = {
 			["HUNTER"] = hand,
 			["MAGE"] = hand,
 			["DRUID"] = hand
 		},
-		[0] = {
+		[3] = {
 			["HUNTER"] = shoulder,
 			["MAGE"] = shoulder,
 			["DRUID"] = shoulder
 		},
-		[0] = {
+		[4] = {
 			["HUNTER"] = head,
 			["MAGE"] = head,
 			["DRUID"] = head
 		},
 		-- DEATHKNIGHT, WARLOCK, DEMONHUNTER
-		[0] = {
+		[5] = {
 			["DEATHKNIGHT"] = chest,
 			["WARLOCK"] = chest,
 			["DEMONHUNTER"] = chest
 		},
-		[0] = {
+		[6] = {
 			["DEATHKNIGHT"] = legs,
 			["WARLOCK"] = legs,
 			["DEMONHUNTER"] = legs
 		},
-		[0] = {
+		[7] = {
 			["DEATHKNIGHT"] = hand,
 			["WARLOCK"] = hand,
 			["DEMONHUNTER"] = hand
 		},
-		[0] = {
+		[8] = {
 			["DEATHKNIGHT"] = shoulder,
 			["WARLOCK"] = shoulder,
 			["DEMONHUNTER"] = shoulder
 		},
-		[0] = {
+		[9] = {
 			["DEATHKNIGHT"] = head,
 			["WARLOCK"] = head,
 			["DEMONHUNTER"] = head
 		},
 		-- PALADIN, PRIEST, SHAMAN
-		[0] = {
+		[10] = {
 			["PALADIN"] = chest,
 			["PRIEST"] = chest,
 			["SHAMAN"] = chest
 		},
-		[0] = {
+		[11] = {
 			["PALADIN"] = legs,
 			["PRIEST"] = legs,
 			["SHAMAN"] = legs
 		},
-		[0] = {
+		[12] = {
 			["PALADIN"] = hand,
 			["PRIEST"] = hand,
 			["SHAMAN"] = hand
 		},
-		[0] = {
+		[13] = {
 			["PALADIN"] = shoulder,
 			["PRIEST"] = shoulder,
 			["SHAMAN"] = shoulder
 		},
-		[0] = {
+		[14] = {
 			["PALADIN"] = head,
 			["PRIEST"] = head,
 			["SHAMAN"] = head
 		},
 		-- WARRIOR, ROGUE, MONK, EVOKER
-		[0] = {
+		[15] = {
 			["WARRIOR"] = chest,
 			["ROGUE"] = chest,
 			["MONK"] = chest,
 			["EVOKER"] = chest
 		},
-		[0] = {
+		[16] = {
 			["WARRIOR"] = legs,
 			["ROGUE"] = legs,
 			["MONK"] = legs,
 			["EVOKER"] = legs
 		},
-		[0] = {
+		[17] = {
 			["WARRIOR"] = hand,
 			["ROGUE"] = hand,
 			["MONK"] = hand,
 			["EVOKER"] = hand
 		},
-		[0] = {
+		[18] = {
 			["WARRIOR"] = shoulder,
 			["ROGUE"] = shoulder,
 			["MONK"] = shoulder,
 			["EVOKER"] = shoulder
 		},
-		[0] = {
+		[19] = {
 			["WARRIOR"] = head,
 			["ROGUE"] = head,
 			["MONK"] = head,

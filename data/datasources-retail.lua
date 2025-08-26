@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 16.08.2025
+-- SOURCE FROM: 26.08.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -199,6 +199,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["object;contained=416265"] = {"Pilfered Trunk", "The Dread Pit"}
         s["npc;drop=235853"] = {"Waygate Watcher", "Manaforge Omega"}
         s["npc;drop=239454"] = {"Darkmage Zadus", "Manaforge Omega"}
+        s["npc;sold=248303"] = {"Zah'ran <Delve Trinkets>", "Excavation Site 9"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -364,6 +365,14 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"Schlund der Sande", "K'aresh"}
         s["npc;drop=234845"] = {"Sthaarbs <der Geisttrüber>", "K'aresh"}
         s["object;contained=416265"] = {"Stibitzte Truhe", "Der Terrorschacht"}
+        s["npc;drop=247989"] = {"Schmiedeweber Araz", "Die Manaschmiede Omega"}
+        s["npc;drop=233814"] = {"Plexuswache", "Die Manaschmiede Omega"}
+        s["npc;drop=237661"] = {"Adarus Dämmerflamme", "Die Manaschmiede Omega"}
+        s["npc;drop=237763"] = {"Nexuskönig Salhadaar", "Die Manaschmiede Omega"}
+        s["npc;drop=233816"] = {"Seelenbinderin Naazindhri", "Die Manaschmiede Omega"}
+        s["npc;drop=235853"] = {"Torbeobachter", "Die Manaschmiede Omega"}
+        s["npc;drop=239454"] = {"Dunkelmagier Zadus", "Die Manaschmiede Omega"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Ausgrabungsstätte 9"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -528,6 +537,14 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"Fauce de las arenas", "K'aresh"}
         s["npc;drop=234845"] = {"Sthaarbs <El Tuercementes>", "K'aresh"}
         s["object;contained=416265"] = {"Baúl birlado", "Foso del Pavor"}
+        s["npc;drop=247989"] = {"Tejeforjas Araz", "Forja de Maná Omega"}
+        s["npc;drop=233814"] = {"Centinela del plexo", "Forja de Maná Omega"}
+        s["npc;drop=237661"] = {"Adarus Fulgorsombrío", "Forja de Maná Omega"}
+        s["npc;drop=237763"] = {"Rey-nexo Salhadaar", "Forja de Maná Omega"}
+        s["npc;drop=233816"] = {"Vinculadora de almas Naazindhri", "Forja de Maná Omega"}
+        s["npc;drop=235853"] = {"Vigía de puerta", "Forja de Maná Omega"}
+        s["npc;drop=239454"] = {"Mago oscuro Zadus", "Forja de Maná Omega"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Excavación 9"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -691,6 +708,15 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"Gueule des sables", "K’aresh"}
         s["npc;drop=234845"] = {"Sthaarbs <L'Agitateur>", "K’aresh"}
         s["object;contained=416265"] = {"Malle chapardée", "La fosse de l’Effroi"}
+        s["npc;drop=247989"] = {"Tisseforge Araz", "Manaforge Oméga"}
+        s["npc;drop=233814"] = {"Sentinelle du Plexus", "Manaforge Oméga"}
+        s["npc;drop=237661"] = {"Adarus Soirbrasier", "Manaforge Oméga"}
+        s["npc;drop=233815"] = {"Rou'ethar", "Manaforge Oméga"}
+        s["npc;drop=237763"] = {"Roi-nexus Salhadaar", "Manaforge Oméga"}
+        s["npc;drop=233816"] = {"Lieuse d'âme Naazindhri", "Manaforge Oméga"}
+        s["npc;drop=235853"] = {"Guetteur de portail", "Manaforge Oméga"}
+        s["npc;drop=239454"] = {"Mage sombre Zadus", "Manaforge Oméga"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Site d’excavation 9"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -855,6 +881,14 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"Fauci delle Sabbie", "K'aresh"}
         s["npc;drop=234845"] = {"Sthaarbs <Il Turbamenti>", "K'aresh"}
         s["object;contained=416265"] = {"Baule Trafugato", "Fossa del Terrore"}
+        s["npc;drop=247989"] = {"Tessiforgia Araz", "Manaforgia Omega"}
+        s["npc;drop=233814"] = {"Sentinella del Plesso", "Manaforgia Omega"}
+        s["npc;drop=237661"] = {"Adarus Fiammavespro", "Manaforgia Omega"}
+        s["npc;drop=237763"] = {"Re del Nexus Salhadaar", "Manaforgia Omega"}
+        s["npc;drop=233816"] = {"Vincolatrice d'Anime Naazindhri", "Manaforgia Omega"}
+        s["npc;drop=235853"] = {"Guardiano del Portale di Traslocazione", "Manaforgia Omega"}
+        s["npc;drop=239454"] = {"Mago Oscuro Zadus", "Manaforgia Omega"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Sito di Scavo 9"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -1036,6 +1070,16 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"모래의 아귀", "크아레쉬"}
         s["npc;drop=234845"] = {"스타브스 <정신교란자>", "크아레쉬"}
         s["object;contained=416265"] = {"도둑맞은 보관함", "공포의 무저갱"}
+        s["npc;drop=247989"] = {"제련직공 아라즈", "마나괴철로 종극점"}
+        s["npc;drop=233814"] = {"흐름망 파수꾼", "마나괴철로 종극점"}
+        s["npc;drop=237661"] = {"아다루스 더스크블레이즈", "마나괴철로 종극점"}
+        s["npc;drop=233815"] = {"룸이타르", "마나괴철로 종극점"}
+        s["npc;drop=237763"] = {"연합왕 살라다르", "마나괴철로 종극점"}
+        s["npc;drop=233824"] = {"디멘시우스", "마나괴철로 종극점"}
+        s["npc;drop=233816"] = {"영혼술사 나진드리", "마나괴철로 종극점"}
+        s["npc;drop=235853"] = {"차원문 감시자", "마나괴철로 종극점"}
+        s["npc;drop=239454"] = {"암흑마법사 자두스", "마나괴철로 종극점"}
+        s["npc;sold=248303"] = {"자흐란 <구렁 장신구>", "채굴지 9호"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1203,6 +1247,15 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"Bocarra das Areias", "K'aresh"}
         s["npc;drop=234845"] = {"Sthaarbs <o Espiramente>", "K'aresh"}
         s["object;contained=416265"] = {"Baú Furtado", "Fosso do Pavor"}
+        s["npc;drop=247989"] = {"Tece-forja Araz", "Manaforja Ômega"}
+        s["npc;drop=233814"] = {"Sentinela do Plexo", "Manaforja Ômega"}
+        s["npc;drop=237661"] = {"Adarus Gumúmbrio", "Manaforja Ômega"}
+        s["npc;drop=233815"] = {"Fian'dhar", "Manaforja Ômega"}
+        s["npc;drop=237763"] = {"Rei do Nexus Salhadaar", "Manaforja Ômega"}
+        s["npc;drop=233816"] = {"Atalmas Naazindhri", "Manaforja Ômega"}
+        s["npc;drop=235853"] = {"Vigia do Pórtico", "Manaforja Ômega"}
+        s["npc;drop=239454"] = {"Neromago Zadus", "Manaforja Ômega"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Sítio de Escavação 9"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1385,6 +1438,16 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"Пасть песков", "К'ареш"}
         s["npc;drop=234845"] = {"Стаарбс <Будоражащий>", "К'ареш"}
         s["object;contained=416265"] = {"Опустошенный ларь", "Яма Ужаса"}
+        s["npc;drop=247989"] = {"Ткач горна Араз", "Манагорн Омега"}
+        s["npc;drop=233814"] = {"Сплетенный страж", "Манагорн Омега"}
+        s["npc;drop=237661"] = {"Адар Вспышка Сумерек", "Манагорн Омега"}
+        s["npc;drop=233815"] = {"Ткан'итар", "Манагорн Омега"}
+        s["npc;drop=237763"] = {"Соправитель Салхадаар", "Манагорн Омега"}
+        s["npc;drop=233824"] = {"Пространствус", "Манагорн Омега"}
+        s["npc;drop=233816"] = {"Стражница душ Наазиндри", "Манагорн Омега"}
+        s["npc;drop=235853"] = {"Смотритель путевых врат", "Манагорн Омега"}
+        s["npc;drop=239454"] = {"Темный маг Зейд", "Манагорн Омега"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Место раскопок 9"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -1567,6 +1630,16 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=231981"] = {"沙海之喉", "卡雷什"}
         s["npc;drop=234845"] = {"司萨阿布斯 <心智搅荡者>", "卡雷什"}
         s["object;contained=416265"] = {"失窃之箱", "恐惧陷坑"}
+        s["npc;drop=247989"] = {"熔炉编织者阿拉兹", "法力熔炉：欧米伽"}
+        s["npc;drop=233814"] = {"集能哨兵", "法力熔炉：欧米伽"}
+        s["npc;drop=237661"] = {"阿达拉斯·暮焰", "法力熔炉：欧米伽"}
+        s["npc;drop=233815"] = {"卢米萨尔", "法力熔炉：欧米伽"}
+        s["npc;drop=237763"] = {"节点之王萨哈达尔", "法力熔炉：欧米伽"}
+        s["npc;drop=233824"] = {"迪门修斯", "法力熔炉：欧米伽"}
+        s["npc;drop=233816"] = {"缚魂者娜欣达利", "法力熔炉：欧米伽"}
+        s["npc;drop=235853"] = {"界门观察者", "法力熔炉：欧米伽"}
+        s["npc;drop=239454"] = {"暗法师扎杜斯", "法力熔炉：欧米伽"}
+        s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "九号挖掘场"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

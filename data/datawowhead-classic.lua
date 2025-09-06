@@ -555,7 +555,6 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [240922] = {"BIS,PVE,SODP8", "npc;drop=240811", "INVTYPE_WEAPON"},
             [240843] = {"BIS,PVE,SODP8", "npc;drop=241021", "INVTYPE_RANGED"},
             [226480] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_HEAD"},
-            [235886] = {"PREBIS,PVE,SODP8", "npc;drop=238233", "INVTYPE_NECK"},
             [226478] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_SHOULDER"},
             [236690] = {"PREBIS,PVE,SODP8", "spell;created=1223762", "INVTYPE_CLOAK"},
             [236733] = {"PREBIS,PVE,SODP8", "npc;drop=238560", "INVTYPE_CHEST"},
@@ -590,7 +589,6 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [236343] = {"BIS,PVE,SODP8", "npc;drop=15990", "INVTYPE_WEAPON"},
             [235892] = {"BIS,PVE,SODP8", "npc;drop=238055", "INVTYPE_RANGED"},
             [226446] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_HEAD"},
-            [235886] = {"PREBIS,PVE,SODP8", "npc;drop=238233", "INVTYPE_NECK"},
             [226444] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_SHOULDER"},
             [236690] = {"PREBIS,PVE,SODP8", "spell;created=1223762", "INVTYPE_CLOAK"},
             [236707] = {"PREBIS,PVE,SODP8", "npc;drop=238560", "INVTYPE_CHEST"},
@@ -605,7 +603,6 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [234462] = {"PREBIS,PVE,SODP8", "quest;reward=86678", "INVTYPE_TRINKET"},
             [235888] = {"PREBIS,PVE,SODP8", "npc;drop=238024", "INVTYPE_WEAPON"},
             [224122] = {"PREBIS,PVE,SODP8", "quest;reward=84881", "INVTYPE_WEAPON"},
-            [235892] = {"PREBIS,PVE,SODP8", "npc;drop=238055", "INVTYPE_RANGED"},
         }
 
         BIS["CLASSIC"]["SHAMAN"] = {}
@@ -641,7 +638,6 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [233991] = {"PREBIS,PVE,SODP8", "spell;created=1213595", "INVTYPE_TRINKET"},
             [227886] = {"PREBIS,PVE,SODP8", "spell;created=461647", "INVTYPE_WEAPONMAINHAND"},
             [228106] = {"PREBIS,PVE,SODP8", "npc;drop=227019", "INVTYPE_SHIELD"},
-            [232392] = {"PREBIS,PVE,SODP8", "npc;sold=227853", "INVTYPE_RELIC"},
         }
 
         BIS["CLASSIC"]["SHAMAN"][2] = {
@@ -674,7 +670,6 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [228081] = {"PREBIS,PVE,SODP8", "npc;drop=226923", "INVTYPE_TRINKET"},
             [235890] = {"PREBIS,PVE,SODP8", "npc;drop=237964", "INVTYPE_WEAPONMAINHAND"},
             [228106] = {"PREBIS,PVE,SODP8", "npc;drop=227019", "INVTYPE_SHIELD"},
-            [228176] = {"PREBIS,PVE,SODP8", "npc;sold=227853", "INVTYPE_RELIC"},
         }
 
         BIS["CLASSIC"]["SHAMAN"][3] = {
@@ -737,14 +732,11 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [226550] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_SHOULDER"},
             [233959] = {"PREBIS,PVE,SODP8", "spell;created=1213538", "INVTYPE_CLOAK"},
             [226548] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_CHEST"},
-            [231079] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_WRIST"},
             [231073] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_HAND"},
-            [231078] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_WAIST"},
             [226547] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_LEGS"},
             [231072] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_FEET"},
             [233735] = {"PREBIS,PVE,SODP8", "npc;sold=218115", "INVTYPE_FINGER"},
             [228683] = {"PREBIS,PVE,SODP8", "npc;drop=16042", "INVTYPE_FINGER"},
-            [233991] = {"PREBIS,PVE,SODP8", "spell;created=1213595", "INVTYPE_TRINKET"},
             [223195] = {"PREBIS,PVE,SODP8", "npc;sold=222408", "INVTYPE_TRINKET"},
             [233798] = {"PREBIS,PVE,SODP8", "spell;created=1213504", "INVTYPE_WEAPONMAINHAND"},
             [228548] = {"PREBIS,PVE,SODP8", "object;contained=181083", "INVTYPE_HOLDABLE"},
@@ -807,14 +799,11 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
             [226550] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_SHOULDER"},
             [233959] = {"PREBIS,PVE,SODP8", "spell;created=1213538", "INVTYPE_CLOAK"},
             [226548] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_CHEST"},
-            [231079] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_WRIST"},
             [231073] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_HAND"},
-            [231078] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_WAIST"},
             [226547] = {"PREBIS,PVE,SODP8", "npc;sold=227819", "INVTYPE_LEGS"},
             [231072] = {"PREBIS,PVE,SODP8", "npc;sold=231711", "INVTYPE_FEET"},
             [233735] = {"PREBIS,PVE,SODP8", "npc;sold=218115", "INVTYPE_FINGER"},
             [228683] = {"PREBIS,PVE,SODP8", "npc;drop=16042", "INVTYPE_FINGER"},
-            [233991] = {"PREBIS,PVE,SODP8", "spell;created=1213595", "INVTYPE_TRINKET"},
             [223195] = {"PREBIS,PVE,SODP8", "npc;sold=222408", "INVTYPE_TRINKET"},
             [233798] = {"PREBIS,PVE,SODP8", "spell;created=1213504", "INVTYPE_WEAPONMAINHAND"},
             [228548] = {"PREBIS,PVE,SODP8", "object;contained=181083", "INVTYPE_HOLDABLE"},

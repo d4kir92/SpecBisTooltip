@@ -141,10 +141,6 @@ function SpecBisTooltip:InitSettings()
 	end
 
 	SpecBisTooltip:GetSettingsContent(sbt_settings.SC)
-	local frame = CreateFrame("Frame")
-	SpecBisTooltip:GetSettingsContent(frame)
-	local category = Settings.RegisterCanvasLayoutCategory(frame, "|T136031:16:16:0:0|t S|cff3FC7EBpec|rB|cff3FC7EBis|rT|cff3FC7EBooltip|r")
-	Settings.RegisterAddOnCategory(category)
 end
 
 function SpecBisTooltip:HoldModifierText()
@@ -1090,7 +1086,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.13.6")
+			SpecBisTooltip:SetVersion(136031, "0.13.7")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

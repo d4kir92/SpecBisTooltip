@@ -1051,31 +1051,31 @@ local function OnTooltipSetItem(tooltip, data)
 		elseif specIconNotFoundOnce then
 			specIconNotFoundOnce = false
 			SpecBisTooltip:MSG("Icon for Spec not found")
-			C_Timer.After(
+			SpecBisTooltip:After(
 				10,
 				function()
 					specIconNotFoundOnce = true
-				end
+				end, "spec not found 1"
 			)
 		end
 	else
 		local lvl = UnitLevel("PLAYER")
 		if lvl and lvl < 10 and specNotFoundOnce then
 			specNotFoundOnce = false
-			C_Timer.After(
+			SpecBisTooltip:After(
 				10,
 				function()
 					specNotFoundOnce = true
-				end
+				end, "spec not found 2"
 			)
 		elseif specNotFoundOnce then
 			specNotFoundOnce = false
 			SpecBisTooltip:MSG("Spec not found")
-			C_Timer.After(
+			SpecBisTooltip:After(
 				10,
 				function()
 					specNotFoundOnce = true
-				end
+				end, "spec not found 3"
 			)
 		end
 	end
@@ -1090,7 +1090,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.13.5")
+			SpecBisTooltip:SetVersion(136031, "0.13.6")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil
@@ -1113,7 +1113,7 @@ SBTSetup:SetScript(
 				}
 			)
 
-			C_Timer.After(
+			SpecBisTooltip:After(
 				1,
 				function()
 					if ItemRefTooltip and GameTooltip and ItemRefTooltip:HasScript("OnTooltipSetItem") and GameTooltip:HasScript("OnTooltipSetItem") then
@@ -1133,14 +1133,14 @@ SBTSetup:SetScript(
 					elseif TooltipDataProcessor then
 						TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 					end
-				end
+				end, "Delay1"
 			)
 
-			C_Timer.After(
+			SpecBisTooltip:After(
 				2,
 				function()
 					SpecBisTooltip:InitSettings()
-				end
+				end, "InitSettings"
 			)
 		end
 	end

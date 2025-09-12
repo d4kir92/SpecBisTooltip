@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
     end
 end
 
--- DATA FROM: 26.08.2025
+-- DATA FROM: 12.09.2025
 if SpecBisTooltip:GetWoWBuild() == "MISTS" then
     BIS["MISTS"] = {}
     BIS["MISTS"]["DEATHKNIGHT"] = {}
@@ -67,12 +67,12 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
 
     BIS["MISTS"]["DRUID"] = {}
     BIS["MISTS"]["DRUID"][1] = {
-        [89922] = {"BIS,PVE,P1", "npc;drop=62543", "INVTYPE_HEAD"},
+        [86934] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_HEAD"},
         [86976] = {"BIS,PVE,P1", "npc;drop=62397", "INVTYPE_NECK"},
         [86937] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_SHOULDER"},
         [86936] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_CHEST"},
         [87181] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_WAIST"},
-        [86935] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_LEGS"},
+        [89948] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_LEGS"},
         [90514] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_FEET"},
         [87054] = {"BIS,PVE,P1", "npc;drop=60701", "INVTYPE_WRIST"},
         [86933] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_HAND"},
@@ -211,9 +211,9 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
         [90859] = {"BIS,PVE,P1", "quest;reward=31612", "INVTYPE_FINGER"},
         [86949] = {"BIS,PVE,P1", "npc;drop=62980", "INVTYPE_FINGER"},
         [87175] = {"BIS,PVE,P1", "npc;drop=60999", "INVTYPE_TRINKET"},
-        [87065] = {"BIS,PVE,P1", "npc;drop=60410", "INVTYPE_TRINKET"},
+        [79331] = {"BIS,PVE,P1", "quest;reward=30451", "INVTYPE_TRINKET"},
         [90512] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_CLOAK"},
-        [90513] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_WEAPON"},
+        [87164] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_WEAPON"},
         [86960] = {"BIS,PVE,P1", "npc;drop=62543", "INVTYPE_HOLDABLE"},
     }
 
@@ -232,7 +232,7 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
         [87175] = {"BIS,PVE,P1", "npc;drop=60999", "INVTYPE_TRINKET"},
         [87065] = {"BIS,PVE,P1", "npc;drop=60410", "INVTYPE_TRINKET"},
         [90512] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_CLOAK"},
-        [90513] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_WEAPON"},
+        [87164] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_WEAPON"},
         [86960] = {"BIS,PVE,P1", "npc;drop=62543", "INVTYPE_HOLDABLE"},
     }
 
@@ -251,7 +251,7 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
         [87175] = {"BIS,PVE,P1", "npc;drop=60999", "INVTYPE_TRINKET"},
         [79331] = {"BIS,PVE,P1", "quest;reward=30451", "INVTYPE_TRINKET"},
         [90512] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_CLOAK"},
-        [90513] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_WEAPON"},
+        [87164] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_WEAPON"},
         [86960] = {"BIS,PVE,P1", "npc;drop=62543", "INVTYPE_HOLDABLE"},
     }
 
@@ -320,6 +320,7 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
         [87184] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_WAIST"},
         [87107] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_LEGS"},
         [87165] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_FEET"},
+        [86188] = {"BIS,PVE,P1", "npc;drop=64340", "INVTYPE_WRIST"},
         [87105] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_HAND"},
         [90511] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_FINGER"},
         [86982] = {"BIS,PVE,P1", "npc;drop=62511", "INVTYPE_FINGER"},
@@ -599,13 +600,13 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
     BIS["MISTS"]["WARRIOR"][3] = {
         [87199] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_HEAD"},
         [90509] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_NECK"},
-        [89921] = {"BIS,PVE,P1", "npc;drop=62543", "INVTYPE_SHOULDER"},
+        [87201] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_SHOULDER"},
         [87197] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_CHEST"},
         [89919] = {"BIS,PVE,P1", "npc;drop=62980", "INVTYPE_WAIST"},
         [89928] = {"BIS,PVE,P1", "npc;drop=62837", "INVTYPE_LEGS"},
         [90507] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_FEET"},
-        [90506] = {"BIS,PVE,P1", "npc;drop=60583", "INVTYPE_WRIST"},
-        [89946] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_HAND"},
+        [87025] = {"BIS,PVE,P1", "npc;drop=60009", "INVTYPE_WRIST"},
+        [87198] = {"BIS,PVE,P1", "npc;sold=64606", "INVTYPE_HAND"},
         [87158] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_FINGER"},
         [86946] = {"BIS,PVE,P1", "npc;drop=62980", "INVTYPE_FINGER"},
         [87160] = {"BIS,PVE,P1", "npc;drop=62442", "INVTYPE_TRINKET"},

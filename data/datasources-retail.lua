@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 26.08.2025
+-- SOURCE FROM: 16.09.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -200,6 +200,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Waygate Watcher", "Manaforge Omega"}
         s["npc;drop=239454"] = {"Darkmage Zadus", "Manaforge Omega"}
         s["npc;sold=248303"] = {"Zah'ran <Delve Trinkets>", "Excavation Site 9"}
+        s["quest;reward=91009"] = {"Durable Information Storage Container", "Dornogal"}
+        s["spell;created=441063"] = {"Glyph-Etched Cuisses", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -373,6 +375,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Torbeobachter", "Die Manaschmiede Omega"}
         s["npc;drop=239454"] = {"Dunkelmagier Zadus", "Die Manaschmiede Omega"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Ausgrabungsstätte 9"}
+        s["quest;reward=91009"] = {"Dateninformationssicherungsbehältnis", "Dornogal"}
+        s["spell;created=441063"] = {"Glyphengravierte Beinschienen", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -545,6 +549,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Vigía de puerta", "Forja de Maná Omega"}
         s["npc;drop=239454"] = {"Mago oscuro Zadus", "Forja de Maná Omega"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Excavación 9"}
+        s["quest;reward=91009"] = {"Depósito de Información Segura Contenida y Organizada", "Dornogal"}
+        s["spell;created=441063"] = {"Quijotes con glifos grabados", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -717,6 +723,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Guetteur de portail", "Manaforge Oméga"}
         s["npc;drop=239454"] = {"Mage sombre Zadus", "Manaforge Oméga"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Site d’excavation 9"}
+        s["quest;reward=91009"] = {"Dispositif d’Informations Sécurisé de Qualité Universelle et Éprouvée", "Dornogal"}
+        s["spell;created=441063"] = {"Cuissières gravées de glyphes", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationitIT()
@@ -889,6 +897,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Guardiano del Portale di Traslocazione", "Manaforgia Omega"}
         s["npc;drop=239454"] = {"Mago Oscuro Zadus", "Manaforgia Omega"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Sito di Scavo 9"}
+        s["quest;reward=91009"] = {"Deposito Informazioni Sicure a Controllo Ottimale", "Dornogal"}
+        s["spell;created=441063"] = {"Cosciali Incisi con Glifi", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationkoKR()
@@ -1080,6 +1090,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"차원문 감시자", "마나괴철로 종극점"}
         s["npc;drop=239454"] = {"암흑마법사 자두스", "마나괴철로 종극점"}
         s["npc;sold=248303"] = {"자흐란 <구렁 장신구>", "채굴지 9호"}
+        s["quest;reward=91009"] = {"고강도 정보 저장소", "도르노갈"}
+        s["spell;created=441063"] = {"문양새김 다리가리개", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationptBR()
@@ -1256,6 +1268,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Vigia do Pórtico", "Manaforja Ômega"}
         s["npc;drop=239454"] = {"Neromago Zadus", "Manaforja Ômega"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Sítio de Escavação 9"}
+        s["quest;reward=91009"] = {"Dispositivo de Informações Seguras Confiável", "Dornogal"}
+        s["spell;created=441063"] = {"Cuísses Gravadas com Glifos", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationruRU()
@@ -1448,6 +1462,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"Смотритель путевых врат", "Манагорн Омега"}
         s["npc;drop=239454"] = {"Темный маг Зейд", "Манагорн Омега"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Место раскопок 9"}
+        s["quest;reward=91009"] = {"Долговечный Информационный Сохраняющий Контейнер", "Дорногал"}
+        s["spell;created=441063"] = {"Гравированные символами шоссы", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhCN()
@@ -1640,6 +1656,8 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;drop=235853"] = {"界门观察者", "法力熔炉：欧米伽"}
         s["npc;drop=239454"] = {"暗法师扎杜斯", "法力熔炉：欧米伽"}
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "九号挖掘场"}
+        s["quest;reward=91009"] = {"牢固信息保全容器", "多恩诺嘉尔"}
+        s["spell;created=441063"] = {"刻纹护腿", "CRAFTING"}
     end
 
     function SpecBisTooltip:TranslationzhTW()

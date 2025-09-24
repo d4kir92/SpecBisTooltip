@@ -191,6 +191,12 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		return nil, nil, nil
 	end
 
+	if specId == 0 or specId > 4 then
+		SpecBisTooltip:MSG("[GetBisSource] NO SPEC DETECTED", specId)
+
+		return
+	end
+
 	if bfi[class] == nil then
 		bfi[class] = {}
 	end

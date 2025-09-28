@@ -1,4 +1,4 @@
--- ruRU
+-- ruRU Russian
 local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ruRU", "LID_GENERAL", "Общее")

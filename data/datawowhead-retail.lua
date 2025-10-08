@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 16.09.2025
+-- DATA FROM: 08.10.2025
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -158,7 +158,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"]["DEATHKNIGHT"][2] = {
         ["BISO"] = {
             [237628] = {"catalyst/unknown", "INVTYPE_HEAD"},
-            [178827] = {"npc;drop=165408", "INVTYPE_NECK"},
+            [242406] = {"npc;drop=237763", "INVTYPE_NECK"},
             [237626] = {"catalyst/unknown", "INVTYPE_SHOULDER"},
             [235499] = {"spell;created=1249111", "INVTYPE_CLOAK"},
             [237631] = {"catalyst/unknown", "INVTYPE_CHEST"},
@@ -662,7 +662,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [242405] = {"npc;drop=233824", "INVTYPE_FINGER"},
             [246281] = {"npc;drop=176556", "INVTYPE_FINGER"},
             [219309] = {"npc;drop=207939", "INVTYPE_TRINKET"},
-            [232541] = {"npc;drop=226403", "INVTYPE_TRINKET"},
+            [242401] = {"npc;drop=237661", "INVTYPE_TRINKET"},
             [221159] = {"npc;drop=215407", "INVTYPE_2HWEAPON"},
         },
         ["BISR"] = {
@@ -1234,14 +1234,14 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         ["TRINKETS"] = {
             [242395] = {"npc;drop=233815", "S"},
             [242396] = {"npc;drop=237861", "S"},
+            [242402] = {"npc;drop=247989", "S"},
             [219308] = {"npc;drop=207946", "A+"},
-            [242402] = {"npc;drop=247989", "A+"},
             [219314] = {"npc;drop=213179", "A+"},
-            [232541] = {"npc;drop=226403", "A+"},
             [185818] = {"npc;drop=177269", "A+"},
             [219312] = {"npc;drop=211089", "A"},
             [242397] = {"npc;drop=237661", "A"},
             [242494] = {"npc;drop=247283", "A"},
+            [232541] = {"npc;drop=226403", "A"},
             [210816] = {"spell;created=427185", "B"},
             [246945] = {"object;contained=413563", "B"},
             [185846] = {"npc;drop=175646", "C"},
@@ -1266,7 +1266,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [237649] = {"catalyst/unknown", "INVTYPE_CHEST"},
             [219342] = {"spell;created=441066", "INVTYPE_WRIST"},
             [219341] = {"spell;created=441061", "INVTYPE_HAND"},
-            [245965] = {"quest;reward=91009", "INVTYPE_WAIST"},
+            [237522] = {"npc;drop=233815", "INVTYPE_WAIST"},
             [237645] = {"catalyst/unknown", "INVTYPE_LEGS"},
             [243308] = {"npc;drop=237661", "INVTYPE_FEET"},
             [237567] = {"npc;drop=233814", "INVTYPE_FINGER"},
@@ -1992,12 +1992,12 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         ["TRINKETS"] = {
             [242400] = {"npc;drop=237763", "S"},
             [242392] = {"npc;drop=237861", "S"},
+            [242393] = {"npc;drop=233815", "S"},
             [242395] = {"npc;drop=233815", "A"},
             [190958] = {"npc;drop=177269", "A"},
             [219308] = {"npc;drop=207946", "A"},
             [219312] = {"npc;drop=211089", "A"},
             [219314] = {"npc;drop=213179", "A"},
-            [242393] = {"npc;drop=233815", "A"},
             [242497] = {"npc;drop=234893", "B"},
             [242494] = {"npc;drop=247283", "B"},
             [242402] = {"npc;drop=247989", "B"},
@@ -2632,13 +2632,13 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [219314] = {"npc;drop=213179", "B"},
             [219317] = {"npc;drop=215407", "B"},
             [238386] = {"object;contained=413563", "B"},
+            [246344] = {"npc;drop=156827", "B"},
             [238390] = {"object;contained=413563", "C"},
             [190652] = {"npc;drop=175646", "C"},
             [242867] = {"object;contained=413563", "C"},
             [219308] = {"npc;drop=207946", "C"},
             [246945] = {"object;contained=413563", "D"},
             [246825] = {"object;contained=413563", "D"},
-            [246344] = {"npc;drop=156827", "D"},
             [242399] = {"npc;drop=233824", "D"},
             [242403] = {"npc;drop=237763", "D"},
         },

@@ -9,9 +9,9 @@ end
 
 -- DATA FROM: 17.07.2025
 if SpecBisTooltip:GetWoWBuild() == "TBC" then
-    BIS["CLASSIC"] = {}
-    BIS["CLASSIC"]["DRUID"] = {}
-    BIS["CLASSIC"]["DRUID"][1] = {
+    BIS["TBC"] = {}
+    BIS["TBC"]["DRUID"] = {}
+    BIS["TBC"]["DRUID"][1] = {
         [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
         [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
         [19370] = {"BIS,PVE,P5", "npc;drop=12435", "INVTYPE_SHOULDER"},
@@ -31,8 +31,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [23197] = {"BIS,PVE,P5", "npc;drop=11497", "INVTYPE_RELIC"},
     }
 
-    BIS["CLASSIC"]["DRUID"][2] = {}
-    BIS["CLASSIC"]["DRUID"][3] = {
+    BIS["TBC"]["DRUID"][2] = {}
+    BIS["TBC"]["DRUID"][3] = {
         [16451] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_HEAD"},
         [18404] = {"BIS,PVE,P5", "quest;reward=7491", "INVTYPE_NECK"},
         [21665] = {"BIS,PVE,P5", "npc;drop=15510", "INVTYPE_SHOULDER"},
@@ -51,7 +51,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [23198] = {"BIS,PVE,P5", "npc;drop=10435", "INVTYPE_RELIC"},
     }
 
-    BIS["CLASSIC"]["DRUID"][4] = {
+    BIS["TBC"]["DRUID"][4] = {
         [19132] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_HEAD"},
         [21712] = {"BIS,PVE,P5", "quest;reward=8802", "INVTYPE_NECK"},
         [18810] = {"BIS,PVE,P5", "npc;drop=12018", "INVTYPE_SHOULDER"},
@@ -71,8 +71,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [233602] = {"BIS,PVE,P5", "npc;drop=15509", "INVTYPE_RELIC"},
     }
 
-    BIS["CLASSIC"]["HUNTER"] = {}
-    BIS["CLASSIC"]["HUNTER"][1] = {
+    BIS["TBC"]["HUNTER"] = {}
+    BIS["TBC"]["HUNTER"][1] = {
         [16465] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_HEAD"},
         [19377] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_NECK"},
         [16468] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_SHOULDER"},
@@ -92,7 +92,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [19361] = {"BIS,PVE,P5", "npc;drop=14020", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["HUNTER"][2] = {
+    BIS["TBC"]["HUNTER"][2] = {
         [16465] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_HEAD"},
         [19377] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_NECK"},
         [16468] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_SHOULDER"},
@@ -112,7 +112,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [19361] = {"BIS,PVE,P5", "npc;drop=14020", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["HUNTER"][3] = {
+    BIS["TBC"]["HUNTER"][3] = {
         [16465] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_HEAD"},
         [19377] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_NECK"},
         [16468] = {"BIS,PVE,P5", "npc;sold=12777", "INVTYPE_SHOULDER"},
@@ -132,8 +132,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [19361] = {"BIS,PVE,P5", "npc;drop=14020", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["MAGE"] = {}
-    BIS["CLASSIC"]["MAGE"][1] = {
+    BIS["TBC"]["MAGE"] = {}
+    BIS["TBC"]["MAGE"][1] = {
         [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
         [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
         [19370] = {"BIS,PVE,P5", "npc;drop=12435", "INVTYPE_SHOULDER"},
@@ -152,7 +152,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [19130] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["MAGE"][2] = {
+    BIS["TBC"]["MAGE"][2] = {
         [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
         [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
         [19370] = {"BIS,PVE,P5", "npc;drop=12435", "INVTYPE_SHOULDER"},
@@ -171,7 +171,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [19130] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["MAGE"][3] = {
+    BIS["TBC"]["MAGE"][3] = {
         [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
         [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
         [19370] = {"BIS,PVE,P5", "npc;drop=12435", "INVTYPE_SHOULDER"},
@@ -190,8 +190,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [19130] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["PALADIN"] = {}
-    BIS["CLASSIC"]["PALADIN"][1] = {
+    BIS["TBC"]["PALADIN"] = {}
+    BIS["TBC"]["PALADIN"][1] = {
         [19132] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_HEAD"},
         [21712] = {"BIS,PVE,P5", "quest;reward=8802", "INVTYPE_NECK"},
         [18810] = {"BIS,PVE,P5", "npc;drop=12018", "INVTYPE_SHOULDER"},
@@ -211,8 +211,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [23201] = {"BIS,PVE,P5", "npc;drop=10504", "INVTYPE_RELIC"},
     }
 
-    BIS["CLASSIC"]["PALADIN"][2] = {} -- NO GUIDE
-    BIS["CLASSIC"]["PALADIN"][3] = {
+    BIS["TBC"]["PALADIN"][2] = {} -- NO GUIDE
+    BIS["TBC"]["PALADIN"][3] = {
         [12640] = {"BIS,PVE,P3", "spell;created=16729", "INVTYPE_HEAD"},
         [18404] = {"BIS,PVE,P3", "quest;reward=7491", "INVTYPE_NECK"},
         [19394] = {"BIS,PVE,P3", "npc;drop=14601", "INVTYPE_SHOULDER"},
@@ -230,8 +230,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [17182] = {"BIS,PVE,P3", "spell;created=21160", "INVTYPE_2HWEAPON"},
     }
 
-    BIS["CLASSIC"]["PRIEST"] = {}
-    BIS["CLASSIC"]["PRIEST"][1] = {
+    BIS["TBC"]["PRIEST"] = {}
+    BIS["TBC"]["PRIEST"][1] = {
         [19132] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_HEAD"},
         [21712] = {"BIS,PVE,P5", "quest;reward=8802", "INVTYPE_NECK"},
         [16924] = {"BIS,PVE,P5", "npc;drop=14020", "INVTYPE_SHOULDER"},
@@ -251,7 +251,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [15283] = {"BIS,PVE,P5", "npc;drop=14890", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["PRIEST"][2] = {
+    BIS["TBC"]["PRIEST"][2] = {
         [19132] = {"BIS,PVE,P5", "npc;drop=6109", "INVTYPE_HEAD"},
         [21712] = {"BIS,PVE,P5", "quest;reward=8802", "INVTYPE_NECK"},
         [16924] = {"BIS,PVE,P5", "npc;drop=14020", "INVTYPE_SHOULDER"},
@@ -271,7 +271,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [15283] = {"BIS,PVE,P5", "npc;drop=14890", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["PRIEST"][3] = {
+    BIS["TBC"]["PRIEST"][3] = {
         [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
         [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
         [19370] = {"BIS,PVE,P5", "npc;drop=12435", "INVTYPE_SHOULDER"},
@@ -291,8 +291,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21603] = {"BIS,PVE,P5", "npc;drop=15511", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["ROGUE"] = {}
-    BIS["CLASSIC"]["ROGUE"][1] = {
+    BIS["TBC"]["ROGUE"] = {}
+    BIS["TBC"]["ROGUE"][1] = {
         [21360] = {"BIS,PVE,P5", "quest;reward=8639", "INVTYPE_HEAD"},
         [19377] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_NECK"},
         [21361] = {"BIS,PVE,P5", "quest;reward=8641", "INVTYPE_SHOULDER"},
@@ -312,7 +312,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21616] = {"BIS,PVE,P5", "npc;drop=15509", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["ROGUE"][2] = {
+    BIS["TBC"]["ROGUE"][2] = {
         [21360] = {"BIS,PVE,P5", "quest;reward=8639", "INVTYPE_HEAD"},
         [19377] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_NECK"},
         [21361] = {"BIS,PVE,P5", "quest;reward=8641", "INVTYPE_SHOULDER"},
@@ -332,7 +332,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21616] = {"BIS,PVE,P5", "npc;drop=15509", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["ROGUE"][3] = {
+    BIS["TBC"]["ROGUE"][3] = {
         [21360] = {"BIS,PVE,P5", "quest;reward=8639", "INVTYPE_HEAD"},
         [19377] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_NECK"},
         [21361] = {"BIS,PVE,P5", "quest;reward=8641", "INVTYPE_SHOULDER"},
@@ -352,8 +352,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21616] = {"BIS,PVE,P5", "npc;drop=15509", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["SHAMAN"] = {}
-    BIS["CLASSIC"]["SHAMAN"][1] = {
+    BIS["TBC"]["SHAMAN"] = {}
+    BIS["TBC"]["SHAMAN"][1] = {
         [19375] = {"BIS,PVE,P5", "npc;drop=11583", "INVTYPE_HEAD"},
         [18814] = {"BIS,PVE,P5", "npc;drop=11502", "INVTYPE_NECK"},
         [18829] = {"BIS,PVE,P5", "npc;drop=11988", "INVTYPE_SHOULDER"},
@@ -373,8 +373,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [23199] = {"BIS,PVE,P5", "npc;drop=15817", "INVTYPE_RELIC"},
     }
 
-    BIS["CLASSIC"]["SHAMAN"][2] = {}
-    BIS["CLASSIC"]["SHAMAN"][3] = {
+    BIS["TBC"]["SHAMAN"][2] = {}
+    BIS["TBC"]["SHAMAN"][3] = {
         [21372] = {"BIS,PVE,P5", "quest;reward=8623", "INVTYPE_HEAD"},
         [21712] = {"BIS,PVE,P5", "quest;reward=8802", "INVTYPE_NECK"},
         [21376] = {"BIS,PVE,P5", "quest;reward=8602", "INVTYPE_SHOULDER"},
@@ -394,8 +394,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [22396] = {"BIS,PVE,P5", "npc;drop=15510", "INVTYPE_RELIC"},
     }
 
-    BIS["CLASSIC"]["WARLOCK"] = {}
-    BIS["CLASSIC"]["WARLOCK"][1] = {
+    BIS["TBC"]["WARLOCK"] = {}
+    BIS["TBC"]["WARLOCK"][1] = {
         [21337] = {"BIS,PVE,P5", "quest;reward=8662", "INVTYPE_HEAD"},
         [21608] = {"BIS,PVE,P5", "npc;drop=15275", "INVTYPE_NECK"},
         [21335] = {"BIS,PVE,P5", "quest;reward=8664", "INVTYPE_SHOULDER"},
@@ -415,7 +415,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21603] = {"BIS,PVE,P5", "npc;drop=15511", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["WARLOCK"][2] = {
+    BIS["TBC"]["WARLOCK"][2] = {
         [21337] = {"BIS,PVE,P5", "quest;reward=8662", "INVTYPE_HEAD"},
         [21608] = {"BIS,PVE,P5", "npc;drop=15275", "INVTYPE_NECK"},
         [21335] = {"BIS,PVE,P5", "quest;reward=8664", "INVTYPE_SHOULDER"},
@@ -435,7 +435,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21603] = {"BIS,PVE,P5", "npc;drop=15511", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["WARLOCK"][3] = {
+    BIS["TBC"]["WARLOCK"][3] = {
         [21337] = {"BIS,PVE,P5", "quest;reward=8662", "INVTYPE_HEAD"},
         [21608] = {"BIS,PVE,P5", "npc;drop=15275", "INVTYPE_NECK"},
         [21335] = {"BIS,PVE,P5", "quest;reward=8664", "INVTYPE_SHOULDER"},
@@ -455,8 +455,8 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [21603] = {"BIS,PVE,P5", "npc;drop=15511", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["WARRIOR"] = {}
-    BIS["CLASSIC"]["WARRIOR"][1] = {
+    BIS["TBC"]["WARRIOR"] = {}
+    BIS["TBC"]["WARRIOR"][1] = {
         [12640] = {"BIS,PVE,P5", "spell;created=16729", "INVTYPE_HEAD"},
         [21664] = {"BIS,PVE,P5", "npc;drop=15510", "INVTYPE_NECK"},
         [21330] = {"BIS,PVE,P5", "quest;reward=8544", "INVTYPE_SHOULDER"},
@@ -476,7 +476,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [23557] = {"BIS,PVE,P5", "npc;drop=15517", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["WARRIOR"][2] = {
+    BIS["TBC"]["WARRIOR"][2] = {
         [12640] = {"BIS,PVE,P5", "spell;created=16729", "INVTYPE_HEAD"},
         [21664] = {"BIS,PVE,P5", "npc;drop=15510", "INVTYPE_NECK"},
         [21330] = {"BIS,PVE,P5", "quest;reward=8544", "INVTYPE_SHOULDER"},
@@ -496,7 +496,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [23557] = {"BIS,PVE,P5", "npc;drop=15517", "INVTYPE_RANGED"},
     }
 
-    BIS["CLASSIC"]["WARRIOR"][3] = {
+    BIS["TBC"]["WARRIOR"][3] = {
         [21329] = {"BIS,PVE,P5", "quest;reward=8561", "INVTYPE_HEAD"},
         [21700] = {"BIS,PVE,P5", "npc;drop=15263", "INVTYPE_NECK"},
         [21330] = {"BIS,PVE,P5", "quest;reward=8544", "INVTYPE_SHOULDER"},

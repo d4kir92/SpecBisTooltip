@@ -1327,7 +1327,7 @@ D4:After(
                 local unit = contextData.unit
                 if unit == nil then return end
                 if not UnitIsPlayer(unit) then return end
-                if not IsInGroup() and not IsInRaid() and false then return end
+                if not IsInGroup() and not IsInRaid() then return end
                 if D4:GetWoWBuild() == "RETAIL" and UnitGroupRolesAssigned ~= nil and UnitGroupRolesAssigned(unit) ~= nil and UnitGroupRolesAssigned(unit) ~= "NONE" then return end
                 local isLeader = UnitIsGroupLeader("player")
                 local isAssistant = UnitIsGroupAssistant("player")

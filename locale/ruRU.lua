@@ -1,7 +1,7 @@
 -- ruRU Russian
 local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
-    SpecBisTooltip:AddTrans("ruRU", "LID_GENERAL", "Общее")
+    SpecBisTooltip:AddTrans("ruRU", "LID_GENERAL", "Основное")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWMINIMAPBUTTON", "Показать кнопку на миникарте")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWOTHERSPECS", "Показать другие специализации")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWOTHERCLASSES", "Показать другие классы")
@@ -31,8 +31,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ruRU", "LID_spell;created", "Ремесло")
     SpecBisTooltip:AddTrans("ruRU", "LID_npc;sold", "Купить")
     SpecBisTooltip:AddTrans("ruRU", "LID_npc;drop", "Выпало")
-    SpecBisTooltip:AddTrans("ruRU", "LID_object;contained", "Содержать")
-    SpecBisTooltip:AddTrans("ruRU", "LID_item:contained", "Содержать")
+    SpecBisTooltip:AddTrans("ruRU", "LID_object;contained", "Содержит")
+    SpecBisTooltip:AddTrans("ruRU", "LID_item:contained", "Содержит")
     SpecBisTooltip:AddTrans("ruRU", "LID_catalyst", "Катализатор")
     SpecBisTooltip:AddTrans("ruRU", "LID_catalyst/unknown", "Катализатор/Неизвестно")
     SpecBisTooltip:AddTrans("ruRU", "LID_unknown", "Неизвестно")
@@ -105,5 +105,5 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ruRU", "LID_INVTYPE_RELIC_SOURCE", "Источник для реликвии")
     SpecBisTooltip:AddTrans("ruRU", "LID_GUIDEITEMID", "Руководство по идентификаторам предметов")
     SpecBisTooltip:AddTrans("ruRU", "LID_OTHERCLASSESMAYALSO", "Другим классам это также может понадобиться.")
-    SpecBisTooltip:AddTrans("ruRU", "LID_ITEM", "Item")
+    SpecBisTooltip:AddTrans("ruRU", "LID_ITEM", "Предмет")
 end

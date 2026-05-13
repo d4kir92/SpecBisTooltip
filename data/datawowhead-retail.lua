@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 27.04.2026
+-- DATA FROM: 13.05.2026
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -26,6 +26,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [249381] = {"npc;drop=256116", "INVTYPE_FEET"},
             [249920] = {"npc;drop=214650", "INVTYPE_FINGER"},
             [251513] = {"spell;created=1230479", "INVTYPE_FINGER"},
+            [251093] = {"npc;drop=254227", "INVTYPE_FINGER"},
             [249343] = {"npc;drop=256116", "INVTYPE_TRINKET"},
             [249344] = {"npc;drop=240435", "INVTYPE_TRINKET"},
         },
@@ -1355,9 +1356,9 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [250007] = {"catalyst/unknown", "INVTYPE_HAND"},
             [244573] = {"spell;created=1237513", "INVTYPE_WAIST"},
             [251087] = {"npc;drop=231626", "INVTYPE_LEGS"},
-            [258577] = {"npc;drop=76141", "INVTYPE_FEET"},
+            [249382] = {"npc;drop=244761", "INVTYPE_FEET"},
+            [249369] = {"npc;drop=250589", "INVTYPE_FINGER"},
             [249919] = {"npc;drop=246729", "INVTYPE_FINGER"},
-            [49812] = {"npc;drop=36476", "INVTYPE_FINGER"},
             [249344] = {"npc;drop=240435", "INVTYPE_TRINKET"},
             [249343] = {"npc;drop=256116", "INVTYPE_TRINKET"},
             [249284] = {"npc;drop=246729", "INVTYPE_WEAPON"},
@@ -1476,15 +1477,15 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [249320] = {"npc;drop=240435", "INVTYPE_FEET"},
             [249919] = {"npc;drop=246729", "INVTYPE_FINGER"},
             [193708] = {"npc;drop=194181", "INVTYPE_FINGER"},
-            [249811] = {"npc;drop=214650", "INVTYPE_TRINKET"},
+            [249343] = {"npc;drop=256116", "INVTYPE_TRINKET"},
             [249809] = {"npc;drop=244761", "INVTYPE_TRINKET"},
             [249293] = {"npc;drop=240435", "INVTYPE_WEAPON"},
             [251202] = {"catalyst/unknown", "INVTYPE_SHIELD"},
         },
         ["TRINKETS"] = {
+            [249343] = {"npc;drop=256116", "S"},
             [249811] = {"npc;drop=214650", "S"},
             [249809] = {"npc;drop=244761", "S"},
-            [249343] = {"npc;drop=256116", "A"},
             [264507] = {"quest;reward=93933", "A"},
             [249808] = {"npc;drop=250589", "A"},
             [248583] = {"npc;drop=242031", "A"},

@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     end
 end
 
--- SOURCE FROM: 01.04.2025
+-- SOURCE FROM: 06.06.2026
 if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}
@@ -905,6 +905,15 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=87442"] = {"Atiesh, Greatstaff of the Guardian", "Stratholme"}
         s["quest;reward=87441"] = {"Atiesh, Greatstaff of the Guardian", "Stratholme"}
         s["quest;reward=87444"] = {"Atiesh, Greatstaff of the Guardian", "Tanaris"}
+        s["npc;drop=11497"] = {"The Razza", "Feralas"}
+        s["npc;sold=240248"] = {"Bryon Steelblade <Scarlet Quartermaster>", "Eastern Plaguelands"}
+        s["spell;created=1232193"] = {"Strings of Fate", "CRAFTING"}
+        s["npc;drop=240811"] = {"Balnazzar", "Scarlet Enclave"}
+        s["npc;drop=238954"] = {"Solistrasza", "Scarlet Enclave"}
+        s["npc;drop=240794"] = {"Alexei the Beastlord", "Scarlet Enclave"}
+        s["quest;reward=89229"] = {"The Right Path", "Eastern Plaguelands"}
+        s["spell;created=1224633"] = {"Scarlet Soldier's Chestplate", "CRAFTING"}
+        s["npc;drop=241006"] = {"Grand Crusader Caldoran", "Scarlet Enclave"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -1636,6 +1645,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=87442"] = {"[Atiesh, Greatstaff of the Guardian]", "Stratholme"}
         s["quest;reward=87441"] = {"[Atiesh, Greatstaff of the Guardian]", "Stratholme"}
         s["quest;reward=87444"] = {"[Atiesh, Greatstaff of the Guardian]", "Tanaris"}
+        s["npc;drop=11497"] = {"Der Razza", "Feralas"}
+        s["npc;sold=240248"] = {"Bryon Steelblade <Scharlachroter Rüstmeister>", "Östliche Pestländer"}
+        s["spell;created=1232193"] = {"Schicksalsfäden", "CRAFTING"}
+        s["npc;drop=238954"] = {"[Solistrasza]", "Scharlachrote Enklave"}
+        s["npc;sold=15504"] = {"Vethsera <Brut Yseras>", "Ahn'Qiraj"}
+        s["quest;reward=89444"] = {"[The Corrupted Emblem]", "Östliche Pestländer"}
     end
 
     function SpecBisTooltip:TranslationesES()
@@ -2386,6 +2401,12 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=87442"] = {"[Atiesh, Greatstaff of the Guardian]", "Stratholme"}
         s["quest;reward=87441"] = {"[Atiesh, Greatstaff of the Guardian]", "Stratholme"}
         s["quest;reward=87444"] = {"[Atiesh, Greatstaff of the Guardian]", "Tanaris"}
+        s["npc;drop=11497"] = {"El Razza", "Feralas"}
+        s["npc;drop=15989"] = {"Safirón", "Naxxramas"}
+        s["npc;sold=240248"] = {"Bryon Hojacero <Intendente Escarlata>", "Tierras de la Peste del Este"}
+        s["spell;created=1232193"] = {"Cordeles del destino", "CRAFTING"}
+        s["npc;drop=240811"] = {"[Balnazzar]", "Enclave Escarlata"}
+        s["npc;drop=238954"] = {"[Solistrasza]", "Enclave Escarlata"}
     end
 
     function SpecBisTooltip:TranslationfrFR()
@@ -3133,6 +3154,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
         s["quest;reward=87442"] = {"[Atiesh, Greatstaff of the Guardian]", "Stratholme"}
         s["quest;reward=87441"] = {"[Atiesh, Greatstaff of the Guardian]", "Stratholme"}
         s["quest;reward=87444"] = {"Atiesh, le grand bâton du Gardien", "Tanaris"}
+        s["npc;drop=11497"] = {"La Razza", "Feralas"}
     end
 
     function SpecBisTooltip:TranslationitIT()

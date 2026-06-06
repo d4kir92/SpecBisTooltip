@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "MISTS" then
     end
 end
 
--- SOURCE FROM: 02.12.2025
+-- SOURCE FROM: 06.06.2026
 if SpecBisTooltip:GetWoWBuild() == "MISTS" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=55265"] = {"Morchok", "Dragon Soul"}

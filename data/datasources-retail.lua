@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- SOURCE FROM: 22.01.2026
+-- SOURCE FROM: 06.06.2026
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=224552"] = {"Rasha'nan", "Nerub-ar Palace"}
@@ -202,6 +202,83 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=248303"] = {"Zah'ran <Delve Trinkets>", "Excavation Site 9"}
         s["quest;reward=91009"] = {"Durable Information Storage Container", "Dornogal"}
         s["spell;created=441063"] = {"Glyph-Etched Cuisses", "CRAFTING"}
+        s["npc;drop=122056"] = {"Viceroy Nezhar", "The Seat of the Triumvirate"}
+        s["npc;drop=231863"] = {"Seranel Sunlash", "Magisters' Terrace"}
+        s["spell;created=1230479"] = {"Loa Worshiper's Band", "CRAFTING"}
+        s["npc;drop=250589"] = {"War Chaplain Senn", "The Voidspire"}
+        s["npc;drop=75964"] = {"Ranjit <Master of the Four Winds>", "Skyreach"}
+        s["spell;created=1228950"] = {"Adherent's Silken Shroud", "CRAFTING"}
+        s["npc;drop=194181"] = {"Vexamus", "Algeth'ar Academy"}
+        s["spell;created=1237514"] = {"Silvermoon Agent's Deflectors", "CRAFTING"}
+        s["npc;drop=231626"] = {"Kalis", "Windrunner Spire"}
+        s["npc;drop=241546"] = {"Lothraxion <High Commander>", "Nexus-Point Xenas"}
+        s["npc;drop=124729"] = {"L'ura", "The Seat of the Triumvirate"}
+        s["spell;created=1229875"] = {"Aetherlume Bands", "CRAFTING"}
+        s["npc;drop=240434"] = {"Vorasius", "The Voidspire"}
+        s["npc;drop=231636"] = {"Restless Heart", "Windrunner Spire"}
+        s["npc;drop=247570"] = {"Muro'jin", "Maisara Caverns"}
+        s["spell;created=1237519"] = {"World Tender's Barkclasp", "CRAFTING"}
+        s["npc;drop=76379"] = {"Rukhran", "Skyreach"}
+        s["spell;created=1230485"] = {"Masterwork Sin'dorei Band", "CRAFTING"}
+        s["npc;drop=76266"] = {"High Sage Viryx", "Skyreach"}
+        s["spell;created=1230061"] = {"Aln'hara Lantern", "CRAFTING"}
+        s["spell;created=1228985"] = {"Arcanoweave Cloak", "CRAFTING"}
+        s["spell;created=1230073"] = {"Darkmoon Dominion: Void", "CRAFTING"}
+        s["spell;created=1230070"] = {"Darkmoon Dominion: Blood", "CRAFTING"}
+        s["spell;created=1253219"] = {"Hunt", "CRAFTING"}
+        s["spell;created=1253220"] = {"Void", "CRAFTING"}
+        s["npc;drop=231865"] = {"Degentrius", "Magisters' Terrace"}
+        s["npc;drop=247976"] = {"Poacher Rav'ik <Vilebranch Tribe>", "Zul'Aman"}
+        s["object;contained=584514"] = {"Bountiful Coffer", "Collegiate Calamity"}
+        s["npc;drop=252458"] = {"Kystia Manaheart", "Murder Row"}
+        s["npc;drop=36494"] = {"Forgemaster Garfrost", "Pit of Saron"}
+        s["spell;created=1229662"] = {"Spellbreaker's Bracers", "CRAFTING"}
+        s["npc;drop=256116"] = {"Chimaerus <The Undreamt God>", "The Dreamrift"}
+        s["npc;drop=240435"] = {"Imperator Averzian", "The Voidspire"}
+        s["npc;drop=246729"] = {"Light Ember <Child of Belo'ren>", "Isle of Quel'Danas"}
+        s["npc;drop=242056"] = {"Vaelgor", "The Voidspire"}
+        s["npc;drop=76141"] = {"Araknath <Construct of the Sun>", "Skyreach"}
+        s["npc;drop=254227"] = {"Corewarden Nysarra", "Nexus-Point Xenas"}
+        s["npc;drop=36658"] = {"Scourgelord Tyrannus", "Pit of Saron"}
+        s["spell;created=1237513"] = {"Silvermoon Agent's Utility Belt", "CRAFTING"}
+        s["npc;drop=196482"] = {"Overgrown Ancient", "Algeth'ar Academy"}
+        s["quest;reward=86521"] = {"Nexus-Point Xenas: Eclipse", "Voidstorm"}
+        s["npc;drop=122313"] = {"Zuraal the Ascended", "The Seat of the Triumvirate"}
+        s["npc;drop=122316"] = {"Saprish <Ethereum-Lord of the Shadowguard>", "The Seat of the Triumvirate"}
+        s["spell;created=1230486"] = {"Masterwork Sin'dorei Amulet", "CRAFTING"}
+        s["spell;created=1237537"] = {"Farstrider's Razor Talons", "CRAFTING"}
+        s["spell;created=1228945"] = {"Martyr's Bindings", "CRAFTING"}
+        s["spell;created=1229659"] = {"Farstrider's Mercy", "CRAFTING"}
+        s["spell;created=1230487"] = {"Signet of Azerothian Blessings", "CRAFTING"}
+        s["spell;created=1228984"] = {"Arcanoweave Bracers", "CRAFTING"}
+        s["spell;created=1229648"] = {"Blood Knight's Warblade", "CRAFTING"}
+        s["spell;created=1230071"] = {"Darkmoon Dominion: Rot", "CRAFTING"}
+        s["spell;created=1253221"] = {"Blood", "CRAFTING"}
+        s["npc;drop=244762"] = {"Lu'ashal", "Eversong Woods"}
+        s["object;contained=581922"] = {"Hidden Trove", "Collegiate Calamity"}
+        s["npc;drop=242031"] = {"Spinefrill <The Deadliest Catch>", "Zul'Aman"}
+        s["npc;drop=239008"] = {"Atroxus", "Voidscar Arena"}
+        s["object;contained=584518"] = {"Bountiful Heavy Trunk", "Collegiate Calamity"}
+        s["npc;sold=243220"] = {"Irissa Bloodstar <Conquest Quartermaster>", "Silvermoon City"}
+        s["spell;created=1230861"] = {"Primal Philosopher's Stone", "CRAFTING"}
+        s["npc;sold=256670"] = {"Zah'ran <Delve Equipment>", "Collegiate Calamity"}
+        s["npc;drop=244761"] = {"Alleria Windrunner", "The Voidspire"}
+        s["npc;drop=214650"] = {"L'ura", "Eredath"}
+        s["spell;created=1229877"] = {"Aetherlume Guards", "CRAFTING"}
+        s["npc;drop=190609"] = {"Echo of Doragosa <Headteacher>", "Algeth'ar Academy"}
+        s["npc;drop=231864"] = {"Gemellus", "Magisters' Terrace"}
+        s["spell;created=1237543"] = {"Farstrider's Plated Bracers", "CRAFTING"}
+        s["npc;drop=248595"] = {"Vordaza", "Maisara Caverns"}
+        s["npc;drop=248605"] = {"Rak'tul <Vessel of Souls>", "Maisara Caverns"}
+        s["spell;created=1229649"] = {"Bloomforged Claw", "CRAFTING"}
+        s["spell;created=1229657"] = {"Spellbreaker's Warglaive", "CRAFTING"}
+        s["spell;created=1230072"] = {"Darkmoon Dominion: Hunt", "CRAFTING"}
+        s["spell;created=1253222"] = {"Rot", "CRAFTING"}
+        s["npc;drop=248823"] = {"Blackcore", "Voidstorm"}
+        s["npc;drop=246633"] = {"Harried Hawkstrider", "Eversong Woods"}
+        s["npc;drop=245044"] = {"Nightbrood", "Voidstorm"}
+        s["npc;drop=250358"] = {"Annulus the Worldshaker", "Harandar"}
+        s["npc;drop=249844"] = {"Chironex <The Floating Death>", "Harandar"}
     end
 
     function SpecBisTooltip:TranslationdeDE()
@@ -377,6 +454,33 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         s["npc;sold=248303"] = {"Zah'ran <[Delve Trinkets]>", "Ausgrabungsstätte 9"}
         s["quest;reward=91009"] = {"Dateninformationssicherungsbehältnis", "Dornogal"}
         s["spell;created=441063"] = {"Glyphengravierte Beinschienen", "CRAFTING"}
+        s["npc;drop=122056"] = {"Vizekönig Nezhar", "Der Sitz des Triumvirats"}
+        s["npc;drop=231863"] = {"Seranel Sonnenpeitsche", "Terrasse der Magister"}
+        s["npc;drop=246729"] = {"Lichtglut <Kind von Belo'ren>", "Insel von Quel'Danas"}
+        s["spell;created=1229877"] = {"Ätherlichtarmschutz", "CRAFTING"}
+        s["npc;drop=76141"] = {"Araknath <Konstrukt der Sonne>", "Himmelsnadel"}
+        s["npc;drop=190609"] = {"Echo von Doragosa <Direktorin>", "Akademie von Algeth'ar"}
+        s["npc;drop=254227"] = {"Kernwächterin Nysarra", "Nexuspunkt Xenas"}
+        s["npc;drop=196482"] = {"Überwuchertes Urtum", "Akademie von Algeth'ar"}
+        s["quest;reward=86521"] = {"Nexuspunkt Xenas: Finsternis", "Leerensturm"}
+        s["npc;drop=122313"] = {"Zuraal der Aufgestiegene", "Der Sitz des Triumvirats"}
+        s["spell;created=1237519"] = {"Rindenschnalle des Weltenwächters", "CRAFTING"}
+        s["spell;created=1230486"] = {"Meisterliches Amulett der Sin'dorei", "CRAFTING"}
+        s["spell;created=1237537"] = {"Messerkrallen des Weltenwanderers", "CRAFTING"}
+        s["spell;created=1228945"] = {"Bindungen des Märtyrers", "CRAFTING"}
+        s["spell;created=1229649"] = {"Blütengeschmiedete Klaue", "CRAFTING"}
+        s["spell;created=1230061"] = {"Laterne von Aln'hara", "CRAFTING"}
+        s["spell;created=1228985"] = {"Arkanostoffumhang", "CRAFTING"}
+        s["spell;created=1230072"] = {"Dunkelmondherrschaft: Jagd", "CRAFTING"}
+        s["spell;created=1230071"] = {"Dunkelmondherrschaft: Fäulnis", "CRAFTING"}
+        s["spell;created=1253221"] = {"Blut", "CRAFTING"}
+        s["spell;created=1253222"] = {"Fäulnis", "CRAFTING"}
+        s["object;contained=581922"] = {"Versteckter Schatz", "Akademischer Aufruhr"}
+        s["npc;drop=247976"] = {"Wilderer Rav'ik <Stamm der Blutfratzen>", "Zul'Aman"}
+        s["npc;drop=246633"] = {"Gehetzter Falkenschreiter", "Immersangwald"}
+        s["npc;drop=245044"] = {"Nachtbrut", "Leerensturm"}
+        s["quest;reward=93933"] = {"Bewachte Schätze", "Leerensturm"}
+        s["npc;drop=250358"] = {"Annulus der Weltenerschütterer", "Harandar"}
     end
 
     function SpecBisTooltip:TranslationesES()

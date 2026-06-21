@@ -155,7 +155,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
-			SpecBisTooltip:MSG("Missing Class: " .. class)
+			SpecBisTooltip:MSG("[GetItemTyp] Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
 		end
 
 		return
@@ -164,7 +164,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
 		if once2 then
 			once2 = false
-			SpecBisTooltip:MSG("Missing Spec for Class: " .. class .. " OR no spec selected")
+			SpecBisTooltip:MSG("[GetItemTyp] Missing Spec for Class: " .. class .. " OR no spec selected" .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
 		end
 
 		return
@@ -203,7 +203,7 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
 		if once then
 			once = false
-			SpecBisTooltip:MSG("Missing Class: " .. class)
+			SpecBisTooltip:MSG("Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
 		end
 
 		return
@@ -212,7 +212,7 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
 		if once2 then
 			once2 = false
-			SpecBisTooltip:MSG("Missing Spec for Class: " .. class .. " OR no spec selected")
+			SpecBisTooltip:MSG("[GetItemTypRetail] Missing Spec for Class: " .. class .. " OR no spec selected")
 		end
 
 		return
@@ -1086,7 +1086,7 @@ SBTSetup:SetScript(
 			SBTTAB = SBTTAB or {}
 			SBTTABPC = SBTTABPC or {}
 			SpecBisTooltip:SetDbTab(SBTTAB)
-			SpecBisTooltip:SetVersion(136031, "0.13.59")
+			SpecBisTooltip:SetVersion(136031, "0.13.60")
 			SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 			SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 			local mmbtn = nil

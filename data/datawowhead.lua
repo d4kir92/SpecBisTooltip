@@ -213,7 +213,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		end
 
 		if SpecBisTooltip:GetBisTable()[pool][class] == nil then
-			SpecBisTooltip:MSG("Missing Class!", class)
+			SpecBisTooltip:MSG("[GetBisSource] Missing Class!", class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
 
 			return
 		end

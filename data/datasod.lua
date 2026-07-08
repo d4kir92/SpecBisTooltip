@@ -9366,7 +9366,7 @@ function SpecBisTooltip:AddOldSodPhases()
                 [220553] = {"BIS,PVE,SODP3", "npc;drop=221943", "INVTYPE_WAIST"},
                 [220651] = {"BIS,PVE,SODP3", "npc;sold=222413", "INVTYPE_LEGS"},
                 [220652] = {"BIS,PVE,SODP3", "npc;sold=222413", "INVTYPE_FEET"},
-                [20505] = {"BIS,PVE,SODP3", "quest;reward=82106", "INVTYPE_FINGER"},
+                [20506] = {"BIS,PVE,SODP3", "quest;reward=82106", "INVTYPE_FINGER"},
                 [220629] = {"BIS,PVE,SODP3", "quest;reward=82081", "INVTYPE_FINGER"},
                 [220634] = {"BIS,PVE,SODP3", "npc;drop=221394", "INVTYPE_TRINKET"},
                 [221455] = {"BIS,PVE,SODP3", "npc;sold=218115", "INVTYPE_TRINKET"},

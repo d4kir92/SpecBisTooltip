@@ -4,17 +4,12 @@ local C_Seasons = getglobal("C_Seasons")
 function SpecBisTooltip:AddToSOD(class, specid, tab)
 	if tab then
 		for i, v in pairs(tab) do
-			if SpecBisTooltip:GetBisTable()["CLASSIC"][class][specid][i] == nil then
-				SpecBisTooltip:GetBisTable()["CLASSIC"][class][specid][i] = v
-			end
+			if SpecBisTooltip:GetBisTable()["CLASSIC"][class][specid][i] == nil then SpecBisTooltip:GetBisTable()["CLASSIC"][class][specid][i] = v end
 		end
 	end
 end
 
-if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-	SpecBisTooltip:AddOldSodPhases()
-end
-
+if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then SpecBisTooltip:AddOldSodPhases() end
 local sortBfs = {}
 sortBfs["BISO"] = 1
 sortBfs["BISMR"] = 2
@@ -80,27 +75,19 @@ function SpecBisTooltip:InitBFSContent(pool, content)
 							bfs[content][itemId] = bfs[content][itemId] or {}
 							local found = false
 							for i, v in pairs(bfs[content][itemId]) do
-								if v[1] == className and v[2] == specId then
-									found = true
-								end
+								if v[1] == className and v[2] == specId then found = true end
 							end
 
-							if not found then
-								table.insert(bfs[content][itemId], {className, specId, itemTab})
-							end
+							if not found then table.insert(bfs[content][itemId], {className, specId, itemTab}) end
 						else
 							for itemId2, itemTab2 in pairs(specTab[content][itemId]) do
 								bfs[content][itemId2] = bfs[content][itemId2] or {}
 								local found = false
 								for i, v in pairs(bfs[content][itemId2]) do
-									if v[1] == className and v[2] == specId then
-										found = true
-									end
+									if v[1] == className and v[2] == specId then found = true end
 								end
 
-								if not found then
-									table.insert(bfs[content][itemId2], {className, specId, itemTab2})
-								end
+								if not found then table.insert(bfs[content][itemId2], {className, specId, itemTab2}) end
 							end
 						end
 					end
@@ -125,38 +112,30 @@ function SpecBisTooltip:InitBFS()
 		end
 
 		for i, bf in pairs(bfs) do
-			table.sort(
-				bf,
-				function(a, b)
-					if a == nil then
-						SpecBisTooltip:MSG("[InitBFS] a is nil")
-
-						return false
-					end
-
-					if b == nil then
-						SpecBisTooltip:MSG("[InitBFS] b is nil")
-
-						return false
-					end
-
-					if sortBfs[a[3][1]] == nil then
-						SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
-
-						return true
-					end
-
-					if sortBfs[b[3][1]] == nil then
-						SpecBisTooltip:MSG("MISSING SORTING KEY", b[3][1])
-
-						return false
-					end
-
-					if sortBfs[a[3][1]] == sortBfs[b[3][1]] then return a[1] < b[1] end
-
-					return sortBfs[a[3][1]] < sortBfs[b[3][1]]
+			table.sort(bf, function(a, b)
+				if a == nil then
+					SpecBisTooltip:MSG("[InitBFS] a is nil")
+					return false
 				end
-			)
+
+				if b == nil then
+					SpecBisTooltip:MSG("[InitBFS] b is nil")
+					return false
+				end
+
+				if sortBfs[a[3][1]] == nil then
+					SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
+					return true
+				end
+
+				if sortBfs[b[3][1]] == nil then
+					SpecBisTooltip:MSG("MISSING SORTING KEY", b[3][1])
+					return false
+				end
+
+				if sortBfs[a[3][1]] == sortBfs[b[3][1]] then return a[1] < b[1] end
+				return sortBfs[a[3][1]] < sortBfs[b[3][1]]
+			end)
 		end
 	else
 		SpecBisTooltip:InitBFSContent(pool, "BISO")
@@ -173,7 +152,6 @@ end
 
 function SpecBisTooltip:GetBFSRetail(itemId, content)
 	if bfs[content] and bfs[content][itemId] then return bfs[content][itemId] end
-
 	return nil
 end
 
@@ -189,38 +167,30 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 			missingSpec = true
 			SpecBisTooltip:MSG("[GetBisSource] Missing SpecId (Talents not set?)")
 		end
-
 		return nil, nil, nil
 	end
 
 	if specId == 0 or specId > 4 then
 		SpecBisTooltip:MSG("[GetBisSource] NO SPEC DETECTED", specId)
-
 		return
 	end
 
-	if bfi[class] == nil then
-		bfi[class] = {}
-	end
-
+	if bfi[class] == nil then bfi[class] = {} end
 	if bfi[class][specId] == nil then
 		bfi[class][specId] = {}
 		local pool = SpecBisTooltip:GetWoWBuild()
 		if SpecBisTooltip:GetBisTable()[pool] == nil then
 			SpecBisTooltip:MSG("Missing POOL!", pool)
-
 			return
 		end
 
 		if SpecBisTooltip:GetBisTable()[pool][class] == nil then
 			SpecBisTooltip:MSG("[GetBisSource] Missing Class!", class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
-
 			return
 		end
 
 		if SpecBisTooltip:GetBisTable()[pool][class][specId] == nil then
 			SpecBisTooltip:MSG("Missing specId!", specId)
-
 			return
 		end
 
@@ -285,19 +255,15 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO", invType)
 				if sourceUrl == nil then
 					_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR", invType)
-					if sourceUrl == nil then
-						_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM", invType)
-					end
+					if sourceUrl == nil then _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM", invType) end
 				end
 
 				local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-
 				return sourceTyp, sourceName, sourceLocation, itemId, custom
 			else
 				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
 				if sourceUrl then
 					local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-
 					return sourceTyp, sourceName, sourceLocation, itemId, custom
 				else
 					return nil, nil, nil, itemId, custom
@@ -306,11 +272,9 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		else
 			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
 			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-
 			return sourceTyp, sourceName, sourceLocation, itemId, custom
 		end
 	end
-
 	return nil, nil, nil, nil, custom
 end
 
@@ -661,7 +625,6 @@ end
 
 function SpecBisTooltip:CheckIfSetItem(id)
 	if id and select(16, SpecBisTooltip:GetItemInfo(id)) then return id end
-
 	return nil
 end
 
@@ -689,6 +652,5 @@ function SpecBisTooltip:IsBisToken(class, specId, id)
 			return id
 		end
 	end
-
 	return nil
 end

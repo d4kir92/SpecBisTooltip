@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 23.06.2026
+-- DATA FROM: 04.08.2026
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -637,7 +637,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
         ["BISO"] = {
             [258412] = {"npc;drop=75964", "INVTYPE_RANGED"},
             [249988] = {"catalyst/unknown", "INVTYPE_HEAD"},
-            [268291] = {"npc;drop=254176", "INVTYPE_NECK"},
+            [249368] = {"npc;drop=244761", "INVTYPE_NECK"},
             [249986] = {"catalyst/unknown", "INVTYPE_SHOULDER"},
             [258575] = {"npc;drop=75964", "INVTYPE_CLOAK"},
             [244609] = {"spell;created=244609", "INVTYPE_CHEST"},
@@ -1313,7 +1313,6 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [252420] = {"npc;drop=76266", "A"},
             [250227] = {"npc;drop=231631", "A"},
             [249345] = {"npc;drop=244761", "A"},
-            [249805] = {"npc;drop=256116", "A"},
             [264507] = {"quest;reward=93933", "A"},
             [249344] = {"npc;drop=240435", "B"},
             [250256] = {"npc;drop=231636", "B"},
@@ -1323,6 +1322,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [246304] = {"spell;created=1230072", "C"},
             [251782] = {"npc;drop=250086", "C"},
             [251785] = {"item:contained=262346", "C"},
+            [249805] = {"npc;drop=256116", "C"},
             [250226] = {"npc;drop=231626", "D"},
             [151307] = {"npc;drop=122316", "D"},
             [246307] = {"spell;created=1230073", "D"},

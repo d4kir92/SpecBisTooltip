@@ -106,3 +106,4 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("frFR", "LID_GUIDEITEMID", "ID de l'objet du guide")
     SpecBisTooltip:AddTrans("frFR", "LID_OTHERCLASSESMAYALSO", "D'autres classes pourraient également en avoir besoin.")
     SpecBisTooltip:AddTrans("frFR", "LID_ITEM", "Objet")
+end

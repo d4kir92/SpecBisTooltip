@@ -4,6 +4,7 @@
 ## Notes: Shows a list of the best specializations for specific dungeons/raids.
 ## Notes-deDE: zeigt eine Liste der besten Spezialisierungen für bestimmte Dungeons/Raids anzeigt.
 ## Notes-ruRU: Отображает список лучших специализаций для тех или иных подземелий/рейдов
+## Notes-frFR: Affiche une liste des meilleures spécialisations pour des donjons/raids spécifiques.
 ## Author: D4KiR |T132115:16:16:0:0|t
 ## Category: Equipment
 ## Category-deDE: Ausrüstung

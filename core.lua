@@ -419,6 +419,18 @@ local bisTextLookup = {
 		colorCode = col_red,
 		translationArgs = {"LID_BISTRINKETX", nil, "F-"}
 	},
+	["G+"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "G+"}
+	},
+	["G"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "G"}
+	},
+	["G-"] = {
+		colorCode = col_red,
+		translationArgs = {"LID_BISTRINKETX", nil, "G-"}
+	},
 	["No"] = {
 		colorCode = col_red,
 		translationArgs = {"LID_BISTRINKETX", nil, "No"}

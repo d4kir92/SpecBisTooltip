@@ -12,6 +12,44 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"][1] = {
+        ["BISO"] = {
+            [33] = {
+                [268213] = {"npc;drop=24239", "INVTYPE_2HWEAPON"},
+                [268229] = {"npc;drop=271337", "INVTYPE_HEAD"},
+                [268265] = {"npc;drop=268956", "INVTYPE_NECK"},
+                [239037] = {"npc;drop=133392", "INVTYPE_SHOULDER"},
+                [268253] = {"npc;drop=24239", "INVTYPE_CLOAK"},
+                [268222] = {"npc;drop=24239", "INVTYPE_CHEST"},
+                [237834] = {"spell;created=1229662", "INVTYPE_WRIST"},
+                [159413] = {"npc;drop=135322", "INVTYPE_HAND"},
+                [268259] = {"npc;drop=24239", "INVTYPE_WAIST"},
+                [271878] = {"npc;drop=268956", "INVTYPE_LEGS"},
+                [273777] = {"npc;drop=259445", "INVTYPE_FEET"},
+                [240949] = {"spell;created=1230485", "INVTYPE_FINGER"},
+                [268249] = {"npc;drop=260905", "INVTYPE_FINGER"},
+                [251194] = {"npc;drop=245912", "INVTYPE_FINGER"},
+                [270175] = {"npc;drop=268956", "INVTYPE_TRINKET"},
+                [270173] = {"npc;drop=24239", "INVTYPE_TRINKET"},
+            },
+            [31] = {
+                [268213] = {"npc;drop=24239", "INVTYPE_2HWEAPON"},
+                [268229] = {"npc;drop=271337", "INVTYPE_HEAD"},
+                [268265] = {"npc;drop=268956", "INVTYPE_NECK"},
+                [239037] = {"npc;drop=133392", "INVTYPE_SHOULDER"},
+                [268253] = {"npc;drop=24239", "INVTYPE_CLOAK"},
+                [268222] = {"npc;drop=24239", "INVTYPE_CHEST"},
+                [237834] = {"spell;created=1229662", "INVTYPE_WRIST"},
+                [159413] = {"npc;drop=135322", "INVTYPE_HAND"},
+                [268259] = {"npc;drop=24239", "INVTYPE_WAIST"},
+                [271878] = {"npc;drop=268956", "INVTYPE_LEGS"},
+                [273777] = {"npc;drop=259445", "INVTYPE_FEET"},
+                [240949] = {"spell;created=1230485", "INVTYPE_FINGER"},
+                [159459] = {"npc;drop=134993", "INVTYPE_FINGER"},
+                [252258] = {"npc;drop=239008", "INVTYPE_FINGER"},
+                [270175] = {"npc;drop=268956", "INVTYPE_TRINKET"},
+                [270173] = {"npc;drop=24239", "INVTYPE_TRINKET"},
+            },
+        },
         ["TRINKETS"] = {
             [270173] = {"npc;drop=24239", "S"},
             [270175] = {"npc;drop=268956", "S"},
@@ -1004,6 +1042,23 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     }
 
     BIS["RETAIL"]["MONK"][3] = {
+        ["BISO"] = {
+            [268215] = {"npc;drop=268956", "INVTYPE_2HWEAPON"},
+            [271875] = {"npc;drop=268956", "INVTYPE_HEAD"},
+            [268265] = {"npc;drop=268956", "INVTYPE_NECK"},
+            [271517] = {"catalyst/unknown", "INVTYPE_SHOULDER"},
+            [268253] = {"npc;drop=24239", "INVTYPE_CLOAK"},
+            [268235] = {"npc;drop=271337", "INVTYPE_CHEST"},
+            [244576] = {"spell;created=1237514", "INVTYPE_WRIST"},
+            [251124] = {"npc;drop=252458", "INVTYPE_HAND"},
+            [268256] = {"npc;drop=24239", "INVTYPE_WAIST"},
+            [268225] = {"npc;drop=24239", "INVTYPE_LEGS"},
+            [244569] = {"spell;created=1237508", "INVTYPE_FEET"},
+            [158366] = {"npc;drop=133389", "INVTYPE_FINGER"},
+            [252258] = {"npc;drop=239008", "INVTYPE_FINGER"},
+            [270175] = {"npc;drop=268956", "INVTYPE_TRINKET"},
+            [270173] = {"npc;drop=24239", "INVTYPE_TRINKET"},
+        },
         ["TRINKETS"] = {
             [270175] = {"npc;drop=268956", "S"},
             [270173] = {"npc;drop=24239", "S"},
@@ -1473,6 +1528,24 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     }
 
     BIS["RETAIL"]["SHAMAN"][2] = {
+        ["BISO"] = {
+            [268209] = {"npc;drop=24239", "INVTYPE_WEAPONMAINHAND"},
+            [237850] = {"spell;created=1229427", "INVTYPE_WEAPON"},
+            [251220] = {"npc;drop=238887", "INVTYPE_HEAD"},
+            [268265] = {"npc;drop=268956", "INVTYPE_NECK"},
+            [268231] = {"npc;drop=24239", "INVTYPE_SHOULDER"},
+            [268253] = {"npc;drop=24239", "INVTYPE_CLOAK"},
+            [271876] = {"npc;drop=268956", "INVTYPE_CHEST"},
+            [244584] = {"spell;created=1237543", "INVTYPE_WRIST"},
+            [160213] = {"npc;drop=134993", "INVTYPE_HAND"},
+            [268254] = {"npc;drop=260905", "INVTYPE_WAIST"},
+            [268237] = {"npc;drop=24239", "INVTYPE_LEGS"},
+            [268233] = {"npc;drop=257347", "INVTYPE_FEET"},
+            [268249] = {"npc;drop=260905", "INVTYPE_FINGER"},
+            [252258] = {"npc;drop=239008", "INVTYPE_FINGER"},
+            [270175] = {"npc;drop=268956", "INVTYPE_TRINKET"},
+            [270173] = {"npc;drop=24239", "INVTYPE_TRINKET"},
+        },
         ["TRINKETS"] = {
             [270175] = {"npc;drop=268956", "S"},
             [270173] = {"npc;drop=24239", "S"},

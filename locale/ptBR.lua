@@ -2,6 +2,7 @@
 local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ptBR", "LID_GENERAL", "Geral")
+    SpecBisTooltip:AddTrans("ptBR", "LID_TOOLTIP", "Dica de ferramenta")
     SpecBisTooltip:AddTrans("ptBR", "LID_SHOWMINIMAPBUTTON", "Mostrar botão do minimapa")
     SpecBisTooltip:AddTrans("ptBR", "LID_SHOWOTHERSPECS", "Mostrar outras especificações")
     SpecBisTooltip:AddTrans("ptBR", "LID_SHOWOTHERCLASSES", "Mostrar outras classes")

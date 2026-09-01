@@ -2,6 +2,7 @@
 local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ruRU", "LID_GENERAL", "Основное")
+    SpecBisTooltip:AddTrans("ruRU", "LID_TOOLTIP", "Подсказка")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWMINIMAPBUTTON", "Показать кнопку на миникарте")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWOTHERSPECS", "Показать другие специализации")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWOTHERCLASSES", "Показать другие классы")

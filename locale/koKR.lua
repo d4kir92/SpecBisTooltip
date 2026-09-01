@@ -2,6 +2,7 @@
 local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("koKR", "LID_GENERAL", "일반")
+    SpecBisTooltip:AddTrans("koKR", "LID_TOOLTIP", "툴팁")
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWMINIMAPBUTTON", "미니맵 버튼 표시")
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWOTHERSPECS", "다른 사양 표시")
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWOTHERCLASSES", "다른 클래스 표시")

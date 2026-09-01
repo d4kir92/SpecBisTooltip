@@ -2,6 +2,7 @@
 local _, SpecBisTooltip = ...
 if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhCN", "LID_GENERAL", "常规")
+    SpecBisTooltip:AddTrans("zhCN", "LID_TOOLTIP", "提示框")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWMINIMAPBUTTON", "显示小地图按钮")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOTHERSPECS", "显示其他专精")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOTHERCLASSES", "显示其他职业")

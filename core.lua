@@ -1,129 +1,11 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
-local validEquipSlotsClassic = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_RELIC",}
-local validEquipSlotsRetail = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_SHIELD"}
 local invalidEquipSlots = {}
 invalidEquipSlots["INVTYPE_TABARD"] = true
 invalidEquipSlots["INVTYPE_BODY"] = true
 invalidEquipSlots["INVTYPE_BAG"] = true
 invalidEquipSlots["INVTYPE_NON_EQUIP_IGNORE"] = true
-local sbt_settings = nil
-function SpecBisTooltip:ToggleSettings()
-	if sbt_settings then
-		if sbt_settings:IsShown() then
-			sbt_settings:Hide()
-		else
-			sbt_settings:Show()
-		end
-	end
-end
-
-function SpecBisTooltip:GetSettingsContent(parent)
-	local x = 5
-	local y = 0
-	SpecBisTooltip:SetAppendX(x)
-	SpecBisTooltip:SetAppendY(y)
-	SpecBisTooltip:SetAppendParent(parent)
-	SpecBisTooltip:SetAppendTab(SBTTAB)
-	SpecBisTooltip:AppendCategory("GENERAL")
-	SpecBisTooltip:AppendCheckbox("SHOWMINIMAPBUTTON", SpecBisTooltip:GetWoWBuild() ~= "RETAIL", function()
-		if SpecBisTooltip:GV(SBTTAB, "SHOWMINIMAPBUTTON", SpecBisTooltip:GetWoWBuild() ~= "RETAIL") then
-			SpecBisTooltip:ShowMMBtn("SpecBisTooltip")
-		else
-			SpecBisTooltip:HideMMBtn("SpecBisTooltip")
-		end
-	end)
-
-	SpecBisTooltip:AppendCheckbox("SMALLERTOOLTIP", false)
-	SpecBisTooltip:AppendCheckbox("SHOWPREBIS", true)
-	SpecBisTooltip:AppendCheckbox("SHOWOTHERSPECS", true)
-	SpecBisTooltip:AppendCheckbox("SHOWOTHERCLASSES", false)
-	SpecBisTooltip:AppendCheckbox("SHOWNOTBIS", false)
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
-		SpecBisTooltip:AppendDropdown("PREFERREDCONTENT", "BISO", {
-			["BISO"] = "PREFERREDBISO",
-			["BISR"] = "PREFERREDBISR",
-			["BISM"] = "PREFERREDBISM",
-		})
-	else
-		SpecBisTooltip:AppendCheckbox("SHOWOLDERPHASES", true)
-	end
-
-	SpecBisTooltip:AppendCategory("CUSTOMBISIDS")
-	local specId = SpecBisTooltip:GetTalentInfo()
-	local _, class = UnitClass("PLAYER")
-	local r = 1
-	local t = 1
-	local tab = validEquipSlots
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
-		tab = validEquipSlotsRetail
-	else
-		tab = validEquipSlotsClassic
-	end
-
-	for i, invType in pairs(tab) do
-		local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
-		local text = ""
-		if itemId then text = " (" .. SpecBisTooltip:Trans("LID_GUIDEITEMID") .. ": " .. itemId .. ")" end
-		local n = nil
-		local typ = invType
-		if invType == "INVTYPE_FINGER" then
-			n = r
-		elseif invType == "INVTYPE_TRINKET" then
-			n = t
-		end
-
-		if n then typ = invType .. n end
-		SpecBisTooltip:AppendEditbox(typ, "", function(sel, val) end, 14, nil, true, SBTTABPC, SpecBisTooltip:Trans("LID_ITEM") .. ": ", text, typ)
-		SpecBisTooltip:AppendEditbox(typ .. "_SOURCE", "", function(sel, val) end, 34, nil, false, SBTTABPC, SpecBisTooltip:Trans("LID_SOURCE") .. ": ", nil, typ)
-		if invType == "INVTYPE_FINGER" or invType == "INVTYPE_TRINKET" then
-			if invType == "INVTYPE_FINGER" then
-				r = r + 1
-			elseif invType == "INVTYPE_TRINKET" then
-				t = t + 1
-			end
-
-			if invType == "INVTYPE_FINGER" then
-				n = r
-			elseif invType == "INVTYPE_TRINKET" then
-				n = t
-			end
-
-			if n then typ = invType .. n end
-			SpecBisTooltip:AppendEditbox(typ, "", function(val) end, 14, nil, true, SBTTABPC, SpecBisTooltip:Trans("LID_ITEM") .. ": ", text, typ)
-			SpecBisTooltip:AppendEditbox(typ .. "_SOURCE", "", function(val) end, 34, nil, false, SBTTABPC, SpecBisTooltip:Trans("LID_SOURCE") .. ": ", nil, typ)
-		end
-	end
-end
-
-function SpecBisTooltip:InitSettings()
-	sbt_settings = SpecBisTooltip:CreateWindow({
-		["name"] = "SpecBisTooltip",
-		["pTab"] = {"CENTER"},
-		["sw"] = 600,
-		["sh"] = 600,
-		["title"] = format("|T136031:16:16:0:0|t SpecBisTooltip v%s", SpecBisTooltip:GetVersion())
-	})
-
-	sbt_settings.SF = CreateFrame("ScrollFrame", "sbt_settings_SF", sbt_settings, "UIPanelScrollFrameTemplate")
-	sbt_settings.SF:SetPoint("TOPLEFT", sbt_settings, 8, -25)
-	sbt_settings.SF:SetPoint("BOTTOMRIGHT", sbt_settings, -30, 8)
-	sbt_settings.SC = CreateFrame("Frame", "sbt_settings_SC", sbt_settings.SF)
-	sbt_settings.SC:SetSize(sbt_settings.SF:GetSize())
-	sbt_settings.SC:SetPoint("TOPLEFT", sbt_settings.SF, "TOPLEFT", 0, 0)
-	sbt_settings.SF:SetScrollChild(sbt_settings.SC)
-	sbt_settings.SF.bg = sbt_settings.SF:CreateTexture("sbt_settings.SF.bg", "ARTWORK")
-	sbt_settings.SF.bg:SetAllPoints(sbt_settings.SF)
-	if sbt_settings.SF.bg.SetColorTexture then
-		sbt_settings.SF.bg:SetColorTexture(0.03, 0.03, 0.03, 0.5)
-	else
-		sbt_settings.SF.bg:SetTexture(0.03, 0.03, 0.03, 0.5)
-	end
-
-	SpecBisTooltip:GetSettingsContent(sbt_settings.SC)
-end
-
 function SpecBisTooltip:HoldModifierText()
 	return SpecBisTooltip:Trans("LID_HOLDMODIFIER") .. " "
 end
@@ -944,7 +826,7 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 		SBTTAB = SBTTAB or {}
 		SBTTABPC = SBTTABPC or {}
 		SpecBisTooltip:SetDbTab(SBTTAB)
-		SpecBisTooltip:SetVersion(136031, "0.13.75")
+		SpecBisTooltip:SetVersion(136031, "1.0.0")
 		SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 		SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 		local mmbtn = nil

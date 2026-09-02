@@ -7,7 +7,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
     end
 end
 
--- DATA FROM: 13.08.2026
+-- DATA FROM: 02.09.2026
 if SpecBisTooltip:GetWoWBuild() == "TBC" then
     BIS["TBC"] = {}
     BIS["TBC"]["DRUID"] = {}
@@ -103,8 +103,7 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [32505] = {"BIS,PVE,P3", "npc;drop=22950", "INVTYPE_TRINKET"},
         [28830] = {"BIS,PVE,P3", "npc;drop=19044", "INVTYPE_TRINKET"},
         [29994] = {"BIS,PVE,P3", "npc;drop=23054", "INVTYPE_CLOAK"},
-        [30901] = {"BIS,PVE,P3", "npc;drop=17842", "INVTYPE_WEAPON"},
-        [30881] = {"BIS,PVE,P3", "npc;drop=17808", "INVTYPE_WEAPON"},
+        [34014] = {"BIS,PVE,P3", "npc;sold=20278", "INVTYPE_2HWEAPON"},
         [30906] = {"BIS,PVE,P3", "npc;drop=17968", "INVTYPE_RANGED"},
     }
 
@@ -214,11 +213,11 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [32243] = {"BIS,PVE,P3", "object;contained=185584", "INVTYPE_FEET"},
         [30862] = {"BIS,PVE,P3", "npc;drop=17767", "INVTYPE_WRIST"},
         [30112] = {"BIS,PVE,P3", "npc;drop=21212", "INVTYPE_HAND"},
-        [32528] = {"BIS,PVE,P3", "npc;drop=23374", "INVTYPE_FINGER"},
         [32238] = {"BIS,PVE,P3", "object;contained=185584", "INVTYPE_FINGER"},
-        [32496] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_TRINKET"},
+        [29309] = {"BIS,PVE,P3", "quest;reward=10473", "INVTYPE_FINGER"},
         [29376] = {"BIS,PVE,P3", "npc;sold=18525", "INVTYPE_TRINKET"},
-        [32524] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_CLOAK"},
+        [32496] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_TRINKET"},
+        [34012] = {"BIS,PVE,P3", "npc;drop=23397", "INVTYPE_CLOAK"},
         [32500] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_WEAPONMAINHAND"},
         [32255] = {"BIS,PVE,P3", "npc;drop=22898", "INVTYPE_SHIELD"},
         [28592] = {"BIS,PVE,P3", "npc;drop=17521", "INVTYPE_RELIC"},
@@ -265,18 +264,18 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
 
     BIS["TBC"]["PRIEST"] = {}
     BIS["TBC"]["PRIEST"][1] = {
-        [31063] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HEAD"},
+        [30152] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_HEAD"},
         [32370] = {"BIS,PVE,P3", "npc;drop=22947", "INVTYPE_NECK"},
-        [31069] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_SHOULDER"},
-        [31066] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_CHEST"},
+        [30154] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_SHOULDER"},
+        [30150] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_CHEST"},
         [30895] = {"BIS,PVE,P3", "npc;drop=17888", "INVTYPE_WAIST"},
         [30912] = {"BIS,PVE,P3", "npc;drop=17968", "INVTYPE_LEGS"},
         [32609] = {"BIS,PVE,P3", "npc;drop=17897", "INVTYPE_FEET"},
         [32584] = {"BIS,PVE,P3", "spell;created=41207", "INVTYPE_WRIST"},
-        [31060] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HAND"},
+        [30151] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_HAND"},
         [32528] = {"BIS,PVE,P3", "npc;drop=23374", "INVTYPE_FINGER"},
         [29376] = {"BIS,PVE,P3", "npc;sold=18525", "INVTYPE_TRINKET"},
-        [38288] = {"BIS,PVE,P3", "npc;drop=23872", "INVTYPE_TRINKET"},
+        [28823] = {"BIS,PVE,P3", "npc;drop=19044", "INVTYPE_TRINKET"},
         [32524] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_CLOAK"},
         [32500] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_WEAPONMAINHAND"},
         [30911] = {"BIS,PVE,P3", "npc;drop=17968", "INVTYPE_HOLDABLE"},
@@ -284,18 +283,18 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
     }
 
     BIS["TBC"]["PRIEST"][2] = {
-        [31063] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HEAD"},
+        [30152] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_HEAD"},
         [32370] = {"BIS,PVE,P3", "npc;drop=22947", "INVTYPE_NECK"},
-        [31069] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_SHOULDER"},
-        [31066] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_CHEST"},
+        [30154] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_SHOULDER"},
+        [30150] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_CHEST"},
         [30895] = {"BIS,PVE,P3", "npc;drop=17888", "INVTYPE_WAIST"},
         [30912] = {"BIS,PVE,P3", "npc;drop=17968", "INVTYPE_LEGS"},
         [32609] = {"BIS,PVE,P3", "npc;drop=17897", "INVTYPE_FEET"},
         [32584] = {"BIS,PVE,P3", "spell;created=41207", "INVTYPE_WRIST"},
-        [31060] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HAND"},
+        [30151] = {"BIS,PVE,P3", "npc;sold=21906", "INVTYPE_HAND"},
         [32528] = {"BIS,PVE,P3", "npc;drop=23374", "INVTYPE_FINGER"},
         [29376] = {"BIS,PVE,P3", "npc;sold=18525", "INVTYPE_TRINKET"},
-        [38288] = {"BIS,PVE,P3", "npc;drop=23872", "INVTYPE_TRINKET"},
+        [28823] = {"BIS,PVE,P3", "npc;drop=19044", "INVTYPE_TRINKET"},
         [32524] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_CLOAK"},
         [32500] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_WEAPONMAINHAND"},
         [30911] = {"BIS,PVE,P3", "npc;drop=17968", "INVTYPE_HOLDABLE"},
@@ -309,15 +308,14 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
         [31065] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_CHEST"},
         [32256] = {"BIS,PVE,P3", "npc;drop=22898", "INVTYPE_WAIST"},
         [30916] = {"BIS,PVE,P3", "npc;drop=17888", "INVTYPE_LEGS"},
-        [32239] = {"BIS,PVE,P3", "object;contained=185584", "INVTYPE_FEET"},
+        [21870] = {"BIS,PVE,P3", "spell;created=26757", "INVTYPE_FEET"},
         [32586] = {"BIS,PVE,P3", "spell;created=41205", "INVTYPE_WRIST"},
         [31061] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HAND"},
         [32527] = {"BIS,PVE,P3", "npc;drop=23374", "INVTYPE_FINGER"},
         [32483] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_TRINKET"},
-        [31856] = {"BIS,PVE,P3", "quest;reward=10938", "INVTYPE_TRINKET"},
+        [29370] = {"BIS,PVE,P3", "npc;sold=18525", "INVTYPE_TRINKET"},
         [32590] = {"BIS,PVE,P3", "npc;drop=17908", "INVTYPE_CLOAK"},
         [32374] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_2HWEAPON"},
-        [29272] = {"BIS,PVE,P3", "npc;sold=18525", "INVTYPE_HOLDABLE"},
         [29982] = {"BIS,PVE,P3", "npc;drop=18805", "INVTYPE_RANGEDRIGHT"},
     }
 
@@ -461,19 +459,18 @@ if SpecBisTooltip:GetWoWBuild() == "TBC" then
     BIS["TBC"]["WARLOCK"][2] = {
         [31051] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HEAD"},
         [32349] = {"BIS,PVE,P3", "npc;drop=23420", "INVTYPE_NECK"},
+        [31054] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_SHOULDER"},
         [30107] = {"BIS,PVE,P3", "npc;drop=21212", "INVTYPE_CHEST"},
         [30038] = {"BIS,PVE,P3", "spell;created=36315", "INVTYPE_WAIST"},
-        [30916] = {"BIS,PVE,P3", "npc;drop=17888", "INVTYPE_LEGS"},
+        [31053] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_LEGS"},
         [32239] = {"BIS,PVE,P3", "object;contained=185584", "INVTYPE_FEET"},
         [32586] = {"BIS,PVE,P3", "spell;created=41205", "INVTYPE_WRIST"},
         [31050] = {"BIS,PVE,P3", "npc;sold=23381", "INVTYPE_HAND"},
         [32527] = {"BIS,PVE,P3", "npc;drop=23374", "INVTYPE_FINGER"},
-        [32247] = {"BIS,PVE,P3", "object;contained=185584", "INVTYPE_FINGER"},
+        [23207] = {"BIS,PVE,P3", "quest;reward=9120", "INVTYPE_TRINKET"},
         [32483] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_TRINKET"},
-        [27683] = {"BIS,PVE,P3", "npc;drop=17942", "INVTYPE_TRINKET"},
         [32590] = {"BIS,PVE,P3", "npc;drop=17908", "INVTYPE_CLOAK"},
-        [30910] = {"BIS,PVE,P3", "npc;drop=17968", "INVTYPE_WEAPONMAINHAND"},
-        [30872] = {"BIS,PVE,P3", "npc;drop=17767", "INVTYPE_HOLDABLE"},
+        [32374] = {"BIS,PVE,P3", "npc;drop=22917", "INVTYPE_2HWEAPON"},
         [29982] = {"BIS,PVE,P3", "npc;drop=18805", "INVTYPE_RANGEDRIGHT"},
     }
 

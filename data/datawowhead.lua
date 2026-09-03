@@ -63,9 +63,13 @@ sortBfs["D-"] = 74
 sortBfs["E+"] = 75
 sortBfs["E"] = 76
 sortBfs["E-"] = 77
-sortBfs["F"] = 78
-sortBfs["G"] = 79
-sortBfs["No"] = 80
+sortBfs["F+"] = 78
+sortBfs["F"] = 79
+sortBfs["F-"] = 80
+sortBfs["G+"] = 81
+sortBfs["G"] = 82
+sortBfs["G-"] = 83
+sortBfs["No"] = 84
 sortBfs["?"] = 90
 sortBfs["?????"] = 99
 local bfs = {}
@@ -99,6 +103,19 @@ function SpecBisTooltip:InitBFSContent(pool, content)
 				end
 			end
 		end
+	end
+
+	for i, bf in pairs(bfs[content]) do
+		table.sort(bf, function(a, b)
+			local sa = sortBfs[a[3][2]] or sortBfs[content] or 100
+			local sb = sortBfs[b[3][2]] or sortBfs[content] or 100
+			if sa == sb then
+				if a[1] == b[1] then return a[2] < b[2] end
+				return a[1] < b[1]
+			end
+
+			return sa < sb
+		end)
 	end
 end
 

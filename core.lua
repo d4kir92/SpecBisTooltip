@@ -537,6 +537,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 		end
 	end
 
+	local index = 0
+	local maxRow = 12
+	if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then maxRow = 24 end
 	for i, tab in pairs(bfs) do
 		local className = tab[1]
 		local specId = tab[2]
@@ -553,14 +556,25 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 			if tab[3][1] then
 				local bisText = GetBISText(tab[3][1])
 				if oldBisText == nil then oldBisText = bisText end
-				if oldBisText ~= bisText or otherClasses == false then
-					AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
-					oldBisText = bisText
+				if otherClasses == false then
+					AddBisTooltip(tooltip, otherClasses, bisText, bisText, specIcon, leftText)
 					leftText = ""
+				elseif bisText ~= oldBisText and leftText ~= "" then
+					AddBisTooltip(tooltip, otherClasses, oldBisText, oldBisText, specIcon, leftText)
+					leftText = ""
+					index = 0
 				end
 
+				oldBisText = bisText
+				index = index + 1
 				leftText = leftText .. format("|T%s:20:20:0:0|t", specIcon) --.. specId
-				if otherClasses and max > 1 and tab == lastTab then AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText) end
+				if otherClasses and tab == lastTab then
+					AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
+				elseif otherClasses and index == maxRow then
+					AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
+					leftText = ""
+					index = 0
+				end
 			end
 
 			num = num + 1
@@ -615,6 +629,13 @@ local function AddBisForSpecRetail(tooltip, itemId, yourSpecId, otherClasses, co
 			local bisText = GetBISText(content)
 			if content == "TRINKETS" and tab[3] and tab[3][2] then bisText = GetBISText(tab[3][2]) end
 			if oldBisText == nil then oldBisText = bisText end
+			if bisText ~= oldBisText and leftText ~= "" then
+				AddBisTooltipRetail(tooltip, otherClasses, oldBisText, oldBisText, specIcon, leftText)
+				leftText = ""
+				index = 1
+			end
+
+			oldBisText = bisText
 			leftText = leftText .. format("|T%s:20:20:0:0|t", specIcon) --.. specId
 			if max > 0 and tab == lastTab then
 				AddBisTooltipRetail(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
@@ -826,7 +847,7 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 		SBTTAB = SBTTAB or {}
 		SBTTABPC = SBTTABPC or {}
 		SpecBisTooltip:SetDbTab(SBTTAB)
-		SpecBisTooltip:SetVersion(136031, "1.0.2")
+		SpecBisTooltip:SetVersion(136031, "1.0.3")
 		SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 		SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 		local mmbtn = nil

@@ -73,30 +73,41 @@ sortBfs["No"] = 84
 sortBfs["?"] = 90
 sortBfs["?????"] = 99
 local bfs = {}
+local catalystRaw = {}
+local function AddBfsEntry(content, itemId, className, specId, itemEntry)
+	bfs[content][itemId] = bfs[content][itemId] or {}
+	for i, entry in pairs(bfs[content][itemId]) do
+		if entry[1] == className and entry[2] == specId then return end
+	end
+
+	table.insert(bfs[content][itemId], {className, specId, itemEntry})
+end
+
+local function AddCatalystEntry(content, tierItemId, className, specId, itemEntry)
+	if type(itemEntry[1]) ~= "string" then return end
+	local rawItemId = tonumber(string.match(itemEntry[1], "^catalyst;item=(%d+)$"))
+	if rawItemId == nil then return end
+	catalystRaw[className] = catalystRaw[className] or {}
+	catalystRaw[className][specId] = catalystRaw[className][specId] or {}
+	catalystRaw[className][specId][content] = catalystRaw[className][specId][content] or {}
+	catalystRaw[className][specId][content][rawItemId] = {tierItemId, itemEntry[2]}
+	AddBfsEntry(content, rawItemId, className, specId, itemEntry)
+end
+
 function SpecBisTooltip:InitBFSContent(pool, content)
 	bfs[content] = {}
 	if SpecBisTooltip:GetBisTable()[pool] then
 		for className, classTab in pairs(SpecBisTooltip:GetBisTable()[pool]) do
 			for specId, specTab in pairs(classTab) do
 				if specTab[content] then
-					for itemId, itemTab in pairs(specTab[content]) do
+					for itemId, itemEntry in pairs(specTab[content]) do
 						if itemId > 100 then
-							bfs[content][itemId] = bfs[content][itemId] or {}
-							local found = false
-							for i, v in pairs(bfs[content][itemId]) do
-								if v[1] == className and v[2] == specId then found = true end
-							end
-
-							if not found then table.insert(bfs[content][itemId], {className, specId, itemTab}) end
+							AddBfsEntry(content, itemId, className, specId, itemEntry)
+							AddCatalystEntry(content, itemId, className, specId, itemEntry)
 						else
-							for itemId2, itemTab2 in pairs(specTab[content][itemId]) do
-								bfs[content][itemId2] = bfs[content][itemId2] or {}
-								local found = false
-								for i, v in pairs(bfs[content][itemId2]) do
-									if v[1] == className and v[2] == specId then found = true end
-								end
-
-								if not found then table.insert(bfs[content][itemId2], {className, specId, itemTab2}) end
+							for heroItemId, heroItemEntry in pairs(itemEntry) do
+								AddBfsEntry(content, heroItemId, className, specId, heroItemEntry)
+								AddCatalystEntry(content, heroItemId, className, specId, heroItemEntry)
 							end
 						end
 					end
@@ -105,16 +116,16 @@ function SpecBisTooltip:InitBFSContent(pool, content)
 		end
 	end
 
-	for i, bf in pairs(bfs[content]) do
-		table.sort(bf, function(a, b)
-			local sa = sortBfs[a[3][2]] or sortBfs[content] or 100
-			local sb = sortBfs[b[3][2]] or sortBfs[content] or 100
-			if sa == sb then
+	for i, entries in pairs(bfs[content]) do
+		table.sort(entries, function(a, b)
+			local sortA = sortBfs[a[3][2]] or sortBfs[content] or 100
+			local sortB = sortBfs[b[3][2]] or sortBfs[content] or 100
+			if sortA == sortB then
 				if a[1] == b[1] then return a[2] < b[2] end
 				return a[1] < b[1]
 			end
 
-			return sa < sb
+			return sortA < sortB
 		end)
 	end
 end
@@ -179,6 +190,56 @@ end
 
 local bfi = {}
 local missingSpec = false
+local function BuildSlotIndex(class, specId, content)
+	bfi[class] = bfi[class] or {}
+	bfi[class][specId] = bfi[class][specId] or {}
+	local contentKey = content or "ANY"
+	if bfi[class][specId][contentKey] then return bfi[class][specId][contentKey] end
+	local slots = {}
+	bfi[class][specId][contentKey] = slots
+	local function AddSlot(slot, itemId)
+		if slot == nil then return end
+		slots[slot] = slots[slot] or {}
+		table.insert(slots[slot], itemId)
+	end
+
+	local pool = SpecBisTooltip:GetWoWBuild()
+	local bisTab = SpecBisTooltip:GetBisTable()[pool]
+	if bisTab == nil then
+		SpecBisTooltip:MSG("Missing POOL!", pool)
+		return slots
+	end
+
+	if bisTab[class] == nil then
+		SpecBisTooltip:MSG("[GetBisSource] Missing Class!", class .. " | WoW: " .. pool)
+		return slots
+	end
+
+	if bisTab[class][specId] == nil then
+		SpecBisTooltip:MSG("Missing specId!", specId)
+		return slots
+	end
+
+	for itemId, itemEntry in pairs(bisTab[class][specId]) do
+		if pool == "CLASSIC" or pool == "TBC" or pool == "CATA" then
+			AddSlot(itemEntry[3], itemId)
+		elseif type(itemId) == "string" then
+			if itemId == content then
+				local contentTab = bisTab[class][specId][content]
+				local heroSpecId = SpecBisTooltip:GetHeroSpecId()
+				if heroSpecId and contentTab[heroSpecId] then contentTab = contentTab[heroSpecId] end
+				for heroItemId, heroItemEntry in pairs(contentTab) do
+					AddSlot(heroItemEntry[2], heroItemId)
+				end
+			end
+		else
+			AddSlot(itemEntry[2], itemId)
+		end
+	end
+
+	return slots
+end
+
 function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide)
 	guide = guide or false
 	local n = num or 1
@@ -197,71 +258,10 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		return
 	end
 
-	if bfi[class] == nil then bfi[class] = {} end
-	if bfi[class][specId] == nil then
-		bfi[class][specId] = {}
-		local pool = SpecBisTooltip:GetWoWBuild()
-		if SpecBisTooltip:GetBisTable()[pool] == nil then
-			SpecBisTooltip:MSG("Missing POOL!", pool)
-			return
-		end
-
-		if SpecBisTooltip:GetBisTable()[pool][class] == nil then
-			SpecBisTooltip:MSG("[GetBisSource] Missing Class!", class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
-			return
-		end
-
-		if SpecBisTooltip:GetBisTable()[pool][class][specId] == nil then
-			SpecBisTooltip:MSG("Missing specId!", specId)
-			return
-		end
-
-		for itemId, tab in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId]) do
-			local slot = tab[3]
-			if pool == "CLASSIC" or pool == "TBC" or pool == "CATA" then
-				if slot then
-					if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then
-						bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-						table.insert(bfi[class][specId][slot], itemId)
-					else
-						bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-						table.insert(bfi[class][specId][slot], itemId)
-					end
-				end
-			else
-				slot = tab[2]
-				if type(itemId) == "string" then
-					if itemId == content then
-						local heroSpecID = SpecBisTooltip:GetHeroSpecId()
-						if heroSpecID and SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID] then
-							for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content][heroSpecID]) do
-								slot = tab2[2]
-								if slot then
-									bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-									table.insert(bfi[class][specId][slot], itemId2)
-								end
-							end
-						else
-							for itemId2, tab2 in pairs(SpecBisTooltip:GetBisTable()[pool][class][specId][content]) do
-								slot = tab2[2]
-								if slot then
-									bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-									table.insert(bfi[class][specId][slot], itemId2)
-								end
-							end
-						end
-					end
-				elseif slot then
-					bfi[class][specId][slot] = bfi[class][specId][slot] or {}
-					table.insert(bfi[class][specId][slot], itemId)
-				end
-			end
-		end
-	end
-
+	local slots = BuildSlotIndex(class, specId, content)
 	local custom = false
-	if bfi[class][specId][invType] then
-		local itemId = bfi[class][specId][invType][n]
+	if slots[invType] then
+		local itemId = slots[invType][n]
 		if not guide and SBTTABPC then
 			if n and SBTTABPC[invType .. n] then
 				itemId = SBTTABPC[invType .. n]
@@ -274,30 +274,91 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 			if content == nil then
-				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO", invType)
-				if sourceUrl == nil then
-					_, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR", invType)
-					if sourceUrl == nil then _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM", invType) end
+				local _, sourceId = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO", invType)
+				if sourceId == nil then
+					_, sourceId = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISR", invType)
+					if sourceId == nil then _, sourceId = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISM", invType) end
 				end
 
-				local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-				return sourceTyp, sourceName, sourceLocation, itemId, custom
+				local sourceKind, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceId)
+				return sourceKind, sourceName, sourceLocation, itemId, custom
 			else
-				local _, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
-				if sourceUrl then
-					local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-					return sourceTyp, sourceName, sourceLocation, itemId, custom
+				local _, sourceId = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
+				if sourceId then
+					local sourceKind, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceId)
+					return sourceKind, sourceName, sourceLocation, itemId, custom
 				else
 					return nil, nil, nil, itemId, custom
 				end
 			end
 		else
-			local _, sourceUrl = SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
-			local sourceTyp, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-			return sourceTyp, sourceName, sourceLocation, itemId, custom
+			local _, sourceId = SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
+			local sourceKind, sourceName, sourceLocation = SpecBisTooltip:GetSource(sourceId)
+			return sourceKind, sourceName, sourceLocation, itemId, custom
 		end
 	end
 	return nil, nil, nil, nil, custom
+end
+
+local ITEM_CLASS_ARMOR = 4
+local catalystSlots = {
+	["INVTYPE_HEAD"] = true,
+	["INVTYPE_SHOULDER"] = true,
+	["INVTYPE_CHEST"] = true,
+	["INVTYPE_HAND"] = true,
+	["INVTYPE_LEGS"] = true
+}
+
+local function IsCatalystSource(sourceId)
+	if type(sourceId) ~= "string" then return false end
+	return string.find(sourceId, "catalyst", 1, true) == 1
+end
+
+local function GetBisSourceId(class, specId, content, itemId)
+	local bisTab = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()]
+	if bisTab == nil or bisTab[class] == nil or bisTab[class][specId] == nil then return nil end
+	local contentTab = bisTab[class][specId][content]
+	if contentTab == nil then return nil end
+	local heroSpecId = SpecBisTooltip:GetHeroSpecId()
+	if heroSpecId and contentTab[heroSpecId] then contentTab = contentTab[heroSpecId] end
+	local itemEntry = contentTab[itemId]
+	if itemEntry == nil then return nil end
+	return itemEntry[1]
+end
+
+function SpecBisTooltip:GetCatalystSlot(invType)
+	if invType == "INVTYPE_ROBE" then invType = "INVTYPE_CHEST" end
+	if catalystSlots[invType] then return invType end
+	return nil
+end
+
+function SpecBisTooltip:GetCatalystTarget(class, specId, content, rawItemId)
+	if catalystRaw[class] == nil then return nil end
+	if catalystRaw[class][specId] == nil then return nil end
+	if catalystRaw[class][specId][content] == nil then return nil end
+	local target = catalystRaw[class][specId][content][rawItemId]
+	if target == nil then return nil end
+	return target[1], target[2]
+end
+
+function SpecBisTooltip:GetCatalystFallback(class, specId, content, itemId)
+	if SpecBisTooltip:GetWoWBuild() ~= "RETAIL" then return nil end
+	local _, _, _, itemEquipLoc, _, itemClassId, itemSubClassId = SpecBisTooltip:GetItemInfoInstant(itemId)
+	if itemClassId ~= ITEM_CLASS_ARMOR then return nil end
+	local slot = SpecBisTooltip:GetCatalystSlot(itemEquipLoc)
+	if slot == nil then return nil end
+	local slots = BuildSlotIndex(class, specId, content)
+	if slots[slot] == nil then return nil end
+	local tierItemId = slots[slot][1]
+	if tierItemId == nil or tierItemId == itemId then return nil end
+	if not IsCatalystSource(GetBisSourceId(class, specId, content, tierItemId)) then return nil end
+	local tierSubClassId = select(7, SpecBisTooltip:GetItemInfoInstant(tierItemId))
+	if tierSubClassId ~= itemSubClassId then return nil end
+	local itemExpansion = select(15, SpecBisTooltip:GetItemInfo(itemId))
+	local tierExpansion = select(15, SpecBisTooltip:GetItemInfo(tierItemId))
+	if itemExpansion == nil or tierExpansion == nil then return nil end
+	if itemExpansion ~= tierExpansion then return nil end
+	return tierItemId, slot
 end
 
 local head = "INVTYPE_HEAD"

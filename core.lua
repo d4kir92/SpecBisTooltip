@@ -50,11 +50,24 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	return "NOTBIS", nil
 end
 
+local function IsCatalystIntoSource(sourceId)
+	return type(sourceId) == "string" and string.find(sourceId, "catalyst;into=", 1, true) == 1
+end
+
+local function GetCatalystSourceId(class, specId, itemId, content)
+	if not SpecBisTooltip:GV(SBTTAB, "SHOWCATALYST", true) then return nil end
+	local tierItemId = SpecBisTooltip:GetCatalystTarget(class, specId, content, itemId)
+	if tierItemId == nil then tierItemId = SpecBisTooltip:GetCatalystFallback(class, specId, content, itemId) end
+	if tierItemId == nil then return nil end
+	return "catalyst;into=" .. tierItemId
+end
+
 function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType)
 	if itemId == nil then return "NOTBIS", nil, nil end
 	local name, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
 	if name == nil then return end
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
+	local classData = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class]
+	if classData == nil then
 		if once then
 			once = false
 			SpecBisTooltip:MSG("Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
@@ -62,7 +75,8 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 		return
 	end
 
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
+	local specData = classData[specId]
+	if specData == nil then
 		if once2 then
 			once2 = false
 			SpecBisTooltip:MSG("[GetItemTypRetail] Missing Spec for Class: " .. class .. " OR no spec selected")
@@ -86,18 +100,16 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 	end
 
 	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) then
-		local heroSpecID = SpecBisTooltip:GetHeroSpecId()
-		if heroSpecID and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][heroSpecID] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][heroSpecID][itemId] then
-			return content, SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][heroSpecID][itemId][1]
-		else
-			if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId] then
-				if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId][2] then
-					return content, SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId][1], SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId][2]
-				else
-					return content, SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][content][itemId][1], nil
-				end
-			end
+		local contentData = specData[content]
+		local heroSpecId = SpecBisTooltip:GetHeroSpecId()
+		if heroSpecId and contentData and contentData[heroSpecId] and contentData[heroSpecId][itemId] then
+			return content, contentData[heroSpecId][itemId][1]
+		elseif contentData and contentData[itemId] then
+			return content, contentData[itemId][1], contentData[itemId][2]
 		end
+
+		local catalystSourceId = GetCatalystSourceId(class, specId, itemId, content)
+		if catalystSourceId then return content, catalystSourceId end
 	end
 	return "NOTBIS", nil, nil
 end
@@ -428,9 +440,9 @@ end
 
 local function AddToTooltipRetail(tooltip, id, specId, icon, content, invType)
 	if id == nil then return end
-	local typ, sourceUrl = SpecBisTooltip:GetSpecItemTypRetail(id, specId, content, invType)
-	if typ == nil then return end
-	return typ, sourceUrl
+	local bisTyp, sourceId = SpecBisTooltip:GetSpecItemTypRetail(id, specId, content, invType)
+	if bisTyp == nil then return end
+	return bisTyp, sourceId
 end
 
 local function AddToTooltipTrinketRetail(tooltip, id, specId, icon)
@@ -658,33 +670,39 @@ local function GetPrefferredText()
 	return ""
 end
 
-function SpecBisTooltip:AddBisText(tooltip, specId, id, icon, typ, sourceUrl)
+local function GetCatalystSourceText(sourceName, sourceLocation)
+	local catalystText = SpecBisTooltip:Trans("LID_catalyst")
+	if not SpecBisTooltip:GV(SBTTAB, "SHOWCATALYST", true) then return catalystText end
+	if sourceName == nil or sourceName == "" then return catalystText end
+	if sourceLocation and sourceLocation ~= "" then return format(SpecBisTooltip:Trans("LID_CATALYSTFROM"), sourceName) .. " (" .. sourceLocation .. ")" end
+	return format(SpecBisTooltip:Trans("LID_CATALYSTFROM"), sourceName)
+end
+
+local function HasCatalystDetail(sourceName)
+	if not SpecBisTooltip:GV(SBTTAB, "SHOWCATALYST", true) then return false end
+	return sourceName ~= nil and sourceName ~= ""
+end
+
+function SpecBisTooltip:AddBisText(tooltip, specId, itemId, icon, bisTyp, sourceId)
 	local iconText = ""
 	if icon then iconText = "|T" .. icon .. ":20:20:0:0|t" end
-	local bisText = GetBISText(typ)
-	local sourceTyp, _, sourceLocation = SpecBisTooltip:GetSource(sourceUrl)
-	if bisText ~= "" then
-		if bisText ~= "BLOCKED" then
-			if typ == "NOTBIS" then
-				return false
-			elseif sourceTyp and sourceTyp ~= "" then
-				if sourceTyp == "catalyst" then
-					tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-				else
-					if sourceLocation and sourceLocation ~= "" then
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-					else
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-					end
-				end
-			else
-				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
-			end
-		end
-	else
-		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(id)
+	local bisText = GetBISText(bisTyp)
+	if bisText == "" then
+		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
 		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t") end
+		return false
 	end
+
+	if bisText == "BLOCKED" then return false end
+	if bisTyp == "NOTBIS" then return false end
+	local sourceKind, sourceName = SpecBisTooltip:GetSource(sourceId)
+	if sourceKind == "catalystinto" and sourceName then
+		tooltip:AddDoubleLine(iconText .. " " .. bisText .. " " .. format(SpecBisTooltip:Trans("LID_CATALYSTINTO"), sourceName), "|T136031:20:20:0:0|t")
+		return true
+	end
+
+	tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+	return true
 end
 
 local function OnTooltipSetItem(tooltip, data)
@@ -729,21 +747,25 @@ local function OnTooltipSetItem(tooltip, data)
 
 	if specId then
 		if icon then
-			local sourceTyp, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
-			if sourceTyp and sourceTyp ~= "" and sourceLocation ~= nil then
+			local sourceKind, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n)
+			if sourceKind and sourceKind ~= "" and (sourceLocation ~= nil or sourceKind == "catalyst") then
 				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
-					if sourceTyp == "catalyst" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. " |T136031:20:20:0:0|t")
+					if sourceKind == "catalyst" then
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. GetCatalystSourceText(sourceName, sourceLocation) .. " |T136031:20:20:0:0|t")
 					else
 						if sourceLocation and sourceLocation ~= "" then
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] |T136031:20:20:0:0|t")
 						else
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceTyp) .. "] |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] |T136031:20:20:0:0|t")
 						end
 					end
 				else
-					if sourceTyp == "catalyst" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", "|T136031:20:20:0:0|t")
+					if sourceKind == "catalyst" then
+						if HasCatalystDetail(sourceName) then
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " |T136031:20:20:0:0|t")
+						else
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", "|T136031:20:20:0:0|t")
+						end
 					else
 						if sourceLocation and sourceLocation ~= "" then
 							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " |T136031:20:20:0:0|t")
@@ -771,18 +793,20 @@ local function OnTooltipSetItem(tooltip, data)
 			end
 
 			if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
-				local sourceTyp1, sourceUrl1 = AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType)
-				local sourceTyp2, sourceUrl2 = AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType)
-				local sourceTyp3, sourceUrl3 = AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType)
-				if sourceTyp1 == "BISO" and sourceTyp2 == "BISR" and sourceTyp3 == "BISM" then
-					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, "BIS", sourceUrl1)
+				local bisTyp1, sourceId1 = AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType)
+				local bisTyp2, sourceId2 = AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType)
+				local bisTyp3, sourceId3 = AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType)
+				local collapse = bisTyp1 == "BISO" and bisTyp2 == "BISR" and bisTyp3 == "BISM"
+				if collapse and (IsCatalystIntoSource(sourceId1) or IsCatalystIntoSource(sourceId2) or IsCatalystIntoSource(sourceId3)) then collapse = sourceId1 == sourceId2 and sourceId1 == sourceId3 end
+				if collapse then
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, "BIS", sourceId1)
 				else
-					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, sourceTyp1, sourceUrl1)
-					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, sourceTyp2, sourceUrl2)
-					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, sourceTyp3, sourceUrl3)
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, bisTyp1, sourceId1)
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, bisTyp2, sourceId2)
+					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, bisTyp3, sourceId3)
 				end
 
-				if sourceTyp1 == "NOTBIS" and sourceTyp2 == "NOTBIS" and sourceTyp3 == "NOTBIS" and GetBISText("NOTBIS") then
+				if bisTyp1 == "NOTBIS" and bisTyp2 == "NOTBIS" and bisTyp3 == "NOTBIS" and GetBISText("NOTBIS") then
 					if invType == "INVTYPE_TRINKET" then
 						AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 					else

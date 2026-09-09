@@ -21,6 +21,7 @@ local function ApplyDefaults()
 	SpecBisTooltip:SV(SBTTAB, "SHOWNOTBIS", SpecBisTooltip:GV(SBTTAB, "SHOWNOTBIS", false))
 	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 		SpecBisTooltip:SV(SBTTAB, "PREFERREDCONTENT", SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"))
+		SpecBisTooltip:SV(SBTTAB, "SHOWCATALYST", SpecBisTooltip:GV(SBTTAB, "SHOWCATALYST", true))
 	else
 		SpecBisTooltip:SV(SBTTAB, "SHOWOLDERPHASES", SpecBisTooltip:GV(SBTTAB, "SHOWOLDERPHASES", true))
 	end
@@ -155,6 +156,7 @@ function SpecBisTooltip:InitSettings()
 	AddCheckbox("SHOWOTHERCLASSES", false)
 	AddCheckbox("SHOWNOTBIS", false)
 	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+		AddCheckbox("SHOWCATALYST", true)
 		sbt_settings:AddDropdown({
 			["label"] = "LID_PREFERREDCONTENT",
 			["search"] = "PREFERREDCONTENT",

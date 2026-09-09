@@ -50,8 +50,8 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	return "NOTBIS", nil
 end
 
-local function IsCatalystIntoSource(sourceId)
-	return type(sourceId) == "string" and string.find(sourceId, "catalyst;into=", 1, true) == 1
+local function IsCatalystSource(sourceId)
+	return type(sourceId) == "string" and string.find(sourceId, "catalyst", 1, true) == 1
 end
 
 local function GetCatalystSourceId(class, specId, itemId, content)
@@ -797,7 +797,7 @@ local function OnTooltipSetItem(tooltip, data)
 				local bisTyp2, sourceId2 = AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType)
 				local bisTyp3, sourceId3 = AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType)
 				local collapse = bisTyp1 == "BISO" and bisTyp2 == "BISR" and bisTyp3 == "BISM"
-				if collapse and (IsCatalystIntoSource(sourceId1) or IsCatalystIntoSource(sourceId2) or IsCatalystIntoSource(sourceId3)) then collapse = sourceId1 == sourceId2 and sourceId1 == sourceId3 end
+				if collapse and (IsCatalystSource(sourceId1) or IsCatalystSource(sourceId2) or IsCatalystSource(sourceId3)) then collapse = sourceId1 == sourceId2 and sourceId1 == sourceId3 end
 				if collapse then
 					SpecBisTooltip:AddBisText(tooltip, specId, id, icon, "BIS", sourceId1)
 				else

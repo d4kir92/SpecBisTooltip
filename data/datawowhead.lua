@@ -300,38 +300,6 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 	return nil, nil, nil, nil, custom
 end
 
-local ITEM_CLASS_ARMOR = 4
-local catalystSlots = {
-	["INVTYPE_HEAD"] = true,
-	["INVTYPE_SHOULDER"] = true,
-	["INVTYPE_CHEST"] = true,
-	["INVTYPE_HAND"] = true,
-	["INVTYPE_LEGS"] = true
-}
-
-local function IsCatalystSource(sourceId)
-	if type(sourceId) ~= "string" then return false end
-	return string.find(sourceId, "catalyst", 1, true) == 1
-end
-
-local function GetBisSourceId(class, specId, content, itemId)
-	local bisTab = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()]
-	if bisTab == nil or bisTab[class] == nil or bisTab[class][specId] == nil then return nil end
-	local contentTab = bisTab[class][specId][content]
-	if contentTab == nil then return nil end
-	local heroSpecId = SpecBisTooltip:GetHeroSpecId()
-	if heroSpecId and contentTab[heroSpecId] then contentTab = contentTab[heroSpecId] end
-	local itemEntry = contentTab[itemId]
-	if itemEntry == nil then return nil end
-	return itemEntry[1]
-end
-
-function SpecBisTooltip:GetCatalystSlot(invType)
-	if invType == "INVTYPE_ROBE" then invType = "INVTYPE_CHEST" end
-	if catalystSlots[invType] then return invType end
-	return nil
-end
-
 function SpecBisTooltip:GetCatalystTarget(class, specId, content, rawItemId)
 	if catalystRaw[class] == nil then return nil end
 	if catalystRaw[class][specId] == nil then return nil end
@@ -339,26 +307,6 @@ function SpecBisTooltip:GetCatalystTarget(class, specId, content, rawItemId)
 	local target = catalystRaw[class][specId][content][rawItemId]
 	if target == nil then return nil end
 	return target[1], target[2]
-end
-
-function SpecBisTooltip:GetCatalystFallback(class, specId, content, itemId)
-	if SpecBisTooltip:GetWoWBuild() ~= "RETAIL" then return nil end
-	local _, _, _, itemEquipLoc, _, itemClassId, itemSubClassId = SpecBisTooltip:GetItemInfoInstant(itemId)
-	if itemClassId ~= ITEM_CLASS_ARMOR then return nil end
-	local slot = SpecBisTooltip:GetCatalystSlot(itemEquipLoc)
-	if slot == nil then return nil end
-	local slots = BuildSlotIndex(class, specId, content)
-	if slots[slot] == nil then return nil end
-	local tierItemId = slots[slot][1]
-	if tierItemId == nil or tierItemId == itemId then return nil end
-	if not IsCatalystSource(GetBisSourceId(class, specId, content, tierItemId)) then return nil end
-	local tierSubClassId = select(7, SpecBisTooltip:GetItemInfoInstant(tierItemId))
-	if tierSubClassId ~= itemSubClassId then return nil end
-	local itemExpansion = select(15, SpecBisTooltip:GetItemInfo(itemId))
-	local tierExpansion = select(15, SpecBisTooltip:GetItemInfo(tierItemId))
-	if itemExpansion == nil or tierExpansion == nil then return nil end
-	if itemExpansion ~= tierExpansion then return nil end
-	return tierItemId, slot
 end
 
 local head = "INVTYPE_HEAD"

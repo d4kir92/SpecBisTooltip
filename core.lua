@@ -57,7 +57,6 @@ end
 local function GetCatalystSourceId(class, specId, itemId, content)
 	if not SpecBisTooltip:GV(SBTTAB, "SHOWCATALYST", true) then return nil end
 	local tierItemId = SpecBisTooltip:GetCatalystTarget(class, specId, content, itemId)
-	if tierItemId == nil then tierItemId = SpecBisTooltip:GetCatalystFallback(class, specId, content, itemId) end
 	if tierItemId == nil then return nil end
 	return "catalyst;into=" .. tierItemId
 end
@@ -871,7 +870,7 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 		SBTTAB = SBTTAB or {}
 		SBTTABPC = SBTTABPC or {}
 		SpecBisTooltip:SetDbTab(SBTTAB)
-		SpecBisTooltip:SetVersion(136031, "1.0.3")
+		SpecBisTooltip:SetVersion(136031, "1.0.4")
 		SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 		SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 		local mmbtn = nil

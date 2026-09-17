@@ -1,13 +1,6 @@
-## Interface-Classic: 11509
-## Interface-BCC: 20506
-## Interface-Wrath: 30403
-## Interface-Titan: 38002
-## Interface-Cata: 40402
-## Interface-Mists: 50504
-## Interface: 120100
-
+## Interface: 16001
 ## Version: 1.0.4
-## Title: SpecBisTooltip by |cff55d2ffD4KiR |T132115:16:16:0:0|t
+## Title: SpecBisTooltip |T136031:16:16:0:0|t by |cff55d2ffD4KiR |T132115:16:16:0:0|t
 ## Notes: Shows a list of the best specializations for specific dungeons/raids.
 ## Notes-deDE: Zeigt eine Liste der besten Spezialisierungen für bestimmte Dungeons/Raids anzeigt.
 ## Notes-esES: Muestra una lista de las mejores especializaciones para mazmorras/bandas específicas.
@@ -34,8 +27,8 @@
 ## DefaultState: enabled
 ## SavedVariables: SBTTAB
 ## SavedVariablesPerCharacter: SBTTABPC
-## X-Curse-Project-ID: 827800 
-## X-Wago-ID: 56n9g2N9 
+## X-Curse-Project-ID: 827800
+## X-Wago-ID: 56n9g2N9
 ## IconTexture: 136031
 
 libs\D4Lib\D4Lib.xml

@@ -12,7 +12,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     end
 end
 
--- DATA FROM: 10.09.2026
+-- DATA FROM: 17.09.2026
 if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
@@ -177,7 +177,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [268259] = {"npc;drop=24239", "INVTYPE_WAIST"},
             [271473] = {"catalyst;item=271878", "INVTYPE_LEGS"},
             [237828] = {"spell;created=237828", "INVTYPE_FEET"},
-            [273792] = {"npc;drop=259447", "INVTYPE_FINGER"},
+            [268249] = {"npc;drop=260905", "INVTYPE_FINGER"},
             [252258] = {"npc;drop=239008", "INVTYPE_FINGER"},
             [270175] = {"npc;drop=268956", "INVTYPE_TRINKET"},
             [270173] = {"npc;drop=24239", "INVTYPE_TRINKET"},
@@ -201,11 +201,11 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [268213] = {"npc;drop=24239", "INVTYPE_2HWEAPON"},
         },
         ["BISM"] = {
-            [271474] = {"catalyst;item=251229", "INVTYPE_HEAD"},
+            [271474] = {"catalyst;item=251126", "INVTYPE_HEAD"},
             [251234] = {"quest;reward=91694", "INVTYPE_NECK"},
             [271472] = {"catalyst;item=251138", "INVTYPE_SHOULDER"},
             [239656] = {"spell;created=1228950", "INVTYPE_CLOAK"},
-            [271477] = {"catalyst;item=239036", "INVTYPE_CHEST"},
+            [271477] = {"catalyst;item=268222", "INVTYPE_CHEST"},
             [237834] = {"spell;created=1229662", "INVTYPE_WRIST"},
             [271475] = {"catalyst;item=159413", "INVTYPE_HAND"},
             [159418] = {"npc;drop=269808", "INVTYPE_WAIST"},
@@ -213,7 +213,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
             [159412] = {"npc;drop=135322", "INVTYPE_FEET"},
             [273792] = {"npc;drop=259447", "INVTYPE_FINGER"},
             [252258] = {"npc;drop=239008", "INVTYPE_FINGER"},
-            [250238] = {"npc;drop=244887", "INVTYPE_TRINKET"},
+            [273797] = {"npc;drop=259447", "INVTYPE_TRINKET"},
             [250228] = {"npc;drop=234647", "INVTYPE_TRINKET"},
             [251134] = {"npc;drop=234647", "INVTYPE_2HWEAPON"},
         },

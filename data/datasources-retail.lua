@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local s = {}
-if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+if SpecBisTooltip:GetBisPool() == "RETAIL" then
     function SpecBisTooltip:GetTranslationMap()
         return s
     end
 end
 
 -- SOURCE FROM: 10.09.2026
-if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+if SpecBisTooltip:GetBisPool() == "RETAIL" then
     function SpecBisTooltip:TranslationenUS()
         s["item:contained=229129"] = {"Cache of Delver's Spoils", ""}
         s["item:contained=229354"] = {"Algari Adventurer's Cache", ""}

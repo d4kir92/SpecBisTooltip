@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local s = {}
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if SpecBisTooltip:GetBisPool() == "CLASSIC" then
     function SpecBisTooltip:GetTranslationMap()
         return s
     end
 end
 
 -- SOURCE FROM: 10.09.2026
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if SpecBisTooltip:GetBisPool() == "CLASSIC" then
     function SpecBisTooltip:TranslationenUS()
         s["item:contained=20601"] = {"Sack of Spoils", ""}
         s["item:contained=223150"] = {"Otherworldly Treasure", ""}

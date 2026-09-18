@@ -1,7 +1,7 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if SpecBisTooltip:GetBisPool() == "CLASSIC" then
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
@@ -9,7 +9,7 @@ end
 
 if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglobal("C_Seasons").GetActiveSeason() == 2 then
     -- DATA FROM: 18.06.2025
-    if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+    if SpecBisTooltip:GetBisPool() == "CLASSIC" then
         BIS["CLASSIC"] = {}
         BIS["CLASSIC"]["DRUID"] = {}
         BIS["CLASSIC"]["DRUID"][1] = {
@@ -886,7 +886,7 @@ if getglobal("C_Seasons") and getglobal("C_Seasons").GetActiveSeason and getglob
     end
 else
     -- DATA FROM: 17.07.2025
-    if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+    if SpecBisTooltip:GetBisPool() == "CLASSIC" then
         BIS["CLASSIC"] = {}
         BIS["CLASSIC"]["DRUID"] = {}
         BIS["CLASSIC"]["DRUID"][1] = {

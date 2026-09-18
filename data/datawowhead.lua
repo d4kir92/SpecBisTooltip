@@ -131,7 +131,7 @@ function SpecBisTooltip:InitBFSContent(pool, content)
 end
 
 function SpecBisTooltip:InitBFS()
-	local pool = SpecBisTooltip:GetWoWBuild()
+	local pool = SpecBisTooltip:GetBisPool()
 	if pool ~= "RETAIL" then
 		if SpecBisTooltip:GetBisTable()[pool] then
 			for className, classTab in pairs(SpecBisTooltip:GetBisTable()[pool]) do
@@ -203,7 +203,7 @@ local function BuildSlotIndex(class, specId, content)
 		table.insert(slots[slot], itemId)
 	end
 
-	local pool = SpecBisTooltip:GetWoWBuild()
+	local pool = SpecBisTooltip:GetBisPool()
 	local bisTab = SpecBisTooltip:GetBisTable()[pool]
 	if bisTab == nil then
 		SpecBisTooltip:MSG("Missing POOL!", pool)
@@ -272,7 +272,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 			end
 		end
 
-		if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+		if SpecBisTooltip:GetBisPool() == "RETAIL" then
 			if content == nil then
 				local _, sourceId = SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, "BISO", invType)
 				if sourceId == nil then
@@ -660,17 +660,17 @@ function SpecBisTooltip:CheckIfSetItem(id)
 end
 
 function SpecBisTooltip:GetSlotBis(class, specId, invType, typ)
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then return end
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then return end
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][typ] == nil then return end
-	for id, tab in pairs(SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][typ]) do
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class] == nil then return end
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId] == nil then return end
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][typ] == nil then return end
+	for id, tab in pairs(SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][typ]) do
 		if tab[2] == invType then return id end
 	end
 end
 
 function SpecBisTooltip:IsBisToken(class, specId, id)
 	local invType = nil
-	local pool = SpecBisTooltip:GetWoWBuild()
+	local pool = SpecBisTooltip:GetBisPool()
 	local tab = SpecBisTooltip:GetTokenTable()
 	if tab and tab[pool] and tab[pool][id] and tab[pool][id][class] then
 		invType = tab[pool][id][class]

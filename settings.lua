@@ -19,7 +19,7 @@ local function ApplyDefaults()
 	SpecBisTooltip:SV(SBTTAB, "SHOWOTHERSPECS", SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true))
 	SpecBisTooltip:SV(SBTTAB, "SHOWOTHERCLASSES", SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false))
 	SpecBisTooltip:SV(SBTTAB, "SHOWNOTBIS", SpecBisTooltip:GV(SBTTAB, "SHOWNOTBIS", false))
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+	if SpecBisTooltip:GetBisPool() == "RETAIL" then
 		SpecBisTooltip:SV(SBTTAB, "PREFERREDCONTENT", SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"))
 		SpecBisTooltip:SV(SBTTAB, "SHOWCATALYST", SpecBisTooltip:GV(SBTTAB, "SHOWCATALYST", true))
 	else
@@ -61,7 +61,7 @@ end
 local function GetCustomSlots()
 	local slots = {}
 	local tab = validEquipSlotsClassic
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then tab = validEquipSlotsRetail end
+	if SpecBisTooltip:GetBisPool() == "RETAIL" then tab = validEquipSlotsRetail end
 	for _, invType in ipairs(tab) do
 		if invType == "INVTYPE_FINGER" or invType == "INVTYPE_TRINKET" then
 			tinsert(slots, {invType, invType .. 1})
@@ -155,7 +155,7 @@ function SpecBisTooltip:InitSettings()
 	AddCheckbox("SHOWOTHERSPECS", true)
 	AddCheckbox("SHOWOTHERCLASSES", false)
 	AddCheckbox("SHOWNOTBIS", false)
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+	if SpecBisTooltip:GetBisPool() == "RETAIL" then
 		AddCheckbox("SHOWCATALYST", true)
 		sbt_settings:AddDropdown({
 			["label"] = "LID_PREFERREDCONTENT",

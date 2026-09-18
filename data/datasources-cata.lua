@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local s = {}
-if SpecBisTooltip:GetWoWBuild() == "CATA" then
+if SpecBisTooltip:GetBisPool() == "CATA" then
     function SpecBisTooltip:GetTranslationMap()
         return s
     end
 end
 
 -- SOURCE FROM: 10.03.2025
-if SpecBisTooltip:GetWoWBuild() == "CATA" then
+if SpecBisTooltip:GetBisPool() == "CATA" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;sold=44245"] = {"Faldren Tillsdale <Valor Quartermaster>", "Stormwind City"}
         s["npc;drop=41376"] = {"Nefarian", "Blackwing Descent"}

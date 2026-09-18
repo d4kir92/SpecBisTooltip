@@ -2,7 +2,7 @@
 local _, SpecBisTooltip = ...
 local BIS = {}
 local CATALYST = {}
-if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+if SpecBisTooltip:GetBisPool() == "RETAIL" then
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
@@ -13,7 +13,7 @@ if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
 end
 
 -- DATA FROM: 17.09.2026
-if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+if SpecBisTooltip:GetBisPool() == "RETAIL" then
     BIS["RETAIL"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"] = {}
     BIS["RETAIL"]["DEATHKNIGHT"][1] = {

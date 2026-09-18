@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local s = {}
-if SpecBisTooltip:GetWoWBuild() == "MISTS" then
+if SpecBisTooltip:GetBisPool() == "MISTS" then
     function SpecBisTooltip:GetTranslationMap()
         return s
     end
 end
 
 -- SOURCE FROM: 10.09.2026
-if SpecBisTooltip:GetWoWBuild() == "MISTS" then
+if SpecBisTooltip:GetBisPool() == "MISTS" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=52571"] = {"Majordomo Staghelm <Archdruid of the Flame>", "Firelands"}
         s["npc;drop=53879"] = {"Deathwing <The Destroyer>", "Dragon Soul"}

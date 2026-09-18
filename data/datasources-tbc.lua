@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local s = {}
-if SpecBisTooltip:GetWoWBuild() == "TBC" then
+if SpecBisTooltip:GetBisPool() == "TBC" then
     function SpecBisTooltip:GetTranslationMap()
         return s
     end
 end
 
 -- SOURCE FROM: 10.09.2026
-if SpecBisTooltip:GetWoWBuild() == "TBC" then
+if SpecBisTooltip:GetBisPool() == "TBC" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=15550"] = {"Attumen the Huntsman", "Karazhan"}
         s["npc;drop=15687"] = {"Moroes <Tower Steward>", "Karazhan"}

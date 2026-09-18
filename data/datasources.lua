@@ -16,7 +16,7 @@ local function GetCatalystRawSource(rawItemId)
     if SpecBisTooltip.GetCatalystTable == nil then return "" end
     local catalystTab = SpecBisTooltip:GetCatalystTable()
     if catalystTab == nil then return "" end
-    local buildTab = catalystTab[SpecBisTooltip:GetWoWBuild()]
+    local buildTab = catalystTab[SpecBisTooltip:GetBisPool()]
     if buildTab == nil then return "" end
     local rawSourceId = buildTab[rawItemId]
     if rawSourceId == nil then return "" end

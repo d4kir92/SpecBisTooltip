@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local s = {}
-if SpecBisTooltip:GetWoWBuild() == "WRATH" then
+if SpecBisTooltip:GetBisPool() == "WRATH" then
     function SpecBisTooltip:GetTranslationMap()
         return s
     end
 end
 
 -- SOURCE FROM: 01.04.2025
-if SpecBisTooltip:GetWoWBuild() == "WRATH" then
+if SpecBisTooltip:GetBisPool() == "WRATH" then
     function SpecBisTooltip:TranslationenUS()
         s["npc;drop=11583"] = {"Nefarian", "Blackwing Lair"}
         s["npc;drop=11502"] = {"Ragnaros", "Molten Core"}

@@ -15,18 +15,18 @@ local once2 = true
 function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 	if itemId == nil then return "NOTBIS", nil end
 	local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class] == nil then
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class] == nil then
 		if once then
 			once = false
-			SpecBisTooltip:MSG("[GetItemTyp] Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
+			SpecBisTooltip:MSG("[GetItemTyp] Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetBisPool())
 		end
 		return
 	end
 
-	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] == nil then
+	if SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId] == nil then
 		if once2 then
 			once2 = false
-			SpecBisTooltip:MSG("[GetItemTyp] Missing Spec for Class: " .. class .. " OR no spec selected" .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
+			SpecBisTooltip:MSG("[GetItemTyp] Missing Spec for Class: " .. class .. " OR no spec selected" .. " | WoW: " .. SpecBisTooltip:GetBisPool())
 		end
 		return
 	end
@@ -46,7 +46,7 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 		end
 	end
 
-	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId] then return SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId][1], SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class][specId][itemId][2] end
+	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][itemId] then return SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][itemId][1], SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][itemId][2] end
 	return "NOTBIS", nil
 end
 
@@ -65,11 +65,11 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 	if itemId == nil then return "NOTBIS", nil, nil end
 	local name, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
 	if name == nil then return end
-	local classData = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetWoWBuild()][class]
+	local classData = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class]
 	if classData == nil then
 		if once then
 			once = false
-			SpecBisTooltip:MSG("Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetWoWBuild())
+			SpecBisTooltip:MSG("Missing Class: " .. class .. " | WoW: " .. SpecBisTooltip:GetBisPool())
 		end
 		return
 	end
@@ -403,7 +403,7 @@ local bisTextLookup = {
 }
 
 local oldPhases = {}
-if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
+if SpecBisTooltip:GetBisPool() == "CLASSIC" then
 	oldPhases["BIS,PVE,SODP4"] = true
 	oldPhases["PREBIS,PVE,SODP4"] = true
 	oldPhases["BIS,PVE,SODP3"] = true
@@ -412,7 +412,7 @@ if SpecBisTooltip:GetWoWBuild() == "CLASSIC" then
 	oldPhases["PREBIS,PVE,SODP2"] = true
 	oldPhases["BIS,PVE,SODP1"] = true
 	oldPhases["PREBIS,PVE,SODP1"] = true
-elseif SpecBisTooltip:GetWoWBuild() == "WRATH" then
+elseif SpecBisTooltip:GetBisPool() == "WRATH" then
 	oldPhases["BIS,PVE,P1"] = true
 	oldPhases["BIS,PVE,P2"] = true
 	oldPhases["BIS,PVE,P3"] = true
@@ -665,7 +665,7 @@ end
 local specNotFoundOnce = true
 local specIconNotFoundOnce = true
 local function GetPrefferredText()
-	if SpecBisTooltip:GetWoWBuild() == "RETAIL" then return " (" .. SpecBisTooltip:Trans("LID_" .. SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. ")" end
+	if SpecBisTooltip:GetBisPool() == "RETAIL" then return " (" .. SpecBisTooltip:Trans("LID_" .. SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO")) .. ")" end
 	return ""
 end
 
@@ -791,7 +791,7 @@ local function OnTooltipSetItem(tooltip, data)
 				end
 			end
 
-			if SpecBisTooltip:GetWoWBuild() == "RETAIL" then
+			if SpecBisTooltip:GetBisPool() == "RETAIL" then
 				local bisTyp1, sourceId1 = AddToTooltipRetail(tooltip, id, specId, icon, "BISO", invType)
 				local bisTyp2, sourceId2 = AddToTooltipRetail(tooltip, id, specId, icon, "BISR", invType)
 				local bisTyp3, sourceId3 = AddToTooltipRetail(tooltip, id, specId, icon, "BISM", invType)

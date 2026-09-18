@@ -1,14 +1,14 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
 local BIS = {}
-if SpecBisTooltip:GetWoWBuild() == "CATA" then
+if SpecBisTooltip:GetBisPool() == "CATA" then
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
 end
 
 -- DATA FROM: 20.05.2025
-if SpecBisTooltip:GetWoWBuild() == "CATA" then
+if SpecBisTooltip:GetBisPool() == "CATA" then
     BIS["CATA"] = {}
     BIS["CATA"]["DEATHKNIGHT"] = {}
     BIS["CATA"]["DEATHKNIGHT"][1] = {

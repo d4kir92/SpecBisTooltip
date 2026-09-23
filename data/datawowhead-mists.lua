@@ -7,7 +7,7 @@ if SpecBisTooltip:GetBisPool() == "MISTS" then
     end
 end
 
--- DATA FROM: 17.09.2026
+-- DATA FROM: 23.09.2026
 if SpecBisTooltip:GetBisPool() == "MISTS" then
     BIS["MISTS"] = {}
     BIS["MISTS"]["DEATHKNIGHT"] = {}

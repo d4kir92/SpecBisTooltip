@@ -2,16 +2,17 @@
 local _, SpecBisTooltip = ...
 SpecBisTooltip:SetAddonOutput("SpecBisTooltip", 136031)
 function SpecBisTooltip:GetBisPool()
-	if SpecBisTooltip:IsCamelot() then return "CLASSIC" end
+	if SpecBisTooltip:IsForever() then return "CLASSIC" end
 	return SpecBisTooltip:GetWoWBuild()
 end
 
-if SpecBisTooltip:IsCamelot() then
+if SpecBisTooltip:IsForever() then
 	local camelotDruidSpecs = {
 		[1] = 1,
 		[2] = 3,
 		[3] = 4,
 	}
+
 	local getTalentInfo = SpecBisTooltip.GetTalentInfo
 	function SpecBisTooltip:GetTalentInfo()
 		local specId, icon = getTalentInfo(self)

@@ -870,7 +870,7 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 		SBTTAB = SBTTAB or {}
 		SBTTABPC = SBTTABPC or {}
 		SpecBisTooltip:SetDbTab(SBTTAB)
-		SpecBisTooltip:SetVersion(136031, "1.0.9")
+		SpecBisTooltip:SetVersion(136031, "1.0.10")
 		SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 		SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 		local mmbtn = nil

@@ -1,6 +1,6 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
-SpecBisTooltip:SetAddonOutput("SpecBisTooltip", 136031)
+SpecBisTooltip:SetAddonOutput()
 function SpecBisTooltip:GetBisPool()
 	if SpecBisTooltip:IsForever() then return "CLASSIC" end
 	return SpecBisTooltip:GetWoWBuild()

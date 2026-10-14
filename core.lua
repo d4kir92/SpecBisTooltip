@@ -1,5 +1,6 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
+local BIS_ICON = format("|T%s:20:20:0:0|t", SpecBisTooltip:GetAddonIcon())
 local validEquipSlots = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_ROBE", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPONOFFHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT", "INVTYPE_AMMO", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_QUIVER", "INVTYPE_RELIC",}
 local invalidEquipSlots = {}
 invalidEquipSlots["INVTYPE_TABARD"] = true
@@ -456,13 +457,13 @@ local function AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 			if typ == "NOTBIS" then
 				return false
 			else
-				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, BIS_ICON)
 			end
 		end
 		return true
 	else
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(id)
-		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t") end
+		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), BIS_ICON) end
 	end
 	return false
 end
@@ -485,36 +486,36 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 						local source = SBTTABPC[invType .. "_SOURCE"]
 						if n then source = SBTTABPC[invType .. n .. "_SOURCE"] end
 						if source and source ~= "" then
-							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " " .. BIS_ICON)
 						else
-							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, "|T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, BIS_ICON)
 						end
 					else
-						tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(iconText .. " " .. bisText, BIS_ICON)
 					end
 				end
 			else
-				tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+				tooltip:AddDoubleLine(iconText .. " " .. bisText, BIS_ICON)
 			end
 		end
 	else
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(id)
-		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t") end
+		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), BIS_ICON) end
 	end
 end
 
 local function AddBisTooltip(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
 	if bisText ~= "" and bisText ~= "BLOCKED" then
 		if otherClasses then
-			tooltip:AddDoubleLine(format("%s %s", leftText, oldBisText), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(format("%s %s", leftText, oldBisText), BIS_ICON)
 		else
-			tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, oldBisText), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(format("|T%s:20:20:0:0|t %s", specIcon, oldBisText), BIS_ICON)
 		end
 	end
 end
 
 local function AddBisTooltipRetail(tooltip, otherClasses, bisText, oldBisText, specIcon, leftText)
-	if bisText ~= "" and bisText ~= "BLOCKED" then tooltip:AddDoubleLine(leftText .. " " .. oldBisText, "|T136031:20:20:0:0|t") end
+	if bisText ~= "" and bisText ~= "BLOCKED" then tooltip:AddDoubleLine(leftText .. " " .. oldBisText, BIS_ICON) end
 end
 
 local function FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName)
@@ -528,9 +529,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 	local num = 0
 	if bfs == nil then
 		if otherClasses then
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), BIS_ICON)
 		else
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), BIS_ICON)
 		end
 		return
 	end
@@ -557,9 +558,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 		if FitForSpec(specId, yourSpecId, otherClasses, className, ownClassName) then
 			if num == 0 then
 				if otherClasses then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", BIS_ICON)
 				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", BIS_ICON)
 				end
 			end
 
@@ -594,9 +595,9 @@ local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
 
 	if num == 0 then
 		if otherClasses then
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), BIS_ICON)
 		else
-			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t")
+			tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), BIS_ICON)
 		end
 	end
 end
@@ -630,9 +631,9 @@ local function AddBisForSpecRetail(tooltip, itemId, yourSpecId, otherClasses, co
 			index = index + 1
 			if first and num == 0 and max > 0 then
 				if otherClasses then
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSES") .. ":", BIS_ICON)
 				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERSPECS") .. ":", BIS_ICON)
 				end
 			end
 
@@ -688,7 +689,7 @@ function SpecBisTooltip:AddBisText(tooltip, specId, itemId, icon, bisTyp, source
 	local bisText = GetBISText(bisTyp)
 	if bisText == "" then
 		local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, _, _, _, _, _, _ = SpecBisTooltip:GetItemInfo(itemId)
-		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), "|T136031:20:20:0:0|t") end
+		if itemEquipLoc and itemEquipLoc ~= "" and not tContains(validEquipSlots, itemEquipLoc) and invalidEquipSlots[itemEquipLoc] == nil then tooltip:AddDoubleLine("BIS: ERROR? " .. specId .. " " .. tostring(itemEquipLoc), BIS_ICON) end
 		return false
 	end
 
@@ -696,11 +697,11 @@ function SpecBisTooltip:AddBisText(tooltip, specId, itemId, icon, bisTyp, source
 	if bisTyp == "NOTBIS" then return false end
 	local sourceKind, sourceName = SpecBisTooltip:GetSource(sourceId)
 	if sourceKind == "catalystinto" and sourceName then
-		tooltip:AddDoubleLine(iconText .. " " .. bisText .. " " .. format(SpecBisTooltip:Trans("LID_CATALYSTINTO"), sourceName), "|T136031:20:20:0:0|t")
+		tooltip:AddDoubleLine(iconText .. " " .. bisText .. " " .. format(SpecBisTooltip:Trans("LID_CATALYSTINTO"), sourceName), BIS_ICON)
 		return true
 	end
 
-	tooltip:AddDoubleLine(iconText .. " " .. bisText, "|T136031:20:20:0:0|t")
+	tooltip:AddDoubleLine(iconText .. " " .. bisText, BIS_ICON)
 	return true
 end
 
@@ -750,26 +751,26 @@ local function OnTooltipSetItem(tooltip, data)
 			if sourceKind and sourceKind ~= "" and (sourceLocation ~= nil or sourceKind == "catalyst") then
 				if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 					if sourceKind == "catalyst" then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. GetCatalystSourceText(sourceName, sourceLocation) .. " |T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. GetCatalystSourceText(sourceName, sourceLocation) .. " " .. BIS_ICON)
 					else
 						if sourceLocation and sourceLocation ~= "" then
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] " .. BIS_ICON)
 						else
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] " .. BIS_ICON)
 						end
 					end
 				else
 					if sourceKind == "catalyst" then
 						if HasCatalystDetail(sourceName) then
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " " .. BIS_ICON)
 						else
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", "|T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", BIS_ICON)
 						end
 					else
 						if sourceLocation and sourceLocation ~= "" then
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " " .. BIS_ICON)
 						else
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", "|T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. GetPrefferredText() .. ":", BIS_ICON)
 						end
 					end
 				end
@@ -779,15 +780,15 @@ local function OnTooltipSetItem(tooltip, data)
 						local source = SBTTABPC[invType .. "_SOURCE"]
 						if n then source = SBTTABPC[invType .. n .. "_SOURCE"] end
 						if source and source ~= "" then
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " |T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " " .. BIS_ICON)
 						else
-							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, "|T136031:20:20:0:0|t")
+							tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. " [C]: " .. itemId, BIS_ICON)
 						end
 					else
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ": " .. itemId, "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC") .. ": " .. itemId, BIS_ICON)
 					end
 				else
-					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC"), "|T136031:20:20:0:0|t")
+					tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_YOURSPEC"), BIS_ICON)
 				end
 			end
 
@@ -809,7 +810,7 @@ local function OnTooltipSetItem(tooltip, data)
 					if invType == "INVTYPE_TRINKET" then
 						AddToTooltipTrinketRetail(tooltip, id, specId, icon)
 					else
-						tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. GetBISText("NOTBIS"), "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine("|T" .. icon .. ":20:20:0:0|t" .. " " .. GetBISText("NOTBIS"), BIS_ICON)
 					end
 				end
 
@@ -819,19 +820,19 @@ local function OnTooltipSetItem(tooltip, data)
 					if AddBisForSpecRetail(tooltip, id, specId, false, "BISR", first) then first = false end
 					if AddBisForSpecRetail(tooltip, id, specId, false, "BISM", first) then first = false end
 					if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, false, "TRINKETS", first) then first = false end
-					if first then tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), "|T136031:20:20:0:0|t") end
+					if first then tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERSPECNEEDSTHIS"), BIS_ICON) end
 				end
 
 				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
 					if isToken then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSESMAYALSO"), "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSESMAYALSO"), BIS_ICON)
 					else
 						local first = true
 						if AddBisForSpecRetail(tooltip, id, specId, true, "BISO", first) then first = false end
 						if AddBisForSpecRetail(tooltip, id, specId, true, "BISR", first) then first = false end
 						if AddBisForSpecRetail(tooltip, id, specId, true, "BISM", first) then first = false end
 						if invType == "INVTYPE_TRINKET" and AddBisForSpecRetail(tooltip, id, specId, true, "TRINKETS", first) then first = false end
-						if first then tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), "|T136031:20:20:0:0|t") end
+						if first then tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_NOOTHERCLASSNEEDSTHIS"), BIS_ICON) end
 					end
 				end
 			else
@@ -839,7 +840,7 @@ local function OnTooltipSetItem(tooltip, data)
 				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERSPECS", true) then AddBisForSpec(tooltip, id, specId, false) end
 				if SpecBisTooltip:GV(SBTTAB, "SHOWOTHERCLASSES", false) then
 					if isToken then
-						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSESMAYALSO"), "|T136031:20:20:0:0|t")
+						tooltip:AddDoubleLine(SpecBisTooltip:Trans("LID_OTHERCLASSESMAYALSO"), BIS_ICON)
 					else
 						AddBisForSpec(tooltip, id, specId, true)
 					end
@@ -870,16 +871,16 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 		SBTTAB = SBTTAB or {}
 		SBTTABPC = SBTTABPC or {}
 		SpecBisTooltip:SetDbTab(SBTTAB)
-		SpecBisTooltip:SetVersion(136031, "1.0.13")
+		SpecBisTooltip:SetVersion()
 		SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
 		SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
 		local mmbtn = nil
 		SpecBisTooltip:CreateMinimapButton({
 			["name"] = "SpecBisTooltip",
-			["icon"] = 136031,
+			["icon"] = SpecBisTooltip:GetAddonIcon(),
 			["var"] = mmbtn,
 			["dbtab"] = SBTTAB,
-			["vTT"] = {{"|T136031:16:16:0:0|t SpecBisTooltip", "v" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
+			["vTT"] = {{format("|T%s:16:16:0:0|t SpecBisTooltip", SpecBisTooltip:GetAddonIcon()),"v" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
 			["funcL"] = function() SpecBisTooltip:ToggleSettings() end,
 			["funcR"] = function()
 				SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)

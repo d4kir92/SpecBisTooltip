@@ -27,7 +27,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhTW", "LID_SHOWPREBIS", "顯示預先比對")
     SpecBisTooltip:AddTrans("zhTW", "LID_SHOWOLDERPHASES", "顯示舊階段")
     SpecBisTooltip:AddTrans("zhTW", "LID_CURRENTPHASE", "目前階段")
-    SpecBisTooltip:AddTrans("zhTW", "LID_PHASEAUTO", "最新階段（自動）")
+    SpecBisTooltip:AddTrans("zhTW", "LID_PHASEAUTO", "目前階段（自動）")
     SpecBisTooltip:AddTrans("zhTW", "LID_PHASEX", "階段 %s")
     SpecBisTooltip:AddTrans("zhTW", "LID_PHASEPRERAID", "團隊副本前")
     SpecBisTooltip:AddTrans("zhTW", "LID_SHOWNOTBIS", "如果不是 BIS 則顯示")

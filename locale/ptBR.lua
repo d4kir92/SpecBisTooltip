@@ -27,7 +27,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ptBR", "LID_SHOWPREBIS", "Mostrar Pre-Bis")
     SpecBisTooltip:AddTrans("ptBR", "LID_SHOWOLDERPHASES", "Mostrar Fases Antigas")
     SpecBisTooltip:AddTrans("ptBR", "LID_CURRENTPHASE", "Fase atual")
-    SpecBisTooltip:AddTrans("ptBR", "LID_PHASEAUTO", "Fase mais recente (automático)")
+    SpecBisTooltip:AddTrans("ptBR", "LID_PHASEAUTO", "Fase atual (automático)")
     SpecBisTooltip:AddTrans("ptBR", "LID_PHASEX", "Fase %s")
     SpecBisTooltip:AddTrans("ptBR", "LID_PHASEPRERAID", "Pré-raide")
     SpecBisTooltip:AddTrans("ptBR", "LID_SHOWNOTBIS", "Mostrar se não é BIS")

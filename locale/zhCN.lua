@@ -27,7 +27,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWPREBIS", "显示 PRE-BIS")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOLDERPHASES", "显示旧阶段")
     SpecBisTooltip:AddTrans("zhCN", "LID_CURRENTPHASE", "当前阶段")
-    SpecBisTooltip:AddTrans("zhCN", "LID_PHASEAUTO", "最新阶段（自动）")
+    SpecBisTooltip:AddTrans("zhCN", "LID_PHASEAUTO", "当前阶段（自动）")
     SpecBisTooltip:AddTrans("zhCN", "LID_PHASEX", "阶段 %s")
     SpecBisTooltip:AddTrans("zhCN", "LID_PHASEPRERAID", "团队副本前")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWNOTBIS", "显示非 BIS 物品")

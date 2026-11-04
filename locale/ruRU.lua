@@ -27,7 +27,7 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWPREBIS", "Показывать Pre-BiS")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWOLDERPHASES", "Показывать более старые фазы")
     SpecBisTooltip:AddTrans("ruRU", "LID_CURRENTPHASE", "Текущая фаза")
-    SpecBisTooltip:AddTrans("ruRU", "LID_PHASEAUTO", "Новейшая фаза (автоматически)")
+    SpecBisTooltip:AddTrans("ruRU", "LID_PHASEAUTO", "Текущая фаза (автоматически)")
     SpecBisTooltip:AddTrans("ruRU", "LID_PHASEX", "Фаза %s")
     SpecBisTooltip:AddTrans("ruRU", "LID_PHASEPRERAID", "До рейдов")
     SpecBisTooltip:AddTrans("ruRU", "LID_SHOWNOTBIS", "Показывать, если это не BiS")

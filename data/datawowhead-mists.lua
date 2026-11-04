@@ -5,6 +5,7 @@ if SpecBisTooltip:GetBisPool() == "MISTS" then
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
+    SpecBisTooltip.LivePhase = 5
 end
 
 -- DATA FROM BIS,PVE,P5: 23.09.2026

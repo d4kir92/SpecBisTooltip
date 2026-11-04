@@ -7,7 +7,7 @@ if SpecBisTooltip:GetBisPool() == "TBC" then
     end
 end
 
--- DATA FROM BIS,PVE,P3: 23.09.2026
+-- DATA FROM BIS,PVE,P3: 04.11.2026
 if SpecBisTooltip:GetBisPool() == "TBC" then
     BIS["TBC"] = {}
     BIS["TBC"]["DRUID"] = {}

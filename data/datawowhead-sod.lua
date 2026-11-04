@@ -5,6 +5,7 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsSeasonOfDiscove
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
+    SpecBisTooltip.LivePhase = 8
 end
 
 -- DATA FROM BIS,PVE,SODP8: 18.06.2025

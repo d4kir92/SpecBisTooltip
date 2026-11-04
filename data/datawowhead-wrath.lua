@@ -5,6 +5,7 @@ if SpecBisTooltip:GetBisPool() == "WRATH" then
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
+    SpecBisTooltip.LivePhase = 1
 end
 
 -- DATA FROM BIS,PVE,P4: 14.04.2025

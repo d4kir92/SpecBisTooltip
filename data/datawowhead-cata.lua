@@ -5,6 +5,7 @@ if SpecBisTooltip:GetBisPool() == "CATA" then
     function SpecBisTooltip:GetBisTable()
         return BIS
     end
+    SpecBisTooltip.LivePhase = 0
 end
 
 -- DATA FROM BIS,PVE,P4: 20.05.2025

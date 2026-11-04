@@ -1,0 +1,22 @@
+package-as: SpecBisTooltip
+
+ignore:
+  - SpecBisTooltip_Camelot.toc
+  - SpecBisTooltip_Cata.toc
+  - SpecBisTooltip_Mists.toc
+  - SpecBisTooltip_TBC.toc
+  - SpecBisTooltip_Vanilla.toc
+  - SpecBisTooltip_Wrath.toc
+  - data/datasources-cata.lua
+  - data/datasources-classic.lua
+  - data/datasources-forever.lua
+  - data/datasources-mists.lua
+  - data/datasources-tbc.lua
+  - data/datasources-wrath.lua
+  - data/datawowhead-cata.lua
+  - data/datawowhead-classic.lua
+  - data/datawowhead-forever.lua
+  - data/datawowhead-mists.lua
+  - data/datawowhead-sod.lua
+  - data/datawowhead-tbc.lua
+  - data/datawowhead-wrath.lua

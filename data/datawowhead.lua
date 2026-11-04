@@ -1,15 +1,70 @@
 -- By D4KiR
 local _, SpecBisTooltip = ...
-local C_Seasons = getglobal("C_Seasons")
-function SpecBisTooltip:AddToSOD(class, specid, tab)
-	if tab then
-		for i, v in pairs(tab) do
-			if SpecBisTooltip:GetBisTable()["CLASSIC"][class][specid][i] == nil then SpecBisTooltip:GetBisTable()["CLASSIC"][class][specid][i] = v end
-		end
-	end
+local phaseNumbers = {}
+function SpecBisTooltip:GetPhaseNumber(phaseKey)
+	local number = string.match(phaseKey, ",SODP(%d+)$") or string.match(phaseKey, ",P(%d+)$")
+	return tonumber(number) or 0
 end
 
-if C_Seasons and C_Seasons.GetActiveSeason and C_Seasons.GetActiveSeason() == 2 then SpecBisTooltip:AddOldSodPhases() end
+function SpecBisTooltip:GetPhaseRank(phaseKey)
+	local rank = (1000 - SpecBisTooltip:GetPhaseNumber(phaseKey)) * 2
+	if string.find(phaseKey, "PRE", 1, true) then rank = rank + 1 end
+	return rank
+end
+
+function SpecBisTooltip:GetPhaseNumbers()
+	return phaseNumbers
+end
+
+function SpecBisTooltip:GetPhaseName(number)
+	if number == 0 then return SpecBisTooltip:Trans("LID_PHASEPRERAID") end
+	return format(SpecBisTooltip:Trans("LID_PHASEX"), number)
+end
+
+function SpecBisTooltip:GetPhaseSettingKey()
+	if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then return "PHASE_CLASSIC_FOREVER" end
+	if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsSeasonOfDiscovery() then return "PHASE_CLASSIC_SOD" end
+	return "PHASE_" .. SpecBisTooltip:GetBisPool()
+end
+
+function SpecBisTooltip:GetSelectedPhase()
+	local newest = phaseNumbers[1] or 0
+	local selected = SpecBisTooltip:GV(SBTTAB, SpecBisTooltip:GetPhaseSettingKey(), "AUTO")
+	if type(selected) ~= "number" then return newest end
+	for _, number in ipairs(phaseNumbers) do
+		if number == selected then return selected end
+	end
+	return newest
+end
+
+function SpecBisTooltip:IsPhaseVisible(phaseKey)
+	local number = SpecBisTooltip:GetPhaseNumber(phaseKey)
+	local current = SpecBisTooltip:GetSelectedPhase()
+	if number > current then return false end
+	if number < current and not SpecBisTooltip:GV(SBTTAB, "SHOWOLDERPHASES", true) then return false end
+	if string.find(phaseKey, "PRE", 1, true) and not SpecBisTooltip:GV(SBTTAB, "SHOWPREBIS", true) then return false end
+	return true
+end
+
+function SpecBisTooltip:GetPhaseSignature()
+	return tostring(SpecBisTooltip:GetSelectedPhase()) .. "|" .. tostring(SpecBisTooltip:GV(SBTTAB, "SHOWOLDERPHASES", true)) .. "|" .. tostring(SpecBisTooltip:GV(SBTTAB, "SHOWPREBIS", true))
+end
+
+function SpecBisTooltip:GetBestPhaseEntry(specTab, itemId)
+	local bestKey, bestEntry, bestRank = nil, nil, nil
+	if specTab == nil then return nil, nil end
+	for phaseKey, phaseTab in pairs(specTab) do
+		local entry = phaseTab[itemId]
+		if entry and SpecBisTooltip:IsPhaseVisible(phaseKey) then
+			local rank = SpecBisTooltip:GetPhaseRank(phaseKey)
+			if bestRank == nil or rank < bestRank then
+				bestKey, bestEntry, bestRank = phaseKey, entry, rank
+			end
+		end
+	end
+	return bestKey, bestEntry
+end
+
 local sortBfs = {}
 sortBfs["BISO"] = 1
 sortBfs["BISMR"] = 2
@@ -133,43 +188,32 @@ end
 function SpecBisTooltip:InitBFS()
 	local pool = SpecBisTooltip:GetBisPool()
 	if pool ~= "RETAIL" then
+		local seenNumbers = {}
 		if SpecBisTooltip:GetBisTable()[pool] then
 			for className, classTab in pairs(SpecBisTooltip:GetBisTable()[pool]) do
 				for specId, specTab in pairs(classTab) do
-					for itemId, itemTyp in pairs(specTab) do
+					local specItems = {}
+					for phaseKey, phaseTab in pairs(specTab) do
+						local number = SpecBisTooltip:GetPhaseNumber(phaseKey)
+						if not seenNumbers[number] then
+							seenNumbers[number] = true
+							table.insert(phaseNumbers, number)
+						end
+
+						for itemId in pairs(phaseTab) do
+							specItems[itemId] = true
+						end
+					end
+
+					for itemId in pairs(specItems) do
 						bfs[itemId] = bfs[itemId] or {}
-						table.insert(bfs[itemId], {className, specId, itemTyp})
+						table.insert(bfs[itemId], {className, specId, specTab})
 					end
 				end
 			end
 		end
 
-		for i, bf in pairs(bfs) do
-			table.sort(bf, function(a, b)
-				if a == nil then
-					SpecBisTooltip:MSG("[InitBFS] a is nil")
-					return false
-				end
-
-				if b == nil then
-					SpecBisTooltip:MSG("[InitBFS] b is nil")
-					return false
-				end
-
-				if sortBfs[a[3][1]] == nil then
-					SpecBisTooltip:MSG("MISSING SORTING KEY", a[3][1])
-					return true
-				end
-
-				if sortBfs[b[3][1]] == nil then
-					SpecBisTooltip:MSG("MISSING SORTING KEY", b[3][1])
-					return false
-				end
-
-				if sortBfs[a[3][1]] == sortBfs[b[3][1]] then return a[1] < b[1] end
-				return sortBfs[a[3][1]] < sortBfs[b[3][1]]
-			end)
-		end
+		table.sort(phaseNumbers, function(a, b) return a > b end)
 	else
 		SpecBisTooltip:InitBFSContent(pool, "BISO")
 		SpecBisTooltip:InitBFSContent(pool, "BISR")
@@ -180,7 +224,25 @@ end
 
 SpecBisTooltip:InitBFS()
 function SpecBisTooltip:GetBFS(itemId)
-	return bfs[itemId]
+	if bfs[itemId] == nil then return nil end
+	local result = {}
+	for _, tab in ipairs(bfs[itemId]) do
+		local phaseKey = SpecBisTooltip:GetBestPhaseEntry(tab[3], itemId)
+		if phaseKey then table.insert(result, {tab[1], tab[2], {phaseKey}}) end
+	end
+
+	if #result == 0 then return nil end
+	table.sort(result, function(a, b)
+		local rankA = SpecBisTooltip:GetPhaseRank(a[3][1])
+		local rankB = SpecBisTooltip:GetPhaseRank(b[3][1])
+		if rankA == rankB then
+			if a[1] == b[1] then return a[2] < b[2] end
+			return a[1] < b[1]
+		end
+
+		return rankA < rankB
+	end)
+	return result
 end
 
 function SpecBisTooltip:GetBFSRetail(itemId, content)
@@ -194,6 +256,7 @@ local function BuildSlotIndex(class, specId, content)
 	bfi[class] = bfi[class] or {}
 	bfi[class][specId] = bfi[class][specId] or {}
 	local contentKey = content or "ANY"
+	if SpecBisTooltip:GetBisPool() ~= "RETAIL" then contentKey = contentKey .. "|" .. SpecBisTooltip:GetPhaseSignature() end
 	if bfi[class][specId][contentKey] then return bfi[class][specId][contentKey] end
 	local slots = {}
 	bfi[class][specId][contentKey] = slots
@@ -220,10 +283,28 @@ local function BuildSlotIndex(class, specId, content)
 		return slots
 	end
 
+	if pool ~= "RETAIL" then
+		local phaseKeys = {}
+		for phaseKey in pairs(bisTab[class][specId]) do
+			if SpecBisTooltip:IsPhaseVisible(phaseKey) then table.insert(phaseKeys, phaseKey) end
+		end
+
+		table.sort(phaseKeys, function(a, b) return SpecBisTooltip:GetPhaseRank(a) < SpecBisTooltip:GetPhaseRank(b) end)
+		local added = {}
+		for _, phaseKey in ipairs(phaseKeys) do
+			for itemId, itemEntry in pairs(bisTab[class][specId][phaseKey]) do
+				if not added[itemId] then
+					added[itemId] = true
+					AddSlot(itemEntry[2], itemId)
+				end
+			end
+		end
+
+		return slots
+	end
+
 	for itemId, itemEntry in pairs(bisTab[class][specId]) do
-		if pool == "CLASSIC" or pool == "TBC" or pool == "CATA" then
-			AddSlot(itemEntry[3], itemId)
-		elseif type(itemId) == "string" then
+		if type(itemId) == "string" then
 			if itemId == content then
 				local contentTab = bisTab[class][specId][content]
 				local heroSpecId = SpecBisTooltip:GetHeroSpecId()

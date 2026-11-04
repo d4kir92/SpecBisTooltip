@@ -6,6 +6,11 @@ function SpecBisTooltip:GetBisPool()
 	return SpecBisTooltip:GetWoWBuild()
 end
 
+function SpecBisTooltip:IsSeasonOfDiscovery()
+	local seasons = _G["C_Seasons"]
+	return seasons ~= nil and seasons.GetActiveSeason ~= nil and seasons.GetActiveSeason() == 2
+end
+
 if SpecBisTooltip:IsForever() then
 	local camelotDruidSpecs = {
 		[1] = 1,

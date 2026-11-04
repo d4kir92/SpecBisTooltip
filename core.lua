@@ -47,7 +47,10 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 		end
 	end
 
-	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId] and SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][itemId] then return SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][itemId][1], SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId][itemId][2] end
+	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) then
+		local phaseKey, entry = SpecBisTooltip:GetBestPhaseEntry(SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId], itemId)
+		if phaseKey then return phaseKey, entry[1] end
+	end
 	return "NOTBIS", nil
 end
 
@@ -403,27 +406,29 @@ local bisTextLookup = {
 	}
 }
 
-local oldPhases = {}
-if SpecBisTooltip:GetBisPool() == "CLASSIC" then
-	oldPhases["BIS,PVE,SODP4"] = true
-	oldPhases["PREBIS,PVE,SODP4"] = true
-	oldPhases["BIS,PVE,SODP3"] = true
-	oldPhases["PREBIS,PVE,SODP3"] = true
-	oldPhases["BIS,PVE,SODP2"] = true
-	oldPhases["PREBIS,PVE,SODP2"] = true
-	oldPhases["BIS,PVE,SODP1"] = true
-	oldPhases["PREBIS,PVE,SODP1"] = true
-elseif SpecBisTooltip:GetBisPool() == "WRATH" then
-	oldPhases["BIS,PVE,P1"] = true
-	oldPhases["BIS,PVE,P2"] = true
-	oldPhases["BIS,PVE,P3"] = true
-end
-
 local missingTypes = {}
 local function GetBISText(typ)
 	if not SpecBisTooltip:GV(SBTTAB, "SHOWPREBIS", true) and string.find(typ, "PRE", 1, true) then typ = "NOTBIS" end
-	if not SpecBisTooltip:GV(SBTTAB, "SHOWOLDERPHASES", true) and oldPhases[typ] then typ = "NOTBIS" end
 	local entry = bisTextLookup[typ]
+	if entry == nil then
+		local pre, sod, number = string.match(typ, "^(%u*)BIS,PVE,(%u-)P(%d+)$")
+		if number then
+			local colorCode = col_green
+			local lid = "LID_BISPVEPHASEX"
+			if pre == "PRE" then
+				colorCode = col_yellow
+				lid = "LID_PREBISPVEPHASEX"
+			end
+
+			if sod == "SOD" then lid = string.gsub(lid, "PHASEX", "SODX") end
+			entry = {
+				colorCode = colorCode,
+				translationArgs = {lid, nil, tonumber(number)}
+			}
+
+			bisTextLookup[typ] = entry
+		end
+	end
 	if typ == "NOTBIS" and not SpecBisTooltip:GV(SBTTAB, "SHOWNOTBIS", true) then return "" end
 	if entry then
 		local colorCode = entry.colorCode

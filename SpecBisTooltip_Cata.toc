@@ -46,22 +46,10 @@ locale\zhCN.lua
 locale\zhTW.lua
 
 data.lua
-data\datasources-retail.lua
-data\datasources-mists.lua
 data\datasources-cata.lua
-data\datasources-wrath.lua
-data\datasources-tbc.lua
-data\datasources-classic.lua
 data\datasources.lua
 
-data\datasod.lua
-
-data\datawowhead-retail.lua
-data\datawowhead-mists.lua
 data\datawowhead-cata.lua
-data\datawowhead-wrath.lua
-data\datawowhead-tbc.lua
-data\datawowhead-classic.lua
 data\datawowhead.lua
 
 settings.lua

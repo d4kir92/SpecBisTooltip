@@ -178,6 +178,29 @@ function SpecBisTooltip:InitSettings()
 			["func"] = function(value) SpecBisTooltip:SV(SBTTAB, "PREFERREDCONTENT", value) end
 		})
 	else
+		local phaseKey = SpecBisTooltip:GetPhaseSettingKey()
+		local phaseChoices = {
+			{
+				["value"] = "AUTO",
+				["label"] = "LID_PHASEAUTO"
+			}
+		}
+
+		for _, number in ipairs(SpecBisTooltip:GetPhaseNumbers()) do
+			table.insert(phaseChoices, {
+				["value"] = number,
+				["label"] = SpecBisTooltip:GetPhaseName(number)
+			})
+		end
+
+		sbt_settings:AddDropdown({
+			["label"] = "LID_CURRENTPHASE",
+			["search"] = "CURRENTPHASE",
+			["value"] = SpecBisTooltip:GV(SBTTAB, phaseKey, "AUTO"),
+			["choices"] = phaseChoices,
+			["func"] = function(value) SpecBisTooltip:SV(SBTTAB, phaseKey, value) end
+		})
+
 		AddCheckbox("SHOWOLDERPHASES", true)
 	end
 

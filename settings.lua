@@ -74,7 +74,83 @@ local function GetCustomSlots()
 	return slots
 end
 
-local function AddCustomSlot(invType, key, guideText)
+local function AddItemPreview(holder, guideItemID)
+	local box = holder.control
+	box:ClearAllPoints()
+	box:SetPoint("BOTTOMLEFT", holder, "BOTTOMLEFT", 6, 0)
+	box:SetPoint("BOTTOMRIGHT", holder, "BOTTOMRIGHT", -48, 0)
+	local button = CreateFrame("Button", nil, holder)
+	button:SetSize(32, 32)
+	button:SetPoint("BOTTOMRIGHT", holder, "BOTTOMRIGHT", -4, -4)
+	button:SetNormalTexture("Interface\\Buttons\\UI-Quickslot2")
+	button:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+	button.icon = button:CreateTexture(nil, "BACKGROUND")
+	button.icon:SetAllPoints()
+	button.border = button:CreateTexture(nil, "OVERLAY")
+	button.border:SetTexture("Interface\\Common\\WhiteIconFrame")
+	button.border:SetAllPoints()
+	button.border:Hide()
+	function button:ShowItemTooltip()
+		if not self.itemID then return end
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetHyperlink("item:" .. self.itemID)
+		GameTooltip:Show()
+	end
+
+	function button:Refresh()
+		self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
+		if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
+		self.itemID = tonumber(box:GetText())
+		if box:GetText() == "" then self.itemID = guideItemID end
+		self.link = nil
+		self.border:Hide()
+		if not self.itemID or self.itemID <= 0 then
+			self.itemID = nil
+			self:Hide()
+			return
+		end
+
+		self:RegisterEvent("GET_ITEM_INFO_RECEIVED")
+		local name, link, quality, _, _, _, _, _, _, texture = SpecBisTooltip:GetItemInfo(self.itemID)
+		self.link = link
+		self.icon:SetTexture(texture or 134400)
+		if name then
+			self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
+			local color = ITEM_QUALITY_COLORS[quality]
+			if color then
+				self.border:SetVertexColor(color.r, color.g, color.b)
+				self.border:Show()
+			end
+		end
+
+		self:Show()
+		if self:IsMouseOver() then self:ShowItemTooltip() end
+	end
+
+	button:SetScript("OnEnter", button.ShowItemTooltip)
+	button:SetScript("OnLeave", function(self)
+		if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
+	end)
+	button:SetScript("OnHide", function(self)
+		if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
+	end)
+	button:SetScript("OnClick", function(self)
+		if self.link then HandleModifiedItemClick(self.link) end
+	end)
+	button:SetScript("OnEvent", function(self, _, itemID, success)
+		if itemID ~= self.itemID then return end
+		self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
+		if success then
+			self:Refresh()
+		else
+			self:Hide()
+		end
+	end)
+	box:HookScript("OnTextChanged", function() button:Refresh() end)
+	button:Refresh()
+end
+
+local function AddCustomSlot(invType, key, guideText, guideItemID)
 	sbt_settings:AddCategory({
 		["label"] = "LID_" .. key,
 		["search"] = key,
@@ -84,7 +160,7 @@ local function AddCustomSlot(invType, key, guideText)
 
 	local item = SpecBisTooltip:GV(SBTTABPC, key, "")
 	if item == nil then item = "" end
-	sbt_settings:AddEditbox({
+	local itemField = sbt_settings:AddEditbox({
 		["label"] = SpecBisTooltip:Trans("LID_ITEM") .. guideText,
 		["search"] = key,
 		["value"] = tostring(item),
@@ -92,6 +168,8 @@ local function AddCustomSlot(invType, key, guideText)
 		["maxLetters"] = 10,
 		["func"] = function(value) SpecBisTooltip:SV(SBTTABPC, key, tonumber(value)) end
 	})
+
+	AddItemPreview(itemField, guideItemID)
 
 	local source = SpecBisTooltip:GV(SBTTABPC, key .. "_SOURCE", "")
 	if source == nil then source = "" end
@@ -214,6 +292,7 @@ function SpecBisTooltip:InitSettings()
 	local specId = SpecBisTooltip:GetTalentInfo()
 	local _, class = UnitClass("PLAYER")
 	local guideTexts = {}
+	local guideItems = {}
 	for _, slot in ipairs(GetCustomSlots()) do
 		local invType, key = slot[1], slot[2]
 		if guideTexts[invType] == nil then
@@ -221,9 +300,10 @@ function SpecBisTooltip:InitSettings()
 			local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
 			if itemId then guideText = " (" .. SpecBisTooltip:Trans("LID_GUIDEITEMID") .. ": " .. itemId .. ")" end
 			guideTexts[invType] = guideText
+			guideItems[invType] = itemId
 		end
 
-		AddCustomSlot(invType, key, guideTexts[invType])
+		AddCustomSlot(invType, key, guideTexts[invType], guideItems[invType])
 	end
 
 	sbt_settings:ResumeLayout()

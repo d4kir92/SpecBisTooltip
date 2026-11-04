@@ -27,14 +27,9 @@ function SpecBisTooltip:GetPhaseSettingKey()
 	return "PHASE_" .. SpecBisTooltip:GetBisPool()
 end
 
-SpecBisTooltip.LivePhases = {
-	["PHASE_TBC"] = 3,
-	["PHASE_CLASSIC_FOREVER"] = 1,
-}
-
 function SpecBisTooltip:GetLivePhase()
-	local live = SpecBisTooltip.LivePhases[SpecBisTooltip:GetPhaseSettingKey()]
-	if live == nil then return phaseNumbers[1] or 0 end
+	local live = SpecBisTooltip.LivePhase
+	if type(live) ~= "number" then return phaseNumbers[1] or 0 end
 	for _, number in ipairs(phaseNumbers) do
 		if number <= live then return number end
 	end

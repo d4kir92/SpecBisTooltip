@@ -722,8 +722,8 @@ function SpecBisTooltip:AddBisText(tooltip, specId, itemId, icon, bisTyp, source
 	return true
 end
 
-local function AddYourSpecSource(tooltip, invType, class, specId, n, role)
-	local yourSpecText = SpecBisTooltip:Trans("LID_YOURSPEC")
+local function AddYourSpecSource(tooltip, invType, class, specId, n, role, icon)
+	local yourSpecText = format("|T%s:20:20:0:0|t", icon)
 	if role then yourSpecText = yourSpecText .. SpecBisTooltip:GetRoleHint({role}) end
 	local sourceKind, sourceName, sourceLocation, itemId, custom = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), n, nil, role)
 	if sourceKind and sourceKind ~= "" and (sourceLocation ~= nil or sourceKind == "catalyst") then
@@ -809,7 +809,7 @@ local function OnTooltipSetItem(tooltip, data)
 			if invType == "INVTYPE_FINGER" or invType == "INVTYPE_TRINKET" then slotNumbers = {1, 2} end
 			for _, role in ipairs(SpecBisTooltip:GetSpecRoles(class, specId) or {false}) do
 				for _, slotNumber in ipairs(slotNumbers) do
-					AddYourSpecSource(tooltip, invType, class, specId, slotNumber, role or nil)
+					AddYourSpecSource(tooltip, invType, class, specId, slotNumber, role or nil, icon)
 				end
 			end
 

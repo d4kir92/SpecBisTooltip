@@ -6,7 +6,6 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWMINIMAPBUTTON", "显示小地图按钮")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOTHERSPECS", "显示其他专精")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOTHERCLASSES", "显示其他职业")
-    SpecBisTooltip:AddTrans("zhCN", "LID_YOURSPEC", "你的专精")
     SpecBisTooltip:AddTrans("zhCN", "LID_FERALDPS", "野性战斗 输出")
     SpecBisTooltip:AddTrans("zhCN", "LID_FERALTANK", "野性战斗 坦克")
     SpecBisTooltip:AddTrans("zhCN", "LID_DEBUGSPEC", "测试职业 / 专精")

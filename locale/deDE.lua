@@ -6,7 +6,6 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "LID_SHOWMINIMAPBUTTON", "Minimap Knopf anzeigen")
     SpecBisTooltip:AddTrans("deDE", "LID_SHOWOTHERSPECS", "Andere Spezialisierungen anzeigen")
     SpecBisTooltip:AddTrans("deDE", "LID_SHOWOTHERCLASSES", "Andere Klassen anzeigen")
-    SpecBisTooltip:AddTrans("deDE", "LID_YOURSPEC", "Dein Spezialisierung")
     SpecBisTooltip:AddTrans("deDE", "LID_FERALDPS", "Wilder Kampf DPS")
     SpecBisTooltip:AddTrans("deDE", "LID_FERALTANK", "Wilder Kampf Tank")
     SpecBisTooltip:AddTrans("deDE", "LID_DEBUGSPEC", "Test-Klasse / Spezialisierung")

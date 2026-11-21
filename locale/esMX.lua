@@ -6,7 +6,6 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("esMX", "LID_SHOWMINIMAPBUTTON", "Mostrar botón de minimapa")
     SpecBisTooltip:AddTrans("esMX", "LID_SHOWOTHERSPECS", "Mostrar otras especializaciones")
     SpecBisTooltip:AddTrans("esMX", "LID_SHOWOTHERCLASSES", "Mostrar otras clases")
-    SpecBisTooltip:AddTrans("esMX", "LID_YOURSPEC", "Tu especialización")
     SpecBisTooltip:AddTrans("esMX", "LID_FERALDPS", "Combate feral DPS")
     SpecBisTooltip:AddTrans("esMX", "LID_FERALTANK", "Combate feral tanque")
     SpecBisTooltip:AddTrans("esMX", "LID_DEBUGSPEC", "Clase / especialización de prueba")

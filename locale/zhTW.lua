@@ -6,7 +6,6 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhTW", "LID_SHOWMINIMAPBUTTON", "顯示小圖按鈕")
     SpecBisTooltip:AddTrans("zhTW", "LID_SHOWOTHERSPECS", "顯示其他規格")
     SpecBisTooltip:AddTrans("zhTW", "LID_SHOWOTHERCLASSES", "顯示其他類別")
-    SpecBisTooltip:AddTrans("zhTW", "LID_YOURSPEC", "您的專長")
     SpecBisTooltip:AddTrans("zhTW", "LID_FERALDPS", "野性戰鬥 輸出")
     SpecBisTooltip:AddTrans("zhTW", "LID_FERALTANK", "野性戰鬥 坦克")
     SpecBisTooltip:AddTrans("zhTW", "LID_DEBUGSPEC", "測試職業 / 專精")

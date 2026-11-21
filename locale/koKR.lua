@@ -6,7 +6,6 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWMINIMAPBUTTON", "미니맵 버튼 표시")
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWOTHERSPECS", "다른 사양 표시")
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWOTHERCLASSES", "다른 클래스 표시")
-    SpecBisTooltip:AddTrans("koKR", "LID_YOURSPEC", "당신의 전문 분야")
     SpecBisTooltip:AddTrans("koKR", "LID_FERALDPS", "야성 DPS")
     SpecBisTooltip:AddTrans("koKR", "LID_FERALTANK", "야성 탱커")
     SpecBisTooltip:AddTrans("koKR", "LID_DEBUGSPEC", "테스트 직업 / 전문화")

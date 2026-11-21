@@ -1078,69 +1078,39 @@ local function GetCamelotSpecInfo(specInfo, index)
     })
 end
 
-local function GetCamelotTraitNodes()
+local function GetCamelotTraitTab()
     local classTalents, traits = _G["C_ClassTalents"], _G["C_Traits"]
-    if classTalents == nil or traits == nil or classTalents.GetActiveConfigID == nil then return nil end
+    if classTalents == nil or traits == nil or classTalents.GetActiveConfigID == nil or traits.GetGroupDisplayInfoByTreeID == nil or traits.GetGroupCurrencyInfo == nil then return nil, nil end
     local okConfig, configId = pcall(classTalents.GetActiveConfigID)
-    if not okConfig or configId == nil then return nil end
+    if not okConfig or configId == nil then return nil, nil end
     local okInfo, configInfo = pcall(traits.GetConfigInfo, configId)
-    if not okInfo or configInfo == nil or configInfo.treeIDs == nil then return nil end
-    local nodes = {}
-    for _, treeId in ipairs(configInfo.treeIDs) do
-        local okNodes, nodeIds = pcall(traits.GetTreeNodes, treeId)
-        if okNodes and nodeIds then
-            for _, nodeId in ipairs(nodeIds) do
-                local okNode, nodeInfo = pcall(traits.GetNodeInfo, configId, nodeId)
-                if okNode and nodeInfo and nodeInfo.posX then table.insert(nodes, nodeInfo) end
-            end
+    if not okInfo or configInfo == nil or configInfo.treeIDs == nil or configInfo.treeIDs[1] == nil then return nil, nil end
+    local okDisplay, displayInfos = pcall(traits.GetGroupDisplayInfoByTreeID, configInfo.treeIDs[1])
+    if not okDisplay or displayInfos == nil or #displayInfos == 0 then return nil, nil end
+    table.sort(displayInfos, function(a, b) return (a.orderIndex or 0) < (b.orderIndex or 0) end)
+    local groupIds = {}
+    for _, displayInfo in ipairs(displayInfos) do
+        table.insert(groupIds, displayInfo.groupID)
+    end
+
+    local okCurrency, groupInfos = pcall(traits.GetGroupCurrencyInfo, configId, groupIds)
+    if not okCurrency or groupInfos == nil then return nil, nil end
+    local spent = {}
+    for _, groupInfo in ipairs(groupInfos) do
+        local currencyInfo = groupInfo.currencyInfos and groupInfo.currencyInfos[1]
+        if currencyInfo then spent[groupInfo.traitNodeGroupID] = currencyInfo.spent end
+    end
+
+    local bestTab, bestIcon, best = nil, nil, 0
+    for index, displayInfo in ipairs(displayInfos) do
+        local points = spent[displayInfo.groupID] or 0
+        if points > best then
+            best = points
+            bestTab = index
+            bestIcon = displayInfo.icon
         end
     end
-    return nodes
-end
-
-local function GetCamelotTraitTab(num)
-    local nodes = GetCamelotTraitNodes()
-    if nodes == nil or #nodes == 0 then return nil end
-    local xs, seen = {}, {}
-    for _, nodeInfo in ipairs(nodes) do
-        if not seen[nodeInfo.posX] then
-            seen[nodeInfo.posX] = true
-            table.insert(xs, nodeInfo.posX)
-        end
-    end
-
-    table.sort(xs)
-    local gaps = {}
-    for i = 2, #xs do
-        table.insert(gaps, {xs[i] - xs[i - 1], i})
-    end
-
-    table.sort(gaps, function(a, b) return a[1] > b[1] end)
-    local splits = {}
-    for i = 1, math.min(num - 1, #gaps) do
-        splits[gaps[i][2]] = true
-    end
-
-    local tabOfX, tab = {}, 1
-    for i, x in ipairs(xs) do
-        if splits[i] then tab = tab + 1 end
-        tabOfX[x] = tab
-    end
-
-    local points = {}
-    for _, nodeInfo in ipairs(nodes) do
-        local nodeTab = tabOfX[nodeInfo.posX]
-        points[nodeTab] = (points[nodeTab] or 0) + (nodeInfo.ranksPurchased or 0)
-    end
-
-    local bestTab, best = nil, 0
-    for i = 1, num do
-        if points[i] and points[i] > best then
-            best = points[i]
-            bestTab = i
-        end
-    end
-    return bestTab
+    return bestTab, bestIcon
 end
 
 local function GetCamelotTalentInfo()
@@ -1165,12 +1135,8 @@ local function GetCamelotTalentInfo()
     end
 
     if specid then return specid, icon end
-    local traitTab = GetCamelotTraitTab(num)
-    if traitTab then
-        local ok, _, _, _, tex = GetCamelotSpecInfo(specInfo, traitTab)
-        if ok then return traitTab, tex end
-        return traitTab, nil
-    end
+    local traitTab, traitIcon = GetCamelotTraitTab()
+    if traitTab then return traitTab, traitIcon end
 
     if specInfo.GetSpecialization then
         local ok, active = pcall(specInfo.GetSpecialization)

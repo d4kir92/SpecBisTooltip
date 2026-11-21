@@ -3,6 +3,7 @@ local _, SpecBisTooltip = ...
 local ICON = SpecBisTooltip:GetAddonIcon()
 local DEFAULT_WIDTH = 600
 local DEFAULT_HEIGHT = 600
+local WHATSNEW_SINCE = "2026-11-21"
 local validEquipSlotsClassic = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_RELIC",}
 local validEquipSlotsRetail = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_SHIELD"}
 local sbt_settings = nil
@@ -197,6 +198,7 @@ function SpecBisTooltip:InitSettings()
 		["height"] = SpecBisTooltip:GV(SBTTAB, "WINDOWHEIGHT", DEFAULT_HEIGHT),
 		["minWidth"] = 360,
 		["minHeight"] = 240,
+		["navigation"] = true,
 		["onResize"] = function(width, height)
 			SpecBisTooltip:SV(SBTTAB, "WINDOWWIDTH", width)
 			SpecBisTooltip:SV(SBTTAB, "WINDOWHEIGHT", height)
@@ -206,6 +208,15 @@ function SpecBisTooltip:InitSettings()
 		["title"] = format("|T%d:16:16:0:0|t SpecBisTooltip v%s", ICON, SpecBisTooltip:GetVersion())
 	})
 
+	SBTTAB.WHATSNEW = SBTTAB.WHATSNEW or {}
+	SpecBisTooltip.WhatsNew = SpecBisTooltip:CreateUIWhatsNew({
+		["name"] = "SpecBisTooltipWhatsNew",
+		["title"] = format("|T%d:16:16:0:0|t SpecBisTooltip v%s", ICON, SpecBisTooltip:GetVersion()),
+		["db"] = SBTTAB.WHATSNEW,
+		["since"] = WHATSNEW_SINCE,
+		["getSettings"] = function() return sbt_settings end
+	})
+
 	sbt_settings:SuspendLayout()
 	sbt_settings:AddSearch()
 	sbt_settings:AddCategory({
@@ -213,6 +224,8 @@ function SpecBisTooltip:InitSettings()
 		["search"] = "GENERAL",
 		["key"] = "GENERAL"
 	})
+
+	SpecBisTooltip.WhatsNew:AddSettingsCheckbox(sbt_settings, WHATSNEW_SINCE)
 
 	AddCheckbox("SHOWMINIMAPBUTTON", ShowMinimapButtonDefault(), function(value)
 		if value then
@@ -284,6 +297,7 @@ function SpecBisTooltip:InitSettings()
 			sbt_settings:AddDropdown({
 				["label"] = "LID_FERALROLE",
 				["search"] = "FERALROLE",
+				["added"] = WHATSNEW_SINCE,
 				["value"] = SpecBisTooltip:GV(SBTTAB, "FERALROLE", "BOTH"),
 				["choices"] = {
 					{
@@ -329,4 +343,5 @@ function SpecBisTooltip:InitSettings()
 	end
 
 	sbt_settings:ResumeLayout()
+	SpecBisTooltip:After(3, function() SpecBisTooltip.WhatsNew:ShowIfNew() end, "WhatsNew")
 end

@@ -8,7 +8,7 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
     SpecBisTooltip.LivePhase = 1
 end
 
--- DATA FROM BIS,PVE,P1: 19.11.2026
+-- DATA FROM BIS,PVE,P1: 21.11.2026
 if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
     BIS["CLASSIC"] = {}
     BIS["CLASSIC"]["DRUID"] = {}
@@ -28,31 +28,9 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [272439] = {"unknown=unknown", "INVTYPE_TRINKET"},
             [18470] = {"quest;reward=7506", "INVTYPE_TRINKET"},
             [18510] = {"spell;created=22927", "INVTYPE_CLOAK"},
-            [812] = {"npc;drop=9098", "INVTYPE_2HWEAPON"},
+            [13360] = {"npc;drop=10812", "INVTYPE_WEAPONMAINHAND"},
+            [19312] = {"npc;sold=13217", "INVTYPE_HOLDABLE"},
             [272429] = {"npc;sold=227853", "INVTYPE_RELIC"},
-        },
-    }
-
-    BIS["CLASSIC"]["WARRIOR"] = {}
-    BIS["CLASSIC"]["WARRIOR"][3] = {
-        ["BIS,PVE,P1"] = {
-            [12640] = {"spell;created=16729", "INVTYPE_HEAD"},
-            [19159] = {"quest;reward=7861", "INVTYPE_NECK"},
-            [22001] = {"unknown=unknown", "INVTYPE_SHOULDER"},
-            [12618] = {"unknown=unknown", "INVTYPE_CHEST"},
-            [21994] = {"unknown=unknown", "INVTYPE_WAIST"},
-            [22000] = {"unknown=unknown", "INVTYPE_LEGS"},
-            [21995] = {"quest;reward=9022", "INVTYPE_FEET"},
-            [21996] = {"unknown=unknown", "INVTYPE_WRIST"},
-            [250552] = {"unknown=unknown", "INVTYPE_HAND"},
-            [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
-            [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
-            [272437] = {"npc;sold=227853", "INVTYPE_TRINKET"},
-            [19024] = {"unknown=unknown", "INVTYPE_TRINKET"},
-            [18511] = {"unknown=unknown", "INVTYPE_CLOAK"},
-            [250618] = {"unknown=unknown", "INVTYPE_WEAPON"},
-            [281637] = {"unknown=unknown", "INVTYPE_SHIELD"},
-            [22347] = {"quest;reward=9023", "INVTYPE_RANGEDRIGHT"},
         },
     }
 
@@ -60,13 +38,13 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
         ["BIS,PVE,P1"] = {
             [12587] = {"npc;drop=10429", "INVTYPE_HEAD"},
             [19491] = {"quest;reward=7981", "INVTYPE_NECK"},
-            [15058] = {"spell;created=19090", "INVTYPE_SHOULDER"},
+            [22241] = {"npc;drop=9041", "INVTYPE_SHOULDER"},
             [252484] = {"spell;created=1255014", "INVTYPE_CHEST"},
             [272396] = {"npc;sold=227853", "INVTYPE_WAIST"},
-            [15057] = {"spell;created=19067", "INVTYPE_LEGS"},
+            [15065] = {"spell;created=19080", "INVTYPE_LEGS"},
             [12553] = {"npc;drop=8929", "INVTYPE_FEET"},
             [270124] = {"quest;reward=7488", "INVTYPE_WRIST"},
-            [21278] = {"spell;created=26279", "INVTYPE_HAND"},
+            [19049] = {"spell;created=23704", "INVTYPE_HAND"},
             [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
             [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
             [13965] = {"quest;reward=5102", "INVTYPE_TRINKET"},
@@ -95,6 +73,94 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [272415] = {"npc;sold=227853", "INVTYPE_CLOAK"},
             [18531] = {"npc;drop=14353", "INVTYPE_2HWEAPON"},
             [23198] = {"npc;drop=10435", "INVTYPE_RELIC"},
+        },
+    }
+
+    BIS["CLASSIC"]["DRUID"][1] = {
+        ["BIS,PVE,P1"] = {
+            [226773] = {"npc;sold=230319", "INVTYPE_HEAD"},
+            [19426] = {"quest;reward=7940", "INVTYPE_NECK"},
+            [226778] = {"npc;sold=230319", "INVTYPE_SHOULDER"},
+            [226776] = {"npc;sold=230319", "INVTYPE_CHEST"},
+            [18405] = {"spell;created=22866", "INVTYPE_WAIST"},
+            [252486] = {"unknown=unknown", "INVTYPE_LEGS"},
+            [226774] = {"npc;sold=230319", "INVTYPE_FEET"},
+            [226775] = {"quest;reward=84147", "INVTYPE_WRIST"},
+            [226777] = {"npc;sold=230319", "INVTYPE_HAND"},
+            [22339] = {"npc;drop=16042", "INVTYPE_FINGER"},
+            [12543] = {"quest;reward=4363", "INVTYPE_FINGER"},
+            [272438] = {"npc;sold=227853", "INVTYPE_TRINKET"},
+            [13968] = {"quest;reward=5102", "INVTYPE_TRINKET"},
+            [272411] = {"npc;sold=227853", "INVTYPE_CLOAK"},
+            [20070] = {"npc;sold=15127", "INVTYPE_WEAPONMAINHAND"},
+            [19315] = {"npc;sold=13217", "INVTYPE_HOLDABLE"},
+            [272430] = {"npc;sold=227853", "INVTYPE_RELIC"},
+        },
+    }
+
+    BIS["CLASSIC"]["WARRIOR"] = {}
+    BIS["CLASSIC"]["WARRIOR"][3] = {
+        ["BIS,PVE,P1"] = {
+            [12640] = {"spell;created=16729", "INVTYPE_HEAD"},
+            [22150] = {"quest;reward=8949", "INVTYPE_NECK"},
+            [226867] = {"npc;sold=230317", "INVTYPE_SHOULDER"},
+            [12895] = {"quest;reward=5166", "INVTYPE_CHEST"},
+            [272403] = {"npc;sold=227853", "INVTYPE_WAIST"},
+            [13498] = {"npc;drop=10899", "INVTYPE_LEGS"},
+            [287033] = {"npc;drop=258152", "INVTYPE_FEET"},
+            [12936] = {"npc;drop=10429", "INVTYPE_WRIST"},
+            [226870] = {"npc;sold=230317", "INVTYPE_HAND"},
+            [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
+            [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
+            [272437] = {"npc;sold=227853", "INVTYPE_TRINKET"},
+            [18466] = {"quest;reward=7499", "INVTYPE_TRINKET"},
+            [272415] = {"npc;sold=227853", "INVTYPE_CLOAK"},
+            [11684] = {"npc;drop=9019", "INVTYPE_WEAPONMAINHAND"},
+            [19321] = {"npc;sold=13217", "INVTYPE_SHIELD"},
+            [18323] = {"npc;drop=11490", "INVTYPE_RANGED"},
+        },
+    }
+
+    BIS["CLASSIC"]["WARRIOR"][1] = {
+        ["BIS,PVE,P1"] = {
+            [12640] = {"spell;created=16729", "INVTYPE_HEAD"},
+            [22659] = {"quest;reward=9222", "INVTYPE_NECK"},
+            [272105] = {"npc;sold=263570", "INVTYPE_SHOULDER"},
+            [21997] = {"quest;reward=9006", "INVTYPE_CHEST"},
+            [272403] = {"npc;sold=227853", "INVTYPE_WAIST"},
+            [22651] = {"npc;sold=14754", "INVTYPE_LEGS"},
+            [21995] = {"quest;reward=9022", "INVTYPE_FEET"},
+            [21184] = {"quest;reward=8574", "INVTYPE_WRIST"},
+            [272095] = {"npc;sold=263570", "INVTYPE_HAND"},
+            [275976] = {"unknown=unknown", "INVTYPE_FINGER"},
+            [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
+            [21181] = {"quest;reward=8572", "INVTYPE_TRINKET"},
+            [260824] = {"spell;created=1266937", "INVTYPE_TRINKET"},
+            [20068] = {"npc;sold=15126", "INVTYPE_CLOAK"},
+            [19169] = {"spell;created=23653", "INVTYPE_2HWEAPON"},
+            [22347] = {"quest;reward=9023", "INVTYPE_RANGEDRIGHT"},
+        },
+    }
+
+    BIS["CLASSIC"]["WARRIOR"][2] = {
+        ["BIS,PVE,P1"] = {
+            [12640] = {"spell;created=16729", "INVTYPE_HEAD"},
+            [15411] = {"quest;reward=5944", "INVTYPE_NECK"},
+            [22241] = {"npc;drop=9041", "INVTYPE_SHOULDER"},
+            [252484] = {"spell;created=1255014", "INVTYPE_CHEST"},
+            [272403] = {"npc;sold=227853", "INVTYPE_WAIST"},
+            [15062] = {"spell;created=19097", "INVTYPE_LEGS"},
+            [226857] = {"npc;sold=230319", "INVTYPE_FEET"},
+            [12936] = {"npc;drop=10429", "INVTYPE_WRIST"},
+            [15063] = {"spell;created=19084", "INVTYPE_HAND"},
+            [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
+            [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
+            [22321] = {"npc;drop=9568", "INVTYPE_TRINKET"},
+            [13965] = {"quest;reward=5102", "INVTYPE_TRINKET"},
+            [272414] = {"npc;sold=227853", "INVTYPE_CLOAK"},
+            [22384] = {"spell;created=27830", "INVTYPE_WEAPON"},
+            [871] = {"npc;drop=8762", "INVTYPE_WEAPON"},
+            [12651] = {"npc;drop=9236", "INVTYPE_RANGED"},
         },
     }
 
@@ -316,23 +382,23 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
 
     BIS["CLASSIC"]["ROGUE"][2] = {
         ["BIS,PVE,P1"] = {
-            [22005] = {"quest;reward=9004", "INVTYPE_HEAD"},
-            [22150] = {"quest;reward=8949", "INVTYPE_NECK"},
-            [272105] = {"npc;sold=263570", "INVTYPE_SHOULDER"},
-            [22009] = {"quest;reward=9004", "INVTYPE_CHEST"},
+            [226829] = {"npc;sold=230319", "INVTYPE_HEAD"},
+            [15411] = {"quest;reward=5944", "INVTYPE_NECK"},
+            [15058] = {"spell;created=19090", "INVTYPE_SHOULDER"},
+            [226825] = {"npc;sold=230319", "INVTYPE_CHEST"},
             [272395] = {"npc;sold=227853", "INVTYPE_WAIST"},
-            [22007] = {"quest;reward=8956", "INVTYPE_LEGS"},
-            [18506] = {"spell;created=22922", "INVTYPE_FEET"},
-            [22004] = {"quest;reward=8910", "INVTYPE_WRIST"},
+            [15057] = {"spell;created=19067", "INVTYPE_LEGS"},
+            [226831] = {"npc;sold=230319", "INVTYPE_FEET"},
+            [226830] = {"quest;reward=84152", "INVTYPE_WRIST"},
             [21278] = {"spell;created=26279", "INVTYPE_HAND"},
             [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
-            [21189] = {"quest;reward=8574", "INVTYPE_FINGER"},
-            [272437] = {"npc;sold=227853", "INVTYPE_TRINKET"},
-            [19289] = {"quest;reward=7929", "INVTYPE_TRINKET"},
-            [21187] = {"quest;reward=8548", "INVTYPE_CLOAK"},
-            [19324] = {"npc;sold=13217", "INVTYPE_WEAPON"},
-            [22384] = {"spell;created=27830", "INVTYPE_WEAPON"},
-            [22347] = {"quest;reward=9023", "INVTYPE_RANGEDRIGHT"},
+            [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
+            [11815] = {"npc;drop=9019", "INVTYPE_TRINKET"},
+            [22321] = {"npc;drop=9568", "INVTYPE_TRINKET"},
+            [272414] = {"npc;sold=227853", "INVTYPE_CLOAK"},
+            [1728] = {"npc;drop=15742", "INVTYPE_WEAPONMAINHAND"},
+            [871] = {"npc;drop=8762", "INVTYPE_WEAPON"},
+            [2100] = {"npc;drop=203138", "INVTYPE_RANGEDRIGHT"},
         },
     }
 
@@ -355,28 +421,6 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [22384] = {"spell;created=27830", "INVTYPE_WEAPON"},
             [19166] = {"spell;created=23638", "INVTYPE_WEAPON"},
             [22347] = {"quest;reward=9023", "INVTYPE_RANGEDRIGHT"},
-        },
-    }
-
-    BIS["CLASSIC"]["DRUID"][1] = {
-        ["BIS,PVE,P1"] = {
-            [22267] = {"npc;drop=10363", "INVTYPE_HEAD"},
-            [19426] = {"quest;reward=7940", "INVTYPE_NECK"},
-            [226778] = {"npc;sold=230319", "INVTYPE_SHOULDER"},
-            [280057] = {"npc;drop=247206", "INVTYPE_CHEST"},
-            [18405] = {"spell;created=22866", "INVTYPE_WAIST"},
-            [252486] = {"unknown=unknown", "INVTYPE_LEGS"},
-            [226774] = {"npc;sold=230319", "INVTYPE_FEET"},
-            [13409] = {"npc;drop=10516", "INVTYPE_WRIST"},
-            [13258] = {"npc;drop=10584", "INVTYPE_HAND"},
-            [272406] = {"npc;sold=227853", "INVTYPE_FINGER"},
-            [12543] = {"quest;reward=4363", "INVTYPE_FINGER"},
-            [272438] = {"npc;sold=227853", "INVTYPE_TRINKET"},
-            [13968] = {"quest;reward=5102", "INVTYPE_TRINKET"},
-            [272411] = {"npc;sold=227853", "INVTYPE_CLOAK"},
-            [20070] = {"npc;sold=15127", "INVTYPE_WEAPONMAINHAND"},
-            [19315] = {"npc;sold=13217", "INVTYPE_HOLDABLE"},
-            [272430] = {"npc;sold=227853", "INVTYPE_RELIC"},
         },
     }
 
@@ -419,7 +463,8 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [272438] = {"npc;sold=227853", "INVTYPE_TRINKET"},
             [13968] = {"quest;reward=5102", "INVTYPE_TRINKET"},
             [272411] = {"npc;sold=227853", "INVTYPE_CLOAK"},
-            [944] = {"npc;drop=15742", "INVTYPE_2HWEAPON"},
+            [22383] = {"spell;created=27832", "INVTYPE_WEAPONMAINHAND"},
+            [19311] = {"npc;sold=13217", "INVTYPE_HOLDABLE"},
             [13938] = {"npc;drop=1853", "INVTYPE_RANGEDRIGHT"},
         },
     }
@@ -438,7 +483,7 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [272406] = {"npc;sold=227853", "INVTYPE_FINGER"},
             [12543] = {"quest;reward=4363", "INVTYPE_FINGER"},
             [13968] = {"quest;reward=5102", "INVTYPE_TRINKET"},
-            [22268] = {"npc;drop=10363", "INVTYPE_TRINKET"},
+            [272438] = {"npc;sold=227853", "INVTYPE_TRINKET"},
             [272411] = {"npc;sold=227853", "INVTYPE_CLOAK"},
             [944] = {"npc;drop=15742", "INVTYPE_2HWEAPON"},
             [19108] = {"quest;reward=8272", "INVTYPE_RANGEDRIGHT"},
@@ -549,51 +594,29 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [272438] = {"npc;sold=227853", "INVTYPE_TRINKET"},
             [18467] = {"quest;reward=7502", "INVTYPE_TRINKET"},
             [272411] = {"npc;sold=227853", "INVTYPE_CLOAK"},
-            [18534] = {"npc;drop=14353", "INVTYPE_2HWEAPON"},
+            [280082] = {"npc;drop=247412", "INVTYPE_2HWEAPON"},
             [13938] = {"npc;drop=1853", "INVTYPE_RANGEDRIGHT"},
         },
     }
 
-    BIS["CLASSIC"]["WARRIOR"][1] = {
+    BIS["CLASSIC"]["WARLOCK"][2] = {
         ["BIS,PVE,P1"] = {
-            [12640] = {"spell;created=16729", "INVTYPE_HEAD"},
-            [22659] = {"quest;reward=9222", "INVTYPE_NECK"},
-            [272105] = {"npc;sold=263570", "INVTYPE_SHOULDER"},
-            [21997] = {"quest;reward=9006", "INVTYPE_CHEST"},
-            [272403] = {"npc;sold=227853", "INVTYPE_WAIST"},
-            [22651] = {"npc;sold=14754", "INVTYPE_LEGS"},
-            [21995] = {"quest;reward=9022", "INVTYPE_FEET"},
-            [21184] = {"quest;reward=8574", "INVTYPE_WRIST"},
-            [272095] = {"npc;sold=263570", "INVTYPE_HAND"},
-            [275976] = {"unknown=unknown", "INVTYPE_FINGER"},
-            [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
-            [21181] = {"quest;reward=8572", "INVTYPE_TRINKET"},
-            [260824] = {"spell;created=1266937", "INVTYPE_TRINKET"},
-            [20068] = {"npc;sold=15126", "INVTYPE_CLOAK"},
-            [19169] = {"spell;created=23653", "INVTYPE_2HWEAPON"},
-            [22347] = {"quest;reward=9023", "INVTYPE_RANGEDRIGHT"},
-        },
-    }
-
-    BIS["CLASSIC"]["WARRIOR"][2] = {
-        ["BIS,PVE,P1"] = {
-            [12640] = {"spell;created=16729", "INVTYPE_HEAD"},
-            [18404] = {"quest;reward=7491", "INVTYPE_NECK"},
-            [272105] = {"npc;sold=263570", "INVTYPE_SHOULDER"},
-            [21997] = {"quest;reward=9006", "INVTYPE_CHEST"},
-            [272403] = {"npc;sold=227853", "INVTYPE_WAIST"},
-            [279265] = {"spell;created=1306539", "INVTYPE_LEGS"},
-            [21995] = {"quest;reward=9022", "INVTYPE_FEET"},
-            [19578] = {"npc;sold=14753", "INVTYPE_WRIST"},
-            [272095] = {"npc;sold=263570", "INVTYPE_HAND"},
-            [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
-            [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
-            [272437] = {"npc;sold=227853", "INVTYPE_TRINKET"},
-            [270226] = {"quest;reward=630", "INVTYPE_TRINKET"},
-            [20073] = {"npc;sold=15127", "INVTYPE_CLOAK"},
-            [279259] = {"spell;created=1306533", "INVTYPE_WEAPON"},
-            [19104] = {"npc;sold=13216", "INVTYPE_WEAPON"},
-            [19107] = {"quest;reward=8272", "INVTYPE_RANGED"},
+            [22267] = {"npc;drop=10363", "INVTYPE_HEAD"},
+            [22403] = {"npc;drop=10997", "INVTYPE_NECK"},
+            [18681] = {"npc;drop=11261", "INVTYPE_SHOULDER"},
+            [280057] = {"npc;drop=247206", "INVTYPE_CHEST"},
+            [11662] = {"npc;drop=9030", "INVTYPE_WAIST"},
+            [13170] = {"npc;drop=9196", "INVTYPE_LEGS"},
+            [11822] = {"npc;drop=8983", "INVTYPE_FEET"},
+            [18497] = {"npc;drop=14326", "INVTYPE_WRIST"},
+            [18408] = {"spell;created=22868", "INVTYPE_HAND"},
+            [22339] = {"npc;drop=16042", "INVTYPE_FINGER"},
+            [272406] = {"npc;sold=227853", "INVTYPE_FINGER"},
+            [272438] = {"npc;sold=227853", "INVTYPE_TRINKET"},
+            [18467] = {"quest;reward=7502", "INVTYPE_TRINKET"},
+            [272411] = {"npc;sold=227853", "INVTYPE_CLOAK"},
+            [280082] = {"npc;drop=247412", "INVTYPE_2HWEAPON"},
+            [13938] = {"npc;drop=1853", "INVTYPE_RANGEDRIGHT"},
         },
     }
 end

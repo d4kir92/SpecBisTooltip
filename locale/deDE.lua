@@ -11,6 +11,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "LID_FERALTANK", "Wilder Kampf Tank")
     SpecBisTooltip:AddTrans("deDE", "LID_DEBUGSPEC", "Test-Klasse / Spezialisierung")
     SpecBisTooltip:AddTrans("deDE", "LID_DEBUGOFF", "Eigener Charakter")
+    SpecBisTooltip:AddTrans("deDE", "LID_FERALROLE", "Wilder Kampf BiS-Liste")
+    SpecBisTooltip:AddTrans("deDE", "LID_FERALBOTH", "Wilder Kampf DPS + Wilder Kampf Tank")
     SpecBisTooltip:AddTrans("deDE", "LID_OTHERSPECS", "Andere Spezialisierungen")
     SpecBisTooltip:AddTrans("deDE", "LID_OTHERCLASSES", "Andere Klassen")
     SpecBisTooltip:AddTrans("deDE", "LID_NOOTHERCLASSNEEDSTHIS", "Keine andere Klasse benötigt dies")

@@ -11,6 +11,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("frFR", "LID_FERALTANK", "Combat farouche tank")
     SpecBisTooltip:AddTrans("frFR", "LID_DEBUGSPEC", "Classe / spécialisation de test")
     SpecBisTooltip:AddTrans("frFR", "LID_DEBUGOFF", "Propre personnage")
+    SpecBisTooltip:AddTrans("frFR", "LID_FERALROLE", "Liste BiS Combat farouche")
+    SpecBisTooltip:AddTrans("frFR", "LID_FERALBOTH", "Combat farouche DPS + tank")
     SpecBisTooltip:AddTrans("frFR", "LID_OTHERSPECS", "Autres spécialisations")
     SpecBisTooltip:AddTrans("frFR", "LID_OTHERCLASSES", "Autres classes")
     SpecBisTooltip:AddTrans("frFR", "LID_NOOTHERCLASSNEEDSTHIS", "Aucune autre classe n'en a besoin")

@@ -57,7 +57,11 @@ function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
 
 	if itemEquipLoc ~= nil and tContains(validEquipSlots, itemEquipLoc) then
 		local phaseKey, entry = SpecBisTooltip:GetBestPhaseEntry(SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()][class][specId], itemId)
-		if phaseKey then return phaseKey, entry[1], entry[3] end
+		if phaseKey then
+			local roles = SpecBisTooltip:FilterRoles(entry[3])
+			if roles and #roles == 0 then return "NOTBIS", nil end
+			return phaseKey, entry[1], roles
+		end
 	end
 	return "NOTBIS", nil
 end

@@ -1063,6 +1063,86 @@ function D4:GetTalentIcons()
     return icons
 end
 
+local function PackResults(...)
+    return {
+        ["n"] = select("#", ...),
+        ...
+    }
+end
+
+local function GetCamelotSpecInfo(specInfo, index)
+    local result = PackResults(pcall(specInfo.GetSpecializationInfo, index))
+    if result[1] then return unpack(result, 1, result.n) end
+    return pcall(specInfo.GetSpecializationInfo, {
+        ["specializationIndex"] = index
+    })
+end
+
+local function GetCamelotTraitNodes()
+    local classTalents, traits = _G["C_ClassTalents"], _G["C_Traits"]
+    if classTalents == nil or traits == nil or classTalents.GetActiveConfigID == nil then return nil end
+    local okConfig, configId = pcall(classTalents.GetActiveConfigID)
+    if not okConfig or configId == nil then return nil end
+    local okInfo, configInfo = pcall(traits.GetConfigInfo, configId)
+    if not okInfo or configInfo == nil or configInfo.treeIDs == nil then return nil end
+    local nodes = {}
+    for _, treeId in ipairs(configInfo.treeIDs) do
+        local okNodes, nodeIds = pcall(traits.GetTreeNodes, treeId)
+        if okNodes and nodeIds then
+            for _, nodeId in ipairs(nodeIds) do
+                local okNode, nodeInfo = pcall(traits.GetNodeInfo, configId, nodeId)
+                if okNode and nodeInfo and nodeInfo.posX then table.insert(nodes, nodeInfo) end
+            end
+        end
+    end
+    return nodes
+end
+
+local function GetCamelotTraitTab(num)
+    local nodes = GetCamelotTraitNodes()
+    if nodes == nil or #nodes == 0 then return nil end
+    local xs, seen = {}, {}
+    for _, nodeInfo in ipairs(nodes) do
+        if not seen[nodeInfo.posX] then
+            seen[nodeInfo.posX] = true
+            table.insert(xs, nodeInfo.posX)
+        end
+    end
+
+    table.sort(xs)
+    local gaps = {}
+    for i = 2, #xs do
+        table.insert(gaps, {xs[i] - xs[i - 1], i})
+    end
+
+    table.sort(gaps, function(a, b) return a[1] > b[1] end)
+    local splits = {}
+    for i = 1, math.min(num - 1, #gaps) do
+        splits[gaps[i][2]] = true
+    end
+
+    local tabOfX, tab = {}, 1
+    for i, x in ipairs(xs) do
+        if splits[i] then tab = tab + 1 end
+        tabOfX[x] = tab
+    end
+
+    local points = {}
+    for _, nodeInfo in ipairs(nodes) do
+        local nodeTab = tabOfX[nodeInfo.posX]
+        points[nodeTab] = (points[nodeTab] or 0) + (nodeInfo.ranksPurchased or 0)
+    end
+
+    local bestTab, best = nil, 0
+    for i = 1, num do
+        if points[i] and points[i] > best then
+            best = points[i]
+            bestTab = i
+        end
+    end
+    return bestTab
+end
+
 local function GetCamelotTalentInfo()
     local specInfo = _G["C_SpecializationInfo"]
     if specInfo == nil or specInfo.GetSpecializationInfo == nil then return nil, nil end
@@ -1076,10 +1156,7 @@ local function GetCamelotTalentInfo()
     num = num or 3
     local specid, icon, best = nil, nil, 0
     for i = 1, num do
-        local ok, _, _, _, tex, _, _, points = pcall(specInfo.GetSpecializationInfo, {
-            ["specializationIndex"] = i
-        })
-
+        local ok, _, _, _, tex, _, _, points = GetCamelotSpecInfo(specInfo, i)
         if ok and points and points > best then
             best = points
             specid = i
@@ -1088,13 +1165,17 @@ local function GetCamelotTalentInfo()
     end
 
     if specid then return specid, icon end
+    local traitTab = GetCamelotTraitTab(num)
+    if traitTab then
+        local ok, _, _, _, tex = GetCamelotSpecInfo(specInfo, traitTab)
+        if ok then return traitTab, tex end
+        return traitTab, nil
+    end
+
     if specInfo.GetSpecialization then
         local ok, active = pcall(specInfo.GetSpecialization)
         if ok and active then
-            local ok2, _, _, _, tex = pcall(specInfo.GetSpecializationInfo, {
-                ["specializationIndex"] = active
-            })
-
+            local ok2, _, _, _, tex = GetCamelotSpecInfo(specInfo, active)
             if ok2 then return active, tex end
             return active, nil
         end

@@ -78,8 +78,21 @@ function SpecBisTooltip:PrepareBisTable()
 	}
 end
 
+local feralRoleSettings = {
+	["DPS"] = "LID_FERALDPS",
+	["TANK"] = "LID_FERALTANK",
+}
+
+function SpecBisTooltip:FilterRoles(roles)
+	if roles == nil then return nil end
+	local wanted = feralRoleSettings[SpecBisTooltip:GV(SBTTAB, "FERALROLE", "BOTH")]
+	if wanted == nil then return roles end
+	if tContains(roles, wanted) then return {wanted} end
+	return {}
+end
+
 function SpecBisTooltip:GetSpecRoles(class, specId)
-	if SpecBisTooltip:HasMergedFeral() and class == "DRUID" and specId == 2 then return feralRoles end
+	if SpecBisTooltip:HasMergedFeral() and class == "DRUID" and specId == 2 then return SpecBisTooltip:FilterRoles(feralRoles) end
 	return nil
 end
 

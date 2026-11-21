@@ -11,6 +11,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("koKR", "LID_FERALTANK", "야성 탱커")
     SpecBisTooltip:AddTrans("koKR", "LID_DEBUGSPEC", "테스트 직업 / 전문화")
     SpecBisTooltip:AddTrans("koKR", "LID_DEBUGOFF", "내 캐릭터")
+    SpecBisTooltip:AddTrans("koKR", "LID_FERALROLE", "야성 BiS 목록")
+    SpecBisTooltip:AddTrans("koKR", "LID_FERALBOTH", "야성 DPS + 야성 탱커")
     SpecBisTooltip:AddTrans("koKR", "LID_OTHERSPECS", "기타 전문 분야")
     SpecBisTooltip:AddTrans("koKR", "LID_OTHERCLASSES", "기타 클래스")
     SpecBisTooltip:AddTrans("koKR", "LID_NOOTHERCLASSNEEDSTHIS", "다른 클래스는 이걸 필요로 하지 않습니다")

@@ -280,6 +280,28 @@ function SpecBisTooltip:InitSettings()
 		})
 
 		AddCheckbox("SHOWOLDERPHASES", true)
+		if SpecBisTooltip:HasMergedFeral() and SpecBisTooltip:GetPlayerClass() == "DRUID" then
+			sbt_settings:AddDropdown({
+				["label"] = "LID_FERALROLE",
+				["search"] = "FERALROLE",
+				["value"] = SpecBisTooltip:GV(SBTTAB, "FERALROLE", "BOTH"),
+				["choices"] = {
+					{
+						["value"] = "BOTH",
+						["label"] = "LID_FERALBOTH"
+					},
+					{
+						["value"] = "DPS",
+						["label"] = "LID_FERALDPS"
+					},
+					{
+						["value"] = "TANK",
+						["label"] = "LID_FERALTANK"
+					},
+				},
+				["func"] = function(value) SpecBisTooltip:SV(SBTTAB, "FERALROLE", value) end
+			})
+		end
 	end
 
 	sbt_settings:AddCategory({

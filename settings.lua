@@ -7,6 +7,26 @@ local WHATSNEW_SINCE = "2026-11-21"
 local validEquipSlotsClassic = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_THROWN", "INVTYPE_SHIELD", "INVTYPE_RELIC",}
 local validEquipSlotsRetail = {"INVTYPE_HEAD", "INVTYPE_NECK", "INVTYPE_SHOULDER", "INVTYPE_CLOAK", "INVTYPE_CHEST", "INVTYPE_WRIST", "INVTYPE_HAND", "INVTYPE_WAIST", "INVTYPE_LEGS", "INVTYPE_FEET", "INVTYPE_FINGER", "INVTYPE_TRINKET", "INVTYPE_WEAPON", "INVTYPE_2HWEAPON", "INVTYPE_WEAPONMAINHAND", "INVTYPE_HOLDABLE", "INVTYPE_RANGED", "INVTYPE_SHIELD"}
 local sbt_settings = nil
+local customSlotFields = {}
+local function GetGuideItem(invType, key)
+	local specId = SpecBisTooltip:GetTalentInfo()
+	local class = SpecBisTooltip:GetPlayerClass()
+	local roles = SpecBisTooltip:GetSpecRoles(class, specId)
+	local num = tonumber(string.match(key, "(%d)$"))
+	local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), num, true, roles and roles[1])
+	local guideText = ""
+	if itemId then guideText = " (" .. SpecBisTooltip:Trans("LID_GUIDEITEMID") .. ": " .. itemId .. ")" end
+	return itemId, guideText
+end
+
+local function RefreshGuideItems()
+	for _, field in ipairs(customSlotFields) do
+		local itemId, guideText = GetGuideItem(field[1], field[4])
+		field[2].Label:SetText(SpecBisTooltip:Trans("LID_ITEM") .. guideText)
+		field[3].guideItemID = itemId
+		field[3]:Refresh()
+	end
+end
 local function ShowMinimapButtonDefault()
 	return SpecBisTooltip:GetWoWBuild() ~= "RETAIL"
 end
@@ -81,12 +101,13 @@ local function AddItemPreview(holder, guideItemID)
 	box:SetPoint("BOTTOMLEFT", holder, "BOTTOMLEFT", 6, 0)
 	box:SetPoint("BOTTOMRIGHT", holder, "BOTTOMRIGHT", -48, 0)
 	local button = CreateFrame("Button", nil, holder)
+	button.guideItemID = guideItemID
 	button:SetSize(32, 32)
 	button:SetPoint("BOTTOMRIGHT", holder, "BOTTOMRIGHT", -4, -4)
-	button:SetNormalTexture("Interface\\Buttons\\UI-Quickslot2")
 	button:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
 	button.icon = button:CreateTexture(nil, "BACKGROUND")
 	button.icon:SetAllPoints()
+	button.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 	button.border = button:CreateTexture(nil, "OVERLAY")
 	button.border:SetTexture("Interface\\Common\\WhiteIconFrame")
 	button.border:SetAllPoints()
@@ -102,7 +123,7 @@ local function AddItemPreview(holder, guideItemID)
 		self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
 		if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
 		self.itemID = tonumber(box:GetText())
-		if box:GetText() == "" then self.itemID = guideItemID end
+		if box:GetText() == "" then self.itemID = self.guideItemID end
 		self.link = nil
 		self.border:Hide()
 		if not self.itemID or self.itemID <= 0 then
@@ -149,6 +170,7 @@ local function AddItemPreview(holder, guideItemID)
 	end)
 	box:HookScript("OnTextChanged", function() button:Refresh() end)
 	button:Refresh()
+	return button
 end
 
 local function AddCustomSlot(invType, key, guideText, guideItemID)
@@ -170,7 +192,7 @@ local function AddCustomSlot(invType, key, guideText, guideItemID)
 		["func"] = function(value) SpecBisTooltip:SV(SBTTABPC, key, tonumber(value)) end
 	})
 
-	AddItemPreview(itemField, guideItemID)
+	table.insert(customSlotFields, {invType, itemField, AddItemPreview(itemField, guideItemID), key})
 
 	local source = SpecBisTooltip:GV(SBTTABPC, key .. "_SOURCE", "")
 	if source == nil then source = "" end
@@ -313,7 +335,10 @@ function SpecBisTooltip:InitSettings()
 						["label"] = "LID_FERALTANK"
 					},
 				},
-				["func"] = function(value) SpecBisTooltip:SV(SBTTAB, "FERALROLE", value) end
+				["func"] = function(value)
+					SpecBisTooltip:SV(SBTTAB, "FERALROLE", value)
+					RefreshGuideItems()
+				end
 			})
 		end
 	end
@@ -325,21 +350,9 @@ function SpecBisTooltip:InitSettings()
 		["collapsed"] = true
 	})
 
-	local specId = SpecBisTooltip:GetTalentInfo()
-	local class = SpecBisTooltip:GetPlayerClass()
-	local guideTexts = {}
-	local guideItems = {}
 	for _, slot in ipairs(GetCustomSlots()) do
-		local invType, key = slot[1], slot[2]
-		if guideTexts[invType] == nil then
-			local guideText = ""
-			local _, _, _, itemId = SpecBisTooltip:GetBisSource(invType, class, specId, SpecBisTooltip:GV(SBTTAB, "PREFERREDCONTENT", "BISO"), nil, true)
-			if itemId then guideText = " (" .. SpecBisTooltip:Trans("LID_GUIDEITEMID") .. ": " .. itemId .. ")" end
-			guideTexts[invType] = guideText
-			guideItems[invType] = itemId
-		end
-
-		AddCustomSlot(invType, key, guideTexts[invType], guideItems[invType])
+		local itemId, guideText = GetGuideItem(slot[1], slot[2])
+		AddCustomSlot(slot[1], slot[2], guideText, itemId)
 	end
 
 	sbt_settings:ResumeLayout()

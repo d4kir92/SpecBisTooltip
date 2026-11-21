@@ -362,7 +362,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 	local slots = BuildSlotIndex(class, specId, content, role)
 	local custom = false
 	local slotType = invType
-	if slots[slotType] == nil and slotFallbacks[invType] then
+	if not guide and slots[slotType] == nil and slotFallbacks[invType] then
 		for _, otherType in ipairs(slotFallbacks[invType]) do
 			if slots[otherType] then
 				slotType = otherType

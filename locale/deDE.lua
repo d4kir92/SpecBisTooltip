@@ -7,6 +7,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("deDE", "LID_SHOWOTHERSPECS", "Andere Spezialisierungen anzeigen")
     SpecBisTooltip:AddTrans("deDE", "LID_SHOWOTHERCLASSES", "Andere Klassen anzeigen")
     SpecBisTooltip:AddTrans("deDE", "LID_YOURSPEC", "Dein Spezialisierung")
+    SpecBisTooltip:AddTrans("deDE", "LID_FERALDPS", "Wilder Kampf DPS")
+    SpecBisTooltip:AddTrans("deDE", "LID_FERALTANK", "Wilder Kampf Tank")
     SpecBisTooltip:AddTrans("deDE", "LID_OTHERSPECS", "Andere Spezialisierungen")
     SpecBisTooltip:AddTrans("deDE", "LID_OTHERCLASSES", "Andere Klassen")
     SpecBisTooltip:AddTrans("deDE", "LID_NOOTHERCLASSNEEDSTHIS", "Keine andere Klasse benötigt dies")

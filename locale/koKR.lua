@@ -7,6 +7,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWOTHERSPECS", "다른 사양 표시")
     SpecBisTooltip:AddTrans("koKR", "LID_SHOWOTHERCLASSES", "다른 클래스 표시")
     SpecBisTooltip:AddTrans("koKR", "LID_YOURSPEC", "당신의 전문 분야")
+    SpecBisTooltip:AddTrans("koKR", "LID_FERALDPS", "야성 DPS")
+    SpecBisTooltip:AddTrans("koKR", "LID_FERALTANK", "야성 탱커")
     SpecBisTooltip:AddTrans("koKR", "LID_OTHERSPECS", "기타 전문 분야")
     SpecBisTooltip:AddTrans("koKR", "LID_OTHERCLASSES", "기타 클래스")
     SpecBisTooltip:AddTrans("koKR", "LID_NOOTHERCLASSNEEDSTHIS", "다른 클래스는 이걸 필요로 하지 않습니다")

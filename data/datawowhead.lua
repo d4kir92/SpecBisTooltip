@@ -194,6 +194,7 @@ function SpecBisTooltip:InitBFSContent(pool, content)
 end
 
 function SpecBisTooltip:InitBFS()
+	SpecBisTooltip:PrepareBisTable()
 	local pool = SpecBisTooltip:GetBisPool()
 	if pool ~= "RETAIL" then
 		local seenNumbers = {}
@@ -260,11 +261,11 @@ end
 
 local bfi = {}
 local missingSpec = false
-local function BuildSlotIndex(class, specId, content)
+local function BuildSlotIndex(class, specId, content, role)
 	bfi[class] = bfi[class] or {}
 	bfi[class][specId] = bfi[class][specId] or {}
 	local contentKey = content or "ANY"
-	if SpecBisTooltip:GetBisPool() ~= "RETAIL" then contentKey = contentKey .. "|" .. SpecBisTooltip:GetPhaseSignature() end
+	if SpecBisTooltip:GetBisPool() ~= "RETAIL" then contentKey = contentKey .. "|" .. SpecBisTooltip:GetPhaseSignature() .. "|" .. tostring(role) end
 	if bfi[class][specId][contentKey] then return bfi[class][specId][contentKey] end
 	local slots = {}
 	bfi[class][specId][contentKey] = slots
@@ -301,7 +302,7 @@ local function BuildSlotIndex(class, specId, content)
 		local added = {}
 		for _, phaseKey in ipairs(phaseKeys) do
 			for itemId, itemEntry in pairs(bisTab[class][specId][phaseKey]) do
-				if not added[itemId] then
+				if not added[itemId] and (role == nil or itemEntry[3] == nil or tContains(itemEntry[3], role)) then
 					added[itemId] = true
 					AddSlot(itemEntry[2], itemId)
 				end
@@ -329,7 +330,7 @@ local function BuildSlotIndex(class, specId, content)
 	return slots
 end
 
-function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide)
+function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide, role)
 	guide = guide or false
 	local n = num or 1
 	if invType == nil then return nil, nil, nil end
@@ -347,7 +348,7 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 		return
 	end
 
-	local slots = BuildSlotIndex(class, specId, content)
+	local slots = BuildSlotIndex(class, specId, content, role)
 	local custom = false
 	if slots[invType] then
 		local itemId = slots[invType][n]

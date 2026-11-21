@@ -11,20 +11,49 @@ function SpecBisTooltip:IsSeasonOfDiscovery()
 	return seasons ~= nil and seasons.GetActiveSeason ~= nil and seasons.GetActiveSeason() == 2
 end
 
-if SpecBisTooltip:IsForever() then
-	local camelotDruidSpecs = {
-		[1] = 1,
-		[2] = 3,
-		[3] = 4,
-	}
+local foreverFeralRoles = {"LID_FERALDPS", "LID_FERALTANK"}
+local foreverDruidMerged = false
+function SpecBisTooltip:PrepareBisTable()
+	if foreverDruidMerged or not SpecBisTooltip:IsForever() or SpecBisTooltip.GetBisTable == nil then return end
+	foreverDruidMerged = true
+	local pool = SpecBisTooltip:GetBisTable()[SpecBisTooltip:GetBisPool()]
+	local druid = pool and pool["DRUID"]
+	if druid == nil then return end
+	local feral = {}
+	for index, role in ipairs(foreverFeralRoles) do
+		for phaseKey, phaseTab in pairs(druid[index + 1] or {}) do
+			feral[phaseKey] = feral[phaseKey] or {}
+			for itemId, entry in pairs(phaseTab) do
+				local merged = feral[phaseKey][itemId]
+				if merged == nil then
+					merged = {entry[1], entry[2], {}}
+					feral[phaseKey][itemId] = merged
+				end
 
-	local getTalentInfo = SpecBisTooltip.GetTalentInfo
-	function SpecBisTooltip:GetTalentInfo()
-		local specId, icon = getTalentInfo(self)
-		local _, class = UnitClass("PLAYER")
-		if specId and class == "DRUID" and camelotDruidSpecs[specId] then specId = camelotDruidSpecs[specId] end
-		return specId, icon
+				table.insert(merged[3], role)
+			end
+		end
 	end
+
+	pool["DRUID"] = {
+		[1] = druid[1],
+		[2] = feral,
+		[3] = druid[4],
+	}
+end
+
+function SpecBisTooltip:GetSpecRoles(class, specId)
+	if SpecBisTooltip:IsForever() and class == "DRUID" and specId == 2 then return foreverFeralRoles end
+	return nil
+end
+
+function SpecBisTooltip:GetRoleHint(roles)
+	if roles == nil or #roles == 0 then return "" end
+	local texts = {}
+	for _, role in ipairs(roles) do
+		table.insert(texts, SpecBisTooltip:Trans(role))
+	end
+	return " (" .. table.concat(texts, " / ") .. ")"
 end
 
 local classIcons = {

@@ -56,7 +56,6 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
         },
     }
 
-    BIS["CLASSIC"]["DRUID"] = {}
     BIS["CLASSIC"]["DRUID"][2] = {
         ["BIS,PVE,P1"] = {
             [12587] = {"npc;drop=10429", "INVTYPE_HEAD"},
@@ -359,7 +358,6 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
         },
     }
 
-    BIS["CLASSIC"]["DRUID"] = {}
     BIS["CLASSIC"]["DRUID"][1] = {
         ["BIS,PVE,P1"] = {
             [22267] = {"npc;drop=10363", "INVTYPE_HEAD"},
@@ -556,7 +554,6 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
         },
     }
 
-    BIS["CLASSIC"]["WARRIOR"] = {}
     BIS["CLASSIC"]["WARRIOR"][1] = {
         ["BIS,PVE,P1"] = {
             [12640] = {"spell;created=16729", "INVTYPE_HEAD"},

@@ -7,6 +7,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOTHERSPECS", "显示其他专精")
     SpecBisTooltip:AddTrans("zhCN", "LID_SHOWOTHERCLASSES", "显示其他职业")
     SpecBisTooltip:AddTrans("zhCN", "LID_YOURSPEC", "你的专精")
+    SpecBisTooltip:AddTrans("zhCN", "LID_FERALDPS", "野性战斗 输出")
+    SpecBisTooltip:AddTrans("zhCN", "LID_FERALTANK", "野性战斗 坦克")
     SpecBisTooltip:AddTrans("zhCN", "LID_OTHERSPECS", "其他专精")
     SpecBisTooltip:AddTrans("zhCN", "LID_OTHERCLASSES", "其他职业")
     SpecBisTooltip:AddTrans("zhCN", "LID_NOOTHERCLASSNEEDSTHIS", "没有其他职业需要此物品")

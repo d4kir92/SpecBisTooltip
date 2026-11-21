@@ -11,6 +11,14 @@ function SpecBisTooltip:HoldModifierText()
 	return SpecBisTooltip:Trans("LID_HOLDMODIFIER") .. " "
 end
 
+function SpecBisTooltip:GetBisItemText(itemId)
+	if itemId == nil then return "" end
+	local id = tonumber(itemId)
+	if id == nil then return tostring(itemId) end
+	local name, link = SpecBisTooltip:GetItemInfo(id)
+	return link or name or tostring(id)
+end
+
 local once = true
 local once2 = true
 function SpecBisTooltip:GetItemTyp(class, specId, itemId, invType)
@@ -491,9 +499,9 @@ local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 						local source = SBTTABPC[invType .. "_SOURCE"]
 						if n then source = SBTTABPC[invType .. n .. "_SOURCE"] end
 						if source and source ~= "" then
-							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " " .. BIS_ICON)
+							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. SpecBisTooltip:GetBisItemText(itemId),format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " " .. BIS_ICON)
 						else
-							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. itemId, BIS_ICON)
+							tooltip:AddDoubleLine(iconText .. " [C] " .. bisText .. ": " .. SpecBisTooltip:GetBisItemText(itemId),BIS_ICON)
 						end
 					else
 						tooltip:AddDoubleLine(iconText .. " " .. bisText, BIS_ICON)
@@ -717,36 +725,36 @@ local function AddYourSpecSource(tooltip, invType, class, specId, n, role)
 	if sourceKind and sourceKind ~= "" and (sourceLocation ~= nil or sourceKind == "catalyst") then
 		if not SpecBisTooltip:GV(SBTTAB, "SMALLERTOOLTIP", false) or IsControlKeyDown() then
 			if sourceKind == "catalyst" then
-				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. GetCatalystSourceText(sourceName, sourceLocation) .. " " .. BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. GetCatalystSourceText(sourceName, sourceLocation) .. " " .. BIS_ICON)
 			elseif sourceLocation and sourceLocation ~= "" then
-				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] " .. BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " (" .. sourceLocation .. ")[" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] " .. BIS_ICON)
 			else
-				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] " .. BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), SpecBisTooltip:Trans("LID_SOURCE") .. ": " .. sourceName .. " [" .. SpecBisTooltip:Trans("LID_" .. sourceKind) .. "] " .. BIS_ICON)
 			end
 		elseif sourceKind == "catalyst" then
 			if HasCatalystDetail(sourceName) then
-				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " " .. BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), SpecBisTooltip:HoldModifierText() .. " " .. BIS_ICON)
 			else
-				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), BIS_ICON)
 			end
 		elseif sourceLocation and sourceLocation ~= "" then
-			tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", SpecBisTooltip:HoldModifierText() .. " " .. BIS_ICON)
+			tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), SpecBisTooltip:HoldModifierText() .. " " .. BIS_ICON)
 		else
-			tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ":", BIS_ICON)
+			tooltip:AddDoubleLine(yourSpecText .. GetPrefferredText() .. ": " .. SpecBisTooltip:GetBisItemText(itemId), BIS_ICON)
 		end
 	elseif itemId then
 		if custom then
 			local source = SBTTABPC[invType .. "_SOURCE"]
 			if n then source = SBTTABPC[invType .. n .. "_SOURCE"] end
 			if source and source ~= "" then
-				tooltip:AddDoubleLine(yourSpecText .. " [C]: " .. itemId, format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " " .. BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. " [C]: " .. SpecBisTooltip:GetBisItemText(itemId),format(SpecBisTooltip:Trans("LID_yourbissource"), source) .. " " .. BIS_ICON)
 			else
-				tooltip:AddDoubleLine(yourSpecText .. " [C]: " .. itemId, BIS_ICON)
+				tooltip:AddDoubleLine(yourSpecText .. " [C]: " .. SpecBisTooltip:GetBisItemText(itemId),BIS_ICON)
 			end
 		else
-			tooltip:AddDoubleLine(yourSpecText .. ": " .. itemId, BIS_ICON)
+			tooltip:AddDoubleLine(yourSpecText .. ": " .. SpecBisTooltip:GetBisItemText(itemId),BIS_ICON)
 		end
-	else
+	elseif n ~= 2 then
 		tooltip:AddDoubleLine(yourSpecText, BIS_ICON)
 	end
 end
@@ -793,8 +801,12 @@ local function OnTooltipSetItem(tooltip, data)
 
 	if specId then
 		if icon then
+			local slotNumbers = {n}
+			if invType == "INVTYPE_FINGER" or invType == "INVTYPE_TRINKET" then slotNumbers = {1, 2} end
 			for _, role in ipairs(SpecBisTooltip:GetSpecRoles(class, specId) or {false}) do
-				AddYourSpecSource(tooltip, invType, class, specId, n, role or nil)
+				for _, slotNumber in ipairs(slotNumbers) do
+					AddYourSpecSource(tooltip, invType, class, specId, slotNumber, role or nil)
+				end
 			end
 
 			if SpecBisTooltip:GetBisPool() == "RETAIL" then

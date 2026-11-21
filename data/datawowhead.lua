@@ -330,6 +330,17 @@ local function BuildSlotIndex(class, specId, content, role)
 	return slots
 end
 
+local slotFallbacks = {
+	["INVTYPE_2HWEAPON"] = {"INVTYPE_WEAPONMAINHAND", "INVTYPE_WEAPON"},
+	["INVTYPE_WEAPONMAINHAND"] = {"INVTYPE_WEAPON", "INVTYPE_2HWEAPON"},
+	["INVTYPE_WEAPON"] = {"INVTYPE_WEAPONMAINHAND", "INVTYPE_2HWEAPON"},
+	["INVTYPE_CHEST"] = {"INVTYPE_ROBE"},
+	["INVTYPE_ROBE"] = {"INVTYPE_CHEST"},
+	["INVTYPE_RANGED"] = {"INVTYPE_RANGEDRIGHT", "INVTYPE_THROWN"},
+	["INVTYPE_RANGEDRIGHT"] = {"INVTYPE_RANGED", "INVTYPE_THROWN"},
+	["INVTYPE_THROWN"] = {"INVTYPE_RANGED", "INVTYPE_RANGEDRIGHT"},
+}
+
 function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide, role)
 	guide = guide or false
 	local n = num or 1
@@ -350,8 +361,18 @@ function SpecBisTooltip:GetBisSource(invType, class, specId, content, num, guide
 
 	local slots = BuildSlotIndex(class, specId, content, role)
 	local custom = false
-	if slots[invType] then
-		local itemId = slots[invType][n]
+	local slotType = invType
+	if slots[slotType] == nil and slotFallbacks[invType] then
+		for _, otherType in ipairs(slotFallbacks[invType]) do
+			if slots[otherType] then
+				slotType = otherType
+				break
+			end
+		end
+	end
+
+	if slots[slotType] then
+		local itemId = slots[slotType][n]
 		if not guide and SBTTABPC then
 			if n and SBTTABPC[invType .. n] then
 				itemId = SBTTABPC[invType .. n]

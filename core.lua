@@ -118,19 +118,19 @@ function SpecBisTooltip:GetItemTypRetail(class, specId, itemId, content, invType
 end
 
 function SpecBisTooltip:GetSpecItemTyp(itemId, specId, invType)
-	local _, engClass = UnitClass("PLAYER")
+	local engClass = SpecBisTooltip:GetPlayerClass()
 	if engClass and specId then return SpecBisTooltip:GetItemTyp(engClass, specId, itemId, invType) end
 	return nil, nil, nil
 end
 
 function SpecBisTooltip:GetSpecItemTypRetail(itemId, specId, content, invType)
-	local _, engClass = UnitClass("PLAYER")
+	local engClass = SpecBisTooltip:GetPlayerClass()
 	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, content, invType) end
 	return nil, nil, nil
 end
 
 function SpecBisTooltip:GetSpecItemTypTrinketRetail(itemId, specId)
-	local _, engClass = UnitClass("PLAYER")
+	local engClass = SpecBisTooltip:GetPlayerClass()
 	if engClass and specId then return SpecBisTooltip:GetItemTypRetail(engClass, specId, itemId, "TRINKETS", "INVTYPE_TRINKET") end
 	return nil, nil, nil
 end
@@ -475,7 +475,7 @@ end
 
 local function AddToTooltip(tooltip, id, specId, icon, invType, num)
 	local n = num or 1
-	local _, class = UnitClass("PLAYER")
+	local class = SpecBisTooltip:GetPlayerClass()
 	if id == nil then return end
 	local typ, _, roles = SpecBisTooltip:GetSpecItemTyp(id, specId, invType)
 	if typ == nil then return end
@@ -529,7 +529,7 @@ local function FitForSpec(specId, yourSpecId, otherClasses, className, ownClassN
 end
 
 local function AddBisForSpec(tooltip, itemId, yourSpecId, otherClasses)
-	local _, ownClassName = UnitClass("player")
+	local ownClassName = SpecBisTooltip:GetPlayerClass()
 	local bfs = SpecBisTooltip:GetBFS(itemId)
 	local num = 0
 	if bfs == nil then
@@ -609,7 +609,7 @@ end
 
 local function AddBisForSpecRetail(tooltip, itemId, yourSpecId, otherClasses, content, first)
 	if first == nil then first = false end
-	local _, ownClassName = UnitClass("player")
+	local ownClassName = SpecBisTooltip:GetPlayerClass()
 	local bfs = SpecBisTooltip:GetBFSRetail(itemId, content)
 	local num = 0
 	if bfs == nil then return false end
@@ -752,7 +752,7 @@ local function AddYourSpecSource(tooltip, invType, class, specId, n, role)
 end
 
 local function OnTooltipSetItem(tooltip, data)
-	local _, class = UnitClass("PLAYER")
+	local class = SpecBisTooltip:GetPlayerClass()
 	local id = nil
 	local isToken = false
 	if data and data.id then
@@ -877,8 +877,16 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 		SBTTABPC = SBTTABPC or {}
 		SpecBisTooltip:SetDbTab(SBTTAB)
 		SpecBisTooltip:SetVersion()
-		SpecBisTooltip:AddSlash("sbt", SpecBisTooltip.ToggleSettings)
-		SpecBisTooltip:AddSlash("specbistooltip", SpecBisTooltip.ToggleSettings)
+		local function OnSlash(args)
+			if type(args) == "string" and string.lower(strtrim(args)) == "debug" then
+				SpecBisTooltip:ToggleDebug()
+			else
+				SpecBisTooltip:ToggleSettings()
+			end
+		end
+
+		SpecBisTooltip:AddSlash("sbt", OnSlash)
+		SpecBisTooltip:AddSlash("specbistooltip", OnSlash)
 		local mmbtn = nil
 		SpecBisTooltip:CreateMinimapButton({
 			["name"] = "SpecBisTooltip",

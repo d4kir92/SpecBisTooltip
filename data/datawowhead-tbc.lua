@@ -2822,7 +2822,6 @@ if SpecBisTooltip:GetBisPool() == "TBC" then
         },
     }
 
-    BIS["TBC"]["DRUID"] = {}
     BIS["TBC"]["DRUID"][4] = {
         ["BIS,PVE,P5"] = {
             [34339] = {"unknown=unknown", "INVTYPE_HEAD"},
@@ -2938,7 +2937,6 @@ if SpecBisTooltip:GetBisPool() == "TBC" then
         },
     }
 
-    BIS["TBC"]["PALADIN"] = {}
     BIS["TBC"]["PALADIN"][3] = {
         ["BIS,PVE,P5"] = {
             [34244] = {"unknown=unknown", "INVTYPE_HEAD"},
@@ -3050,7 +3048,6 @@ if SpecBisTooltip:GetBisPool() == "TBC" then
         },
     }
 
-    BIS["TBC"]["SHAMAN"] = {}
     BIS["TBC"]["SHAMAN"][3] = {
         ["BIS,PVE,P5"] = {
             [34402] = {"unknown=unknown", "INVTYPE_HEAD"},

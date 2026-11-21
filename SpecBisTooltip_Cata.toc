@@ -53,4 +53,5 @@ data\datawowhead-cata.lua
 data\datawowhead.lua
 
 settings.lua
+debug.lua
 core.lua

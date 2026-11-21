@@ -9,6 +9,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("ruRU", "LID_YOURSPEC", "Ваша специализация")
     SpecBisTooltip:AddTrans("ruRU", "LID_FERALDPS", "Сила зверя (урон)")
     SpecBisTooltip:AddTrans("ruRU", "LID_FERALTANK", "Сила зверя (танк)")
+    SpecBisTooltip:AddTrans("ruRU", "LID_DEBUGSPEC", "Тестовый класс / специализация")
+    SpecBisTooltip:AddTrans("ruRU", "LID_DEBUGOFF", "Свой персонаж")
     SpecBisTooltip:AddTrans("ruRU", "LID_OTHERSPECS", "Другие специализации")
     SpecBisTooltip:AddTrans("ruRU", "LID_OTHERCLASSES", "Другие классы")
     SpecBisTooltip:AddTrans("ruRU", "LID_NOOTHERCLASSNEEDSTHIS", "Ни одному другому классу это не нужно")

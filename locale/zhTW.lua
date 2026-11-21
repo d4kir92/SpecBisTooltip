@@ -9,6 +9,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("zhTW", "LID_YOURSPEC", "您的專長")
     SpecBisTooltip:AddTrans("zhTW", "LID_FERALDPS", "野性戰鬥 輸出")
     SpecBisTooltip:AddTrans("zhTW", "LID_FERALTANK", "野性戰鬥 坦克")
+    SpecBisTooltip:AddTrans("zhTW", "LID_DEBUGSPEC", "測試職業 / 專精")
+    SpecBisTooltip:AddTrans("zhTW", "LID_DEBUGOFF", "自己的角色")
     SpecBisTooltip:AddTrans("zhTW", "LID_OTHERSPECS", "其他專精")
     SpecBisTooltip:AddTrans("zhTW", "LID_OTHERCLASSES", "其他類別")
     SpecBisTooltip:AddTrans("zhTW", "LID_NOOTHERCLASSNEEDSTHIS", "沒有其他類別需要這個")

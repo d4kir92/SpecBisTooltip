@@ -53,4 +53,5 @@ data\datawowhead-mists.lua
 data\datawowhead.lua
 
 settings.lua
+debug.lua
 core.lua

@@ -290,7 +290,7 @@ function SpecBisTooltip:InitSettings()
 	})
 
 	local specId = SpecBisTooltip:GetTalentInfo()
-	local _, class = UnitClass("PLAYER")
+	local class = SpecBisTooltip:GetPlayerClass()
 	local guideTexts = {}
 	local guideItems = {}
 	for _, slot in ipairs(GetCustomSlots()) do

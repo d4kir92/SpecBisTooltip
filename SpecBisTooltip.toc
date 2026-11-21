@@ -61,4 +61,5 @@ data\datawowhead-retail.lua
 data\datawowhead.lua
 
 settings.lua
+debug.lua
 core.lua

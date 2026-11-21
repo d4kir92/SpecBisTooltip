@@ -9,6 +9,8 @@ if not SpecBisTooltip.DEBUG then
     SpecBisTooltip:AddTrans("itIT", "LID_YOURSPEC", "La vostra specializzazione")
     SpecBisTooltip:AddTrans("itIT", "LID_FERALDPS", "Combattimento Ferino DPS")
     SpecBisTooltip:AddTrans("itIT", "LID_FERALTANK", "Combattimento Ferino Tank")
+    SpecBisTooltip:AddTrans("itIT", "LID_DEBUGSPEC", "Classe / specializzazione di prova")
+    SpecBisTooltip:AddTrans("itIT", "LID_DEBUGOFF", "Personaggio proprio")
     SpecBisTooltip:AddTrans("itIT", "LID_OTHERSPECS", "Altre specializzazioni")
     SpecBisTooltip:AddTrans("itIT", "LID_OTHERCLASSES", "Altre classi")
     SpecBisTooltip:AddTrans("itIT", "LID_NOOTHERCLASSNEEDSTHIS", "Nessun'altra classe ha bisogno di questo")

@@ -8,7 +8,7 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
     SpecBisTooltip.LivePhase = 1
 end
 
--- DATA FROM BIS,PVE,P1: 21.11.2026
+-- DATA FROM BIS,PVE,P1: 22.11.2026
 if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
     BIS["CLASSIC"] = {}
     BIS["CLASSIC"]["DRUID"] = {}
@@ -382,15 +382,15 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
 
     BIS["CLASSIC"]["ROGUE"][2] = {
         ["BIS,PVE,P1"] = {
-            [226829] = {"npc;sold=230319", "INVTYPE_HEAD"},
+            [22005] = {"quest;reward=9004", "INVTYPE_HEAD"},
             [15411] = {"quest;reward=5944", "INVTYPE_NECK"},
-            [15058] = {"spell;created=19090", "INVTYPE_SHOULDER"},
-            [226825] = {"npc;sold=230319", "INVTYPE_CHEST"},
+            [22008] = {"quest;reward=8956", "INVTYPE_SHOULDER"},
+            [252483] = {"spell;created=1255015", "INVTYPE_CHEST"},
             [272395] = {"npc;sold=227853", "INVTYPE_WAIST"},
-            [15057] = {"spell;created=19067", "INVTYPE_LEGS"},
-            [226831] = {"npc;sold=230319", "INVTYPE_FEET"},
+            [15062] = {"spell;created=19097", "INVTYPE_LEGS"},
+            [22003] = {"quest;reward=8956", "INVTYPE_FEET"},
             [226830] = {"quest;reward=84152", "INVTYPE_WRIST"},
-            [21278] = {"spell;created=26279", "INVTYPE_HAND"},
+            [15063] = {"spell;created=19084", "INVTYPE_HAND"},
             [19325] = {"npc;sold=13217", "INVTYPE_FINGER"},
             [272408] = {"npc;sold=227853", "INVTYPE_FINGER"},
             [11815] = {"npc;drop=9019", "INVTYPE_TRINKET"},
@@ -398,7 +398,7 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
             [272414] = {"npc;sold=227853", "INVTYPE_CLOAK"},
             [1728] = {"npc;drop=15742", "INVTYPE_WEAPONMAINHAND"},
             [871] = {"npc;drop=8762", "INVTYPE_WEAPON"},
-            [2100] = {"npc;drop=203138", "INVTYPE_RANGEDRIGHT"},
+            [18323] = {"npc;drop=11490", "INVTYPE_RANGED"},
         },
     }
 

@@ -7,7 +7,7 @@ if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
     end
 end
 
--- SOURCE FROM: 21.11.2026
+-- SOURCE FROM: 22.11.2026
 if SpecBisTooltip:GetBisPool() == "CLASSIC" and SpecBisTooltip:IsForever() then
     function SpecBisTooltip:TranslationenUS()
     end

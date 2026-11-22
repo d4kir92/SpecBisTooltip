@@ -909,9 +909,10 @@ SBTSetup:SetScript("OnEvent", function(self, event, ...)
 			["icon"] = SpecBisTooltip:GetAddonIcon(),
 			["var"] = mmbtn,
 			["dbtab"] = SBTTAB,
-			["vTT"] = {{format("|T%s:16:16:0:0|t SpecBisTooltip", SpecBisTooltip:GetAddonIcon()),"v" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
+			["vTT"] = {{format("|T%s:16:16:0:0|t SpecBisTooltip", SpecBisTooltip:GetAddonIcon()),"v" .. SpecBisTooltip:GetVersion()}, {SpecBisTooltip:Trans("LID_LEFTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_RIGHTCLICK"), SpecBisTooltip:Trans("LID_OPENSETTINGS")}, {SpecBisTooltip:Trans("LID_SHIFTRIGHTCLICK"), SpecBisTooltip:Trans("LID_HIDEMINIMAPBUTTON")}},
 			["funcL"] = function() SpecBisTooltip:ToggleSettings() end,
-			["funcR"] = function()
+			["funcR"] = function() SpecBisTooltip:ToggleSettings() end,
+			["funcSR"] = function()
 				SpecBisTooltip:SV(SBTTAB, "SHOWMINIMAPBUTTON", false)
 				SpecBisTooltip:HideMMBtn("SpecBisTooltip")
 				SpecBisTooltip:MSG("Minimap Button is now hidden.")
